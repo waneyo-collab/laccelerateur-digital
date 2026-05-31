@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>L'Accélérateur Digital – Waneyo Formation</title>
+<meta name="description" content="Maîtrisez le marketing digital et devenez entrepreneur. Slides narratives interactives, IA incluse. 3 jours gratuits."/>
+<link rel="manifest" href="manifest.json"/>
+<meta name="theme-color" content="#7C3AED"/>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
+:root{
+  --primary:#7C3AED;--primary-light:#EDE9FE;--primary-dark:#5B21B6;
+  --accent:#F59E0B;--accent-light:#FEF3C7;
+  --teal:#0F766E;--teal-light:#CCFBF1;
+  --bg:#F9F7FF;--card:#fff;--text:#1E1B4B;--muted:#6B7280;--border:#E5E7EB;
+  --dark:#0F0A1E;
+}
+body{background:var(--bg);color:var(--text);min-height:100vh}
+.page{display:none}.page.active{display:block}
+nav{background:#fff;border-bottom:1px solid var(--border);padding:0 16px;display:flex;align-items:center;justify-content:space-between;height:56px;position:sticky;top:0;z-index:100}
+.logo{font-weight:800;font-size:16px;color:var(--primary);cursor:pointer;white-space:nowrap}.logo span{color:var(--accent)}
+.tag{font-size:10px;color:var(--muted);background:var(--primary-light);padding:2px 8px;border-radius:20px;font-weight:600;margin-left:6px}
+.nav-actions{display:flex;gap:6px;flex-shrink:0}
+@media(max-width:480px){.tag{display:none}}
+.btn-primary{background:var(--primary);color:#fff;border:none;border-radius:10px;padding:11px 20px;font-size:14px;font-weight:700;cursor:pointer;white-space:nowrap}
+.btn-outline{background:transparent;color:var(--primary);border:1.5px solid var(--primary);border-radius:10px;padding:10px 14px;font-size:13px;font-weight:600;cursor:pointer;white-space:nowrap}
+.btn-ghost{background:rgba(255,255,255,0.15);color:#fff;border:1.5px solid rgba(255,255,255,0.4);border-radius:10px;padding:11px 22px;font-size:14px;font-weight:600;cursor:pointer}
+.btn-sm{padding:7px 12px;font-size:12px}
+@media(max-width:480px){.btn-primary{padding:8px 12px;font-size:13px}.btn-outline{padding:8px 10px;font-size:12px}}
+.badge{display:inline-block;font-size:11px;font-weight:700;padding:3px 10px;border-radius:20px}
+.badge-green{background:#D1FAE5;color:#065F46}
+.badge-amber{background:var(--accent-light);color:#92400E}
+.badge-purple{background:var(--primary-light);color:var(--primary-dark)}
+.badge-teal{background:var(--teal-light);color:var(--teal)}
+.hero{background:linear-gradient(135deg,var(--dark) 0%,#2D1B69 100%);padding:52px 24px 44px;text-align:center}
+.hero h1{font-size:clamp(22px,4vw,34px);font-weight:800;color:#fff;line-height:1.2;margin-bottom:14px;max-width:580px;margin-left:auto;margin-right:auto}
+.hero p{font-size:14px;color:rgba(255,255,255,0.72);line-height:1.7;max-width:500px;margin:0 auto 28px}
+.hero-btns{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-bottom:16px}
+.hero-sub{font-size:11px;color:rgba(255,255,255,0.4)}
+.section{padding:36px 24px}
+.section-label{text-align:center;font-size:12px;font-weight:700;color:var(--primary);letter-spacing:1px;margin-bottom:8px}
+.section-title{text-align:center;font-size:21px;font-weight:800;margin-bottom:22px}
+.grid-2{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;max-width:900px;margin:0 auto}
+.grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:900px;margin:0 auto}
+.grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;max-width:760px;margin:0 auto}
+.card{background:#fff;border-radius:12px;border:1px solid var(--border);padding:18px}
+.for-who{background:var(--primary-light);padding:32px 24px;text-align:center}
+.testi-stars{color:var(--accent);font-size:15px;margin-bottom:8px}
+.testi-text{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px;font-style:italic}
+.testi-avatar{width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0}
+.bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;color:#fff;flex-shrink:0}
+.values{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.value-tag{background:var(--primary-light);color:var(--primary);font-size:11px;font-weight:600;padding:4px 10px;border-radius:20px}
+.stats-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:12px}
+.stat-card{background:var(--primary-light);border-radius:10px;padding:14px;text-align:center}
+.stat-num{font-size:24px;font-weight:800;color:var(--primary)}
+.stat-label{font-size:11px;color:var(--muted);margin-top:3px}
+.faq-item{background:#fff;border-radius:12px;border:1px solid var(--border);padding:16px 18px;cursor:pointer;max-width:640px;margin:0 auto 8px}
+.faq-q{display:flex;justify-content:space-between;align-items:center;font-weight:600;font-size:14px}
+.faq-a{font-size:13px;color:var(--muted);line-height:1.7;margin-top:10px;display:none}
+.faq-item.open .faq-a{display:block}
+.faq-icon{color:var(--primary);font-weight:700;font-size:18px;margin-left:12px;flex-shrink:0}
+.cta-final{background:linear-gradient(135deg,var(--dark) 0%,#2D1B69 100%);padding:48px 24px;text-align:center}
+.cta-final h2{font-size:22px;font-weight:800;color:#fff;margin-bottom:12px}
+.cta-final p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:28px}
+footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px;color:rgba(255,255,255,0.3)}
+.subscribe-card{max-width:400px;margin:36px auto;padding:0 24px}
+.price-big{font-size:38px;font-weight:800;color:var(--primary)}
+.price-small{font-size:15px;font-weight:400;color:var(--muted)}
+.feature-list{list-style:none;text-align:left;margin:16px 0}
+.feature-list li{font-size:13px;padding:5px 0;line-height:1.5}
+.secure{display:flex;align-items:center;justify-content:center;gap:6px;margin-top:12px;font-size:11px;color:var(--muted)}
+.login-card{max-width:360px;margin:56px auto;padding:0 24px}
+.form-label{font-size:12px;color:var(--muted);display:block;margin-bottom:5px;margin-top:12px}
+.form-input{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:13px;outline:none;font-family:inherit}
+.form-input:focus{border-color:var(--primary)}
+.orient-wrap{max-width:620px;margin:52px auto;padding:0 24px;text-align:center}
+.orient-card{cursor:pointer;border:2px solid var(--border);border-radius:12px;padding:24px 16px;background:#fff;transition:border-color .2s;margin-bottom:12px}
+.orient-card:hover{border-color:var(--primary)}
+.orient-card.teal:hover{border-color:var(--teal)}
+.orient-card.orange:hover{border-color:var(--accent)}
+.tab-bar{display:flex;background:#fff;border-bottom:1px solid var(--border);padding:0 16px;overflow-x:auto}
+.tab-btn{padding:13px 14px;cursor:pointer;font-size:13px;font-weight:400;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;white-space:nowrap}
+.tab-btn.active{font-weight:600;color:var(--primary);border-bottom:2px solid var(--primary)}
+.dash-wrap{padding:16px;max-width:900px;margin:0 auto}
+.new-module{border-left:4px solid var(--accent);display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;margin-bottom:16px}
+.stats-row{display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;margin-bottom:16px}
+.parcours-card{margin-bottom:10px}
+.parcours-header{display:flex;justify-content:space-between;align-items:center}
+.module-row{display:flex;align-items:center;gap:8px;padding:7px 0;border-bottom:1px solid var(--border);font-size:13px;flex-wrap:wrap}
+.module-row:last-child{border-bottom:none}
+.module-num{width:22px;height:22px;border-radius:50%;background:var(--primary-light);display:flex;align-items:center;justify-content:center;font-size:11px;flex-shrink:0}
+.module-num.done{background:#D1FAE5}
+.module-num.soon{background:#F3F4F6}
+.btn-start{background:var(--primary-light);color:var(--primary);border:none;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;flex-shrink:0}
+.btn-done-mod{background:#D1FAE5;color:#065F46;border:none;border-radius:6px;padding:4px 10px;cursor:pointer;font-size:11px;font-weight:600;flex-shrink:0}
+.modules-list{border-top:1px solid var(--border);padding-top:12px;display:none}
+.modules-list.open{display:block}
+.toggle-btn{background:none;border:none;cursor:pointer;font-size:16px;color:var(--muted)}
+.modal{display:none;position:fixed;inset:0;background:rgba(0,0,0,0.85);z-index:1000;flex-direction:column}
+.modal.open{display:flex}
+.modal-header{background:var(--primary);padding:10px 14px;display:flex;justify-content:space-between;align-items:center;flex-shrink:0;flex-wrap:wrap;gap:8px}
+.modal-title{color:#fff;font-weight:700;font-size:13px}
+.modal-sub{color:rgba(255,255,255,0.65);font-size:11px}
+.modal-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.btn-mark{background:var(--accent);color:#fff;border:none;border-radius:8px;padding:7px 12px;cursor:pointer;font-size:12px;font-weight:700}
+.btn-close-modal{background:rgba(255,255,255,0.15);color:#fff;border:none;border-radius:8px;padding:7px 12px;cursor:pointer;font-size:12px}
+.modal iframe{flex:1;border:none;width:100%}
+.resource-row{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:10px}
+.btn-dl{background:var(--primary-light);color:var(--primary);border:none;border-radius:8px;padding:7px 14px;cursor:pointer;font-size:12px;font-weight:600}
+.sug-btn{background:var(--primary-light);color:var(--primary);border:none;border-radius:20px;padding:6px 12px;cursor:pointer;font-size:11px;font-weight:600}
+.active-cat{background:var(--primary)!important;color:#fff!important}
+.btn-logout{background:none;border:none;color:var(--muted);font-size:12px;cursor:pointer;text-decoration:underline}
+.parcours-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px;max-width:900px;margin:0 auto}
+</style>
+</head>
+<body>
+
+<!-- LANDING -->
+<div id="page-landing" class="page active">
+  <nav>
+    <div style="display:flex;align-items:center">
+      <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
+      <span class="tag">by Waneyo Formation</span>
+    </div>
+    <div class="nav-actions">
+      <button class="btn-outline btn-sm" onclick="showPage('login')">Connexion</button>
+      <button class="btn-primary btn-sm" onclick="window.open('https://coassemble.com/learn/IO1ZNE','_blank')">🎁 Module offert</button>
+    </div>
+  </nav>
+  <div class="hero">
+    <div class="badge badge-amber" style="margin-bottom:16px">🔥 Offre de lancement · Prix réduit</div>
+    <h1>Le marketing digital,<br/>enfin simple à apprendre</h1>
+    <p>15 minutes par jour suffisent pour maîtriser le digital. Des slides narratives interactives, sans jargon, pensées pour les débutants, les reconversions et ceux qui apprennent en autonomie.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="showPage('subscribe')">🎁 3 jours gratuits · puis 9,99€/mois</button>
+      <button class="btn-ghost" onclick="window.open('https://coassemble.com/learn/IO1ZNE','_blank')">Essayer sans CB →</button>
+    </div>
+    <p class="hero-sub">Sans engagement · Annulable à tout moment · Accès immédiat</p>
+  </div>
+
+  <div class="for-who">
+    <p class="section-label">FAIT POUR VOUS SI…</p>
+    <div class="grid-4" style="margin-top:14px">
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🔄</div><div style="font-size:13px;font-weight:500">Vous êtes en reconversion professionnelle</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">📱</div><div style="font-size:13px;font-weight:500">Vous voulez gérer votre com' vous-même</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">💡</div><div style="font-size:13px;font-weight:500">Vous apprenez en autonomie, sans école</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🌍</div><div style="font-size:13px;font-weight:500">Vous avez un projet digital à lancer</div></div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">LES PARCOURS</p>
+    <h2 class="section-title">30 modules pour tout maîtriser</h2>
+    <div class="parcours-grid">
+      <div class="card" style="border-top:4px solid var(--primary)">
+        <div style="font-size:28px;margin-bottom:10px">🌐</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:4px">Le Monde Numérique</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">10 modules disponibles</div>
+        <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px">📑 Slides narratives interactives</div>
+        <span class="badge badge-green">Disponible maintenant</span>
+      </div>
+      <div class="card" style="border-top:4px solid #A855F7">
+        <div style="font-size:28px;margin-bottom:10px">🧠</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:4px">Mindset</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">10 modules à venir</div>
+        <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px">📑 Slides narratives interactives</div>
+        <span class="badge badge-purple">En cours de création</span>
+      </div>
+      <div class="card" style="border-top:4px solid var(--accent)">
+        <div style="font-size:28px;margin-bottom:10px">🚀</div>
+        <div style="font-weight:700;font-size:16px;margin-bottom:4px">Entrepreneuriat</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:6px">2 modules disponibles · 8 à venir</div>
+        <div style="font-size:11px;color:var(--muted);font-style:italic;margin-bottom:12px">📑 Slides narratives interactives</div>
+        <span class="badge badge-amber">2 modules disponibles</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <p class="section-label">VOTRE FORMATRICE</p>
+    <div class="card" style="max-width:680px;margin:0 auto;display:flex;gap:20px;align-items:flex-start;flex-wrap:wrap">
+      <div class="bio-avatar">N</div>
+      <div style="flex:1;min-width:200px">
+        <div style="font-weight:700;font-size:16px;margin-bottom:2px">Nadia 👋</div>
+        <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Formatrice en marketing digital · 15 ans d'expérience</div>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">Après un parcours en webdesign, une Licence en marketing et un Master 2 en Product Management, j'ai consacré ma carrière à rendre le numérique accessible à tous — en particulier aux débutants, aux autodidactes et à ceux que le système traditionnel a laissés de côté.</p>
+        <div class="values">
+          <span class="value-tag">🤝 Bienveillance</span>
+          <span class="value-tag">🎯 Pragmatisme</span>
+          <span class="value-tag">🔓 Accessibilité</span>
+          <span class="value-tag">🚀 Ambition</span>
+        </div>
+      </div>
+    </div>
+    <div class="stats-grid" style="max-width:680px;margin:12px auto 0">
+      <div class="stat-card"><div class="stat-num">15 ans</div><div class="stat-label">d'expérience</div></div>
+      <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">diplômes</div></div>
+      <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">applicable dès J1</div></div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--primary-light)">
+    <p class="section-label">TÉMOIGNAGES</p>
+    <h2 class="section-title">Ils ont sauté le pas</h2>
+    <div class="grid-3">
+      <div class="card"><div class="testi-stars">★★★★★</div><p class="testi-text">"Ces cours m'ont permis de mieux cerner mes besoins en marketing et de redéfinir ma stratégie sur les réseaux. J'ai gagné un temps fou."</p><div style="display:flex;align-items:center;gap:10px"><div class="testi-avatar">MC</div><div><div style="font-weight:600;font-size:13px">Mathieu C.</div><div style="font-size:11px;color:var(--muted)">Entrepreneur</div></div></div></div>
+      <div class="card"><div class="testi-stars">★★★★★</div><p class="testi-text">"J'avais besoin de comprendre certaines notions pour mon association. Très condensé mais très intéressant — j'ai su exactement où aller."</p><div style="display:flex;align-items:center;gap:10px"><div class="testi-avatar">EA</div><div><div style="font-weight:600;font-size:13px">Emmanuel A.</div><div style="font-size:11px;color:var(--muted)">Responsable associatif</div></div></div></div>
+      <div class="card"><div class="testi-stars">★★★★★</div><p class="testi-text">"J'en avais marre de payer mes prestataires. Grâce à ces cours, je m'occupe de ma com' seule. Une vraie liberté."</p><div style="display:flex;align-items:center;gap:10px"><div class="testi-avatar">KD</div><div><div style="font-weight:600;font-size:13px">Kumba D.</div><div style="font-size:11px;color:var(--muted)">Cheffe d'entreprise</div></div></div></div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--primary-light)">
+    <p class="section-label">FAQ</p>
+    <h2 class="section-title">Tout ce que vous voulez savoir</h2>
+    <div id="faq-container"></div>
+  </div>
+
+  <div class="cta-final">
+    <h2>Prêt(e) à prendre le contrôle de votre avenir digital ?</h2>
+    <p>Rejoignez ceux qui ont choisi l'autonomie. Commencez gratuitement, sans CB.</p>
+    <div class="hero-btns">
+      <button class="btn-primary" onclick="showPage('subscribe')">🎁 3 jours gratuits · puis 9,99€/mois</button>
+      <button class="btn-ghost" onclick="window.open('https://coassemble.com/learn/IO1ZNE','_blank')">Essayer le module offert</button>
+    </div>
+    <p class="hero-sub" style="margin-top:14px">Sans engagement · Annulable à tout moment</p>
+  </div>
+  <footer>© 2025 Waneyo Formation · Tous droits réservés</footer>
+</div>
+
+<!-- SUBSCRIBE -->
+<div id="page-subscribe" class="page">
+  <nav>
+    <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
+    <div class="nav-actions"><button class="btn-outline btn-sm" onclick="showPage('landing')">← Retour</button></div>
+  </nav>
+  <div class="subscribe-card">
+    <div class="card" style="border:2px solid var(--primary);text-align:center;padding:28px">
+      <div style="font-size:12px;font-weight:700;color:var(--muted);letter-spacing:1px;margin-bottom:8px">ACCÈS COMPLET</div>
+      <div class="price-big">9,99€<span class="price-small">/mois</span></div>
+      <div class="badge badge-amber" style="margin:10px auto;display:inline-block">🎁 3 jours d'essai gratuit</div>
+      <ul class="feature-list">
+        <li>✅ Parcours Monde Numérique (10 modules)</li>
+        <li>✅ Parcours Mindset (10 modules à venir)</li>
+        <li>✅ Parcours Entrepreneuriat (2 disponibles + 8 à venir)</li>
+        <li>✅ Ebooks & guides téléchargeables</li>
+        <li>✅ Nouveaux modules chaque mois</li>
+        <li>✅ Certificats de formation</li>
+        <li style="color:var(--muted)">⚠️ Accès interrompu immédiatement en cas d'annulation</li>
+      </ul>
+      <button class="btn-primary" style="width:100%" onclick="window.open('https://buy.stripe.com/7sY7sMd3127xfuacCc43S00','_blank')">Démarrer mon essai gratuit</button>
+      <div class="secure"><span style="font-size:16px">🔒</span> Paiement 100% sécurisé par Stripe</div>
+      <p style="font-size:11px;color:var(--muted);margin-top:8px">Puis 9,99€/mois · Sans engagement</p>
+    </div>
+  </div>
+</div>
+
+<!-- LOGIN -->
+<div id="page-login" class="page">
+  <nav>
+    <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
+    <div class="nav-actions"><button class="btn-outline btn-sm" onclick="showPage('landing')">← Retour</button></div>
+  </nav>
+  <div class="login-card">
+    <div class="card">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center">Connexion</h2>
+      <label class="form-label">Email</label>
+      <input class="form-input" type="email" placeholder="votre@email.com"/>
+      <label class="form-label">Mot de passe</label>
+      <input class="form-input" type="password" placeholder="••••••••" style="margin-bottom:18px"/>
+      <button class="btn-primary" style="width:100%;margin-top:6px" onclick="showPage('orientation')">Se connecter</button>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px">Pas encore membre ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('subscribe')">Essai gratuit 3 jours</span></p>
+    </div>
+  </div>
+</div>
+
+<!-- ORIENTATION -->
+<div id="page-orientation" class="page">
+  <nav><span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span></nav>
+  <div class="orient-wrap">
+    <div style="font-size:36px;margin-bottom:16px">👋</div>
+    <h2 style="font-size:21px;font-weight:800;margin-bottom:10px">Bienvenue dans L'Accélérateur Digital !</h2>
+    <p style="font-size:14px;color:var(--muted);line-height:1.7;margin-bottom:28px">Par où souhaitez-vous commencer ?</p>
+    <div class="grid-3">
+      <div class="orient-card" onclick="startDashboard('numerique')">
+        <div style="font-size:32px;margin-bottom:10px">🌐</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:6px">Je démarre de zéro</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:12px">Je commence par les fondamentaux du marketing digital</div>
+        <span class="badge badge-green">→ Monde Numérique</span>
+      </div>
+      <div class="orient-card" style="border-color:var(--border)" onclick="startDashboard('mindset')">
+        <div style="font-size:32px;margin-bottom:10px">🧠</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:6px">Je travaille mon mindset</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:12px">Je veux développer l'état d'esprit de l'entrepreneur</div>
+        <span class="badge badge-purple">→ Mindset</span>
+      </div>
+      <div class="orient-card orange" onclick="startDashboard('entrepreneuriat')">
+        <div style="font-size:32px;margin-bottom:10px">🚀</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:6px">J'ai déjà le kit à 39€</div>
+        <div style="font-size:12px;color:var(--muted);line-height:1.5;margin-bottom:12px">Je connais les bases, je veux passer à l'action entrepreneuriale</div>
+        <span class="badge badge-amber">→ Entrepreneuriat</span>
+      </div>
+    </div>
+    <p style="font-size:11px;color:var(--muted);margin-top:20px">Vous pourrez accéder aux 3 parcours à tout moment depuis votre espace membre.</p>
+  </div>
+</div>
+
+<!-- DASHBOARD -->
+<div id="page-dashboard" class="page">
+  <nav>
+    <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
+    <div style="display:flex;align-items:center;gap:10px">
+      <span class="badge badge-green">Abonnée ✓</span>
+      <div style="width:32px;height:32px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:13px">V</div>
+      <button class="btn-logout" onclick="showPage('landing')">Déconnexion</button>
+    </div>
+  </nav>
+  <div class="tab-bar">
+    <button class="tab-btn active" onclick="switchTab('parcours',this)">🎓 Mes parcours</button>
+    <button class="tab-btn" onclick="switchTab('ressources',this)">📚 Ressources</button>
+    <button class="tab-btn" onclick="switchTab('aide',this)">❓ Aide</button>
+  </div>
+
+  <div id="tab-parcours" class="dash-wrap">
+    <div class="card new-module">
+      <div>
+        <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:4px">✨ NOUVEAU CE MOIS-CI</div>
+        <div style="font-weight:700;font-size:14px;margin-bottom:2px">Créer une app avec l'IA</div>
+        <div style="font-size:12px;color:var(--muted)">Entrepreneuriat · 25 min · 📑 Slides narratives</div>
+      </div>
+      <button class="btn-primary" style="font-size:13px;padding:9px 18px" onclick="openModule('Créer une app avec l\'IA','Entrepreneuriat','25 min','https://coassemble.com/learn/RB1FR5','entrepreneuriat',2)">Démarrer →</button>
+    </div>
+    <div class="stats-row">
+      <div class="stat-card"><div class="stat-num" id="done-count">0</div><div class="stat-label">Terminés</div></div>
+      <div class="stat-card"><div class="stat-num">30</div><div class="stat-label">Au total</div></div>
+      <div class="stat-card"><div class="stat-num" id="pct-count">0%</div><div class="stat-label">Progression</div></div>
+      <div class="stat-card"><div class="stat-num" id="time-count">0min</div><div class="stat-label">Temps appris</div></div>
+    </div>
+    <div id="parcours-list"></div>
+  </div>
+
+  <div id="tab-ressources" class="dash-wrap" style="display:none">
+    <div style="font-size:15px;font-weight:700;margin-bottom:12px">Ebooks & Guides inclus</div>
+    <div id="resources-list"></div>
+  </div>
+
+  <div id="tab-aide" class="dash-wrap" style="display:none">
+    <div style="font-size:15px;font-weight:700;margin-bottom:4px">❓ Aide & FAQ</div>
+    <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Trouvez rapidement une réponse à vos questions</div>
+    <div style="position:relative;margin-bottom:16px">
+      <input id="faq-search" class="form-input" placeholder="🔍 Rechercher une question…" oninput="filterFaqDash(this.value)"/>
+    </div>
+    <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
+      <button class="sug-btn active-cat faq-cat" onclick="filterCat('all',this)">Tout</button>
+      <button class="sug-btn faq-cat" onclick="filterCat('marketing',this)">📱 Marketing</button>
+      <button class="sug-btn faq-cat" onclick="filterCat('entrepreneuriat',this)">🚀 Entrepreneuriat</button>
+      <button class="sug-btn faq-cat" onclick="filterCat('abonnement',this)">💳 Abonnement</button>
+      <button class="sug-btn faq-cat" onclick="filterCat('technique',this)">⚙️ Technique</button>
+    </div>
+    <div id="faq-dash-list"></div>
+    <div class="card" style="margin-top:20px;text-align:center;border:1px dashed var(--border)">
+      <div style="font-size:22px;margin-bottom:8px">✉️</div>
+      <div style="font-weight:600;font-size:14px;margin-bottom:4px">Vous ne trouvez pas votre réponse ?</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Pour toute question technique ou de facturation — réponse sous 48h ouvrées.</div>
+      <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Question – L\'Accélérateur Digital'">Contacter par email</button>
+      <div style="font-size:11px;color:var(--muted);margin-top:8px">⚠️ Réservé aux questions techniques et de facturation uniquement.</div>
+    </div>
+  </div>
+</div>
+
+<!-- MODAL -->
+<div class="modal" id="module-modal">
+  <div class="modal-header">
+    <div>
+      <div class="modal-title" id="modal-title">Module</div>
+      <div class="modal-sub" id="modal-sub"></div>
+    </div>
+    <div class="modal-actions">
+      <button class="btn-mark" id="btn-mark" onclick="markDone()">✅ Terminé</button>
+      <button class="btn-close-modal" onclick="closeModal()">✕ Fermer</button>
+    </div>
+  </div>
+  <iframe id="modal-iframe" src="" allow="fullscreen"></iframe>
+</div>
+
+<script>
+const PARCOURS = [
+  { id:"numerique", icon:"🌐", label:"Le Monde Numérique", color:"var(--primary)",
+    modules:[
+      {id:1,title:"Introduction au marketing digital",duration:"18 min",url:"https://coassemble.com/learn/IO1ZNE",free:true},
+      {id:2,title:"Définir une stratégie multicanale",duration:"20 min",url:"https://coassemble.com/learn/MR915W"},
+      {id:3,title:"La stratégie sur les réseaux sociaux",duration:"22 min",url:"https://coassemble.com/learn/ZIDRZY"},
+      {id:4,title:"La puissance de l'emailing",duration:"20 min",url:"https://coassemble.com/learn/WBDJPZ"},
+      {id:5,title:"Mener des campagnes publicitaires",duration:"25 min",url:"https://coassemble.com/learn/JPVYGJ"},
+      {id:6,title:"Maîtriser sa e-réputation",duration:"22 min",url:"https://coassemble.com/learn/VKD5A1"},
+      {id:7,title:"La cybersécurité",duration:"20 min",url:"https://coassemble.com/learn/9TJKI4"},
+      {id:8,title:"La création de contenu",duration:"24 min",url:"https://coassemble.com/learn/8YEDSE"},
+      {id:9,title:"L'IA au quotidien",duration:"22 min",url:"https://coassemble.com/learn/ANJ9YT"},
+      {id:10,title:"Comprendre la méthode Agile",duration:"22 min",url:"https://coassemble.com/learn/BTMBN2"},
+    ]
+  },
+  { id:"mindset", icon:"🧠", label:"Mindset", color:"#A855F7",
+    modules:[
+      {id:1,title:"Développer un mental de champion(ne)",duration:"20 min",soon:true},
+      {id:2,title:"Sortir de sa zone de confort sans se perdre",duration:"22 min",soon:true},
+      {id:3,title:"Gérer la peur de l'échec et du jugement",duration:"20 min",soon:true},
+      {id:4,title:"Construire une routine de haute performance",duration:"25 min",soon:true},
+      {id:5,title:"Rester motivé(e) quand rien n'avance",duration:"22 min",soon:true},
+      {id:6,title:"Cultiver la discipline au quotidien",duration:"20 min",soon:true},
+      {id:7,title:"Apprendre à apprendre — la méta-compétence clé",duration:"24 min",soon:true},
+      {id:8,title:"Gérer le syndrome de l'imposteur",duration:"22 min",soon:true},
+      {id:9,title:"Développer sa résilience face aux obstacles",duration:"25 min",soon:true},
+      {id:10,title:"Passer de l'idée à l'action sans se saboter",duration:"28 min",soon:true},
+    ]
+  },
+  { id:"entrepreneuriat", icon:"🚀", label:"Entrepreneuriat", color:"var(--accent)",
+    modules:[
+      {id:1,title:"Devenir entrepreneur en 2026",duration:"25 min",url:"https://coassemble.com/learn/OKVJTK"},
+      {id:2,title:"Créer une app avec l'IA",duration:"25 min",url:"https://coassemble.com/learn/RB1FR5"},
+      {id:3,title:"Trouver son idée de business rentable",duration:"25 min",soon:true},
+      {id:4,title:"Valider son marché sans investir",duration:"28 min",soon:true},
+      {id:5,title:"Construire une offre irrésistible",duration:"30 min",soon:true},
+      {id:6,title:"Les bases de la vente authentique",duration:"26 min",soon:true},
+      {id:7,title:"Créer son tunnel de vente de A à Z",duration:"28 min",soon:true},
+      {id:8,title:"Générer du trafic organique gratuitement",duration:"24 min",soon:true},
+      {id:9,title:"Lancer son premier produit digital",duration:"32 min",soon:true},
+      {id:10,title:"Générer ses premiers revenus en ligne",duration:"35 min",soon:true},
+    ]
+  }
+];
+
+const RESOURCES=[
+  {title:"Ebook : Marketing Digital",type:"Ebook",pages:87,icon:"📘"},
+  {title:"Guide du Monde Numérique",type:"Guide",pages:54,icon:"🌐"},
+  {title:"Checklist Stratégie Digitale",type:"Checklist",pages:12,icon:"✅"},
+  {title:"Templates Réseaux Sociaux",type:"Templates",pages:20,icon:"🎨"},
+];
+
+const FAQ_LANDING=[
+  {q:"Faut-il des connaissances préalables ?",a:"Aucune. Cette formation est conçue pour les vrais débutants. Pas de jargon, pas de prérequis technique — juste la volonté d'apprendre."},
+  {q:"C'est quoi exactement comme format ?",a:"Chaque module est une compilation de slides narratives interactives — pas des vidéos. Vous lisez, vous interagissez, vous progressez. 15 à 30 minutes par module, à votre rythme."},
+  {q:"Puis-je accéder à tous les modules dès l'abonnement ?",a:"Oui, tout le contenu disponible est accessible immédiatement. De nouveaux modules sont ajoutés chaque mois."},
+  {q:"Que se passe-t-il si j'annule ?",a:"L'accès est interrompu immédiatement à l'annulation. Les modules en cours ne sont pas sauvegardés. Vous pouvez vous réabonner à tout moment."},
+  {q:"Y a-t-il un accompagnement personnalisé ?",a:"Oui, en option. Vous pouvez réserver une session individuelle avec Nadia pour un accompagnement sur mesure, vendu séparément."},
+  {q:"La formation est-elle accessible depuis mobile ?",a:"Oui, 100% en ligne depuis votre mobile, tablette ou PC, partout dans le monde."},
+];
+
+const FAQ_DASH=[
+  {cat:"marketing",q:"Comment fonctionne le micro-learning ?",a:"Chaque module dure 15 à 30 minutes et se compose de slides narratives interactives. Vous avancez à votre rythme, sans contrainte d'horaire."},
+  {cat:"marketing",q:"Par où commencer si je suis débutant(e) ?",a:"Commencez par le Parcours 'Le Monde Numérique' depuis le module 1. Si vous avez déjà le kit à 39€, démarrez par le Parcours Entrepreneuriat."},
+  {cat:"marketing",q:"Les modules sont-ils accessibles hors ligne ?",a:"Non, les modules sont en ligne. Vous avez besoin d'une connexion internet pour y accéder."},
+  {cat:"marketing",q:"Est-ce que je recevrai un certificat ?",a:"Oui, un certificat de complétion est prévu pour chaque parcours terminé. Cette fonctionnalité sera disponible prochainement."},
+  {cat:"entrepreneuriat",q:"Je n'ai pas d'idée de business, est-ce fait pour moi ?",a:"Absolument ! Le module 'Trouver son idée de business rentable' est fait exactement pour vous."},
+  {cat:"entrepreneuriat",q:"Faut-il déjà avoir une entreprise pour suivre le parcours Entrepreneuriat ?",a:"Non, ce parcours est conçu pour ceux qui veulent se lancer. Que vous partiez de zéro ou que vous ayez déjà un projet, les modules s'adaptent."},
+  {cat:"abonnement",q:"Comment fonctionne l'essai gratuit de 3 jours ?",a:"Vous vous abonnez avec votre carte bancaire, mais aucun prélèvement n'est effectué pendant 3 jours. Vous pouvez annuler avant sans frais."},
+  {cat:"abonnement",q:"Comment annuler mon abonnement ?",a:"Connectez-vous à votre espace Stripe via le lien reçu par email lors de votre abonnement, puis cliquez sur 'Annuler'."},
+  {cat:"abonnement",q:"Y a-t-il des frais cachés ?",a:"Aucun. Le prix est 9,99€/mois tout inclus : tous les modules disponibles, les ebooks, les guides et les futures mises à jour."},
+  {cat:"technique",q:"Comment installer l'app sur mon téléphone ?",a:"Sur Chrome (Android) : appuyez sur les 3 points → 'Ajouter à l'écran d'accueil'. Sur Safari (iPhone) : bouton Partager → 'Sur l'écran d'accueil'."},
+  {cat:"technique",q:"Ma progression a disparu après rechargement",a:"La progression est sauvegardée sur votre appareil. Si vous changez d'appareil ou videz le cache, elle sera réinitialisée."},
+];
+
+let currentCat='all', currentModal=null;
+
+function loadProgress(){try{return JSON.parse(localStorage.getItem('ad_progress')||'{}')}catch{return{}}}
+function saveProgress(p){try{localStorage.setItem('ad_progress',JSON.stringify(p))}catch{}}
+function isDone(pId,mId){return!!loadProgress()[pId+'-'+mId]}
+function setDone(pId,mId){const p=loadProgress();p[pId+'-'+mId]=true;saveProgress(p)}
+
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  document.getElementById('page-'+id).classList.add('active');
+  window.scrollTo(0,0);
+}
+
+function startDashboard(expandId){
+  showPage('dashboard');
+  renderParcours(expandId);
+  renderResources();
+  renderFaqDash(FAQ_DASH);
+}
+
+function switchTab(name,btn){
+  ['parcours','ressources','aide'].forEach(t=>{
+    document.getElementById('tab-'+t).style.display=t===name?'block':'none';
+  });
+  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  btn.classList.add('active');
+}
+
+function renderFaqLanding(){
+  const c=document.getElementById('faq-container');
+  if(!c||c.innerHTML)return;
+  c.innerHTML=FAQ_LANDING.map((f,i)=>`
+    <div class="faq-item" onclick="toggleFaq(${i})">
+      <div class="faq-q">${f.q}<span class="faq-icon" id="faq-icon-${i}">+</span></div>
+      <div class="faq-a">${f.a}</div>
+    </div>`).join('');
+}
+renderFaqLanding();
+
+function toggleFaq(i){
+  const el=document.querySelectorAll('#faq-container .faq-item')[i];
+  const icon=document.getElementById('faq-icon-'+i);
+  el.classList.toggle('open');
+  icon.textContent=el.classList.contains('open')?'−':'+';
+}
+
+function updateStats(){
+  let done=0,mins=0;
+  PARCOURS.forEach(p=>p.modules.forEach(m=>{
+    if(isDone(p.id,m.id)){done++;mins+=parseInt(m.duration);}
+  }));
+  document.getElementById('done-count').textContent=done;
+  document.getElementById('pct-count').textContent=Math.round((done/30)*100)+'%';
+  document.getElementById('time-count').textContent=mins>59?Math.floor(mins/60)+'h'+(mins%60?mins%60:''):mins+'min';
+}
+
+function renderParcours(expandId){
+  const c=document.getElementById('parcours-list');
+  c.innerHTML=PARCOURS.map(p=>`
+    <div class="card parcours-card" style="border-left:4px solid ${p.color};margin-bottom:10px">
+      <div class="parcours-header" style="margin-bottom:${expandId===p.id?'12px':'0'}">
+        <div style="display:flex;align-items:center;gap:10px">
+          <span style="font-size:22px">${p.icon}</span>
+          <div>
+            <div style="font-weight:700;font-size:14px">${p.label}</div>
+            <div style="font-size:11px;color:var(--muted)">${p.modules.length} modules · 📑 Slides narratives</div>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center">
+          <span class="badge ${p.id==='mindset'?'badge-purple':p.id==='entrepreneuriat'?'badge-amber':'badge-green'}">${p.id==='mindset'?'À venir':p.id==='entrepreneuriat'?'2/10 dispo':'Disponible'}</span>
+          <button class="toggle-btn" onclick="toggleParcours('${p.id}')" id="toggle-${p.id}">${expandId===p.id?'▲':'▼'}</button>
+        </div>
+      </div>
+      <div class="modules-list ${expandId===p.id?'open':''}" id="modules-${p.id}">
+        ${p.modules.map((m,i)=>{
+          const done=isDone(p.id,m.id);
+          return`<div class="module-row">
+            <div class="module-num ${done?'done':m.soon?'soon':''}">${done?'✅':m.soon?'🔒':(i+1)}</div>
+            <div style="flex:1;min-width:100px;color:${m.soon?'var(--muted)':'var(--text)'}">${m.title}${m.free?'<span class="badge badge-amber" style="margin-left:6px;font-size:10px">Offert</span>':''}</div>
+            <div style="font-size:11px;color:var(--muted);flex-shrink:0">${m.duration}</div>
+            ${!m.soon?`<button class="${done?'btn-done-mod':'btn-start'}" onclick="openModule('${m.title.replace(/'/g,"\\'")}','${p.label}','${m.duration}','${m.url||''}','${p.id}',${m.id})">${done?'Revoir':'Démarrer'}</button>`:'<span class="badge badge-teal" style="flex-shrink:0">Bientôt</span>'}
+          </div>`;
+        }).join('')}
+      </div>
+    </div>`).join('');
+  updateStats();
+}
+
+function toggleParcours(id){
+  const list=document.getElementById('modules-'+id);
+  const btn=document.getElementById('toggle-'+id);
+  list.classList.toggle('open');
+  btn.textContent=list.classList.contains('open')?'▲':'▼';
+}
+
+function renderResources(){
+  const c=document.getElementById('resources-list');
+  if(c.innerHTML)return;
+  c.innerHTML=RESOURCES.map(r=>`
+    <div class="card" style="margin-bottom:10px">
+      <div class="resource-row">
+        <div style="display:flex;gap:12px;align-items:center">
+          <span style="font-size:26px">${r.icon}</span>
+          <div><div style="font-weight:600;font-size:14px;margin-bottom:3px">${r.title}</div>
+          <div style="font-size:11px;color:var(--muted)">${r.type} · ${r.pages} pages</div></div>
+        </div>
+        <button class="btn-dl">Télécharger</button>
+      </div>
+    </div>`).join('');
+}
+
+function renderFaqDash(items){
+  const c=document.getElementById('faq-dash-list');
+  if(!items.length){c.innerHTML='<p style="text-align:center;color:var(--muted);font-size:13px;padding:20px">Aucun résultat.</p>';return;}
+  c.innerHTML=items.map((f,i)=>`
+    <div class="faq-item" onclick="toggleFaqDash(${i})" id="fdash-${i}">
+      <div class="faq-q">${f.q}<span class="faq-icon" id="fdash-icon-${i}">+</span></div>
+      <div class="faq-a">${f.a}</div>
+    </div>`).join('');
+}
+
+function toggleFaqDash(i){
+  const el=document.getElementById('fdash-'+i);
+  const icon=document.getElementById('fdash-icon-'+i);
+  if(!el)return;
+  el.classList.toggle('open');
+  icon.textContent=el.classList.contains('open')?'−':'+';
+}
+
+function filterCat(cat,btn){
+  currentCat=cat;
+  document.querySelectorAll('.faq-cat').forEach(b=>b.classList.remove('active-cat'));
+  btn.classList.add('active-cat');
+  applyFaqFilter(cat,document.getElementById('faq-search')?.value||'');
+}
+
+function filterFaqDash(val){applyFaqFilter(currentCat,val);}
+
+function applyFaqFilter(cat,search){
+  let items=FAQ_DASH;
+  if(cat!=='all')items=items.filter(f=>f.cat===cat);
+  if(search.trim())items=items.filter(f=>f.q.toLowerCase().includes(search.toLowerCase())||f.a.toLowerCase().includes(search.toLowerCase()));
+  renderFaqDash(items);
+}
+
+function openModule(title,parcours,duration,url,parcoursId,moduleId){
+  currentModal={parcoursId,moduleId};
+  document.getElementById('modal-title').textContent=title;
+  document.getElementById('modal-sub').textContent=parcours+' · '+duration+' · 📑 Slides narratives';
+  document.getElementById('modal-iframe').src=url;
+  document.getElementById('btn-mark').style.display=isDone(parcoursId,moduleId)?'none':'block';
+  document.getElementById('module-modal').classList.add('open');
+}
+
+function closeModal(){
+  document.getElementById('module-modal').classList.remove('open');
+  document.getElementById('modal-iframe').src='';
+}
+
+function markDone(){
+  if(!currentModal)return;
+  setDone(currentModal.parcoursId,currentModal.moduleId);
+  closeModal();
+  renderParcours(currentModal.parcoursId);
+}
+
+if('serviceWorker' in navigator){
+  window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js');});
+}
+</script>
+</body>
+</html>
