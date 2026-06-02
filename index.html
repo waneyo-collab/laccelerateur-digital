@@ -466,14 +466,19 @@ const SUPABASE_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
 
 async function checkSubscriber(email) {
-  const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`, {
-    headers: {
-      'apikey': SUPABASE_ANON,
-      'Authorization': `Bearer ${SUPABASE_ANON}`
-    }
-  });
-  const data = await res.json();
-  return data.length > 0;
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`, {
+      headers: {
+        'apikey': SUPABASE_ANON,
+        'Authorization': `Bearer ${SUPABASE_ANON}`
+      }
+    });
+    if (!res.ok) return false;
+    const data = await res.json();
+    return Array.isArray(data) && data.length > 0;
+  } catch {
+    return false;
+  }
 }
 
 async function handleLogin() {
