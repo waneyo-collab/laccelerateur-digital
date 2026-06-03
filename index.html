@@ -456,7 +456,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   </nav>
   <div class="login-card">
     <div class="card">
-      <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center">Nouveau mot de passe</h2>
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center" id="reset-title">Créez votre mot de passe</h2>
       <div id="reset-form">
         <label class="form-label">Nouveau mot de passe</label>
         <input class="form-input" type="password" id="reset-pwd" placeholder="Minimum 6 caractères"/>
@@ -1077,8 +1077,10 @@ async function handleResetPassword() {
 window.addEventListener('load', () => {
   const type = getHashParam('type');
   const token = getHashParam('access_token');
-  if (type === 'recovery' && token) {
+  if ((type === 'recovery' || type === 'invite') && token) {
     showPage('reset');
+    const titleEl = document.getElementById('reset-title');
+    if (titleEl) titleEl.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
     return;
   }
   const user = localStorage.getItem('waneyo_user');
