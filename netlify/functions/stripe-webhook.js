@@ -26,15 +26,18 @@ exports.handler = async (event) => {
     const customerId = session.customer;
 
     if (email) {
+      const fullName = session.customer_details?.name || '';
+      const firstName = fullName.split(' ')[0] || '';
+
       // Créer le compte Auth Supabase
-      const { data: authData } = await supabase.auth.admin.inviteUserByEmail(email, {
+      await supabase.auth.admin.inviteUserByEmail(email, {
         redirectTo: 'https://app.waneyo-formation.com',
-        data: { stripe_customer_id: customerId }
+        data: { stripe_customer_id: customerId, first_name: firstName }
       });
 
       // Enregistrer dans la table subscribers
       await supabase.from('subscribers').upsert(
-        { email, stripe_customer_id: customerId, status: 'active' },
+        { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
         { onConflict: 'email' }
       );
     }
