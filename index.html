@@ -553,6 +553,7 @@ async function handleLogin() {
     }
 
     localStorage.setItem('waneyo_token', data.access_token);
+    if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
     localStorage.setItem('waneyo_user', email);
     localStorage.setItem('waneyo_firstname', subs[0].first_name || '');
     startDashboard('numerique');
@@ -566,8 +567,29 @@ async function handleLogin() {
 async function handleLogout() {
   localStorage.removeItem('waneyo_token');
   localStorage.removeItem('waneyo_user');
+  localStorage.removeItem('waneyo_firstname');
   showPage('landing');
 }
+
+async function refreshToken() {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/auth/v1/token?grant_type=refresh_token`, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_ANON, 'Content-Type': 'application/json' },
+      body: JSON.stringify({ refresh_token: localStorage.getItem('waneyo_refresh') })
+    });
+    const data = await res.json();
+    if (data.access_token) {
+      localStorage.setItem('waneyo_token', data.access_token);
+      if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
+    } else {
+      handleLogout();
+    }
+  } catch { handleLogout(); }
+}
+
+// Rafraîchir le token toutes les 50 minutes
+setInterval(refreshToken, 50 * 60 * 1000);
 
 async function handleForgotPassword() {
   const email = document.getElementById('login-email').value.trim();
