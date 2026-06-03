@@ -447,6 +447,31 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   </div>
 </div>
 
+<!-- RESET PASSWORD -->
+<div id="page-reset" class="page">
+  <nav>
+    <span class="logo">L'Accélérateur<span> Digital</span></span>
+  </nav>
+  <div class="login-card">
+    <div class="card">
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center">Nouveau mot de passe</h2>
+      <div id="reset-form">
+        <label class="form-label">Nouveau mot de passe</label>
+        <input class="form-input" type="password" id="reset-pwd" placeholder="Minimum 6 caractères"/>
+        <label class="form-label">Confirmer le mot de passe</label>
+        <input class="form-input" type="password" id="reset-pwd2" placeholder="••••••••" style="margin-bottom:10px"/>
+        <p id="reset-error" style="color:red;font-size:12px;text-align:center;margin-bottom:8px"></p>
+        <button class="btn-primary" style="width:100%" onclick="handleResetPassword()">Enregistrer mon mot de passe</button>
+      </div>
+      <div id="reset-success" style="display:none;text-align:center">
+        <div style="font-size:32px;margin-bottom:12px">✅</div>
+        <div style="font-weight:600;margin-bottom:8px">Mot de passe enregistré !</div>
+        <button class="btn-primary" style="width:100%" onclick="showPage('login')">Se connecter</button>
+      </div>
+    </div>
+  </div>
+</div>
+
 <!-- MODULE MODAL -->
 <div class="modal" id="module-modal">
   <div class="modal-header">
@@ -886,8 +911,38 @@ function closeCompletion(){
   document.getElementById('completion-modal').classList.remove('open');
 }
 
+// Gestion reset mot de passe
+function getHashParam(key) {
+  const hash = window.location.hash.substring(1);
+  const params = new URLSearchParams(hash);
+  return params.get(key);
+}
+
+async function handleResetPassword() {
+  const pwd = document.getElementById('reset-pwd').value;
+  const pwd2 = document.getElementById('reset-pwd2').value;
+  const errorEl = document.getElementById('reset-error');
+  if (!pwd || pwd.length < 6) { errorEl.textContent = '❌ Minimum 6 caractères.'; return; }
+  if (pwd !== pwd2) { errorEl.textContent = '❌ Les mots de passe ne correspondent pas.'; return; }
+  const token = getHashParam('access_token');
+  const res = await supabaseFetch('/auth/v1/user', {
+    method: 'PUT',
+    headers: { 'Authorization': `Bearer ${token}` },
+    body: JSON.stringify({ password: pwd })
+  });
+  if (res.error) { errorEl.textContent = '❌ Erreur : ' + res.error.message; return; }
+  document.getElementById('reset-success').style.display = 'block';
+  document.getElementById('reset-form').style.display = 'none';
+}
+
 // Vérifier session au chargement
 window.addEventListener('load', () => {
+  const type = getHashParam('type');
+  const token = getHashParam('access_token');
+  if (type === 'recovery' && token) {
+    showPage('reset');
+    return;
+  }
   const user = localStorage.getItem('waneyo_user');
   if (user) startDashboard('numerique');
 });
