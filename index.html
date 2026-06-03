@@ -421,6 +421,14 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   <div id="tab-aide" class="dash-wrap" style="display:none">
     <div style="font-size:15px;font-weight:700;margin-bottom:4px">❓ Aide & FAQ</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Trouvez rapidement une réponse à vos questions</div>
+
+    <div class="card" style="margin-bottom:16px;text-align:center;border:1px solid var(--border)">
+      <div style="font-size:22px;margin-bottom:8px">💳</div>
+      <div style="font-weight:600;font-size:14px;margin-bottom:4px">Gérer mon abonnement</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Modifiez ou annulez votre abonnement, consultez vos factures.</div>
+      <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.open('https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00','_blank')">Accéder à mon espace abonnement</button>
+    </div>
+
     <input id="faq-search" class="form-input" placeholder="🔍 Rechercher une question…" oninput="filterFaqDash(this.value)" style="margin-bottom:14px"/>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
       <button class="sug-btn active-cat faq-cat" onclick="filterCat('all',this)">Tout</button>
@@ -430,13 +438,6 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <button class="sug-btn faq-cat" onclick="filterCat('technique',this)">⚙️ Technique</button>
     </div>
     <div id="faq-dash-list"></div>
-    <div class="card" style="margin-top:20px;text-align:center;border:1px solid var(--border)">
-      <div style="font-size:22px;margin-bottom:8px">💳</div>
-      <div style="font-weight:600;font-size:14px;margin-bottom:4px">Gérer mon abonnement</div>
-      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Modifiez ou annulez votre abonnement, consultez vos factures.</div>
-      <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.open('https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00','_blank')">Accéder à mon espace abonnement</button>
-    </div>
-
     <div class="card" style="margin-top:12px;text-align:center;border:1px dashed var(--border)">
       <div style="font-size:22px;margin-bottom:8px">✉️</div>
       <div style="font-weight:600;font-size:14px;margin-bottom:4px">Vous ne trouvez pas votre réponse ?</div>
