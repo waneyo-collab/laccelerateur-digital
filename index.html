@@ -138,6 +138,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 .upsell-features li{font-size:12px;color:var(--text);padding:4px 0;display:flex;gap:6px}
 .btn-accent{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
 </style>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -927,9 +928,92 @@ const COMP_MSGS={
   entrepreneuriat:{emoji:"🏆",title:"Parcours complet !",msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !",btn:"Fermer"}
 };
 
+function generateCertificate(phaseName){
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({ orientation:'landscape', unit:'mm', format:'a4' });
+  const firstName = localStorage.getItem('waneyo_firstname') || 'Apprenant(e)';
+  const date = new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+
+  // Fond
+  doc.setFillColor(15,10,30);
+  doc.rect(0,0,297,210,'F');
+
+  // Bordure dorée
+  doc.setDrawColor(245,158,11);
+  doc.setLineWidth(2);
+  doc.rect(10,10,277,190);
+  doc.setLineWidth(0.5);
+  doc.rect(13,13,271,184);
+
+  // Logo / titre app
+  doc.setTextColor(124,58,237);
+  doc.setFontSize(13);
+  doc.setFont('helvetica','bold');
+  doc.text("L'ACCÉLÉRATEUR DIGITAL", 148.5, 35, {align:'center'});
+  doc.setTextColor(245,158,11);
+  doc.setFontSize(10);
+  doc.setFont('helvetica','normal');
+  doc.text("by Waneyo Formation", 148.5, 42, {align:'center'});
+
+  // Titre certificat
+  doc.setTextColor(255,255,255);
+  doc.setFontSize(11);
+  doc.text("CERTIFICAT DE SUIVI DE FORMATION", 148.5, 58, {align:'center'});
+
+  // Ligne décorative
+  doc.setDrawColor(245,158,11);
+  doc.setLineWidth(0.5);
+  doc.line(60,63,237,63);
+
+  // Prénom
+  doc.setTextColor(255,255,255);
+  doc.setFontSize(10);
+  doc.text("Ce certificat est décerné à", 148.5, 76, {align:'center'});
+  doc.setTextColor(124,58,237);
+  doc.setFontSize(28);
+  doc.setFont('helvetica','bold');
+  doc.text(firstName, 148.5, 92, {align:'center'});
+
+  // Phase
+  doc.setTextColor(255,255,255);
+  doc.setFontSize(10);
+  doc.setFont('helvetica','normal');
+  doc.text("pour avoir complété avec succès", 148.5, 105, {align:'center'});
+  doc.setTextColor(245,158,11);
+  doc.setFontSize(18);
+  doc.setFont('helvetica','bold');
+  doc.text(phaseName, 148.5, 118, {align:'center'});
+
+  // Description
+  doc.setTextColor(180,180,180);
+  doc.setFontSize(9);
+  doc.setFont('helvetica','normal');
+  doc.text("Formation en marketing digital et entrepreneuriat — Waneyo Formation", 148.5, 132, {align:'center'});
+
+  // Ligne décorative bas
+  doc.setDrawColor(245,158,11);
+  doc.line(60,145,237,145);
+
+  // Date et signature
+  doc.setTextColor(255,255,255);
+  doc.setFontSize(9);
+  doc.text(`Délivré le ${date}`, 80, 158, {align:'center'});
+  doc.text("Nadia — Fondatrice Waneyo Formation", 217, 158, {align:'center'});
+  doc.setDrawColor(180,180,180);
+  doc.line(40,162,120,162);
+  doc.line(157,162,237,162);
+  doc.setFontSize(8);
+  doc.setTextColor(120,120,120);
+  doc.text("Date", 80, 167, {align:'center'});
+  doc.text("Signature", 217, 167, {align:'center'});
+
+  doc.save(`Certificat_${phaseName.replace(/ /g,'_')}_${firstName}.pdf`);
+}
+
 function showCompletion(p){
   const msg=COMP_MSGS[p.id];
   if(!msg)return;
+  if(p.id==='entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
   document.getElementById('comp-emoji').textContent=msg.emoji;
   document.getElementById('comp-title').textContent=msg.title;
   document.getElementById('comp-msg').textContent=msg.msg;
