@@ -660,11 +660,35 @@ const FAQ_DASH=[
 ];
 
 let currentCat='all',currentModal=null;
+let progressCache={};
 
-function loadProgress(){try{return JSON.parse(localStorage.getItem('ad_progress')||'{}')}catch{return{}}}
-function saveProgress(p){try{localStorage.setItem('ad_progress',JSON.stringify(p))}catch{}}
-function isDone(pId,mId){return!!loadProgress()[pId+'-'+mId]}
-function setDone(pId,mId){const p=loadProgress();p[pId+'-'+mId]=true;saveProgress(p)}
+async function loadProgress(){
+  const email=localStorage.getItem('waneyo_user');
+  const token=localStorage.getItem('waneyo_token');
+  if(!email||!token) return;
+  try{
+    const res=await fetch(`${SUPABASE_URL}/rest/v1/progress?user_email=eq.${encodeURIComponent(email)}&done=eq.true&select=module_key`,{
+      headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${token}`}
+    });
+    const data=await res.json();
+    if(Array.isArray(data)) data.forEach(r=>progressCache[r.module_key]=true);
+  }catch{}
+}
+
+async function setDone(pId,mId){
+  const key=pId+'-'+mId;
+  progressCache[key]=true;
+  const email=localStorage.getItem('waneyo_user');
+  const token=localStorage.getItem('waneyo_token');
+  if(!email||!token) return;
+  await fetch(`${SUPABASE_URL}/rest/v1/progress`,{
+    method:'POST',
+    headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${token}`,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates'},
+    body:JSON.stringify({user_email:email,module_key:key,done:true})
+  });
+}
+
+function isDone(pId,mId){return!!progressCache[pId+'-'+mId]}
 
 function showPage(id){
   document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
@@ -672,9 +696,10 @@ function showPage(id){
   window.scrollTo(0,0);
 }
 
-function startDashboard(expandId){
+async function startDashboard(expandId){
   showPage('dashboard');
   checkPwaBanner();
+  await loadProgress();
   renderParcours(expandId);
   renderResources();
   renderFaqDash(FAQ_DASH);
