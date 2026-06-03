@@ -182,7 +182,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
         <div style="flex:1;text-align:center">
           <div style="width:48px;height:48px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-size:20px;margin:0 auto 10px">🌐</div>
           <div style="font-weight:700;font-size:13px;color:var(--primary);margin-bottom:4px">Phase 1</div>
-          <div style="font-weight:600;font-size:14px;margin-bottom:6px">Les bases</div>
+          <div style="font-weight:600;font-size:14px;margin-bottom:6px">Le Monde Numérique</div>
           <div style="font-size:12px;color:var(--muted);line-height:1.5">Posez les bases du marketing digital</div>
           <div style="font-size:11px;color:var(--primary);font-weight:600;margin-top:6px">10 modules</div>
         </div>
@@ -314,8 +314,11 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center">Connexion</h2>
       <label class="form-label">Email</label>
       <input class="form-input" type="email" id="login-email" placeholder="votre@email.com"/>
-      <p id="login-error" style="color:red;font-size:12px;margin-top:10px;text-align:center"></p>
-      <button class="btn-primary" style="width:100%;margin-top:14px" onclick="handleLogin()">Se connecter</button>
+      <label class="form-label">Mot de passe</label>
+      <input class="form-input" type="password" id="login-password" placeholder="••••••••"/>
+      <p style="font-size:11px;color:var(--primary);cursor:pointer;text-align:right;margin-top:6px" onclick="handleForgotPassword()">Mot de passe oublié ?</p>
+      <p id="login-error" style="font-size:12px;margin-top:6px;text-align:center"></p>
+      <button class="btn-primary" style="width:100%;margin-top:10px" onclick="handleLogin()">Se connecter</button>
       <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px">Pas encore membre ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('subscribe')">Essai gratuit 3 jours</span></p>
     </div>
   </div>
@@ -472,42 +475,86 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 const SUPABASE_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
 
-async function checkSubscriber(email) {
-  try {
-    const res = await fetch(`${SUPABASE_URL}/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`, {
-      headers: {
-        'apikey': SUPABASE_ANON,
-        'Authorization': `Bearer ${SUPABASE_ANON}`
-      }
-    });
-    if (!res.ok) return false;
-    const data = await res.json();
-    return Array.isArray(data) && data.length > 0;
-  } catch {
-    return false;
-  }
+async function supabaseFetch(path, options = {}) {
+  const res = await fetch(`${SUPABASE_URL}${path}`, {
+    ...options,
+    headers: {
+      'apikey': SUPABASE_ANON,
+      'Content-Type': 'application/json',
+      ...(options.headers || {})
+    }
+  });
+  return res.json();
 }
 
 async function handleLogin() {
   const email = document.getElementById('login-email').value.trim();
+  const password = document.getElementById('login-password').value;
   const errorEl = document.getElementById('login-error');
   errorEl.style.color = 'var(--muted)';
   errorEl.textContent = '';
-  if (!email) { errorEl.style.color='red'; errorEl.textContent = 'Veuillez entrer votre email.'; return; }
-  errorEl.textContent = 'Vérification…';
-  const isActive = await checkSubscriber(email);
-  if (isActive) {
+
+  if (!email || !password) {
+    errorEl.style.color = 'red';
+    errorEl.textContent = 'Veuillez remplir tous les champs.';
+    return;
+  }
+
+  errorEl.textContent = 'Connexion…';
+
+  try {
+    const data = await supabaseFetch('/auth/v1/token?grant_type=password', {
+      method: 'POST',
+      body: JSON.stringify({ email, password })
+    });
+
+    if (data.error || !data.access_token) {
+      errorEl.style.color = 'red';
+      errorEl.textContent = '❌ Email ou mot de passe incorrect.';
+      return;
+    }
+
+    // Vérifier abonnement actif
+    const subs = await supabaseFetch(`/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`, {
+      headers: { 'Authorization': `Bearer ${data.access_token}` }
+    });
+
+    if (!Array.isArray(subs) || subs.length === 0) {
+      errorEl.style.color = 'red';
+      errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
+      return;
+    }
+
+    localStorage.setItem('waneyo_token', data.access_token);
     localStorage.setItem('waneyo_user', email);
     startDashboard('numerique');
-  } else {
+
+  } catch {
     errorEl.style.color = 'red';
-    errorEl.textContent = '❌ Aucun abonnement actif trouvé pour cet email.';
+    errorEl.textContent = '❌ Erreur de connexion. Réessayez.';
   }
 }
 
-function handleLogout() {
+async function handleLogout() {
+  localStorage.removeItem('waneyo_token');
   localStorage.removeItem('waneyo_user');
   showPage('landing');
+}
+
+async function handleForgotPassword() {
+  const email = document.getElementById('login-email').value.trim();
+  const errorEl = document.getElementById('login-error');
+  if (!email) {
+    errorEl.style.color = 'red';
+    errorEl.textContent = 'Entrez votre email puis cliquez sur "Mot de passe oublié".';
+    return;
+  }
+  await supabaseFetch('/auth/v1/recover', {
+    method: 'POST',
+    body: JSON.stringify({ email, redirectTo: 'https://app.waneyo-formation.com' })
+  });
+  errorEl.style.color = 'green';
+  errorEl.textContent = '✅ Email de réinitialisation envoyé.';
 }
 
 // DATA
@@ -559,7 +606,7 @@ const PARCOURS=[
 const RESOURCES=[
   {title:"Ebook : Marketing Digital pour Débutants",type:"Ebook",pages:87,icon:"📘",url:"https://raw.githubusercontent.com/waneyo-collab/laccelerateur-digital/main/ressources/E-book%20Marketing%20Waneyo-F.pdf"},
   {title:"Guide du Monde Numérique",type:"Guide",pages:54,icon:"🌐",url:""},
-  {title:"Checklist Stratégie Digitale",type:"Checklist",pages:12,icon:"✅",url:""},
+  {title:"Checklist Stratégie Digitale",type:"Checklist",pages:12,icon:"✅",url:"https://github.com/waneyo-collab/laccelerateur-digital/raw/main/ressources/Check-list%20strat%C3%A9gie%20digitale.pdf"},
   {title:"Liste d'idées rentables en 2026",type:"Guide",pages:12,icon:"💡",url:""},
 ];
 
