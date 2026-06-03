@@ -329,7 +329,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   <nav>
     <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
     <div style="display:flex;align-items:center;gap:10px">
-      <span class="badge badge-green">Abonné(e) ✓</span>
+      <span class="badge badge-green" id="nav-greeting">Abonné(e) ✓</span>
       <button class="btn-logout" onclick="handleLogout()">Déconnexion</button>
     </div>
   </nav>
@@ -540,7 +540,7 @@ async function handleLogin() {
     }
 
     // Vérifier abonnement actif
-    const subs = await supabaseFetch(`/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`, {
+    const subs = await supabaseFetch(`/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`, {
       headers: { 'Authorization': `Bearer ${data.access_token}` }
     });
 
@@ -552,6 +552,7 @@ async function handleLogin() {
 
     localStorage.setItem('waneyo_token', data.access_token);
     localStorage.setItem('waneyo_user', email);
+    localStorage.setItem('waneyo_firstname', subs[0].first_name || '');
     startDashboard('numerique');
 
   } catch {
@@ -698,6 +699,9 @@ function showPage(id){
 
 async function startDashboard(expandId){
   showPage('dashboard');
+  const firstName = localStorage.getItem('waneyo_firstname');
+  const greeting = document.getElementById('nav-greeting');
+  if(greeting) greeting.textContent = firstName ? `👋 ${firstName}` : 'Abonné(e) ✓';
   checkPwaBanner();
   await loadProgress();
   renderParcours(expandId);
