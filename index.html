@@ -912,14 +912,16 @@ function closeModal(){
   document.getElementById('modal-iframe').src='';
 }
 
-function markDone(){
+async function markDone(){
   if(!currentModal)return;
   setDone(currentModal.parcoursId,currentModal.moduleId);
   closeModal();
   const p=PARCOURS.find(p=>p.id===currentModal.parcoursId);
-  const allDone=p&&p.modules.filter(m=>!m.soon).every(m=>isDone(p.id,m.id));
+  const allPhaseDone=p&&p.modules.filter(m=>!m.soon).every(m=>isDone(p.id,m.id));
+  const allDone=PARCOURS.every(p=>p.modules.filter(m=>!m.soon).every(m=>isDone(p.id,m.id)));
   renderParcours(currentModal.parcoursId);
-  if(allDone) showCompletion(p);
+  if(allDone) generateCertificate("Les fondamentaux du marketing digital");
+  else if(allPhaseDone) showCompletion(p);
 }
 
 const COMP_MSGS={
