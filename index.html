@@ -77,9 +77,6 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 .form-label{font-size:12px;color:var(--muted);display:block;margin-bottom:5px;margin-top:12px}
 .form-input{width:100%;border:1px solid var(--border);border-radius:8px;padding:10px 12px;font-size:13px;outline:none;font-family:inherit}
 .form-input:focus{border-color:var(--primary)}
-.orient-wrap{max-width:700px;margin:40px auto;padding:0 24px;text-align:center}
-.orient-card{cursor:pointer;border:2px solid var(--border);border-radius:12px;padding:20px 16px;background:#fff;transition:border-color .2s}
-.orient-card:hover{border-color:var(--primary)}
 .tab-bar{display:flex;background:#fff;border-bottom:1px solid var(--border);padding:0 16px;overflow-x:auto}
 .tab-btn{padding:13px 14px;cursor:pointer;font-size:13px;font-weight:400;color:var(--muted);background:none;border:none;border-bottom:2px solid transparent;white-space:nowrap}
 .tab-btn.active{font-weight:600;color:var(--primary);border-bottom:2px solid var(--primary)}
@@ -422,14 +419,12 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   <div id="tab-aide" class="dash-wrap" style="display:none">
     <div style="font-size:15px;font-weight:700;margin-bottom:4px">❓ Aide & FAQ</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Trouvez rapidement une réponse à vos questions</div>
-
     <div class="card" style="margin-bottom:16px;text-align:center;border:1px solid var(--border)">
       <div style="font-size:22px;margin-bottom:8px">💳</div>
       <div style="font-weight:600;font-size:14px;margin-bottom:4px">Gérer mon abonnement</div>
       <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Modifiez ou annulez votre abonnement, consultez vos factures.</div>
       <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.open('https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00','_blank')">Accéder à mon espace abonnement</button>
     </div>
-
     <input id="faq-search" class="form-input" placeholder="🔍 Rechercher une question…" oninput="filterFaqDash(this.value)" style="margin-bottom:14px"/>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
       <button class="sug-btn active-cat faq-cat" onclick="filterCat('all',this)">Tout</button>
@@ -451,9 +446,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 
 <!-- RESET PASSWORD -->
 <div id="page-reset" class="page">
-  <nav>
-    <span class="logo">L'Accélérateur<span> Digital</span></span>
-  </nav>
+  <nav><span class="logo">L'Accélérateur<span> Digital</span></span></nav>
   <div class="login-card">
     <div class="card">
       <h2 style="font-size:18px;font-weight:700;margin-bottom:16px;text-align:center" id="reset-title">Créez votre mot de passe</h2>
@@ -498,7 +491,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 </div>
 
 <script>
-// SUPABASE AUTH
+// ─── SUPABASE ───────────────────────────────────────────────────────────────
 const SUPABASE_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
 
@@ -514,6 +507,24 @@ async function supabaseFetch(path, options = {}) {
   return res.json();
 }
 
+// ─── CACHE HELPERS ──────────────────────────────────────────────────────────
+function setCachedSubscriber(email, data) {
+  localStorage.setItem('waneyo_sub_' + btoa(email), JSON.stringify(data));
+}
+function getCachedSubscriber(email) {
+  try {
+    const raw = localStorage.getItem('waneyo_sub_' + btoa(email));
+    if (!raw) return null;
+    const parsed = JSON.parse(raw);
+    if (Date.now() - parsed.ts > 24 * 60 * 60 * 1000) {
+      localStorage.removeItem('waneyo_sub_' + btoa(email));
+      return null;
+    }
+    return parsed;
+  } catch { return null; }
+}
+
+// ─── AUTH ────────────────────────────────────────────────────────────────────
 async function handleLogin() {
   const email = document.getElementById('login-email').value.trim();
   const password = document.getElementById('login-password').value;
@@ -526,7 +537,6 @@ async function handleLogin() {
     errorEl.textContent = 'Veuillez remplir tous les champs.';
     return;
   }
-
   errorEl.textContent = 'Connexion…';
 
   try {
@@ -541,21 +551,30 @@ async function handleLogin() {
       return;
     }
 
-    // Vérifier abonnement actif
-    const subs = await supabaseFetch(`/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`, {
-      headers: { 'Authorization': `Bearer ${data.access_token}` }
-    });
+    // Vérif abonnement — cachée 24h, 1 seule requête Supabase par jour
+    const cachedSub = getCachedSubscriber(email);
+    let firstName = '';
 
-    if (!Array.isArray(subs) || subs.length === 0) {
-      errorEl.style.color = 'red';
-      errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
-      return;
+    if (!cachedSub) {
+      const subs = await supabaseFetch(
+        `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
+        { headers: { 'Authorization': `Bearer ${data.access_token}` } }
+      );
+      if (!Array.isArray(subs) || subs.length === 0) {
+        errorEl.style.color = 'red';
+        errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
+        return;
+      }
+      firstName = subs[0].first_name || '';
+      setCachedSubscriber(email, { firstName, ts: Date.now() });
+    } else {
+      firstName = cachedSub.firstName;
     }
 
     localStorage.setItem('waneyo_token', data.access_token);
     if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
     localStorage.setItem('waneyo_user', email);
-    localStorage.setItem('waneyo_firstname', subs[0].first_name || '');
+    localStorage.setItem('waneyo_firstname', firstName);
     startDashboard('numerique');
 
   } catch {
@@ -565,7 +584,13 @@ async function handleLogin() {
 }
 
 async function handleLogout() {
+  const email = localStorage.getItem('waneyo_user');
+  if (email) {
+    localStorage.removeItem('waneyo_sub_' + btoa(email));
+    localStorage.removeItem('waneyo_progress_' + btoa(email));
+  }
   localStorage.removeItem('waneyo_token');
+  localStorage.removeItem('waneyo_refresh');
   localStorage.removeItem('waneyo_user');
   localStorage.removeItem('waneyo_firstname');
   showPage('landing');
@@ -587,8 +612,6 @@ async function refreshToken() {
     }
   } catch { handleLogout(); }
 }
-
-// Rafraîchir le token toutes les 50 minutes
 setInterval(refreshToken, 50 * 60 * 1000);
 
 async function handleForgotPassword() {
@@ -607,8 +630,8 @@ async function handleForgotPassword() {
   errorEl.textContent = '✅ Email de réinitialisation envoyé.';
 }
 
-// DATA
-const PARCOURS=[
+// ─── DATA ────────────────────────────────────────────────────────────────────
+const PARCOURS = [
   {id:"numerique",icon:"🌐",label:"Le Monde Numérique",color:"var(--primary)",phase:1,
     modules:[
       {id:1,title:"Introduction au marketing digital",duration:"18 min",url:"https://coassemble.com/learn/IO1ZNE",free:true},
@@ -653,14 +676,14 @@ const PARCOURS=[
   }
 ];
 
-const RESOURCES=[
+const RESOURCES = [
   {title:"Ebook : Marketing Digital pour Débutants",type:"Ebook",pages:87,icon:"📘",url:"https://raw.githubusercontent.com/waneyo-collab/laccelerateur-digital/main/ressources/E-book%20Marketing%20Waneyo-F.pdf"},
   {title:"Guide du Monde Numérique",type:"Guide",pages:54,icon:"🌐",url:""},
   {title:"Checklist Stratégie Digitale",type:"Checklist",pages:12,icon:"✅",url:"https://github.com/waneyo-collab/laccelerateur-digital/raw/main/ressources/Check-list%20strat%C3%A9gie%20digitale.pdf"},
   {title:"32 Idées d'activités rentables en 2026",type:"Guide",pages:13,icon:"💡",url:"https://github.com/waneyo-collab/laccelerateur-digital/raw/main/ressources/32%20Id%C3%A9es%20d'activit%C3%A9s%20rentables.pdf"},
 ];
 
-const FAQ_LANDING=[
+const FAQ_LANDING = [
   {q:"Faut-il des connaissances préalables ?",a:"Aucune. Cette formation est conçue pour les vrais débutants. Pas de jargon, pas de prérequis — juste la volonté d'apprendre."},
   {q:"C'est quoi exactement comme format ?",a:"Chaque module est une compilation de slides narratives interactives — pas des vidéos. 15 à 30 minutes par module, à votre rythme."},
   {q:"Pourquoi ce parcours en 3 phases ?",a:"Parce qu'on ne peut pas entreprendre sans maîtriser le digital, et on ne peut pas réussir sans le bon état d'esprit. Les 3 phases se complètent pour vous donner toutes les clés."},
@@ -669,7 +692,7 @@ const FAQ_LANDING=[
   {q:"La formation est-elle accessible depuis mobile ?",a:"Oui, 100% en ligne depuis votre mobile, tablette ou PC. Vous pouvez même l'installer comme une app sur votre téléphone."},
 ];
 
-const FAQ_DASH=[
+const FAQ_DASH = [
   {cat:"marketing",q:"Comment fonctionne le micro-learning ?",a:"Chaque module dure 15 à 30 minutes et se compose de slides narratives interactives. Vous avancez à votre rythme, sans contrainte d'horaire."},
   {cat:"marketing",q:"Par où commencer si je suis débutant(e) ?",a:"Commencez par la Phase 1 — Le Monde Numérique. Le parcours guidé dans votre tableau de bord vous indique exactement le prochain module à faire."},
   {cat:"marketing",q:"Les modules sont-ils accessibles hors ligne ?",a:"Non, les modules sont en ligne. Vous avez besoin d'une connexion internet pour y accéder."},
@@ -684,48 +707,89 @@ const FAQ_DASH=[
   {cat:"technique",q:"Ma progression a disparu après rechargement",a:"La progression est sauvegardée sur votre appareil. Si vous changez d'appareil ou videz le cache, elle sera réinitialisée."},
 ];
 
-let currentCat='all',currentModal=null;
-let progressCache={};
+// ─── PROGRESSION ─────────────────────────────────────────────────────────────
+let currentCat = 'all', currentModal = null;
+let progressCache = {};
 
-async function loadProgress(){
-  const email=localStorage.getItem('waneyo_user');
-  const token=localStorage.getItem('waneyo_token');
-  if(!email||!token) return;
-  try{
-    const res=await fetch(`${SUPABASE_URL}/rest/v1/progress?user_email=eq.${encodeURIComponent(email)}&done=eq.true&select=module_key`,{
-      headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${token}`}
-    });
-    const data=await res.json();
-    if(Array.isArray(data)) data.forEach(r=>progressCache[r.module_key]=true);
-  }catch{}
+async function loadProgress() {
+  const email = localStorage.getItem('waneyo_user');
+  const token = localStorage.getItem('waneyo_token');
+  if (!email || !token) return;
+
+  // Cache progression 10 min → évite une requête Supabase à chaque visite
+  const cacheKey = 'waneyo_progress_' + btoa(email);
+  try {
+    const cached = localStorage.getItem(cacheKey);
+    if (cached) {
+      const { data, ts } = JSON.parse(cached);
+      if (Date.now() - ts < 10 * 60 * 1000) {
+        progressCache = data;
+        return;
+      }
+    }
+  } catch {}
+
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/progress?user_email=eq.${encodeURIComponent(email)}&done=eq.true&select=module_key`,
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${token}` } }
+    );
+    const data = await res.json();
+    if (Array.isArray(data)) {
+      progressCache = {};
+      data.forEach(r => progressCache[r.module_key] = true);
+      localStorage.setItem(cacheKey, JSON.stringify({ data: progressCache, ts: Date.now() }));
+    }
+  } catch {}
 }
 
-async function setDone(pId,mId){
-  const key=pId+'-'+mId;
-  progressCache[key]=true;
-  const email=localStorage.getItem('waneyo_user');
-  const token=localStorage.getItem('waneyo_token');
-  if(!email||!token) return;
-  await fetch(`${SUPABASE_URL}/rest/v1/progress`,{
-    method:'POST',
-    headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${token}`,'Content-Type':'application/json','Prefer':'resolution=merge-duplicates'},
-    body:JSON.stringify({user_email:email,module_key:key,done:true})
+async function setDone(pId, mId) {
+  const key = pId + '-' + mId;
+  progressCache[key] = true;
+
+  // Mettre à jour le cache local sans invalider le TTL
+  const email = localStorage.getItem('waneyo_user');
+  if (email) {
+    const cacheKey = 'waneyo_progress_' + btoa(email);
+    try {
+      const cached = localStorage.getItem(cacheKey);
+      if (cached) {
+        const parsed = JSON.parse(cached);
+        parsed.data[key] = true;
+        parsed.ts = Date.now();
+        localStorage.setItem(cacheKey, JSON.stringify(parsed));
+      }
+    } catch {}
+  }
+
+  const token = localStorage.getItem('waneyo_token');
+  if (!email || !token) return;
+  await fetch(`${SUPABASE_URL}/rest/v1/progress`, {
+    method: 'POST',
+    headers: {
+      'apikey': SUPABASE_ANON,
+      'Authorization': `Bearer ${token}`,
+      'Content-Type': 'application/json',
+      'Prefer': 'resolution=merge-duplicates'
+    },
+    body: JSON.stringify({ user_email: email, module_key: key, done: true })
   });
 }
 
-function isDone(pId,mId){return!!progressCache[pId+'-'+mId]}
+function isDone(pId, mId) { return !!progressCache[pId + '-' + mId]; }
 
-function showPage(id){
-  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
-  document.getElementById('page-'+id).classList.add('active');
-  window.scrollTo(0,0);
+// ─── NAVIGATION ──────────────────────────────────────────────────────────────
+function showPage(id) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.getElementById('page-' + id).classList.add('active');
+  window.scrollTo(0, 0);
 }
 
-async function startDashboard(expandId){
+async function startDashboard(expandId) {
   showPage('dashboard');
   const firstName = localStorage.getItem('waneyo_firstname');
   const greeting = document.getElementById('nav-greeting');
-  if(greeting) greeting.textContent = firstName ? `👋 ${firstName}` : 'Abonné(e) ✓';
+  if (greeting) greeting.textContent = firstName ? `👋 ${firstName}` : 'Abonné(e) ✓';
   checkPwaBanner();
   await loadProgress();
   renderParcours(expandId);
@@ -734,83 +798,86 @@ async function startDashboard(expandId){
   updateGuideBanner();
 }
 
-function switchTab(name,btn){
-  ['parcours','ressources','aide'].forEach(t=>{
-    document.getElementById('tab-'+t).style.display=t===name?'block':'none';
+function switchTab(name, btn) {
+  ['parcours', 'ressources', 'aide'].forEach(t => {
+    document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
   });
-  document.querySelectorAll('.tab-btn').forEach(b=>b.classList.remove('active'));
+  document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 
-function checkPwaBanner(){
-  const dismissed=localStorage.getItem('pwa_dismissed');
-  const isInstalled=window.matchMedia('(display-mode: standalone)').matches;
-  if(!dismissed&&!isInstalled) document.getElementById('pwa-banner').classList.add('show');
+// ─── PWA ──────────────────────────────────────────────────────────────────────
+function checkPwaBanner() {
+  const dismissed = localStorage.getItem('pwa_dismissed');
+  const isInstalled = window.matchMedia('(display-mode: standalone)').matches;
+  if (!dismissed && !isInstalled) document.getElementById('pwa-banner').classList.add('show');
 }
-function closePwaBanner(){
+function closePwaBanner() {
   document.getElementById('pwa-banner').classList.remove('show');
-  localStorage.setItem('pwa_dismissed','1');
+  localStorage.setItem('pwa_dismissed', '1');
 }
-function switchPwaTab(tab,btn){
-  document.querySelectorAll('.pwa-tab').forEach(t=>t.classList.remove('active'));
-  document.querySelectorAll('.pwa-tab-btn').forEach(b=>b.classList.remove('active'));
-  document.getElementById('pwa-'+tab).classList.add('active');
+function switchPwaTab(tab, btn) {
+  document.querySelectorAll('.pwa-tab').forEach(t => t.classList.remove('active'));
+  document.querySelectorAll('.pwa-tab-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('pwa-' + tab).classList.add('active');
   btn.classList.add('active');
 }
 
-function getNextModule(){
-  for(const p of PARCOURS){
-    for(const m of p.modules){
-      if(!m.soon&&!isDone(p.id,m.id)) return{parcours:p,module:m};
+// ─── GUIDE & PHASES ──────────────────────────────────────────────────────────
+function getNextModule() {
+  for (const p of PARCOURS) {
+    for (const m of p.modules) {
+      if (!m.soon && !isDone(p.id, m.id)) return { parcours: p, module: m };
     }
   }
   return null;
 }
 
-function updateGuideBanner(){
-  const next=getNextModule();
-  const banner=document.getElementById('guide-banner');
-  const title=document.getElementById('guide-title');
-  const sub=document.getElementById('guide-sub');
-  if(!next){
-    banner.className='guide-banner guide-done';
-    title.textContent='🏆 Vous avez terminé tous les modules disponibles !';
-    sub.textContent='Revenez bientôt pour les nouveaux modules';
-    document.getElementById('guide-btn').style.display='none';
+function updateGuideBanner() {
+  const next = getNextModule();
+  const banner = document.getElementById('guide-banner');
+  const title = document.getElementById('guide-title');
+  const sub = document.getElementById('guide-sub');
+  if (!next) {
+    banner.className = 'guide-banner guide-done';
+    title.textContent = '🏆 Vous avez terminé tous les modules disponibles !';
+    sub.textContent = 'Revenez bientôt pour les nouveaux modules';
+    document.getElementById('guide-btn').style.display = 'none';
     return;
   }
-  const p=next.parcours,m=next.module;
-  banner.className='guide-banner '+(p.phase===1?'guide-phase1':p.phase===2?'guide-phase2':'guide-phase3');
-  title.textContent='▶ '+m.title;
-  sub.textContent=p.icon+' Phase '+p.phase+' — '+p.label+' · '+m.duration;
-  document.getElementById('guide-btn').style.display='block';
+  const p = next.parcours, m = next.module;
+  banner.className = 'guide-banner ' + (p.phase === 1 ? 'guide-phase1' : p.phase === 2 ? 'guide-phase2' : 'guide-phase3');
+  title.textContent = '▶ ' + m.title;
+  sub.textContent = p.icon + ' Phase ' + p.phase + ' — ' + p.label + ' · ' + m.duration;
+  document.getElementById('guide-btn').style.display = 'block';
   updatePhasesDots();
 }
 
-function updatePhasesDots(){
-  const p1done=PARCOURS[0].modules.every(m=>isDone('numerique',m.id));
-  const p2done=PARCOURS[1].modules.every(m=>isDone('mindset',m.id));
-  const d1=document.getElementById('ph1-dot');
-  const d2=document.getElementById('ph2-dot');
-  const d3=document.getElementById('ph3-dot');
-  const l1=document.getElementById('ph1-line');
-  const l2=document.getElementById('ph2-line');
-  if(p1done){d1.className='phase-dot done';l1.style.background='#10B981';}
-  else d1.className='phase-dot active';
-  if(p2done){d2.className='phase-dot done';l2.style.background='#10B981';}
-  else if(p1done) d2.className='phase-dot active';
-  if(p1done&&p2done) d3.className='phase-dot active';
+function updatePhasesDots() {
+  const p1done = PARCOURS[0].modules.every(m => isDone('numerique', m.id));
+  const p2done = PARCOURS[1].modules.every(m => isDone('mindset', m.id));
+  const d1 = document.getElementById('ph1-dot');
+  const d2 = document.getElementById('ph2-dot');
+  const d3 = document.getElementById('ph3-dot');
+  const l1 = document.getElementById('ph1-line');
+  const l2 = document.getElementById('ph2-line');
+  if (p1done) { d1.className = 'phase-dot done'; l1.style.background = '#10B981'; }
+  else d1.className = 'phase-dot active';
+  if (p2done) { d2.className = 'phase-dot done'; l2.style.background = '#10B981'; }
+  else if (p1done) d2.className = 'phase-dot active';
+  if (p1done && p2done) d3.className = 'phase-dot active';
 }
 
-function goToNextModule(){
-  const next=getNextModule();
-  if(next) openModule(next.module.title,next.parcours.label,next.module.duration,next.module.url,next.parcours.id,next.module.id);
+function goToNextModule() {
+  const next = getNextModule();
+  if (next) openModule(next.module.title, next.parcours.label, next.module.duration, next.module.url, next.parcours.id, next.module.id);
 }
 
-function renderFaqLanding(){
-  const c=document.getElementById('faq-container');
-  if(!c||c.innerHTML)return;
-  c.innerHTML=FAQ_LANDING.map((f,i)=>`
+// ─── FAQ LANDING ─────────────────────────────────────────────────────────────
+function renderFaqLanding() {
+  const c = document.getElementById('faq-container');
+  if (!c || c.innerHTML) return;
+  c.innerHTML = FAQ_LANDING.map((f, i) => `
     <div class="faq-item" onclick="toggleFaq(${i})">
       <div class="faq-q">${f.q}<span class="faq-icon" id="faq-icon-${i}">+</span></div>
       <div class="faq-a">${f.a}</div>
@@ -818,45 +885,46 @@ function renderFaqLanding(){
 }
 renderFaqLanding();
 
-function toggleFaq(i){
-  const el=document.querySelectorAll('#faq-container .faq-item')[i];
-  const icon=document.getElementById('faq-icon-'+i);
+function toggleFaq(i) {
+  const el = document.querySelectorAll('#faq-container .faq-item')[i];
+  const icon = document.getElementById('faq-icon-' + i);
   el.classList.toggle('open');
-  icon.textContent=el.classList.contains('open')?'−':'+';
+  icon.textContent = el.classList.contains('open') ? '−' : '+';
 }
 
-function updateStats(){
-  let done=0,mins=0;
-  PARCOURS.forEach(p=>p.modules.forEach(m=>{
-    if(!m.soon&&isDone(p.id,m.id)){done++;mins+=parseInt(m.duration);}
+// ─── STATS & PARCOURS ────────────────────────────────────────────────────────
+function updateStats() {
+  let done = 0, mins = 0;
+  PARCOURS.forEach(p => p.modules.forEach(m => {
+    if (!m.soon && isDone(p.id, m.id)) { done++; mins += parseInt(m.duration); }
   }));
-  document.getElementById('done-count').textContent=done;
-  document.getElementById('pct-count').textContent=Math.round((done/30)*100)+'%';
-  document.getElementById('time-count').textContent=mins>59?Math.floor(mins/60)+'h'+(mins%60?mins%60:''):mins+'min';
+  document.getElementById('done-count').textContent = done;
+  document.getElementById('pct-count').textContent = Math.round((done / 30) * 100) + '%';
+  document.getElementById('time-count').textContent = mins > 59 ? Math.floor(mins / 60) + 'h' + (mins % 60 ? mins % 60 : '') : mins + 'min';
 }
 
-function renderParcours(expandId){
-  const c=document.getElementById('parcours-list');
-  c.innerHTML=PARCOURS.map(p=>`
+function renderParcours(expandId) {
+  const c = document.getElementById('parcours-list');
+  c.innerHTML = PARCOURS.map(p => `
     <div class="card" style="border-left:4px solid ${p.color};margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:${expandId===p.id?'12px':'0'}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:${expandId === p.id ? '12px' : '0'}">
         <div style="display:flex;align-items:center;gap:10px">
           <span style="font-size:22px">${p.icon}</span>
           <div>
             <div style="font-weight:700;font-size:14px">Phase ${p.phase} — ${p.label}</div>
-            <div style="font-size:11px;color:var(--muted)">${p.modules.filter(m=>!m.soon).length} modules · 📑 Slides narratives</div>
+            <div style="font-size:11px;color:var(--muted)">${p.modules.filter(m => !m.soon).length} modules · 📑 Slides narratives</div>
           </div>
         </div>
-        <button class="toggle-btn" onclick="toggleParcours('${p.id}')" id="toggle-${p.id}">${expandId===p.id?'▲':'▼'}</button>
+        <button class="toggle-btn" onclick="toggleParcours('${p.id}')" id="toggle-${p.id}">${expandId === p.id ? '▲' : '▼'}</button>
       </div>
-      <div class="modules-list ${expandId===p.id?'open':''}" id="modules-${p.id}">
-        ${p.modules.map((m,i)=>{
-          const done=isDone(p.id,m.id);
-          return`<div class="module-row">
-            <div class="module-num ${done?'done':m.soon?'soon':''}">${done?'✅':m.soon?'🔒':(i+1)}</div>
-            <div style="flex:1;min-width:100px;color:${m.soon?'var(--muted)':'var(--text)'}">${m.title}${m.free?'<span class="badge badge-amber" style="margin-left:6px;font-size:10px">Offert</span>':''}</div>
+      <div class="modules-list ${expandId === p.id ? 'open' : ''}" id="modules-${p.id}">
+        ${p.modules.map((m, i) => {
+          const done = isDone(p.id, m.id);
+          return `<div class="module-row">
+            <div class="module-num ${done ? 'done' : m.soon ? 'soon' : ''}">${done ? '✅' : m.soon ? '🔒' : (i + 1)}</div>
+            <div style="flex:1;min-width:100px;color:${m.soon ? 'var(--muted)' : 'var(--text)'}">${m.title}${m.free ? '<span class="badge badge-amber" style="margin-left:6px;font-size:10px">Offert</span>' : ''}</div>
             <div style="font-size:11px;color:var(--muted);flex-shrink:0">${m.duration}</div>
-            ${!m.soon?`<button class="${done?'btn-done-mod':'btn-start'}" onclick="openModule('${m.title.replace(/'/g,"\\'")}','Phase ${p.phase} — ${p.label}','${m.duration}','${m.url||''}','${p.id}',${m.id})">${done?'Revoir':'Démarrer'}</button>`:'<span class="badge badge-teal" style="flex-shrink:0">Bientôt</span>'}
+            ${!m.soon ? `<button class="${done ? 'btn-done-mod' : 'btn-start'}" onclick="openModule('${m.title.replace(/'/g, "\\'")}','Phase ${p.phase} — ${p.label}','${m.duration}','${m.url || ''}','${p.id}',${m.id})">${done ? 'Revoir' : 'Démarrer'}</button>` : '<span class="badge badge-teal" style="flex-shrink:0">Bientôt</span>'}
           </div>`;
         }).join('')}
       </div>
@@ -865,17 +933,18 @@ function renderParcours(expandId){
   updateGuideBanner();
 }
 
-function toggleParcours(id){
-  const list=document.getElementById('modules-'+id);
-  const btn=document.getElementById('toggle-'+id);
+function toggleParcours(id) {
+  const list = document.getElementById('modules-' + id);
+  const btn = document.getElementById('toggle-' + id);
   list.classList.toggle('open');
-  btn.textContent=list.classList.contains('open')?'▲':'▼';
+  btn.textContent = list.classList.contains('open') ? '▲' : '▼';
 }
 
-function renderResources(){
-  const c=document.getElementById('resources-list');
-  if(c.innerHTML)return;
-  c.innerHTML=RESOURCES.map(r=>`
+// ─── RESOURCES ───────────────────────────────────────────────────────────────
+function renderResources() {
+  const c = document.getElementById('resources-list');
+  if (c.innerHTML) return;
+  c.innerHTML = RESOURCES.map(r => `
     <div class="card" style="margin-bottom:10px">
       <div class="resource-row">
         <div style="display:flex;gap:12px;align-items:center">
@@ -883,177 +952,166 @@ function renderResources(){
           <div><div style="font-weight:600;font-size:14px;margin-bottom:3px">${r.title}</div>
           <div style="font-size:11px;color:var(--muted)">${r.type} · ${r.pages} pages</div></div>
         </div>
-        ${r.url?`<a href="${r.url}" target="_blank" class="btn-dl">Télécharger</a>`:`<span style="font-size:11px;color:var(--muted);font-style:italic">Bientôt disponible</span>`}
+        ${r.url ? `<a href="${r.url}" target="_blank" class="btn-dl">Télécharger</a>` : `<span style="font-size:11px;color:var(--muted);font-style:italic">Bientôt disponible</span>`}
       </div>
     </div>`).join('');
 }
 
-function renderFaqDash(items){
-  const c=document.getElementById('faq-dash-list');
-  if(!items.length){c.innerHTML='<p style="text-align:center;color:var(--muted);font-size:13px;padding:20px">Aucun résultat.</p>';return;}
-  c.innerHTML=items.map((f,i)=>`
+// ─── FAQ DASH ────────────────────────────────────────────────────────────────
+function renderFaqDash(items) {
+  const c = document.getElementById('faq-dash-list');
+  if (!items.length) { c.innerHTML = '<p style="text-align:center;color:var(--muted);font-size:13px;padding:20px">Aucun résultat.</p>'; return; }
+  c.innerHTML = items.map((f, i) => `
     <div class="faq-item" onclick="toggleFaqDash(${i})" id="fdash-${i}">
       <div class="faq-q">${f.q}<span class="faq-icon" id="fdash-icon-${i}">+</span></div>
       <div class="faq-a">${f.a}</div>
     </div>`).join('');
 }
 
-function toggleFaqDash(i){
-  const el=document.getElementById('fdash-'+i);
-  const icon=document.getElementById('fdash-icon-'+i);
-  if(!el)return;
+function toggleFaqDash(i) {
+  const el = document.getElementById('fdash-' + i);
+  const icon = document.getElementById('fdash-icon-' + i);
+  if (!el) return;
   el.classList.toggle('open');
-  icon.textContent=el.classList.contains('open')?'−':'+';
+  icon.textContent = el.classList.contains('open') ? '−' : '+';
 }
 
-function filterCat(cat,btn){
-  currentCat=cat;
-  document.querySelectorAll('.faq-cat').forEach(b=>b.classList.remove('active-cat'));
+function filterCat(cat, btn) {
+  currentCat = cat;
+  document.querySelectorAll('.faq-cat').forEach(b => b.classList.remove('active-cat'));
   btn.classList.add('active-cat');
-  applyFaqFilter(cat,document.getElementById('faq-search')?.value||'');
+  applyFaqFilter(cat, document.getElementById('faq-search')?.value || '');
 }
-function filterFaqDash(val){applyFaqFilter(currentCat,val);}
-function applyFaqFilter(cat,search){
-  let items=FAQ_DASH;
-  if(cat!=='all')items=items.filter(f=>f.cat===cat);
-  if(search.trim())items=items.filter(f=>f.q.toLowerCase().includes(search.toLowerCase())||f.a.toLowerCase().includes(search.toLowerCase()));
+function filterFaqDash(val) { applyFaqFilter(currentCat, val); }
+function applyFaqFilter(cat, search) {
+  let items = FAQ_DASH;
+  if (cat !== 'all') items = items.filter(f => f.cat === cat);
+  if (search.trim()) items = items.filter(f => f.q.toLowerCase().includes(search.toLowerCase()) || f.a.toLowerCase().includes(search.toLowerCase()));
   renderFaqDash(items);
 }
 
-function openModule(title,parcours,duration,url,parcoursId,moduleId){
-  currentModal={parcoursId,moduleId};
-  document.getElementById('modal-title').textContent=title;
-  document.getElementById('modal-sub').textContent=parcours+' · '+duration+' · 📑 Slides narratives';
-  document.getElementById('modal-iframe').src=url;
-  document.getElementById('btn-mark').style.display=isDone(parcoursId,moduleId)?'none':'block';
+// ─── MODULE MODAL ─────────────────────────────────────────────────────────────
+function openModule(title, parcours, duration, url, parcoursId, moduleId) {
+  currentModal = { parcoursId, moduleId };
+  document.getElementById('modal-title').textContent = title;
+  document.getElementById('modal-sub').textContent = parcours + ' · ' + duration + ' · 📑 Slides narratives';
+  document.getElementById('modal-iframe').src = url;
+  document.getElementById('btn-mark').style.display = isDone(parcoursId, moduleId) ? 'none' : 'block';
   document.getElementById('module-modal').classList.add('open');
 }
 
-function closeModal(){
+function closeModal() {
   document.getElementById('module-modal').classList.remove('open');
-  document.getElementById('modal-iframe').src='';
+  document.getElementById('modal-iframe').src = '';
 }
 
-async function markDone(){
-  if(!currentModal)return;
-  setDone(currentModal.parcoursId,currentModal.moduleId);
+async function markDone() {
+  if (!currentModal) return;
+  setDone(currentModal.parcoursId, currentModal.moduleId);
   closeModal();
-  const p=PARCOURS.find(p=>p.id===currentModal.parcoursId);
-  const allPhaseDone=p&&p.modules.filter(m=>!m.soon).every(m=>isDone(p.id,m.id));
-  const allDone=PARCOURS.every(p=>p.modules.filter(m=>!m.soon).every(m=>isDone(p.id,m.id)));
+  const p = PARCOURS.find(p => p.id === currentModal.parcoursId);
+  const allPhaseDone = p && p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id));
+  const allDone = PARCOURS.every(p => p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id)));
   renderParcours(currentModal.parcoursId);
-  if(allDone) generateCertificate("Les fondamentaux du marketing digital");
-  else if(allPhaseDone) showCompletion(p);
+  if (allDone) generateCertificate("Les fondamentaux du marketing digital");
+  else if (allPhaseDone) showCompletion(p);
 }
 
-const COMP_MSGS={
-  numerique:{emoji:"🎉",title:"Phase 1 terminée !",msg:"Bravo ! Vous maîtrisez maintenant les fondamentaux du marketing digital. Place à la Phase 2 — Mindset. Préparez votre état d'esprit d'entrepreneur.",btn:"Démarrer Phase 2 — Mindset"},
-  mindset:{emoji:"🧠",title:"Phase 2 terminée !",msg:"Excellent ! Vous avez forgé le mental d'un(e) vrai(e) entrepreneur(e). Il est temps de passer à l'action avec la Phase 3 — Entreprenariat.",btn:"Démarrer Phase 3 — Entreprenariat"},
-  entrepreneuriat:{emoji:"🏆",title:"Parcours complet !",msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !",btn:"Fermer"}
+// ─── COMPLETION & CERTIFICAT ─────────────────────────────────────────────────
+const COMP_MSGS = {
+  numerique: { emoji:"🎉", title:"Phase 1 terminée !", msg:"Bravo ! Vous maîtrisez maintenant les fondamentaux du marketing digital. Place à la Phase 2 — Mindset. Préparez votre état d'esprit d'entrepreneur.", btn:"Démarrer Phase 2 — Mindset" },
+  mindset:   { emoji:"🧠", title:"Phase 2 terminée !", msg:"Excellent ! Vous avez forgé le mental d'un(e) vrai(e) entrepreneur(e). Il est temps de passer à l'action avec la Phase 3 — Entreprenariat.", btn:"Démarrer Phase 3 — Entreprenariat" },
+  entrepreneuriat: { emoji:"🏆", title:"Parcours complet !", msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !", btn:"Fermer" }
 };
 
-function generateCertificate(phaseName){
+function generateCertificate(phaseName) {
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ orientation:'landscape', unit:'mm', format:'a4' });
+  const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
   const firstName = localStorage.getItem('waneyo_firstname') || 'Apprenant(e)';
-  const date = new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
+  const date = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
 
-  // Fond
-  doc.setFillColor(15,10,30);
-  doc.rect(0,0,297,210,'F');
-
-  // Bordure dorée
-  doc.setDrawColor(245,158,11);
+  doc.setFillColor(15, 10, 30);
+  doc.rect(0, 0, 297, 210, 'F');
+  doc.setDrawColor(245, 158, 11);
   doc.setLineWidth(2);
-  doc.rect(10,10,277,190);
+  doc.rect(10, 10, 277, 190);
   doc.setLineWidth(0.5);
-  doc.rect(13,13,271,184);
+  doc.rect(13, 13, 271, 184);
 
-  // Logo / titre app
-  doc.setTextColor(124,58,237);
+  doc.setTextColor(124, 58, 237);
   doc.setFontSize(13);
-  doc.setFont('helvetica','bold');
-  doc.text("L'ACCÉLÉRATEUR DIGITAL", 148.5, 35, {align:'center'});
-  doc.setTextColor(245,158,11);
+  doc.setFont('helvetica', 'bold');
+  doc.text("L'ACCÉLÉRATEUR DIGITAL", 148.5, 35, { align: 'center' });
+  doc.setTextColor(245, 158, 11);
   doc.setFontSize(10);
-  doc.setFont('helvetica','normal');
-  doc.text("by Waneyo Formation", 148.5, 42, {align:'center'});
+  doc.setFont('helvetica', 'normal');
+  doc.text("by Waneyo Formation", 148.5, 42, { align: 'center' });
 
-  // Titre certificat
-  doc.setTextColor(255,255,255);
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(11);
-  doc.text("CERTIFICAT DE SUIVI DE FORMATION", 148.5, 58, {align:'center'});
-
-  // Ligne décorative
-  doc.setDrawColor(245,158,11);
+  doc.text("CERTIFICAT DE SUIVI DE FORMATION", 148.5, 58, { align: 'center' });
+  doc.setDrawColor(245, 158, 11);
   doc.setLineWidth(0.5);
-  doc.line(60,63,237,63);
+  doc.line(60, 63, 237, 63);
 
-  // Prénom
-  doc.setTextColor(255,255,255);
   doc.setFontSize(10);
-  doc.text("Ce certificat est décerné à", 148.5, 76, {align:'center'});
-  doc.setTextColor(124,58,237);
+  doc.text("Ce certificat est décerné à", 148.5, 76, { align: 'center' });
+  doc.setTextColor(124, 58, 237);
   doc.setFontSize(28);
-  doc.setFont('helvetica','bold');
-  doc.text(firstName, 148.5, 92, {align:'center'});
+  doc.setFont('helvetica', 'bold');
+  doc.text(firstName, 148.5, 92, { align: 'center' });
 
-  // Phase
-  doc.setTextColor(255,255,255);
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(10);
-  doc.setFont('helvetica','normal');
-  doc.text("pour avoir complété avec succès", 148.5, 105, {align:'center'});
-  doc.setTextColor(245,158,11);
+  doc.setFont('helvetica', 'normal');
+  doc.text("pour avoir complété avec succès", 148.5, 105, { align: 'center' });
+  doc.setTextColor(245, 158, 11);
   doc.setFontSize(18);
-  doc.setFont('helvetica','bold');
-  doc.text(phaseName, 148.5, 118, {align:'center'});
+  doc.setFont('helvetica', 'bold');
+  doc.text(phaseName, 148.5, 118, { align: 'center' });
 
-  // Description
-  doc.setTextColor(180,180,180);
+  doc.setTextColor(180, 180, 180);
   doc.setFontSize(9);
-  doc.setFont('helvetica','normal');
-  doc.text("Formation en marketing digital et entrepreneuriat — Waneyo Formation", 148.5, 132, {align:'center'});
+  doc.setFont('helvetica', 'normal');
+  doc.text("Formation en marketing digital et entrepreneuriat — Waneyo Formation", 148.5, 132, { align: 'center' });
 
-  // Ligne décorative bas
-  doc.setDrawColor(245,158,11);
-  doc.line(60,145,237,145);
+  doc.setDrawColor(245, 158, 11);
+  doc.line(60, 145, 237, 145);
 
-  // Date et signature
-  doc.setTextColor(255,255,255);
+  doc.setTextColor(255, 255, 255);
   doc.setFontSize(9);
-  doc.text(`Délivré le ${date}`, 80, 158, {align:'center'});
-  doc.text("Nadia — Fondatrice Waneyo Formation", 217, 158, {align:'center'});
-  doc.setDrawColor(180,180,180);
-  doc.line(40,162,120,162);
-  doc.line(157,162,237,162);
+  doc.text(`Délivré le ${date}`, 80, 158, { align: 'center' });
+  doc.text("Nadia — Fondatrice Waneyo Formation", 217, 158, { align: 'center' });
+  doc.setDrawColor(180, 180, 180);
+  doc.line(40, 162, 120, 162);
+  doc.line(157, 162, 237, 162);
   doc.setFontSize(8);
-  doc.setTextColor(120,120,120);
-  doc.text("Date", 80, 167, {align:'center'});
-  doc.text("Signature", 217, 167, {align:'center'});
+  doc.setTextColor(120, 120, 120);
+  doc.text("Date", 80, 167, { align: 'center' });
+  doc.text("Signature", 217, 167, { align: 'center' });
 
-  doc.save(`Certificat_${phaseName.replace(/ /g,'_')}_${firstName}.pdf`);
+  doc.save(`Certificat_${phaseName.replace(/ /g, '_')}_${firstName}.pdf`);
 }
 
-function showCompletion(p){
-  const msg=COMP_MSGS[p.id];
-  if(!msg)return;
-  if(p.id==='entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
-  document.getElementById('comp-emoji').textContent=msg.emoji;
-  document.getElementById('comp-title').textContent=msg.title;
-  document.getElementById('comp-msg').textContent=msg.msg;
-  document.getElementById('comp-btn').textContent=msg.btn;
+function showCompletion(p) {
+  const msg = COMP_MSGS[p.id];
+  if (!msg) return;
+  if (p.id === 'entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
+  document.getElementById('comp-emoji').textContent = msg.emoji;
+  document.getElementById('comp-title').textContent = msg.title;
+  document.getElementById('comp-msg').textContent = msg.msg;
+  document.getElementById('comp-btn').textContent = msg.btn;
   document.getElementById('completion-modal').classList.add('open');
 }
 
-function closeCompletion(){
+function closeCompletion() {
   document.getElementById('completion-modal').classList.remove('open');
 }
 
-// Gestion reset mot de passe
+// ─── RESET MOT DE PASSE ───────────────────────────────────────────────────────
 function getHashParam(key) {
   const hash = window.location.hash.substring(1);
-  const params = new URLSearchParams(hash);
-  return params.get(key);
+  return new URLSearchParams(hash).get(key);
 }
 
 async function handleResetPassword() {
@@ -1073,7 +1131,7 @@ async function handleResetPassword() {
   document.getElementById('reset-form').style.display = 'none';
 }
 
-// Vérifier session au chargement
+// ─── INIT ─────────────────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
   const type = getHashParam('type');
   const token = getHashParam('access_token');
@@ -1087,8 +1145,8 @@ window.addEventListener('load', () => {
   if (user) startDashboard('numerique');
 });
 
-if('serviceWorker' in navigator){
-  window.addEventListener('load',()=>{navigator.serviceWorker.register('/sw.js');});
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js'); });
 }
 </script>
 </body>
