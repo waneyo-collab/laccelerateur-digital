@@ -7,6 +7,11 @@
 <meta name="description" content="Maîtrisez le marketing digital et devenez entrepreneur. Slides narratives interactives. 3 jours gratuits."/>
 <link rel="manifest" href="manifest.json"/>
 <meta name="theme-color" content="#7C3AED"/>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
+<script>
+  Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' });
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 :root{
@@ -135,7 +140,6 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 .upsell-features li{font-size:12px;color:var(--text);padding:4px 0;display:flex;gap:6px}
 .btn-accent{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
 </style>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
 </head>
 <body>
 
@@ -278,7 +282,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
         <li>✅ Certificats de formation</li>
         <li style="color:var(--muted)">⚠️ Accès interrompu immédiatement en cas d'annulation</li>
       </ul>
-      <button class="btn-primary" style="width:100%;margin-bottom:10px;font-size:15px" onclick="window.location.href='https://buy.stripe.com/7sY7sMd3127xfuacCc43S00'">
+      <button class="btn-primary" style="width:100%;margin-bottom:10px;font-size:15px" onclick="handleCheckout(event)">
         🔒 Démarrer mon essai gratuit
       </button>
       <div class="pay-methods">
@@ -295,7 +299,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
           👀 Accéder au module offert sans CB
         </button>
       </div>
-      <div class="secure"><span>🔒</span> Paiement 100% sécurisé par Stripe</div>
+      <div class="secure"><span>🔒</span> Paiement 100% sécurisé</div>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Puis 9,99€/mois · Sans engagement · Annulable à tout moment</p>
     </div>
   </div>
@@ -423,7 +427,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <div style="font-size:22px;margin-bottom:8px">💳</div>
       <div style="font-weight:600;font-size:14px;margin-bottom:4px">Gérer mon abonnement</div>
       <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Modifiez ou annulez votre abonnement, consultez vos factures.</div>
-      <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.open('https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00','_blank')">Accéder à mon espace abonnement</button>
+      <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="openCustomerPortal()">Accéder à mon espace abonnement</button>
     </div>
     <input id="faq-search" class="form-input" placeholder="🔍 Rechercher une question…" oninput="filterFaqDash(this.value)" style="margin-bottom:14px"/>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
@@ -491,23 +495,67 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 </div>
 
 <script>
-// ─── SUPABASE ───────────────────────────────────────────────────────────────
-const SUPABASE_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
+// ─── SUPABASE ────────────────────────────────────────────────────────────────
+const SUPABASE_URL  = 'https://dxmigietmlpwactlmpjf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
 
 async function supabaseFetch(path, options = {}) {
   const res = await fetch(`${SUPABASE_URL}${path}`, {
     ...options,
-    headers: {
-      'apikey': SUPABASE_ANON,
-      'Content-Type': 'application/json',
-      ...(options.headers || {})
-    }
+    headers: { 'apikey': SUPABASE_ANON, 'Content-Type': 'application/json', ...(options.headers || {}) }
   });
   return res.json();
 }
 
-// ─── CACHE HELPERS ──────────────────────────────────────────────────────────
+// ─── CHECKOUT (Stripe / Paddle selon géo) ────────────────────────────────────
+const PADDLE_COUNTRIES = [
+  'MA','DZ','TN','LY','EG','SN','CI','CM','GH','NG','KE','TZ','UG',
+  'RW','ET','MG','MZ','ZA','AO','CD','CG','BJ','BF','ML','NE','TD',
+  'MR','GM','SL','LR','GN','GW','CV','ST','GA','GQ','CF','BI','MW',
+  'ZM','ZW','NA','BW','LS','SZ','SO','DJ','ER','SS','SD','MU','SC',
+  'KM','RE','YT','TG'
+];
+const PADDLE_PRICE_ID = 'pri_01ksweca7ky3nj5r3memdkc6ce';
+const STRIPE_URL      = 'https://buy.stripe.com/7sY7sMd3127xfuacCc43S00';
+const STRIPE_PORTAL   = 'https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00';
+const PADDLE_PORTAL   = 'https://customer-portal.paddle.com/cpl_01kswd7558gytzq8nwbrf0fmvt';
+
+async function detectCountry() {
+  try {
+    const res = await fetch('https://ipapi.co/json/');
+    const data = await res.json();
+    return data.country_code || 'FR';
+  } catch { return 'FR'; }
+}
+
+async function handleCheckout(event) {
+  const btn = event.currentTarget;
+  const original = btn.textContent;
+  btn.textContent = '⏳ Chargement…';
+  btn.disabled = true;
+
+  const country = await detectCountry();
+
+  if (PADDLE_COUNTRIES.includes(country)) {
+    localStorage.setItem('waneyo_psp', 'paddle');
+    Paddle.Checkout.open({
+      items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
+      settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
+    });
+    btn.textContent = original;
+    btn.disabled = false;
+  } else {
+    localStorage.setItem('waneyo_psp', 'stripe');
+    window.location.href = STRIPE_URL;
+  }
+}
+
+function openCustomerPortal() {
+  const psp = localStorage.getItem('waneyo_psp') || 'stripe';
+  window.open(psp === 'paddle' ? PADDLE_PORTAL : STRIPE_PORTAL, '_blank');
+}
+
+// ─── CACHE HELPERS ───────────────────────────────────────────────────────────
 function setCachedSubscriber(email, data) {
   localStorage.setItem('waneyo_sub_' + btoa(email), JSON.stringify(data));
 }
@@ -551,7 +599,6 @@ async function handleLogin() {
       return;
     }
 
-    // Vérif abonnement — cachée 24h, 1 seule requête Supabase par jour
     const cachedSub = getCachedSubscriber(email);
     let firstName = '';
 
@@ -607,9 +654,7 @@ async function refreshToken() {
     if (data.access_token) {
       localStorage.setItem('waneyo_token', data.access_token);
       if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
-    } else {
-      handleLogout();
-    }
+    } else { handleLogout(); }
   } catch { handleLogout(); }
 }
 setInterval(refreshToken, 50 * 60 * 1000);
@@ -696,13 +741,13 @@ const FAQ_DASH = [
   {cat:"marketing",q:"Comment fonctionne le micro-learning ?",a:"Chaque module dure 15 à 30 minutes et se compose de slides narratives interactives. Vous avancez à votre rythme, sans contrainte d'horaire."},
   {cat:"marketing",q:"Par où commencer si je suis débutant(e) ?",a:"Commencez par la Phase 1 — Le Monde Numérique. Le parcours guidé dans votre tableau de bord vous indique exactement le prochain module à faire."},
   {cat:"marketing",q:"Les modules sont-ils accessibles hors ligne ?",a:"Non, les modules sont en ligne. Vous avez besoin d'une connexion internet pour y accéder."},
-  {cat:"marketing",q:"Est-ce que je recevrai un certificat ?",a:"Oui, un certificat de complétion est prévu pour chaque phase terminée. Cette fonctionnalité arrive prochainement."},
+  {cat:"marketing",q:"Est-ce que je recevrai un certificat ?",a:"Oui, un certificat de complétion est généré automatiquement à la fin de chaque phase."},
   {cat:"entrepreneuriat",q:"Pourquoi faire la Phase Mindset avant l'Entreprenariat ?",a:"Parce que le plus grand obstacle à la création d'entreprise n'est pas technique — c'est mental. La Phase 2 vous prépare à affronter les défis concrets de la Phase 3."},
   {cat:"entrepreneuriat",q:"Je n'ai pas d'idée de business, est-ce fait pour moi ?",a:"Absolument ! Le module 'Trouver son idée de business rentable' vous guide pas à pas pour identifier votre opportunité."},
   {cat:"abonnement",q:"Comment fonctionne l'essai gratuit de 3 jours ?",a:"Vous vous abonnez avec votre carte bancaire, mais aucun prélèvement n'est effectué pendant 3 jours. Annulable sans frais."},
-  {cat:"abonnement",q:"Comment annuler mon abonnement ?",a:"Via le lien reçu par email lors de votre abonnement Stripe. L'accès s'arrête immédiatement à l'annulation."},
+  {cat:"abonnement",q:"Comment annuler mon abonnement ?",a:"Via le bouton 'Gérer mon abonnement' dans l'onglet Aide. L'accès s'arrête immédiatement à l'annulation."},
   {cat:"abonnement",q:"Y a-t-il des frais cachés ?",a:"Aucun. 9,99€/mois tout inclus : tous les modules, les ebooks, les guides et les futures mises à jour."},
-  {cat:"abonnement",q:"Quels moyens de paiement sont acceptés ?",a:"Carte bancaire (Visa, Mastercard), PayPal, Google Pay et Apple Pay — tous gérés de façon sécurisée par Stripe."},
+  {cat:"abonnement",q:"Quels moyens de paiement sont acceptés ?",a:"Carte bancaire (Visa, Mastercard), PayPal, Google Pay et Apple Pay — tous gérés de façon sécurisée."},
   {cat:"technique",q:"Comment installer l'app sur mon téléphone ?",a:"Dans votre espace membre, un guide d'installation pas à pas est disponible en haut de votre tableau de bord."},
   {cat:"technique",q:"Ma progression a disparu après rechargement",a:"La progression est sauvegardée sur votre appareil. Si vous changez d'appareil ou videz le cache, elle sera réinitialisée."},
 ];
@@ -716,16 +761,12 @@ async function loadProgress() {
   const token = localStorage.getItem('waneyo_token');
   if (!email || !token) return;
 
-  // Cache progression 10 min → évite une requête Supabase à chaque visite
   const cacheKey = 'waneyo_progress_' + btoa(email);
   try {
     const cached = localStorage.getItem(cacheKey);
     if (cached) {
       const { data, ts } = JSON.parse(cached);
-      if (Date.now() - ts < 10 * 60 * 1000) {
-        progressCache = data;
-        return;
-      }
+      if (Date.now() - ts < 10 * 60 * 1000) { progressCache = data; return; }
     }
   } catch {}
 
@@ -746,8 +787,6 @@ async function loadProgress() {
 async function setDone(pId, mId) {
   const key = pId + '-' + mId;
   progressCache[key] = true;
-
-  // Mettre à jour le cache local sans invalider le TTL
   const email = localStorage.getItem('waneyo_user');
   if (email) {
     const cacheKey = 'waneyo_progress_' + btoa(email);
@@ -761,17 +800,11 @@ async function setDone(pId, mId) {
       }
     } catch {}
   }
-
   const token = localStorage.getItem('waneyo_token');
   if (!email || !token) return;
   await fetch(`${SUPABASE_URL}/rest/v1/progress`, {
     method: 'POST',
-    headers: {
-      'apikey': SUPABASE_ANON,
-      'Authorization': `Bearer ${token}`,
-      'Content-Type': 'application/json',
-      'Prefer': 'resolution=merge-duplicates'
-    },
+    headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates' },
     body: JSON.stringify({ user_email: email, module_key: key, done: true })
   });
 }
@@ -799,14 +832,14 @@ async function startDashboard(expandId) {
 }
 
 function switchTab(name, btn) {
-  ['parcours', 'ressources', 'aide'].forEach(t => {
+  ['parcours','ressources','aide'].forEach(t => {
     document.getElementById('tab-' + t).style.display = t === name ? 'block' : 'none';
   });
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
 }
 
-// ─── PWA ──────────────────────────────────────────────────────────────────────
+// ─── PWA ─────────────────────────────────────────────────────────────────────
 function checkPwaBanner() {
   const dismissed = localStorage.getItem('pwa_dismissed');
   const isInstalled = window.matchMedia('(display-mode: standalone)').matches;
@@ -825,19 +858,17 @@ function switchPwaTab(tab, btn) {
 
 // ─── GUIDE & PHASES ──────────────────────────────────────────────────────────
 function getNextModule() {
-  for (const p of PARCOURS) {
-    for (const m of p.modules) {
+  for (const p of PARCOURS)
+    for (const m of p.modules)
       if (!m.soon && !isDone(p.id, m.id)) return { parcours: p, module: m };
-    }
-  }
   return null;
 }
 
 function updateGuideBanner() {
   const next = getNextModule();
   const banner = document.getElementById('guide-banner');
-  const title = document.getElementById('guide-title');
-  const sub = document.getElementById('guide-sub');
+  const title  = document.getElementById('guide-title');
+  const sub    = document.getElementById('guide-sub');
   if (!next) {
     banner.className = 'guide-banner guide-done';
     title.textContent = '🏆 Vous avez terminé tous les modules disponibles !';
@@ -846,7 +877,7 @@ function updateGuideBanner() {
     return;
   }
   const p = next.parcours, m = next.module;
-  banner.className = 'guide-banner ' + (p.phase === 1 ? 'guide-phase1' : p.phase === 2 ? 'guide-phase2' : 'guide-phase3');
+  banner.className = 'guide-banner ' + (p.phase===1?'guide-phase1':p.phase===2?'guide-phase2':'guide-phase3');
   title.textContent = '▶ ' + m.title;
   sub.textContent = p.icon + ' Phase ' + p.phase + ' — ' + p.label + ' · ' + m.duration;
   document.getElementById('guide-btn').style.display = 'block';
@@ -861,10 +892,8 @@ function updatePhasesDots() {
   const d3 = document.getElementById('ph3-dot');
   const l1 = document.getElementById('ph1-line');
   const l2 = document.getElementById('ph2-line');
-  if (p1done) { d1.className = 'phase-dot done'; l1.style.background = '#10B981'; }
-  else d1.className = 'phase-dot active';
-  if (p2done) { d2.className = 'phase-dot done'; l2.style.background = '#10B981'; }
-  else if (p1done) d2.className = 'phase-dot active';
+  if (p1done) { d1.className='phase-dot done'; l1.style.background='#10B981'; } else d1.className='phase-dot active';
+  if (p2done) { d2.className='phase-dot done'; l2.style.background='#10B981'; } else if (p1done) d2.className='phase-dot active';
   if (p1done && p2done) d3.className = 'phase-dot active';
 }
 
@@ -877,7 +906,7 @@ function goToNextModule() {
 function renderFaqLanding() {
   const c = document.getElementById('faq-container');
   if (!c || c.innerHTML) return;
-  c.innerHTML = FAQ_LANDING.map((f, i) => `
+  c.innerHTML = FAQ_LANDING.map((f,i) => `
     <div class="faq-item" onclick="toggleFaq(${i})">
       <div class="faq-q">${f.q}<span class="faq-icon" id="faq-icon-${i}">+</span></div>
       <div class="faq-a">${f.a}</div>
@@ -899,32 +928,32 @@ function updateStats() {
     if (!m.soon && isDone(p.id, m.id)) { done++; mins += parseInt(m.duration); }
   }));
   document.getElementById('done-count').textContent = done;
-  document.getElementById('pct-count').textContent = Math.round((done / 30) * 100) + '%';
-  document.getElementById('time-count').textContent = mins > 59 ? Math.floor(mins / 60) + 'h' + (mins % 60 ? mins % 60 : '') : mins + 'min';
+  document.getElementById('pct-count').textContent = Math.round((done/30)*100) + '%';
+  document.getElementById('time-count').textContent = mins > 59 ? Math.floor(mins/60)+'h'+(mins%60?mins%60:'') : mins+'min';
 }
 
 function renderParcours(expandId) {
   const c = document.getElementById('parcours-list');
   c.innerHTML = PARCOURS.map(p => `
     <div class="card" style="border-left:4px solid ${p.color};margin-bottom:10px">
-      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:${expandId === p.id ? '12px' : '0'}">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:${expandId===p.id?'12px':'0'}">
         <div style="display:flex;align-items:center;gap:10px">
           <span style="font-size:22px">${p.icon}</span>
           <div>
             <div style="font-weight:700;font-size:14px">Phase ${p.phase} — ${p.label}</div>
-            <div style="font-size:11px;color:var(--muted)">${p.modules.filter(m => !m.soon).length} modules · 📑 Slides narratives</div>
+            <div style="font-size:11px;color:var(--muted)">${p.modules.filter(m=>!m.soon).length} modules · 📑 Slides narratives</div>
           </div>
         </div>
-        <button class="toggle-btn" onclick="toggleParcours('${p.id}')" id="toggle-${p.id}">${expandId === p.id ? '▲' : '▼'}</button>
+        <button class="toggle-btn" onclick="toggleParcours('${p.id}')" id="toggle-${p.id}">${expandId===p.id?'▲':'▼'}</button>
       </div>
-      <div class="modules-list ${expandId === p.id ? 'open' : ''}" id="modules-${p.id}">
-        ${p.modules.map((m, i) => {
+      <div class="modules-list ${expandId===p.id?'open':''}" id="modules-${p.id}">
+        ${p.modules.map((m,i) => {
           const done = isDone(p.id, m.id);
           return `<div class="module-row">
-            <div class="module-num ${done ? 'done' : m.soon ? 'soon' : ''}">${done ? '✅' : m.soon ? '🔒' : (i + 1)}</div>
-            <div style="flex:1;min-width:100px;color:${m.soon ? 'var(--muted)' : 'var(--text)'}">${m.title}${m.free ? '<span class="badge badge-amber" style="margin-left:6px;font-size:10px">Offert</span>' : ''}</div>
+            <div class="module-num ${done?'done':m.soon?'soon':''}">${done?'✅':m.soon?'🔒':(i+1)}</div>
+            <div style="flex:1;min-width:100px;color:${m.soon?'var(--muted)':'var(--text)'}">${m.title}${m.free?'<span class="badge badge-amber" style="margin-left:6px;font-size:10px">Offert</span>':''}</div>
             <div style="font-size:11px;color:var(--muted);flex-shrink:0">${m.duration}</div>
-            ${!m.soon ? `<button class="${done ? 'btn-done-mod' : 'btn-start'}" onclick="openModule('${m.title.replace(/'/g, "\\'")}','Phase ${p.phase} — ${p.label}','${m.duration}','${m.url || ''}','${p.id}',${m.id})">${done ? 'Revoir' : 'Démarrer'}</button>` : '<span class="badge badge-teal" style="flex-shrink:0">Bientôt</span>'}
+            ${!m.soon?`<button class="${done?'btn-done-mod':'btn-start'}" onclick="openModule('${m.title.replace(/'/g,"\\'")}','Phase ${p.phase} — ${p.label}','${m.duration}','${m.url||''}','${p.id}',${m.id})">${done?'Revoir':'Démarrer'}</button>`:'<span class="badge badge-teal" style="flex-shrink:0">Bientôt</span>'}
           </div>`;
         }).join('')}
       </div>
@@ -935,7 +964,7 @@ function renderParcours(expandId) {
 
 function toggleParcours(id) {
   const list = document.getElementById('modules-' + id);
-  const btn = document.getElementById('toggle-' + id);
+  const btn  = document.getElementById('toggle-' + id);
   list.classList.toggle('open');
   btn.textContent = list.classList.contains('open') ? '▲' : '▼';
 }
@@ -952,7 +981,7 @@ function renderResources() {
           <div><div style="font-weight:600;font-size:14px;margin-bottom:3px">${r.title}</div>
           <div style="font-size:11px;color:var(--muted)">${r.type} · ${r.pages} pages</div></div>
         </div>
-        ${r.url ? `<a href="${r.url}" target="_blank" class="btn-dl">Télécharger</a>` : `<span style="font-size:11px;color:var(--muted);font-style:italic">Bientôt disponible</span>`}
+        ${r.url?`<a href="${r.url}" target="_blank" class="btn-dl">Télécharger</a>`:`<span style="font-size:11px;color:var(--muted);font-style:italic">Bientôt disponible</span>`}
       </div>
     </div>`).join('');
 }
@@ -960,14 +989,13 @@ function renderResources() {
 // ─── FAQ DASH ────────────────────────────────────────────────────────────────
 function renderFaqDash(items) {
   const c = document.getElementById('faq-dash-list');
-  if (!items.length) { c.innerHTML = '<p style="text-align:center;color:var(--muted);font-size:13px;padding:20px">Aucun résultat.</p>'; return; }
-  c.innerHTML = items.map((f, i) => `
+  if (!items.length) { c.innerHTML='<p style="text-align:center;color:var(--muted);font-size:13px;padding:20px">Aucun résultat.</p>'; return; }
+  c.innerHTML = items.map((f,i) => `
     <div class="faq-item" onclick="toggleFaqDash(${i})" id="fdash-${i}">
       <div class="faq-q">${f.q}<span class="faq-icon" id="fdash-icon-${i}">+</span></div>
       <div class="faq-a">${f.a}</div>
     </div>`).join('');
 }
-
 function toggleFaqDash(i) {
   const el = document.getElementById('fdash-' + i);
   const icon = document.getElementById('fdash-icon-' + i);
@@ -975,7 +1003,6 @@ function toggleFaqDash(i) {
   el.classList.toggle('open');
   icon.textContent = el.classList.contains('open') ? '−' : '+';
 }
-
 function filterCat(cat, btn) {
   currentCat = cat;
   document.querySelectorAll('.faq-cat').forEach(b => b.classList.remove('active-cat'));
@@ -999,12 +1026,10 @@ function openModule(title, parcours, duration, url, parcoursId, moduleId) {
   document.getElementById('btn-mark').style.display = isDone(parcoursId, moduleId) ? 'none' : 'block';
   document.getElementById('module-modal').classList.add('open');
 }
-
 function closeModal() {
   document.getElementById('module-modal').classList.remove('open');
   document.getElementById('modal-iframe').src = '';
 }
-
 async function markDone() {
   if (!currentModal) return;
   setDone(currentModal.parcoursId, currentModal.moduleId);
@@ -1019,78 +1044,51 @@ async function markDone() {
 
 // ─── COMPLETION & CERTIFICAT ─────────────────────────────────────────────────
 const COMP_MSGS = {
-  numerique: { emoji:"🎉", title:"Phase 1 terminée !", msg:"Bravo ! Vous maîtrisez maintenant les fondamentaux du marketing digital. Place à la Phase 2 — Mindset. Préparez votre état d'esprit d'entrepreneur.", btn:"Démarrer Phase 2 — Mindset" },
-  mindset:   { emoji:"🧠", title:"Phase 2 terminée !", msg:"Excellent ! Vous avez forgé le mental d'un(e) vrai(e) entrepreneur(e). Il est temps de passer à l'action avec la Phase 3 — Entreprenariat.", btn:"Démarrer Phase 3 — Entreprenariat" },
-  entrepreneuriat: { emoji:"🏆", title:"Parcours complet !", msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !", btn:"Fermer" }
+  numerique:      { emoji:"🎉", title:"Phase 1 terminée !",  msg:"Bravo ! Vous maîtrisez maintenant les fondamentaux du marketing digital. Place à la Phase 2 — Mindset.", btn:"Démarrer Phase 2 — Mindset" },
+  mindset:        { emoji:"🧠", title:"Phase 2 terminée !",  msg:"Excellent ! Vous avez forgé le mental d'un(e) vrai(e) entrepreneur(e). Il est temps de passer à l'action avec la Phase 3.", btn:"Démarrer Phase 3 — Entreprenariat" },
+  entrepreneuriat:{ emoji:"🏆", title:"Parcours complet !",  msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !", btn:"Fermer" }
 };
 
 function generateCertificate(phaseName) {
   const { jsPDF } = window.jspdf;
-  const doc = new jsPDF({ orientation: 'landscape', unit: 'mm', format: 'a4' });
+  const doc = new jsPDF({ orientation:'landscape', unit:'mm', format:'a4' });
   const firstName = localStorage.getItem('waneyo_firstname') || 'Apprenant(e)';
-  const date = new Date().toLocaleDateString('fr-FR', { day: 'numeric', month: 'long', year: 'numeric' });
+  const date = new Date().toLocaleDateString('fr-FR',{day:'numeric',month:'long',year:'numeric'});
 
-  doc.setFillColor(15, 10, 30);
-  doc.rect(0, 0, 297, 210, 'F');
-  doc.setDrawColor(245, 158, 11);
-  doc.setLineWidth(2);
-  doc.rect(10, 10, 277, 190);
-  doc.setLineWidth(0.5);
-  doc.rect(13, 13, 271, 184);
+  doc.setFillColor(15,10,30); doc.rect(0,0,297,210,'F');
+  doc.setDrawColor(245,158,11); doc.setLineWidth(2); doc.rect(10,10,277,190);
+  doc.setLineWidth(0.5); doc.rect(13,13,271,184);
 
-  doc.setTextColor(124, 58, 237);
-  doc.setFontSize(13);
-  doc.setFont('helvetica', 'bold');
-  doc.text("L'ACCÉLÉRATEUR DIGITAL", 148.5, 35, { align: 'center' });
-  doc.setTextColor(245, 158, 11);
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  doc.text("by Waneyo Formation", 148.5, 42, { align: 'center' });
+  doc.setTextColor(124,58,237); doc.setFontSize(13); doc.setFont('helvetica','bold');
+  doc.text("L'ACCÉLÉRATEUR DIGITAL", 148.5, 35, {align:'center'});
+  doc.setTextColor(245,158,11); doc.setFontSize(10); doc.setFont('helvetica','normal');
+  doc.text("by Waneyo Formation", 148.5, 42, {align:'center'});
 
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(11);
-  doc.text("CERTIFICAT DE SUIVI DE FORMATION", 148.5, 58, { align: 'center' });
-  doc.setDrawColor(245, 158, 11);
-  doc.setLineWidth(0.5);
-  doc.line(60, 63, 237, 63);
+  doc.setTextColor(255,255,255); doc.setFontSize(11);
+  doc.text("CERTIFICAT DE SUIVI DE FORMATION", 148.5, 58, {align:'center'});
+  doc.setDrawColor(245,158,11); doc.setLineWidth(0.5); doc.line(60,63,237,63);
 
-  doc.setFontSize(10);
-  doc.text("Ce certificat est décerné à", 148.5, 76, { align: 'center' });
-  doc.setTextColor(124, 58, 237);
-  doc.setFontSize(28);
-  doc.setFont('helvetica', 'bold');
-  doc.text(firstName, 148.5, 92, { align: 'center' });
+  doc.setFontSize(10); doc.text("Ce certificat est décerné à", 148.5, 76, {align:'center'});
+  doc.setTextColor(124,58,237); doc.setFontSize(28); doc.setFont('helvetica','bold');
+  doc.text(firstName, 148.5, 92, {align:'center'});
 
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(10);
-  doc.setFont('helvetica', 'normal');
-  doc.text("pour avoir complété avec succès", 148.5, 105, { align: 'center' });
-  doc.setTextColor(245, 158, 11);
-  doc.setFontSize(18);
-  doc.setFont('helvetica', 'bold');
-  doc.text(phaseName, 148.5, 118, { align: 'center' });
+  doc.setTextColor(255,255,255); doc.setFontSize(10); doc.setFont('helvetica','normal');
+  doc.text("pour avoir complété avec succès", 148.5, 105, {align:'center'});
+  doc.setTextColor(245,158,11); doc.setFontSize(18); doc.setFont('helvetica','bold');
+  doc.text(phaseName, 148.5, 118, {align:'center'});
 
-  doc.setTextColor(180, 180, 180);
-  doc.setFontSize(9);
-  doc.setFont('helvetica', 'normal');
-  doc.text("Formation en marketing digital et entrepreneuriat — Waneyo Formation", 148.5, 132, { align: 'center' });
+  doc.setTextColor(180,180,180); doc.setFontSize(9); doc.setFont('helvetica','normal');
+  doc.text("Formation en marketing digital et entrepreneuriat — Waneyo Formation", 148.5, 132, {align:'center'});
 
-  doc.setDrawColor(245, 158, 11);
-  doc.line(60, 145, 237, 145);
+  doc.setDrawColor(245,158,11); doc.line(60,145,237,145);
+  doc.setTextColor(255,255,255); doc.setFontSize(9);
+  doc.text(`Délivré le ${date}`, 80, 158, {align:'center'});
+  doc.text("Nadia — Fondatrice Waneyo Formation", 217, 158, {align:'center'});
+  doc.setDrawColor(180,180,180); doc.line(40,162,120,162); doc.line(157,162,237,162);
+  doc.setFontSize(8); doc.setTextColor(120,120,120);
+  doc.text("Date", 80, 167, {align:'center'}); doc.text("Signature", 217, 167, {align:'center'});
 
-  doc.setTextColor(255, 255, 255);
-  doc.setFontSize(9);
-  doc.text(`Délivré le ${date}`, 80, 158, { align: 'center' });
-  doc.text("Nadia — Fondatrice Waneyo Formation", 217, 158, { align: 'center' });
-  doc.setDrawColor(180, 180, 180);
-  doc.line(40, 162, 120, 162);
-  doc.line(157, 162, 237, 162);
-  doc.setFontSize(8);
-  doc.setTextColor(120, 120, 120);
-  doc.text("Date", 80, 167, { align: 'center' });
-  doc.text("Signature", 217, 167, { align: 'center' });
-
-  doc.save(`Certificat_${phaseName.replace(/ /g, '_')}_${firstName}.pdf`);
+  doc.save(`Certificat_${phaseName.replace(/ /g,'_')}_${firstName}.pdf`);
 }
 
 function showCompletion(p) {
@@ -1099,54 +1097,46 @@ function showCompletion(p) {
   if (p.id === 'entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
   document.getElementById('comp-emoji').textContent = msg.emoji;
   document.getElementById('comp-title').textContent = msg.title;
-  document.getElementById('comp-msg').textContent = msg.msg;
-  document.getElementById('comp-btn').textContent = msg.btn;
+  document.getElementById('comp-msg').textContent   = msg.msg;
+  document.getElementById('comp-btn').textContent   = msg.btn;
   document.getElementById('completion-modal').classList.add('open');
 }
+function closeCompletion() { document.getElementById('completion-modal').classList.remove('open'); }
 
-function closeCompletion() {
-  document.getElementById('completion-modal').classList.remove('open');
-}
-
-// ─── RESET MOT DE PASSE ───────────────────────────────────────────────────────
+// ─── RESET MOT DE PASSE ──────────────────────────────────────────────────────
 function getHashParam(key) {
-  const hash = window.location.hash.substring(1);
-  return new URLSearchParams(hash).get(key);
+  return new URLSearchParams(window.location.hash.substring(1)).get(key);
 }
-
 async function handleResetPassword() {
-  const pwd = document.getElementById('reset-pwd').value;
+  const pwd  = document.getElementById('reset-pwd').value;
   const pwd2 = document.getElementById('reset-pwd2').value;
   const errorEl = document.getElementById('reset-error');
-  if (!pwd || pwd.length < 6) { errorEl.textContent = '❌ Minimum 6 caractères.'; return; }
-  if (pwd !== pwd2) { errorEl.textContent = '❌ Les mots de passe ne correspondent pas.'; return; }
+  if (!pwd || pwd.length < 6) { errorEl.textContent='❌ Minimum 6 caractères.'; return; }
+  if (pwd !== pwd2) { errorEl.textContent='❌ Les mots de passe ne correspondent pas.'; return; }
   const token = getHashParam('access_token');
   const res = await supabaseFetch('/auth/v1/user', {
-    method: 'PUT',
-    headers: { 'Authorization': `Bearer ${token}` },
-    body: JSON.stringify({ password: pwd })
+    method:'PUT', headers:{'Authorization':`Bearer ${token}`}, body:JSON.stringify({password:pwd})
   });
-  if (res.error) { errorEl.textContent = '❌ Erreur : ' + res.error.message; return; }
+  if (res.error) { errorEl.textContent='❌ Erreur : ' + res.error.message; return; }
   document.getElementById('reset-success').style.display = 'block';
-  document.getElementById('reset-form').style.display = 'none';
+  document.getElementById('reset-form').style.display    = 'none';
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 window.addEventListener('load', () => {
-  const type = getHashParam('type');
+  const type  = getHashParam('type');
   const token = getHashParam('access_token');
   if ((type === 'recovery' || type === 'invite') && token) {
     showPage('reset');
-    const titleEl = document.getElementById('reset-title');
-    if (titleEl) titleEl.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
+    const t = document.getElementById('reset-title');
+    if (t) t.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
     return;
   }
-  const user = localStorage.getItem('waneyo_user');
-  if (user) startDashboard('numerique');
+  if (localStorage.getItem('waneyo_user')) startDashboard('numerique');
 });
 
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => { navigator.serviceWorker.register('/sw.js'); });
+  window.addEventListener('load', () => navigator.serviceWorker.register('/sw.js'));
 }
 </script>
 </body>
