@@ -402,21 +402,96 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     <div style="font-size:15px;font-weight:700;margin-bottom:6px">📚 Ressources incluses</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Téléchargez vos ebooks et guides offerts avec votre abonnement</div>
     <div id="resources-list"></div>
+    <!-- SESSION DÉCOUVERTE -->
     <div class="upsell-card">
       <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">✨ ALLER PLUS LOIN</div>
-      <h3>Session individuelle avec Nadia</h3>
-      <p>Vous avancez bien mais vous avez besoin d'un regard expert sur votre projet ? Réservez une session 1h en visio pour un accompagnement personnalisé.</p>
+      <h3>Session découverte avec Nadia</h3>
+      <p>Vous avez suivi la formation mais vous hésitez à vous lancer seul(e) ? Commencez par une session 1h pour faire le point sur votre projet et voir si un accompagnement intensif vous correspond.</p>
       <div class="upsell-price">40€ <span style="font-size:14px;font-weight:400;color:var(--muted)">· 1h en visio</span></div>
       <ul class="upsell-features">
-        <li>✅ Audit de votre stratégie digitale</li>
-        <li>✅ Conseils personnalisés sur votre projet</li>
-        <li>✅ Plan d'action concret à appliquer</li>
-        <li>✅ Suivi par email post-session</li>
+        <li>✅ Audit de votre projet et de votre situation</li>
+        <li>✅ Identification de vos freins au lancement</li>
+        <li>✅ Plan d'action immédiat à appliquer</li>
+        <li>✅ Présentation du Bootcamp si vous souhaitez aller plus loin</li>
       </ul>
-      <button class="btn-accent" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Réservation session individuelle 40€'">
-        📅 Réserver ma session — 40€
+      <button class="btn-accent" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Réservation session découverte 40€'">
+        📅 Réserver ma session découverte — 40€
       </button>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Réponse sous 24h · Paiement sécurisé à la réservation</p>
+    </div>
+
+    <!-- BOOTCAMP INTENSIF -->
+    <div style="background:linear-gradient(135deg,#0F0A1E,#2D1B69);border-radius:14px;padding:24px;margin-top:16px;color:#fff">
+      <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">🔥 ACCOMPAGNEMENT INTENSIF</div>
+      <h3 style="font-size:18px;font-weight:800;margin-bottom:6px">Bootcamp Individuel<br/>avec Nadia</h3>
+      <p style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:20px">Vous avez les connaissances, vous avez le projet — mais vous avez besoin de quelqu'un à vos côtés pour passer à l'action. Ce bootcamp est fait pour vous. 2h de travail ensemble, 2 fois par semaine, sur votre projet réel.</p>
+
+      <!-- Tabs formules -->
+      <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+        <button onclick="switchBootcamp('1mois',this)" id="tab-1mois"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid var(--accent);background:var(--accent);color:#fff;font-weight:700;font-size:13px;cursor:pointer">
+          1 mois
+        </button>
+        <button onclick="switchBootcamp('3mois',this)" id="tab-3mois"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
+          3 mois ⭐
+        </button>
+        <button onclick="switchBootcamp('seance',this)" id="tab-seance"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
+          À la séance
+        </button>
+      </div>
+
+      <div id="bootcamp-1mois">
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">290€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 4 semaines</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">8 séances de 2h · soit ~36€/séance</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur votre projet</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 1 mois – 290€'">
+          🚀 Je veux rejoindre le Bootcamp — 290€
+        </button>
+      </div>
+
+      <div id="bootcamp-3mois" style="display:none">
+        <div style="background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">⭐ Le plus populaire</div>
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">790€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 12 semaines</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">24 séances de 2h · soit ~33€/séance · économisez 80€</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur votre projet</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Bilan mensuel + réorientation si besoin</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 3 mois – 790€'">
+          🚀 Je veux rejoindre le Bootcamp — 790€
+        </button>
+      </div>
+
+      <div id="bootcamp-seance" style="display:none">
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">60€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· par séance</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">2h de travail · sans engagement · idéal pour tester</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 1 séance de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Focus sur un blocage précis</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Compte rendu écrit après la séance</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">💡 Recommandé après la session découverte 40€</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp – séance individuelle 60€'">
+          🚀 Réserver une séance — 60€
+        </button>
+      </div>
+
+      <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;text-align:center">Réponse sous 24h · Accès réservé aux apprenants de L'Accélérateur Digital</p>
     </div>
   </div>
 
@@ -1102,6 +1177,24 @@ function showCompletion(p) {
   document.getElementById('completion-modal').classList.add('open');
 }
 function closeCompletion() { document.getElementById('completion-modal').classList.remove('open'); }
+
+// ─── BOOTCAMP TABS ────────────────────────────────────────────────────────────
+function switchBootcamp(tab, btn) {
+  ['1mois','3mois','seance'].forEach(t => {
+    document.getElementById('bootcamp-' + t).style.display = t === tab ? 'block' : 'none';
+    const b = document.getElementById('tab-' + t);
+    if (t === tab) {
+      b.style.background = 'var(--accent)';
+      b.style.borderColor = 'var(--accent)';
+      b.style.color = '#fff';
+      b.style.opacity = '1';
+    } else {
+      b.style.background = 'transparent';
+      b.style.borderColor = 'rgba(255,255,255,0.2)';
+      b.style.color = 'rgba(255,255,255,0.6)';
+    }
+  });
+}
 
 // ─── RESET MOT DE PASSE ──────────────────────────────────────────────────────
 function getHashParam(key) {
