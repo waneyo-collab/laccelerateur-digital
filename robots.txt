@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /dashboard
+Disallow: /reset
+
+Sitemap: https://app.waneyo-formation.com/sitemap.xml
