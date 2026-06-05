@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>L'Accélérateur Digital – Waneyo Formation</title>
 <meta name="description" content="Maîtrisez le marketing digital et devenez entrepreneur. Slides narratives interactives. 3 jours gratuits."/>
+<meta property="og:title" content="L'Accélérateur Digital – Waneyo Formation"/>
+<meta property="og:description" content="Maîtrisez le marketing digital en 15 min/jour. 3 jours gratuits, sans CB."/>
+<meta property="og:image" content="https://raw.githubusercontent.com/waneyo-collab/laccelerateur-digital/main/og-image.jpg"/>
+<meta property="og:url" content="https://app.waneyo-formation.com"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="manifest" href="manifest.json"/>
 <meta name="theme-color" content="#7C3AED"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-<script>
-  Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' });
-</script>
+<!-- jsPDF et Paddle chargés à la demande -->
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 :root{
@@ -603,20 +605,48 @@ async function detectCountry() {
   } catch { return 'FR'; }
 }
 
+// ─── LAZY LOAD ────────────────────────────────────────────────────────────────
+function loadScript(src) {
+  return new Promise((res, rej) => {
+    if (document.querySelector(`script[src="${src}"]`)) { res(); return; }
+    const s = document.createElement('script');
+    s.src = src; s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+async function loadJsPDF() {
+  if (window.jspdf) return;
+  await loadScript('https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js');
+}
+async function ensurePaddle() {
+  if (window.Paddle) return;
+  await loadScript('https://cdn.paddle.com/paddle/v2/paddle.js');
+  Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' });
+}
+
 async function handleCheckout(event) {
   const btn = event.currentTarget;
   const original = btn.textContent;
   btn.textContent = '⏳ Chargement…';
   btn.disabled = true;
 
-  const country = await detectCountry();
+  // FIX 6 : timeout sur detectCountry
+  const country = await Promise.race([
+    detectCountry(),
+    new Promise(r => setTimeout(() => r('FR'), 4000))
+  ]);
 
   if (PADDLE_COUNTRIES.includes(country)) {
     localStorage.setItem('waneyo_psp', 'paddle');
-    Paddle.Checkout.open({
-      items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
-      settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
-    });
+    try {
+      await ensurePaddle();
+      Paddle.Checkout.open({
+        items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
+        settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
+      });
+    } catch(e) {
+      console.error('Paddle load error', e);
+    }
     btn.textContent = original;
     btn.disabled = false;
   } else {
@@ -706,6 +736,8 @@ async function handleLogin() {
 }
 
 async function handleLogout() {
+  // FIX 4 : arrêter le refresh au logout
+  if (_refreshInterval) { clearInterval(_refreshInterval); _refreshInterval = null; }
   const email = localStorage.getItem('waneyo_user');
   if (email) {
     localStorage.removeItem('waneyo_sub_' + btoa(email));
@@ -732,7 +764,7 @@ async function refreshToken() {
     } else { handleLogout(); }
   } catch { handleLogout(); }
 }
-setInterval(refreshToken, 50 * 60 * 1000);
+// setInterval déplacé dans startDashboard (voir FIX 4)
 
 async function handleForgotPassword() {
   const email = document.getElementById('login-email').value.trim();
@@ -894,6 +926,8 @@ function showPage(id) {
 }
 
 async function startDashboard(expandId) {
+  // FIX 4 : démarrer le refresh seulement quand on est sur le dashboard
+  if (!_refreshInterval) _refreshInterval = setInterval(refreshToken, 50 * 60 * 1000);
   showPage('dashboard');
   const firstName = localStorage.getItem('waneyo_firstname');
   const greeting = document.getElementById('nav-greeting');
@@ -1111,10 +1145,10 @@ async function markDone() {
   closeModal();
   const p = PARCOURS.find(p => p.id === currentModal.parcoursId);
   const allPhaseDone = p && p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id));
-  const allDone = PARCOURS.every(p => p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id)));
   renderParcours(currentModal.parcoursId);
-  if (allDone) generateCertificate("Les fondamentaux du marketing digital");
-  else if (allPhaseDone) showCompletion(p);
+  // FIX 5 : showCompletion toujours appelé en premier (y compris pour entrepreneuriat)
+  // Le certificat est généré depuis showCompletion via COMP_MSGS
+  if (allPhaseDone) showCompletion(p);
 }
 
 // ─── COMPLETION & CERTIFICAT ─────────────────────────────────────────────────
@@ -1124,7 +1158,8 @@ const COMP_MSGS = {
   entrepreneuriat:{ emoji:"🏆", title:"Parcours complet !",  msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !", btn:"Fermer" }
 };
 
-function generateCertificate(phaseName) {
+async function generateCertificate(phaseName) {
+  await loadJsPDF();
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ orientation:'landscape', unit:'mm', format:'a4' });
   const firstName = localStorage.getItem('waneyo_firstname') || 'Apprenant(e)';
@@ -1166,10 +1201,10 @@ function generateCertificate(phaseName) {
   doc.save(`Certificat_${phaseName.replace(/ /g,'_')}_${firstName}.pdf`);
 }
 
-function showCompletion(p) {
+async function showCompletion(p) {
   const msg = COMP_MSGS[p.id];
   if (!msg) return;
-  if (p.id === 'entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
+  if (p.id === 'entrepreneuriat') await generateCertificate("Les fondamentaux du marketing digital");
   document.getElementById('comp-emoji').textContent = msg.emoji;
   document.getElementById('comp-title').textContent = msg.title;
   document.getElementById('comp-msg').textContent   = msg.msg;
@@ -1216,6 +1251,9 @@ async function handleResetPassword() {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
+// FIX 4 : setInterval scopé — déclaré ici, démarré dans startDashboard
+let _refreshInterval = null;
+
 window.addEventListener('load', () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
@@ -1225,7 +1263,16 @@ window.addEventListener('load', () => {
     if (t) t.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
     return;
   }
-  if (localStorage.getItem('waneyo_user')) startDashboard('numerique');
+
+  // FIX 3 : vérifier que le token JWT n'est pas expiré avant d'accéder au dashboard
+  const email     = localStorage.getItem('waneyo_user');
+  const authToken = localStorage.getItem('waneyo_token');
+  if (!email || !authToken) return;
+  try {
+    const payload = JSON.parse(atob(authToken.split('.')[1]));
+    if (payload.exp * 1000 <= Date.now()) { handleLogout(); return; }
+  } catch { handleLogout(); return; }
+  startDashboard('numerique');
 });
 
 if ('serviceWorker' in navigator) {
