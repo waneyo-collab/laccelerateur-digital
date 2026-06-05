@@ -5,13 +5,15 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>L'Accélérateur Digital – Waneyo Formation</title>
 <meta name="description" content="Maîtrisez le marketing digital et devenez entrepreneur. Slides narratives interactives. 3 jours gratuits."/>
+<meta property="og:title" content="L'Accélérateur Digital – Waneyo Formation"/>
+<meta property="og:description" content="Maîtrisez le marketing digital en 15 min/jour. 3 jours gratuits, sans CB."/>
+<meta property="og:image" content="https://raw.githubusercontent.com/waneyo-collab/laccelerateur-digital/main/og-image.jpg"/>
+<meta property="og:url" content="https://app.waneyo-formation.com"/>
+<meta property="og:type" content="website"/>
+<meta name="twitter:card" content="summary_large_image"/>
 <link rel="manifest" href="manifest.json"/>
 <meta name="theme-color" content="#7C3AED"/>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdn.paddle.com/paddle/v2/paddle.js"></script>
-<script>
-  Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' });
-</script>
+
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',sans-serif}
 :root{
@@ -402,96 +404,21 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     <div style="font-size:15px;font-weight:700;margin-bottom:6px">📚 Ressources incluses</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Téléchargez vos ebooks et guides offerts avec votre abonnement</div>
     <div id="resources-list"></div>
-    <!-- SESSION DÉCOUVERTE -->
     <div class="upsell-card">
       <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">✨ ALLER PLUS LOIN</div>
-      <h3>Session découverte avec Nadia</h3>
-      <p>Vous avez suivi la formation mais vous hésitez à vous lancer seul(e) ? Commencez par une session 1h pour faire le point sur votre projet et voir si un accompagnement intensif vous correspond.</p>
+      <h3>Session individuelle avec Nadia</h3>
+      <p>Vous avancez bien mais vous avez besoin d'un regard expert sur votre projet ? Réservez une session 1h en visio pour un accompagnement personnalisé.</p>
       <div class="upsell-price">40€ <span style="font-size:14px;font-weight:400;color:var(--muted)">· 1h en visio</span></div>
       <ul class="upsell-features">
-        <li>✅ Audit de votre projet et de votre situation</li>
-        <li>✅ Identification de vos freins au lancement</li>
-        <li>✅ Plan d'action immédiat à appliquer</li>
-        <li>✅ Présentation du Bootcamp si vous souhaitez aller plus loin</li>
+        <li>✅ Audit de votre stratégie digitale</li>
+        <li>✅ Conseils personnalisés sur votre projet</li>
+        <li>✅ Plan d'action concret à appliquer</li>
+        <li>✅ Suivi par email post-session</li>
       </ul>
-      <button class="btn-accent" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Réservation session découverte 40€'">
-        📅 Réserver ma session découverte — 40€
+      <button class="btn-accent" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Réservation session individuelle 40€'">
+        📅 Réserver ma session — 40€
       </button>
       <p style="font-size:11px;color:var(--muted);margin-top:8px">Réponse sous 24h · Paiement sécurisé à la réservation</p>
-    </div>
-
-    <!-- BOOTCAMP INTENSIF -->
-    <div style="background:linear-gradient(135deg,#0F0A1E,#2D1B69);border-radius:14px;padding:24px;margin-top:16px;color:#fff">
-      <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">🔥 ACCOMPAGNEMENT INTENSIF</div>
-      <h3 style="font-size:18px;font-weight:800;margin-bottom:6px">Bootcamp Individuel<br/>avec Nadia</h3>
-      <p style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:20px">Vous avez les connaissances, vous avez le projet — mais vous avez besoin de quelqu'un à vos côtés pour passer à l'action. Ce bootcamp est fait pour vous. 2h de travail ensemble, 2 fois par semaine, sur votre projet réel.</p>
-
-      <!-- Tabs formules -->
-      <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
-        <button onclick="switchBootcamp('1mois',this)" id="tab-1mois"
-          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid var(--accent);background:var(--accent);color:#fff;font-weight:700;font-size:13px;cursor:pointer">
-          1 mois
-        </button>
-        <button onclick="switchBootcamp('3mois',this)" id="tab-3mois"
-          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
-          3 mois ⭐
-        </button>
-        <button onclick="switchBootcamp('seance',this)" id="tab-seance"
-          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
-          À la séance
-        </button>
-      </div>
-
-      <div id="bootcamp-1mois">
-        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">290€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 4 semaines</span></div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">8 séances de 2h · soit ~36€/séance</div>
-        <ul style="list-style:none;margin-bottom:20px">
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur votre projet</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
-        </ul>
-        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
-          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 1 mois – 290€'">
-          🚀 Je veux rejoindre le Bootcamp — 290€
-        </button>
-      </div>
-
-      <div id="bootcamp-3mois" style="display:none">
-        <div style="background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">⭐ Le plus populaire</div>
-        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">790€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 12 semaines</span></div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">24 séances de 2h · soit ~33€/séance · économisez 80€</div>
-        <ul style="list-style:none;margin-bottom:20px">
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur votre projet</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Bilan mensuel + réorientation si besoin</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
-        </ul>
-        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
-          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 3 mois – 790€'">
-          🚀 Je veux rejoindre le Bootcamp — 790€
-        </button>
-      </div>
-
-      <div id="bootcamp-seance" style="display:none">
-        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">60€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· par séance</span></div>
-        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">2h de travail · sans engagement · idéal pour tester</div>
-        <ul style="list-style:none;margin-bottom:20px">
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 1 séance de 2h en visio</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Focus sur un blocage précis</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Compte rendu écrit après la séance</li>
-          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">💡 Recommandé après la session découverte 40€</li>
-        </ul>
-        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
-          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp – séance individuelle 60€'">
-          🚀 Réserver une séance — 60€
-        </button>
-      </div>
-
-      <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;text-align:center">Réponse sous 24h · Accès réservé aux apprenants de L'Accélérateur Digital</p>
     </div>
   </div>
 
@@ -582,6 +509,27 @@ async function supabaseFetch(path, options = {}) {
   return res.json();
 }
 
+// ─── LAZY LOADERS ────────────────────────────────────────────────────────────
+async function loadJsPDF() {
+  if (window.jspdf) return;
+  await new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js';
+    s.onload = res; s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+async function loadPaddle() {
+  if (window.Paddle) return;
+  await new Promise((res, rej) => {
+    const s = document.createElement('script');
+    s.src = 'https://cdn.paddle.com/paddle/v2/paddle.js';
+    s.onload = () => { Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' }); res(); };
+    s.onerror = rej;
+    document.head.appendChild(s);
+  });
+}
+
 // ─── CHECKOUT (Stripe / Paddle selon géo) ────────────────────────────────────
 const PADDLE_COUNTRIES = [
   'MA','DZ','TN','LY','EG','SN','CI','CM','GH','NG','KE','TZ','UG',
@@ -613,6 +561,7 @@ async function handleCheckout(event) {
 
   if (PADDLE_COUNTRIES.includes(country)) {
     localStorage.setItem('waneyo_psp', 'paddle');
+    await loadPaddle();
     Paddle.Checkout.open({
       items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
       settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
@@ -1106,14 +1055,13 @@ function closeModal() {
   document.getElementById('modal-iframe').src = '';
 }
 async function markDone() {
-  if (!currentModal) return;
   setDone(currentModal.parcoursId, currentModal.moduleId);
   closeModal();
   const p = PARCOURS.find(p => p.id === currentModal.parcoursId);
   const allPhaseDone = p && p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id));
   const allDone = PARCOURS.every(p => p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id)));
   renderParcours(currentModal.parcoursId);
-  if (allDone) generateCertificate("Les fondamentaux du marketing digital");
+  if (allDone) await generateCertificate("Les fondamentaux du marketing digital");
   else if (allPhaseDone) showCompletion(p);
 }
 
@@ -1124,7 +1072,8 @@ const COMP_MSGS = {
   entrepreneuriat:{ emoji:"🏆", title:"Parcours complet !",  msg:"Félicitations ! Vous avez terminé les 3 phases de L'Accélérateur Digital. Vous avez tout ce qu'il faut pour lancer votre activité !", btn:"Fermer" }
 };
 
-function generateCertificate(phaseName) {
+async function generateCertificate(phaseName) {
+  await loadJsPDF();
   const { jsPDF } = window.jspdf;
   const doc = new jsPDF({ orientation:'landscape', unit:'mm', format:'a4' });
   const firstName = localStorage.getItem('waneyo_firstname') || 'Apprenant(e)';
@@ -1166,10 +1115,10 @@ function generateCertificate(phaseName) {
   doc.save(`Certificat_${phaseName.replace(/ /g,'_')}_${firstName}.pdf`);
 }
 
-function showCompletion(p) {
+async function showCompletion(p) {
   const msg = COMP_MSGS[p.id];
   if (!msg) return;
-  if (p.id === 'entrepreneuriat') generateCertificate("Les fondamentaux du marketing digital");
+  if (p.id === 'entrepreneuriat') await generateCertificate("Les fondamentaux du marketing digital");
   document.getElementById('comp-emoji').textContent = msg.emoji;
   document.getElementById('comp-title').textContent = msg.title;
   document.getElementById('comp-msg').textContent   = msg.msg;
@@ -1177,24 +1126,6 @@ function showCompletion(p) {
   document.getElementById('completion-modal').classList.add('open');
 }
 function closeCompletion() { document.getElementById('completion-modal').classList.remove('open'); }
-
-// ─── BOOTCAMP TABS ────────────────────────────────────────────────────────────
-function switchBootcamp(tab, btn) {
-  ['1mois','3mois','seance'].forEach(t => {
-    document.getElementById('bootcamp-' + t).style.display = t === tab ? 'block' : 'none';
-    const b = document.getElementById('tab-' + t);
-    if (t === tab) {
-      b.style.background = 'var(--accent)';
-      b.style.borderColor = 'var(--accent)';
-      b.style.color = '#fff';
-      b.style.opacity = '1';
-    } else {
-      b.style.background = 'transparent';
-      b.style.borderColor = 'rgba(255,255,255,0.2)';
-      b.style.color = 'rgba(255,255,255,0.6)';
-    }
-  });
-}
 
 // ─── RESET MOT DE PASSE ──────────────────────────────────────────────────────
 function getHashParam(key) {
@@ -1216,7 +1147,7 @@ async function handleResetPassword() {
 }
 
 // ─── INIT ─────────────────────────────────────────────────────────────────────
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
   if ((type === 'recovery' || type === 'invite') && token) {
@@ -1225,7 +1156,36 @@ window.addEventListener('load', () => {
     if (t) t.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
     return;
   }
-  if (localStorage.getItem('waneyo_user')) startDashboard('numerique');
+
+  const email     = localStorage.getItem('waneyo_user');
+  const authToken = localStorage.getItem('waneyo_token');
+  if (!email || !authToken) return;
+
+  // Cache récent (< 2h) → accès direct
+  const cached = getCachedSubscriber(email);
+  if (cached && Date.now() - cached.ts < 2 * 60 * 60 * 1000) {
+    startDashboard('numerique');
+    return;
+  }
+
+  // Re-vérification Supabase
+  try {
+    const subs = await supabaseFetch(
+      `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
+      { headers: { 'Authorization': `Bearer ${authToken}` } }
+    );
+    if (!Array.isArray(subs) || subs.length === 0) {
+      handleLogout();
+      return;
+    }
+    const firstName = subs[0].first_name || '';
+    setCachedSubscriber(email, { firstName, ts: Date.now() });
+    localStorage.setItem('waneyo_firstname', firstName);
+    startDashboard('numerique');
+  } catch {
+    // Erreur réseau → on laisse passer pour ne pas bloquer sur mobile
+    startDashboard('numerique');
+  }
 });
 
 if ('serviceWorker' in navigator) {
