@@ -1055,6 +1055,7 @@ function closeModal() {
   document.getElementById('modal-iframe').src = '';
 }
 async function markDone() {
+  if (!currentModal) return;
   setDone(currentModal.parcoursId, currentModal.moduleId);
   closeModal();
   const p = PARCOURS.find(p => p.id === currentModal.parcoursId);
@@ -1161,14 +1162,12 @@ window.addEventListener('load', async () => {
   const authToken = localStorage.getItem('waneyo_token');
   if (!email || !authToken) return;
 
-  // Cache récent (< 2h) → accès direct
   const cached = getCachedSubscriber(email);
   if (cached && Date.now() - cached.ts < 2 * 60 * 60 * 1000) {
     startDashboard('numerique');
     return;
   }
 
-  // Re-vérification Supabase
   try {
     const subs = await supabaseFetch(
       `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
@@ -1183,7 +1182,6 @@ window.addEventListener('load', async () => {
     localStorage.setItem('waneyo_firstname', firstName);
     startDashboard('numerique');
   } catch {
-    // Erreur réseau → on laisse passer pour ne pas bloquer sur mobile
     startDashboard('numerique');
   }
 });
