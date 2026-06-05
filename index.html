@@ -261,7 +261,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     </div>
     <p class="hero-sub" style="margin-top:14px">Sans engagement · Annulable à tout moment</p>
   </div>
-  <footer>© 2025 Waneyo Formation · Tous droits réservés</footer>
+  <footer>© 2026 Waneyo Formation · Tous droits réservés</footer>
 </div>
 
 <!-- SUBSCRIBE -->
@@ -1068,8 +1068,10 @@ async function markDone() {
   const allPhaseDone = p && p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id));
   const allDone = PARCOURS.every(p => p.modules.filter(m => !m.soon).every(m => isDone(p.id, m.id)));
   renderParcours(currentModal.parcoursId);
-  if (allDone) await generateCertificate("Les fondamentaux du marketing digital");
-  else if (allPhaseDone) showCompletion(p);
+  if (allPhaseDone) {
+    showCompletion(p);
+    if (allDone) await generateCertificate("Les fondamentaux du marketing digital");
+  }
 }
 
 // ─── COMPLETION & CERTIFICAT ─────────────────────────────────────────────────
