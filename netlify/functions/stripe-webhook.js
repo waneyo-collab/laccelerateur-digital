@@ -81,7 +81,7 @@ exports.handler = async (event) => {
 
       // 2. Générer le lien de création mot de passe
       const { data, error: linkError } = await supabase.auth.admin.generateLink({
-        type: 'invite',
+        type: 'magiclink',
         email,
         options: { redirectTo: 'https://app.waneyo-formation.com' }
       });
