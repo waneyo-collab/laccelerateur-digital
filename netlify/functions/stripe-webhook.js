@@ -50,8 +50,7 @@ async function sendPasswordSetupEmail(email, firstName) {
   const { data, error } = await supabase.auth.admin.generateLink({
     type: 'recovery',
     email,
-    options: { redirectTo: 'https://app.waneyo-formation.com#type=recovery' }
-  });
+    options: { redirectTo: 'https://app.waneyo-formation.com' }  });
 
   if (error) { console.error('generateLink error:', error); return; }
 
