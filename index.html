@@ -220,7 +220,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <div style="flex:1;min-width:200px">
         <div style="font-weight:700;font-size:16px;margin-bottom:2px">Nadia 👋</div>
         <div style="font-size:12px;color:var(--muted);margin-bottom:12px">Formatrice en marketing digital · 15 ans d'expérience</div>
-        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">Après un parcours en webdesign, une Licence en marketing et un Master 2 en Product Management, j'ai consacré ma carrière à rendre le numérique accessible à tous, en particulier aux débutants, aux autodidactes et à ceux que le système traditionnel a laissés de côté.</p>
+        <p style="font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px">Après un parcours en webdesign, une Licence en marketing et un Master 2 en Product Management, j'ai consacré ma carrière à rendre le numérique accessible à tous — en particulier aux débutants, aux autodidactes et à ceux que le système traditionnel a laissés de côté.</p>
         <div class="values">
           <span class="value-tag">🤝 Bienveillance</span>
           <span class="value-tag">🎯 Pragmatisme</span>
@@ -232,7 +232,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     <div class="stats-grid" style="max-width:680px;margin:12px auto 0">
       <div class="stat-card"><div class="stat-num">15 ans</div><div class="stat-label">d'expérience</div></div>
       <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">diplômes</div></div>
-      <div class="stat-card"><div class="stat-num">100%</div><div class="stat-label">applicable dès J1</div></div>
+
     </div>
   </div>
 
@@ -281,7 +281,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
         <li>✅ Phase 3 — Entreprenariat (10 modules)</li>
         <li>✅ Ebooks & guides téléchargeables</li>
         <li>✅ Nouveaux modules chaque mois</li>
-        <li>✅ Certificats de formation</li>
+        <li>✅ Certificat de suivi de formation</li>
         <li style="color:var(--muted)">⚠️ Accès interrompu immédiatement en cas d'annulation</li>
       </ul>
       <button class="btn-primary" style="width:100%;margin-bottom:10px;font-size:15px" onclick="handleCheckout(event)">
@@ -841,6 +841,9 @@ const FAQ_LANDING = [
   {q:"Pourquoi ce parcours en 3 phases ?",a:"Parce qu'on ne peut pas entreprendre sans maîtriser le digital, et on ne peut pas réussir sans le bon état d'esprit. Les 3 phases se complètent pour vous donner toutes les clés."},
   {q:"Puis-je accéder à tous les modules dès l'abonnement ?",a:"Oui, tout le contenu disponible est accessible immédiatement. De nouveaux modules sont ajoutés chaque mois."},
   {q:"Que se passe-t-il si j'annule ?",a:"L'accès est interrompu immédiatement à l'annulation. Vous pouvez vous réabonner à tout moment."},
+  {q:"La formation est-elle remboursable ?",a:"Non. Conformément à la législation sur les produits numériques, cette formation n'est pas remboursable dès l'accès au contenu. Consultez nos <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>Conditions Générales de Vente</a> pour plus de détails."},
+  {q:"Conditions Générales de Vente",a:"Nos CGV sont disponibles ici : <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>www.waneyo-formation.com/cgv</a>"},
+  {q:"Politique de confidentialité",a:"Notre politique de confidentialité est disponible ici : <a href='https://www.waneyo-formation.com/politique_confidentialite' target='_blank' style='color:var(--primary)'>www.waneyo-formation.com/politique_confidentialite</a>"},
   {q:"La formation est-elle accessible depuis mobile ?",a:"Oui, 100% en ligne depuis votre mobile, tablette ou PC. Vous pouvez même l'installer comme une app sur votre téléphone."},
 ];
 
@@ -848,15 +851,18 @@ const FAQ_DASH = [
   {cat:"marketing",q:"Comment fonctionne le micro-learning ?",a:"Chaque module dure 15 à 30 minutes et se compose de slides narratives interactives. Vous avancez à votre rythme, sans contrainte d'horaire."},
   {cat:"marketing",q:"Par où commencer si je suis débutant(e) ?",a:"Commencez par la Phase 1 — Le Monde Numérique. Le parcours guidé dans votre tableau de bord vous indique exactement le prochain module à faire."},
   {cat:"marketing",q:"Les modules sont-ils accessibles hors ligne ?",a:"Non, les modules sont en ligne. Vous avez besoin d'une connexion internet pour y accéder."},
-  {cat:"marketing",q:"Est-ce que je recevrai un certificat ?",a:"Oui, un certificat de complétion est généré automatiquement à la fin de chaque phase."},
+  {cat:"marketing",q:"Est-ce que je recevrai un certificat ?",a:"Oui, un certificat de suivi de formation est généré automatiquement à la fin de chaque phase."},
   {cat:"entrepreneuriat",q:"Pourquoi faire la Phase Mindset avant l'Entreprenariat ?",a:"Parce que le plus grand obstacle à la création d'entreprise n'est pas technique — c'est mental. La Phase 2 vous prépare à affronter les défis concrets de la Phase 3."},
   {cat:"entrepreneuriat",q:"Je n'ai pas d'idée de business, est-ce fait pour moi ?",a:"Absolument ! Le module 'Trouver son idée de business rentable' vous guide pas à pas pour identifier votre opportunité."},
   {cat:"abonnement",q:"Comment fonctionne l'essai gratuit de 3 jours ?",a:"Vous vous abonnez avec votre carte bancaire, mais aucun prélèvement n'est effectué pendant 3 jours. Annulable sans frais."},
+  {cat:"abonnement",q:"La formation est-elle remboursable ?",a:"Non. Conformément à la législation sur les produits numériques, cette formation n'est pas remboursable dès l'accès au contenu. Consultez nos <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>CGV</a> pour plus de détails."},
   {cat:"abonnement",q:"Comment annuler mon abonnement ?",a:"Via le bouton 'Gérer mon abonnement' dans l'onglet Aide. L'accès s'arrête immédiatement à l'annulation."},
   {cat:"abonnement",q:"Y a-t-il des frais cachés ?",a:"Aucun. 9,99€/mois tout inclus : tous les modules, les ebooks, les guides et les futures mises à jour."},
   {cat:"abonnement",q:"Quels moyens de paiement sont acceptés ?",a:"Carte bancaire (Visa, Mastercard), PayPal, Google Pay et Apple Pay — tous gérés de façon sécurisée."},
   {cat:"technique",q:"Comment installer l'app sur mon téléphone ?",a:"Dans votre espace membre, un guide d'installation pas à pas est disponible en haut de votre tableau de bord."},
   {cat:"technique",q:"Ma progression a disparu après rechargement",a:"La progression est sauvegardée sur votre appareil. Si vous changez d'appareil ou videz le cache, elle sera réinitialisée."},
+  {cat:"abonnement",q:"Conditions Générales de Vente",a:"Nos CGV sont disponibles ici : <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>www.waneyo-formation.com/cgv</a>"},
+  {cat:"abonnement",q:"Politique de confidentialité",a:"Notre politique de confidentialité est disponible ici : <a href='https://www.waneyo-formation.com/politique_confidentialite' target='_blank' style='color:var(--primary)'>www.waneyo-formation.com/politique_confidentialite</a>"},
 ];
 
 // ─── PROGRESSION ─────────────────────────────────────────────────────────────
@@ -1233,7 +1239,11 @@ function switchBootcamp(tab, btn) {
 
 // ─── RESET MOT DE PASSE ──────────────────────────────────────────────────────
 function getHashParam(key) {
-  return new URLSearchParams(window.location.hash.substring(1)).get(key);
+  // Lit d'abord le hash (#access_token=...) puis les query params (?access_token=...)
+  // Supabase utilise le hash pour 'invite', les query params pour 'recovery'
+  return new URLSearchParams(window.location.hash.substring(1)).get(key)
+      || new URLSearchParams(window.location.search).get(key)
+      || null;
 }
 async function handleResetPassword() {
   const pwd  = document.getElementById('reset-pwd').value;
