@@ -47,6 +47,19 @@ async function sendWelcomeEmail(email, firstName, setupLink) {
   if (!res.ok) console.error('Resend error:', await res.text());
 }
 
+async function generateSetupLink(email, isNewUser) {
+  // Nouveaux users → 'invite' : lien direct sans redirection serveur
+  // Users existants → 'recovery' : seule option disponible
+  const type = isNewUser ? 'invite' : 'recovery';
+  const { data, error } = await supabase.auth.admin.generateLink({
+    type,
+    email,
+    options: { redirectTo: 'https://app.waneyo-formation.com' }
+  });
+  if (error) { console.error('generateLink error:', error); return null; }
+  return data?.properties?.action_link || null;
+}
+
 exports.handler = async (event) => {
   const sig = event.headers['stripe-signature'];
   let stripeEvent;
@@ -69,26 +82,17 @@ exports.handler = async (event) => {
       const fullName = session.customer_details?.name || '';
       const firstName = fullName.split(' ')[0] || '';
 
-      // 1. Créer le compte Supabase
+      // 1. Créer le compte Supabase — détecter si user nouveau ou existant
       const { error: createError } = await supabase.auth.admin.createUser({
         email,
         email_confirm: true,
         user_metadata: { stripe_customer_id: customerId, first_name: firstName }
       });
-      if (createError && createError.message !== 'User already registered') {
-        console.error('createUser error:', createError);
-      }
+      const isNewUser = !createError || createError.message === 'User already registered' ? !createError : false;
 
-      // 2. Générer le lien de création mot de passe
-      const { data, error: linkError } = await supabase.auth.admin.generateLink({
-        type: 'magiclink',
-        email,
-        options: { redirectTo: 'https://app.waneyo-formation.com' }
-      });
-      if (linkError) { console.error('generateLink error:', linkError); return { statusCode: 500, body: 'Link error' }; }
-
-      const setupLink = data?.properties?.action_link;
-      if (!setupLink) { console.error('No action_link in response'); return { statusCode: 500, body: 'No link' }; }
+      // 2. Générer le lien adapté
+      const setupLink = await generateSetupLink(email, isNewUser);
+      if (!setupLink) return { statusCode: 500, body: 'Could not generate setup link' };
 
       // 3. Enregistrer dans subscribers
       await supabase.from('subscribers').upsert(
@@ -96,7 +100,7 @@ exports.handler = async (event) => {
         { onConflict: 'email' }
       );
 
-      // 4. Un seul email : bienvenue + bouton création mot de passe
+      // 4. Email unique bienvenue + création mot de passe
       await sendWelcomeEmail(email, firstName, setupLink);
     }
   }
