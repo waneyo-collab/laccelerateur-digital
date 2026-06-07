@@ -46,16 +46,16 @@ async function sendWelcomeEmail(email, firstName) {
 }
 
 async function sendPasswordSetupEmail(email, firstName) {
-  // Générer un lien de reset password via Supabase Admin
   const { data, error } = await supabase.auth.admin.generateLink({
-    type: 'recovery',
+    type: 'invite',
     email,
-    options: { redirectTo: 'https://app.waneyo-formation.com' }  });
+    options: { redirectTo: 'https://app.waneyo-formation.com' }
+  });
 
   if (error) { console.error('generateLink error:', error); return; }
 
-  const resetLink = data?.properties?.action_link;
-  if (!resetLink) return;
+  const setupLink = data?.properties?.action_link;
+  if (!setupLink) return;
 
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
@@ -76,7 +76,7 @@ async function sendPasswordSetupEmail(email, firstName) {
     <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:24px">
       Cliquez sur le bouton ci-dessous pour créer votre mot de passe et accéder à votre formation.
     </p>
-    <a href="${resetLink}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:24px">
+    <a href="${setupLink}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:24px">
       👉 Créer mon mot de passe
     </a>
     <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:0">
@@ -133,7 +133,7 @@ exports.handler = async (event) => {
       // 3. Email de bienvenue Waneyo (en premier)
       await sendWelcomeEmail(email, firstName);
 
-      // 4. Email création mot de passe via Resend (template maîtrisé)
+      // 4. Email création mot de passe via Resend
       await sendPasswordSetupEmail(email, firstName);
     }
   }
