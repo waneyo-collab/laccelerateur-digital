@@ -6,7 +6,7 @@ const supabase = createClient(
   process.env.SUPABASE_SERVICE_KEY
 );
 
-async function sendWelcomeEmail(email, firstName) {
+async function sendWelcomeEmail(email, firstName, setupLink) {
   const res = await fetch('https://api.resend.com/emails', {
     method: 'POST',
     headers: {
@@ -16,7 +16,7 @@ async function sendWelcomeEmail(email, firstName) {
     body: JSON.stringify({
       from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
       to: email,
-      subject: '🎉 Bienvenue dans L\'Accélérateur Digital !',
+      subject: '🎉 Bienvenue dans L\'Accélérateur Digital — Créez votre mot de passe',
       html: `<!DOCTYPE html>
 <html>
 <body style="margin:0;padding:32px;background:#0F0A1E;font-family:sans-serif">
@@ -24,12 +24,14 @@ async function sendWelcomeEmail(email, firstName) {
     <div style="font-size:22px;font-weight:800;color:#7C3AED;margin-bottom:16px">Waneyo Formation</div>
     <h2 style="color:#fff;font-size:20px;margin-bottom:16px">Bienvenue ${firstName ? firstName : ''} ! 🎉</h2>
     <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:16px">
-      Votre abonnement à <strong>L'Accélérateur Digital</strong> est confirmé.
-      Vous allez recevoir dans quelques instants un email pour créer votre mot de passe.
+      Votre abonnement à <strong>L'Accélérateur Digital</strong> est confirmé. Il ne vous reste qu'une étape : créer votre mot de passe pour accéder à votre formation.
     </p>
+    <a href="${setupLink}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:24px">
+      👉 Créer mon mot de passe
+    </a>
     <div style="background:rgba(124,58,237,0.15);border-left:4px solid #7C3AED;padding:16px;border-radius:8px;margin-bottom:24px">
       <p style="margin:0;color:rgba(255,255,255,0.9);font-size:14px;line-height:1.6">
-        💡 <strong>Conseil :</strong> vérifiez vos spams si vous ne recevez pas l'email d'activation dans les 5 minutes.
+        💡 Ce lien expire dans <strong>24h</strong>. Vérifiez vos spams si vous ne voyez pas cet email.
       </p>
     </div>
     <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:0">
@@ -43,53 +45,6 @@ async function sendWelcomeEmail(email, firstName) {
     })
   });
   if (!res.ok) console.error('Resend error:', await res.text());
-}
-
-async function sendPasswordSetupEmail(email, firstName) {
-  const { data, error } = await supabase.auth.admin.generateLink({
-    type: 'invite',
-    email,
-    options: { redirectTo: 'https://app.waneyo-formation.com' }
-  });
-
-  if (error) { console.error('generateLink error:', error); return; }
-
-  const setupLink = data?.properties?.action_link;
-  if (!setupLink) return;
-
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
-      to: email,
-      subject: '👉 Créez votre mot de passe — L\'Accélérateur Digital',
-      html: `<!DOCTYPE html>
-<html>
-<body style="margin:0;padding:32px;background:#0F0A1E;font-family:sans-serif">
-  <div style="max-width:560px;margin:0 auto;background:#1a1035;border-radius:16px;padding:32px">
-    <div style="font-size:22px;font-weight:800;color:#7C3AED;margin-bottom:16px">Waneyo Formation</div>
-    <h2 style="color:#fff;font-size:20px;margin-bottom:16px">Une dernière étape !</h2>
-    <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:24px">
-      Cliquez sur le bouton ci-dessous pour créer votre mot de passe et accéder à votre formation.
-    </p>
-    <a href="${setupLink}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:24px">
-      👉 Créer mon mot de passe
-    </a>
-    <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:0">
-      Ce lien expire dans 24h.<br/><br/>
-      À tout de suite,<br/>
-      <strong style="color:#fff">Nadia — Waneyo Formation</strong>
-    </p>
-  </div>
-</body>
-</html>`
-    })
-  });
-  if (!res.ok) console.error('Resend password email error:', await res.text());
 }
 
 exports.handler = async (event) => {
@@ -124,17 +79,25 @@ exports.handler = async (event) => {
         console.error('createUser error:', createError);
       }
 
-      // 2. Enregistrer dans subscribers
+      // 2. Générer le lien de création mot de passe
+      const { data, error: linkError } = await supabase.auth.admin.generateLink({
+        type: 'invite',
+        email,
+        options: { redirectTo: 'https://app.waneyo-formation.com' }
+      });
+      if (linkError) { console.error('generateLink error:', linkError); return { statusCode: 500, body: 'Link error' }; }
+
+      const setupLink = data?.properties?.action_link;
+      if (!setupLink) { console.error('No action_link in response'); return { statusCode: 500, body: 'No link' }; }
+
+      // 3. Enregistrer dans subscribers
       await supabase.from('subscribers').upsert(
         { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
         { onConflict: 'email' }
       );
 
-      // 3. Email de bienvenue Waneyo (en premier)
-      await sendWelcomeEmail(email, firstName);
-
-      // 4. Email création mot de passe via Resend
-      await sendPasswordSetupEmail(email, firstName);
+      // 4. Un seul email : bienvenue + bouton création mot de passe
+      await sendWelcomeEmail(email, firstName, setupLink);
     }
   }
 
