@@ -17,37 +17,80 @@ async function sendWelcomeEmail(email, firstName) {
       from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
       to: email,
       subject: '🎉 Bienvenue dans L\'Accélérateur Digital !',
-      html: `
-        <div style="font-family:sans-serif;max-width:560px;margin:0 auto;padding:32px;background:#0F0A1E;color:#fff;border-radius:16px">
-          <div style="font-size:28px;font-weight:800;color:#7C3AED;margin-bottom:8px">Waneyo Formation</div>
-          <h1 style="font-size:22px;font-weight:800;margin-bottom:16px">Bienvenue ${firstName ? firstName : ''} ! 🎉</h1>
-          <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:16px">
-            Votre abonnement à <strong>L'Accélérateur Digital</strong> est confirmé. Je suis ravie de vous accueillir dans la formation.
-          </p>
-          <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:24px">
-            Vous allez recevoir dans quelques instants un email pour <strong>créer votre mot de passe</strong> et accéder à votre espace personnel.
-          </p>
-          <div style="background:rgba(124,58,237,0.15);border-left:4px solid #7C3AED;padding:16px;border-radius:8px;margin-bottom:24px">
-            <p style="margin:0;color:rgba(255,255,255,0.9);font-size:14px;line-height:1.6">
-              💡 <strong>Conseil :</strong> vérifiez vos spams si vous ne recevez pas l'email d'activation dans les 5 minutes.
-            </p>
-          </div>
-          <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:8px">
-            En cas de question, répondez simplement à cet email.
-          </p>
-          <p style="color:rgba(255,255,255,0.8);margin-bottom:0">
-            À tout de suite,<br/>
-            <strong>Nadia</strong><br/>
-            <span style="color:rgba(255,255,255,0.5);font-size:13px">Fondatrice — Waneyo Formation</span>
-          </p>
-        </div>
-      `
+      html: `<!DOCTYPE html>
+<html>
+<body style="margin:0;padding:32px;background:#0F0A1E;font-family:sans-serif">
+  <div style="max-width:560px;margin:0 auto;background:#1a1035;border-radius:16px;padding:32px">
+    <div style="font-size:22px;font-weight:800;color:#7C3AED;margin-bottom:16px">Waneyo Formation</div>
+    <h2 style="color:#fff;font-size:20px;margin-bottom:16px">Bienvenue ${firstName ? firstName : ''} ! 🎉</h2>
+    <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:16px">
+      Votre abonnement à <strong>L'Accélérateur Digital</strong> est confirmé.
+      Vous allez recevoir dans quelques instants un email pour créer votre mot de passe.
+    </p>
+    <div style="background:rgba(124,58,237,0.15);border-left:4px solid #7C3AED;padding:16px;border-radius:8px;margin-bottom:24px">
+      <p style="margin:0;color:rgba(255,255,255,0.9);font-size:14px;line-height:1.6">
+        💡 <strong>Conseil :</strong> vérifiez vos spams si vous ne recevez pas l'email d'activation dans les 5 minutes.
+      </p>
+    </div>
+    <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:0">
+      En cas de question, répondez simplement à cet email.<br/><br/>
+      À tout de suite,<br/>
+      <strong style="color:#fff">Nadia — Waneyo Formation</strong>
+    </p>
+  </div>
+</body>
+</html>`
     })
   });
-  if (!res.ok) {
-    const err = await res.text();
-    console.error('Resend error:', err);
-  }
+  if (!res.ok) console.error('Resend error:', await res.text());
+}
+
+async function sendPasswordSetupEmail(email, firstName) {
+  // Générer un lien de reset password via Supabase Admin
+  const { data, error } = await supabase.auth.admin.generateLink({
+    type: 'recovery',
+    email,
+    options: { redirectTo: 'https://app.waneyo-formation.com#type=recovery' }
+  });
+
+  if (error) { console.error('generateLink error:', error); return; }
+
+  const resetLink = data?.properties?.action_link;
+  if (!resetLink) return;
+
+  const res = await fetch('https://api.resend.com/emails', {
+    method: 'POST',
+    headers: {
+      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
+      to: email,
+      subject: '👉 Créez votre mot de passe — L\'Accélérateur Digital',
+      html: `<!DOCTYPE html>
+<html>
+<body style="margin:0;padding:32px;background:#0F0A1E;font-family:sans-serif">
+  <div style="max-width:560px;margin:0 auto;background:#1a1035;border-radius:16px;padding:32px">
+    <div style="font-size:22px;font-weight:800;color:#7C3AED;margin-bottom:16px">Waneyo Formation</div>
+    <h2 style="color:#fff;font-size:20px;margin-bottom:16px">Une dernière étape !</h2>
+    <p style="color:rgba(255,255,255,0.8);line-height:1.7;margin-bottom:24px">
+      Cliquez sur le bouton ci-dessous pour créer votre mot de passe et accéder à votre formation.
+    </p>
+    <a href="${resetLink}" style="display:inline-block;background:#7C3AED;color:#fff;text-decoration:none;padding:14px 28px;border-radius:10px;font-weight:700;font-size:15px;margin-bottom:24px">
+      👉 Créer mon mot de passe
+    </a>
+    <p style="color:rgba(255,255,255,0.5);font-size:13px;margin-bottom:0">
+      Ce lien expire dans 24h.<br/><br/>
+      À tout de suite,<br/>
+      <strong style="color:#fff">Nadia — Waneyo Formation</strong>
+    </p>
+  </div>
+</body>
+</html>`
+    })
+  });
+  if (!res.ok) console.error('Resend password email error:', await res.text());
 }
 
 exports.handler = async (event) => {
@@ -72,20 +115,27 @@ exports.handler = async (event) => {
       const fullName = session.customer_details?.name || '';
       const firstName = fullName.split(' ')[0] || '';
 
-      // 1. Email de bienvenue Waneyo en premier
-      await sendWelcomeEmail(email, firstName);
-
-      // 2. Invitation Supabase (email création mot de passe)
-      await supabase.auth.admin.inviteUserByEmail(email, {
-        redirectTo: 'https://app.waneyo-formation.com',
-        data: { stripe_customer_id: customerId, first_name: firstName }
+      // 1. Créer le compte Supabase
+      const { error: createError } = await supabase.auth.admin.createUser({
+        email,
+        email_confirm: true,
+        user_metadata: { stripe_customer_id: customerId, first_name: firstName }
       });
+      if (createError && createError.message !== 'User already registered') {
+        console.error('createUser error:', createError);
+      }
 
-      // 3. Enregistrement abonné
+      // 2. Enregistrer dans subscribers
       await supabase.from('subscribers').upsert(
         { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
         { onConflict: 'email' }
       );
+
+      // 3. Email de bienvenue Waneyo (en premier)
+      await sendWelcomeEmail(email, firstName);
+
+      // 4. Email création mot de passe via Resend (template maîtrisé)
+      await sendPasswordSetupEmail(email, firstName);
     }
   }
 
