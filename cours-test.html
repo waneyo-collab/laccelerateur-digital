@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Test Page - L'Accélérateur Digital</title>
+<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+<style>
+  * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
+  body { background-color: #F9FAFB; color: #1F2937; display: flex; flex-direction: column; min-height: 100vh; }
+  
+  header { background: white; border-bottom: 1px solid #E5E7EB; padding: 15px 20px; display: flex; justify-content: space-between; align-items: center; }
+  .logo { font-weight: bold; color: #7C3AED; font-size: 1.2rem; }
+  .back-btn { text-decoration: none; color: #4B5563; font-size: 0.9rem; border: 1px solid #D1D5DB; padding: 6px 12px; border-radius: 6px; }
+
+  .container { flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px; }
+  .card { background: white; border-radius: 12px; border: 1px solid #E5E7EB; max-width: 700px; width: 100%; padding: 30px; box-shadow: 0 4px 6px -1px rgba(0,0,0,0.05); }
+  
+  .module-tag { display: inline-block; background: #EDE9FE; color: #7C3AED; font-size: 0.8rem; font-weight: 600; padding: 4px 10px; border-radius: 9999px; margin-bottom: 15px; }
+  h2 { font-size: 1.5rem; margin-bottom: 20px; color: #111827; }
+  
+  .content-area { min-height: 250px; font-size: 1.05rem; line-height: 1.6; color: #374151; }
+  .content-area ul { margin-left: 20px; margin-top: 10px; margin-bottom: 10px; }
+  .content-area li { margin-bottom: 8px; }
+  
+  .media-area { margin-top: 20px; text-align: center; }
+  .media-area img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
+  .media-area iframe { width: 100%; height: 360px; border-radius: 8px; border: none; }
+
+  .footer-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #E5E7EB; }
+  .nav-btn { background: #7C3AED; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s; font-size: 0.95rem; }
+  .nav-btn:hover:not(:disabled) { background: #5B21B6; }
+  .nav-btn:disabled { background: #E5E7EB; color: #9CA3AF; cursor: not-allowed; }
+  
+  .progress-text { color: #6B7280; font-size: 0.9rem; font-weight: 500; }
+  #error-screen { text-align: center; padding: 40px 20px; }
+</style>
+</head>
+<body>
+
+<header>
+  <div class="logo">Waneyo Formation — Zone Test</div>
+  <a href="/" class="back-btn">⬅ Retour au tableau de bord</a>
+</header>
+
+<div class="container">
+  <div class="card" id="course-card">
+    <div id="module-title" class="module-tag">Chargement...</div>
+    <h2 id="slide-title">Initialisation du module...</h2>
+    <div id="slide-content" class="content-area">Veuillez patienter pendant que nous sécurisons votre accès.</div>
+    <div id="slide-media" class="media-area"></div>
+    
+    <div class="footer-controls">
+      <button id="btn-prev" class="nav-btn" onclick="navigate(-1)" disabled>Précédent</button>
+      <div id="progress" class="progress-text">Slide 0 / 0</div>
+      <button id="btn-next" class="nav-btn" onclick="navigate(1)" disabled>Suivant</button>
+    </div>
+  </div>
+
+  <div class="card" id="error-screen" style="display: none;">
+    <h2 style="color: #DC2626;">Accès Restreint 🔒</h2>
+    <p style="margin-bottom: 20px;">Vous devez être connecté à votre espace membre pour visionner ce cours.</p>
+    <a href="/" class="nav-btn" style="text-decoration: none; display: inline-block;">Se connecter</a>
+  </div>
+</div>
+
+<script>
+  // Configuration Supabase automatique avec vos clés
+  const SUPABASE_URL = "https://dxmigietmlpwactlmpjf.supabase.co"; 
+  const SUPABASE_KEY = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg";
+  const supabase = window.supabase.createClient(SUPABASE_URL, SUPABASE_KEY);
+
+  let slides = [];
+  let currentIndex = 0;
+
+  // Sécurité intégrée semblable à votre index.html original
+  function verifyAccess() {
+    const email = localStorage.getItem('waneyo_user');
+    const token = localStorage.getItem('waneyo_token');
+    
+    if (!email || !token) {
+      showError();
+      return false;
+    }
+    try {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      if (payload.exp * 1000 <= Date.now()) {
+        showError();
+        return false;
+      }
+    } catch {
+      showError();
+      return false;
+    }
+    return true;
+  }
+
+  function showError() {
+    document.getElementById('course-card').style.display = 'none';
+    document.getElementById('error-screen').style.display = 'block';
+  }
+
+  // Chargement des données depuis Supabase
+  async function fetchModule() {
+    if (!verifyAccess()) return;
+
+    try {
+      const { data, error } = await supabase
+        .from('cours')
+        .select('*')
+        .eq('module_nom', 'Module 1 : Introduction au marketing digital')
+        .order('id', { ascending: true });
+
+      if (error) throw error;
+
+      slides = data;
+      if (slides.length > 0) {
+        displaySlide();
+      } else {
+        document.getElementById('slide-title').innerText = "Aucune slide trouvée dans ce module.";
+      }
+    } catch (err) {
+      console.error(err);
+      document.getElementById('slide-title').innerText = "Erreur de chargement des données.";
+    }
+  }
+
+  // Rendu de la slide active
+  function displaySlide() {
+    const current = slides[currentIndex];
+    
+    document.getElementById('module-title').innerText = current.module_nom;
+    document.getElementById('slide-title').innerText = current.titre;
+    document.getElementById('slide-content').innerHTML = current.contenu || '';
+
+    // Gestion de la zone Média (Image ou Vidéo YouTube)
+    const mediaContainer = document.getElementById('slide-media');
+    mediaContainer.innerHTML = ''; 
+
+    if (current.image_url) {
+      if (current.image_url.includes('youtube.com') || current.image_url.includes('youtube-nocookie.com')) {
+        mediaContainer.innerHTML = `<iframe src="${current.image_url}" allowfullscreen></iframe>`;
+      } else {
+        mediaContainer.innerHTML = `<img src="${current.image_url}" alt="Illustration">`;
+      }
+    }
+
+    // Boutons & Barre de progression
+    document.getElementById('btn-prev').disabled = (currentIndex === 0);
+    document.getElementById('btn-next').disabled = (currentIndex === slides.length - 1);
+    document.getElementById('progress').innerText = `Slide ${currentIndex + 1} / ${slides.length}`;
+  }
+
+  // Changement de slide
+  function navigate(direction) {
+    currentIndex += direction;
+    displaySlide();
+  }
+
+  // Démarrage automatique
+  window.onload = fetchModule;
+</script>
+</body>
+</html>
