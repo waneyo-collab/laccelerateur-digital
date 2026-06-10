@@ -26,6 +26,14 @@
   .media-area img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
   .media-area iframe { width: 100%; height: 360px; border-radius: 8px; border: none; }
 
+  /* Styles pour la zone de Quiz interactif */
+  .quiz-container { margin-top: 20px; background: #F3F4F6; padding: 15px; border-radius: 8px; }
+  .quiz-option { display: block; background: white; padding: 10px 15px; margin-bottom: 8px; border: 1px solid #E5E7EB; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
+  .quiz-option:hover { border-color: #7C3AED; background: #F9F7FF; }
+  .quiz-option.correct { background: #D1FAE5; border-color: #10B981; color: #065F46; font-weight: 600; }
+  .quiz-option.wrong { background: #FEE2E2; border-color: #EF4444; color: #991B1B; }
+  .quiz-feedback { margin-top: 10px; font-weight: 600; font-size: 0.95rem; }
+
   .footer-controls { display: flex; justify-content: space-between; align-items: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid #E5E7EB; }
   .nav-btn { background: #7C3AED; color: white; border: none; padding: 10px 20px; border-radius: 8px; font-weight: 600; cursor: pointer; transition: background 0.2s; font-size: 0.95rem; }
   .nav-btn:hover:not(:disabled) { background: #5B21B6; }
@@ -45,7 +53,7 @@
   <div class="card" id="course-card">
     <div id="module-title" class="module-tag">Chargement...</div>
     <h2 id="slide-title">Initialisation...</h2>
-    <div id="slide-content" class="content-area">Chargement des slides locales...</div>
+    <div id="slide-content" class="content-area">Chargement du contenu...</div>
     <div id="slide-media" class="media-area"></div>
     
     <div class="footer-controls">
@@ -57,7 +65,6 @@
 </div>
 
 <script>
-  // Données injectées en local pour le test de rendu
   const slides = [
     {
       module_nom: 'Module 1 : Introduction au marketing digital',
@@ -67,20 +74,134 @@
     },
     {
       module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Slide 1 : Bienvenue !',
+      titre: 'Bienvenue !',
       contenu: 'Ce cours est destiné à toute personne désirant comprendre les mécanismes du monde digital en 2025.<br><br>Nos conseils pour un apprentissage réussi :<ul><li>Prenez le temps de bien intégrer chaque notion</li><li>Relisez plusieurs fois les slides</li><li>Prenez des notes</li><li>Si une notion n’est pas claire, n’hésitez pas à chercher sur le net</li><li>Visionnez plusieurs fois chaque cours afin de vous imprégner des sujets cités</li><li>Analyse ce que font les grandes marques et essayez de comprendre leur stratégie</li></ul>Vous êtes totalement autonomes, à vous donc de vous saisir des thèmes de ce cours afin d’en profiter pleinement dans le développement de votre marque ou dans votre projet de reconversion.<br><br>Bon cours !',
       image_url: null
     },
     {
       module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Slide 3 : Qu\'est-ce que le Marketing Digital ?',
+      titre: 'Vidéo de présentation',
+      contenu: 'Regardez cette vidéo d\'introduction pour mieux appréhender les concepts qui vont suivre.',
+      image_url: 'https://www.youtube.com/embed/dQw4w9WgXcQ'
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Qu\'est-ce que le Marketing Digital ?',
       contenu: 'Le marketing digital, ou marketing en ligne, est la promotion de produits, de services ou de marques via des canaux numériques tels que les moteurs de recherche, les réseaux sociaux, les emails et les sites web.<br><br>Ce type de marketing utilise des outils et des techniques spécifiques pour atteindre et engager des consommateurs en ligne. Il permet aux marques de cibler de manière précise leurs audiences grâce à l\'analyse de données et aux algorithmes.<br><br>Le marketing digital est essentiel dans le monde moderne, car il offre une portée globale, souvent appelé multicanale, tout en étant capable de personnaliser les messages envers chaque utilisateur.<br><br>Il est absolument impensable pour une marque, en 2025, de ne pas se rendre visible sur la toile tellement la concurrence est dense, mais se faire, il faudra nécessairement élaborer une stratégie digitale adéquate.',
       image_url: null
     },
     {
       module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Slide 4 : Principaux canaux du marketing digital',
+      titre: 'Principaux canaux du marketing digital',
       contenu: '<strong>Marketing des réseaux sociaux :</strong> Utiliser Facebook, Instagram, Twitter et LinkedIn pour interagir avec les clients et renforcer la notoriété.<br><br><strong>SEO (Optimisation) :</strong> Améliorer la visibilité organique d\'un site sur Google grâce aux mots-clés et à la structure.<br><br><strong>SEA (Publicité payante) :</strong> Placer des annonces payantes (Google AdWords) pour cibler les utilisateurs actifs.<br><br><strong>Email marketing :</strong> Envoi de messages directs et personnalisés (offres, newsletters) pour maintenir l\'engagement.<br><br><strong>Marketing de contenu :</strong> Création de blogs, vidéos et infographies de qualité pour éduquer et retenir l\'audience.<br><br><strong>Marketing d\'influence :</strong> Collaborer avec des influenceurs pour capitaliser sur leur confiance et leur authenticité.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Vue d\'ensemble des canaux',
+      contenu: 'Découvrez la cartographie globale des différents leviers du marketing digital à travers cette mindmap visuelle.',
+      image_url: 'https://raw.githubusercontent.com/waneyo-collab/laccelerateur-digital/main/og-image.jpg'
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Stratégies de contenu efficaces',
+      contenu: 'Pour capter votre audience, variez les formats de vos contenus :<ul><li>Créer des articles répondant aux questions fréquentes (FAQ).</li><li>Produire des vidéos explicatives pour rendre l\'information attrayante.</li><li>Utiliser des infographies pour présenter des données de manière visuelle.</li><li>Rédiger des études de cas pour prouver l\'efficacité de votre service.</li><li>Créer des guides pratiques étape par étape.</li><li>Animer des webinaires pour interagir en direct.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Les bénéfices du numérique',
+      contenu: 'Le marketing digital offre un retour sur investissement (ROI) nettement supérieur. Une étude indique qu\'une campagne digitale bien ciblée peut générer un ROI jusqu\'à 5 fois supérieur au traditionnel.<br><br>L\'email marketing est particulièrement rentable, avec un ROI moyen exceptionnel. À l\'inverse, se priver des canaux numériques expose à de lourdes pertes de compétitivité face aux nouveaux codes des consommateurs.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Email Marketing : bonnes pratiques',
+      contenu: 'Pour réussir vos campagnes d\'emailing :<ul><li>Segmenter votre liste pour envoyer des emails pertinents.</li><li>Personnaliser les messages pour chaque abonné.</li><li>Utiliser un objet attrayant pour augmenter le taux d\'ouverture.</li><li>Optimiser vos emails pour une lecture facile sur mobile.</li><li>Inclure un appel à l\'action (CTA) clair.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Réseaux Sociaux : utilisation et avantages',
+      contenu: 'Les plateformes sociales sont de puissants outils :<ul><li><strong>Création de communauté :</strong> Fédérer une audience et encourager la fidélité.</li><li><strong>Promotion de produits :</strong> Idéal pour les lancements interactifs.</li><li><strong>Support client en direct :</strong> Rassurer l\'audience via les messageries.</li><li><strong>Contenu viral :</strong> Le jackpot pour obtenir une visibilité mondiale rapide.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Introduction au SEO et SEM',
+      contenu: 'Le SEO (Search Engine Optimization) et le SEM (Search Engine Marketing) sont deux piliers complémentaires pour maximiser votre présence numérique.<br><br>Le SEO se concentre sur l\'optimisation organique et gratuite (mots-clés, structure) à long terme, tandis que le SEM englobe les stratégies payantes pour une visibilité instantanée.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Mesurer et analyser',
+      contenu: 'Mesurer le succès de vos campagnes est essentiel pour évaluer l\'efficacité de vos efforts. Vous devez surveiller vos indicateurs clés (KPI) tels que le taux de conversion, l\'engagement des utilisateurs et la portée globale via Google Analytics.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Outils essentiels',
+      contenu: 'Voici la boîte à outils indispensable du marketeur :<ul><li><strong>Google Analytics :</strong> Analyser les comportements des visiteurs.</li><li><strong>Hootsuite / Buffer :</strong> Programmer vos publications.</li><li><strong>Mailchimp :</strong> Créer des campagnes d\'emailing.</li><li><strong>Semrush :</strong> Analyse complète du SEO.</li><li><strong>Canva :</strong> Création intuitive de visuels pros.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Débuter avec Google Analytics',
+      contenu: 'Après avoir installé le code de suivi sur votre site web, Google Analytics vous livre des données cruciales : source des visiteurs, nombre de pages vues, temps passé sur le site. Des rapports essentiels pour prendre des décisions basées sur des preuves tangibles.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Synthèse (carte recto-verso)',
+      contenu: '<strong>Importance :</strong> Atteindre une audience globale, personnaliser et analyser.<br><strong>Surveillance :</strong> Utiliser des KPI (engagement, trafic, ROI).<br><strong>Ajustement :</strong> Modifier les campagnes dès que l\'écart se creuse.<br><strong>Régularité :</strong> Établir un calendrier de contenu stable.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Étude de cas - Contexte & Défi',
+      contenu: '<strong>Contexte :</strong> La PME « Com’Pro » rencontre des difficultés de communication interne dues à un manque de formation continue.<br><br><strong>Défi :</strong> Les employés disposent de peu de temps. Ils ont besoin de comprendre rapidement les outils collaboratifs via un apprentissage flexible.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Étude de cas - Solution mise en place',
+      contenu: 'Implémentation d\'un programme de <strong>microlearning</strong> (modules de moins de 5 minutes) :<ul><li>Vidéo de présentation des outils de 3 min.</li><li>Slides interactives sur les astuces de rédaction d\'emails.</li><li>Mini-quiz de validation de 5 questions.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Étude de cas - Résultats',
+      contenu: 'Les bénéfices constatés après le déploiement :<ul><li><strong>Engagement en hausse :</strong> Plus de 80% de complétion du parcours.</li><li><strong>Communication fluide :</strong> Moins d\'erreurs d\'incompréhension.</li><li><strong>Autonomie :</strong> Une flexibilité totale extrêmement appréciée.</li></ul>',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Étude de cas - Leçons tirées',
+      contenu: 'Ce qui a fait le succès du programme :<ul><li><strong>Clarté & Concision :</strong> Aller à l\'essentiel en quelques minutes.</li><li><strong>Interactivité :</strong> Les quiz maintiennent l\'apprenant actif.</li></ul>Cette étude prouve l\'efficacité du microlearning.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Conclusion : L’importance stratégique',
+      contenu: 'Le marketing digital est aujourd’hui un levier incontournable. Ses atouts (précision, instantanéité, ROI) permettent d’optimiser la croissance. Maîtriser ces outils permet de transformer chaque interaction en opportunité d’affaires.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Quiz de validation',
+      contenu: 'Il est temps de tester vos connaissances ! Répondez à la question ci-dessous pour valider ce premier module.',
+      quiz: {
+        question: "Quel canal offre généralement le meilleur Retour sur Investissement (ROI) direct et personnalisé ?",
+        options: ["Les Réseaux Sociaux", "L'Email Marketing", "La Publicité Affichage extérieure"],
+        correctIndex: 1,
+        feedback: "Bravo ! L'email marketing reste le levier le plus rentable et personnalisable en marketing digital."
+      },
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Fin du module',
+      contenu: 'Bien joué ! Vous venez de terminer le Module 1.<br><br>Comment avez-vous trouvé ce module ? Votre avis nous intéresse.<br><br>Prêt à passer à la suite ?',
       image_url: null
     }
   ];
@@ -105,9 +226,37 @@
       }
     }
 
+    // Gestion de l'affichage dynamique du Quiz
+    if (current.quiz) {
+      let quizHTML = `<div class="quiz-container">`;
+      quizHTML += `<p style="font-weight: 600; margin-bottom: 10px;">${current.quiz.question}</p>`;
+      current.quiz.options.forEach((option, idx) => {
+        quizHTML += `<div class="quiz-option" onclick="checkAnswer(this, ${idx}, ${current.quiz.correctIndex}, '${current.quiz.feedback.replace(/'/g, "\\'")}')">${option}</div>`;
+      });
+      quizHTML += `<div id="quiz-feedback-box" class="quiz-feedback"></div></div>`;
+      document.getElementById('slide-content').innerHTML += quizHTML;
+    }
+
     document.getElementById('btn-prev').disabled = (currentIndex === 0);
     document.getElementById('btn-next').disabled = (currentIndex === slides.length - 1);
     document.getElementById('progress').innerText = `Slide ${currentIndex + 1} / ${slides.length}`;
+  }
+
+  function checkAnswer(element, selectedIdx, correctIdx, feedbackText) {
+    // Désactiver les clics supplémentaires sur les options du quiz en cours
+    const options = element.parentElement.querySelectorAll('.quiz-option');
+    options.forEach(opt => opt.style.pointerEvents = 'none');
+
+    const feedbackBox = document.getElementById('quiz-feedback-box');
+    
+    if (selectedIdx === correctIdx) {
+      element.classList.add('correct');
+      feedbackBox.innerHTML = `<span style="color: #10B981;">🎉 ${feedbackText}</span>`;
+    } else {
+      element.classList.add('wrong');
+      options[correctIdx].classList.add('correct');
+      feedbackBox.innerHTML = `<span style="color: #EF4444;">❌ Mauvaise réponse. La bonne réponse s'affiche en vert.</span>`;
+    }
   }
 
   function navigate(direction) {
@@ -115,7 +264,6 @@
     displaySlide();
   }
 
-  // Lancement immédiat sans attendre de base de données
   window.onload = displaySlide;
 </script>
 </body>
