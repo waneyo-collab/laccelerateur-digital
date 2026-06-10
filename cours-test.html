@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>Module 1 : Les Fondamentaux du Marketing Digital</title>
+<title>Espace Apprenant — L'Accélérateur Digital</title>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
   body { background-color: #F9FAFB; color: #1F2937; display: flex; flex-direction: column; min-height: 100vh; }
@@ -28,7 +28,7 @@
   .media-area { margin-top: 25px; text-align: center; }
   .media-area img { max-width: 100%; border-radius: 8px; box-shadow: 0 2px 4px rgba(0,0,0,0.05); }
 
-  /* Quiz */
+  /* Quiz CSS */
   .quiz-box { margin-top: 20px; background: #F9FAFB; border: 1px solid #E5E7EB; padding: 20px; border-radius: 8px; }
   .quiz-q-title { font-weight: 600; margin-bottom: 12px; color: #111827; }
   .quiz-option { display: block; background: white; padding: 12px 15px; margin-bottom: 10px; border: 1px solid #E5E7EB; border-radius: 6px; cursor: pointer; transition: all 0.2s; }
@@ -49,14 +49,14 @@
 
 <header>
   <div class="logo">L'Accélérateur Digital</div>
-  <a href="https://app.waneyo-formation.com" class="back-btn">⬅ Quitter le cours</a>
+  <a href="/" class="back-btn">⬅ Retour au tableau de bord</a>
 </header>
 
 <div class="container">
   <div class="card" id="course-card">
     <div id="module-title" class="module-tag">Chargement...</div>
     <h2 id="slide-title">Initialisation...</h2>
-    <div id="slide-content" class="content-area">Chargement du module...</div>
+    <div id="slide-content" class="content-area">Sélection du module en cours...</div>
     <div id="slide-media" class="media-area"></div>
     
     <div class="footer-controls">
@@ -68,148 +68,176 @@
 </div>
 
 <script>
-  const slides = [
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Pourquoi le Digital est votre meilleur allié ?',
-      contenu: '<p>Bienvenue dans votre première étape. Aujourd’hui, le marketing digital n’est pas qu’une question de "posts sur les réseaux". C’est une science de la précision indispensable pour les entrepreneurs, porteurs de projets et profils en reconversion.</p><p><strong>Pourquoi est-ce une opportunité unique en Afrique ?</strong></p><ul><li><strong>Le coût d\'entrée dérisoire :</strong> Contrairement aux médias traditionnels, vous pouvez lancer des campagnes avec un budget de quelques euros par jour.</li><li><strong>L\'agilité :</strong> Vous testez une idée de produit ou service en 48 heures auprès d\'une cible locale ou internationale.</li><li><strong>La traçabilité :</strong> Vous savez à la pièce près ce que chaque franc ou euro investi génère.</li></ul>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le Changement de Paradigme Mobile-First',
-      contenu: '<p>En Afrique et dans les marchés émergents, le digital ne suit pas le parcours historique de l\'Occident. Le public a sauté l\'étape de l\'ordinateur de bureau : <strong>le marché est massivement Mobile-First</strong>.</p><p>Le marketing digital moderne consiste à apporter une solution immédiate à un problème précis au moment où l’utilisateur consulte son smartphone. Vos pages, vos visuels et vos tunnels de vente doivent être légers, percutants et pensés exclusivement pour les écrans mobiles.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Définir son "Persona" (Cœur de cible)',
-      contenu: '<p>L\'erreur commise par la majorité des débutants est de vouloir vendre "à tout le monde". En marketing, parler à tout le monde revient à ne parler à personne.</p><p>Le <strong>Persona</strong> est la représentation semi-fictive de votre client idéal. Pour les incubés ou créateurs de projets, le définir permet d\'ajuster son discours :</p><ul><li>Quels sont ses points de douleur majeurs au quotidien ?</li><li>Quelles solutions utilise-t-il actuellement ?</li><li>Quels canaux (WhatsApp, TikTok, Facebook) consulte-t-il pour s\'informer ?</li></ul>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Inbound vs Outbound Marketing',
-      contenu: '<p>Comprendre la différence entre ces deux philosophies est essentiel pour optimiser vos budgets :</p><p><strong>L\'Outbound Marketing (Chasse) :</strong> Consiste à pousser votre message vers une audience large et parfois non demandeuse (panneaux, SMS de masse, spots publicitaires). C’est coûteux et souvent intrusif.</p><p><strong>L\'Inbound Marketing (Aimant) :</strong> Consiste à attirer naturellement le client vers votre marque en produisant des contenus à forte valeur ajoutée (conseils pratiques, guides, vidéos explicatives). C’est la stratégie reine pour instaurer une confiance durable.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le Tunnel de Conversion (Funnel)',
-      contenu: '<p>Un utilisateur ne devient pas client en un claquement de doigts. Il suit un parcours psychologique appelé tunnel de conversion :</p><ul><li><strong>Notoriété :</strong> Il découvre que votre entreprise existe.</li><li><strong>Intérêt / Considération :</strong> Il évalue votre offre, compare vos prix et consulte vos conseils.</li><li><strong>Action / Conversion :</strong> Il passe sa première commande.</li><li><strong>Fidélisation :</strong> Il est satisfait et recommande vos services autour de lui.</li></ul>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le SEO : La visibilité naturelle à long terme',
-      contenu: '<p>Le SEO (Search Engine Optimization) regroupe les techniques permettant de positionner votre site dans les premiers résultats non payants de Google.</p><p>Pour un business en ligne ou un nomade digital, c\'est l\'assurance de recevoir des demandes de devis et des clients de manière totalement gratuite et automatique, 24 heures sur 24, grâce à un contenu optimisé sur les recherches de vos prospects.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le SEA : La puissance de l\'instantanéité',
-      contenu: '<p>À l\'inverse du SEO, le SEA (Search Engine Advertising) correspond à la publicité payante sur les moteurs de recherche (Google Ads).</p><p>Vous achetez des mots-clés aux enchères pour apparaître instantanément au-dessus des résultats naturels. Son avantage ? Vous ne payez que lorsque l\'internaute clique sur votre annonce (modèle du Coût Par Clic ou CPC).</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Les Réseaux Sociaux : Établir la confiance',
-      contenu: '<p>Les plateformes sociales ne doivent pas être utilisées comme de simples vitrines publicitaires agressives. Les utilisateurs s\'y connectent pour se divertir, s\'éduquer ou échanger.</p><p>Appliquez la règle des <strong>80/20</strong> : dédiez 80 % de vos publications à apporter de la valeur (astuces, coulisses, partages d\'expérience) et seulement 20 % à la promotion directe de vos offres commerciales.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le Pivot Incontournable : WhatsApp Business',
-      contenu: '<p>Sur le terrain africain et pour de nombreux entrepreneurs indépendants, l\'écosystème de vente se boucle sur <strong>WhatsApp Business</strong>.</p><p>Il ne s\'agit pas d\'une simple application de messagerie, mais d\'un véritable mini-CRM permettant de gérer des catalogues produits, de segmenter vos prospects à l\'aide d\'étiquettes (nouveau client, paiement en attente) et d\'automatiser des messages d\'accueil pour un service client instantané.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Comprendre le Coût d\'Acquisition Client (CAC)',
-      contenu: '<p>Pour piloter un projet ou une startup de manière rentable, vous devez maîtriser les indicateurs financiers. Le premier est le CAC.</p><p>Le <strong>CAC</strong> correspond à la somme totale des budgets marketing et commerciaux investis sur une période donnée, divisée par le nombre net de clients recrutés. Il vous indique précisément le prix de revient d\'un client unique.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'La Lifetime Value (LTV) : Clé de la pérennité',
-      contenu: '<p>La <strong>Lifetime Value</strong> représente la valeur de vie d’un client, c\'est-à-dire le chiffre d\'affaires total qu\'un acheteur va générer pour votre entreprise tout au long de sa relation avec vous.</p><p>La règle d\'or de la rentabilité est simple : votre LTV doit être largement supérieure à votre CAC. Un business sain cherche constamment à faire réacheter ses clients existants plutôt qu\'à courir exclusivement après de nouveaux prospects.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'L\'importance cruciale de la Landing Page',
-      contenu: '<p>Attirer des visiteurs via une publicité est une première étape, mais les convertir en clients en est une autre. C\'est le rôle de la <strong>Landing Page</strong> (page d\'atterrissage).</p><p>Cette page web unique est construite dans un seul but : inciter l\'utilisateur à accomplir une action claire (remplir un formulaire, télécharger un guide, acheter un produit). Elle doit être épurée, rapide à charger et comporter un appel à l\'action (CTA) percutant.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Le Retargeting : Convertir les hésitants',
-      contenu: '<p>Saviez-vous que près de 95 % des visiteurs quittent un site internet lors de leur première visite sans rien acheter ?</p><p>Le <strong>Retargeting</strong> (ou reciblage publicitaire) vous permet de diffuser des annonces spécifiques uniquement aux personnes ayant déjà manifesté un intérêt pour votre projet (visite de votre page, panier abandonné), afin de les ramener vers votre offre au moment opportun.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'La Boîte à Outils du Marketeur Agile',
-      contenu: '<p>Pour démarrer sans budget d\'agence, un entrepreneur ou un profil self-made doit s\'équiper des bons outils technologiques :</p><ul><li><strong>Canva :</strong> Création de visuels professionnels sans compétences en graphisme.</li><li><strong>CapCut / TikTok :</strong> Montage de vidéos courtes au format vertical.</li><li><strong>Brevo / Mailchimp :</strong> Gestion des campagnes emails et automatisations.</li><li><strong>Google Analytics :</strong> Mesure précise du trafic de votre site web.</li></ul>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Étude de Cas : L\'impact du Storytelling',
-      contenu: '<p>Prenons l\'exemple d\'une marque de mode éco-responsable lancée par un jeune créateur entre Abidjan et Paris.</p><p>Au lieu de publier de simples photos de vêtements, le fondateur a partagé en vidéo les coulisses de la sélection des tissus locaux et le quotidien des artisans. En humanisant la marque à travers le format vidéo et en redirigeant le trafic vers un lien WhatsApp, l\'entreprise a vendu sa première collection en 10 jours avec moins de 100 € de budget publicitaire.</p>',
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'Grand Examen de Fin de Module',
-      contenu: '<p>Félicitations pour avoir parcouru ces notions clés. Évaluons maintenant votre niveau d\'assimilation à travers ces 5 questions de validation réglementaires.</p>',
-      quiz_multi: [
+  // BANQUE DE DONNÉES DE TOUS LES MODULES DE LA PLATEFORME
+  const database = {
+    phase1: {
+      module1: [
         {
-          question: "1. Quelle est la particularité majeure des audiences numériques sur le continent africain ?",
-          options: ["Elles naviguent principalement sur ordinateur", "L'accès au réseau y est exclusivement filaire", "Le marché est massivement Mobile-First"],
-          correctIndex: 2,
-          feedback: "Correct ! Le mobile est l'écran central et unique de la majorité des utilisateurs."
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Pourquoi le Digital est votre meilleur allié ?',
+          contenu: '<p>Bienvenue dans votre première étape. Aujourd’hui, le marketing digital n’est pas qu’une question de "posts sur les réseaux". C’est une science de la précision indispensable pour les entrepreneurs, porteurs de projets et profils en reconversion.</p><p><strong>Pourquoi est-ce une opportunité unique sur les marchés africains et francophones ?</strong></p><ul><li><strong>Le coût d\'entrée dérisoire :</strong> Contrairement aux médias traditionnels, vous pouvez lancer des campagnes avec un budget de quelques euros ou quelques milliers de CFA par jour.</li><li><strong>L\'agilité :</strong> Vous testez une idée de produit ou service en 48 heures auprès d\'une cible locale ou internationale.</li><li><strong>La traçabilité :</strong> Vous savez à la pièce près ce que chaque unité monétaire investie génère.</li></ul>',
+          image_url: null
         },
         {
-          question: "2. Qu'est-ce que le CAC en marketing digital ?",
-          options: ["Le capital d'achat cumulé", "Le Coût d'Acquisition Client", "Le chiffre d'affaires courant"],
-          correctIndex: 1,
-          feedback: "Exact ! C'est l'indicateur financier qui mesure le coût moyen pour obtenir un client unique."
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le Changement de Paradigme Mobile-First',
+          contenu: '<p>En Afrique et dans les économies en forte croissance, le digital ne suit pas le parcours historique de l\'Occident. Le public a sauté l\'étape de l\'ordinateur de bureau : <strong>le marché est massivement Mobile-First</strong>.</p><p>Le marketing digital moderne consiste à apporter une solution immédiate à un problème précis au moment où l’utilisateur consulte son smartphone. Vos pages, vos visuels et vos tunnels de vente doivent être légers, percutants et pensés exclusivement pour les écrans mobiles et les connexions parfois instables.</p>',
+          image_url: null
         },
         {
-          question: "3. Quelle philosophie consiste à attirer le client en lui apportant de la valeur plutôt qu'en l'interrompant ?",
-          options: ["L'Inbound Marketing", "L'Outbound Marketing", "Le cold calling anonyme"],
-          correctIndex: 0,
-          feedback: "Parfait ! L'Inbound crée un écosystème d'attraction basé sur le contenu et la confiance."
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Définir son "Persona" (Cœur de cible)',
+          contenu: '<p>L\'erreur commise par la majorité des débutants est de vouloir vendre "à tout le monde". En marketing, parler à tout le monde revient à ne parler à personne.</p><p>Le <strong>Persona</strong> est la représentation semi-fictive de votre client idéal. Pour les incubés ou créateurs de projets, le définir permet d\'ajuster son discours :</p><ul><li>Quels sont ses points de douleur majeurs au quotidien ?</li><li>Quelles solutions utilise-t-il actuellement ?</li><li>Quels canaux (WhatsApp, TikTok, Facebook) consulte-t-il pour s\'informer ?</li></ul>',
+          image_url: null
         },
         {
-          question: "4. À quoi sert principalement une Landing Page ?",
-          options: ["À présenter l'historique de l'entreprise sur 10 pages", "À pousser l'utilisateur vers une action unique et précise (conversion)", "À lister l'ensemble des actualités mondiales"],
-          correctIndex: 1,
-          feedback: "Bien joué ! Sa force réside dans sa clarté et sa focalisation sur un objectif unique."
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Inbound vs Outbound Marketing',
+          contenu: '<p>Comprendre la différence entre ces deux philosophies est essentiel pour optimiser vos budgets :</p><p><strong>L\'Outbound Marketing (Chasse) :</strong> Consiste à pousser votre message vers une audience large et parfois non demandeuse (panneaux, SMS de masse, spots publicitaires). C’est coûteux et souvent intrusif.</p><p><strong>L\'Inbound Marketing (Aimant) :</strong> Consiste à attirer naturellement le client vers votre marque en produisant des contenus à forte valeur ajoutée (conseils pratiques, guides, vidéos explicatives). C’est la stratégie reine pour instaurer une confiance durable.</p>',
+          image_url: null
         },
         {
-          question: "5. Quelle application s'impose comme le mini-CRM indispensable pour le closing de ventes relationnelles en direct ?",
-          options: ["Twitter", "WhatsApp Business", "LinkedIn Premium"],
-          correctIndex: 1,
-          feedback: "Excellent ! WhatsApp Business centralise, humanise et accélère les conversions de ventes de proximité."
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le Tunnel de Conversion (Funnel)',
+          contenu: '<p>Un utilisateur ne devient pas client en un claquement de doigts. Il suit un parcours psychologique appelé tunnel de conversion :</p><ul><li><strong>Notoriété :</strong> Il découvre que votre entreprise existe.</li><li><strong>Intérêt / Considération :</strong> Il évalue votre offre, compare vos prix et consulte vos conseils.</li><li><strong>Action / Conversion :</strong> Il passe sa première commande.</li><li><strong>Fidélisation :</strong> Il est satisfait et recommande vos services autour de lui.</li></ul>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le SEO : La visibilité naturelle à long terme',
+          contenu: '<p>Le SEO (Search Engine Optimization) regroupe les techniques permettant de positionner votre site dans les premiers résultats non payants de Google.</p><p>Pour un business en ligne ou un nomade digital, c\'est l\'assurance de recevoir des demandes de devis et des clients de manière totalement gratuite et automatique, 24 heures sur 24, grâce à un contenu optimisé sur les recherches de vos prospects.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le SEA : La puissance de l\'instantanéité',
+          contenu: '<p>À l\'inverse du SEO, le SEA (Search Engine Advertising) correspond à la publicité payante sur les moteurs de recherche (Google Ads).</p><p>Vous achetez des mots-clés aux enchères pour apparaître instantanément au-dessus des résultats naturels. Son avantage ? Vous ne payez que lorsque l\'internaute clique sur votre annonce (modèle du Coût Par Clic ou CPC).</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Les Réseaux Sociaux : Établir la confiance',
+          contenu: '<p>Les plateformes sociales ne doivent pas être utilisées comme de simples vitrines publicitaires agressives. Les utilisateurs s\'y connectent pour se divertir, s\'éduquer ou échanger.</p><p>Appliquez la règle des <strong>80/20</strong> : dédiez 80 % de vos publications à apporter de la valeur (astuces, coulisses, partages d\'expérience) et seulement 20 % à la promotion directe de vos offres commerciales.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le Pivot Incontournable : WhatsApp Business',
+          contenu: '<p>Sur le terrain africain et pour de nombreux entrepreneurs indépendants, l\'écosystème de vente se boucle sur <strong>WhatsApp Business</strong>.</p><p>Il ne s\'agit pas d\'une simple application de messagerie, mais d\'un véritable mini-CRM permettant de gérer des catalogues produits, de segmenter vos prospects à l\'aide d\'étiquettes (nouveau client, paiement en attente) et d\'automatiser des messages d\'accueil pour un service client instantané.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Comprendre le Coût d\'Acquisition Client (CAC)',
+          contenu: '<p>Pour piloter un projet ou une startup de manière rentable, vous devez maîtriser les indicateurs financiers. Le premier est le CAC.</p><p>Le <strong>CAC</strong> correspond à la somme totale des budgets marketing et commerciaux investis sur une période donnée, divisée par le nombre net de clients recrutés. Il vous indique précisément le prix de revient d\'un client unique.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'La Lifetime Value (LTV) : Clé de la pérennité',
+          contenu: '<p>La <strong>Lifetime Value</strong> représente la valeur de vie d’un client, c\'est-to-dire le chiffre d\'affaires total qu\'un acheteur va générer pour votre entreprise tout au long de sa relation avec vous.</p><p>La règle d\'or de la rentabilité est simple : votre LTV doit être largement supérieure à votre CAC. Un business sain cherche constamment à faire réacheter ses clients existants plutôt qu\'à courir exclusivement après de nouveaux prospects.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'L\'importance cruciale de la Landing Page',
+          contenu: '<p>Attirer des visiteurs via une publicité est une première étape, mais les convertir en clients en est une autre. C\'est le rôle de la <strong>Landing Page</strong> (page d\'atterrissage).</p><p>Cette page web unique est construite dans un seul but : inciter l\'utilisateur à accomplir une action claire (remplir un formulaire, télécharger un guide, acheter un produit). Elle doit être épurée, rapide à charger et comporter un appel à l\'action (CTA) percutant.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Le Retargeting : Convertir les hésitants',
+          contenu: '<p>Saviez-vous que près de 95 % des visiteurs quittent un site internet lors de leur première visite sans rien acheter ?</p><p>Le <strong>Retargeting</strong> (ou reciblage publicitaire) vous permet de diffuser des annonces spécifiques uniquement aux personnes ayant déjà manifesté un intérêt pour votre projet (visite de votre page, panier abandonné), afin de les ramener vers votre offre au moment opportun.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'La Boîte à Outils du Marketeur Agile',
+          contenu: '<p>Pour démarrer sans budget d\'agence, un entrepreneur ou un profil self-made doit s\'équiper des bons outils technologiques :</p><ul><li><strong>Canva :</strong> Création de visuels professionnels sans compétences en graphisme.</li><li><strong>CapCut / TikTok :</strong> Montage de vidéos courtes au format vertical.</li><li><strong>Brevo / Mailchimp :</strong> Gestion des campagnes emails et automatisations.</li><li><strong>Google Analytics :</strong> Mesure précise du trafic de votre site web.</li></ul>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Étude de Cas : L\'impact du Storytelling',
+          contenu: '<p>Prenons l\'exemple d\'une marque de cosmétiques ou de services lancée par un jeune créateur entre Abidjan, Dakar et Paris.</p><p>Au lieu de publier de simples photos de produits, le fondateur a partagé en vidéo les coulisses de la sélection des matières premières et le quotidien des producteurs. En humanisant la marque à travers le format vidéo et en redirigeant le trafic vers un lien WhatsApp, l\'entreprise a vendu ses premières séries en quelques jours avec un budget publicitaire minime.</p>',
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'Grand Examen de Fin de Module',
+          contenu: '<p>Félicitations pour avoir parcouru ces notions clés. Évaluons maintenant votre niveau d\'assimilation à travers ces 5 questions de validation réglementaires.</p>',
+          quiz_multi: [
+            {
+              question: "1. Quelle est la particularité majeure des audiences numériques cibles sur le terrain francophone et africain ?",
+              options: ["Elles naviguent principalement sur ordinateur", "L'accès au réseau y est exclusivement filaire", "Le marché est massivement Mobile-First"],
+              correctIndex: 2,
+              feedback: "Correct ! Le mobile est l'écran central et unique de la majorité des utilisateurs."
+            },
+            {
+              question: "2. Qu'est-ce que le CAC en marketing digital ?",
+              options: ["Le capital d'achat cumulé", "Le Coût d'Acquisition Client", "Le chiffre d'affaires courant"],
+              correctIndex: 1,
+              feedback: "Exact ! C'est l'indicateur financier qui mesure le coût moyen pour obtenir un client unique."
+            },
+            {
+              question: "3. Quelle philosophie consiste à attirer le client en lui apportant de la valeur plutôt qu'en l'interrompant ?",
+              options: ["L'Inbound Marketing", "L'Outbound Marketing", "Le cold calling anonyme"],
+              correctIndex: 0,
+              feedback: "Parfait ! L'Inbound crée un écosystème d'attraction basé sur le contenu et la confiance."
+            },
+            {
+              question: "4. À quoi sert principalement une Landing Page ?",
+              options: ["À présenter l'historique de l'entreprise sur 10 pages", "À pousser l'utilisateur vers une action unique et précise (conversion)", "À lister l'ensemble des actualités mondiales"],
+              correctIndex: 1,
+              feedback: "Bien joué ! Sa force réside dans sa clarté et sa focalisation sur un objectif unique."
+            },
+            {
+              question: "5. Quelle application s'impose comme le mini-CRM indispensable pour le closing de ventes relationnelles en direct ?",
+              options: ["Twitter", "WhatsApp Business", "LinkedIn Premium"],
+              correctIndex: 1,
+              feedback: "Excellent ! WhatsApp Business centralise, humanise et accélère les conversions de ventes de proximité."
+            }
+          ],
+          image_url: null
+        },
+        {
+          module_nom: 'Phase 1 - Module 1 : Introduction au marketing digital',
+          titre: 'En route vers la suite !',
+          contenu: '<p><strong>Vous avez franchi la première marche avec succès !</strong></p><p>Les fondations de la stratégie et de la rentabilité digitale sont désormais acquises. C\'est ce bagage qui fait la différence entre un amateur qui perd son budget et un professionnel qui bâtit un actif pérenne.</p><p>Prenez une pause, notez vos idées, et nous nous retrouverons très bientôt pour le <strong>Module 2 : Définir une stratégie multicanale performante</strong>.</p>',
+          image_url: null
         }
       ],
-      image_url: null
-    },
-    {
-      module_nom: 'Module 1 : Introduction au marketing digital',
-      titre: 'En route vers la suite !',
-      contenu: '<p><strong>Vous avez franchi la première marche avec succès !</strong></p><p>Les fondations de la stratégie et de la rentabilité digitale sont désormais acquises. C\'est ce bagage qui fait la différence entre un amateur qui perd son budget et un professionnel qui bâtit un actif pérenne.</p><p>Prenez une pause, notez vos idées, et nous nous retrouverons très bientôt pour le <strong>Module 2 : Définir une stratégie multicanale performante</strong>.</p>',
-      image_url: null
+      module2: [
+        // LE CONTENU DU MODULE 2 SERA INJECTÉ ICI À NOTRE PROCHAINE ÉTAPE
+      ]
     }
   ];
 
+  // MOTEUR LOGIQUE DU LECTEUR UNIQUE
+  let slides = [];
   let currentIndex = 0;
   let currentQuizQuestionIndex = 0;
   let userScore = 0;
 
+  function initLecteur() {
+    const urlParams = new URLSearchParams(window.location.search);
+    const phase = urlParams.get('phase') || '1';
+    const module = urlParams.get('module') || '1';
+    
+    const phaseKey = 'phase' + phase;
+    const moduleKey = 'module' + module;
+
+    if (database[phaseKey] && database[phaseKey][moduleKey]) {
+      slides = database[phaseKey][moduleKey];
+    } else {
+      // Fallback par défaut si le module n'est pas encore écrit
+      slides = database.phase1.module1; 
+    }
+    displaySlide();
+  }
+
   function displaySlide() {
+    if (slides.length === 0) return;
     const current = slides[currentIndex];
     
     document.getElementById('module-title').innerText = current.module_nom;
@@ -219,18 +247,8 @@
     const mediaContainer = document.getElementById('slide-media');
     mediaContainer.innerHTML = ''; 
 
-    if (current.image_url) {
-      if (current.image_url.includes('youtube.com') || current.image_url.includes('youtube-nocookie.com')) {
-        mediaContainer.innerHTML = `<iframe src="${current.image_url}" allowfullscreen></iframe>`;
-      } else {
-        mediaContainer.innerHTML = `<img src="${current.image_url}" alt="Illustration">`;
-      }
-    }
-
     if (current.quiz_multi) {
-      if (currentQuizQuestionIndex === 0) {
-        userScore = 0;
-      }
+      if (currentQuizQuestionIndex === 0) userScore = 0;
       displayQuizQuestion();
     } else {
       currentQuizQuestionIndex = 0;
@@ -252,7 +270,7 @@
       if (userScore >= 4) {
         resultHTML += `<p style="color:#10B981; font-weight:600;">Félicitations, les notions clés sont parfaitement acquises ! Vous pouvez cliquer sur "Suivant" pour conclure.</p>`;
       } else {
-        resultHTML += `<p style="color:#F59E0B; font-weight:600;">Score intermédiaire. Nous vous conseillons de parcourir à nouveau les notions de CAC et de LTV pour sécuriser vos prochains lancements.</p>`;
+        resultHTML += `<p style="color:#F59E0B; font-weight:600;">Score intermédiaire. Nous vous conseillons de reparcourir ce module pour sécuriser vos acquis.</p>`;
       }
       resultHTML += `</div>`;
       
@@ -305,7 +323,7 @@
     displaySlide();
   }
 
-  window.onload = displaySlide;
+  window.onload = initLecteur;
 </script>
 </body>
 </html>
