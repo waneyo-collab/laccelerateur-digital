@@ -4,7 +4,6 @@
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>Test Page - L'Accélérateur Digital</title>
-<script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
 <style>
   * { margin: 0; padding: 0; box-sizing: border-box; font-family: 'Segoe UI', sans-serif; }
   body { background-color: #F9FAFB; color: #1F2937; display: flex; flex-direction: column; min-height: 100vh; }
@@ -45,8 +44,8 @@
 <div class="container">
   <div class="card" id="course-card">
     <div id="module-title" class="module-tag">Chargement...</div>
-    <h2 id="slide-title">Initialisation du module...</h2>
-    <div id="slide-content" class="content-area">Récupération des données depuis Supabase...</div>
+    <h2 id="slide-title">Initialisation...</h2>
+    <div id="slide-content" class="content-area">Chargement des slides locales...</div>
     <div id="slide-media" class="media-area"></div>
     
     <div class="footer-controls">
@@ -58,52 +57,35 @@
 </div>
 
 <script>
-  // On découpe l'adresse et le token pour contourner le scan de Netlify
-  const u1 = "https://dxmigietmlpwactlmpjf";
-  const u2 = ".supabase.co";
-  const endpoint = u1 + u2;
-  
-  const p1 = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.";
-  const p2 = "MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg";
-  const publicToken = p1 + p2;
-
-  // Initialisation double sécurité pour parer aux caprices du CDN en HTML statique
-  let supabaseInstance;
-  if (window.supabase && window.supabase.createClient) {
-    supabaseInstance = window.supabase.createClient(endpoint, publicToken);
-  } else if (window.supabase && window.supabase.default && window.supabase.default.createClient) {
-    supabaseInstance = window.supabase.default.createClient(endpoint, publicToken);
-  }
-
-  let slides = [];
-  let currentIndex = 0;
-
-  async function fetchModule() {
-    try {
-      if (!supabaseInstance) {
-        document.getElementById('slide-title').innerText = "Erreur d'initialisation du service.";
-        return;
-      }
-
-      const { data, error } = await supabaseInstance
-        .from('cours')
-        .select('*')
-        .eq('module_nom', 'Module 1 : Introduction au marketing digital')
-        .order('id', { ascending: true });
-
-      if (error) throw error;
-
-      slides = data;
-      if (slides.length > 0) {
-        displaySlide();
-      } else {
-        document.getElementById('slide-title').innerText = "Aucune slide trouvée dans ce module.";
-      }
-    } catch (err) {
-      console.error(err);
-      document.getElementById('slide-title').innerText = "Erreur lors de l'appel de données.";
+  // Données injectées en local pour le test de rendu
+  const slides = [
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Introduction',
+      contenu: 'Découvrez les fondamentaux du marketing digital, idéal pour les débutants ou ceux en reconversion professionnelle. Apprenez les concepts clés, les stratégies de base, et explorez les outils essentiels pour vous lancer dans ce domaine dynamique et en constante évolution.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Slide 1 : Bienvenue !',
+      contenu: 'Ce cours est destiné à toute personne désirant comprendre les mécanismes du monde digital en 2025.<br><br>Nos conseils pour un apprentissage réussi :<ul><li>Prenez le temps de bien intégrer chaque notion</li><li>Relisez plusieurs fois les slides</li><li>Prenez des notes</li><li>Si une notion n’est pas claire, n’hésitez pas à chercher sur le net</li><li>Visionnez plusieurs fois chaque cours afin de vous imprégner des sujets cités</li><li>Analyse ce que font les grandes marques et essayez de comprendre leur stratégie</li></ul>Vous êtes totalement autonomes, à vous donc de vous saisir des thèmes de ce cours afin d’en profiter pleinement dans le développement de votre marque ou dans votre projet de reconversion.<br><br>Bon cours !',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Slide 3 : Qu\'est-ce que le Marketing Digital ?',
+      contenu: 'Le marketing digital, ou marketing en ligne, est la promotion de produits, de services ou de marques via des canaux numériques tels que les moteurs de recherche, les réseaux sociaux, les emails et les sites web.<br><br>Ce type de marketing utilise des outils et des techniques spécifiques pour atteindre et engager des consommateurs en ligne. Il permet aux marques de cibler de manière précise leurs audiences grâce à l\'analyse de données et aux algorithmes.<br><br>Le marketing digital est essentiel dans le monde moderne, car il offre une portée globale, souvent appelé multicanale, tout en étant capable de personnaliser les messages envers chaque utilisateur.<br><br>Il est absolument impensable pour une marque, en 2025, de ne pas se rendre visible sur la toile tellement la concurrence est dense, mais se faire, il faudra nécessairement élaborer une stratégie digitale adéquate.',
+      image_url: null
+    },
+    {
+      module_nom: 'Module 1 : Introduction au marketing digital',
+      titre: 'Slide 4 : Principaux canaux du marketing digital',
+      contenu: '<strong>Marketing des réseaux sociaux :</strong> Utiliser Facebook, Instagram, Twitter et LinkedIn pour interagir avec les clients et renforcer la notoriété.<br><br><strong>SEO (Optimisation) :</strong> Améliorer la visibilité organique d\'un site sur Google grâce aux mots-clés et à la structure.<br><br><strong>SEA (Publicité payante) :</strong> Placer des annonces payantes (Google AdWords) pour cibler les utilisateurs actifs.<br><br><strong>Email marketing :</strong> Envoi de messages directs et personnalisés (offres, newsletters) pour maintenir l\'engagement.<br><br><strong>Marketing de contenu :</strong> Création de blogs, vidéos et infographies de qualité pour éduquer et retenir l\'audience.<br><br><strong>Marketing d\'influence :</strong> Collaborer avec des influenceurs pour capitaliser sur leur confiance et leur authenticité.',
+      image_url: null
     }
-  }
+  ];
+
+  let currentIndex = 0;
 
   function displaySlide() {
     const current = slides[currentIndex];
@@ -133,7 +115,8 @@
     displaySlide();
   }
 
-  window.onload = fetchModule;
+  // Lancement immédiat sans attendre de base de données
+  window.onload = displaySlide;
 </script>
 </body>
 </html>
