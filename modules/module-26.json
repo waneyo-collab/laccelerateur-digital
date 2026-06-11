@@ -1,0 +1,139 @@
+{
+  "id": 26,
+  "titre": "Automatiser son business avec l'IA",
+  "duree": "15 min",
+  "phase": 3,
+  "description": "L'intelligence artificielle n'est pas réservée aux grandes entreprises. C'est aujourd'hui l'avantage concurrentiel le plus accessible pour un entrepreneur solo en Afrique. Ce module t'apprend à automatiser les tâches répétitives et à produire plus — sans recruter.",
+  "sections": [
+    {
+      "type": "texte",
+      "titre": "L'IA : le premier employé que tu peux te permettre",
+      "contenu": "Avant l'IA, un entrepreneur solo avait deux options : tout faire lui-même (et s'épuiser) ou embaucher (et s'endetter).\n\nAujourd'hui, une troisième voie existe : déléguer à des outils intelligents les tâches répétitives, chronophages et techniques — pour moins de 30€ par mois, voire gratuitement.\n\nRédiger, répondre aux emails, créer des visuels, sous-titrer des vidéos, analyser des données, planifier du contenu, répondre aux questions fréquentes de tes clients — tout ça peut être partiellement ou totalement automatisé.\n\nCe n'est pas de la science-fiction. C'est ce que font déjà les entrepreneurs les plus efficaces de ta génération."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Ce que l'IA peut faire pour ton business aujourd'hui",
+      "contenu": "Voici les 6 domaines où l'IA apporte une valeur immédiate pour un entrepreneur digital :\n\n**1. Création de contenu** — rédiger des posts, des emails, des scripts vidéo, des descriptions de produits\n**2. Visuels et design** — générer des images, créer des templates, retoucher des photos\n**3. Service client** — répondre aux questions fréquentes via chatbot ou réponses pré-rédigées\n**4. Automatisation des tâches** — connecter tes outils entre eux pour déclencher des actions automatiques\n**5. Analyse et recherche** — synthétiser des informations, analyser des retours clients, faire de la veille concurrentielle\n**6. Formation et pédagogie** — générer des quiz, des résumés, des plans de cours, des exercices pratiques"
+    },
+    {
+      "type": "texte",
+      "titre": "Les outils IA essentiels par catégorie",
+      "contenu": "**Pour rédiger et créer du contenu :**\n- **Claude.ai** — rédaction longue, analyse, stratégie, reformulation. Excellent pour les contenus nécessitant de la nuance\n- **ChatGPT** — polyvalent, idéal pour les scripts, les idées de contenu, les emails\n- **Gemini (Google)** — intégré aux outils Google Workspace, pratique si tu travailles déjà sur Google Docs\n\n**Pour les visuels :**\n- **Canva AI** — génère des visuels, propose des designs, retouche les images directement dans Canva\n- **Adobe Firefly** — génération d'images professionnelles, intégré aux outils Adobe\n- **Remove.bg** — supprime l'arrière-plan d'une photo en 3 secondes, gratuitement\n\n**Pour la vidéo et l'audio :**\n- **Whisper (OpenAI)** — transcription audio en texte, 99 langues supportées dont le français et l'arabe\n- **Descript** — édition vidéo par le texte, sous-titrage automatique\n- **ElevenLabs** — voix de synthèse ultra-réalistes pour narrer tes formations"
+    },
+    {
+      "type": "exemple",
+      "titre": "Étude de cas — Élise, Port-Louis (Île Maurice)",
+      "contenu": "Élise a 28 ans. Community manager freelance à Port-Louis, elle gérait 4 clients simultanément : 4 calendriers éditoriaux, 4 rapports mensuels, des dizaines de posts par semaine.\n\nElle passait 60 % de son temps à des tâches répétitives : reformuler des idées en posts, répondre aux mêmes questions clients, créer des rapports depuis des données brutes.\n\nEn 3 semaines, elle a mis en place un système IA : Claude.ai pour la rédaction des posts, Canva AI pour les visuels, et un tableau de bord automatisé avec Make.com qui compile les statistiques de ses clients chaque lundi matin.\n\nRésultat : elle a accepté un 5ème client sans augmenter ses heures de travail. Son tarif mensuel par client a augmenté de 30 % — car elle livrait plus et mieux."
+    },
+    {
+      "type": "texte",
+      "titre": "Automatiser ses flux de travail avec Make.com",
+      "contenu": "Make.com (anciennement Integromat) est un outil d'automatisation visuel qui connecte tes applications entre elles — sans coder.\n\n**Exemples d'automatisations concrètes pour un entrepreneur digital :**\n\n- Un prospect remplit ton formulaire Typeform → il reçoit automatiquement ton guide PDF par email (Mailchimp) + son contact est ajouté dans ton CRM\n- Tu publies une vidéo YouTube → un post LinkedIn et un post Instagram sont créés et planifiés automatiquement\n- Un client achète ta formation sur Hotmart → il reçoit un email de bienvenue personnalisé + est ajouté à ton groupe WhatsApp\n- Chaque lundi matin → Make compile les stats de tes réseaux sociaux dans un Google Sheet\n\nPlan gratuit de Make : 1 000 opérations par mois. Suffisant pour démarrer et automatiser les tâches les plus fréquentes."
+    },
+    {
+      "type": "point_cle",
+      "titre": "La méthode pour identifier ce qu'il faut automatiser",
+      "contenu": "Tout ne mérite pas d'être automatisé. Utilise ce filtre en 3 questions :\n\n**Question 1 — Est-ce que je le fais plus de 3 fois par semaine ?**\nSi oui, c'est un candidat sérieux à l'automatisation.\n\n**Question 2 — Est-ce que cette tâche suit toujours le même schéma ?**\nSi la tâche est identique à chaque fois, une machine peut la faire.\n\n**Question 3 — Est-ce que ma valeur ajoutée humaine est indispensable ici ?**\nSi non, délègue à un outil. Garde ton énergie pour ce que seul toi peux faire : la relation client, la stratégie, la créativité originale.\n\nCommence par tes 3 tâches les plus répétitives. Automatise-les. Mesure le temps gagné. Puis recommence."
+    },
+    {
+      "type": "texte",
+      "titre": "Utiliser l'IA pour créer du contenu : le bon processus",
+      "contenu": "L'IA ne remplace pas ta voix — elle l'amplifie. Voici comment créer du contenu avec l'IA sans perdre ton authenticité :\n\n**Étape 1 — Donne du contexte précis.** L'IA produit de meilleurs résultats quand tu lui décris ton audience, ton ton, ton objectif et des exemples de ce que tu aimes.\n\n**Étape 2 — Génère, ne copie pas.** Utilise la proposition de l'IA comme un brouillon, pas comme un produit fini. Réécris avec tes mots, ajoute tes exemples, ton vécu.\n\n**Étape 3 — Garde ta signature.** Ce que l'IA ne peut pas reproduire : tes anecdotes personnelles, ton humour spécifique, ta vision unique du marché africain. C'est là que ta différenciation réside.\n\nRègle d'or : l'IA fait 60 % du travail de rédaction. Toi tu fais les 40 % qui font la différence."
+    },
+    {
+      "type": "attention",
+      "titre": "Ce qu'on ne délègue jamais à l'IA",
+      "contenu": "L'enthousiasme pour l'IA a une limite importante à ne pas franchir :\n\n**La relation client directe** — un prospect qui te pose une question sensible mérite une réponse humaine et personnelle. Un chatbot sur une question de prix ou de confiance peut détruire une vente en quelques secondes.\n\n**La stratégie** — l'IA exécute, elle n'anticipe pas. Les décisions sur ton positionnement, tes offres, ton marché cible restent les tiennes.\n\n**La création originale** — l'IA recombine ce qui existe. La véritable créativité, les idées disruptives, les angles inédits viennent de toi.\n\n**La gestion de crise** — un client mécontent, un problème de réputation, une situation délicate exigent ton jugement humain, pas un algorithme."
+    },
+    {
+      "type": "texte",
+      "titre": "L'IA pour ta formation en ligne",
+      "contenu": "Si tu as créé ou tu envisages de créer une formation (module 23), l'IA peut t'aider à chaque étape :\n\n**Avant la création :**\n- Analyser les questions fréquentes de ton audience pour identifier les lacunes à combler\n- Générer un plan de cours détaillé à partir d'un sujet général\n- Créer des personas d'apprenants pour mieux cibler ton contenu\n\n**Pendant la création :**\n- Rédiger les scripts de tes vidéos ou podcasts\n- Générer des exercices pratiques et des études de cas\n- Créer les questions de quiz et leurs explications\n\n**Après le lancement :**\n- Analyser les retours apprenants pour améliorer les modules faibles\n- Créer automatiquement des résumés de chaque module\n- Générer des FAQ enrichies à partir des vraies questions reçues"
+    },
+    {
+      "type": "exemple",
+      "titre": "La méthode Make.com en pratique — le cas Élise",
+      "contenu": "Élise a construit 3 automatisations clés avec Make.com :\n\n**Automatisation 1 — Rapport client automatique :** chaque lundi à 8h, Make collecte les stats de Meta Business Suite, les compile dans un Google Sheet et envoie un email récapitulatif formaté à chaque client. Ce qui lui prenait 3h de travail manuel se fait maintenant en zéro heure.\n\n**Automatisation 2 — Onboarding client :** quand un nouveau client signe son contrat via Docusign, Make crée automatiquement un dossier Google Drive partagé, envoie un email de bienvenue avec les accès, et crée une tâche dans son gestionnaire de projet.\n\n**Automatisation 3 — Veille concurrentielle :** Make surveille les mots-clés de ses clients sur les réseaux sociaux et lui envoie chaque matin un digest des mentions importantes.\n\nTemps total de mise en place : 4 heures. Temps économisé chaque semaine : 8 à 10 heures."
+    },
+    {
+      "type": "texte",
+      "titre": "Protéger sa crédibilité avec l'IA",
+      "contenu": "L'IA produit parfois des informations incorrectes — ce phénomène s'appelle l'hallucination. Elle peut inventer des statistiques, citer des études qui n'existent pas, ou donner des réponses confidentes mais fausses.\n\n**Les règles de sécurité indispensables :**\n\n- Vérifie toujours les chiffres et les sources que l'IA te fournit avant de les publier\n- Ne laisse jamais l'IA répondre seule à des questions médicales, juridiques ou financières\n- Relis et reformule systématiquement avant de publier — un texte purement IA se détecte et nuit à ton image\n- Indique quand tu utilises l'IA si ton audience est sensible à la transparence\n\nUtilisée avec discernement, l'IA est un multiplicateur de productivité. Utilisée sans regard critique, elle peut ruiner ta crédibilité en une publication."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Ton système d'automatisation minimal pour démarrer",
+      "contenu": "Si tu pars de zéro, commence par ce système en 4 outils :\n\n**1. Claude.ai ou ChatGPT (gratuit)** — pour rédiger tes posts, emails, scripts et réponses clients types\n\n**2. Canva AI (gratuit)** — pour générer tes visuels et accélérer la production graphique\n\n**3. Mailchimp + automatisation (gratuit jusqu'à 500 contacts)** — séquence de bienvenue automatique pour chaque nouvel abonné\n\n**4. Make.com (plan gratuit)** — connecter tes formulaires à ton email et ton Drive pour automatiser l'onboarding\n\nCes 4 outils, bien configurés en une journée, te font gagner 5 à 8 heures par semaine dès le premier mois — sans dépenser un centime."
+    },
+    {
+      "type": "texte",
+      "titre": "L'avantage compétitif de l'entrepreneur africain qui maîtrise l'IA",
+      "contenu": "En maîtrisant ces outils, tu n'es plus en compétition uniquement avec les entrepreneurs de ta ville ou de ton pays.\n\nTu peux produire autant de contenu qu'une agence de 5 personnes. Tu peux répondre à tes clients en plusieurs langues. Tu peux créer des formations professionnelles sans équipe de production.\n\nEt tu peux le faire depuis n'importe quelle connexion internet, avec un budget minimal.\n\nL'IA ne remplace pas l'entrepreneur africain qui pense, qui connaît son marché et qui construit des relations authentiques. Elle lui donne simplement les mêmes armes que n'importe quel concurrent basé à Paris, Toronto ou Dubai."
+    },
+    {
+      "type": "exemple",
+      "titre": "Retour sur Élise",
+      "contenu": "Élise travaille aujourd'hui avec 6 clients au lieu de 4 — pour le même nombre d'heures hebdomadaires. Elle a augmenté ses tarifs de 40 % en justifiant par la qualité et la rapidité de livraison.\n\nElle a aussi lancé un produit numérique : un guide « Automatise ta gestion des réseaux sociaux avec l'IA » vendu 37€ sur Gumroad. Elle l'a créé en un week-end — avec l'aide de Claude.ai pour la rédaction et Canva pour la mise en page.\n\nDepuis 3 mois, ce guide génère entre 200 et 400€ par mois en ventes passives — sans aucune intervention de sa part après la création.\n\nElle dit souvent : « L'IA ne travaille pas à ma place. Elle fait les tâches qui n'ont pas besoin de moi — pour que je puisse me concentrer sur ce qui ne peut venir que de moi. »"
+    },
+    {
+      "type": "point_cle",
+      "titre": "Sources",
+      "contenu": "- OpenAI (2024). *GPT-4 Technical Report* — capacités et limites des modèles de langage. openai.com\n- Anthropic (2024). *Claude model documentation*. anthropic.com\n- Make.com — documentation officielle et bibliothèque de templates d'automatisation. make.com\n- McKinsey Global Institute (2023). *The economic potential of generative AI*. mckinsey.com\n- UNESCO (2023). *Guidance for generative AI in education and research*. unesco.org"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Selon le filtre proposé dans ce module, quelle condition principale rend une tâche candidat à l'automatisation ?",
+          "options": [
+            "La tâche doit représenter plus de 50 % du chiffre d'affaires",
+            "La tâche doit être réalisée plus de 3 fois par semaine, suivre un schéma fixe et ne pas nécessiter ta valeur ajoutée humaine",
+            "La tâche doit pouvoir être sous-traitée à un assistant virtuel",
+            "La tâche doit être liée directement à la création de contenu"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Qu'est-ce qu'une 'hallucination' dans le contexte des outils IA ?",
+          "options": [
+            "Un bug visuel qui déforme les images générées par l'IA",
+            "Une réponse incorrecte présentée avec confiance par l'IA — statistiques inventées, sources fausses, faits erronés",
+            "Une fonctionnalité premium qui génère des contenus créatifs inattendus",
+            "Un mode de fonctionnement de l'IA réservé aux utilisateurs avancés"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Quelle est la règle d'or pour créer du contenu avec l'IA sans perdre son authenticité ?",
+          "options": [
+            "Laisser l'IA rédiger 100 % du contenu pour maximiser la productivité",
+            "Ne jamais utiliser l'IA pour les contenus publiés sur les réseaux sociaux",
+            "L'IA fait 60 % du travail de rédaction, tu fais les 40 % qui font la différence (anecdotes, voix, vécu personnel)",
+            "Toujours indiquer clairement que le contenu a été rédigé par une IA"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Parmi ces situations, laquelle ne doit jamais être déléguée à l'IA selon ce module ?",
+          "options": [
+            "La rédaction d'un premier brouillon d'email newsletter",
+            "La génération de visuels pour les réseaux sociaux",
+            "La gestion d'une crise avec un client mécontent",
+            "La création de questions de quiz pour une formation en ligne"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Quel avantage principal offre Make.com à un entrepreneur solo ?",
+          "options": [
+            "Remplacer complètement les outils de création de contenu comme Canva ou Claude",
+            "Connecter automatiquement ses applications entre elles pour déclencher des actions sans intervention humaine",
+            "Gérer les paiements en ligne depuis les pays non couverts par Stripe",
+            "Analyser les performances SEO de son site web"
+          ],
+          "reponse": 1
+        }
+      ]
+    }
+  ]
+}
