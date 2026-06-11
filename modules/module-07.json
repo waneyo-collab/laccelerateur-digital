@@ -1,0 +1,360 @@
+{
+  "id": 7,
+  "titre": "Gérer sa e-réputation",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Avant d'acheter, ton client potentiel te cherche sur Google, lit les avis, regarde tes réseaux sociaux. Ce qu'il trouve en 30 secondes décide s'il te contacte — ou s'il va chez le concurrent. Dans ce module, tu vas apprendre à construire, protéger et réparer ta réputation en ligne.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi la e-réputation ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>e-réputation</strong>, c'est l'image que ton business projette sur internet — que tu l'aies construite intentionnellement ou non.<br><br>Elle est formée par :<br><br>⭐ Les avis laissés par tes clients sur Google, Facebook, TripAdvisor<br>💬 Ce que les gens disent de toi sur les réseaux sociaux<br>🔍 Ce qui apparaît quand quelqu'un tape ton nom sur Google<br>📸 Tes photos, vidéos et contenus publiés en ligne<br>📰 Les articles, mentions et partages dans lesquels tu apparais<br><br>Ta e-réputation existe même si tu ne t'en occupes pas. La question, c'est : est-ce qu'elle te sert — ou est-ce qu'elle te coûte des clients ?"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta réputation en ligne, c'est ce que les gens pensent de toi quand tu n'es pas dans la pièce. Et aujourd'hui, cette pièce, c'est internet."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi la e-réputation est cruciale pour ton business",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les chiffres sont sans appel :<br><br>🔍 <strong>93 %</strong> des consommateurs lisent les avis en ligne avant d'acheter (source : BrightLocal, 2024)<br>⭐ <strong>88 %</strong> font autant confiance à un avis en ligne qu'à une recommandation d'un ami<br>❌ <strong>1 seul avis négatif</strong> sans réponse peut faire perdre jusqu'à <strong>22 %</strong> des clients potentiels<br>📉 <strong>3 avis négatifs</strong> sans réponse : jusqu'à <strong>59 %</strong> de clients en moins<br>⭐ Une note de <strong>4,5/5</strong> sur Google génère en moyenne 2 fois plus de contacts qu'une note de <strong>3,5/5</strong>"
+        },
+        {
+          "type": "attention",
+          "contenu": "En Afrique et au Maghreb, le bouche-à-oreille a toujours été roi. Aujourd'hui, le bouche-à-oreille digital — les avis, les partages, les témoignages — fonctionne de la même façon, mais à une échelle exponentiellement plus grande."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les composantes de ta e-réputation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ta e-réputation se construit sur 5 piliers que tu dois maîtriser :<br><br>🔍 <strong>Les résultats Google :</strong> ce qui apparaît en premier quand on tape ton nom ou ton business<br>⭐ <strong>Les avis clients :</strong> Google, Facebook, plateformes spécialisées<br>📱 <strong>Tes réseaux sociaux :</strong> la qualité, la cohérence et le ton de tes publications<br>🌐 <strong>Ton site web :</strong> son apparence, son contenu et sa mise à jour<br>💬 <strong>Les mentions externes :</strong> articles, partages, hashtags, conversations où tu es cité"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu ne contrôles pas tout ce qu'on dit de toi en ligne. Mais tu contrôles suffisamment pour influencer fortement la perception globale. C'est là que réside ta puissance."
+        }
+      ]
+    },
+
+    {
+      "titre": "Google — la première impression qui compte",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand quelqu'un entend parler de toi pour la première fois, il tape ton nom sur Google. Ce qu'il voit dans les 3 premières secondes forge son opinion.<br><br>Pour vérifier ta e-réputation Google, tape :<br>→ <strong>Ton prénom + ton nom</strong><br>→ <strong>Le nom de ton business</strong><br>→ <strong>Ton nom + avis</strong><br>→ <strong>Ton nom + Casablanca / Maroc (ou ta ville)</strong><br><br>Ce que tu veux voir en page 1 :<br>✅ Ton site web ou ta page LinkedIn<br>✅ Ton profil Google Business avec des avis positifs<br>✅ Des mentions dans des articles ou interviews<br>✅ Tes réseaux sociaux actifs et cohérents"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une avocate à Casablanca a découvert qu'en tapant son nom sur Google, la première chose visible était un ancien avis négatif d'un client insatisfait datant de 2019 — sans réponse de sa part. Elle a perdu des clients pendant 3 ans sans le savoir. En répondant à l'avis et en créant du contenu actif, elle a fait remonter son profil positif en 2 mois."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les avis clients — le nouveau bouche-à-oreille",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les avis clients sont aujourd'hui la forme la plus puissante de preuve sociale. Ils influencent directement les décisions d'achat — parfois plus que ton site web ou ta publicité.<br><br>Les plateformes d'avis les plus importantes selon ton activité :<br><br>📍 <strong>Google Business Profile</strong> → incontournable pour toute activité locale<br>📘 <strong>Facebook Recommandations</strong> → très utilisé en Afrique et au Maghreb<br>🍽️ <strong>TripAdvisor</strong> → restaurants, hôtels, tourisme<br>🛒 <strong>Jumia / Glovo / plateformes locales</strong> → e-commerce et livraison<br>💼 <strong>LinkedIn Recommandations</strong> → services B2B et freelances"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "N'attends pas que les avis arrivent seuls. Les clients satisfaits oublient de laisser un avis. Les clients mécontents, eux, n'oublient jamais. Tu dois proactivement demander des avis à tes clients heureux."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment collecter des avis positifs activement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Demander un avis n'est pas impoli — c'est professionnel. Voici les meilleures façons de le faire :<br><br>📱 <strong>Par WhatsApp :</strong> après une vente réussie, envoie un message simple : « Merci pour ta confiance ! Si tu es satisfait(e), un petit avis Google nous aiderait beaucoup. Voici le lien direct : [lien] »<br>📧 <strong>Par email :</strong> intègre la demande d'avis dans ton email de suivi post-achat<br>🏪 <strong>En personne :</strong> un QR code affiché dans ton local qui pointe vers ta page Google<br>📲 <strong>Sur les réseaux :</strong> partage des témoignages reçus et encourage les autres à partager le leur"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un coiffeur à Tanger a créé une carte de visite avec, au verso, un QR code et la mention : « Tu es satisfait ? Ton avis nous aide à grandir. » En 3 mois, il est passé de 8 avis Google à 67 — et sa note est montée de 3,8 à 4,7. Ses réservations ont augmenté de 40 %."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment répondre aux avis positifs",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs répondent aux avis négatifs mais ignorent les positifs. C'est une erreur. Répondre aux avis positifs montre :<br><br>❤️ Que tu apprécies tes clients et que tu les reconnais<br>👁️ Que tu es actif et à l'écoute — visible pour les futurs clients qui lisent<br>🔍 Que tu alimentes du contenu frais pour le référencement Google<br><br>La formule d'une bonne réponse positive :<br>1️⃣ Remercie sincèrement et personnellement (mentionne un détail de l'avis)<br>2️⃣ Répète un mot-clé de ton activité (bon pour le SEO local)<br>3️⃣ Invite à revenir ou à découvrir une autre offre"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Avis reçu : « Super service, livraison rapide et produits de qualité ! »<br>Mauvaise réponse : « Merci ! »<br>Bonne réponse : « Merci beaucoup pour ce retour, ça nous touche vraiment ! On met tout notre soin dans la qualité de nos produits et la rapidité de livraison à Casablanca. À très bientôt — et n'hésite pas à découvrir notre nouvelle collection ! »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment gérer les avis négatifs sans paniquer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un avis négatif ne détruit pas ta réputation — c'est ta réponse qui fait la différence. Voici la méthode en 5 étapes :<br><br>1️⃣ <strong>Attends 24h avant de répondre</strong> — ne réponds jamais sous le coup de l'émotion<br>2️⃣ <strong>Remercie</strong> pour le retour, même si tu n'es pas d'accord<br>3️⃣ <strong>Reconnais le problème</strong> sans te dévaluer excessivement<br>4️⃣ <strong>Explique ce que tu as fait ou vas faire</strong> pour corriger la situation<br>5️⃣ <strong>Invite à un contact privé</strong> pour régler le litige hors ligne"
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne réponds jamais de façon agressive, défensive ou sarcastique à un avis négatif. Les futurs clients qui lisent les avis jugent ta maturité professionnelle autant que le problème lui-même. Une réponse calme et constructive peut transformer un avis négatif en preuve de ton sérieux."
+        }
+      ]
+    },
+
+    {
+      "titre": "Google Business Profile — ton profil de réputation local",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Google Business Profile (anciennement Google My Business) est l'outil gratuit le plus sous-utilisé par les entrepreneurs africains. Il permet à ton business d'apparaître sur Google Maps et dans les résultats locaux.<br><br>Ce que tu dois compléter absolument :<br><br>📸 <strong>Photos récentes et de qualité</strong> de ton local, tes produits, ton équipe<br>⏰ <strong>Horaires exacts</strong> — mis à jour en cas de jours fériés<br>📝 <strong>Description complète</strong> avec tes mots-clés principaux<br>🔗 <strong>Lien vers ton site et tes réseaux</strong><br>❓ <strong>Section FAQ</strong> pour répondre aux questions fréquentes<br>📊 <strong>Publications régulières</strong> (nouveautés, offres, actualités)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un profil Google Business complet et actif reçoit en moyenne 7 fois plus de visites et 5 fois plus d'appels téléphoniques qu'un profil incomplet. C'est gratuit, ça prend 30 minutes à configurer — et c'est l'un des meilleurs investissements de temps que tu puisses faire."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les réseaux sociaux et la réputation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tes réseaux sociaux sont souvent la première chose que les gens visitent après Google. Ils forment une impression instantanée sur ton professionnalisme, ta cohérence et ta fiabilité.<br><br>Ce que tes réseaux disent de toi :<br><br>📅 <strong>La régularité :</strong> un compte inactif depuis 3 mois envoie le signal que le business est peut-être fermé<br>🎨 <strong>La cohérence visuelle :</strong> une charte graphique claire inspire confiance<br>💬 <strong>Le temps de réponse :</strong> répondre rapidement aux messages privés est un signal de fiabilité<br>🗣️ <strong>Le ton :</strong> professionnel, bienveillant, sans polémiques inutiles<br>📸 <strong>La qualité du contenu :</strong> photos floues ou mal cadrées nuisent à la perception de tes produits"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Sur Facebook et Instagram, tu peux activer l'insigne « Très réactif aux messages » si tu réponds à plus de 90 % des messages en moins d'une heure. Cet insigne est visible sur ton profil et rassure les clients potentiels."
+        }
+      ]
+    },
+
+    {
+      "titre": "La veille de réputation — surveiller ce qu'on dit de toi",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu ne peux pas gérer ce que tu ne surveilles pas. La <strong>veille de réputation</strong>, c'est le fait de monitorer régulièrement ce qui se dit sur toi et ton business en ligne.<br><br>Ce qu'il faut surveiller :<br><br>🔍 Les résultats Google sur ton nom et ton business<br>💬 Les mentions de ton nom sur les réseaux sociaux<br>⭐ Les nouveaux avis sur Google, Facebook, TripAdvisor<br>📲 Les commentaires sous tes publications<br>💬 Les groupes Facebook et WhatsApp de ta niche ou ta ville"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un propriétaire d'école de langues à Oran a découvert via une alerte Google qu'un groupe Facebook local discutait de sa méthode pédagogique — avec des avis mitigés. En rejoignant la discussion de façon constructive et en invitant les personnes à une session découverte gratuite, il a transformé la controverse en opportunité et recruté 8 nouveaux étudiants."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les outils de veille gratuits",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu n'as pas besoin d'outils coûteux pour surveiller ta réputation. Voici les options gratuites les plus efficaces :<br><br>🔔 <strong>Google Alertes (alerts.google.com) :</strong> reçois un email dès que ton nom ou ton business est mentionné sur le web — entièrement gratuit<br>🔍 <strong>Recherche manuelle Google :</strong> tape ton nom + « avis » une fois par semaine<br>📱 <strong>Notifications activées sur tous tes réseaux :</strong> ne rate aucun commentaire ou mention<br>📊 <strong>Meta Business Suite :</strong> tableau de bord qui centralise les messages et commentaires Facebook + Instagram<br>🐦 <strong>Recherche par hashtag :</strong> cherche ton nom ou ta marque sur Instagram et TikTok"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Crée dès aujourd'hui une alerte Google sur ton nom et le nom de ton business. C'est gratuit, ça prend 2 minutes, et tu seras informé en temps réel de chaque mention — qu'elle soit positive ou négative."
+        }
+      ]
+    },
+
+    {
+      "titre": "La crise de réputation — comment réagir",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une crise de réputation peut survenir à n'importe quel moment — une plainte virale, une erreur de communication, un malentendu qui prend de l'ampleur. Voici comment réagir :<br><br>⚡ <strong>Étape 1 — réagis vite :</strong> le silence est interprété comme de la culpabilité. Publie un premier message dans les 2h qui suit pour dire que tu as vu la situation et que tu travailles dessus.<br>🧘 <strong>Étape 2 — reste calme et factuel :</strong> jamais d'agressivité, jamais d'attaque personnelle<br>🔍 <strong>Étape 3 — vérifie les faits :</strong> ne te défends pas avant d'avoir compris ce qui s'est passé exactement<br>✅ <strong>Étape 4 — prends tes responsabilités</strong> si l'erreur vient de toi, sans te flageller<br>🛠️ <strong>Étape 5 — propose une solution concrète</strong> et communique sur les mesures prises"
+        },
+        {
+          "type": "attention",
+          "contenu": "En Afrique et au Maghreb, les communautés WhatsApp et Facebook amplifient très rapidement une mauvaise expérience. Une information négative peut faire le tour d'une ville en quelques heures. La rapidité et la sincérité de ta réponse sont tes meilleurs alliés."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le personal branding comme bouclier de réputation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un personal branding fort est la meilleure assurance contre les crises de réputation. Quand tu as construit une image solide, cohérente et humaine sur le long terme, une seule plainte ne peut pas détruire ce que des mois de confiance ont créé.<br><br>Comment ton personal branding protège ta réputation :<br><br>🤝 <strong>La confiance accumulée :</strong> tes abonnés te connaissent et te défendent spontanément<br>📣 <strong>La masse de contenu positif :</strong> noie les mentions négatives dans un volume de contenu de qualité<br>👤 <strong>L'humanisation :</strong> les gens pardonnent plus facilement aux personnes qu'ils connaissent qu'aux marques anonymes<br>💬 <strong>La communauté engagée :</strong> ta communauté peut devenir ta première ligne de défense"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Investir dans ton personal branding, c'est investir dans une réputation qui résiste aux turbulences. Commence avant d'en avoir besoin — pas après."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les témoignages clients — ta preuve sociale la plus puissante",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un témoignage client bien présenté vaut plus que dix publicités. Il dit à un prospect : <em>« Une personne comme toi a essayé et en est satisfaite. »</em><br><br>Les formats de témoignages les plus impactants :<br><br>🎥 <strong>La vidéo témoignage :</strong> 30 à 60 secondes, format naturel, filmée sur smartphone — très convaincant<br>📸 <strong>La photo avec citation :</strong> portrait du client + sa phrase clé sur fond aux couleurs de ta marque<br>💬 <strong>La capture d'écran WhatsApp :</strong> très populaire et très crédible en Afrique et au Maghreb<br>📊 <strong>Le résultat avant/après :</strong> chiffres concrets, progression visible<br>⭐ <strong>L'avis Google partagé :</strong> screenshot de l'avis publié sur tes réseaux"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une nutritionniste à Marrakech crée chaque mois un post Instagram avec la photo d'une cliente et un témoignage sur ses résultats. Ces posts obtiennent systématiquement 3 fois plus d'engagement que ses posts de conseils — et génèrent la majorité de ses nouvelles demandes de consultation."
+        }
+      ]
+    },
+
+    {
+      "titre": "La transparence comme stratégie de réputation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans un monde où l'information circule vite, la transparence n'est plus un luxe — c'est une nécessité stratégique.<br><br>Être transparent sur les réseaux sociaux, c'est :<br><br>🔓 Montrer les coulisses de ton business — la fabrication, les coulisses, les erreurs aussi<br>🙋 Partager tes apprentissages, même les échecs — les gens apprécient l'honnêteté<br>💬 Répondre aux questions difficiles publiquement plutôt que de les ignorer<br>📝 Communiquer proactivement en cas de retard, problème de stock ou changement<br><br>La transparence crée de l'empathie. L'empathie crée de la loyauté. La loyauté est la meilleure protection de ta réputation."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les consommateurs africains et maghrébins valorisent énormément l'authenticité et la proximité. Une marque qui montre ses vraies personnes, ses vraies histoires et ses vraies valeurs crée une connexion bien plus forte qu'une marque froide et parfaite."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Decathlon Maroc et la réputation par le service",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Decathlon est l'une des marques les mieux notées sur Google au Maroc, avec une note moyenne de 4,3 à 4,6/5 dans ses différents points de vente — un score exceptionnel pour une grande enseigne.<br><br><strong>Les raisons de cette e-réputation solide :</strong><br><br>💬 <strong>Réponse systématique aux avis :</strong> Decathlon répond à presque tous les avis Google — positifs et négatifs — dans les 48h<br>🛒 <strong>Politique de retour claire et généreuse :</strong> réduit drastiquement les mauvaises expériences<br>📱 <strong>Présence active sur les réseaux :</strong> contenu local, équipes en magasin identifiées par prénom<br>🤝 <strong>Proximité :</strong> les équipes utilisent le tutoiement et répondent en darija sur les réseaux marocains<br>⭐ <strong>Incitation aux avis :</strong> QR codes en caisse qui redirigent vers Google"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Quand Decathlon Maroc reçoit un avis négatif sur Google, la réponse arrive généralement en moins de 24h, avec le prénom du responsable et une invitation à contacter le magasin directement. Ce niveau de réactivité transforme une mauvaise expérience isolée en démonstration publique de professionnalisme. Même les clients qui lisent cet échange sans avoir eu de problème repartent avec une image positive."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Rachid, restaurateur à Agadir",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Rachid gère un restaurant familial à Agadir depuis 8 ans. En 2023, un groupe de touristes mécontents publie un avis Google cinglant avec 1 étoile : « Service lent, poisson pas frais, personnel impoli. » L'avis est accompagné de photos. En quelques jours, la note du restaurant passe de 4,2 à 3,6. Les réservations baissent de 30 %."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Comment Rachid a géré la crise et rebondi :</strong><br><br>📝 <strong>Réponse à l'avis négatif (24h après) :</strong> il remercie pour le retour, reconnaît que cette soirée n'était pas à la hauteur de ses standards habituels (problème de fournisseur ce soir-là) et invite le groupe à revenir en offrant un dîner<br>📸 <strong>Campagne de témoignages :</strong> il contacte ses 50 clients les plus fidèles et leur demande de partager leur expérience sur Google — 31 répondent positivement<br>🎥 <strong>Vidéo « les coulisses » :</strong> il poste une vidéo Facebook montrant son arrivée au marché chaque matin à 6h pour choisir le poisson frais<br>📱 <strong>Présence WhatsApp :</strong> il crée un groupe « Amis du restaurant » pour ses habitués, avec menu du jour et offres spéciales<br><br><strong>Résultats 3 mois plus tard :</strong><br>→ Note Google remontée à 4,4/5 avec 89 nouveaux avis<br>→ Réservations revenues au niveau d'avant + 15 %<br>→ Sa vidéo « marché du matin » a été partagée 340 fois sur Facebook"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Rachid n'a pas effacé l'avis négatif — il ne pouvait pas. Mais il l'a noyé dans un flot de contenu positif et de preuves de son sérieux. La crise est devenue une opportunité de montrer qui il était vraiment."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs de réputation à éviter absolument",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs sont commises quotidiennement par des entrepreneurs qui gèrent mal leur réputation en ligne :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> ignorer les avis négatifs en espérant qu'ils disparaissent<br>❌ <strong>Erreur 2 :</strong> répondre agressivement ou de façon défensive à une plainte publique<br>❌ <strong>Erreur 3 :</strong> acheter de faux avis — Google les détecte et pénalise ton profil<br>❌ <strong>Erreur 4 :</strong> ne jamais demander d'avis à ses clients satisfaits<br>❌ <strong>Erreur 5 :</strong> avoir un profil Google Business incomplet ou non mis à jour<br>❌ <strong>Erreur 6 :</strong> partager des avis politiques ou controversés sur ton compte professionnel<br>❌ <strong>Erreur 7 :</strong> laisser des photos ou contenus de mauvaise qualité représenter ton business"
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et concepts de ce module s'appuient sur :<br><br>📖 <strong>BrightLocal – Local Consumer Review Survey 2024</strong> — comportement des consommateurs face aux avis<br>📖 <strong>PowerReviews – The Power of Reviews 2024</strong> — impact des avis sur les décisions d'achat<br>📖 <strong>Google Business Profile Help Center 2024</strong> — bonnes pratiques et optimisation<br>📖 <strong>Reputation.com – State of Online Reputation Management 2023</strong><br>📖 <strong>We Are Social – Digital 2024 (Maroc et Afrique)</strong> — comportement des consommateurs en ligne<br>📖 <strong>Sprout Social – The Social Media Consumer Report 2024</strong> — temps de réponse et confiance"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta e-réputation se construit sur du long terme mais peut se détériorer en quelques heures. Commence à la gérer proactivement dès aujourd'hui — sans attendre qu'un problème te force à le faire."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Selon les études, quel est l'impact d'un seul avis négatif sans réponse sur le nombre de clients potentiels perdus ?",
+      "options": [
+        "Aucun impact significatif si la note globale reste positive",
+        "Environ 5 % de clients potentiels en moins",
+        "Jusqu'à 22 % de clients potentiels en moins",
+        "L'impact dépend uniquement du secteur d'activité"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Quelle est la première chose à faire en cas de crise de réputation sur les réseaux sociaux ?",
+      "options": [
+        "Supprimer tous les commentaires négatifs immédiatement",
+        "Contacter un avocat avant de répondre",
+        "Publier rapidement un premier message pour montrer que tu as vu la situation et que tu travailles dessus, sans attendre d'avoir toutes les réponses",
+        "Désactiver son compte le temps que la polémique se calme"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quel est l'outil gratuit le plus efficace pour surveiller en temps réel ce qu'on dit de toi sur internet ?",
+      "options": [
+        "Un abonnement à un logiciel de veille professionnel à 200 € par mois",
+        "Google Alertes — qui envoie un email automatique dès que ton nom est mentionné sur le web",
+        "Vérifier manuellement Facebook une fois par semaine",
+        "Surveiller uniquement les commentaires sous ses publications"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas de Rachid, quelle action a eu le plus grand impact pour redresser sa réputation après la crise ?",
+      "options": [
+        "Il a payé pour supprimer l'avis négatif",
+        "Il a combiné une réponse professionnelle à l'avis, une demande de témoignages à ses clients fidèles et du contenu authentique (vidéo marché du matin)",
+        "Il a baissé ses prix pour attirer de nouveaux clients",
+        "Il a changé le nom de son restaurant pour repartir de zéro"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Pourquoi répondre aux avis positifs est-il aussi important que répondre aux avis négatifs ?",
+      "options": [
+        "Ce n'est pas important — seuls les avis négatifs nécessitent une réponse",
+        "Parce que répondre aux avis positifs montre que tu es actif, que tu apprécies tes clients, et génère du contenu frais utile pour le référencement Google local",
+        "Parce que les plateformes pénalisent les profils qui ne répondent qu'aux avis négatifs",
+        "Uniquement pour obtenir l'insigne « Très réactif » sur Facebook"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
