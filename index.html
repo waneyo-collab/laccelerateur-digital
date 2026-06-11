@@ -1089,7 +1089,7 @@ async function generateChecklistPDF() {
     doc.setFont('helvetica','bold');
     doc.setFontSize(8);
     doc.setTextColor(...white);
-    doc.text('Checklist Stratégie Digitale · L'Accélérateur Digital', 19, 10);
+    doc.text("Checklist Stratégie Digitale · L'Accélérateur Digital", 19, 10);
     doc.setTextColor(...teal);
     doc.text(`Page ${p+2}`, W-M, 10, {align:'right'});
 
@@ -1176,7 +1176,7 @@ async function generateChecklistPDF() {
     doc.setFont('helvetica','normal');
     doc.setFontSize(7.5);
     doc.setTextColor(...grey);
-    doc.text('© 2026 Waneyo Formation · app.waneyo-formation.com · Réservé aux abonnés de L'Accélérateur Digital', W/2, 292, {align:'center'});
+    doc.text("© 2026 Waneyo Formation · app.waneyo-formation.com · Réservé aux abonnés de L'Accélérateur Digital", W/2, 292, {align:'center'});
   }
 
   doc.save('checklist-strategie-digitale-waneyo.pdf');
@@ -1207,11 +1207,11 @@ async function generateIdeesPDF() {
   doc.setFont('helvetica','bold');
   doc.setFontSize(11);
   doc.setTextColor(...accent);
-  doc.text('WANEYO FORMATION · L'ACCÉLÉRATEUR DIGITAL', W/2, 82, {align:'center'});
+  doc.text("WANEYO FORMATION · L'ACCÉLÉRATEUR DIGITAL", W/2, 82, {align:'center'});
 
   doc.setFontSize(32);
   doc.setTextColor(...white);
-  doc.text('40 Idées d'activités', W/2, 105, {align:'center'});
+  doc.text("40 Idées d'activités", W/2, 105, {align:'center'});
   doc.text('rentables en Afrique', W/2, 120, {align:'center'});
 
   doc.setFillColor(...purple);
