@@ -1,0 +1,374 @@
+{
+  "id": 8,
+  "titre": "La cybersécurité",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Un compte piraté, une fuite de données clients, un site mis hors ligne — des situations qui arrivent chaque jour à des entrepreneurs qui pensaient que ça n'arrivait qu'aux autres. Dans ce module, tu vas apprendre à protéger ton business digital, tes outils et les données de tes clients — sans être expert en informatique.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi la cybersécurité pour un entrepreneur ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La cybersécurité, c'est l'ensemble des pratiques qui permettent de <strong>protéger tes outils digitaux, tes données et celles de tes clients</strong> contre les accès non autorisés, les piratages et les pertes accidentelles.<br><br>Pour un entrepreneur, ça couvre concrètement :<br><br>🔐 La sécurité de tes comptes (réseaux sociaux, email, site web)<br>💾 La protection des données de tes clients (noms, emails, paiements)<br>🌐 La sécurité de ton site web<br>📱 La sécurité de tes appareils (téléphone, ordinateur)<br>💰 La protection de tes paiements en ligne"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La cybersécurité n'est pas un sujet réservé aux grandes entreprises ou aux geeks. C'est une responsabilité de base — comme fermer ton local à clé chaque soir."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi les petits business sont aussi des cibles",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs pensent : <em>« Mon business est trop petit pour intéresser des hackers. »</em> C'est une idée reçue dangereuse.<br><br>En réalité :<br><br>🎯 <strong>43 %</strong> des cyberattaques ciblent les petites entreprises (source : Verizon DBIR 2024)<br>😮 Les petits business sont souvent <strong>plus vulnérables</strong> car ils investissent moins dans la sécurité<br>🤖 La plupart des attaques sont <strong>automatisées</strong> — les robots ne font pas de différence entre une grande et une petite marque<br>💸 En Afrique, la cybercriminalité a causé des pertes estimées à <strong>4 milliards $</strong> en 2023 (source : Interpol Africa, 2024)"
+        },
+        {
+          "type": "attention",
+          "contenu": "Ce n'est pas une question de si tu vas être ciblé — c'est une question de quand. Les entrepreneurs qui ne font rien auront à gérer une crise. Ceux qui se préparent pourront continuer à travailler normalement."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 menaces les plus courantes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les attaques les plus fréquentes contre les entrepreneurs digitaux :<br><br>🎣 <strong>Le phishing :</strong> faux emails ou faux SMS qui imitent des plateformes connues (Facebook, PayPal, ta banque) pour voler tes identifiants<br>🔒 <strong>Le piratage de compte :</strong> accès non autorisé à tes réseaux sociaux, email ou site web<br>🦠 <strong>Les malwares :</strong> logiciels malveillants qui s'installent sur ton appareil à ton insu<br>💳 <strong>La fraude aux paiements :</strong> transactions frauduleuses sur ta boutique ou avec ta carte<br>📧 <strong>Le spam et les faux comptes :</strong> usurpation de ton identité pour escroquer tes clients"
+        },
+        {
+          "type": "exemple",
+          "contenu": "En Afrique de l'Ouest, une arnaque très répandue cible les entrepreneurs Instagram : quelqu'un se fait passer pour un « partenaire commercial » ou un « influenceur », te demande ton email et te dit d'accepter une invitation. C'est un piège pour pirater ton compte. Si tu ne l'as pas sollicité, ne clique sur rien."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les mots de passe — la première ligne de défense",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le mot de passe reste la porte d'entrée de tous tes comptes. Et pourtant, les mots de passe les plus utilisés en Afrique en 2024 sont encore « 123456 », « azerty » et « password » — (source : NordPass, 2024).<br><br>Les règles d'un bon mot de passe :<br><br>✅ <strong>Minimum 12 caractères</strong><br>✅ <strong>Mélange</strong> de majuscules, minuscules, chiffres et symboles<br>✅ <strong>Unique</strong> pour chaque compte — jamais le même partout<br>✅ <strong>Pas d'informations personnelles</strong> (date de naissance, nom, ville)<br>✅ <strong>Changé tous les 6 mois</strong> pour les comptes sensibles"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Utilise un gestionnaire de mots de passe comme Bitwarden (gratuit) ou 1Password. Il génère et retient pour toi des mots de passe complexes — tu n'as besoin d'en mémoriser qu'un seul. C'est l'un des meilleurs investissements de 5 minutes que tu puisses faire."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'authentification à deux facteurs — ton bouclier principal",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'<strong>authentification à deux facteurs (2FA)</strong> ajoute une couche de sécurité supplémentaire : même si quelqu'un connaît ton mot de passe, il ne peut pas accéder à ton compte sans un deuxième code qui t'est envoyé en temps réel.<br><br>Comment ça fonctionne :<br>1️⃣ Tu entres ton mot de passe<br>2️⃣ Une application (Google Authenticator, Authy) ou un SMS te génère un code temporaire de 6 chiffres<br>3️⃣ Tu entres le code — et seulement toi peux le faire<br><br>✅ Active le 2FA sur : Instagram, Facebook, Gmail, WhatsApp Business, ton hébergeur de site, Stripe, PayPal"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Activer le 2FA réduit de 99,9 % le risque de piratage de compte selon Microsoft (2023). C'est gratuit, ça prend 3 minutes par compte, et c'est le geste de sécurité le plus important que tu puisses faire aujourd'hui."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sécuriser ses comptes réseaux sociaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tes comptes Instagram, Facebook, TikTok et LinkedIn représentent des années de travail et des milliers d'abonnés. Les perdre du jour au lendemain est une réalité pour des centaines d'entrepreneurs chaque semaine.<br><br>Les actions essentielles pour chaque réseau :<br><br>🔐 Active le 2FA sur chaque compte<br>📧 Utilise une adresse email <strong>dédiée</strong> à tes comptes professionnels — différente de ton email personnel<br>📱 Vérifie régulièrement les <strong>appareils connectés</strong> à tes comptes et supprime ceux que tu ne reconnais pas<br>🔗 Ne clique jamais sur un lien de « connexion » reçu par DM ou email sans vérifier l'expéditeur<br>💼 Sur Meta, crée un <strong>compte Business Manager</strong> pour gérer ta page avec des permissions séparées"
+        },
+        {
+          "type": "attention",
+          "contenu": "Si tu reçois un message sur Instagram ou WhatsApp qui te demande ton code de vérification SMS — même si ça vient d'un contact connu — ne le donne jamais. C'est la technique la plus utilisée pour pirater des comptes en Afrique. Ton opérateur et les plateformes ne demandent jamais ce code par message."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sécuriser son site web",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ton site web peut être ciblé pour y injecter du contenu malveillant, voler des données de tes clients ou le mettre hors ligne.<br><br>Les mesures de base à appliquer :<br><br>🔒 <strong>Certificat SSL (HTTPS) :</strong> obligatoire — ton hébergeur te l'offre souvent gratuitement<br>🔄 <strong>Mises à jour régulières :</strong> WordPress, plugins, thèmes — chaque mise à jour corrige des failles<br>🔑 <strong>Identifiants d'administration forts :</strong> ne jamais garder le nom d'utilisateur « admin »<br>🔌 <strong>Plugins de sécurité :</strong> Wordfence ou iThemes Security pour WordPress (gratuits)<br>💾 <strong>Sauvegardes automatiques :</strong> quotidiennes ou hebdomadaires selon ton activité<br>🚫 <strong>Limiter les tentatives de connexion :</strong> bloquer les IP après X tentatives échouées"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un consultant en formation à Dakar a vu son site WordPress piraté parce qu'il n'avait pas mis à jour un plugin depuis 18 mois. Les hackers ont injecté du contenu publicitaire sur ses pages. Google a blacklisté son site — il a perdu tout son trafic SEO en 48h. La restauration a pris 2 semaines. La prévention aurait pris 10 minutes."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le certificat SSL — la confiance visible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>certificat SSL</strong> est ce qui transforme l'adresse de ton site de « http:// » en « <strong>https://</strong> » — avec le cadenas vert dans la barre du navigateur.<br><br>Pourquoi c'est indispensable :<br><br>🔐 <strong>Chiffrement des données :</strong> les informations échangées entre ton site et tes visiteurs sont protégées<br>🤝 <strong>Confiance :</strong> sans HTTPS, les navigateurs affichent un avertissement « site non sécurisé » — 85 % des visiteurs quittent immédiatement<br>🔍 <strong>SEO :</strong> Google pénalise les sites sans SSL dans son classement<br>💳 <strong>Paiements :</strong> obligatoire pour accepter des paiements en ligne"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La plupart des hébergeurs modernes (OVH, Hostinger, o2switch) offrent le SSL gratuit via Let's Encrypt. Si ton site est encore en « http:// », contacte ton hébergeur aujourd'hui — c'est en général activable en un clic."
+        }
+      ]
+    },
+
+    {
+      "titre": "Protéger les données de tes clients",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dès que tu collectes des noms, emails, numéros de téléphone ou données de paiement, tu deviens responsable de leur protection. Ce n'est pas qu'une obligation légale — c'est une question de confiance.<br><br>Les bonnes pratiques :<br><br>📋 <strong>Ne collecte que ce dont tu as besoin :</strong> pas de données superflues<br>🔒 <strong>Stocke les données dans des outils sécurisés :</strong> pas dans des fichiers Excel non protégés<br>🚫 <strong>Ne vends jamais les données de tes clients</strong> à des tiers<br>⏳ <strong>Supprime les données inactives</strong> après une période définie<br>🔐 <strong>Protège l'accès à tes outils CRM et email</strong> avec des mots de passe forts et le 2FA<br>📝 <strong>Ajoute une politique de confidentialité</strong> sur ton site web"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tes clients te confient leurs données personnelles. Les protéger n'est pas une contrainte — c'est une marque de respect qui renforce leur confiance et ta réputation."
+        }
+      ]
+    },
+
+    {
+      "titre": "La loi 09-08 au Maroc et la protection des données",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Au Maroc, la protection des données personnelles est encadrée par la <strong>loi 09-08</strong>, relative à la protection des personnes physiques à l'égard du traitement des données à caractère personnel — gérée par la <strong>CNDP</strong> (Commission Nationale de contrôle de la protection des Données à caractère Personnel).<br><br>Ce que tu dois savoir en tant qu'entrepreneur :<br><br>📋 <strong>Déclaration obligatoire :</strong> si tu collectes des données clients, tu dois déclarer ton traitement à la CNDP<br>✅ <strong>Consentement explicite :</strong> tes clients doivent accepter explicitement que tu collectes leurs données<br>🔗 <strong>Droit d'accès et de suppression :</strong> tout client peut demander à accéder à ses données ou à les supprimer<br>🌍 <strong>RGPD européen :</strong> s'applique aussi si tu as des clients basés en Europe"
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne pas respecter ces obligations peut entraîner des sanctions. Pour les entrepreneurs en Algérie et en Tunisie, des lois similaires existent respectivement via la ANPDP et l'INPDP. Consulte le site officiel de l'autorité de protection des données de ton pays pour connaître tes obligations exactes."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les sauvegardes — ne jamais perdre son travail",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une sauvegarde (backup), c'est une copie de tes données stockée en lieu sûr. Elle te permet de tout restaurer en cas de piratage, panne ou suppression accidentelle.<br><br>La règle des <strong>3-2-1</strong> pour les sauvegardes :<br><br>3️⃣ <strong>3 copies</strong> de tes données importantes<br>2️⃣ <strong>2 supports différents</strong> (ex. : disque dur + cloud)<br>1️⃣ <strong>1 copie hors site</strong> (stockage cloud ou disque chez une autre personne de confiance)<br><br>Ce qu'il faut sauvegarder régulièrement :<br>🌐 Ton site web (fichiers + base de données)<br>📧 Ta liste email<br>📁 Tes fichiers de travail importants<br>🖼️ Tes visuels et contenus créatifs"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une graphiste freelance à Tunis a perdu 2 ans de fichiers clients quand son disque dur a lâché. Elle n'avait aucune sauvegarde. Reconstruction impossible, clients mécontents, réputation abîmée. Depuis, elle utilise Google Drive pour les fichiers de travail et UpdraftPlus pour son site WordPress — tout est sauvegardé automatiquement chaque nuit."
+        }
+      ]
+    },
+
+    {
+      "titre": "Reconnaître et éviter le phishing",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>phishing</strong> (hameçonnage) est la technique d'arnaque la plus utilisée au monde. Elle consiste à te faire croire que tu communiques avec une plateforme légitime pour te voler tes identifiants.<br><br>Les signaux d'alerte à reconnaître :<br><br>⚠️ Un email ou SMS qui crée une <strong>urgence artificielle</strong> (« ton compte sera suspendu dans 24h »)<br>🔗 Un lien dont l'URL ne correspond pas exactement à la vraie adresse (ex. : « faceboook.com » au lieu de « facebook.com »)<br>✉️ Une adresse email d'expéditeur bizarre ou avec des fautes<br>🔑 Une demande de <strong>code de vérification</strong> ou de mot de passe par message<br>📎 Une <strong>pièce jointe inattendue</strong> d'un expéditeur inconnu"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "En cas de doute, ne clique jamais sur le lien dans l'email. Ouvre toi-même le site en tapant l'adresse dans ton navigateur et connecte-toi directement. C'est la règle d'or."
+        }
+      ]
+    },
+
+    {
+      "titre": "La sécurité des paiements en ligne",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Si tu vends en ligne, la sécurité des paiements est une priorité absolue — pour toi et pour tes clients.<br><br>Les bonnes pratiques :<br><br>🔒 Utilise uniquement des <strong>prestataires de paiement certifiés</strong> : Stripe, PayPal, CMI (Maroc), PayDunya (Afrique de l'Ouest), Paymee (Tunisie)<br>❌ <strong>Ne stocke jamais les numéros de carte</strong> de tes clients toi-même — laisse le prestataire gérer ça<br>🔐 Vérifie que ta page de paiement est bien en <strong>HTTPS</strong><br>📩 <strong>Envoie une confirmation de paiement</strong> automatique par email à chaque transaction<br>🚨 <strong>Configure des alertes</strong> pour les transactions inhabituelles ou les remboursements fréquents"
+        },
+        {
+          "type": "attention",
+          "contenu": "Méfie-toi des clients qui te demandent de traiter une transaction via un canal non sécurisé (virement vers un numéro de téléphone personnel, cryptomonnaie non traçable). En cas de litige, tu n'auras aucun recours. Toujours passer par une plateforme officielle."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sécuriser ses emails professionnels",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ta boîte email professionnelle est la clé de tout le reste — c'est souvent via elle que tu reçois les codes de récupération de tous tes autres comptes. La perdre, c'est potentiellement perdre accès à tout.<br><br>Les mesures à appliquer :<br><br>📧 <strong>Utilise un email professionnel</strong> (contact@tondomaine.com) et non un Gmail générique pour ton business<br>🔐 <strong>2FA obligatoire</strong> sur ta boîte email<br>📱 <strong>Accès depuis un seul appareil de confiance</strong> si possible<br>🚫 <strong>Ne connecte jamais ta boîte pro</strong> à des applications inconnues ou des extensions de navigateur douteuses<br>🔍 <strong>Vérifie régulièrement</strong> les règles de redirection dans Gmail ou Outlook — un hacker peut créer une règle qui copie tous tes emails vers un compte externe"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Crée une adresse email dédiée uniquement à la récupération de tes comptes importants — une adresse que personne ne connaît, que tu n'utilises pas au quotidien, et sur laquelle tu actives le 2FA en priorité."
+        }
+      ]
+    },
+
+    {
+      "titre": "La sécurité sur mobile",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique et au Maghreb, 90 % des activités digitales se font depuis un smartphone. Pourtant, la sécurité mobile est souvent négligée.<br><br>Les bonnes pratiques pour ton téléphone professionnel :<br><br>📱 <strong>Code de verrouillage fort</strong> — pas uniquement l'empreinte digitale (facile à contourner si l'appareil est volé)<br>🔄 <strong>Mises à jour du système</strong> installées dès que disponibles — elles corrigent des failles<br>📥 <strong>Télécharge uniquement depuis les stores officiels</strong> (App Store, Google Play)<br>📶 <strong>Évite les Wi-Fi publics non sécurisés</strong> pour accéder à tes comptes professionnels<br>🔍 <strong>Vérifie les permissions des apps</strong> — une application de lampe de poche n'a pas besoin d'accéder à tes contacts<br>🗑️ <strong>Supprime les applications que tu n'utilises plus</strong>"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un entrepreneur ivoirien a perdu l'accès à ses comptes Meta après avoir téléchargé une fausse application « boosteur Instagram » sur un site externe. L'application avait récupéré son mot de passe et son cookie de session. Télécharge toujours depuis les stores officiels — sans exception."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les outils de cybersécurité gratuits",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu n'as pas besoin d'un gros budget pour sécuriser ton business digital. Voici les outils gratuits les plus efficaces :<br><br>🔑 <strong>Bitwarden :</strong> gestionnaire de mots de passe gratuit et open-source<br>📱 <strong>Google Authenticator / Authy :</strong> application 2FA gratuite<br>🔒 <strong>Have I Been Pwned (haveibeenpwned.com) :</strong> vérifie si ton email a été compromis dans une fuite de données<br>🛡️ <strong>Wordfence :</strong> plugin de sécurité gratuit pour WordPress<br>💾 <strong>UpdraftPlus :</strong> sauvegardes automatiques gratuites pour WordPress<br>🌐 <strong>Let's Encrypt :</strong> certificat SSL gratuit pour ton site<br>🔍 <strong>VirusTotal (virustotal.com) :</strong> vérifie si un fichier ou un lien est malveillant avant de l'ouvrir"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ces 7 outils, tous gratuits, couvrent 90 % des besoins de cybersécurité d'un entrepreneur digital. Prends 1 heure aujourd'hui pour en installer au moins 3."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Meta et la fuite de données de 2021",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En avril 2021, une fuite de données massive a exposé les informations personnelles de <strong>533 millions d'utilisateurs Facebook</strong> — dont des millions de Marocains, Algériens, Tunisiens et Sénégalais.<br><br>Ce qui a été exposé :<br>→ Numéros de téléphone<br>→ Noms complets<br>→ Adresses email<br>→ Localisations<br>→ Dates de naissance<br><br><strong>La cause :</strong> une faille dans la fonctionnalité de recherche par numéro de téléphone, exploitée avant d'être corrigée par Meta. Les données avaient été récoltées en 2019 mais rendues publiques en 2021 gratuitement sur des forums de hackers."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Les leçons pour toi en tant qu'entrepreneur :<br><br>✅ <strong>Vérifie si ton email ou ton numéro figure dans cette fuite</strong> sur haveibeenpwned.com<br>✅ <strong>Change immédiatement ton mot de passe Facebook</strong> si c'est le cas<br>✅ <strong>Active le 2FA sur tous tes comptes Meta</strong> sans attendre<br>✅ <strong>Ne stocke jamais de données sensibles uniquement sur les plateformes d'un tiers</strong> — même les plus grandes peuvent être compromises<br><br>Si Meta, avec des milliers d'ingénieurs en sécurité, a subi cette faille — rappelle-toi que personne n'est à l'abri. La vigilance est une habitude, pas un événement ponctuel."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Karim, e-commerçant hacké à Marrakech",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation :</strong><br><br>Karim gère une boutique de décoration intérieure en ligne depuis 3 ans. Il a 14 000 abonnés Instagram, une page Facebook active et un site Shopify. Un matin, il découvre qu'il n'a plus accès à son compte Instagram ni à sa page Facebook. Un hacker a pris le contrôle de ses comptes en profitant du fait qu'il n'avait pas activé le 2FA. Le hacker publie du contenu frauduleux et demande de l'argent à ses abonnés en se faisant passer pour Karim."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Les erreurs commises par Karim :</strong><br>❌ Pas de 2FA sur aucun de ses comptes<br>❌ Même mot de passe sur Instagram, Facebook et son email<br>❌ Avait cliqué sur un lien dans un DM d'un « partenaire commercial »<br>❌ Aucune sauvegarde de sa liste clients hors des plateformes<br><br><strong>Ce qu'il a fait après la crise :</strong><br>→ Signalement immédiat auprès de Meta + dépôt de plainte<br>→ Récupération des comptes après 3 semaines via le support Meta<br>→ Communication transparente à ses abonnés via WhatsApp<br>→ Activation du 2FA sur tous ses comptes dans les 24h suivant la récupération<br>→ Exportation de sa liste clients vers Brevo (hors des plateformes Meta)<br><br><strong>Le bilan :</strong><br>→ 3 semaines sans activité sur les réseaux = perte estimée à 18 000 DH de chiffre d'affaires<br>→ 1 200 abonnés perdus qui n'ont pas compris la situation<br>→ Réputation partiellement abîmée auprès de certains clients"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le 2FA aurait suffi à empêcher 100 % de ce scénario. 3 minutes d'activation contre 3 semaines de crise et 18 000 DH perdus. La cybersécurité a un prix dérisoire comparé au coût d'une attaque."
+        }
+      ]
+    },
+
+    {
+      "titre": "Que faire en cas de piratage",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Si tu es victime d'un piratage, voici le plan d'action immédiat à suivre :<br><br>⚡ <strong>Étape 1 :</strong> change immédiatement les mots de passe de tous tes comptes — en commençant par ton email<br>📱 <strong>Étape 2 :</strong> active le 2FA partout si ce n'est pas encore fait<br>📢 <strong>Étape 3 :</strong> préviens tes clients et abonnés via tous les canaux disponibles (WhatsApp, email) — avant qu'ils soient arnaqués<br>🚨 <strong>Étape 4 :</strong> signale le piratage à la plateforme concernée (Meta, Google, etc.) via leur formulaire officiel<br>🏛️ <strong>Étape 5 :</strong> dépose une plainte à la DGSN (Maroc) ou équivalent dans ton pays<br>💾 <strong>Étape 6 :</strong> restaure ton site depuis ta dernière sauvegarde si nécessaire"
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne paie jamais une rançon à un hacker. Il n'y a aucune garantie que tu récupères tes données après paiement, et ça t'expose à de nouvelles extorsions. Contacte immédiatement les autorités."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton plan d'action sécurité en 10 étapes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici un plan concret à compléter cette semaine — du plus urgent au moins urgent :<br><br>1️⃣ Active le 2FA sur Instagram, Facebook, Gmail et WhatsApp Business<br>2️⃣ Change tes mots de passe faibles et installe Bitwarden<br>3️⃣ Vérifie sur haveibeenpwned.com si tes emails ont été compromis<br>4️⃣ Installe un certificat SSL sur ton site si ce n'est pas fait<br>5️⃣ Configure des sauvegardes automatiques de ton site (UpdraftPlus)<br>6️⃣ Exporte ta liste clients dans un outil email hors des réseaux sociaux<br>7️⃣ Crée une alerte Google sur ton nom et celui de ton business<br>8️⃣ Ajoute une politique de confidentialité sur ton site<br>9️⃣ Mets à jour WordPress, tes plugins et ton thème<br>🔟 Vérifie les appareils connectés à chacun de tes comptes et déconnecte les inconnus"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin de tout faire en une journée. Commence par les 3 premières étapes — elles couvrent les risques les plus courants et les plus graves. Le reste peut se faire progressivement sur la semaine."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et concepts de ce module s'appuient sur :<br><br>📖 <strong>Verizon – Data Breach Investigations Report (DBIR) 2024</strong><br>📖 <strong>Interpol – African Cyberthreat Assessment Report 2024</strong><br>📖 <strong>Microsoft – Digital Defense Report 2023</strong> — statistiques 2FA<br>📖 <strong>NordPass – Most Common Passwords 2024</strong><br>📖 <strong>CNDP Maroc – Loi 09-08 et guide pratique (cndp.ma)</strong><br>📖 <strong>Meta Newsroom – Data breach disclosure 2021</strong><br>📖 <strong>ANSSI France – Guide des bonnes pratiques de l'informatique (adapté PME)</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La cybersécurité évolue vite. Consulte régulièrement le site de la CNDP (Maroc), de l'ANPDP (Algérie) ou de l'INPDP (Tunisie) pour rester à jour sur les obligations légales dans ton pays."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quel est le pourcentage des cyberattaques qui ciblent les petites entreprises selon le rapport Verizon 2024 ?",
+      "options": [
+        "Moins de 5 % — les hackers s'intéressent surtout aux grandes entreprises",
+        "Environ 20 %",
+        "43 % — les petites entreprises sont des cibles fréquentes car souvent moins bien protégées",
+        "Presque 90 % — les grandes entreprises sont trop bien sécurisées"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "De combien l'authentification à deux facteurs (2FA) réduit-elle le risque de piratage de compte selon Microsoft ?",
+      "options": [
+        "De 30 %",
+        "De 60 %",
+        "De 80 %",
+        "De 99,9 %"
+      ],
+      "reponse": 3
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quelle est la règle des 3-2-1 pour les sauvegardes ?",
+      "options": [
+        "Sauvegarder 3 fois par semaine, sur 2 appareils, pendant 1 an minimum",
+        "3 copies de tes données, sur 2 supports différents, dont 1 copie stockée hors site",
+        "Tester ses sauvegardes 3 fois, sur 2 systèmes, en 1 heure maximum",
+        "3 sauvegardes automatiques, 2 manuelles, et 1 dans le cloud"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas de Karim, quelle erreur principale a permis au hacker de prendre le contrôle de ses comptes ?",
+      "options": [
+        "Il avait un site Shopify non sécurisé",
+        "Il avait trop d'abonnés et était donc une cible prioritaire",
+        "Il n'avait pas activé le 2FA et utilisait le même mot de passe sur plusieurs comptes",
+        "Il avait publié son adresse email dans sa bio Instagram"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quelle est la première chose à faire si tu reçois un message te demandant ton code de vérification SMS, même venant d'un contact connu ?",
+      "options": [
+        "Envoyer le code rapidement pour aider ton contact",
+        "Demander à ton contact de te rappeler pour confirmer sa demande",
+        "Ne jamais donner ce code — c'est la technique la plus utilisée pour pirater des comptes, et les plateformes ne demandent jamais ce code par message",
+        "Changer ton mot de passe après avoir envoyé le code pour te protéger"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
