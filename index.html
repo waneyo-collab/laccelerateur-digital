@@ -635,8 +635,8 @@ async function detectCountry() {
       const data2 = await res2.json();
       return data2.country_code || 'FR';
     } catch { return 'FR'; }
-  }
-
+  } 
+}
 // ─── LAZY LOAD ────────────────────────────────────────────────────────────────
 function loadScript(src) {
   return new Promise((res, rej) => {
