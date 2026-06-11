@@ -1,0 +1,244 @@
+{
+  "id": 14,
+  "titre": "Créer une routine de haute performance",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "Les résultats extraordinaires ne viennent pas de journées extraordinaires. Ils viennent de journées ordinaires, bien structurées, répétées avec discipline. Dans ce module, tu vas construire une routine qui te propulse — adaptée à ta réalité, tes contraintes et ton contexte.",
+
+  "sections": [
+
+    {
+      "titre": "La routine — pas une prison, une rampe de lancement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand tu entends « routine », tu penses peut-être à quelque chose d'ennuyeux, de rigide, de contraignant.<br><br>Retourne le concept.<br><br>Une routine de haute performance, c'est un système que tu construis une fois — et qui travaille pour toi chaque jour. C'est ce qui te libère de devoir décider quoi faire, quand le faire et dans quel ordre. C'est de l'énergie mentale préservée pour ce qui compte vraiment."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les personnes les plus créatives et les plus productives au monde ne s'improvisent pas leur journée. Elles la structurent — précisément pour avoir la liberté de créer à l'intérieur de cette structure."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi la plupart des journées ne mènent nulle part",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une journée sans structure ressemble à ça :<br><br>📱 Réveil → vérification immédiate du téléphone<br>💬 1 heure sur WhatsApp et les réseaux sociaux<br>🤔 Réflexion à voix haute sur ce qu'il faudrait faire<br>⏰ Quelques tâches urgentes traitées dans la précipitation<br>😴 Soirée épuisante avec le sentiment de n'avoir rien accompli d'important<br><br>Ce n'est pas un manque de travail. C'est un manque de <strong>direction</strong>. Être occupé(e) et être productif(ve) sont deux choses très différentes."
+        },
+        {
+          "type": "attention",
+          "contenu": "Vérifier son téléphone dès le réveil, c'est laisser l'agenda des autres dicter le début de ta journée. Les premières minutes du matin sont les plus précieuses pour la clarté mentale. Protège-les."
+        }
+      ]
+    },
+
+    {
+      "titre": "La science derrière la haute performance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La recherche en neurosciences et en psychologie de la performance révèle 3 vérités fondamentales :<br><br>🧠 <strong>L'énergie décisionnelle est limitée :</strong> plus tu prends de décisions dans une journée, moins elles sont bonnes. Les routines réduisent les décisions et préservent cette énergie pour ce qui compte.<br><br>⏰ <strong>Les premières heures sont les plus productives :</strong> le cortex préfrontal (siège de la créativité et de la concentration) est au pic de ses capacités dans les 2 à 4 heures après le réveil.<br><br>🔁 <strong>La répétition crée l'automatisme :</strong> une habitude ancrée ne consomme presque plus d'énergie mentale — elle devient automatique en 66 jours en moyenne (University College London)."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Obama, Zuckerberg et Steve Jobs portaient presque toujours la même tenue. Pas par manque d'imagination — pour éliminer une décision inutile du matin et préserver leur énergie mentale pour les décisions qui comptaient vraiment. Tu peux faire la même chose avec ta routine."
+        }
+      ]
+    },
+
+    {
+      "titre": "La routine matinale — le socle de tout",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La routine matinale est le rituel le plus étudié en matière de haute performance. Voici les éléments qui reviennent systématiquement chez les entrepreneurs et leaders africains et mondiaux qui performent :<br><br>🚫 <strong>0 téléphone pendant les 30 premières minutes</strong> — c'est non négociable<br>💧 <strong>Hydratation immédiate</strong> — un grand verre d'eau au réveil réactive le cerveau<br>🏃 <strong>Mouvement physique</strong> — même 10 minutes de marche ou d'étirements<br>🎯 <strong>Intention du jour</strong> — 1 seule priorité absolue à accomplir aujourd'hui<br>📖 <strong>Apprentissage court</strong> — 15 minutes de lecture ou d'un module de formation"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin de te lever à 5h du matin. Tu as besoin de protéger les premières 30 à 60 minutes de ta journée pour toi — avant que le monde s'invite. C'est là que se joue la différence."
+        }
+      ]
+    },
+
+    {
+      "titre": "Adapter la routine à la réalité africaine",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les routines présentées dans les livres américains supposent souvent un appartement calme, une famille coopérative, de l'eau chaude et une connexion internet stable. Ce n'est pas toujours la réalité.<br><br>Voici comment adapter :<br><br>👨‍👩‍👧 <strong>Tu vis avec ta famille élargie :</strong> lève-toi 30 minutes avant les autres — même 20 minutes suffisent<br>💡 <strong>Coupures d'électricité fréquentes :</strong> planifie tes tâches numériques sur les plages d'électricité assurées<br>📱 <strong>Connexion limitée :</strong> télécharge tes ressources d'apprentissage en Wi-Fi et consomme-les hors ligne<br>🚌 <strong>Long trajet en transport :</strong> transforme ce temps en session d'apprentissage (podcast, module audio, lecture)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La haute performance ne demande pas des conditions parfaites. Elle demande de travailler intelligemment avec les conditions que tu as. Les contraintes africaines ont aussi des avantages : elles forgent une résilience et une créativité que peu d'autres ont."
+        }
+      ]
+    },
+
+    {
+      "titre": "La méthode des blocs de temps",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>time blocking</strong> consiste à diviser ta journée en blocs de temps dédiés à des types de tâches précis — au lieu de réagir à ce qui arrive.<br><br>Exemple d'une journée en blocs :<br><br>🌅 <strong>6h00 – 7h00 :</strong> routine matinale (mouvement, intention, apprentissage)<br>⚡ <strong>7h00 – 9h00 :</strong> travail profond — ta tâche prioritaire, zéro interruption<br>📱 <strong>9h00 – 10h00 :</strong> emails, WhatsApp, réseaux sociaux<br>🛠️ <strong>10h00 – 12h00 :</strong> tâches secondaires, appels, réunions<br>😴 <strong>12h00 – 13h00 :</strong> pause complète — le cerveau en a besoin<br>🎨 <strong>13h00 – 15h00 :</strong> création de contenu ou formation<br>📊 <strong>15h00 – 17h00 :</strong> administratif, suivi clients<br>🌙 <strong>17h00 :</strong> arrêt — la fatigue décisionnelle est réelle"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Aïda, freelance en graphisme à Abidjan, passait ses journées à répondre aux messages WhatsApp clients en permanence. Elle était épuisée mais n'avançait jamais sur ses projets. Elle a appliqué le time blocking : WhatsApp uniquement de 9h à 10h et de 17h à 18h. Ses projets avancent désormais 3 fois plus vite — et ses clients n'ont pas remarqué la différence."
+        }
+      ]
+    },
+
+    {
+      "titre": "La règle du travail profond",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>travail profond</strong> (Deep Work, selon Cal Newport) est la capacité à se concentrer sans distraction sur une tâche cognitivement exigeante — créer, apprendre, résoudre des problèmes complexes.<br><br>C'est le travail qui fait vraiment avancer ton projet. Et c'est le travail que tu fais le moins, parce que les notifications, les messages et les urgences t'en empêchent constamment.<br><br>Les règles du travail profond :<br><br>📵 <strong>Téléphone en mode silencieux ou dans une autre pièce</strong><br>⏱️ <strong>Blocs de 60 à 90 minutes minimum</strong> — le cerveau a besoin de temps pour atteindre la concentration maximale<br>🎧 <strong>Environnement adapté</strong> — musique instrumentale si tu travailles mieux avec du son<br>📝 <strong>Une seule tâche à la fois</strong> — le multitâche réduit la productivité de 40 %"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "3 heures de travail profond par jour valent plus que 8 heures de travail superficiel avec des interruptions constantes. Ce n'est pas une question de temps — c'est une question de concentration."
+        }
+      ]
+    },
+
+    {
+      "titre": "Gérer son énergie, pas seulement son temps",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La gestion du temps suppose que toutes les heures se valent. Ce n'est pas vrai.<br><br>Une heure à 7h du matin, reposé(e) et concentré(e), ne produit pas la même chose qu'une heure à 22h, épuisé(e) et distrait(e).<br><br>Gère ton énergie comme une ressource précieuse :<br><br>⚡ <strong>Haute énergie :</strong> tâches créatives, stratégie, apprentissage difficile<br>🔋 <strong>Énergie moyenne :</strong> emails, réunions, tâches administratives<br>🪫 <strong>Basse énergie :</strong> tâches automatiques, organisation, veille réseaux sociaux<br><br>Identifie tes pics d'énergie naturels et protège ces plages pour ton travail le plus important."
+        },
+        {
+          "type": "attention",
+          "contenu": "Négliger le sommeil pour « travailler plus » est contre-productif. En dessous de 7 heures de sommeil, les capacités cognitives chutent de manière mesurable — créativité, mémoire, prise de décision. Un entrepreneur reposé fait plus en 4 heures qu'un entrepreneur épuisé en 10 heures."
+        }
+      ]
+    },
+
+    {
+      "titre": "La routine du soir — préparer demain ce soir",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La performance du lendemain se prépare la veille. Une routine du soir efficace dure 15 à 20 minutes :<br><br>✅ <strong>Revue du jour :</strong> qu'est-ce que j'ai accompli ? qu'est-ce que je reporte ?<br>🎯 <strong>Définir la priorité de demain :</strong> 1 tâche principale — pas une liste de 15<br>📵 <strong>Déconnexion digitale</strong> 30 à 60 minutes avant de dormir — la lumière bleue perturbe le sommeil<br>📖 <strong>Lecture ou réflexion calme</strong> — pas de réseaux sociaux, pas de vidéos stressantes<br>💤 <strong>Même heure de coucher</strong> — la régularité du sommeil est plus importante que la durée"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Youssef, développeur freelance à Casablanca, passait ses soirées sur TikTok jusqu'à minuit. Il se levait épuisé, sans direction. Il a mis en place une routine du soir simple : à 21h30, il note sa priorité du lendemain sur une feuille, il pose son téléphone dans la cuisine et lit 20 minutes. Il dort à 22h30. Résultat : il est maintenant debout à 6h30 sans effort et fait plus en 2 heures le matin qu'il ne faisait en toute une journée avant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Chloé, de l'épuisement à la haute performance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Chloé, 27 ans, à Douala. Elle gère seule sa boutique de cosmétiques en ligne, ses réseaux sociaux et ses livraisons. Elle travaille 12 heures par jour, est toujours disponible, répond aux messages à toute heure. Elle est épuisée, ses ventes stagnent et elle n'a plus d'énergie pour créer du contenu ou réfléchir à sa stratégie."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>La routine qu'elle a construite :</strong><br><br>🌅 <strong>6h00 :</strong> réveil, verre d'eau, 10 minutes de marche dans sa cour<br>📝 <strong>6h15 :</strong> elle écrit sa priorité du jour et 3 choses pour lesquelles elle est reconnaissante<br>⚡ <strong>6h30 – 8h30 :</strong> travail profond — création de contenu ou stratégie (téléphone éteint)<br>📱 <strong>8h30 :</strong> seulement là qu'elle ouvre WhatsApp et Instagram<br>🛑 <strong>18h00 :</strong> fin de journée stricte — elle ne répond plus aux clients le soir<br><br><strong>Résultats après 6 semaines :</strong><br>→ Contenu produit 2 fois plus en moins de temps<br>→ Chiffre d'affaires en hausse de 35 %<br>→ Elle dort 7h30 par nuit contre 5h30 avant<br>→ Elle a retrouvé de l'énergie pour penser à sa croissance"
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire ta routine — par où commencer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ne te lance pas dans une routine de 20 éléments dès demain matin. Tu abandonnerais en 3 jours.<br><br>Commence avec <strong>3 habitudes seulement</strong> :<br><br>1️⃣ <strong>Pas de téléphone pendant les 30 premières minutes</strong> — la plus impactante<br>2️⃣ <strong>Définir 1 priorité absolue par jour</strong> — celle qui, si elle est faite, rend la journée réussie<br>3️⃣ <strong>Bloquer 1 heure de travail profond</strong> — sans interruption, chaque jour<br><br>Tiens ces 3 habitudes pendant 21 jours. Puis ajoutes-en une quatrième. C'est comme ça que se construit une vraie routine — progressivement, solidement."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une petite routine tenue tous les jours est infiniment plus puissante qu'une routine parfaite abandonnée après une semaine. La constance bat l'intensité — toujours."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>Cal Newport – Deep Work (2016)</strong> — travail profond et concentration<br>📖 <strong>James Clear – Atomic Habits (2018)</strong> — construction des habitudes<br>📖 <strong>Brendon Burchard – High Performance Habits (2017)</strong> — routines des ultra-performants<br>📖 <strong>Phillippa Lally et al. – How are habits formed (University College London, 2010)</strong> — les 66 jours<br>📖 <strong>Matthew Walker – Why We Sleep (2017)</strong> — sommeil et performance cognitive"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta routine est ta fondation. Elle ne se voit pas de l'extérieur — mais elle construit silencieusement tout ce qui deviendra visible : ta croissance, tes résultats, ta liberté."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Pourquoi les routines préservent-elles l'énergie mentale ?",
+      "options": [
+        "Parce qu'elles permettent de travailler plus longtemps sans se fatiguer",
+        "Parce qu'elles automatisent certains comportements, réduisant le nombre de décisions à prendre et préservant l'énergie pour ce qui compte vraiment",
+        "Parce qu'elles créent une structure rigide qui empêche les distractions",
+        "Parce que les personnes disciplinées ont naturellement plus d'énergie"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Selon la recherche de l'University College London, combien de jours faut-il en moyenne pour ancrer une nouvelle habitude ?",
+      "options": [
+        "21 jours — un chiffre souvent cité mais non prouvé scientifiquement",
+        "7 jours si on est suffisamment motivé",
+        "66 jours en moyenne — selon les études sur la formation des habitudes",
+        "100 jours minimum pour toute habitude complexe"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans l'étude de cas de Chloé, quel changement a eu le plus grand impact sur sa productivité ?",
+      "options": [
+        "Elle a arrêté de gérer ses livraisons elle-même pour se concentrer sur la vente",
+        "Elle a bloqué ses 2 premières heures de journée pour du travail profond, sans téléphone, avant d'ouvrir WhatsApp et Instagram",
+        "Elle a embauché un assistant pour répondre aux messages clients",
+        "Elle a réduit son offre de produits pour se concentrer sur les best-sellers"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Qu'est-ce que le travail profond (Deep Work) selon Cal Newport ?",
+      "options": [
+        "Travailler plus de 10 heures par jour sur un projet",
+        "Faire des recherches approfondies avant de prendre une décision",
+        "Se concentrer sans distraction sur une tâche cognitivement exigeante pendant des blocs de temps prolongés",
+        "Travailler seul sans collaborer avec d'autres"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quelle est la recommandation pour commencer à construire une routine de haute performance ?",
+      "options": [
+        "Adopter immédiatement une routine complète de 10 habitudes pour maximiser l'impact",
+        "Attendre d'avoir les conditions parfaites (logement, famille, temps) avant de commencer",
+        "Commencer avec seulement 3 habitudes clés et les tenir 21 jours avant d'en ajouter d'autres",
+        "Copier exactement la routine d'un entrepreneur qui a réussi"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
