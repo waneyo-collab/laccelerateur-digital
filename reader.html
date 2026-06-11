@@ -364,7 +364,9 @@ function slideText() {
 function cleanForSpeech(text) {
   if (!text) return '';
   return text
-    .replace(/[\u{1F300}-\u{1FFFF}]/gu, '')  // émojis
+    .replace(/[\u{1F000}-\u{1FFFF}]/gu, '')  // émojis larges (drapeaux, flèches, symboles)
+    .replace(/[\u2000-\u2BFF]/gu, '')         // flèches et symboles Unicode classiques
+    .replace(/[\u{E0000}-\u{E007F}]/gu, '')   // tags Unicode (drapeaux régionaux)
     .replace(/[#*_~`>|\\]/g, '')              // markdown
     .replace(/\s+/g, ' ')                     // espaces multiples
     .replace(/([^\.\!\?])\n/g, '$1. ')        // fin de ligne sans ponctuation → point
