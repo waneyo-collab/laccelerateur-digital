@@ -1,0 +1,134 @@
+{
+  "id": 29,
+  "titre": "Protéger son business digital",
+  "duree": "15 min",
+  "phase": 3,
+  "description": "Créer un business digital sans le protéger, c'est construire une maison sans serrure. Droits d'auteur, contrats, CGV, protection des données — ce module te donne les bases juridiques indispensables pour exercer sereinement depuis l'Afrique.",
+  "sections": [
+    {
+      "type": "texte",
+      "titre": "Pourquoi la protection juridique n'est pas optionnelle",
+      "contenu": "La plupart des entrepreneurs digitaux africains démarrent sans aucune protection juridique — par méconnaissance, par peur de la complexité, ou parce qu'ils pensent que ça attendra.\n\nPuis arrive le premier conflit : un client qui refuse de payer, un concurrent qui copie ton contenu, une plateforme qui suspend ton compte sans explication, un prestataire qui livre un travail bâclé et disparaît.\n\nSans contrat, sans CGV, sans preuve écrite — tu n'as rien. Pas de recours, pas de protection, pas d'argument légal.\n\nLe droit ne te protège que si tu l'as activé en amont. Ce module t'explique comment faire ça simplement, sans avocat ni budget dédié au départ."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Le droit d'auteur : tu es protégé·e dès la création",
+      "contenu": "Bonne nouvelle : dans la quasi-totalité des pays africains et dans le monde entier (Convention de Berne, signée par 181 pays), le droit d'auteur s'applique automatiquement dès que tu crées une œuvre originale.\n\nCela signifie que tes formations, tes ebooks, tes articles de blog, tes visuels Canva personnalisés, tes scripts vidéo, tes modules de cours — sont protégés dès leur création, sans dépôt préalable.\n\nCe que le droit d'auteur te garantit :\n- Le droit exclusif de reproduire, distribuer et vendre ton œuvre\n- Le droit moral : personne ne peut te nier la paternité de ton travail\n- La durée de protection : toute ta vie + 70 ans dans la plupart des pays\n\nCe qu'il ne fait pas automatiquement : prouver que tu es l'auteur·e en cas de litige. Pour ça, il faut conserver les preuves de création."
+    },
+    {
+      "type": "texte",
+      "titre": "Prouver que tu es l'auteur·e : les méthodes accessibles",
+      "contenu": "En cas de vol de contenu ou de litige, tu dois pouvoir prouver que tu as créé avant l'autre. Plusieurs méthodes accessibles depuis l'Afrique :\n\n**L'horodatage par email :** envoie-toi par email les fichiers sources de tes créations dès leur finalisation. L'horodatage du serveur email fait foi. Gratuit, immédiat.\n\n**Le dépôt numérique :** des plateformes comme Timestamp.online ou OriginStamp créent une empreinte numérique de ton fichier enregistrée sur la blockchain — preuve incontestable de la date de création. Gratuit ou très peu coûteux.\n\n**Le dépôt auprès d'un organisme :** au Maroc (OMPIC), en Côte d'Ivoire (OIPI), au Sénégal (OAPI) — chaque pays a un office de propriété intellectuelle où tu peux déposer officiellement tes œuvres. Coût modéré, valeur juridique forte.\n\n**La règle pratique :** conserve toujours les fichiers sources (brouillons, premières versions, captures d'écran datées) de tout ce que tu crées."
+    },
+    {
+      "type": "exemple",
+      "titre": "Étude de cas — Arnaud, Brazzaville",
+      "contenu": "Arnaud a 29 ans. Consultant en stratégie digitale à Brazzaville, il a créé un programme de formation complet sur le marketing des PME congolaises — 6 mois de travail, 30 modules, des dizaines d'études de cas locales.\n\nSix semaines après son lancement, il découvre qu'un concurrent a copié intégralement 8 de ses modules, les a rebaptisés et les vend à un prix inférieur au sien sur une autre plateforme.\n\nArnaud avait conservé ses fichiers Notion datés, ses brouillons Google Docs avec historique des versions, et ses emails d'envoi à ses premiers bêta-testeurs.\n\nIl a contacté la plateforme concurrente avec ces preuves. Les modules ont été retirés en 72 heures. Sans ces preuves, il n'aurait eu aucun recours."
+    },
+    {
+      "type": "texte",
+      "titre": "Les CGV : ton bouclier commercial",
+      "contenu": "Les Conditions Générales de Vente (CGV) sont le document légal qui encadre la relation entre toi et tes clients. Elles sont obligatoires dès que tu vends en ligne — et te protègent en cas de litige.\n\n**Ce que doivent contenir tes CGV au minimum :**\n- Ton identité complète (nom, adresse, statut juridique si tu en as un)\n- Description précise de tes offres et de ce qu'elles incluent ou excluent\n- Conditions de paiement (délais, modes acceptés, pénalités de retard)\n- Politique de remboursement (conditions, délais, procédure)\n- Droits d'utilisation : qu'est-ce que le client a le droit de faire avec ce qu'il achète ?\n- Droit applicable et juridiction compétente en cas de litige\n\n**Pour les ventes vers l'Europe :** si tu vends à des clients en France, Belgique ou Suisse, le droit européen de la consommation s'applique — notamment le droit de rétractation de 14 jours pour les achats en ligne (avec exceptions pour les produits numériques téléchargés immédiatement).\n\n**Outils pour créer tes CGV gratuitement :** iubenda.com génère des CGV conformes au RGPD en quelques minutes."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Le contrat client : indispensable pour tout service",
+      "contenu": "Pour chaque prestation de service (coaching, consulting, community management, création de contenu), un contrat écrit est indispensable — même entre amis, même pour un petit montant.\n\n**Un bon contrat de prestation doit préciser :**\n- L'identité des deux parties\n- La description précise des livrables (ce que tu fournis, sous quel format, à quelle date)\n- Le prix, les modalités de paiement et l'acompte éventuel\n- Les délais et jalons\n- Ce qui se passe en cas de modification ou d'annulation\n- La confidentialité (si applicable)\n- La propriété des livrables (qui détient les droits après paiement ?)\n\n**La règle d'or :** aucun travail ne commence avant la signature du contrat ET le versement de l'acompte. Un client qui refuse de signer un contrat ou de verser un acompte est un signal d'alarme à ne pas ignorer."
+    },
+    {
+      "type": "texte",
+      "titre": "Signer des contrats à distance depuis l'Afrique",
+      "contenu": "La signature électronique a la même valeur légale qu'une signature manuscrite dans la quasi-totalité des pays — y compris au Maroc (loi 53-05), en Tunisie, en Côte d'Ivoire et dans les pays OHADA.\n\n**Outils de signature électronique accessibles depuis l'Afrique :**\n\n**DocuSign** — référence mondiale, plan gratuit limité à 3 documents par mois. Suffisant pour démarrer.\n\n**HelloSign (Dropbox Sign)** — interface simple, plan gratuit à 3 documents par mois.\n\n**Yousign** — solution française, conforme eIDAS (norme européenne), plan gratuit disponible. Idéal pour les contrats avec des clients européens.\n\n**PDF + email** — en dernier recours : envoie le contrat en PDF, demande au client de le signer, le scanner et te le renvoyer par email. L'échange d'emails constitue une preuve de consentement acceptable dans de nombreux contextes."
+    },
+    {
+      "type": "attention",
+      "titre": "La propriété intellectuelle dans les contrats de service",
+      "contenu": "Quand tu crées quelque chose pour un client — une formation, un logo, un site web, des visuels, du contenu — la question de qui détient les droits doit être tranchée explicitement dans le contrat.\n\n**Si tu ne précises rien :** dans la plupart des systèmes juridiques, tu restes l'auteur·e et le client n'a qu'un droit d'usage limité. Il ne peut pas revendre, modifier ou republier ton travail sans ton accord.\n\n**Si tu veux céder les droits :** indique-le explicitement dans le contrat, avec la portée exacte de la cession (usage commercial, durée, territoire).\n\n**La règle pratique :** pour les petites prestations, précise simplement que le client obtient un droit d'usage exclusif pour son activité. Pour les prestations importantes (logo, contenu de marque, formation complète), fais relire le contrat par un professionnel avant de signer."
+    },
+    {
+      "type": "texte",
+      "titre": "Le RGPD et la protection des données : ce qui s'applique à toi",
+      "contenu": "Si tu collectes des emails, si tu as un formulaire de contact, si tu utilises des cookies sur ton site — le RGPD (Règlement Général sur la Protection des Données) s'applique à toi dès que tu as des clients ou abonnés en Europe.\n\n**Ce que tu dois faire concrètement :**\n\n**1. Politique de confidentialité :** publier sur ton site un document qui explique quelles données tu collectes, pourquoi, et comment les utilisateurs peuvent les supprimer. Génère-la gratuitement sur iubenda.com.\n\n**2. Consentement explicite :** ne pas pré-cocher les cases d'inscription à ta newsletter. Le consentement doit être actif et documenté.\n\n**3. Droit à l'oubli :** si un abonné te demande de supprimer ses données, tu dois le faire dans un délai raisonnable.\n\n**4. Sécurité des données :** utilise des outils reconnus (Mailchimp, System.io) qui respectent eux-mêmes le RGPD — ça te couvre partiellement.\n\nLes plateformes comme Mailchimp, System.io et Hotmart sont RGPD-conformes et t'aident à respecter ces obligations automatiquement."
+    },
+    {
+      "type": "texte",
+      "titre": "Protéger ton contenu en ligne des copies non autorisées",
+      "contenu": "Ton contenu en ligne sera copié — c'est une certitude. La question est de savoir comment réagir et prévenir.\n\n**Mesures préventives :**\n- Ajoute une mention légale claire sur tous tes contenus : « © [Ton nom] [Année] — Tous droits réservés. Toute reproduction interdite sans autorisation écrite. »\n- Sur YouTube, active la reconnaissance de contenu (Content ID) si tu y publies\n- Sur Instagram, signale immédiatement tout compte qui copie ton contenu via la fonction de signalement pour droit d'auteur\n\n**En cas de vol détecté :**\n1. Fais une capture d'écran datée du contenu volé\n2. Contacte d'abord le fautif en privé — souvent efficace et rapide\n3. Si pas de réponse, signale à la plateforme (formulaire DMCA sur la plupart des plateformes)\n4. En dernier recours, envoie une mise en demeure par email avec accusé de réception\n\nLa procédure DMCA (Digital Millennium Copyright Act) est reconnue et respectée par toutes les grandes plateformes mondiales — y compris pour les créateurs africains."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Le cadre juridique OHADA pour l'Afrique francophone",
+      "contenu": "L'OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires) est un traité qui unifie le droit des affaires dans 17 pays africains francophones : Bénin, Burkina Faso, Cameroun, Centrafrique, Comores, Congo, Côte d'Ivoire, Gabon, Guinée, Guinée-Bissau, Guinée Équatoriale, Mali, Niger, RDC, Sénégal, Tchad, Togo.\n\nPour ces pays, l'OHADA fixe des règles communes sur :\n- La forme des contrats commerciaux\n- Le recouvrement des créances (comment récupérer une dette)\n- Le statut des entreprises\n- L'arbitrage commercial\n\n**Avantage pratique :** si tu as un litige avec un client dans un autre pays OHADA, les mêmes règles s'appliquent des deux côtés. Un contrat bien rédigé à Brazzaville a la même valeur à Abidjan ou Dakar."
+    },
+    {
+      "type": "texte",
+      "titre": "Que faire quand un client ne paie pas",
+      "contenu": "C'est l'une des situations les plus stressantes pour un entrepreneur solo. Voici la procédure étape par étape :\n\n**Étape 1 — Relance amiable (J+1 à J+7 après la date d'échéance) :** un email poli rappelant la facture impayée. 80 % des cas se règlent ici — souvent par simple oubli.\n\n**Étape 2 — Relance formelle (J+8 à J+15) :** email avec accusé de lecture, rappel des termes du contrat, délai final de 7 jours. Ton du mail devient plus ferme, toujours professionnel.\n\n**Étape 3 — Mise en demeure (J+16 à J+30) :** document officiel envoyé par email avec confirmation de lecture ou par courrier recommandé. Indique explicitement que tu te réserves le droit d'engager des poursuites.\n\n**Étape 4 — Recours légaux :** selon le montant et le pays, tu peux saisir un tribunal de commerce, recourir à la médiation, ou faire appel à un huissier.\n\n**Règle préventive absolue :** pour toute prestation supérieure à 100€, exige un acompte de 30 à 50 % avant de commencer. Tu ne travailles pas sur la foi d'une promesse."
+    },
+    {
+      "type": "exemple",
+      "titre": "Retour sur Arnaud — ses 3 règles après l'expérience",
+      "contenu": "Depuis l'incident de copie de ses modules, Arnaud a mis en place 3 règles non négociables :\n\n**Règle 1 :** chaque module qu'il crée est immédiatement envoyé par email à son adresse personnelle depuis son adresse professionnelle — horodatage automatique, preuve de création.\n\n**Règle 2 :** tout contrat de prestation, même avec un ami, est signé via Yousign avant le début du travail. L'acompte (40 %) est encaissé avant la première réunion.\n\n**Règle 3 :** ses CGV précisent que ses formations sont pour usage personnel uniquement — toute redistribution, même partielle, constitue une violation des droits d'auteur et engage la responsabilité civile de l'acheteur.\n\nIl dit : « L'affaire de la copie m'a coûté 3 semaines de stress. Mes 3 règles me coûtent 15 minutes à chaque nouveau projet. Le calcul est vite fait. »"
+    },
+    {
+      "type": "point_cle",
+      "titre": "Sources",
+      "contenu": "- OMPI (Organisation Mondiale de la Propriété Intellectuelle). *Guide de la propriété intellectuelle pour les PME*. wipo.int/fr\n- OHADA (2024). *Acte uniforme relatif au droit commercial général*. ohada.com\n- CNIL (2024). *Guide pratique RGPD pour les TPE et micro-entrepreneurs*. cnil.fr\n- Iubenda (2024). *Générateur de politique de confidentialité et CGV*. iubenda.com\n- OMPIC Maroc (2024). *Dépôt de droits d'auteur et de marques*. ompic.ma"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "À partir de quel moment le droit d'auteur protège-t-il une création selon ce module ?",
+          "options": [
+            "Après un dépôt officiel auprès d'un office de propriété intellectuelle",
+            "Dès la publication sur les réseaux sociaux",
+            "Dès la création de l'œuvre originale, automatiquement et sans formalité préalable",
+            "Après enregistrement auprès d'un notaire"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Quelle est la méthode la plus simple et la plus gratuite pour horodater une création et prouver qu'on en est l'auteur·e ?",
+          "options": [
+            "Publier le contenu sur Instagram avec une date visible",
+            "S'envoyer le fichier source par email depuis son adresse professionnelle",
+            "Imprimer le document et le faire signer par un témoin",
+            "Déposer le fichier sur une clé USB conservée chez un notaire"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Que doit préciser un contrat de prestation de service en ce qui concerne la propriété intellectuelle ?",
+          "options": [
+            "Rien — la loi attribue automatiquement tous les droits au client après paiement",
+            "Uniquement le prix de la cession des droits, sans autres détails nécessaires",
+            "Explicitement qui détient les droits sur les livrables après la prestation et la portée exacte de l'usage autorisé",
+            "Uniquement la durée pendant laquelle le créateur conserve ses droits"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Quel est l'intérêt du cadre juridique OHADA pour les entrepreneurs digitaux africains ?",
+          "options": [
+            "Il offre des exonérations fiscales spéciales pour les activités digitales dans les 17 pays membres",
+            "Il unifie les règles du droit des affaires dans 17 pays africains, ce qui donne une valeur commune aux contrats signés entre pays membres",
+            "Il oblige les plateformes internationales comme Stripe à opérer dans les pays membres",
+            "Il remplace le RGPD pour les entrepreneurs africains qui vendent en Europe"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Quelle est la première étape recommandée quand un client ne paie pas à l'échéance ?",
+          "options": [
+            "Saisir immédiatement le tribunal de commerce pour maximiser les chances de recouvrement",
+            "Publier le nom du client sur les réseaux sociaux pour alerter la communauté",
+            "Envoyer une relance amiable par email dans les 7 premiers jours — la majorité des impayés se règlent à ce stade",
+            "Contacter directement un huissier pour une mise en demeure officielle"
+          ],
+          "reponse": 2
+        }
+      ]
+    }
+  ]
+}
