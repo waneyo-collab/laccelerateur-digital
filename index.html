@@ -626,11 +626,16 @@ const PADDLE_PORTAL   = 'https://customer-portal.paddle.com/cpl_01kswd7558gytzq8
 
 async function detectCountry() {
   try {
-    const res = await fetch('https://ipapi.co/json/');
+    const res = await fetch('https://api.country.is/');
     const data = await res.json();
-    return data.country_code || 'FR';
-  } catch { return 'FR'; }
-}
+    return data.country || 'FR';
+  } catch {
+    try {
+      const res2 = await fetch('https://ipapi.co/json/');
+      const data2 = await res2.json();
+      return data2.country_code || 'FR';
+    } catch { return 'FR'; }
+  }
 
 // ─── LAZY LOAD ────────────────────────────────────────────────────────────────
 function loadScript(src) {
