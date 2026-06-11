@@ -2,5 +2,5 @@
   publish = "."
   functions = "netlify/functions"
 
-[build.environment]
-  SECRETS_SCAN_OMIT_PATHS = "index.html"
+[secrets_scanning]
+  omit_paths = ["index.html"]
