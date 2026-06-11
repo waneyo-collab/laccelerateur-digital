@@ -1,0 +1,244 @@
+{
+  "id": 16,
+  "titre": "Cultiver la discipline au quotidien",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "La discipline n'est pas un don réservé à quelques élus. C'est une compétence qui se construit, se renforce et s'entretient — exactement comme un muscle. Dans ce module, tu vas apprendre à devenir quelqu'un de discipliné, pas à force de volonté, mais grâce à des systèmes intelligents.",
+
+  "sections": [
+
+    {
+      "titre": "La discipline — on t'a tout faux dit",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La plupart des gens croient que la discipline, c'est :<br><br>❌ Se lever à 4h du matin<br>❌ Ne jamais se reposer<br>❌ Être dur avec soi-même en permanence<br>❌ Avoir une volonté de fer dès la naissance<br><br>Ce sont des mythes. La vraie discipline, c'est beaucoup plus simple et beaucoup plus accessible :<br><br>✅ Faire ce que tu as décidé de faire — même quand tu n'en as pas envie<br>✅ Construire des systèmes qui rendent l'action facile<br>✅ Être régulier, pas parfait"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les personnes les plus disciplinées ne se battent pas en permanence contre leurs envies. Elles ont construit des environnements et des habitudes qui rendent la bonne action automatique — et la mauvaise difficile."
+        }
+      ]
+    },
+
+    {
+      "titre": "La volonté est une ressource limitée",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La recherche en psychologie a prouvé ce qu'on appelle l'<strong>épuisement de l'ego</strong> : ta volonté est comme une batterie. Elle se vide au fil de la journée à chaque décision, chaque résistance, chaque effort de self-control.<br><br>C'est pourquoi :<br><br>🌅 Tu tiens mieux tes engagements le matin que le soir<br>📱 Tu te retrouves sur les réseaux sociaux à 22h alors que tu avais décidé de ne pas y aller<br>🍔 Tu manges mal le soir alors que tu manges bien le matin<br><br>La solution n'est pas d'avoir <em>plus</em> de volonté. C'est de <strong>moins en avoir besoin</strong>."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Si tu dois décider chaque matin si tu vas faire du sport, tu utiliseras ta volonté pour prendre cette décision. Si tu as décidé une fois pour toutes que le sport se fait à 6h30 chaque jour — c'est une règle, plus une décision. Ta volonté est préservée pour autre chose."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire des systèmes, pas compter sur la motivation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La motivation est émotionnelle — elle monte et descend. La discipline est systémique — elle fonctionne indépendamment de tes émotions.<br><br>Un <strong>système de discipline</strong> répond à ces questions :<br><br>📌 Quoi ? → la tâche précise à accomplir<br>📌 Quand ? → le moment exact dans ta journée<br>📌 Où ? → l'endroit où tu le fais<br>📌 Comment ? → la façon dont tu démarres<br><br>Plus le système est précis, moins tu as besoin de décider — et moins tu risques d'éviter."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Vague : « Je vais créer du contenu cette semaine. »<br>Système : « Chaque mardi et jeudi, à 7h, assis à mon bureau avec mon café, je rédige pendant 45 minutes avant d'ouvrir mon téléphone. »<br><br>Le deuxième est une instruction claire pour ton cerveau. Le premier est un vœu."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'identité — le secret le mieux gardé",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "James Clear, auteur d'Atomic Habits, a découvert quelque chose de crucial : <strong>les habitudes durables ne viennent pas de ce qu'on veut faire, mais de qui on veut être.</strong><br><br>Il y a deux façons d'arrêter de fumer :<br><br>🔴 <strong>Approche par résultat :</strong> « Je veux arrêter de fumer. » → résistance constante<br>🟢 <strong>Approche par identité :</strong> « Je suis quelqu'un qui ne fume pas. » → l'action devient cohérente avec qui tu es<br><br>Appliqué à ta discipline :<br>→ Pas « Je veux être discipliné(e). »<br>→ Mais « Je suis quelqu'un de discipliné. »<br>→ Pas « Je veux publier régulièrement. »<br>→ Mais « Je suis un créateur / une créatrice de contenu. »"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chaque action que tu poses confirme ou infirme ton identité. Chaque fois que tu tiens un engagement envers toi-même, tu votes pour la personne que tu deviens. La discipline se construit action par action — pas décision par décision."
+        }
+      ]
+    },
+
+    {
+      "titre": "La règle des 2 minutes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'obstacle principal à la discipline, c'est de démarrer. Une fois lancé(e), continuer est infiniment plus facile.<br><br>La <strong>règle des 2 minutes</strong> : toute habitude que tu veux ancrer doit pouvoir commencer en 2 minutes ou moins.<br><br>→ « Faire du sport » devient « mettre mes chaussures de sport »<br>→ « Créer du contenu » devient « ouvrir Canva »<br>→ « Prospecter » devient « ouvrir ma liste de contacts »<br>→ « Apprendre » devient « ouvrir mon module de formation »<br><br>Le démarrage à 2 minutes transforme une tâche intimidante en geste simple. Et une fois que tu as démarré, tu continues presque toujours."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ne sous-estime jamais la puissance de commencer. Le premier mot d'un article est plus difficile à écrire que tous les autres. Le premier pas d'une course est plus difficile que tous les suivants. Lance-toi — l'élan fait le reste."
+        }
+      ]
+    },
+
+    {
+      "titre": "Concevoir son environnement pour réussir",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu peux rendre la discipline facile ou difficile selon la façon dont tu organises ton environnement.<br><br>🟢 <strong>Rendre la bonne action facile :</strong><br>→ Laisser ton carnet ouvert sur ton bureau la veille<br>→ Préparer ta tenue de sport le soir<br>→ Avoir tes outils de travail prêts et accessibles<br>→ Désactiver les notifications des réseaux pendant tes heures de travail<br><br>🔴 <strong>Rendre la mauvaise action difficile :</strong><br>→ Téléphone dans une autre pièce pendant le travail profond<br>→ Applications de distraction dans des dossiers cachés<br>→ Bloquer les sites non productifs pendant tes heures de focus"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Amina, commerciale freelance à Dakar, n'arrivait pas à prospecter régulièrement. Elle a changé une chose : chaque soir, elle ouvre son tableur de prospects et écrit le nom du premier prospect à contacter le lendemain matin. Résultat : le matin, elle voit directement le nom — pas de décision à prendre, pas de résistance. Elle a multiplié ses contacts par 3 en un mois avec ce seul changement."
+        }
+      ]
+    },
+
+    {
+      "titre": "La règle du jamais deux fois de suite",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu vas rater des jours. C'est inévitable. Un rendez-vous imprévu, une coupure de courant, un moment de fatigue. La vraie discipline ne consiste pas à ne jamais rater — elle consiste à <strong>ne jamais rater deux fois de suite</strong>.<br><br>📏 <strong>La règle :</strong> si tu rates un jour, c'est OK. Si tu rates deux jours consécutifs, l'habitude commence à se défaire.<br><br>Rater un jour = accident<br>Rater deux jours = début d'une nouvelle habitude (celle d'éviter)"
+        },
+        {
+          "type": "attention",
+          "contenu": "Le perfectionnisme est l'ennemi de la discipline. Attendre les conditions parfaites pour s'y mettre garantit de ne jamais s'y mettre. Une action imparfaite faite régulièrement bat une action parfaite faite de temps en temps — toujours."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les récompenses — rendre la discipline agréable",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le cerveau apprend par association : action → récompense → envie de répéter. Tu peux utiliser ce mécanisme pour ancrer la discipline.<br><br>La technique du <strong>bundling d'habitudes</strong> :<br>Associe une tâche que tu veux faire à quelque chose que tu aimes.<br><br>🎵 Écoute ta playlist préférée uniquement pendant tes sessions de travail<br>☕ Ton café du matin uniquement après avoir défini ta priorité du jour<br>📺 Ta série du soir uniquement après avoir accompli ta micro-victoire quotidienne<br><br>Le plaisir suit l'effort — et le cerveau commence à associer l'effort au plaisir."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La discipline n'a pas à être une punition. Elle peut être accompagnée de rituels plaisants qui la rendent non seulement supportable — mais attendue."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Koffi, de l'irrégularité totale à la machine de contenu",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation :</strong><br><br>Koffi, 25 ans, à Cotonou. Il veut construire une audience sur Instagram pour vendre ses formations en gestion financière. Mais il publie de façon chaotique — 3 posts en une semaine, puis rien pendant 2 semaines. Il est motivé par à-coups, discipliné jamais. Son compte stagne à 340 abonnés depuis 5 mois."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Le système qu'il a mis en place :</strong><br><br>🗓️ <strong>Règle fixe :</strong> publication uniquement le lundi, mercredi et vendredi — pas plus, pas moins<br>🎨 <strong>Environnement :</strong> ses templates Canva sont ouverts en permanence sur son téléphone<br>☕ <strong>Bundling :</strong> il crée son contenu uniquement avec son café du matin, avant d'ouvrir WhatsApp<br>📏 <strong>Règle des 2 minutes :</strong> s'il n'a pas d'idée, il ouvre simplement Canva et choisit un template — ça suffit pour démarrer<br>🏆 <strong>Récompense :</strong> chaque vendredi soir après avoir publié, il s'accorde 1h de jeu vidéo sans culpabilité<br><br><strong>Résultats après 3 mois :</strong><br>→ 36 posts publiés sans exception<br>→ 2 100 abonnés (×6)<br>→ Première vente de formation à 45 000 FCFA<br>→ Il ne se bat plus contre lui-même — le système fait le travail"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le suivi — ce qu'on mesure s'améliore",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Suivre sa discipline la renforce. Visualiser sa progression crée ce que les psychologues appellent une <strong>chaîne de succès</strong> — et briser la chaîne devient douloureux.<br><br>Outils simples de suivi :<br><br>📅 <strong>Le calendrier coché :</strong> une croix chaque jour où tu as accompli ta tâche — la chaîne visuelle motive à ne pas la briser<br>📊 <strong>Le tableur hebdomadaire :</strong> 5 actions clés, cochées chaque jour<br>📱 <strong>Des apps :</strong> Habitica, Streaks, Notion — pour rendre le suivi visuel et engageant<br>📓 <strong>Le journal de 5 lignes :</strong> chaque soir, 1 victoire + 1 leçon + 1 intention pour demain"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin d'un système complexe. Tu as besoin d'un système simple que tu tiens réellement. Un carnet et un stylo suffisent — si tu les utilises chaque jour."
+        }
+      ]
+    },
+
+    {
+      "titre": "La discipline comme acte de respect envers toi-même",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Il y a une dimension souvent oubliée de la discipline : quand tu tiens un engagement que tu as pris envers toi-même, tu renforces ta propre estime.<br><br>Chaque fois que tu te dis « je vais faire ça » et que tu ne le fais pas, tu t'envoies un message subconscient : <em>« Je ne peux pas me faire confiance. »</em><br><br>Chaque fois que tu te dis « je vais faire ça » et que tu le fais — malgré la fatigue, malgré l'envie de ne pas le faire — tu t'envoies un autre message : <em>« Je suis quelqu'un sur qui on peut compter. »</em><br><br>La discipline ne construit pas seulement tes résultats. Elle construit l'image que tu as de toi-même."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Commence petit. Tiens ce que tu promets. Augmente progressivement. C'est ainsi que se construit la confiance en soi — pas par des déclarations, mais par des actes tenus."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>James Clear – Atomic Habits (2018)</strong> — systèmes, identité et habitudes<br>📖 <strong>Roy Baumeister & John Tierney – Willpower (2011)</strong> — épuisement de l'ego<br>📖 <strong>BJ Fogg – Tiny Habits (2019)</strong> — règle des 2 minutes et ancrage<br>📖 <strong>David Eagleman – Incognito (2011)</strong> — cerveau et comportement automatique<br>📖 <strong>Jerry Seinfeld – Don't Break the Chain</strong> — méthode de la chaîne de succès"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La discipline que tu construis aujourd'hui, personne ne peut te la prendre. Ton diplôme peut expirer. Le marché peut changer. Mais la capacité de faire ce que tu as décidé de faire — chaque jour, quelles que soient les conditions — c'est un avantage compétitif permanent."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Qu'est-ce que l'épuisement de l'ego (ego depletion) ?",
+      "options": [
+        "Le sentiment d'orgueil excessif qui pousse à l'échec",
+        "Le phénomène par lequel la volonté se vide au fil des décisions et résistances de la journée — rendant les mauvais choix plus fréquents en soirée",
+        "La fatigue ressentie après une longue session de travail créatif",
+        "Le manque de confiance en soi qui survient après un échec"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Selon James Clear, pourquoi l'approche par identité est-elle plus efficace que l'approche par résultat pour ancrer une habitude ?",
+      "options": [
+        "Parce que les résultats sont toujours trop lointains pour motiver",
+        "Parce qu'agir en cohérence avec qui on veut être crée des habitudes durables, alors qu'agir pour un résultat crée une résistance constante",
+        "Parce que l'identité ne change jamais et offre donc une base plus stable",
+        "Parce que les résultats dépendent des autres, alors que l'identité ne dépend que de soi"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Qu'est-ce que la règle des 2 minutes et à quoi sert-elle ?",
+      "options": [
+        "Décider en moins de 2 minutes si une tâche vaut la peine d'être faite",
+        "Ne jamais travailler sur une tâche pendant plus de 2 minutes avant de faire une pause",
+        "Formuler le démarrage de toute habitude de façon à ce qu'il puisse commencer en 2 minutes — pour lever la résistance au démarrage",
+        "Consacrer 2 minutes par heure à réviser ses objectifs de la journée"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas de Koffi, quelle a été la clé principale de sa transformation ?",
+      "options": [
+        "Il a publié tous les jours sans exception pour maximiser la visibilité",
+        "Il a investi dans un cours de marketing pour améliorer la qualité de son contenu",
+        "Il a remplacé la motivation par un système — règle fixe, environnement préparé, bundling et récompense — qui rendait l'action automatique",
+        "Il a changé de niche pour cibler un marché plus facile à atteindre"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quelle est la règle du « jamais deux fois de suite » ?",
+      "options": [
+        "Ne jamais faire la même erreur deux fois dans une négociation",
+        "Alterner les types de tâches pour éviter la monotonie",
+        "Si tu rates un jour d'habitude, c'est acceptable — mais ne jamais rater deux jours consécutifs, car c'est là que l'habitude commence à se défaire",
+        "Ne jamais travailler deux jours de suite sans pause pour préserver son énergie"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
