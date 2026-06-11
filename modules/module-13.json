@@ -1,0 +1,244 @@
+{
+  "id": 13,
+  "titre": "Surmonter la peur de l'échec",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "La peur de l'échec est la raison numéro 1 pour laquelle des idées brillantes restent dans des têtes brillantes. Dans ce module, tu vas comprendre d'où vient cette peur, pourquoi elle ment, et comment la traverser pour avancer — même quand tout en toi veut reculer.",
+
+  "sections": [
+
+    {
+      "titre": "La peur de l'échec — l'ennemi invisible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Elle ne se présente pas toujours sous son vrai nom. Elle se déguise en :<br><br>🎭 « Je dois encore me préparer. »<br>🎭 « Ce n'est pas le bon moment. »<br>🎭 « Mon idée n'est pas encore assez bonne. »<br>🎭 « Je vais attendre de voir comment ça se passe pour les autres. »<br><br>Derrière chacune de ces phrases se cache la même chose : la peur de tenter et de ne pas réussir. La peur de se retrouver face à la preuve qu'on n'est peut-être pas capable."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La peur de l'échec ne te protège pas. Elle te maintient exactement là où tu es — dans un endroit qui ne te satisfait pas, mais qui te semble sûr."
+        }
+      ]
+    },
+
+    {
+      "titre": "D'où vient cette peur ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La peur de l'échec ne naît pas avec toi. Elle s'installe progressivement, à travers des expériences et des messages reçus depuis l'enfance :<br><br>🏫 <strong>L'école</strong> qui punit l'erreur au lieu de l'enseigner<br>👨‍👩‍👧 <strong>La famille</strong> qui valorise la sécurité d'emploi plutôt que le risque<br>👥 <strong>La société</strong> qui fait honte à celui qui tente et ne réussit pas<br>📱 <strong>Les réseaux sociaux</strong> qui ne montrent que les succès, jamais les chemins chaotiques<br><br>Résultat : on grandit en croyant que l'échec est une anomalie honteuse — alors que c'est une étape normale de tout parcours."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Dans beaucoup de familles africaines, l'enfant qui échoue à un examen est réprimandé devant tout le monde. L'enfant qui réussit est célébré. Le message implicite est clair : <em>échouer, c'est être une honte</em>. Des années plus tard, adulte, cette même personne hésite à lancer son business — parce qu'inconsciemment, échouer signifie encore être une honte."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ce que tu risques vraiment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand tu as peur d'échouer, pose-toi cette question honnêtement :<br><br><strong>« Qu'est-ce qui se passe concrètement si ça ne marche pas ? »</strong><br><br>Dans la plupart des cas, la réponse est :<br>→ Tu perds du temps<br>→ Tu perds peut-être un peu d'argent<br>→ Tu apprends énormément<br>→ Tu recommences autrement<br><br>Ce que la peur te fait croire :<br>→ Ta vie sera détruite<br>→ Tout le monde te jugera pour toujours<br>→ Tu ne pourras plus jamais te relever"
+        },
+        {
+          "type": "attention",
+          "contenu": "Le cerveau humain surestime systématiquement les conséquences d'un échec — et sous-estime sa capacité à s'en remettre. C'est un biais cognitif documenté, appelé le « biais de négativité ». En réalité, tu es beaucoup plus résilient(e) que tu ne le penses."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le vrai coût — celui de ne jamais essayer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "On parle souvent du coût de l'échec. Personne ne parle du coût de l'inaction.<br><br>Pourtant, ne jamais essayer a un prix :<br><br>💸 Le revenu que tu aurais pu générer<br>🌱 La version de toi que tu aurais pu devenir<br>🕐 Les années passées à regarder les autres avancer<br>😔 Le regret — et le regret est souvent plus douloureux que l'échec lui-même<br><br>Une étude de l'Université Cornell a montré que sur le long terme, les gens regrettent davantage ce qu'ils n'ont <strong>pas fait</strong> que ce qu'ils ont fait et raté."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Dans 10 ans, tu ne te souviendras probablement pas du post qui a fait peu de vues, du message qui n'a pas reçu de réponse ou de la formation qui a mis du temps à décoller. Tu te souviendras de la décision que tu as prise — ou pas prise."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les plus grands — et leurs échecs les plus cuisants",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici ce que l'histoire ne met pas en avant :<br><br>🎤 <strong>Beyoncé</strong> a été rejetée de plusieurs maisons de disques avant de signer son premier contrat<br>🚀 <strong>Elon Musk</strong> a failli faire faillite avec Tesla et SpaceX simultanément en 2008<br>📖 <strong>J.K. Rowling</strong> a été refusée par 12 éditeurs avant qu'Harry Potter soit publié<br>💻 <strong>Steve Jobs</strong> a été viré de sa propre entreprise avant d'y revenir et de la transformer<br>🌍 <strong>Aliko Dangote</strong>, l'homme le plus riche d'Afrique, a traversé de nombreuses faillites avant de construire son empire"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La différence entre ces personnes et celles qui ont renoncé n'est pas le talent. C'est qu'elles ont décidé que l'échec était une information, pas une conclusion."
+        }
+      ]
+    },
+
+    {
+      "titre": "Recadrer l'échec — la technique du scientifique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un scientifique ne vit pas ses expériences ratées comme des échecs personnels. Il dit : <em>« Cette hypothèse ne fonctionnait pas. Je vais tester une autre approche. »</em><br><br>Applique cette logique à ton business :<br><br>❌ <strong>Ancienne lecture :</strong> « Mon post n'a eu aucune interaction — je suis nul(le). »<br>✅ <strong>Nouvelle lecture :</strong> « Ce format n'a pas fonctionné pour mon audience. Je vais tester autre chose. »<br><br>❌ <strong>Ancienne lecture :</strong> « Personne n'a acheté ma formation — mon idée est mauvaise. »<br>✅ <strong>Nouvelle lecture :</strong> « Mon message de vente n'a pas convaincu. Qu'est-ce qui bloque ? Comment l'améliorer ? »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Kofi, entrepreneur ghanéen, a lancé sa première boutique en ligne. Zéro vente en 3 semaines. Ancienne version de lui-même : il aurait fermé et conclu que « ça ne marche pas au Ghana ». Nouvelle version : il analyse, découvre que ses photos produits sont de mauvaise qualité, les refait avec son téléphone et une bonne lumière. Premières ventes la semaine suivante."
+        }
+      ]
+    },
+
+    {
+      "titre": "La technique des 10/10/10",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand la peur d'échouer te paralyse, pose-toi ces 3 questions :<br><br>⏱️ <strong>Dans 10 minutes :</strong> comment je vais me sentir si je fais ce pas que j'évite ?<br>📅 <strong>Dans 10 mois :</strong> est-ce que cet échec potentiel aura encore de l'importance ?<br>🗓️ <strong>Dans 10 ans :</strong> est-ce que je regretterai de ne pas avoir essayé ?<br><br>Cette technique, popularisée par Suzy Welch, force ton cerveau à sortir de l'instant présent — où la peur est maximale — pour voir la situation avec du recul."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Tu veux publier ta première vidéo mais tu as peur du jugement. Tu appliques les 10/10/10 :<br>→ Dans 10 minutes : soulagement d'avoir enfin osé<br>→ Dans 10 mois : personne ne s'en souviendra — sauf toi<br>→ Dans 10 ans : tu seras soit fier(e) d'avoir commencé, soit plein(e) de regrets<br><br>Réponse évidente. Tu publies."
+        }
+      ]
+    },
+
+    {
+      "titre": "S'immuniser — l'exposition progressive à l'inconfort",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les thérapeutes utilisent une technique appelée <strong>désensibilisation progressive</strong> : s'exposer graduellement à ce qu'on redoute jusqu'à ce que ça perde son pouvoir.<br><br>Tu peux faire la même chose avec la peur de l'échec :<br><br>🟢 <strong>Niveau 1 :</strong> poster un avis sur un groupe Facebook — risque minimal<br>🟡 <strong>Niveau 2 :</strong> partager ton projet avec 3 amis et demander un retour<br>🟠 <strong>Niveau 3 :</strong> publier ton premier contenu professionnel<br>🔴 <strong>Niveau 4 :</strong> proposer ton offre à un premier client réel<br><br>Chaque niveau réussi réduit la peur du suivant. L'exposition crée la confiance."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu ne vas pas éliminer la peur de l'échec. Mais en t'y exposant régulièrement, tu vas réduire son emprise sur toi jusqu'à ce qu'elle ne dicte plus tes décisions."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Sidy, de la honte à la résilience",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation :</strong><br><br>Sidy a 28 ans, à Dakar. Il lance une agence de communication digitale en 2022. Après 4 mois, il perd son plus gros client. Sa réputation locale en prend un coup. Sa famille lui dit d'arrêter et de « trouver un vrai travail ». Il est à deux doigts d'abandonner."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qu'il a fait :</strong><br><br>📝 Il écrit noir sur blanc ce qui s'est passé — sans se juger, comme un scientifique qui analyse une expérience<br>💡 Il identifie 3 erreurs concrètes : il avait sous-estimé le client, mal défini les livrables, et ne s'était pas fait payer d'avance<br>🔄 Il reformule ses contrats, crée un processus d'onboarding client, exige un acompte<br>📱 Il publie un post honnête sur LinkedIn : « Ce que j'ai appris de mon plus gros échec »<br><br><strong>Résultat :</strong><br>→ Le post devient viral au Sénégal — 4 200 partages<br>→ Il reçoit 17 demandes de collaboration en 2 semaines<br>→ Son chiffre d'affaires double l'année suivante<br><br>L'échec, partagé honnêtement, est devenu son meilleur argument de vente."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire sa tolérance à l'incertitude",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Entreprendre, c'est vivre dans l'incertitude. Tu ne sauras jamais avec certitude si ça va marcher. Et c'est exactement ce qui bloque la majorité des gens.<br><br>Les personnes qui avancent malgré l'incertitude ont développé une compétence rare : la <strong>tolérance à l'ambiguïté</strong>.<br><br>Comment la développer :<br><br>🎲 Prends des petites décisions sans avoir toutes les informations<br>📊 Définis à l'avance ce que tu considères comme un succès minimum acceptable<br>⏳ Fixe une date limite — « Je teste pendant 90 jours avant de conclure quoi que ce soit »<br>🔁 Normalise l'idée que tu vas ajuster en chemin — pas tout prévoir dès le départ"
+        },
+        {
+          "type": "attention",
+          "contenu": "Chercher la certitude avant d'agir est un luxe que l'entrepreneur ne peut pas se payer. Le marché ne te donnera jamais de garanties. Ce qui compte, c'est ta capacité à avancer, à observer et à corriger."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ta lettre à l'échec",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un exercice puissant pour changer ta relation à l'échec :<br><br>✍️ Prends une feuille ou ouvre une note sur ton téléphone.<br><br>Écris une lettre à l'échec. Dis-lui :<br>→ Ce que tu as appris la dernière fois qu'il est passé<br>→ Comment il t'a changé(e) — en mieux<br>→ Ce que tu ferais différemment si tu avais à refaire<br>→ Que tu n'as plus peur de lui comme avant<br><br>Cet exercice n'est pas symbolique. Il active une partie du cerveau liée à la régulation émotionnelle et aide à déconstruire la charge négative associée à l'échec."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les personnes qui réussissent n'ont pas une relation d'amour avec l'échec. Elles ont une relation de respect. Elles savent qu'il viendra. Elles savent qu'elles s'en remettront. Et cette certitude leur donne la liberté d'agir."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>Suzy Welch – 10/10/10 : A Fast and Powerful Way to Get Unstuck (2009)</strong><br>📖 <strong>Daniel Kahneman – Thinking, Fast and Slow (2011)</strong> — biais de négativité<br>📖 <strong>Tom Gilovich & Victoria Medvec – The Experience of Regret (Cornell University, 1994)</strong> — regrets d'inaction<br>📖 <strong>Brené Brown – Rising Strong (2015)</strong> — se relever après l'échec<br>📖 <strong>McKinsey – African Entrepreneurs and Risk Perception (2023)</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La peur de l'échec ne disparaît pas — elle se gère. Et chaque entrepreneur qui a réussi quelque chose en Afrique a dû traverser exactement ce que tu traverses. La différence, c'est qu'ils ont continué."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Selon la recherche de l'Université Cornell, qu'est-ce que les gens regrettent le plus sur le long terme ?",
+      "options": [
+        "Les erreurs commises et les échecs vécus",
+        "L'argent dépensé dans des projets qui n'ont pas abouti",
+        "Ce qu'ils n'ont pas fait — les occasions manquées et les risques non pris",
+        "Les relations professionnelles mal gérées"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "C'est quoi le biais de négativité mentionné dans ce module ?",
+      "options": [
+        "La tendance à ne voir que les aspects négatifs des autres",
+        "Le fait que le cerveau surestime les conséquences d'un échec et sous-estime sa capacité à s'en remettre",
+        "La difficulté à recevoir des compliments et du feedback positif",
+        "La tendance à critiquer les entrepreneurs qui réussissent"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Que s'est-il passé quand Sidy a publié un post honnête sur son échec sur LinkedIn ?",
+      "options": [
+        "Il a perdu encore plus de clients à cause de sa mauvaise réputation",
+        "Rien de particulier — les gens ignorent généralement les échecs des autres",
+        "Le post est devenu viral avec 4 200 partages et lui a amené 17 demandes de collaboration",
+        "Il a reçu des critiques sévères de la communauté professionnelle sénégalaise"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "La technique des 10/10/10 consiste à :",
+      "options": [
+        "Consacrer 10 minutes, 10 heures et 10 jours à la préparation avant d'agir",
+        "Se demander comment on se sentira dans 10 minutes, 10 mois et 10 ans face à une décision — pour sortir de la paralysie du moment présent",
+        "Tester son idée auprès de 10 personnes avant de la lancer",
+        "Diviser son objectif en 10 étapes de 10 jours chacune"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Comment la désensibilisation progressive aide-t-elle à surmonter la peur de l'échec ?",
+      "options": [
+        "En évitant toute situation d'échec pour protéger la confiance en soi",
+        "En s'exposant une seule fois à une grande prise de risque pour « briser la glace »",
+        "En s'exposant graduellement à des situations de risque croissant jusqu'à ce que la peur perde son pouvoir paralysant",
+        "En regardant des vidéos d'autres personnes qui ont échoué pour normaliser l'expérience"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
