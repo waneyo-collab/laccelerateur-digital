@@ -268,8 +268,8 @@
 // ════════════════════════════════════════════
 //  CONFIG  ← mets ici tes vraies valeurs
 // ════════════════════════════════════════════
-const SB_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
-const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
+const SB_URL = 'REMPLACER_PAR_TON_URL_SUPABASE';
+const SB_KEY = 'REMPLACER_PAR_TA_CLE_SUPABASE_ANON';
 
 // ════════════════════════════════════════════
 //  ÉTAT
@@ -298,10 +298,14 @@ document.addEventListener('DOMContentLoaded', async () => {
 // ════════════════════════════════════════════
 async function getSession() {
   try {
-    const k = Object.keys(localStorage).find(x => x.includes('supabase') && x.includes('auth-token'));
+    // Supabase v2 stocke le token sous "sb-[ref]-auth-token"
+    const k = Object.keys(localStorage).find(x => x.includes('auth-token'));
     if (!k) return null;
-    const d = JSON.parse(localStorage.getItem(k));
-    const token = d?.access_token;
+    const raw = localStorage.getItem(k);
+    if (!raw) return null;
+    const d = JSON.parse(raw);
+    // Supabase v2 : { access_token, ... } ou { data: { session: { access_token } } }
+    const token = d?.access_token || d?.data?.session?.access_token;
     if (!token) return null;
     const r = await fetch(`${SB_URL}/auth/v1/user`, {
       headers: { Authorization: `Bearer ${token}`, apikey: SB_KEY }
@@ -318,8 +322,12 @@ async function checkSub(id, token) {
       `${SB_URL}/rest/v1/subscribers?user_id=eq.${id}&select=status`,
       { headers: { Authorization: `Bearer ${token}`, apikey: SB_KEY } }
     );
+    if (!r.ok) return false;
     const rows = await r.json();
-    return rows.some(x => x.status === 'active' || x.status === 'trialing');
+    // Accepte : active, trialing, et aussi les utilisateurs en essai gratuit
+    return Array.isArray(rows) && rows.some(x =>
+      ['active','trialing','trial'].includes(x.status)
+    );
   } catch { return false; }
 }
 
