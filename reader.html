@@ -283,20 +283,24 @@ document.addEventListener('DOMContentLoaded', async () => {
   const p = new URLSearchParams(window.location.search);
   mid = parseInt(p.get('module') || '1');
 
-  // Module 1 = module gratuit, accessible sans connexion
+  // Module 1 = gratuit, aucune vérification
   if (mid === 1) {
     await loadModule(mid);
     return;
   }
 
-  // Autres modules : vérification auth + abonnement
+  // Modules 2-30 : session requise (l'abonnement est déjà géré par index.html)
+  // Si reader.html est dans un iframe, on fait confiance au parent
+  const inIframe = window.self !== window.top;
+  if (inIframe) {
+    await loadModule(mid);
+    return;
+  }
+
+  // Accès direct à l'URL (hors iframe) : vérification session
   const sess = await getSession();
   if (!sess) { location.href = '/?login=1'; return; }
   uid = sess.id;
-
-  const ok = await checkSub(uid, sess.token);
-  if (!ok) { location.href = '/?subscribe=1'; return; }
-
   await loadModule(mid);
 });
 
@@ -430,12 +434,12 @@ function show(i) {
 function tplIntro(m) {
   return `
     <div class="slide">
-      <div class="mod-label">Module ${m.id} · ${m.duree}</div>
+      <div class="mod-label">Module ${m.id} · 40 min</div>
       <h1 class="slide-title">${m.titre}</h1>
       ${m.description ? `<div class="blk blk-texte">${m.description}</div>` : ''}
       <div class="intro-meta">
         📋 <strong>${m.sections.length} étapes</strong> &nbsp;·&nbsp;
-        ⏱ <strong>${m.duree}</strong> &nbsp;·&nbsp;
+        ⏱ <strong>40 min</strong> &nbsp;·&nbsp;
         ${m.phase ? `📁 Phase ${m.phase}` : ''}
       </div>
     </div>`;
