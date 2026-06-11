@@ -1,0 +1,139 @@
+{
+  "id": 21,
+  "titre": "Devenir entrepreneur digital",
+  "duree": "15 min",
+  "phase": 3,
+  "description": "Tu as les compétences marketing, tu as le mindset. Maintenant, comment te lancer concrètement en tant qu'entrepreneur digital depuis l'Afrique ou le Maghreb ? Profils, outils, freins réels et solutions alternatives — tout ce que personne ne te dit au départ.",
+  "sections": [
+    {
+      "type": "texte",
+      "titre": "Bienvenue dans la phase la plus concrète",
+      "contenu": "Tu viens de traverser 20 modules. Tu comprends le marketing digital. Tu as un mental solide. Tu sais passer de l'idée à l'action.\n\nLa phase 3 va plus loin : elle t'accompagne dans la construction réelle d'une activité digitale qui génère des revenus — depuis Casablanca, Dakar, Abidjan, Tunis ou n'importe quelle ville africaine.\n\nPas de théorie importée d'ailleurs. Des solutions adaptées à ton contexte."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Qu'est-ce qu'un entrepreneur digital ?",
+      "contenu": "Un entrepreneur digital crée de la valeur et génère des revenus principalement via internet — sans nécessiter de local commercial, de stock physique important, ni d'équipe au départ.\n\nCe qui le différencie d'un salarié ou d'un freelance classique : il construit un **système** qui peut tourner partiellement sans lui, à terme.\n\nSon outil principal : un ordinateur ou un smartphone. Son marché : potentiellement le monde entier."
+    },
+    {
+      "type": "texte",
+      "titre": "Les 6 profils d'entrepreneurs digitaux",
+      "contenu": "Il n'existe pas un seul type d'entrepreneur digital. Voici les 6 profils les plus accessibles depuis l'Afrique :\n\n**1. Le formateur en ligne** — vend ses connaissances sous forme de cours ou coaching\n**2. Le freelance digital** — offre ses services (contenu, design, code, SEO) à des clients locaux ou internationaux\n**3. Le créateur de contenu** — monétise son audience via la publicité, le sponsoring ou ses propres produits\n**4. L'e-commerçant** — vend des produits physiques ou numériques en ligne\n**5. Le consultant / stratège** — accompagne des entreprises sur leur transformation digitale\n**6. Le développeur de SaaS ou d'outils numériques** — crée des logiciels ou applications vendus par abonnement\n\nTu n'as pas besoin de tout faire. Un seul profil bien exécuté suffit pour démarrer."
+    },
+    {
+      "type": "exemple",
+      "titre": "Étude de cas — Yasmine, Casablanca",
+      "contenu": "Yasmine a 27 ans. Ancienne assistante RH, elle a suivi cette formation pour comprendre le marketing digital. Elle a identifié son profil : formatrice en ligne, spécialisée dans la rédaction professionnelle pour les PME marocaines.\n\nSon premier obstacle : comment encaisser des paiements en ligne depuis le Maroc ? Stripe lui est inaccessible. PayPal est limité. Elle ne sait pas comment facturer une cliente à Lyon.\n\nCe module répond exactement à cette question — et à toutes celles qui viennent après."
+    },
+    {
+      "type": "texte",
+      "titre": "Pourquoi maintenant, depuis l'Afrique ?",
+      "contenu": "Le moment n'a jamais été aussi favorable :\n\n- L'Afrique compte plus de **570 millions d'internautes** en 2024, avec un taux de croissance annuel de 10 % (ITU, 2024)\n- Le marché du e-learning en Afrique est estimé à **3,6 milliards de dollars d'ici 2026** (Mordor Intelligence)\n- Le coût de création d'une activité digitale depuis l'Afrique est **10 à 20 fois inférieur** à celui d'une activité physique équivalente\n- La diaspora africaine représente un **marché premium** qui cherche des contenus de qualité en français, arabe ou langues locales\n\nLa demande est réelle. La concurrence locale est encore faible. La fenêtre est ouverte."
+    },
+    {
+      "type": "attention",
+      "titre": "Le frein n°1 : le paiement en ligne depuis l'Afrique",
+      "contenu": "C'est le mur que rencontrent presque tous les entrepreneurs digitaux francophones d'Afrique.\n\n**Stripe** — la solution de paiement la plus utilisée au monde — n'est pas disponible dans la majorité des pays francophones d'Afrique : Maroc, Algérie, Sénégal, Côte d'Ivoire, Cameroun, Tunisie...\n\nCela signifie que tu ne peux pas créer un compte marchand Stripe directement depuis ces pays. Ce n'est pas une fatalité — il existe plusieurs alternatives solides."
+    },
+    {
+      "type": "texte",
+      "titre": "Les alternatives de paiement pour les pays non couverts par Stripe",
+      "contenu": "**Pour vendre à l'international (Europe, Amérique, monde) :**\n- **Paddle** — merchant of record basé en Europe, accessible depuis tous les pays, idéal pour vendre des formations ou produits numériques. Gère TVA et conformité automatiquement.\n- **Lemon Squeezy** — similaire à Paddle, très simple, adapté aux créateurs de contenu et formateurs\n- **Gumroad** — plateforme de vente de produits numériques, accepte les comptes depuis le monde entier\n- **PayPal Business** — limité dans certains pays (Maroc : réception possible, retrait via virement possible selon les banques)\n\n**Pour vendre localement en Afrique francophone :**\n- **CinetPay** — Côte d'Ivoire, Sénégal, Burkina Faso, Mali, Togo, Cameroun\n- **PayDunya** — Sénégal, Côte d'Ivoire, Mali, Burkina Faso\n- **Wave** — Sénégal, Côte d'Ivoire\n- **Orange Money / MTN Mobile Money** — très large couverture Afrique subsaharienne\n- **CMI (Centre Monétique Interbancaire)** — Maroc, paiement par carte bancaire marocaine\n- **MoneyGram / Western Union** — solutions de dernier recours, adaptées aux transferts ponctuels"
+    },
+    {
+      "type": "point_cle",
+      "titre": "La solution Paddle expliquée simplement",
+      "contenu": "Paddle fonctionne comme un intermédiaire légal : c'est Paddle qui est officiellement le vendeur, et qui te reverse les fonds. Tu n'as pas besoin d'une entreprise enregistrée aux États-Unis ou en Europe.\n\n**Comment ça marche :**\n1. Tu crées un compte Paddle (gratuit)\n2. Tu configures ton produit (formation, PDF, abonnement)\n3. Paddle génère une page de paiement que tu partages à tes clients\n4. Tes clients paient par carte bancaire internationale\n5. Paddle te reverse l'argent par virement international (environ 5 % de commission)\n\nC'est la solution utilisée par Nadia sur cette plateforme. Elle fonctionne depuis le Maroc."
+    },
+    {
+      "type": "texte",
+      "titre": "Les outils essentiels pour démarrer (tous gratuits ou freemium)",
+      "contenu": "Tu n'as pas besoin d'investir pour valider ton idée. Voici la boîte à outils minimale :\n\n**Créer et vendre :**\n- Gumroad ou Lemon Squeezy — vendre tes premiers produits numériques\n- Canva — créer tes supports visuels et PDF\n- Notion — organiser ton contenu et ta roadmap\n\n**Communiquer et trouver des clients :**\n- WhatsApp Business — relation client directe\n- Meta Business Suite — gérer Facebook et Instagram\n- Mailchimp (gratuit jusqu'à 500 contacts) — e-mailing\n\n**Gérer ton activité :**\n- Google Workspace (gratuit) — docs, sheets, forms\n- Calendly — prendre des rendez-vous sans aller-retour\n- Wave Accounting (gratuit) — suivi de tes revenus et dépenses"
+    },
+    {
+      "type": "texte",
+      "titre": "Le modèle économique minimal viable",
+      "contenu": "Avant de penser à l'échelle, construis ce triangle :\n\n**1 offre** — claire, ciblée, à un prix précis\n**1 canal** — là où se trouve ton client idéal\n**1 moyen de paiement** — fonctionnel, testé, sans friction\n\nBeaucoup d'entrepreneurs digitaux africains échouent non pas faute de compétences, mais parce qu'ils n'ont jamais fermé ce triangle. Ils ont une offre floue, 5 canaux actifs simultanément, et aucun moyen de paiement opérationnel.\n\nFerme le triangle d'abord. Scale ensuite."
+    },
+    {
+      "type": "attention",
+      "titre": "L'erreur classique : vouloir tout faire pour tout le monde",
+      "contenu": "« Je fais du marketing digital, du graphisme, de la rédaction, du community management et je peux aussi faire des sites web. »\n\nCette phrase rassure celui qui la dit — et inquiète le client qui l'entend.\n\nUn positionnement vague = 0 client. Un positionnement précis = les bons clients viennent à toi.\n\nMieux vaut être « la spécialiste du marketing Instagram pour les artisanes marocaines » que « consultante digitale généraliste ». La niche protège, elle ne limite pas."
+    },
+    {
+      "type": "texte",
+      "titre": "Trouver ses 3 premiers clients sans publicité payante",
+      "contenu": "Tes 3 premiers clients ne viendront pas d'une campagne Meta Ads. Ils viendront de :\n\n**1. Ton réseau immédiat** — famille, amis, anciens collègues, camarades de formation. Parle de ce que tu fais. Simplement.\n**2. Les groupes Facebook et WhatsApp de ta niche** — apporte de la valeur gratuitement pendant 2 semaines avant de proposer quoi que ce soit\n**3. LinkedIn** — si ton offre cible des professionnels ou des entreprises, c'est le canal le plus rentable en organique\n\nLes 3 premiers clients valident ton offre. Ils te donnent des témoignages. Ils te présentent à d'autres. Ils sont la base de tout."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Statut juridique et légalité — ce qu'il faut savoir",
+      "contenu": "Tu n'as pas besoin d'être enregistré·e pour valider ton idée. Mais dès que tu génères des revenus réguliers, la régularisation protège et crédibilise.\n\n**Maroc :** auto-entrepreneur (régime simplifié, cotisation sociale fixe, TVA exonérée jusqu'à un certain seuil)\n**Sénégal :** entreprise individuelle ou SUARL\n**Côte d'Ivoire :** entreprise individuelle via le CEPICI (Centre de Promotion des Investissements)\n**Tunisie :** auto-entrepreneur depuis 2020 (statut simplifié)\n**Cameroun :** entreprise individuelle via le CFCE\n\nPour vendre à l'international via Paddle ou Lemon Squeezy, le statut juridique local reste valable — ces plateformes gèrent la conformité fiscale internationale pour toi."
+    },
+    {
+      "type": "exemple",
+      "titre": "Retour sur Yasmine",
+      "contenu": "Yasmine a ouvert un compte Paddle en 48 heures. Elle a créé son premier produit numérique : un guide PDF de 30 pages sur « Rédiger des emails professionnels en français » vendu 19€.\n\nElle l'a promu dans 3 groupes Facebook de PME marocaines et une communauté WhatsApp de RH francophones. En 3 semaines : 17 ventes, soit 323€ de premiers revenus.\n\nElle n'avait pas de site web. Pas de statut juridique encore. Juste une offre claire, un canal ciblé, et un moyen de paiement qui fonctionne.\n\nAujourd'hui, elle s'est enregistrée comme auto-entrepreneur au Maroc et prépare sa première formation en live."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Sources",
+      "contenu": "- ITU (Union Internationale des Télécommunications). *Measuring digital development: Facts and figures 2024*. itu.int\n- Mordor Intelligence (2024). *Africa E-learning Market — Growth, Trends and Forecasts 2024-2029*.\n- Paddle.com — documentation officielle et conditions d'utilisation (2024)\n- CinetPay.com — documentation API et pays couverts (2024)\n- Banque Mondiale (2023). *The Future of Work in Africa: Harnessing the Potential of Digital Technologies*.\n- Agence Nationale pour la Promotion de la PME, Maroc — régime auto-entrepreneur 2024 (anpme.ma)"
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Pourquoi Stripe n'est pas utilisable directement par la majorité des entrepreneurs francophones d'Afrique ?",
+          "options": [
+            "Stripe est trop cher pour les marchés africains",
+            "Stripe n'est pas disponible dans la plupart des pays francophones d'Afrique comme le Maroc, le Sénégal ou la Côte d'Ivoire",
+            "Stripe ne supporte pas les paiements en euros",
+            "Stripe exige un capital minimum de 10 000€ pour ouvrir un compte"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Parmi ces solutions, laquelle est la plus adaptée pour vendre une formation en ligne depuis le Maroc à des clients européens ?",
+          "options": [
+            "Stripe",
+            "CinetPay",
+            "Paddle ou Lemon Squeezy",
+            "Western Union"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Qu'est-ce que le 'modèle économique minimal viable' recommandé dans ce module ?",
+          "options": [
+            "Avoir plusieurs offres pour toucher le maximum de clients",
+            "Attendre d'avoir un site web professionnel avant de vendre",
+            "Construire le triangle : 1 offre claire, 1 canal, 1 moyen de paiement fonctionnel",
+            "Investir dans la publicité payante dès le premier mois"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Quel est le principal risque d'un positionnement trop généraliste ?",
+          "options": [
+            "Attirer trop de clients et ne pas pouvoir tous les servir",
+            "Ne convaincre aucun client car le message ne parle à personne en particulier",
+            "Être copié par des concurrents plus spécialisés",
+            "Payer plus d'impôts sur un large spectre d'activités"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "D'après ce module, comment trouver ses 3 premiers clients sans publicité payante ?",
+          "options": [
+            "Créer un site web SEO optimisé et attendre le trafic organique",
+            "Lancer immédiatement une campagne Instagram Ads",
+            "Activer son réseau immédiat, apporter de la valeur dans des groupes ciblés et utiliser LinkedIn",
+            "Contacter des journalistes pour obtenir de la presse gratuite"
+          ],
+          "reponse": 2
+        }
+      ]
+    }
+  ]
+}
