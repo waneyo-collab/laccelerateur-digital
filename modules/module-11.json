@@ -1,0 +1,286 @@
+{
+  "id": 11,
+  "titre": "Forger un mental de champion",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "Le plus grand obstacle entre toi et ton succès, ce n'est pas le marché, le budget ou les contacts. C'est ce qui se passe dans ta tête. Dans ce module, tu vas comprendre comment fonctionne le mental des personnes qui réussissent — et comment construire le tien, pas à pas.",
+
+  "sections": [
+
+    {
+      "titre": "La seule différence qui compte vraiment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Deux personnes. Le même quartier, la même école, les mêmes ressources limitées. L'une lance son business et réussit. L'autre attend encore le bon moment.<br><br>Qu'est-ce qui les sépare ?<br><br>Pas le talent. Pas la chance. Pas les contacts.<br><br><strong>Le mental.</strong><br><br>Le mental, c'est cette capacité à continuer quand rien ne semble fonctionner, à croire en soi avant que les résultats arrivent, à agir malgré la peur."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le succès ne commence pas par une idée, un diplôme ou un capital. Il commence par une décision intérieure. Et cette décision, tu peux la prendre aujourd'hui."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ce que les champions savent — et que personne ne t'a dit",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand tu vois quelqu'un qui réussit, tu vois le résultat. Tu ne vois pas :<br><br>😰 Les 47 fois où il a douté de lui<br>🚪 Les portes fermées au nez<br>💸 L'argent perdu avant de gagner<br>🌙 Les nuits à se demander si ça vaut la peine<br><br>La réussite visible est construite sur une fondation invisible : des heures de travail sur soi, de discipline mentale, de refus de s'arrêter."
+        },
+        {
+          "type": "attention",
+          "contenu": "Comparer ton début avec la fin d'un autre, c'est le chemin le plus rapide vers le découragement. Tu ne vois jamais le chemin — seulement l'arrivée."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le mental fixe vs le mental de croissance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La psychologue Carol Dweck a passé 30 ans à étudier pourquoi certaines personnes s'améliorent et d'autres stagnent. Elle a découvert deux types de mentalités :<br><br>🔒 <strong>Le mental fixe :</strong> « Je ne suis pas fait(e) pour ça. » « Soit on est doué(e), soit on ne l'est pas. » « Si j'échoue, c'est que je suis nul(le). »<br><br>🔓 <strong>Le mental de croissance :</strong> « Je ne sais pas encore le faire. » « L'échec m'apprend quelque chose. » « Je peux progresser avec du travail. »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Deux étudiants ratent le même examen. Le premier dit : « Je suis mauvais, ce n'est pas pour moi. » Il abandonne. Le second dit : « Je n'ai pas encore trouvé la bonne méthode. » Il recommence différemment. Un an plus tard, il enseigne cette matière.<br><br>Le cerveau est plastique. Il se renforce exactement comme un muscle — avec de l'effort, de la répétition et de la persévérance."
+        }
+      ]
+    },
+
+    {
+      "titre": "Tu n'es pas en retard — tu es au bon moment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique, une pensée revient souvent chez les jeunes entrepreneurs :<br><br><em>« J'aurais dû commencer plus tôt. »</em><br><em>« Les autres ont déjà 5 ans d'avance sur moi. »</em><br><em>« Il est trop tard pour moi. »</em><br><br>Ces pensées sont des mensonges confortables. Confortables parce qu'elles justifient l'inaction."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Vera Wang a lancé sa marque à 40 ans. Samuel L. Jackson est devenu star à 46 ans. Jack Ma a échoué à tous ses entretiens d'embauche avant de fonder Alibaba. Il n'y a pas d'âge pour commencer. Il y a seulement le moment où tu décides."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comprendre ta voix intérieure",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans ta tête, il y a une voix qui commente tout ce que tu fais. Cette voix dit des choses comme :<br><br>💬 « Qui es-tu pour faire ça ? »<br>💬 « Les gens vont se moquer de toi. »<br>💬 « Ça ne marchera jamais ici. »<br>💬 « Tu n'as pas les compétences. »<br><br>Cette voix a un nom : le <strong>syndrome de l'imposteur</strong>. Et 70 % des personnes qui réussissent le ressentent — y compris ceux que tu admires."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Fatoumata, entrepreneuse à Abidjan, pensait que son accent, son quartier et son manque de diplôme l'empêcheraient d'être prise au sérieux. Elle a lancé quand même. Aujourd'hui, elle forme d'autres femmes à faire pareil. Le syndrome de l'imposteur n'a pas disparu — elle a appris à agir malgré lui."
+        }
+      ]
+    },
+
+    {
+      "titre": "La peur — ton signal, pas ton ennemi",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La peur n'est pas le signe que tu ne dois pas avancer. C'est le signe que ce que tu veux <strong>compte vraiment</strong> pour toi.<br><br>Les personnes qui ne ressentent jamais de peur ne prennent jamais de risques — et ne connaissent jamais la croissance.<br><br>La question n'est pas : <em>« Comment éliminer la peur ? »</em><br>La bonne question est : <em>« Comment agir malgré la peur ? »</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le courage n'est pas l'absence de peur. C'est la décision que quelque chose d'autre est plus important que la peur. Chaque fois que tu agis malgré la peur, tu renforces ton mental. Chaque fois que tu recules, tu renforces la peur."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 3 croyances qui bloquent les jeunes entrepreneurs africains",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces 3 croyances sont les plus répandues — et les plus destructrices :"
+        },
+        {
+          "type": "attention",
+          "contenu": "🚫 <strong>Croyance 1 : « Il faut avoir de l'argent pour gagner de l'argent. »</strong><br>La réalité : les premières entreprises qui ont réussi en Afrique ont démarré avec presque rien — un téléphone, une compétence et une connexion internet.<br><br>🚫 <strong>Croyance 2 : « Il faut un diplôme pour être crédible. »</strong><br>La réalité : tes résultats et ta réputation valent plus qu'un bout de papier. Les clients paient pour ce que tu peux faire, pas pour ce que tu as étudié.<br><br>🚫 <strong>Croyance 3 : « Ce n'est pas fait pour quelqu'un comme moi. »</strong><br>La réalité : le digital a effacé les barrières géographiques, sociales et financières. Un entrepreneur de Cotonou peut vendre à Paris. C'est maintenant possible."
+        }
+      ]
+    },
+
+    {
+      "titre": "Reprogrammer ses croyances — la méthode concrète",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une croyance n'est pas un fait. C'est une pensée répétée si souvent qu'elle semble vraie. La bonne nouvelle : tu peux en changer.<br><br>La méthode en 3 étapes :<br><br>1️⃣ <strong>Identifie la croyance :</strong> « Je ne suis pas fait(e) pour entreprendre. »<br>2️⃣ <strong>Questionne-la :</strong> « Quelle preuve j'ai que c'est vrai ? Qui m'a dit ça ? Est-ce que c'est un fait ou une opinion ? »<br>3️⃣ <strong>Remplace-la :</strong> « Je suis en train d'apprendre à entreprendre. Je progresse chaque jour. »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Kwame, graphiste à Accra, se répétait depuis des années : « Personne ne paie pour le design au Ghana. » Un jour, il questionne cette croyance. Il réalise qu'il n'a jamais vraiment essayé de vendre au prix juste. Il revoit ses tarifs. Ses premiers clients sérieux arrivent la semaine suivante."
+        }
+      ]
+    },
+
+    {
+      "titre": "La discipline — le vrai secret",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La motivation est une émotion. Elle monte, elle descend. Tu ne peux pas compter sur elle pour construire quelque chose de durable.<br><br>La discipline, c'est différent. C'est agir indépendamment de comment tu te sens.<br><br>Les champions ne s'entraînent pas quand ils ont envie. Ils s'entraînent parce que c'est l'heure. Les entrepreneurs qui réussissent ne travaillent pas sur leur business quand ils sont inspirés. Ils travaillent parce que c'est ce qu'ils font — chaque jour."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La motivation te fait démarrer. La discipline te fait continuer. Et c'est la continuité qui crée les résultats que les autres admirent de loin."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'environnement façonne ton mental",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu es la moyenne des 5 personnes que tu fréquentes le plus. Cette phrase est attribuée à Jim Rohn — et des décennies de recherche en psychologie sociale la confirment.<br><br>Pose-toi ces questions honnêtement :<br><br>👥 Est-ce que les personnes autour de toi croient en tes projets ?<br>📱 Est-ce que les contenus que tu consommes t'élèvent ou t'abrutissent ?<br>💬 Est-ce que tes conversations portent sur des opportunités ou sur des plaintes ?<br><br>Tu ne peux pas choisir ta famille. Mais tu peux choisir tes lectures, tes podcasts, tes groupes WhatsApp et les personnes à qui tu parles de tes projets."
+        },
+        {
+          "type": "attention",
+          "contenu": "Protège ton énergie mentale. Certaines personnes, sans mauvaise intention, peuvent décourager tes ambitions simplement parce que tes rêves leur renvoient ce qu'elles n'osent pas faire elles-mêmes."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'étude de cas — Amara, de Bamako à entrepreneur digital",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Amara a 24 ans. Il vit à Bamako, dans un quartier populaire. Il n'a pas terminé ses études. Sa famille pense que l'entrepreneuriat digital est « un truc de riche » ou une arnaque. Ses amis se moquent quand il parle de son projet de formation en ligne. Il a tout pour abandonner avant de commencer."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qu'il a fait différemment :</strong><br><br>🧠 Il a arrêté de chercher la validation de son entourage — et a commencé à chercher la validation de ses résultats<br>📱 Il a créé un compte TikTok pour partager ce qu'il apprenait — sans attendre d'être « expert »<br>📚 Il a remplacé 1h de réseaux sociaux passifs par 1h d'apprentissage chaque matin<br>🤝 Il a rejoint des communautés d'entrepreneurs en ligne — son vrai entourage<br><br><strong>18 mois plus tard :</strong><br>→ 28 000 abonnés TikTok<br>→ Première vente d'une formation à 25 000 FCFA<br>→ Ses parents, qui doutaient, lui demandent maintenant des conseils"
+        }
+      ]
+    },
+
+    {
+      "titre": "Les rituels des personnes à fort mental",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le mental se construit par des habitudes quotidiennes, pas par des décisions héroïques ponctuelles. Voici les rituels les plus puissants :<br><br>🌅 <strong>Le matin :</strong> 10 minutes sans téléphone — pour définir l'intention de la journée avant que le bruit du monde entre<br>📝 <strong>Le journal :</strong> écrire 3 choses pour lesquelles tu es reconnaissant(e) + 1 action que tu t'engages à faire aujourd'hui<br>📖 <strong>La lecture :</strong> 20 minutes par jour de lecture utile — soit 12 livres par an<br>🏃 <strong>Le mouvement :</strong> l'activité physique régulière est scientifiquement liée à la résilience mentale et à la créativité"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin de tout changer d'un coup. Commence par un seul rituel. Tiens-le pendant 21 jours. Puis ajoutes-en un autre. C'est ainsi que se construit une nouvelle identité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Définir sa vision — l'ancre du mental",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les personnes qui abandonnent n'ont pas toujours moins de talent. Elles ont souvent une vision moins claire de <strong>pourquoi</strong> elles font ce qu'elles font.<br><br>Quand tu sais avec précision où tu vas et pourquoi, les obstacles deviennent des étapes — pas des fins.<br><br>Prends 5 minutes pour répondre à ces questions :<br><br>🔭 Dans 3 ans, à quoi ressemble ta vie si tout se passe bien ?<br>💡 Qu'est-ce que tu veux accomplir — pas pour les autres, pour toi ?<br>🌍 Quel impact veux-tu avoir autour de toi, dans ta famille, ta communauté ?"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Écris ta vision en une phrase. Exemple : « Dans 3 ans, je dirige une formation en ligne qui aide 1 000 jeunes africains à lancer leur activité digitale et je vis de ma passion. » Colle cette phrase quelque part que tu vois chaque matin. Ce n'est pas de la pensée magique — c'est de la direction."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le champion que tu deviens",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un mental de champion ne se forge pas en un jour. Il se forge dans les petites décisions quotidiennes :<br><br>→ Décider de travailler 30 minutes de plus quand tu as envie d'arrêter<br>→ Décider de ne pas partager tes projets avec ceux qui doutent<br>→ Décider de t'améliorer de 1 % chaque jour au lieu de chercher la transformation soudaine<br>→ Décider de te relever après chaque échec — plus vite que la dernière fois<br><br>Ce n'est pas spectaculaire. Mais c'est exactement comme ça que les champions se construisent — un jour à la fois, une décision à la fois."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas à tout avoir en ce moment. Tu as juste à décider, aujourd'hui, que tu es la personne qui continue. Tout le reste suit."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>Carol Dweck – Mindset : The New Psychology of Success (2006)</strong> — mental fixe vs mental de croissance<br>📖 <strong>Angela Duckworth – Grit : The Power of Passion and Perseverance (2016)</strong> — la persévérance comme facteur clé<br>📖 <strong>Jim Rohn – The Art of Exceptional Living</strong> — environnement et entourage<br>📖 <strong>Harvard Business Review – « The Impostor Phenomenon » (Clance & Imes, 1978)</strong> — syndrome de l'imposteur<br>📖 <strong>African Development Bank – Youth Entrepreneurship in Africa Report 2023</strong> — contexte entrepreneurial africain"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La science du mental évolue vite. Ce qui ne change pas : les personnes qui travaillent sur elles-mêmes avec régularité surpassent toujours celles qui attendent les bonnes conditions."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Selon Carol Dweck, quelle est la différence principale entre le mental fixe et le mental de croissance ?",
+      "options": [
+        "Le mental fixe est réservé aux personnes peu intelligentes",
+        "Le mental de croissance croit que les capacités peuvent se développer avec l'effort, contrairement au mental fixe qui pense que le talent est inné et figé",
+        "Le mental de croissance signifie toujours être positif, même quand ça va mal",
+        "Le mental fixe est plus courant chez les entrepreneurs africains"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Qu'est-ce que le syndrome de l'imposteur ?",
+      "options": [
+        "Une maladie psychologique rare qui touche uniquement les débutants",
+        "La conviction de ne pas mériter son succès et d'être sur le point d'être « démasqué » — ressenti par 70 % des personnes qui réussissent",
+        "La tendance à copier les stratégies des autres sans innover",
+        "Un blocage uniquement lié au manque de diplôme"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans l'étude de cas d'Amara, quelle a été la décision la plus déterminante dans son parcours ?",
+      "options": [
+        "Attendre d'avoir assez d'argent pour investir dans une formation coûteuse",
+        "Convaincre sa famille de croire en son projet avant de commencer",
+        "Arrêter de chercher la validation de son entourage et commencer à agir en partageant ce qu'il apprenait",
+        "Déménager dans une grande ville pour avoir accès à de meilleures opportunités"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quelle est la différence essentielle entre la motivation et la discipline ?",
+      "options": [
+        "La motivation est plus fiable que la discipline sur le long terme",
+        "La discipline s'achète, la motivation non",
+        "La motivation est une émotion qui fluctue, la discipline est l'habitude d'agir indépendamment de comment on se sent",
+        "Il n'y a pas de différence — les deux désignent la même chose"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Pourquoi définir une vision claire est-il essentiel pour forger un mental de champion ?",
+      "options": [
+        "Parce que cela attire automatiquement les bonnes opportunités sans effort",
+        "Parce qu'une vision précise transforme les obstacles en étapes — elle donne un sens au chemin même quand c'est difficile",
+        "Parce que les investisseurs exigent une vision avant de financer un projet",
+        "Parce que cela remplace la discipline et la formation"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
