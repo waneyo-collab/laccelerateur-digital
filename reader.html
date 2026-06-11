@@ -29,8 +29,8 @@
     .hdr {
       display: flex;
       align-items: center;
-      padding: 12px 20px;
-      gap: 14px;
+      padding: 12px 16px;
+      gap: 12px;
       background: rgba(124,58,237,.1);
       border-bottom: 1px solid rgba(124,58,237,.25);
       position: sticky;
@@ -61,6 +61,28 @@
       font-size: 13px;
       color: var(--muted);
       white-space: nowrap;
+    }
+    /* Bouton narration dans le header */
+    .btn-narr {
+      width: 34px;
+      height: 34px;
+      border-radius: 50%;
+      border: 1px solid rgba(124,58,237,.35);
+      background: rgba(124,58,237,.12);
+      color: var(--txt);
+      cursor: pointer;
+      font-size: 17px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background .2s, border-color .2s;
+      flex-shrink: 0;
+    }
+    .btn-narr:hover { background: rgba(124,58,237,.28); }
+    .btn-narr.active {
+      background: rgba(124,58,237,.45);
+      border-color: var(--v);
+      box-shadow: 0 0 0 3px rgba(124,58,237,.2);
     }
 
     /* ── LOADING / ERROR ── */
@@ -112,9 +134,7 @@
 
     /* ── BLOCS DE CONTENU ── */
     .blk { margin-bottom: 18px; font-size: 15.5px; color: #E5E7EB; }
-
     .blk-texte { line-height: 1.8; }
-
     .blk-point_cle {
       background: rgba(124,58,237,.14);
       border-left: 3px solid var(--v);
@@ -123,7 +143,6 @@
       color: #DDD6FE;
     }
     .blk-point_cle::before { content: "💡 "; }
-
     .blk-exemple {
       background: rgba(16,185,129,.08);
       border-left: 3px solid var(--green);
@@ -132,7 +151,6 @@
       color: #D1FAE5;
     }
     .blk-exemple::before { content: "📌 Exemple : "; font-weight: 700; }
-
     .blk-attention {
       background: rgba(245,158,11,.09);
       border-left: 3px solid var(--amber);
@@ -143,10 +161,22 @@
     .blk-attention::before { content: "⚠️ "; }
 
     /* ── QUIZ ── */
+    .qz-badge {
+      display: inline-block;
+      font-size: 11px;
+      background: rgba(124,58,237,.2);
+      color: #DDD6FE;
+      border-radius: 20px;
+      padding: 3px 10px;
+      margin-bottom: 14px;
+      font-weight: 600;
+      letter-spacing: .04em;
+    }
     .qz-question {
       font-size: 17px;
       font-weight: 700;
       margin-bottom: 18px;
+      line-height: 1.45;
     }
     .qz-opts { display: flex; flex-direction: column; gap: 10px; }
     .qz-btn {
@@ -159,6 +189,7 @@
       text-align: left;
       color: var(--txt);
       transition: background .2s, border-color .2s;
+      line-height: 1.4;
     }
     .qz-btn:hover:not(:disabled) {
       background: rgba(124,58,237,.15);
@@ -248,6 +279,7 @@
   <a href="/">← Retour</a>
   <div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
   <span class="pcnt" id="pcnt">— / —</span>
+  <button class="btn-narr" id="btnNarr" onclick="toggleNarr()" title="Écouter ce slide" aria-label="Narration audio">🔊</button>
 </div>
 
 <!-- CONTENU -->
@@ -265,57 +297,128 @@
 </div>
 
 <script>
-// ════════════════════════════════════════════
-//  CONFIG  ← mets ici tes vraies valeurs
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
+//  CONFIG
+// ══════════════════════════════════════════
 const SB_URL = 'REMPLACER_PAR_TON_URL_SUPABASE';
 const SB_KEY = 'REMPLACER_PAR_TA_CLE_SUPABASE_ANON';
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  ÉTAT
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 let slides = [], cur = 0, uid = null, mid = null, quizDone = false;
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
+//  NARRATION — Web Speech API (natif, 0 ko)
+// ══════════════════════════════════════════
+const synth = window.speechSynthesis;
+let narrActive = false;
+
+// Charge les voix dès qu'elles sont disponibles
+let _voices = [];
+function loadVoices() {
+  _voices = synth.getVoices();
+}
+loadVoices();
+if (synth.onvoiceschanged !== undefined) synth.onvoiceschanged = loadVoices;
+
+function bestVoice() {
+  const fr = _voices.filter(v => v.lang.startsWith('fr'));
+  // Priorité : fr-FR, fr-MA, fr-CA, toute voix fr, puis défaut
+  return fr.find(v => v.lang === 'fr-FR')
+      || fr.find(v => v.lang === 'fr-MA')
+      || fr.find(v => v.lang === 'fr-CA')
+      || fr[0]
+      || null;
+}
+
+// Extrait le texte brut d'un slide (sans HTML ni markdown)
+function slideText() {
+  const s = slides[cur];
+  if (!s) return '';
+  const clean = t => (t || '')
+    .replace(/\*\*(.*?)\*\*/g, '$1')
+    .replace(/\*(.*?)\*/g, '$1')
+    .replace(/<br\s*\/?>/gi, ' ')
+    .replace(/<[^>]+>/g, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+
+  if (s.type === 'intro') {
+    return clean(`${s.mod.titre}. ${s.mod.description || ''}`);
+  }
+  if (s.type === 'done') {
+    return s.mod.id === 30
+      ? 'Félicitations ! Tu as complété les 30 modules. Ton certificat est prêt.'
+      : `Module ${s.mod.id} terminé. Excellent travail ! Le module suivant t'attend.`;
+  }
+  const sec = s.sec;
+  const title = sec.titre ? `${clean(sec.titre)}. ` : '';
+  if (sec.type === 'quiz') {
+    const opts = (sec.options || []).map((o, i) => `Option ${i+1} : ${clean(o)}`).join('. ');
+    return `${title}${clean(sec.question)}. ${opts}`;
+  }
+  const blocs = sec.blocs || [{ contenu: sec.contenu }];
+  return title + blocs.map(b => clean(b.contenu || '')).join(' ');
+}
+
+function toggleNarr() {
+  if (narrActive) { stopNarr(); return; }
+  const txt = slideText();
+  if (!txt) return;
+  synth.cancel();
+  const utt = new SpeechSynthesisUtterance(txt);
+  utt.lang  = 'fr-FR';
+  utt.rate  = 1.0;
+  utt.pitch = 1.0;
+  const v = bestVoice();
+  if (v) utt.voice = v;
+  utt.onend   = () => setNarrUI(false);
+  utt.onerror = () => setNarrUI(false);
+  synth.speak(utt);
+  setNarrUI(true);
+}
+
+function stopNarr() {
+  synth.cancel();
+  setNarrUI(false);
+}
+
+function setNarrUI(on) {
+  narrActive = on;
+  const btn = document.getElementById('btnNarr');
+  if (!btn) return;
+  btn.textContent = on ? '🔇' : '🔊';
+  btn.title       = on ? 'Arrêter la narration' : 'Écouter ce slide';
+  btn.classList.toggle('active', on);
+}
+
+// ══════════════════════════════════════════
 //  INIT
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 document.addEventListener('DOMContentLoaded', async () => {
   const p = new URLSearchParams(window.location.search);
   mid = parseInt(p.get('module') || '1');
 
-  // Module 1 = gratuit, aucune vérification
-  if (mid === 1) {
-    await loadModule(mid);
-    return;
-  }
+  if (mid === 1) { await loadModule(mid); return; }
 
-  // Modules 2-30 : session requise (l'abonnement est déjà géré par index.html)
-  // Si reader.html est dans un iframe, on fait confiance au parent
   const inIframe = window.self !== window.top;
-  if (inIframe) {
-    await loadModule(mid);
-    return;
-  }
+  if (inIframe) { await loadModule(mid); return; }
 
-  // Accès direct à l'URL (hors iframe) : vérification session
   const sess = await getSession();
   if (!sess) { location.href = '/?login=1'; return; }
   uid = sess.id;
   await loadModule(mid);
 });
 
-// ════════════════════════════════════════════
-//  AUTH SUPABASE (sans dépendance externe)
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
+//  AUTH SUPABASE
+// ══════════════════════════════════════════
 async function getSession() {
   try {
-    // Supabase v2 stocke le token sous "sb-[ref]-auth-token"
     const k = Object.keys(localStorage).find(x => x.includes('auth-token'));
     if (!k) return null;
-    const raw = localStorage.getItem(k);
-    if (!raw) return null;
-    const d = JSON.parse(raw);
-    // Supabase v2 : { access_token, ... } ou { data: { session: { access_token } } }
+    const d = JSON.parse(localStorage.getItem(k));
     const token = d?.access_token || d?.data?.session?.access_token;
     if (!token) return null;
     const r = await fetch(`${SB_URL}/auth/v1/user`, {
@@ -327,48 +430,13 @@ async function getSession() {
   } catch { return null; }
 }
 
-async function checkSub(id, token) {
-  try {
-    const r = await fetch(
-      `${SB_URL}/rest/v1/subscribers?user_id=eq.${id}&select=status,stripe_status,subscription_status`,
-      { headers: { Authorization: `Bearer ${token}`, apikey: SB_KEY } }
-    );
-    if (!r.ok) {
-      console.warn('[reader] subscribers query failed:', r.status);
-      // Si la table est inaccessible, on laisse passer l'utilisateur connecté
-      return true;
-    }
-    const rows = await r.json();
-    console.log('[reader] subscribers rows:', JSON.stringify(rows));
-
-    // Aucune entrée → pas encore abonné via Stripe
-    // MAIS : si l'utilisateur est authentifié et que la table est vide,
-    // c'est peut-être un compte admin ou un utilisateur en essai gratuit
-    // géré autrement. On accepte pour l'instant.
-    if (!Array.isArray(rows) || rows.length === 0) {
-      console.warn('[reader] aucune entrée dans subscribers pour cet utilisateur');
-      return true; // ← à repasser à false en prod une fois les tests terminés
-    }
-
-    const row = rows[0];
-    // Accepte tous les statuts actifs possibles selon la structure de ta table
-    const status = row.status || row.stripe_status || row.subscription_status || '';
-    const ok = ['active','trialing','trial','free_trial','paid','premium'].includes(status);
-    console.log('[reader] statut trouvé:', status, '→ accès:', ok);
-    return ok;
-  } catch (e) {
-    console.error('[reader] checkSub error:', e);
-    return true; // En cas d'erreur réseau, on laisse passer
-  }
-}
-
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  CHARGEMENT MODULE JSON
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 async function loadModule(id) {
   try {
-    const n = String(id).padStart(2, '0');
-    const r = await fetch(`/modules/module-${n}.json`);
+    const n  = String(id).padStart(2, '0');
+    const r  = await fetch(`/modules/module-${n}.json`);
     if (!r.ok) throw new Error();
     const mod = await r.json();
     slides = makeSlides(mod);
@@ -385,29 +453,49 @@ async function loadModule(id) {
   }
 }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  CONSTRUCTION DES SLIDES
-// ════════════════════════════════════════════
+//  Les quiz (questions[]) sont dépliés en slides individuels
+// ══════════════════════════════════════════
 function makeSlides(mod) {
-  return [
-    { type: 'intro', mod },
-    ...mod.sections.map(s => ({ type: 'section', sec: s, mod })),
-    { type: 'done', mod }
-  ];
+  const result = [{ type: 'intro', mod }];
+  for (const sec of mod.sections) {
+    if (sec.type === 'quiz' && Array.isArray(sec.questions)) {
+      sec.questions.forEach((q, qi) => {
+        result.push({
+          type: 'section',
+          sec: {
+            type: 'quiz',
+            question: q.question,
+            options:  q.options,
+            reponse:  q.reponse,
+            quizIdx:  qi + 1,
+            quizTotal: sec.questions.length
+          },
+          mod
+        });
+      });
+    } else {
+      result.push({ type: 'section', sec, mod });
+    }
+  }
+  result.push({ type: 'done', mod });
+  return result;
 }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  AFFICHAGE
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 function show(i) {
+  stopNarr();               // coupe la narration à chaque changement de slide
   cur = i; quizDone = false;
-  const s = slides[i];
+  const s     = slides[i];
   const total = slides.length;
-  const pct = Math.round((i / (total - 1)) * 100);
+  const pct   = Math.round((i / Math.max(total - 1, 1)) * 100);
 
   document.getElementById('pfill').style.width = pct + '%';
-  document.getElementById('pcnt').textContent = `${i + 1} / ${total}`;
-  document.getElementById('bPrev').disabled = i === 0;
+  document.getElementById('pcnt').textContent  = `${i + 1} / ${total}`;
+  document.getElementById('bPrev').disabled    = (i === 0);
 
   const bNext = document.getElementById('bNext');
   bNext.disabled = false;
@@ -415,7 +503,7 @@ function show(i) {
 
   const app = document.getElementById('app');
 
-  if (s.type === 'intro')    app.innerHTML = tplIntro(s.mod);
+  if (s.type === 'intro')   app.innerHTML = tplIntro(s.mod);
   else if (s.type === 'done') {
     app.innerHTML = tplDone(s.mod);
     document.getElementById('nav').style.display = 'none';
@@ -428,19 +516,28 @@ function show(i) {
   window.scrollTo({ top: 0, behavior: 'instant' });
 }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
+//  MARKDOWN BASIQUE (gras + sauts de ligne)
+// ══════════════════════════════════════════
+function md(t) {
+  return (t || '')
+    .replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    .replace(/\n/g, '<br>');
+}
+
+// ══════════════════════════════════════════
 //  TEMPLATES
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 function tplIntro(m) {
   return `
     <div class="slide">
-      <div class="mod-label">Module ${m.id} · 40 min</div>
+      <div class="mod-label">Module ${m.id} · Phase ${m.phase || '—'}</div>
       <h1 class="slide-title">${m.titre}</h1>
-      ${m.description ? `<div class="blk blk-texte">${m.description}</div>` : ''}
+      ${m.description ? `<div class="blk blk-texte">${md(m.description)}</div>` : ''}
       <div class="intro-meta">
         📋 <strong>${m.sections.length} étapes</strong> &nbsp;·&nbsp;
         ⏱ <strong>40 min</strong> &nbsp;·&nbsp;
-        ${m.phase ? `📁 Phase ${m.phase}` : ''}
+        🔊 <strong>Narration disponible</strong>
       </div>
     </div>`;
 }
@@ -450,22 +547,22 @@ function tplSection(sec, m) {
   const ttl = sec.titre ? `<h2 class="slide-title">${sec.titre}</h2>` : '';
 
   if (sec.type === 'quiz') {
-    const opts = sec.options.map((o, i) =>
-      `<button class="qz-btn" onclick="answer(this,${i},${sec.reponse})">${o}</button>`
+    const badge = `<span class="qz-badge">Quiz · question ${sec.quizIdx} / ${sec.quizTotal}</span>`;
+    const opts  = sec.options.map((o, i) =>
+      `<button class="qz-btn" onclick="answer(this,${i},${sec.reponse})">${md(o)}</button>`
     ).join('');
     return `
       <div class="slide">
-        ${lbl}${ttl}
-        <div class="qz-question">${sec.question}</div>
+        ${lbl}${badge}
+        <div class="qz-question">${md(sec.question)}</div>
         <div class="qz-opts">${opts}</div>
         <div class="qz-fb" id="qfb"></div>
       </div>`;
   }
 
-  // Blocs multiples ou bloc unique
   const blocs = sec.blocs || [{ type: sec.type || 'texte', contenu: sec.contenu }];
   const html  = blocs.map(b =>
-    `<div class="blk blk-${b.type}">${b.contenu}</div>`
+    `<div class="blk blk-${b.type}">${md(b.contenu)}</div>`
   ).join('');
 
   return `<div class="slide">${lbl}${ttl}${html}</div>`;
@@ -487,9 +584,9 @@ function tplDone(m) {
     </div>`;
 }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  QUIZ
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 function answer(btn, chosen, correct) {
   if (quizDone) return;
   quizDone = true;
@@ -498,36 +595,38 @@ function answer(btn, chosen, correct) {
   btn.classList.add(right ? 'ok' : 'ko');
   if (!right) document.querySelectorAll('.qz-btn')[correct].classList.add('ok');
   const fb = document.getElementById('qfb');
-  fb.textContent  = right ? '✅ Bonne réponse !' : '❌ La bonne réponse est surlignée en vert.';
-  fb.className    = `qz-fb show ${right ? 'ok' : 'ko'}`;
+  fb.textContent = right ? '✅ Bonne réponse !' : '❌ La bonne réponse est surlignée en vert.';
+  fb.className   = `qz-fb show ${right ? 'ok' : 'ko'}`;
   document.getElementById('bNext').disabled = false;
 }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  NAVIGATION
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 function next() { if (cur < slides.length - 1) show(cur + 1); }
 function prev() { if (cur > 0) show(cur - 1); }
 
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 //  SAUVEGARDE PROGRESSION → SUPABASE
-// ════════════════════════════════════════════
+// ══════════════════════════════════════════
 async function save() {
+  if (!uid) return;
   try {
-    const k = Object.keys(localStorage).find(x => x.includes('supabase') && x.includes('auth-token'));
+    const k     = Object.keys(localStorage).find(x => x.includes('auth-token'));
     const token = JSON.parse(localStorage.getItem(k))?.access_token;
+    if (!token) return;
     await fetch(`${SB_URL}/rest/v1/progress`, {
       method: 'POST',
       headers: {
-        Authorization: `Bearer ${token}`,
-        apikey: SB_KEY,
+        Authorization:  `Bearer ${token}`,
+        apikey:         SB_KEY,
         'Content-Type': 'application/json',
-        Prefer: 'resolution=merge-duplicates'
+        Prefer:         'resolution=merge-duplicates'
       },
       body: JSON.stringify({
-        user_id: uid,
-        module_id: mid,
-        completed: true,
+        user_id:      uid,
+        module_id:    mid,
+        completed:    true,
         completed_at: new Date().toISOString()
       })
     });
