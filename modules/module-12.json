@@ -1,0 +1,230 @@
+{
+  "id": 12,
+  "titre": "Sortir de sa zone de confort",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "Ta zone de confort est confortable par définition. Mais tout ce que tu veux — la liberté, la croissance, la fierté — se trouve exactement de l'autre côté. Dans ce module, tu vas comprendre pourquoi ton cerveau résiste au changement, et comment avancer malgré lui.",
+
+  "sections": [
+
+    {
+      "titre": "La zone de confort — ce que c'est vraiment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La zone de confort, ce n'est pas forcément un endroit agréable. C'est un endroit <strong>connu</strong>.<br><br>Tu peux rester dans une situation difficile — un emploi qui t'épuise, une routine qui t'ennuie, des rêves que tu repousses — simplement parce que c'est <strong>familier</strong>. Et le cerveau humain préfère le familier douloureux à l'inconnu incertain.<br><br>C'est pour ça que des millions de personnes restent dans des situations qu'elles détestent. Pas par manque de désir. Par peur de l'inconnu."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta zone de confort te protège — mais elle te prive aussi. Elle te protège de l'échec, du jugement et de l'inconfort. Elle te prive de la croissance, de la fierté et de la liberté."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi ton cerveau déteste le changement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ton cerveau a une fonction principale : te garder en vie. Pour lui, tout ce qui est nouveau représente un danger potentiel.<br><br>Quand tu envisages de lancer ton business, de parler en public ou de te lancer dans quelque chose d'inconnu, ton cerveau déclenche une alarme :<br><br>🔴 Rythme cardiaque qui s'accélère<br>🔴 Pensées catastrophistes (« et si ça échoue ? »)<br>🔴 Procrastination soudaine<br>🔴 Envie irrésistible de faire autre chose<br><br>Ce n'est pas de la faiblesse. C'est de la biologie. Ton amygdale (le centre de la peur dans le cerveau) ne distingue pas un danger réel d'un risque imaginaire."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Tu veux envoyer ton premier email à un client potentiel. Ton cerveau réagit comme si tu allais affronter un lion. Résultat : tu relis l'email 12 fois, tu le corriges, tu le fermes, tu l'ouvres à nouveau… et tu ne l'envoies jamais. Ce n'est pas un manque de sérieux — c'est ton cerveau qui fait son travail. Mal, mais consciencieusement."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 3 zones que tu dois connaître",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le psychologue Lev Vygotski a décrit 3 zones d'apprentissage. Comprendre ces zones change tout :<br><br>🟢 <strong>Zone de confort :</strong> ce que tu sais déjà faire. Pas de stress, pas de croissance non plus.<br><br>🟡 <strong>Zone d'apprentissage :</strong> ce qui te challenge sans te dépasser. Léger inconfort, beaucoup de croissance. <strong>C'est là que tu veux passer le plus de temps.</strong><br><br>🔴 <strong>Zone de panique :</strong> trop d'inconnu d'un coup. Paralysie, blocage total, envie d'abandonner."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "L'objectif n'est pas de tout risquer d'un coup — c'est de vivre dans la zone d'apprentissage. Des petits pas inconfortables chaque jour valent mieux qu'un grand saut qui te paralyse."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'illusion de « pas encore prêt(e) »",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "« Je me lancerai quand je serai prêt(e). »<br><br>C'est la phrase la plus dangereuse de l'entrepreneuriat. Parce que <strong>personne n'est jamais prêt</strong>. La préparation parfaite n'existe pas.<br><br>Les personnes qui réussissent ne se sont pas lancées parce qu'elles étaient prêtes. Elles se sont lancées, et c'est en se lançant qu'elles sont devenues prêtes.<br><br>Attendre d'être prêt(e), c'est attendre une permission que personne ne te donnera jamais."
+        },
+        {
+          "type": "attention",
+          "contenu": "La préparation devient de la procrastination quand elle dure plus longtemps que nécessaire. À un moment, la seule chose qui manque, c'est l'action. Et l'action, elle, ne s'apprend qu'en agissant."
+        }
+      ]
+    },
+
+    {
+      "titre": "La méthode des petits pas — 1 % d'inconfort par jour",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu n'as pas à tout changer en une seule journée. La méthode des petits pas consiste à t'exposer chaque jour à une dose légère d'inconfort — suffisante pour grandir, pas assez pour paniquer.<br><br>Exemples concrets :<br><br>📹 Filmer et publier ta première vidéo (même imparfaite)<br>📩 Envoyer un message à quelqu'un que tu admires<br>💬 Partager ton projet dans un groupe WhatsApp pour la première fois<br>🎤 Prendre la parole dans une réunion ou un webinaire<br>💰 Fixer un tarif et l'annoncer sans t'excuser<br><br>Chacun de ces actes repousse légèrement ta zone de confort. Et chaque fois qu'elle se repousse, elle ne revient jamais à sa taille d'avant."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "1 % d'amélioration par jour = 37 fois mieux en un an. Ce calcul mathématique s'applique aussi au mental. Des petits actes d'inconfort quotidiens créent une transformation radicale sur le long terme."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le regard des autres — la prison invisible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique et au Maghreb, une des plus grandes barrières à l'action est le regard des autres. La peur du jugement familial, communautaire, social.<br><br>« Qu'est-ce que les gens vont dire ? »<br>« Ma famille va penser que je suis fou/folle. »<br>« Dans notre culture, on ne fait pas ça. »<br><br>Ces pensées sont réelles et légitimes. Mais pose-toi cette question :<br><br><strong>Dans 10 ans, tu regretteras plus d'avoir essayé et échoué, ou de n'avoir jamais essayé ?</strong>"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Yasmine, de Tunis, voulait lancer une chaîne YouTube sur l'entrepreneuriat féminin. Sa famille pensait que « c'était honteux de se montrer sur internet. » Elle a lancé quand même — sous un pseudo pendant 3 mois. Quand ses premières ventes sont arrivées, elle a révélé son identité. Aujourd'hui, sa famille est sa plus grande fan. Les résultats font taire les doutes."
+        }
+      ]
+    },
+
+    {
+      "titre": "Redefine l'échec — il n'est pas ce que tu crois",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans beaucoup de cultures africaines, l'échec est vécu comme une honte publique. Quelque chose à cacher, à effacer.<br><br>Les entrepreneurs qui réussissent ont une définition différente de l'échec :<br><br>❌ <strong>L'ancienne définition :</strong> l'échec = la preuve que tu n'es pas capable<br>✅ <strong>La nouvelle définition :</strong> l'échec = une information sur ce qui ne fonctionne pas encore<br><br>Thomas Edison a essayé plus de 1 000 fois avant d'inventer l'ampoule. Quand un journaliste lui a demandé comment il avait vécu ses 1 000 échecs, il a répondu : « Je n'ai pas échoué 1 000 fois. J'ai trouvé 1 000 façons de ne pas faire une ampoule. »"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chaque fois que tu essaies et que ça ne marche pas, tu n'as pas échoué — tu as éliminé une mauvaise piste et tu t'es rapproché(e) de la bonne. L'échec n'est une fin que si tu décides de t'arrêter."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'action avant la confiance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup de gens attendent d'avoir confiance en eux pour agir. C'est exactement à l'envers.<br><br>La confiance ne précède pas l'action. <strong>La confiance est le résultat de l'action.</strong><br><br>Tu ne deviens pas confiant(e) en te préparant dans ta tête. Tu deviens confiant(e) en faisant des choses, en voyant que tu peux les faire, en échouant et en te relevant, en accumulant des preuves que tu es capable.<br><br>La confiance se construit en agissant — même maladroitement, même imparfaitement."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Ibrahima voulait créer des formations vidéo mais attendait de se sentir « suffisamment expert ». Un jour, il publie une vidéo de 3 minutes sur un sujet qu'il connaît bien. Elle reçoit 12 commentaires positifs. Il en publie une deuxième. Puis une troisième. Six mois plus tard, il a 400 abonnés et sa première formation vendue. La confiance est venue des actions — pas l'inverse."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Mariama, de « je ne peux pas » à formatrice",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Mariama a 26 ans, à Conakry. Elle a une expertise réelle en gestion de budget pour les petits commerces — acquise en aidant sa mère depuis l'enfance. Mais elle pense qu'elle ne peut pas « enseigner » parce qu'elle n'a pas de diplôme de comptabilité. Elle attend depuis 3 ans le bon moment."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qui a changé :</strong><br><br>Elle décide d'appliquer la méthode des petits pas :<br>📱 <strong>Semaine 1 :</strong> elle publie 1 post Facebook avec un conseil de gestion budgétaire. 34 likes. Elle ne pensait pas que ça intéresserait quelqu'un.<br>📹 <strong>Semaine 3 :</strong> elle filme une vidéo de 4 minutes sur son téléphone. Filmée dans sa chambre. Son premier Reel.<br>💬 <strong>Mois 2 :</strong> une commerçante du quartier lui demande de l'aider. Elle facture pour la première fois.<br>📚 <strong>Mois 5 :</strong> elle lance un atelier de groupe à 15 000 GNF. 8 participantes.<br><br><strong>Aujourd'hui :</strong> Mariama forme des commerçantes à Conakry. Elle n'a toujours pas de diplôme. Elle a mieux : des résultats."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton défi de la semaine",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La théorie ne change rien. L'action change tout. Voici ton défi pour cette semaine :<br><br>🎯 <strong>Choisis UNE chose que tu repousses depuis trop longtemps.</strong> Une seule.<br><br>Ce peut être :<br>→ Publier ton premier post sur les réseaux<br>→ Envoyer ce message à ce prospect<br>→ Fixer ton tarif et l'écrire quelque part<br>→ Dire à quelqu'un ce que tu veux vraiment faire<br>→ Créer ton compte Canva et faire ton premier visuel<br><br><strong>Fais-le avant la fin de cette semaine.</strong> Pas parfaitement. Juste fais-le."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une action imparfaite faite aujourd'hui vaut mille plans parfaits jamais exécutés. Ta zone de confort rétrécit chaque jour où tu n'agis pas. Elle grandit chaque jour où tu oses."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>Lev Vygotski – Zone proximale de développement (1978)</strong> — les 3 zones d'apprentissage<br>📖 <strong>Brené Brown – Daring Greatly (2012)</strong> — vulnérabilité et courage<br>📖 <strong>Susan Jeffers – Feel the Fear and Do It Anyway (1987)</strong> — agir malgré la peur<br>📖 <strong>James Clear – Atomic Habits (2018)</strong> — la méthode des 1 %<br>📖 <strong>IFC World Bank – Overcoming Barriers to Female Entrepreneurship in Africa (2022)</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Sortir de sa zone de confort n'est pas un événement. C'est une pratique quotidienne. Chaque jour, une petite action inconfortable. Sur un an, une transformation profonde."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Pourquoi le cerveau résiste-t-il naturellement au changement ?",
+      "options": [
+        "Parce que les êtres humains sont fondamentalement paresseux",
+        "Parce que l'amygdale perçoit tout ce qui est nouveau comme un danger potentiel — même quand il n'y en a pas",
+        "Parce que le changement demande toujours plus d'argent qu'on n'en a",
+        "Parce que les habitudes sont impossibles à modifier après 25 ans"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Parmi les 3 zones (confort, apprentissage, panique), dans laquelle doit-on chercher à passer le plus de temps pour grandir ?",
+      "options": [
+        "La zone de confort — pour être stable et productif",
+        "La zone de panique — pour se dépasser vraiment",
+        "La zone d'apprentissage — suffisamment inconfortable pour grandir, sans être paralysante",
+        "Il faut alterner constamment entre les 3 zones sans priorité"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quelle est la vraie relation entre la confiance en soi et l'action ?",
+      "options": [
+        "Il faut d'abord avoir confiance en soi avant d'agir",
+        "La confiance et l'action se développent simultanément sans lien entre elles",
+        "La confiance est le résultat de l'action — elle se construit en faisant, pas en attendant",
+        "La confiance vient uniquement de la formation et des diplômes"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas de Mariama, qu'est-ce qui a déclenché sa transformation ?",
+      "options": [
+        "Elle a obtenu un diplôme de comptabilité qui lui a donné la légitimité nécessaire",
+        "Elle a trouvé un investisseur qui a cru en son projet",
+        "Elle a appliqué la méthode des petits pas — un post, une vidéo, une première cliente — sans attendre d'être prête",
+        "Elle a déménagé dans une grande ville pour avoir accès à plus d'opportunités"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quelle est la nouvelle définition de l'échec que les entrepreneurs qui réussissent adoptent ?",
+      "options": [
+        "L'échec est une preuve définitive qu'on n'est pas fait pour entreprendre",
+        "L'échec est une information sur ce qui ne fonctionne pas encore — une étape vers la bonne solution",
+        "L'échec n'existe pas pour les vrais entrepreneurs",
+        "L'échec est acceptable uniquement si on a tout préparé parfaitement à l'avance"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
