@@ -1,0 +1,388 @@
+{
+  "id": 4,
+  "titre": "La stratégie sur les réseaux sociaux",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Avoir un compte sur les réseaux sociaux, c'est facile. Avoir une stratégie qui attire des clients, c'est autre chose. Dans ce module, tu vas apprendre à choisir les bons réseaux, à créer du contenu qui engage, et à transformer tes abonnés en clients — sans t'épuiser.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi une stratégie réseaux sociaux ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une stratégie réseaux sociaux, c'est un plan clair qui définit :<br><br>📌 <strong>Sur quels réseaux</strong> tu vas être présent<br>📌 <strong>Pour qui</strong> tu publies (ton persona)<br>📌 <strong>Quoi</strong> tu vas dire (types de contenu)<br>📌 <strong>Quand et à quelle fréquence</strong> tu publies<br>📌 <strong>Comment</strong> tu mesures tes résultats<br><br>Sans ce cadre, tu passes des heures sur les réseaux sans savoir si ça sert à quelque chose — et la plupart des entrepreneurs qui abandonnent le font par manque de stratégie, pas par manque de talent."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les réseaux sociaux sont des outils. Un outil sans méthode, c'est de l'énergie gaspillée. Avec une méthode, c'est une machine à croissance."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi une présence sans stratégie ne marche pas",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs ont une présence sur les réseaux sociaux — mais très peu ont une <strong>stratégie</strong>. La différence est énorme :<br><br>❌ <strong>Sans stratégie :</strong> tu postes quand tu y penses, sur des sujets variés, sans cohérence — et tes abonnés ne comprennent pas vraiment ce que tu fais ni pourquoi te suivre<br><br>✅ <strong>Avec stratégie :</strong> chaque publication a un objectif, s'adresse à une personne précise, et fait partie d'un plan plus grand qui mène vers une action concrète"
+        },
+        {
+          "type": "attention",
+          "contenu": "Plus tu as d'abonnés, plus ça semble impressionnant — mais ce qui compte vraiment, c'est : est-ce que ces abonnés deviennent des clients ? Un compte de 800 abonnés bien ciblés peut générer plus de revenus qu'un compte de 50 000 abonnés non qualifiés."
+        }
+      ]
+    },
+
+    {
+      "titre": "Choisir ses réseaux selon son persona",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici un guide rapide pour choisir les bons réseaux selon ta cible :<br><br>👩‍💼 <strong>Tu cibles des professionnels (B2B) :</strong> LinkedIn + email<br>👩‍🍳 <strong>Tu vends des produits visuels (mode, beauté, food, déco) :</strong> Instagram + TikTok<br>🎓 <strong>Tu es formateur ou coach :</strong> YouTube + LinkedIn + email<br>🛍️ <strong>Tu vends au grand public marocain ou africain :</strong> Facebook + WhatsApp + Instagram<br>🎮 <strong>Tu cibles les 18-30 ans :</strong> TikTok + Instagram Reels<br>🏢 <strong>Tu vises les entreprises locales :</strong> LinkedIn + Facebook"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La règle d'or : suis ton persona, pas la tendance. Ce n'est pas parce que TikTok est populaire qu'il est bon pour ton business. Sois là où ton client passe vraiment son temps."
+        }
+      ]
+    },
+
+    {
+      "titre": "Facebook — l'ancêtre toujours puissant",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Facebook est souvent considéré comme « vieux » par les jeunes — mais c'est toujours le réseau social le plus utilisé en Afrique et au Maghreb en 2024.<br><br>📊 <strong>Chiffres clés :</strong><br>→ Plus de 3 milliards d'utilisateurs dans le monde<br>→ 1er réseau social au Maroc, en Algérie et en Afrique subsaharienne<br>→ L'audience de Facebook est plus âgée (25-50 ans) — souvent celle qui a un pouvoir d'achat<br><br>✅ <strong>Ce que Facebook fait bien :</strong> publicité ultra-ciblée, groupes communautaires, marketplace locale, événements, streaming live"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un vendeur de matériel informatique reconditionné à Alger fait 80 % de ses ventes via une page Facebook et le marketplace Facebook local. Il publie chaque jour une photo de son stock avec le prix. Simple, efficace, local."
+        }
+      ]
+    },
+
+    {
+      "titre": "Instagram — la vitrine visuelle",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Instagram est la plateforme idéale pour les business visuels et le personal branding. Avec plus de 2 milliards d'utilisateurs, c'est aussi l'un des réseaux préférés des 18-40 ans en Afrique du Nord.<br><br>Les formats clés sur Instagram :<br><br>🎬 <strong>Reels :</strong> vidéos courtes, meilleur format pour la portée organique aujourd'hui<br>📸 <strong>Posts (photos et carousels) :</strong> pour approfondir un sujet et être sauvegardé<br>⭕ <strong>Stories :</strong> pour la relation quotidienne, les sondages, les questions<br>🔴 <strong>Lives :</strong> pour créer de la proximité et vendre en direct"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "En 2024, Instagram favorise massivement les Reels dans son algorithme. Si tu n'utilises pas encore ce format, tu passes à côté du meilleur levier de croissance organique disponible actuellement."
+        }
+      ]
+    },
+
+    {
+      "titre": "TikTok — l'algorithme le plus démocratique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "TikTok a révolutionné les réseaux sociaux avec un algorithme unique : <strong>tu peux faire 0 abonnés et avoir 100 000 vues sur ta première vidéo</strong>. Ce que tu dis compte plus que qui tu es déjà.<br><br>TikTok fonctionne particulièrement bien pour :<br>→ Les contenus éducatifs courts (apprendre quelque chose en 60 secondes)<br>→ Le storytelling personnel et authentique<br>→ Les démonstrations de produit<br>→ Les coulisses d'un business<br><br>📊 TikTok dépasse les 1,5 milliard d'utilisateurs en 2024 et est en forte croissance au Maroc et en Afrique de l'Ouest."
+        },
+        {
+          "type": "attention",
+          "contenu": "TikTok récompense l'authenticité, pas la perfection. Une vidéo filmée avec un smartphone dans ta cuisine peut performer 10 fois mieux qu'une vidéo produite en studio si le contenu est pertinent et engageant."
+        }
+      ]
+    },
+
+    {
+      "titre": "LinkedIn — l'expert en action",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "LinkedIn est le réseau professionnel par excellence. Avec plus de 1 milliard de membres dans le monde, c'est la plateforme incontournable pour le B2B, les freelances et les experts qui veulent construire leur autorité.<br><br>Ce qui fonctionne sur LinkedIn :<br><br>📝 <strong>Les posts texte longs</strong> qui partagent une expérience ou une leçon apprise<br>📊 <strong>Les carrousels PDF</strong> qui apportent de la valeur concrète<br>🎥 <strong>Les vidéos natives</strong> (uploadées directement sur LinkedIn, pas des liens YouTube)<br>💬 <strong>Les commentaires pertinents</strong> sur les posts des autres — souvent sous-estimés"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une consultante en ressources humaines à Casablanca publie chaque semaine 1 post LinkedIn sur les erreurs de recrutement au Maroc. En 6 mois, elle a attiré 3 entreprises clientes via LinkedIn uniquement — sans jamais faire de publicité payante."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 3 piliers d'une stratégie réseaux efficace",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quelle que soit la plateforme, une stratégie réseaux sociaux qui marche repose sur 3 piliers :<br><br>✍️ <strong>Pilier 1 — le contenu :</strong> ce que tu publies pour attirer et éduquer ton audience<br>🤝 <strong>Pilier 2 — la communauté :</strong> la relation que tu crées avec tes abonnés (réponses, sondages, interactions)<br>💰 <strong>Pilier 3 — la conversion :</strong> les actions qui transforment tes abonnés en clients (appels à l'action clairs, liens, offres)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Beaucoup d'entrepreneurs n'investissent que dans le contenu — et oublient la communauté et la conversion. Or, c'est le triangle complet qui transforme un compte en outil de vente."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le contenu pilier — la base de tout",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>contenu pilier</strong> (ou pillar content), c'est le contenu principal autour duquel toute ta communication est organisée. En général, une publication longue (vidéo YouTube, article de blog, podcast) dont tu extrais ensuite plein de micro-contenus.<br><br>Exemple de circuit :<br><br>🎥 1 vidéo YouTube de 10 min sur un sujet<br>→ 5 Reels Instagram tirés des moments clés<br>→ 1 carrousel LinkedIn qui résume les points principaux<br>→ 3 stories Instagram avec des extraits et sondages<br>→ 1 email pour ta liste avec la vidéo + un bonus exclusif"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Créer 1 contenu pilier par semaine et le décliner sur plusieurs formats te permet d'être partout sans travailler 10 fois plus. C'est la méthode des créateurs de contenu les plus efficaces."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les formats de contenu — lequel choisir ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Chaque format a ses avantages selon ton objectif :<br><br>🎬 <strong>Reels / TikTok (vidéo courte) :</strong> meilleure portée, idéal pour attirer de nouveaux abonnés<br>🖼️ <strong>Carrousel :</strong> très sauvegardé, idéal pour éduquer et être référencé<br>📸 <strong>Photo avec légende longue :</strong> storytelling, partage d'expérience<br>⭕ <strong>Stories :</strong> relation quotidienne, authenticité, appel à l'action direct<br>🔴 <strong>Live :</strong> engagement fort, ventes en direct, questions-réponses<br>📰 <strong>Post texte (LinkedIn) :</strong> expertise, réflexion, prise de position"
+        },
+        {
+          "type": "attention",
+          "contenu": "Il n'y a pas un « meilleur » format universel. Le meilleur format est celui que tu es capable de produire régulièrement et qui correspond aux habitudes de consommation de ton persona."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment fonctionne un algorithme",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'algorithme d'un réseau social décide quels contenus montrer — et à combien de personnes. Comprendre sa logique te permet d'optimiser ta portée sans payer.<br><br>Les signaux que tous les algorithmes favorisent :<br><br>⏱️ <strong>Le temps de visionnage :</strong> plus les gens restent longtemps sur ton contenu, mieux il est promu<br>💬 <strong>Les commentaires :</strong> signal fort d'engagement — surtout les commentaires longs<br>🔁 <strong>Les partages :</strong> le signal le plus puissant, car il attire de nouveaux utilisateurs<br>💾 <strong>Les sauvegardes :</strong> indiquent que le contenu est utile et mérite d'être revu<br>❤️ <strong>Les likes :</strong> signal positif mais moins déterminant qu'avant"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Crée du contenu qui pousse les gens à commenter, partager ou sauvegarder — pas juste à liker. Pose des questions, demande des avis, partage des infos utiles à garder."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'engagement — plus important que les abonnés",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>taux d'engagement</strong>, c'est le pourcentage de tes abonnés qui interagissent avec ton contenu (likes, commentaires, partages, sauvegardes).<br><br>Comment le calculer :<br>📊 (Nombre total d'interactions ÷ Nombre d'abonnés) × 100<br><br>Les benchmarks à connaître :<br>→ Moins de 1 % → faible engagement<br>→ 1 % à 3 % → engagement moyen<br>→ 3 % à 6 % → bon engagement<br>→ Plus de 6 % → excellent engagement"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un compte Instagram de 1 200 abonnés avec 8 % d'engagement (96 interactions par post) sera considéré par les marques comme plus influent qu'un compte de 50 000 abonnés avec 0,5 % d'engagement (250 interactions). Les micro-comptes engagés ont souvent plus d'impact réel."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le personal branding sur les réseaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>personal branding</strong>, c'est l'art de construire une image professionnelle forte autour de ta personnalité et de ton expertise — pas seulement autour de tes produits ou services.<br><br>Sur les réseaux, les gens suivent des <strong>personnes</strong> avant de suivre des marques. Montrer qui tu es, comment tu travailles, ce en quoi tu crois — c'est ce qui crée une connexion réelle avec ton audience.<br><br>Les éléments clés du personal branding :<br>🖼️ Une photo de profil professionnelle et reconnaissable<br>📝 Une bio claire qui dit exactement ce que tu fais et pour qui<br>🎨 Une charte visuelle cohérente sur tous tes posts<br>🗣️ Un ton de communication constant et authentique"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les gens achètent à des personnes en qui ils ont confiance. Ton personal branding, c'est ce qui construit cette confiance avant même le premier contact commercial."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les hashtags — utilisation stratégique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les hashtags permettent à des personnes qui ne te suivent pas encore de découvrir ton contenu via la recherche.<br><br>Bonne pratique des hashtags en 2024 :<br><br>📌 <strong>Instagram :</strong> 3 à 5 hashtags ciblés valent mieux que 30 hashtags génériques<br>📌 <strong>TikTok :</strong> 3 à 4 hashtags — mélange populaires et de niche<br>📌 <strong>LinkedIn :</strong> 3 hashtags maximum, très ciblés<br>📌 <strong>Facebook :</strong> les hashtags ont peu d'impact, utilise-les avec modération<br><br>Choisis des hashtags à 3 niveaux :<br>🔴 1 hashtag large (ex. #marketing)<br>🟡 2 hashtags moyens (ex. #marketingdigitalmaroc)<br>🟢 2 hashtags de niche (ex. #entrepreneuremarocaine)"
+        },
+        {
+          "type": "attention",
+          "contenu": "Évite les hashtags trop populaires comme #love ou #business — ton contenu sera noyé en quelques secondes. Les hashtags de niche ciblés atteignent des audiences plus petites mais beaucoup plus qualifiées."
+        }
+      ]
+    },
+
+    {
+      "titre": "La fréquence de publication optimale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La fréquence idéale dépend du réseau et de tes ressources. Voici les recommandations pour débutants :<br><br>📱 <strong>Instagram :</strong> 3 à 5 posts/semaine (dont au moins 2 Reels) + stories quotidiennes si possible<br>📘 <strong>Facebook :</strong> 3 à 5 posts/semaine<br>🎵 <strong>TikTok :</strong> 1 à 2 vidéos/jour pour une croissance rapide, 3 à 5/semaine pour commencer<br>💼 <strong>LinkedIn :</strong> 2 à 3 posts/semaine<br>🎥 <strong>YouTube :</strong> 1 vidéo/semaine minimum"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La régularité bat l'intensité. Publier 3 fois par semaine pendant 6 mois sans s'arrêter donnera de bien meilleurs résultats qu'un sprint de 20 posts en 2 semaines suivi d'un silence de 2 mois."
+        }
+      ]
+    },
+
+    {
+      "titre": "Collaborations et contenu généré par les utilisateurs",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Deux leviers souvent sous-estimés pour accélérer la croissance sur les réseaux :<br><br>🤝 <strong>Les collaborations :</strong> partenariats avec d'autres créateurs ou marques complémentaires. Un live en commun, un post collaboratif, une mention croisée — tu touches instantanément l'audience de l'autre.<br><br>📢 <strong>L'UGC (User Generated Content) :</strong> le contenu créé par tes propres clients. Quand un client partage une photo de ton produit ou laisse un témoignage vidéo, c'est la preuve sociale la plus puissante qui soit."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une vendeuse de bijoux artisanaux à Marrakech encourage ses clients à poster une photo avec leurs achats en les taguant. Elle repartage ces contenus dans ses stories. Résultat : du contenu gratuit, de la preuve sociale, et des nouvelles personnes qui découvrent sa boutique via les profils de ses clients."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Red Bull et le contenu qui n'est pas une publicité",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Red Bull est la marque qui a le mieux compris que <strong>sur les réseaux sociaux, les gens ne veulent pas voir de publicité — ils veulent voir du contenu qui les inspire</strong>.<br><br><strong>La stratégie Red Bull sur les réseaux :</strong><br><br>🏂 Ils ne vendent pas une boisson — ils vendent un style de vie basé sur le dépassement de soi<br>🎥 Leur contenu : sports extrêmes, exploits humains, aventures spectaculaires<br>📱 Instagram : 16 millions d'abonnés, presque aucune photo de canette dans le feed<br>🎵 TikTok : vidéos virales de sportifs qui réalisent des exploits<br>🎥 YouTube : documentaires et événements sportifs complets — la plupart sans mention du produit"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Red Bull organise chaque année des événements au Maroc et en Afrique (Red Bull Soundclash, compétitions de sports urbains) et génère des millions de vues sur les réseaux locaux. La leçon pour toi : qu'est-ce que ton contenu inspire chez ton audience — au-delà de ton produit ?"
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Imane, makeup artist à Casablanca",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ (2022) :</strong><br><br>Imane est maquilleuse professionnelle. Elle travaille sur des mariages et des événements privés. Elle gagne correctement sa vie mais manque de clients réguliers. Elle n'a pas de présence en ligne. Elle commence avec 0 abonné, un smartphone et une bonne lumière naturelle."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>La stratégie qu'elle a appliquée :</strong><br><br>🎬 <strong>TikTok :</strong> 1 transformation maquillage/jour — avant/après filmé en 60 secondes avec de la musique tendance<br>📸 <strong>Instagram :</strong> photos de mariées du jour, coulisses de préparation, tutoriels adaptés aux carnations maghrébines<br>💬 <strong>WhatsApp Business :</strong> catalogue de ses prestations + réservation directe<br>👥 <strong>Collaborations :</strong> partenariats avec des photographes de mariage et des salons de coiffure locaux<br><br><strong>Résultats après 8 mois :</strong><br>→ 74 000 abonnés TikTok<br>→ 18 000 abonnés Instagram<br>→ Agenda rempli 3 mois à l'avance<br>→ Elle a refusé des clientes et commencé à former d'autres maquilleuses<br>→ Lancement d'un cours en ligne à 490 DH — 120 ventes en 48h"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Imane n'a pas eu de « coup de chance viral ». Elle a publié chaque jour pendant 8 mois, même quand elle avait peu de vues. La régularité + la niche précise (carnations maghrébines) + WhatsApp pour convertir = un système qui fonctionne."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le calendrier éditorial pour les réseaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un calendrier éditorial pour les réseaux sociaux te permet de planifier ton contenu à l'avance pour ne jamais tomber à court d'idées.<br><br>Pour le construire, utilise la <strong>règle des 3 tiers :</strong><br><br>📚 <strong>1/3 contenu éducatif :</strong> apprendre quelque chose à ton audience (conseils, tutoriels, infos)<br>🤝 <strong>1/3 contenu relationnel :</strong> te montrer, partager ta vie pro, sondages, questions<br>💰 <strong>1/3 contenu commercial :</strong> présenter tes offres, témoignages, appels à l'action"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Exemple de semaine pour une coach business :<br>📅 Lundi : conseil pratique en carrousel (éducatif)<br>📅 Mercredi : coulisse de son quotidien de coach (relationnel)<br>📅 Vendredi : témoignage d'une cliente + lien vers ses services (commercial)<br>📅 Tous les jours : stories légères, sondages, réponses aux messages"
+        }
+      ]
+    },
+
+    {
+      "titre": "Mesurer ses performances sur les réseaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Chaque réseau propose des statistiques intégrées. Voici les indicateurs à surveiller chaque semaine :<br><br>📊 <strong>La portée :</strong> combien de personnes ont vu ton contenu<br>💬 <strong>L'engagement rate :</strong> quel % de ta portée a interagi<br>👣 <strong>Les visites de profil :</strong> combien de personnes ont visité ton profil après un post<br>🔗 <strong>Les clics sur le lien en bio :</strong> combien ont cliqué vers ton site ou WhatsApp<br>📈 <strong>La croissance d'abonnés :</strong> évolution nette d'une semaine à l'autre"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Analyse tes 3 meilleurs posts du mois et demande-toi : qu'est-ce qu'ils ont en commun ? Sujet, format, heure de publication ? Publie plus de ce qui fonctionne, moins de ce qui ne fonctionne pas."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs à éviter sur les réseaux sociaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs sont commises par la majorité des entrepreneurs qui débutent — et elles peuvent facilement être évitées :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> poster uniquement des publicités pour ses produits sans jamais apporter de valeur<br>❌ <strong>Erreur 2 :</strong> ne jamais répondre aux commentaires et aux messages privés<br>❌ <strong>Erreur 3 :</strong> acheter des abonnés — ils ne s'engagent pas et nuisent à l'algorithme<br>❌ <strong>Erreur 4 :</strong> changer de niche ou de style graphique toutes les semaines<br>❌ <strong>Erreur 5 :</strong> publier sans appel à l'action — tes abonnés ont besoin qu'on leur dise quoi faire ensuite"
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et concepts de ce module s'appuient sur :<br><br>📖 <strong>Hootsuite – Social Media Trends Report 2024</strong><br>📖 <strong>Sprout Social – Social Media Index 2024</strong><br>📖 <strong>We Are Social – Digital 2024 Report (Afrique + Maghreb)</strong><br>📖 <strong>Red Bull Media House – Content Strategy Overview 2023</strong><br>📖 <strong>Meta for Business – Algorithm Insights 2024</strong><br>📖 <strong>TikTok for Business – Creator Playbook 2024</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les algorithmes évoluent constamment. Suis les blogs officiels de Meta, TikTok et LinkedIn pour rester à jour sur les changements qui impactent ta visibilité."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quel indicateur est plus important que le nombre d'abonnés pour mesurer l'efficacité d'un compte sur les réseaux sociaux ?",
+      "options": [
+        "Le nombre de publications par semaine",
+        "Le taux d'engagement — le pourcentage d'abonnés qui interagissent avec le contenu",
+        "La date de création du compte",
+        "Le nombre de photos dans la galerie du profil"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Selon la règle des 3 tiers, comment doit être réparti le contenu sur les réseaux sociaux ?",
+      "options": [
+        "1/3 promotions, 1/3 concurrents, 1/3 actualités",
+        "1/3 photos, 1/3 vidéos, 1/3 textes",
+        "1/3 contenu éducatif, 1/3 contenu relationnel, 1/3 contenu commercial",
+        "1/3 matin, 1/3 midi, 1/3 soir"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quelle est la particularité de l'algorithme TikTok par rapport aux autres réseaux sociaux ?",
+      "options": [
+        "Il favorise uniquement les comptes vérifiés et les célébrités",
+        "Il ne montre le contenu qu'aux abonnés existants",
+        "Il peut offrir une grande portée à n'importe quel compte — même avec 0 abonné — si le contenu est engageant",
+        "Il est le seul algorithme à prendre en compte les hashtags"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quel signal d'engagement est considéré comme le plus puissant par les algorithmes des réseaux sociaux ?",
+      "options": [
+        "Les likes",
+        "Les vues de stories",
+        "Le nombre d'abonnés gagnés",
+        "Les partages — car ils exposent le contenu à de nouvelles audiences"
+      ],
+      "reponse": 3
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Dans l'étude de cas d'Imane, quel canal lui a permis de convertir ses abonnés en clientes réelles ?",
+      "options": [
+        "Les publicités Facebook payantes",
+        "WhatsApp Business — qui lui permettait de recevoir des réservations directement",
+        "Un site e-commerce avec paiement en ligne",
+        "Les emails automatisés"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
