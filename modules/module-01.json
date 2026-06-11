@@ -1,0 +1,374 @@
+{
+  "id": 1,
+  "titre": "Introduction au marketing digital",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Tu vas découvrir ce qu'est vraiment le marketing digital, pourquoi il est devenu incontournable en Afrique et au Maghreb, et comment des entrepreneurs comme toi l'utilisent pour transformer leur activité.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi le marketing digital ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le marketing digital, c'est l'ensemble des actions menées sur internet et les supports numériques pour <strong>attirer des clients</strong>, les <strong>convaincre</strong> et les <strong>fidéliser</strong>.<br><br>En résumé : c'est la façon moderne de faire connaître ce que tu fais — sans tract, sans affiche, sans dépendre d'un bouche-à-oreille lent et imprévisible."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le marketing digital n'est pas réservé aux grandes entreprises. Un artisan, une boutique, un coach, une école — tout le monde peut en bénéficier, à n'importe quel budget."
+        }
+      ]
+    },
+
+    {
+      "titre": "Internet en Afrique — une révolution en marche",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'Afrique est le continent qui connaît la croissance internet la plus rapide au monde. Voici ce que les chiffres disent :<br><br>📱 <strong>570 millions</strong> d'internautes africains en 2024<br>🇲🇦 <strong>88 %</strong> des Marocains utilisent internet<br>📲 <strong>90 %</strong> des connexions en Afrique se font depuis un smartphone<br>💬 WhatsApp et Facebook sont les plateformes les plus utilisées en Afrique subsaharienne"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ton futur client est déjà en ligne. La vraie question, c'est : est-ce qu'il te trouve ?"
+        }
+      ]
+    },
+
+    {
+      "titre": "Marketing traditionnel vs marketing digital",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant internet, pour faire connaître ton business, tu avais besoin de :<br><br>📻 La radio et la TV → très cher, inaccessible pour les petites structures<br>🗞️ Les journaux et les flyers → limité géographiquement<br>📣 Le bouche-à-oreille → lent et difficile à contrôler<br><br>Aujourd'hui, avec le marketing digital, tu peux :<br><br>🎯 Cibler exactement les personnes intéressées par ton offre<br>💰 Démarrer avec un petit budget — parfois zéro<br>📊 Mesurer chaque action en temps réel<br>🌍 Toucher des clients à Casablanca, à Dakar ou à Paris depuis chez toi"
+        },
+        {
+          "type": "attention",
+          "contenu": "Le digital ne remplace pas tout. Mais ignorer le digital aujourd'hui, c'est comme refuser d'avoir un numéro de téléphone en 1995."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi maintenant ? L'opportunité est là",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique et au Maghreb, la transformation digitale est en train de se produire <strong>en ce moment même</strong>. Les entrepreneurs qui maîtrisent le digital aujourd'hui auront un avantage décisif sur ceux qui attendent.<br><br>Concrètement :<br><br>→ Le nombre d'achats en ligne en Afrique a doublé entre 2020 et 2023<br>→ Les PME avec une présence digitale croissent 2 fois plus vite que les autres<br>→ Le e-commerce en Afrique devrait atteindre 75 milliards $ d'ici 2025 (source : IFC)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ce n'est pas une mode passagère. C'est un changement structurel. Et la bonne nouvelle, c'est que tu es encore au bon moment pour en profiter."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 6 piliers du marketing digital",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le marketing digital repose sur 6 grands piliers. Tu n'as pas besoin de tous les maîtriser en même temps — mais tu dois les connaître pour construire une stratégie cohérente.<br><br>🌐 <strong>Pilier 1 — la présence en ligne :</strong> ton site web, ta vitrine digitale<br>📱 <strong>Pilier 2 — les réseaux sociaux :</strong> pour créer une communauté<br>✍️ <strong>Pilier 3 — le contenu :</strong> articles, vidéos, posts qui attirent<br>🔍 <strong>Pilier 4 — le SEO :</strong> être visible sur Google gratuitement<br>💰 <strong>Pilier 5 — la publicité digitale :</strong> atteindre plus de gens rapidement<br>📧 <strong>Pilier 6 — l'email marketing :</strong> fidéliser et vendre à tes contacts"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ces 6 piliers travaillent ensemble. On va les explorer un par un tout au long de cette phase 1 — tu auras une vision complète à la fin des 10 modules."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 1 — ta présence en ligne",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avoir une présence en ligne, c'est exister sur internet de façon professionnelle. Ça peut prendre plusieurs formes selon ton activité :<br><br>🌐 <strong>Un site web</strong> → ta vitrine permanente, accessible 24h/24<br>📍 <strong>Google Business Profile</strong> → pour apparaître sur Google Maps quand on te cherche<br>🛍️ <strong>Une boutique en ligne</strong> → si tu vends des produits physiques ou numériques<br>💼 <strong>Un profil LinkedIn</strong> → pour les activités B2B et le personal branding"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une coach nutritionniste à Rabat a créé une simple page Instagram + un lien de prise de rendez-vous. En 3 mois, elle a rempli son agenda uniquement grâce à sa présence digitale — sans dépenser un centime en publicité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 2 — les réseaux sociaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les réseaux sociaux sont l'outil le plus accessible pour construire une audience et créer du lien avec tes clients potentiels.<br><br>🇲🇦 <strong>Au Maroc :</strong> Facebook, Instagram, TikTok et YouTube dominent<br>🌍 <strong>En Afrique subsaharienne :</strong> Facebook, WhatsApp Business et TikTok<br>💼 <strong>Pour le B2B :</strong> LinkedIn reste incontournable<br><br>La règle d'or : <strong>choisir 1 ou 2 réseaux et y être régulier</strong>, plutôt qu'être partout sans cohérence."
+        },
+        {
+          "type": "attention",
+          "contenu": "Un compte inactif fait plus de mal que pas de compte du tout. Un profil abandonné envoie un mauvais signal à tes visiteurs. Mieux vaut une présence forte sur un seul réseau."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 3 — le marketing de contenu",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le contenu, c'est tout ce que tu produis pour <strong>informer, inspirer ou aider</strong> ton audience :<br><br>✍️ Articles de blog<br>🎥 Vidéos (Reels, TikTok, YouTube)<br>🎙️ Podcasts<br>📊 Infographies<br>💬 Posts sur les réseaux sociaux<br><br>Le principe est simple : plus tu apportes de la valeur à ton audience, plus elle te fait confiance — et plus elle achète."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le contenu crée la confiance. La confiance crée les ventes. C'est le fondement du marketing digital moderne — et c'est à la portée de tout le monde."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 4 — le SEO (référencement naturel)",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le SEO (Search Engine Optimization), c'est l'art d'<strong>apparaître en premier sur Google</strong> quand quelqu'un cherche ce que tu proposes — et ce, gratuitement.<br><br>Par exemple : si tu vends du miel bio au Maroc, le SEO te permet d'apparaître quand quelqu'un tape « acheter miel bio Casablanca » sur Google.<br><br>Le SEO demande du temps (3 à 6 mois minimum pour voir des résultats), mais ses effets sont durables et sans frais publicitaires continus."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un traiteur à Marrakech qui optimise son site pour les mots-clés « traiteur mariage Marrakech » peut recevoir des dizaines de demandes par mois — sans dépenser un dirham en publicité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 5 — la publicité digitale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La publicité digitale te permet de <strong>toucher rapidement</strong> un large public en payant pour être visible — là où ton client passe du temps.<br><br>Les principales plateformes :<br><br>📘 <strong>Meta Ads</strong> (Facebook + Instagram) → idéal pour les produits et services grand public<br>🔍 <strong>Google Ads</strong> → pour toucher les personnes qui cherchent activement<br>🎵 <strong>TikTok Ads</strong> → pour une audience jeune et mobile<br><br>Le grand avantage : tu peux <strong>démarrer avec 50 DH / jour</strong> et cibler uniquement les profils qui correspondent à ton client idéal."
+        },
+        {
+          "type": "attention",
+          "contenu": "La publicité amplifie ce qui existe déjà. Si ton offre ou ta page n'est pas claire, l'argent investi en pub sera gaspillé. Prépare tes bases avant d'activer la pub."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 6 — l'email marketing",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'email marketing consiste à <strong>envoyer des messages ciblés</strong> à une liste de personnes qui t'ont donné leur adresse email.<br><br>C'est l'outil le plus rentable du marketing digital :<br>→ Pour 1 $ investi, l'email génère en moyenne <strong>36 $ de retour</strong> (source : Litmus, 2023)<br><br>Et contrairement aux réseaux sociaux, <strong>ta liste email t'appartient</strong>. Si une plateforme change ses règles demain, tu gardes tes contacts."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Construire une liste email, c'est construire un actif. C'est l'un des investissements les plus intelligents que tu puisses faire pour la longévité de ton business."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Jumia, le géant africain du e-commerce",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Jumia est la plus grande plateforme de e-commerce en Afrique, présente dans 11 pays dont le Maroc, le Sénégal, la Côte d'Ivoire, le Nigeria et l'Égypte.<br><br><strong>Comment Jumia a construit sa présence ?</strong><br><br>📱 <strong>Mobile-first dès le départ</strong> → leur site est optimisé pour les smartphones, parce qu'ils savaient que l'Afrique serait un continent mobile<br>🎯 <strong>Publicité ciblée</strong> sur Facebook et Google pour chaque marché local<br>📧 <strong>Campagnes email personnalisées</strong> avec promotions adaptées à chaque pays<br>📦 <strong>Partenariats locaux</strong> pour résoudre les défis de livraison propres à l'Afrique"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Jumia a compris avant tout le monde que le client africain commande depuis son téléphone, préfère payer à la livraison et veut une interface en français local ou en arabe. Cette stratégie 100 % digitale et localisée leur a permis d'atteindre plus de 3 millions de clients actifs. La leçon : adapter le digital au contexte local, c'est la clé."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le parcours de ton client en ligne",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant d'acheter, ton client passe par plusieurs étapes. On appelle ça le <strong>parcours client</strong> ou <em>customer journey</em> :<br><br>👁️ <strong>Découverte</strong> → il entend parler de toi pour la première fois (réseaux sociaux, Google, recommandation)<br>🤔 <strong>Considération</strong> → il s'intéresse, compare, visite ton site ou ton profil<br>✅ <strong>Décision</strong> → il choisit d'acheter chez toi plutôt qu'ailleurs<br>💛 <strong>Fidélisation</strong> → il revient et te recommande autour de lui"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ton rôle en tant que marketeur digital, c'est d'être présent et convaincant à chaque étape de ce parcours. Pas seulement au moment de la vente."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Fatima, artisane à Fès",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ (2021) :</strong><br><br>Fatima fabrique des sacs en cuir dans son atelier à Fès. Elle vend uniquement aux touristes qui passent dans sa rue et à quelques grossistes locaux. Son chiffre d'affaires stagne depuis 3 ans. Elle n'a pas de présence digitale."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qu'elle a fait :</strong><br><br>📸 Elle ouvre un compte Instagram et publie chaque semaine des vidéos de fabrication (le savoir-faire artisanal fascine les audiences étrangères)<br>🛍️ Elle crée une boutique en ligne simple avec ses 10 modèles phares<br>📧 Elle collecte les emails de ses visiteurs et envoie une newsletter mensuelle<br>💬 Elle crée un groupe WhatsApp pour ses clientes régulières<br><br><strong>Le résultat 12 mois plus tard :</strong><br>→ 8 400 abonnés Instagram<br>→ 40 % de ses ventes viennent désormais de l'international (France, Espagne, Canada)<br>→ Son chiffre d'affaires a augmenté de 180 %"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Fatima n'a rien inventé. Elle a appliqué les bases du marketing digital de façon constante et authentique. C'est exactement ce que tu vas apprendre à faire dans cette formation."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'entonnoir de conversion",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'entonnoir de conversion décrit comment un inconnu devient un client payant :<br><br>⬆️ <strong>Haut de l'entonnoir — awareness</strong> → des milliers de personnes découvrent ton contenu ou ta marque<br>↕️ <strong>Milieu — considération</strong> → une partie s'intéresse, suit tes réseaux, lit tes articles<br>⬇️ <strong>Bas — conversion</strong> → une partie achète ton produit ou service<br>🔁 <strong>Après la conversion — fidélisation</strong> → ils reviennent et recommandent"
+        },
+        {
+          "type": "attention",
+          "contenu": "L'erreur classique : essayer de vendre à froid à des gens qui ne te connaissent pas encore. L'entonnoir te rappelle qu'il faut d'abord créer de la confiance avant de proposer une offre commerciale."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton client idéal — le persona",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>persona</strong>, c'est le portrait fictif mais précis de ton client idéal. Plus tu le connais, plus ton marketing sera juste et efficace.<br><br>Pour construire ton persona, tu dois répondre à ces questions :<br><br>👤 Qui est-il / elle ? (âge, ville, situation familiale)<br>💼 Que fait-il / elle dans la vie ?<br>😣 Quel est son problème principal ?<br>🎯 Qu'est-ce qu'il / elle cherche vraiment ?<br>📱 Quelles plateformes utilise-t-il / elle ?"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Exemple de persona :</strong> Karim, 32 ans, entrepreneur à Casablanca. Il gère une boutique de vêtements et veut vendre en ligne mais ne sait pas par où commencer. Il passe 2h/jour sur Instagram, suit des comptes business et a peur de faire de mauvaises dépenses. Il cherche des conseils pratiques, pas de la théorie."
+        }
+      ]
+    },
+
+    {
+      "titre": "La data — mesure pour progresser",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'un des grands avantages du marketing digital, c'est que <strong>tout est mesurable</strong>. Contrairement à une affiche dans la rue, tu sais exactement combien de personnes ont vu ton contenu, cliqué sur ton lien, ou acheté ton produit.<br><br>Les outils essentiels à connaître :<br><br>📊 <strong>Google Analytics</strong> → qui visite ton site et d'où ils viennent<br>📱 <strong>Meta Insights</strong> → statistiques de tes posts Facebook et Instagram<br>📧 <strong>Mailchimp / Brevo</strong> → taux d'ouverture et de clic de tes emails"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La data, ce n'est pas réservé aux experts. Savoir lire 3 ou 4 indicateurs clés suffit pour prendre de meilleures décisions chaque semaine — et éviter de gaspiller ton énergie."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 erreurs classiques des débutants",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour éviter de gaspiller ton temps et ton énergie, voici les erreurs les plus fréquentes — et les plus coûteuses :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> vouloir être présent sur tous les réseaux en même temps<br>❌ <strong>Erreur 2 :</strong> lancer de la publicité avant d'avoir une offre claire<br>❌ <strong>Erreur 3 :</strong> poster sans régularité ni stratégie<br>❌ <strong>Erreur 4 :</strong> copier les grandes marques sans adapter à ses moyens<br>❌ <strong>Erreur 5 :</strong> attendre la perfection avant de se lancer"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le marketing digital est à ta portée",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu n'as pas besoin d'être expert en informatique, d'avoir un grand budget ou de diriger une équipe marketing.<br><br>Des entrepreneurs comme toi, partout en Afrique et au Maghreb, ont transformé leur activité grâce aux outils digitaux — avec un simple smartphone et une connexion internet.<br><br>Ce qui fait la vraie différence, c'est :<br>✅ La <strong>régularité</strong><br>✅ La <strong>connaissance de son client</strong><br>✅ La <strong>volonté d'apprendre et de tester</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin d'être parfait pour commencer. Mais tu dois commencer pour devenir bon."
+        }
+      ]
+    },
+
+    {
+      "titre": "Ce qui t'attend dans la phase 1",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Cette phase — <strong>le monde numérique</strong> — couvre les 10 modules fondamentaux du marketing digital :<br><br>📌 Module 1 : introduction au marketing digital — <em>tu es ici</em><br>📌 Module 2 : construire ta présence en ligne<br>📌 Module 3 : maîtriser les réseaux sociaux<br>📌 Module 4 : créer du contenu qui attire<br>📌 Module 5 : les bases du SEO<br>📌 Module 6 : la publicité digitale pour débutants<br>📌 Module 7 : l'email marketing de A à Z<br>📌 Module 8 : comprendre et utiliser la data<br>📌 Module 9 : créer une offre irrésistible en ligne<br>📌 Module 10 : construire ta stratégie digitale complète"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chaque module dure 15 minutes. À la fin de cette phase, tu auras une vision complète et opérationnelle — et les bases pour passer à l'action."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et statistiques utilisées dans ce module sont issues de :<br><br>📖 <strong>DataReportal – Digital 2024 Global Overview</strong> — datareportal.com<br>📖 <strong>We Are Social – Global Digital Report 2024</strong><br>📖 <strong>Jumia Africa E-commerce Index 2023</strong><br>📖 <strong>Litmus – Email Marketing ROI Report 2023</strong><br>📖 <strong>IFC / Banque mondiale – PME digitales en Afrique 2023</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le digital évolue vite. Ces sources sont mises à jour chaque année — consulte-les régulièrement pour rester à jour sur les tendances de ton marché."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quelle est la meilleure définition du marketing digital ?",
+      "options": [
+        "Créer un site web pour son entreprise",
+        "L'ensemble des actions menées sur internet et les supports numériques pour attirer, convaincre et fidéliser des clients",
+        "Faire de la publicité sur les réseaux sociaux uniquement",
+        "Envoyer des emails promotionnels à ses contacts"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Quel pourcentage des Marocains utilise internet selon les données 2024 ?",
+      "options": [
+        "Environ 45 %",
+        "Environ 65 %",
+        "Environ 88 %",
+        "Environ 99 %"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans l'étude de cas de Fatima, quelle combinaison d'actions a principalement provoqué l'augmentation de 180 % de son chiffre d'affaires ?",
+      "options": [
+        "Elle a baissé ses prix et ouvert un deuxième atelier",
+        "Elle a embauché une agence de communication internationale",
+        "Elle a posté régulièrement sur Instagram, créé une boutique en ligne et collecté des emails",
+        "Elle a uniquement fait de la publicité Facebook payante"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quel outil du marketing digital offre le meilleur retour sur investissement selon les études récentes ?",
+      "options": [
+        "La publicité sur TikTok",
+        "Le référencement naturel (SEO)",
+        "L'email marketing",
+        "Les stories Instagram"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Parmi les erreurs classiques des débutants, laquelle est la plus fréquente ?",
+      "options": [
+        "Investir dans un site web professionnel dès le départ",
+        "Créer du contenu de façon régulière et stratégique",
+        "Vouloir être présent sur tous les réseaux sociaux en même temps",
+        "Utiliser Google Analytics pour mesurer ses résultats"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
