@@ -1,0 +1,374 @@
+{
+  "id": 6,
+  "titre": "Mener des campagnes publicitaires",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "La publicité digitale te permet d'accélérer ta croissance et d'atteindre des milliers de personnes qualifiées en quelques jours. Dans ce module, tu vas apprendre à lancer tes premières campagnes sur Facebook, TikTok, Google et WhatsApp — avec méthode, sans gaspiller ton budget.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi une campagne publicitaire digitale ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une campagne publicitaire digitale, c'est le fait de <strong>payer une plateforme</strong> (Facebook, TikTok, Google…) pour diffuser ton message auprès d'une audience précise que tu définis toi-même.<br><br>Contrairement au contenu organique qui dépend de l'algorithme, la publicité payante te donne le contrôle :<br><br>🎯 Tu choisis <strong>qui</strong> voit ta pub (âge, ville, centres d'intérêt, comportement)<br>📅 Tu choisis <strong>quand</strong> elle est diffusée<br>💰 Tu choisis <strong>combien</strong> tu dépenses<br>📊 Tu mesures <strong>exactement</strong> ce que ça rapporte"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La publicité digitale n'est pas un pari. C'est un investissement mesurable. Si tu sais combien te coûte un client et combien il te rapporte, tu peux décider en toute connaissance de cause combien investir en publicité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Organique vs payant — comprendre la différence",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Il existe deux façons de se faire voir sur les plateformes digitales :<br><br>🌱 <strong>Le contenu organique :</strong> posts, reels, articles — gratuit mais dépend de l'algorithme et prend du temps<br>💰 <strong>La publicité payante :</strong> diffusion immédiate, auprès d'une cible précise, avec un budget contrôlé<br><br>Les deux ne s'opposent pas — ils se complètent :<br>→ L'organique construit la crédibilité sur le long terme<br>→ Le payant accélère et amplifie ce qui fonctionne déjà organiquement"
+        },
+        {
+          "type": "attention",
+          "contenu": "Lancer de la publicité sans avoir testé ton message et ton offre en organique d'abord, c'est risqué. Si ton contenu gratuit n'engage personne, ta publicité payante ne convertira pas non plus. Valide d'abord, amplifie ensuite."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les plateformes publicitaires disponibles en Afrique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les principales plateformes disponibles et accessibles depuis le Maghreb et l'Afrique :<br><br>📘 <strong>Meta Ads</strong> (Facebook + Instagram) → la plus utilisée, accessible dès 20 DH/jour<br>🎵 <strong>TikTok Ads</strong> → idéale pour les audiences 18-35 ans, en forte croissance<br>🔍 <strong>Google Ads</strong> → pour capter les personnes qui cherchent activement<br>💬 <strong>WhatsApp Ads</strong> (via Meta) → publicités qui démarrent une conversation WhatsApp<br>💼 <strong>LinkedIn Ads</strong> → pour le B2B, plus cher mais très ciblé<br>🐦 <strong>Snapchat Ads</strong> → pertinent pour les 15-25 ans dans certains pays du Maghreb"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Pour débuter, concentre-toi sur Meta Ads (Facebook + Instagram). C'est la plateforme la plus utilisée en Afrique, la moins chère à l'entrée, et celle qui offre le ciblage le plus précis pour les marchés locaux."
+        }
+      ]
+    },
+
+    {
+      "titre": "Facebook Ads — la référence en Afrique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Facebook Ads reste la plateforme publicitaire numéro 1 pour les entrepreneurs en Afrique et au Maghreb. Voici pourquoi :<br><br>👥 <strong>Audience massive :</strong> plus de 300 millions d'utilisateurs Facebook en Afrique<br>🎯 <strong>Ciblage ultra-précis :</strong> âge, ville, langue, centres d'intérêt, comportement d'achat<br>💰 <strong>Budget flexible :</strong> tu peux démarrer avec 20 DH (environ 2 $) par jour<br>📊 <strong>Mesure en temps réel :</strong> tu vois exactement ce que chaque dirham rapporte<br>🔗 <strong>Intégration Instagram :</strong> une campagne Meta touche à la fois Facebook et Instagram"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une vendeuse de vêtements à Casablanca lance une publicité Facebook avec un budget de 100 DH/jour ciblant les femmes de 25 à 45 ans à Casablanca et Rabat qui s'intéressent à la mode. En 3 jours, elle génère 40 messages WhatsApp et conclut 12 ventes. Coût par vente : moins de 25 DH."
+        }
+      ]
+    },
+
+    {
+      "titre": "La structure d'une campagne Meta Ads",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une campagne Meta Ads est organisée en 3 niveaux — c'est important de comprendre cette structure avant de se lancer :<br><br>🏗️ <strong>Niveau 1 — la campagne :</strong> tu définis l'objectif global (notoriété, trafic, conversions, messages…)<br>🎯 <strong>Niveau 2 — l'ensemble de publicités :</strong> tu définis l'audience, le budget, le calendrier, le placement<br>🖼️ <strong>Niveau 3 — la publicité :</strong> tu crées le visuel, l'accroche et l'appel à l'action"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Exemple concret :</strong><br>📁 Campagne : « Générer des messages WhatsApp »<br>📁 Ensemble de pub : femmes 28-45 ans, Maroc, intérêt « cosmétiques naturels », budget 50 DH/jour<br>📁 Publicité : photo d'un produit + accroche « Découvrez nos soins à l'argan, livrés chez vous en 24h » + bouton « Envoyer un message »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le ciblage — atteindre exactement les bonnes personnes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le ciblage est la fonctionnalité la plus puissante de la publicité digitale. Sur Meta, tu peux cibler par :<br><br>📍 <strong>Localisation :</strong> pays, ville, rayon de X km autour d'un point précis<br>👤 <strong>Démographie :</strong> âge, sexe, langue, situation familiale<br>💡 <strong>Centres d'intérêt :</strong> sport, cuisine, mode, entrepreneuriat, beauté…<br>📱 <strong>Comportement :</strong> acheteurs en ligne, utilisateurs de certains appareils, voyageurs<br>🎯 <strong>Audience personnalisée :</strong> tes propres clients, visiteurs de ton site, abonnés email<br>🔄 <strong>Audience similaire (Lookalike) :</strong> Meta trouve des profils similaires à tes meilleurs clients"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le plus grand risque en publicité Meta, c'est de cibler trop large. Une audience de 50 000 personnes bien qualifiées convertira bien mieux qu'une audience de 5 millions de personnes trop vague."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les formats publicitaires sur Meta",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Meta propose plusieurs formats selon ton objectif et ton contenu :<br><br>🖼️ <strong>Image unique :</strong> simple, rapide, efficace pour les offres claires<br>🎬 <strong>Vidéo :</strong> plus engageant, idéal pour démontrer un produit ou raconter une histoire<br>🎠 <strong>Carrousel :</strong> plusieurs images/vidéos dans une même pub — parfait pour montrer plusieurs produits<br>📖 <strong>Collection :</strong> catalogue de produits avec achat direct intégré<br>⚡ <strong>Stories et Reels sponsorisés :</strong> format plein écran, très immersif, idéal sur mobile<br>💬 <strong>Click-to-WhatsApp :</strong> pub qui ouvre directement une conversation WhatsApp"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "En 2024, les vidéos courtes (Reels sponsorisés) et les publicités click-to-WhatsApp sont les formats qui performent le mieux en Afrique et au Maghreb. Si tu n'as qu'un seul format à tester en priorité, c'est celui-là."
+        }
+      ]
+    },
+
+    {
+      "titre": "Click-to-WhatsApp — la pub qui mène directement à la vente",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le format <strong>click-to-WhatsApp</strong> est l'un des plus efficaces pour les entrepreneurs africains. Il s'agit d'une publicité Facebook ou Instagram dont le bouton d'action ouvre directement une conversation WhatsApp avec toi.<br><br>Pourquoi ça marche si bien au Maghreb et en Afrique :<br><br>💬 WhatsApp est le canal de communication de confiance par excellence<br>🤝 La conversation directe humanise la vente et rassure l'acheteur<br>⚡ Le chemin entre la pub et la vente est le plus court possible<br>📱 Tout se passe sur mobile — là où est ton client"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un vendeur de mobilier artisanal à Fès utilise des publicités click-to-WhatsApp avec la phrase : « Demande ton devis gratuit en 2 minutes. » Chaque clic ouvre WhatsApp avec un message pré-rempli : « Bonjour, je suis intéressé(e) par votre mobilier. » Il n'a plus à courir après les prospects — ils arrivent directement dans sa messagerie."
+        }
+      ]
+    },
+
+    {
+      "titre": "TikTok Ads — l'algorithme qui démocratise la pub",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "TikTok Ads est la plateforme publicitaire à la croissance la plus rapide au monde. Elle est particulièrement efficace pour toucher les 18-35 ans en Afrique du Nord et en Afrique de l'Ouest.<br><br>Les formats publicitaires TikTok :<br><br>🎬 <strong>In-Feed Ads :</strong> vidéos qui s'intègrent dans le fil TikTok — le format le plus courant<br>🔥 <strong>TopView :</strong> première vidéo vue à l'ouverture de l'app — très visible<br>🎭 <strong>Branded Hashtag Challenge :</strong> incite les utilisateurs à créer du contenu autour de ta marque<br><br>✅ <strong>L'avantage clé de TikTok Ads :</strong> même les petits comptes peuvent avoir une portée massive. Le contenu prime sur la taille de la marque."
+        },
+        {
+          "type": "attention",
+          "contenu": "Sur TikTok, une publicité qui ressemble à une publicité ne fonctionne pas. Les meilleures TikTok Ads ressemblent à du contenu organique natif — authentique, spontané, sans sur-production. Adapte ton style à la plateforme."
+        }
+      ]
+    },
+
+    {
+      "titre": "Google Ads — cibler l'intention de recherche",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Google Ads te permet d'apparaître en tête des résultats Google quand quelqu'un tape une recherche liée à ton activité. C'est la publicité la plus puissante pour capter une intention d'achat existante.<br><br>Les principaux formats Google Ads :<br><br>🔍 <strong>Search Ads :</strong> annonces textuelles dans les résultats de recherche<br>🖼️ <strong>Display Ads :</strong> bannières visuelles sur des millions de sites partenaires<br>🎬 <strong>YouTube Ads :</strong> vidéos publicitaires avant ou pendant les vidéos YouTube<br>🛍️ <strong>Shopping Ads :</strong> fiches produits avec photo et prix directement dans Google"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un prestataire en création de sites web à Casablanca lance une campagne Google Ads sur le mot-clé « créer un site web au Maroc ». Il apparaît en premier dans Google. Pour 3 DH par clic, il génère 20 demandes de devis par semaine — des personnes qui cherchent activement son service."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le pixel Meta — l'outil de tracking indispensable",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>pixel Meta</strong> est un petit code à installer sur ton site web. Il permet à Facebook de savoir ce que les visiteurs font sur ton site après avoir vu ta publicité.<br><br>Ce que le pixel te permet de faire :<br><br>📊 <strong>Mesurer les conversions :</strong> savoir combien de personnes ont acheté après avoir vu ta pub<br>🔄 <strong>Faire du retargeting :</strong> reciblez uniquement les personnes qui ont visité ton site<br>🎯 <strong>Créer des audiences similaires :</strong> trouver des profils ressemblant à tes visiteurs<br>⚙️ <strong>Optimiser automatiquement :</strong> Meta apprend qui achète et cible les profils similaires"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Sans le pixel, tu dépenses en aveugle. Avec le pixel, Meta optimise tes campagnes automatiquement pour te trouver les meilleurs clients. C'est la première chose à installer avant de lancer ta première pub."
+        }
+      ]
+    },
+
+    {
+      "titre": "Définir son budget publicitaire intelligemment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le budget publicitaire fait peur à beaucoup d'entrepreneurs débutants. Voici comment l'aborder sereinement :<br><br>📌 <strong>La règle de test :</strong> réserve un budget de test de 20 à 50 DH/jour pendant 7 jours pour chaque campagne. C'est le minimum pour que l'algorithme apprenne et optimise.<br><br>📌 <strong>Le calcul du budget :</strong> si tu sais qu'un client te rapporte 500 DH et que tu es prêt à dépenser 100 DH pour l'acquérir, tu peux investir jusqu'à 100 DH par client généré.<br><br>📌 <strong>La règle de scale :</strong> n'augmente ton budget que sur les campagnes qui fonctionnent déjà. Ne scale jamais une campagne qui ne convertit pas."
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne mets jamais tout ton budget sur une seule campagne dès le départ. Commence avec plusieurs petites campagnes en test (30 à 50 DH/jour chacune), identifie ce qui marche, puis concentre ton budget sur le gagnant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le tunnel publicitaire — TOFU, MOFU, BOFU",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En publicité digitale, on adapte le message selon où se trouve le prospect dans son parcours d'achat :<br><br>⬆️ <strong>TOFU — haut du tunnel (notoriété) :</strong> ta cible ne te connaît pas encore. Tu montres qui tu es et ce que tu fais. Objectif : faire connaître, pas vendre.<br><br>↕️ <strong>MOFU — milieu du tunnel (considération) :</strong> ta cible t'a déjà vu. Tu lui apportes de la valeur, des preuves, des témoignages. Objectif : convaincre.<br><br>⬇️ <strong>BOFU — bas du tunnel (conversion) :</strong> ta cible est presque prête. Tu lui présentes une offre claire avec un appel à l'action fort. Objectif : vendre."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Essayer de vendre directement à des inconnus (BOFU d'emblée) est la raison principale pour laquelle les publicités ne convertissent pas. Respecte le parcours — réchauffe d'abord, vends ensuite."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le copywriting publicitaire — l'accroche qui arrête le scroll",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>copywriting</strong>, c'est l'art d'écrire des textes qui font agir. Dans une publicité, les premières lignes sont cruciales : tu as moins de 3 secondes pour arrêter le scroll.<br><br>Les formules d'accroches qui fonctionnent :<br><br>❓ <strong>La question directe :</strong> « Tu veux attirer des clients sans dépenser des fortunes en pub ? »<br>😮 <strong>Le chiffre surprenant :</strong> « 87 % des boutiques en ligne ferment en moins d'un an à cause de cette erreur. »<br>🎯 <strong>L'identification :</strong> « Si tu es une femme entrepreneur à Casablanca, ce message est pour toi. »<br>🎁 <strong>L'offre irrésistible :</strong> « Reçois ton guide gratuit — 5 façons de doubler tes ventes sans pub. »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Accroche faible : « Nous vendons des formations en marketing digital. »<br>Accroche forte : « Tu postes chaque jour sur Instagram depuis 6 mois… mais toujours 0 client ? Voilà ce qui bloque vraiment. » — La deuxième parle directement à la douleur du persona."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le retargeting — cibler ceux qui te connaissent déjà",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>retargeting</strong> (ou reciblage) consiste à diffuser des publicités spécifiquement aux personnes qui ont déjà interagi avec toi — sans pour autant acheter.<br><br>Tu peux retargeter :<br><br>👁️ Les personnes qui ont vu ta vidéo jusqu'à 75 %<br>🌐 Les visiteurs de ton site web dans les 30 derniers jours<br>🛍️ Les personnes qui ont ajouté un produit au panier sans acheter<br>📱 Les personnes qui ont interagi avec ta page Facebook ou Instagram<br>📧 Ta liste email importée dans Meta<br><br>✅ Le retargeting convertit en moyenne <strong>3 à 5 fois mieux</strong> que la publicité froide — à coût souvent inférieur."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le retargeting est souvent l'investissement publicitaire le plus rentable disponible. Ces personnes te connaissent déjà — elles ont juste besoin d'un petit rappel ou d'une raison supplémentaire d'agir."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Booking.com et le retargeting parfait",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Booking.com est l'une des marques les plus connues en Afrique du Nord — et l'une des plus sophistiquées en matière de publicité digitale et de retargeting.<br><br><strong>Comment Booking.com utilise la publicité digitale :</strong><br><br>🔍 Tu recherches un hôtel à Marrakech sur Booking.com<br>📱 Tu fermes le site sans réserver<br>📘 <strong>1 heure plus tard</strong> : une pub Facebook te montre exactement l'hôtel que tu avais regardé<br>📧 <strong>Le lendemain</strong> : un email « il reste 2 chambres disponibles »<br>📲 <strong>Deux jours plus tard</strong> : une pub Instagram avec une réduction de 10 %<br>🔔 <strong>Jour 4</strong> : une notification de l'appli « prix en baisse pour votre date »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Ce système multi-touches de retargeting explique pourquoi 57 % des réservations Booking.com impliquent au moins 3 points de contact avant l'achat (source : Booking.com internal data, 2023). La leçon pour toi : la plupart des clients n'achètent pas à la première pub. Construis un système de rappels intelligents."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Salma, créatrice de bijoux à Rabat",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ (2022) :</strong><br><br>Salma crée des bijoux en argent et pierres semi-précieuses dans son atelier à Rabat. Elle vend principalement lors de marchés artisanaux le week-end et via des groupes Facebook. Ses ventes sont irrégulières et liées à la météo et à l'affluence des marchés. Elle veut vendre toute l'année, même en dehors des événements."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>La stratégie publicitaire qu'elle a mise en place :</strong><br><br>📸 <strong>Phase 1 — contenu organique :</strong> 3 semaines de posts Instagram pour tester ses visuels et identifier ses bijoux les plus likés<br>💬 <strong>Phase 2 — click-to-WhatsApp :</strong> campagne Meta avec les 3 photos les plus performantes, ciblant les femmes 22-45 ans au Maroc, budget 40 DH/jour<br>🔄 <strong>Phase 3 — retargeting :</strong> campagne de relance pour les personnes qui ont vu ses vidéos à plus de 50 %<br>🎁 <strong>Phase 4 — lead magnet :</strong> guide « comment entretenir ses bijoux en argent » pour collecter des emails et nourrir une liste<br><br><strong>Résultats après 4 mois :</strong><br>→ 280 conversations WhatsApp générées<br>→ 94 ventes conclues — taux de conversion de 33 %<br>→ Panier moyen de 320 DH → chiffre d'affaires de 30 080 DH sur 4 mois<br>→ Pour un budget publicitaire total de 5 400 DH — soit un ROI de 5,5x<br>→ Ventes continues même entre les marchés"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Salma a d'abord validé son contenu en organique avant d'investir en publicité. Elle a ciblé précisément, utilisé le format le plus adapté à son marché (click-to-WhatsApp), et mesuré chaque étape. C'est exactement la méthode à appliquer."
+        }
+      ]
+    },
+
+    {
+      "titre": "Analyser et optimiser ses campagnes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Lancer une campagne, c'est bien. L'optimiser, c'est là que tu fais la vraie différence. Les indicateurs clés à surveiller :<br><br>👁️ <strong>CPM (coût pour 1 000 impressions) :</strong> combien coûte ta visibilité<br>🖱️ <strong>CTR (taux de clic) :</strong> % de personnes qui cliquent sur ta pub — objectif : 1 % minimum<br>💰 <strong>CPC (coût par clic) :</strong> ce que te coûte chaque clic<br>💳 <strong>CPA (coût par acquisition) :</strong> ce que te coûte chaque vente ou lead — le plus important<br>📈 <strong>ROAS (retour sur investissement publicitaire) :</strong> revenus générés ÷ budget dépensé"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Règle simple pour décider d'une campagne :<br>✅ Si le ROAS est supérieur à 3 → continue et augmente le budget progressivement<br>⏸️ Si le ROAS est entre 1 et 3 → optimise le visuel ou l'accroche avant de continuer<br>❌ Si le ROAS est inférieur à 1 → arrête et refais les bases (audience, offre, message)"
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs classiques en publicité digitale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs font perdre des budgets à de nombreux entrepreneurs chaque jour — et elles auraient pu être évitées :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> lancer une pub sans avoir défini un objectif clair<br>❌ <strong>Erreur 2 :</strong> cibler une audience trop large (« tout le Maroc, tous les âges »)<br>❌ <strong>Erreur 3 :</strong> couper une campagne après 2 jours sans lui laisser le temps d'apprendre<br>❌ <strong>Erreur 4 :</strong> utiliser du contenu de mauvaise qualité ou des images floues<br>❌ <strong>Erreur 5 :</strong> ne pas installer le pixel Meta avant de lancer<br>❌ <strong>Erreur 6 :</strong> promouvoir directement une page de vente à une audience froide sans phase de réchauffement<br>❌ <strong>Erreur 7 :</strong> modifier une campagne en cours sans la relaisser apprendre — cela réinitialise l'algorithme"
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton plan pour lancer ta première campagne",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les 6 étapes pour lancer ta première campagne Meta Ads avec méthode :<br><br><strong>Étape 1 :</strong> installe le pixel Meta sur ton site web<br><strong>Étape 2 :</strong> identifie ton objectif (messages WhatsApp, trafic, ventes)<br><strong>Étape 3 :</strong> définis ton persona et construis ton audience dans le gestionnaire de pubs<br><strong>Étape 4 :</strong> crée 2 à 3 visuels différents (image ou vidéo courte) pour tester<br><strong>Étape 5 :</strong> lance avec un budget de 30 à 50 DH/jour pendant 7 jours<br><strong>Étape 6 :</strong> analyse les résultats, garde ce qui fonctionne et arrête ce qui ne convertit pas"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta première campagne sera rarement parfaite — et c'est normal. L'objectif du premier test est d'apprendre, pas de tout rentabiliser immédiatement. Chaque campagne te rend meilleur pour la suivante."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et concepts de ce module s'appuient sur :<br><br>📖 <strong>Meta for Business – Advertising Basics & Best Practices 2024</strong><br>📖 <strong>TikTok for Business – Performance Ads Playbook 2024</strong><br>📖 <strong>Google Ads Help Center – Guide de démarrage 2024</strong><br>📖 <strong>WordStream – Facebook Ads Benchmarks by Industry 2024</strong><br>📖 <strong>Booking.com – Internal data sur les parcours de réservation (cité par Skift, 2023)</strong><br>📖 <strong>We Are Social – Advertising Landscape Africa 2024</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les plateformes publicitaires changent régulièrement leurs interfaces et leurs règles. Consulte régulièrement le centre d'aide officiel de Meta Ads et le blog TikTok for Business pour rester à jour."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Pourquoi est-il recommandé de tester son contenu en organique avant de lancer une publicité payante ?",
+      "options": [
+        "Pour économiser du temps de création",
+        "Parce que la publicité payante est interdite sans compte organique actif",
+        "Pour valider que le message résonne avec son audience avant d'y investir un budget — si l'organique ne convainc pas, le payant ne convertira pas non plus",
+        "Pour obtenir une réduction sur le coût des publicités"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "C'est quoi le retargeting en publicité digitale ?",
+      "options": [
+        "Cibler de nouvelles audiences qui ne te connaissent pas encore",
+        "Diffuser des publicités uniquement à des personnes qui ont déjà interagi avec toi — visiteurs du site, personnes ayant vu tes vidéos, etc.",
+        "Relancer les mêmes publicités sur plusieurs plateformes en même temps",
+        "Réduire son budget publicitaire après une mauvaise campagne"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Pourquoi le format click-to-WhatsApp fonctionne-t-il particulièrement bien en Afrique et au Maghreb ?",
+      "options": [
+        "Parce que c'est le format le moins cher sur Meta Ads",
+        "Parce que WhatsApp est le canal de communication de confiance le plus utilisé dans la région, et que le chemin entre la pub et la vente est très court",
+        "Parce que WhatsApp permet d'envoyer des publicités gratuitement",
+        "Parce que Meta impose ce format pour les marchés africains"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas de Salma, quel était son ROAS (retour sur investissement publicitaire) après 4 mois ?",
+      "options": [
+        "1,5x — elle a tout juste couvert ses dépenses",
+        "3x — elle a triplé son investissement",
+        "5,5x — pour 5 400 DH de budget, elle a généré plus de 30 000 DH de chiffre d'affaires",
+        "10x — ses résultats ont dépassé toutes ses attentes"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Que signifie le BOFU dans un tunnel publicitaire ?",
+      "options": [
+        "Le haut du tunnel — des publicités pour des personnes qui ne te connaissent pas encore",
+        "Le milieu du tunnel — des publicités pour créer de la considération",
+        "Le bas du tunnel — des publicités de conversion destinées à des prospects déjà chauds, prêts à acheter",
+        "Une technique pour réduire le coût des publicités"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
