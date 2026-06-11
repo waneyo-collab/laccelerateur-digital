@@ -1,0 +1,374 @@
+{
+  "id": 5,
+  "titre": "La puissance de l'e-mailing",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "L'email marketing est l'outil le plus rentable du marketing digital — et pourtant, c'est celui que les entrepreneurs débutants utilisent le moins. Dans ce module, tu vas découvrir comment construire une liste email, écrire des emails qui font agir, et créer un système automatisé qui travaille pour toi même quand tu dors.",
+
+  "sections": [
+
+    {
+      "titre": "Pourquoi l'email est l'outil le plus puissant du digital",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "À l'heure où tout le monde parle de TikTok et d'Instagram, l'email reste silencieusement l'outil qui génère le plus de revenus dans le marketing digital.<br><br>Les chiffres parlent d'eux-mêmes :<br><br>📧 <strong>4,5 milliards</strong> de personnes utilisent l'email dans le monde en 2024<br>💰 <strong>36 $ de retour</strong> pour chaque dollar investi — le meilleur ROI de tout le marketing digital (source : Litmus, 2023)<br>👁️ <strong>Un email a 6 fois plus de chances</strong> d'être vu qu'un post Facebook organique<br>🔒 <strong>Ta liste email t'appartient</strong> — aucun algorithme ne peut te la retirer"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les réseaux sociaux t'empruntent une audience. L'email te donne une audience. C'est la différence entre louer et posséder."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'email en Afrique — un canal sous-exploité",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique et au Maghreb, l'email marketing est encore largement sous-utilisé par les PME et les entrepreneurs — ce qui représente une opportunité énorme pour ceux qui s'y mettent.<br><br>📊 <strong>Au Maroc :</strong> 76 % des internautes consultent leur boîte email quotidiennement<br>📊 <strong>En Afrique subsaharienne :</strong> l'email est le canal professionnel numéro 1 pour les décisions d'achat B2B<br>📊 Le taux d'ouverture moyen des emails en Afrique francophone est de <strong>28 %</strong> — supérieur à la moyenne mondiale (source : Mailchimp, 2024)<br><br>Pendant que tes concurrents se battent sur Instagram, tu peux construire un avantage durable avec une newsletter."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un marché où la concurrence est faible, c'est un marché où il faut aller vite. L'email marketing au Maghreb, c'est cette opportunité-là — maintenant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les différents types d'emails",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tous les emails ne se ressemblent pas. Il existe plusieurs catégories, chacune avec un objectif précis :<br><br>👋 <strong>L'email de bienvenue :</strong> le premier email reçu après inscription — le plus ouvert de tous<br>📰 <strong>La newsletter :</strong> email régulier (hebdo ou mensuel) qui partage du contenu utile<br>🎓 <strong>La séquence éducative :</strong> série d'emails automatisés pour enseigner quelque chose progressivement<br>💰 <strong>L'email de vente :</strong> présente une offre avec un appel à l'action clair<br>🔁 <strong>L'email de relance :</strong> rappelle à quelqu'un une action non effectuée (panier abandonné, inscription non finalisée)<br>❤️ <strong>L'email de fidélisation :</strong> remercie, surprend, récompense tes clients existants"
+        },
+        {
+          "type": "attention",
+          "contenu": "L'erreur classique : n'envoyer que des emails de vente. Si la seule raison pour laquelle tu contactes ta liste, c'est pour vendre — les gens se désabonnent. Alterne contenu utile et offres commerciales."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire ta liste email — la base de tout",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une liste email ne se construit pas toute seule. Tu dois donner une raison claire aux gens de te laisser leur adresse email.<br><br>Les meilleures façons de collecter des emails :<br><br>🎁 <strong>Le lead magnet</strong> → offrir quelque chose de valeur en échange de l'email (guide, checklist, template, mini-formation)<br>📝 <strong>Le formulaire d'inscription</strong> sur ton site web, bien visible et accrocheur<br>🔗 <strong>Le lien en bio</strong> de tes réseaux sociaux qui pointe vers ta page d'inscription<br>🎙️ <strong>Les lives et webinaires</strong> → inscription obligatoire par email pour accéder<br>💬 <strong>WhatsApp et les groupes</strong> → propose un bonus exclusif par email"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ne cherche pas à avoir 10 000 abonnés. Cherche à avoir 500 abonnés qualifiés qui correspondent vraiment à ton persona. Une liste petite et engagée génère plus de revenus qu'une grande liste passive."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le lead magnet — attirer les bons abonnés",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>lead magnet</strong> (ou aimant à prospects) est le contenu gratuit que tu offres en échange de l'adresse email d'un visiteur. C'est l'élément le plus important pour faire croître ta liste rapidement.<br><br>Un bon lead magnet est :<br>✅ <strong>Spécifique :</strong> résout un problème précis, pas un sujet vague<br>✅ <strong>Rapide à consommer :</strong> guide PDF, checklist, template — pas un livre de 200 pages<br>✅ <strong>Immédiatement utile :</strong> la personne peut l'appliquer dès aujourd'hui<br>✅ <strong>En lien direct</strong> avec ce que tu vends — pour attirer les bons profils"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Exemples de lead magnets qui fonctionnent en contexte marocain et africain :<br>📄 « Les 5 erreurs qui bloquent ta croissance sur Instagram » (pour un coach business)<br>📋 « Checklist pour ouvrir ta boutique en ligne en 7 jours » (pour un formateur e-commerce)<br>📊 « Modèle de plan de trésorerie pour TPE marocaine » (pour un expert comptable)<br>🎥 « Mini-formation gratuite : comment trouver tes 3 premiers clients » (pour un consultant)"
+        }
+      ]
+    },
+
+    {
+      "titre": "Les outils d'email marketing",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour envoyer des emails professionnels à une liste, tu as besoin d'un outil dédié. Les 4 plus adaptés pour débuter :<br><br>📧 <strong>Brevo (ex-Sendinblue) :</strong> gratuit jusqu'à 300 emails/jour, interface en français, très populaire en Afrique francophone — le meilleur choix pour débuter<br>📧 <strong>Mailchimp :</strong> gratuit jusqu'à 500 abonnés, interface intuitive, nombreux templates<br>📧 <strong>MailerLite :</strong> gratuit jusqu'à 1 000 abonnés, excellent rapport qualité/prix<br>📧 <strong>ConvertKit :</strong> idéal pour les créateurs de contenu et formateurs, mais payant dès le départ"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Commence avec Brevo ou Mailchimp — ils sont gratuits, disponibles en français et suffisants pour gérer une liste jusqu'à plusieurs milliers d'abonnés. Tu migreras vers un outil plus avancé quand tu en auras vraiment besoin."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'objet de l'email — la décision d'ouvrir ou non",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'<strong>objet de l'email</strong> (la ligne de sujet) est la partie la plus importante à soigner. C'est la seule chose que ton abonné voit avant de décider d'ouvrir — ou de supprimer.<br><br>Les formules d'objets qui fonctionnent :<br><br>❓ <strong>La question :</strong> « Tu commets cette erreur sur Instagram ? »<br>🔢 <strong>Le chiffre :</strong> « 7 façons d'attirer des clients sans publicité »<br>😮 <strong>La curiosité :</strong> « Ce que personne ne te dit sur le SEO »<br>🎁 <strong>Le bénéfice direct :</strong> « Ton guide pour doubler ton taux d'ouverture »<br>⏰ <strong>L'urgence :</strong> « Dernière chance — l'offre expire ce soir »"
+        },
+        {
+          "type": "attention",
+          "contenu": "Évite les mots qui déclenchent les filtres antispam dans l'objet : « gratuit », « promotion », « urgent », les majuscules excessives et les points d'exclamation multiples. Ton email risque de finir dans les spams avant même d'être lu."
+        }
+      ]
+    },
+
+    {
+      "titre": "La structure d'un email efficace",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un email qui convertit suit toujours une structure simple et lisible :<br><br>1️⃣ <strong>L'accroche :</strong> une phrase ou deux qui capte l'attention dès la première ligne — visible dans l'aperçu<br>2️⃣ <strong>Le contexte :</strong> pourquoi tu écris aujourd'hui, quel problème tu adresses<br>3️⃣ <strong>La valeur :</strong> le contenu utile, le conseil, l'histoire ou l'information<br>4️⃣ <strong>L'appel à l'action (CTA) :</strong> une seule action claire à effectuer (un lien, pas cinq)<br>5️⃣ <strong>La signature :</strong> ton prénom, ton titre, un lien vers tes réseaux"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un email ne doit avoir qu'un seul appel à l'action. Si tu demandes à ton lecteur de faire 5 choses à la fois, il n'en fera aucune. Un email, un objectif, une action."
+        }
+      ]
+    },
+
+    {
+      "titre": "La séquence de bienvenue — le moment le plus important",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>séquence de bienvenue</strong> est une série d'emails automatisés envoyés dès qu'une personne s'inscrit à ta liste. C'est la période où ton abonné est le plus attentif et le plus réceptif.<br><br>Un exemple de séquence en 5 emails sur 7 jours :<br><br>📧 <strong>Email 1 (Jour 0) :</strong> accueil + livraison du lead magnet<br>📧 <strong>Email 2 (Jour 1) :</strong> ton histoire — qui tu es et pourquoi tu fais ce que tu fais<br>📧 <strong>Email 3 (Jour 3) :</strong> ton meilleur conseil gratuit ou ton contenu le plus utile<br>📧 <strong>Email 4 (Jour 5) :</strong> preuve sociale — témoignages, résultats de clients<br>📧 <strong>Email 5 (Jour 7) :</strong> présentation de ton offre principale"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une consultante en image professionnelle à Alger a mis en place cette séquence de 5 emails. Sur 100 nouvelles inscrites, 22 ont acheté sa prestation après l'email 5 — soit un taux de conversion de 22 % sur des personnes qui la connaissaient depuis moins d'une semaine."
+        }
+      ]
+    },
+
+    {
+      "titre": "La segmentation — le bon message à la bonne personne",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>segmentation</strong> consiste à diviser ta liste email en groupes plus petits selon des critères précis, pour envoyer des messages adaptés à chaque profil.<br><br>Exemples de segments :<br><br>👤 <strong>Par comportement :</strong> ceux qui ont ouvert les 3 derniers emails vs ceux qui n'ouvrent plus<br>🛍️ <strong>Par achat :</strong> clients payants vs simples abonnés<br>🎯 <strong>Par intérêt :</strong> ceux qui ont cliqué sur un lien spécifique<br>📍 <strong>Par localisation :</strong> Maroc, Sénégal, diaspora en France<br>📅 <strong>Par date d'inscription :</strong> nouveaux abonnés vs anciens"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un email segmenté génère en moyenne 760 % de revenus supplémentaires par rapport à un email envoyé à toute la liste sans distinction (source : Campaign Monitor, 2024). La segmentation, c'est la différence entre parler à une foule et parler à une personne."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'automatisation email — travailler pendant que tu dors",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'<strong>automatisation</strong> te permet de créer des séquences d'emails qui s'envoient automatiquement en fonction des actions de tes abonnés — sans que tu intervennes à chaque fois.<br><br>Les automatisations les plus puissantes :<br><br>⚙️ <strong>Séquence de bienvenue</strong> → déclenchée à l'inscription<br>⚙️ <strong>Relance panier abandonné</strong> → déclenchée quand quelqu'un visite une page de vente sans acheter<br>⚙️ <strong>Email d'anniversaire</strong> → envoyé le jour de l'anniversaire avec un cadeau ou une promo<br>⚙️ <strong>Réactivation des inactifs</strong> → envoyé après 60 jours sans ouverture"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un formateur en productivité à Tunis a créé une séquence de relance automatique pour les personnes qui visitent sa page de vente sans acheter. Cette séquence de 3 emails envoyés sur 48h lui génère en moyenne 15 ventes supplémentaires par mois — entièrement automatisées."
+        }
+      ]
+    },
+
+    {
+      "titre": "La newsletter — construire une relation durable",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La newsletter est un email régulier envoyé à toute ta liste — généralement une fois par semaine ou par mois. Son objectif n'est pas de vendre directement, mais de <strong>rester présent, utile et mémorable</strong> dans l'esprit de tes abonnés.<br><br>Une bonne newsletter :<br>✅ A un format reconnaissable que les lecteurs attendent<br>✅ Apporte systématiquement quelque chose d'utile<br>✅ Montre ta personnalité et ton expertise<br>✅ Inclut toujours un appel à l'action doux (lire un article, regarder une vidéo)<br>✅ Est envoyée le même jour, à la même heure chaque semaine"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les abonnés qui reçoivent ta newsletter pendant 3 mois sans acheter peuvent acheter au 4e mois. La newsletter construit la confiance dans la durée — et c'est la confiance qui déclenche l'achat."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les indicateurs clés à suivre",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour savoir si ta stratégie email fonctionne, suis ces 5 indicateurs :<br><br>📬 <strong>Taux de délivrabilité :</strong> % d'emails qui arrivent en boîte de réception (objectif : 95 %+)<br>👁️ <strong>Taux d'ouverture :</strong> % d'abonnés qui ouvrent l'email (objectif : 25 %+)<br>🖱️ <strong>Taux de clic :</strong> % d'abonnés qui cliquent sur un lien (objectif : 3 %+)<br>💰 <strong>Taux de conversion :</strong> % qui effectuent l'action souhaitée (achat, inscription, etc.)<br>🚪 <strong>Taux de désabonnement :</strong> % qui se désinscrivent (alarme si dépasse 0,5 %)"
+        },
+        {
+          "type": "attention",
+          "contenu": "Si ton taux d'ouverture est inférieur à 15 %, c'est un signal d'alerte. Cela peut indiquer une liste de mauvaise qualité, des objets peu accrocheurs, ou des emails qui finissent en spam. Agis avant que ça ne s'aggrave."
+        }
+      ]
+    },
+
+    {
+      "titre": "La délivrabilité — éviter les spams",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>délivrabilité</strong>, c'est la capacité de tes emails à atterrir dans la boîte de réception principale — et non dans les spams.<br><br>Les règles à respecter pour une bonne délivrabilité :<br><br>✅ N'envoie jamais à des personnes qui ne t'ont pas donné leur accord explicite<br>✅ Utilise un vrai nom d'expéditeur (ton prénom, pas « no-reply »)<br>✅ Nettoie régulièrement ta liste — supprime les inactifs après 6 mois<br>✅ Évite les images trop lourdes et les liens trop nombreux<br>✅ Assure-toi que ton outil d'envoi est bien configuré (DNS, DKIM, SPF)<br>✅ Ne jamais acheter de listes email — c'est illégal et inefficace"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un email non délivré est un email inexistant. Prendre soin de ta délivrabilité, c'est protéger l'investissement que représente ta liste."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'email de vente — convaincre sans agresser",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'email de vente est celui que la plupart des gens redoutent d'écrire — par peur de sembler trop commercial. Pourtant, si tu as apporté de la valeur en amont, vendre par email est naturel et bien reçu.<br><br>La structure d'un email de vente efficace :<br><br>1️⃣ <strong>Le problème :</strong> décris la situation douloureuse que ton lecteur vit<br>2️⃣ <strong>L'agitation :</strong> montre les conséquences de ne rien faire<br>3️⃣ <strong>La solution :</strong> présente ton offre comme la réponse naturelle<br>4️⃣ <strong>La preuve :</strong> un témoignage ou un résultat concret<br>5️⃣ <strong>L'urgence :</strong> une raison valable d'agir maintenant (date limite, places limitées)<br>6️⃣ <strong>L'appel à l'action :</strong> un bouton ou un lien clair et visible"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Objet : « Tu perds des clients parce que tu n'as pas de liste email »<br><br>Corps : « La semaine dernière, Instagram a mis à jour son algorithme. Des centaines de comptes ont perdu 40 % de leur portée du jour au lendemain. Ceux qui avaient une liste email ? Ils n'ont rien perdu. Voici comment construire la tienne en 7 jours — même si tu pars de zéro. [Découvrir la formation →] »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le consentement et le respect de la vie privée",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En email marketing, le consentement n'est pas optionnel — c'est une obligation légale et éthique.<br><br>Les règles fondamentales à respecter :<br><br>✅ <strong>Double opt-in :</strong> la personne confirme son inscription par email avant d'être ajoutée à ta liste<br>✅ <strong>Désinscription facile :</strong> chaque email doit contenir un lien de désinscription visible et fonctionnel<br>✅ <strong>Transparence :</strong> dis clairement ce que tu vas envoyer au moment de l'inscription<br>✅ <strong>Pas d'achat de liste :</strong> toujours collecter les emails de façon organique<br><br>Le <strong>RGPD</strong> (règlement européen sur les données) s'applique aussi si tu as des abonnés basés en Europe — ce qui est souvent le cas pour les entrepreneurs marocains avec une audience en France."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Respecter le consentement, c'est aussi respecter ton audience. Une liste construite sur la confiance convertit beaucoup mieux qu'une liste forcée. C'est gagnant sur tous les plans."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Coursera et l'email marketing au service de l'apprentissage",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Coursera est la plateforme de formation en ligne la plus utilisée en Afrique et au Maghreb — avec des millions d'apprenants marocains, algériens, sénégalais et ivoiriens inscrits.<br><br><strong>Comment Coursera utilise l'email marketing :</strong><br><br>🎯 <strong>Segmentation ultra-précise :</strong> chaque abonné reçoit des recommandations basées sur ses cours déjà suivis<br>⚙️ <strong>Relances automatiques :</strong> si tu t'inscris à un cours et n'avances pas, Coursera t'envoie un rappel après 3 jours<br>📅 <strong>Emails de « date limite » :</strong> rappels de fin de session pour créer de l'urgence<br>🎁 <strong>Promos personnalisées :</strong> réductions sur des cours dans ta spécialité<br>🏆 <strong>Emails de célébration :</strong> un email quand tu termines un module ou obtiens un certificat"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Coursera envoie en moyenne 4 à 6 emails par mois à chaque apprenant — mais ils sont tellement bien ciblés que le taux de désabonnement reste inférieur à 0,2 %. La leçon : la fréquence n'agace pas si la pertinence est au rendez-vous. Un email pertinent est un service rendu, pas un spam."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Omar, consultant en gestion budgétaire à Marrakech",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ (2022) :</strong><br><br>Omar aide les familles et les TPE marocaines à mieux gérer leur budget et optimiser leurs dépenses. Il travaille uniquement par recommandation et son agenda est irrégulier. Il n'a aucune liste email, pas de newsletter, pas de présence digitale significative. Il cherche une façon de toucher plus de clients sans augmenter son budget."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qu'il a mis en place :</strong><br><br>🎁 <strong>Lead magnet :</strong> un guide PDF « les 10 erreurs budgétaires qui coûtent cher aux familles marocaines » — partagé sur LinkedIn et WhatsApp<br>📧 <strong>Séquence de bienvenue :</strong> 5 emails sur 7 jours avec des conseils pratiques et son histoire<br>📰 <strong>Newsletter hebdomadaire :</strong> chaque lundi, 1 conseil budgétaire + 1 outil + 1 question à se poser<br>💰 <strong>Email de vente mensuel :</strong> présentation de ses offres d'accompagnement avec témoignages<br><br><strong>Résultats après 9 mois :</strong><br>→ Liste email passée de 0 à 1 840 abonnés qualifiés<br>→ Taux d'ouverture moyen de 38 % — bien au-dessus de la moyenne<br>→ 3 à 5 nouveaux clients par mois issus directement de sa liste<br>→ Revenus multipliés par 2,8 sans augmenter ses dépenses"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Omar n'a rien vendu d'agressif. Il a partagé de la valeur chaque semaine pendant 9 mois. Sa liste lui fait confiance — et c'est cette confiance qui s'est transformée en revenus réguliers et prévisibles."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs classiques en email marketing",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs sont faciles à commettre quand on débute — et tout aussi faciles à éviter si on les connaît à l'avance :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> acheter une liste email — ces contacts ne t'ont pas choisi et ne t'ouvriront jamais<br>❌ <strong>Erreur 2 :</strong> envoyer uniquement des emails de promotion sans apporter de valeur<br>❌ <strong>Erreur 3 :</strong> avoir plusieurs appels à l'action dans le même email<br>❌ <strong>Erreur 4 :</strong> ne jamais nettoyer sa liste — les inactifs dégradent ta délivrabilité<br>❌ <strong>Erreur 5 :</strong> écrire des objets d'emails vagues ou génériques (ex. : « Newsletter du mois »)<br>❌ <strong>Erreur 6 :</strong> ne pas tester ses emails sur mobile avant d'envoyer — 70 % des emails sont ouverts sur smartphone"
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton plan d'action pour démarrer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les 5 étapes concrètes pour lancer ta stratégie email cette semaine :<br><br><strong>Étape 1 :</strong> crée un compte gratuit sur Brevo ou Mailchimp<br><strong>Étape 2 :</strong> définis ton lead magnet (guide, checklist, template) et crée la page d'inscription<br><strong>Étape 3 :</strong> rédige ta séquence de bienvenue de 3 emails minimum<br><strong>Étape 4 :</strong> mets le lien de ta page d'inscription dans ta bio Instagram, Facebook et WhatsApp<br><strong>Étape 5 :</strong> engage-toi à envoyer une newsletter toutes les semaines, même courte — la régularité est la clé"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta liste email est l'actif le plus précieux de ton business digital. Commence à la construire aujourd'hui — même avec 10 abonnés. Dans 6 mois, tu te féliciteras de ne pas avoir attendu."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les données et concepts de ce module s'appuient sur :<br><br>📖 <strong>Litmus – State of Email Marketing Report 2023</strong> — ROI et benchmarks<br>📖 <strong>Mailchimp – Email Marketing Benchmarks 2024</strong> — taux d'ouverture et de clic<br>📖 <strong>Campaign Monitor – Email Marketing Report 2024</strong> — segmentation et revenus<br>📖 <strong>HubSpot – Not Another State of Marketing Report 2024</strong><br>📖 <strong>CNIL – Guide RGPD pour les PME (France, applicable diaspora)</strong> — consentement et conformité<br>📖 <strong>Coursera Annual Report 2023</strong> — stratégie email et rétention apprenants"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "L'email marketing a plus de 30 ans d'existence — et il n'a jamais été aussi efficace qu'aujourd'hui. C'est un investissement en temps dont les effets sont durables et mesurables."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quel est le retour sur investissement moyen de l'email marketing selon les études récentes ?",
+      "options": [
+        "5 $ pour chaque dollar investi",
+        "36 $ pour chaque dollar investi — le meilleur ROI de tout le marketing digital",
+        "12 $ pour chaque dollar investi",
+        "L'email marketing ne génère pas de ROI mesurable"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "C'est quoi un lead magnet ?",
+      "options": [
+        "Un logiciel pour envoyer des emails en masse",
+        "Un contenu gratuit offert en échange de l'adresse email d'un visiteur, pour faire croître sa liste",
+        "Un email de vente envoyé à toute sa liste",
+        "Un outil pour mesurer le taux d'ouverture des emails"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quel est l'objectif principal de la séquence de bienvenue ?",
+      "options": [
+        "Vendre immédiatement à chaque nouvel abonné dès le premier email",
+        "Demander à l'abonné de partager sa liste de contacts",
+        "Créer une relation de confiance avec un nouvel abonné au moment où il est le plus attentif, avant de présenter une offre",
+        "Envoyer le plus d'emails possible dans les 24 premières heures"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas d'Omar, quelle a été la clé principale de son succès en email marketing ?",
+      "options": [
+        "Il a acheté une liste email de 10 000 contacts pour démarrer rapidement",
+        "Il a envoyé uniquement des emails promotionnels avec des réductions",
+        "Il a partagé de la valeur réelle chaque semaine pendant 9 mois, construisant la confiance avant de vendre",
+        "Il a investi massivement en publicité pour faire croître sa liste"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quel taux de désinscription doit déclencher une alerte et pousser à revoir sa stratégie email ?",
+      "options": [
+        "Plus de 5 % de désinscription par email",
+        "Plus de 0,5 % de désinscription par email",
+        "Tout taux de désinscription est normal et ne doit pas inquiéter",
+        "Plus de 10 % de désinscription par mois"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
