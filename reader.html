@@ -283,6 +283,13 @@ document.addEventListener('DOMContentLoaded', async () => {
   const p = new URLSearchParams(window.location.search);
   mid = parseInt(p.get('module') || '1');
 
+  // Module 1 = module gratuit, accessible sans connexion
+  if (mid === 1) {
+    await loadModule(mid);
+    return;
+  }
+
+  // Autres modules : vérification auth + abonnement
   const sess = await getSession();
   if (!sess) { location.href = '/?login=1'; return; }
   uid = sess.id;
