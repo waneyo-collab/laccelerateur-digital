@@ -1,0 +1,388 @@
+{
+  "id": 2,
+  "titre": "La stratégie marketing",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Avant de poster, de créer des publicités ou de construire un site, tu as besoin d'une stratégie. Dans ce module, tu vas apprendre à définir ta mission, ta vision, tes valeurs, à analyser ton marché et à construire une direction claire pour ton business.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi une stratégie marketing ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une stratégie marketing, c'est un <strong>plan d'ensemble</strong> qui répond à trois questions fondamentales :<br><br>🎯 <strong>Où est-ce que tu veux aller ?</strong> (objectifs)<br>👤 <strong>Pour qui tu travailles ?</strong> (clients cibles)<br>🛤️ <strong>Comment tu vas y arriver ?</strong> (actions et canaux)<br><br>Sans stratégie, tu avances à l'aveugle. Tu publies du contenu au hasard, tu dépenses en publicité sans direction, et tu t'épuises sans résultats mesurables."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La stratégie, c'est le cap avant la navigation. Tu ne montes pas dans un bateau sans savoir où tu vas. Il en est de même pour ton business."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi définir sa stratégie avant de commencer ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs font l'erreur de commencer par les outils — créer un compte Instagram, lancer une pub Facebook, ouvrir un site — avant d'avoir clarifié leur direction.<br><br>Le résultat : beaucoup d'efforts, peu de résultats.<br><br>Définir ta stratégie en amont te permet de :<br><br>✅ Éviter de gaspiller ton budget et ton énergie<br>✅ Communiquer de façon cohérente sur tous tes canaux<br>✅ Savoir exactement à qui tu parles et quoi leur dire<br>✅ Mesurer tes progrès avec des objectifs clairs"
+        },
+        {
+          "type": "attention",
+          "contenu": "Un entrepreneur sans stratégie ressemble à un archer qui tire d'abord, puis cherche la cible après. La stratégie, c'est ce qui te donne une direction avant d'agir."
+        }
+      ]
+    },
+
+    {
+      "titre": "La mission — pourquoi tu existes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>mission</strong> d'un business, c'est sa raison d'être profonde. Ce n'est pas ce que tu vends — c'est <strong>le problème que tu résous</strong> et pour qui tu le résous.<br><br>Une bonne mission répond à :<br><br>→ <strong>Quoi ?</strong> Ce que tu fais concrètement<br>→ <strong>Pour qui ?</strong> Ta cible principale<br>→ <strong>Pourquoi ?</strong> Le bénéfice que tu apportes<br><br><strong>Format simple :</strong><br>« Nous aidons [qui] à [faire quoi] grâce à [comment]. »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une formatrice en comptabilité à Dakar pourrait définir sa mission ainsi : « J'aide les micro-entrepreneurs sénégalais à comprendre leur comptabilité sans expert-comptable, grâce à des formations simples et pratiques. »"
+        }
+      ]
+    },
+
+    {
+      "titre": "La vision — où tu veux aller",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>vision</strong>, c'est l'image de ce que tu veux avoir accompli dans 3 à 5 ans. C'est ambitieuse, inspirante — et elle te donne la motivation de continuer quand c'est difficile.<br><br>La vision répond à une seule question :<br><strong>Dans 5 ans, à quoi ressemble ton business si tout se passe bien ?</strong><br><br>Elle doit être :<br>🔭 Ambitieuse mais crédible<br>💡 Inspirante pour toi et tes clients<br>📍 Spécifique, pas vague"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Vision d'une styliste à Casablanca : « Devenir la référence du prêt-à-porter féminin made in Morocco, reconnue dans 5 pays africains d'ici 2028. »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Les valeurs — ce qui guide tes décisions",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les <strong>valeurs</strong> sont les principes non négociables qui guident toutes tes décisions — de ta communication à tes partenariats, en passant par ton service client.<br><br>Elles répondent à la question : <strong>comment tu travailles, et ce en quoi tu crois profondément ?</strong><br><br>Exemples de valeurs :<br><br>🤝 Honnêteté et transparence<br>🌍 Ancrage local et valorisation du savoir-faire africain<br>🎯 Accessibilité — rendre les choses simples pour tous<br>💡 Innovation et amélioration continue"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tes valeurs, c'est ce qui reste quand tout le reste change. Elles attirent les clients qui te ressemblent — et repoussent naturellement ceux avec qui tu n'es pas aligné."
+        }
+      ]
+    },
+
+    {
+      "titre": "Mission, vision, valeurs — les trois ensemble",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces trois éléments forment le socle de ton identité de marque :<br><br>🏗️ <strong>La mission</strong> → ce que tu fais aujourd'hui<br>🔭 <strong>La vision</strong> → où tu veux aller demain<br>💎 <strong>Les valeurs</strong> → comment tu avances<br><br>Ensemble, ils définissent <strong>qui tu es en tant que marque</strong> — et ce message doit être cohérent sur toutes tes plateformes : site, réseaux sociaux, emails, brochures."
+        },
+        {
+          "type": "attention",
+          "contenu": "Une marque sans mission ni vision peut vendre à court terme, mais elle n'inspire pas de fidélité. Les clients restent parce qu'ils partagent tes valeurs — pas uniquement parce que ton prix est bas."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'analyse de marché — connaître ton terrain",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant de te lancer, tu dois comprendre le marché dans lequel tu opères. L'analyse de marché répond à 4 questions :<br><br>📊 <strong>Quelle est la taille de mon marché ?</strong> (combien de clients potentiels existent)<br>📈 <strong>Le marché est-il en croissance ?</strong> (est-ce le bon moment)<br>👥 <strong>Qui sont mes concurrents ?</strong> (benchmark)<br>🔍 <strong>Quels besoins ne sont pas encore couverts ?</strong> (ton opportunité)"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une professeure qui veut lancer des cours de langue en ligne au Maroc doit d'abord vérifier : combien de Marocains cherchent des cours d'anglais en ligne ? Quelles plateformes existent déjà ? Quel est le prix moyen du marché ? Ces réponses orientent toute sa stratégie."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le benchmark — apprends de tes concurrents",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>benchmark</strong>, c'est l'analyse systématique de tes concurrents pour comprendre ce qui marche dans ton secteur — et identifier ce que tu peux faire mieux ou différemment.<br><br>Il ne s'agit pas de copier. Il s'agit d'<strong>apprendre</strong>.<br><br>Un bon benchmark analyse :<br><br>🔍 Leur présence en ligne (site, réseaux, contenu)<br>💬 Leur ton de communication<br>💰 Leur positionnement tarifaire<br>⭐ Les avis de leurs clients (forces et faiblesses)<br>📦 Leurs offres et ce qu'elles incluent"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tes concurrents ont déjà testé des choses pour toi. Leurs erreurs et leurs succès sont une mine d'informations gratuite — exploite-la avant de dépenser un dirham."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment faire un benchmark concret",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici une méthode simple pour analyser 3 à 5 concurrents :<br><br><strong>Étape 1 :</strong> identifie tes 3 à 5 principaux concurrents (cherche sur Google, Instagram, Facebook)<br><strong>Étape 2 :</strong> pour chacun, note dans un tableau :<br>→ Nombre d'abonnés et fréquence de publication<br>→ Type de contenu publié<br>→ Offres proposées et prix si visibles<br>→ Points forts et points faibles selon les avis clients<br><strong>Étape 3 :</strong> identifie le « vide » — ce qu'aucun ne fait et que toi tu pourrais offrir"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une décoratrice d'intérieur à Alger a analysé 4 concurrentes sur Instagram. Elle a remarqué qu'aucune ne proposait de contenu en darija. Elle a commencé à publier en darija + français — et a doublé son audience en 2 mois en touchant un public ignoré par ses concurrentes."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'analyse SWOT — un outil simple et puissant",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>SWOT</strong> est l'outil d'analyse stratégique le plus utilisé au monde. Il te donne une vision claire de ta situation en 4 quadrants :<br><br>💪 <strong>Forces (Strengths)</strong> → ce que tu fais mieux que les autres<br>⚠️ <strong>Faiblesses (Weaknesses)</strong> → ce sur quoi tu dois travailler<br>🚀 <strong>Opportunités (Opportunities)</strong> → les tendances favorables à exploiter<br>🌩️ <strong>Menaces (Threats)</strong> → les risques externes à anticiper"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Exemple SWOT d'un photographe freelance à Tunis :</strong><br>💪 Très bonne maîtrise de l'éclairage naturel<br>⚠️ Pas encore de site web professionnel<br>🚀 Le marché du contenu pour marques locales explose<br>🌩️ Apparition de nombreux photographes moins chers sur le marché"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le persona — approfondi",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "On a introduit le persona dans le module 1. On va maintenant aller plus loin. Un persona complet inclut :<br><br>👤 <strong>Données démographiques :</strong> âge, ville, niveau d'études, situation familiale<br>💼 <strong>Vie professionnelle :</strong> métier, revenus, ambitions<br>😣 <strong>Douleurs et frustrations :</strong> ses problèmes non résolus<br>🎯 <strong>Désirs profonds :</strong> ce qu'il veut vraiment accomplir<br>📱 <strong>Comportement digital :</strong> réseaux utilisés, heures de connexion, contenu consommé<br>💬 <strong>Objections :</strong> pourquoi il hésite à acheter"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Plus ton persona est précis, plus ta communication sera juste. Un message qui parle à tout le monde ne parle vraiment à personne."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construis ton persona pas à pas",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour construire ton persona, tu peux t'appuyer sur 3 sources d'information :<br><br>🗣️ <strong>Les conversations réelles :</strong> parle à tes clients actuels ou à des personnes de ta cible. Pose des questions ouvertes sur leurs problèmes et attentes.<br>📊 <strong>Les données :</strong> statistiques de tes réseaux sociaux, résultats de sondages Google Forms<br>💬 <strong>Les avis en ligne :</strong> lis les commentaires sur les pages de tes concurrents — tes clients te disent ce qu'ils veulent vraiment"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Persona de Waneyo Formation :</strong> Leila, 29 ans, assistante commerciale à Casablanca. Elle veut se reconvertir dans le digital pour gagner en autonomie. Elle a peu de temps (mère d'un enfant de 3 ans), elle suit des comptes business sur Instagram le soir. Elle a peur de ne pas être assez « techno » pour réussir. Elle cherche une formation courte, pratique et en français."
+        }
+      ]
+    },
+
+    {
+      "titre": "La proposition de valeur unique (UVP)",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>proposition de valeur unique</strong> (en anglais UVP — Unique Value Proposition) est la réponse à cette question :<br><br><strong>Pourquoi un client devrait te choisir toi plutôt qu'un concurrent ?</strong><br><br>Une bonne UVP est :<br>✅ Claire — comprise en moins de 10 secondes<br>✅ Spécifique — elle cible un problème précis<br>✅ Différenciante — elle montre ce que tu as que les autres n'ont pas<br><br><strong>Format simple :</strong><br>« J'aide [qui] à [résultat] en [comment], sans [obstacle]. »"
+        },
+        {
+          "type": "exemple",
+          "contenu": "UVP d'une formatrice en marketing digital : « J'aide les entrepreneurs marocains à attirer des clients en ligne en 15 minutes par jour, sans budget publicitaire ni compétences techniques. »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le positionnement — comment tu veux être perçu",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le positionnement, c'est la place que tu occupes dans l'esprit de tes clients par rapport à tes concurrents.<br><br>Il répond à : <strong>quand on pense à [ton domaine], est-ce que ton nom vient naturellement à l'esprit ?</strong><br><br>Le positionnement peut se baser sur :<br><br>💰 <strong>Le prix :</strong> premium, accessible ou entrée de gamme<br>🎯 <strong>La spécialisation :</strong> expert d'un secteur précis<br>🌍 <strong>La géographie :</strong> le spécialiste de [ta ville ou région]<br>🤝 <strong>L'approche :</strong> humaine, rapide, digitale, sur-mesure"
+        },
+        {
+          "type": "attention",
+          "contenu": "Essayer d'être « tout pour tout le monde » est le chemin le plus sûr vers l'invisibilité. Un positionnement clair te fait perdre certains clients — mais en attire beaucoup plus qui te correspondent vraiment."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Nike et la puissance d'une stratégie claire",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Nike est l'une des marques les plus reconnues au monde — y compris en Afrique, où elle est présente dans chaque grande ville du Maghreb et d'Afrique subsaharienne.<br><br><strong>La stratégie de Nike en quelques lignes :</strong><br><br>🎯 <strong>Mission :</strong> « apporter inspiration et innovation à chaque athlète dans le monde. »<br>🔭 <strong>Vision :</strong> que chaque être humain soit considéré comme un athlète<br>💎 <strong>Valeurs :</strong> performance, inclusion, innovation, audace<br>🏆 <strong>Positionnement :</strong> premium, inspirant, universel<br>👤 <strong>Persona :</strong> pas seulement le sportif professionnel — aussi la personne ordinaire qui veut se dépasser"
+        },
+        {
+          "type": "exemple",
+          "contenu": "La campagne « Just Do It » n'a jamais parlé de chaussures. Elle parle de dépassement de soi. C'est ça, une stratégie puissante : vendre une idée, pas un produit. Tu peux appliquer le même principe à ton propre business — quelle idée vends-tu vraiment ?"
+        }
+      ]
+    },
+
+    {
+      "titre": "Les objectifs SMART — sortir du flou",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un objectif vague ne se réalise jamais. « Vouloir plus de clients » n'est pas un objectif — c'est un souhait.<br><br>Un objectif <strong>SMART</strong> est :<br><br>📌 <strong>S</strong>pécifique → précis, sans ambiguïté<br>📊 <strong>M</strong>esurable → avec un chiffre concret<br>🎯 <strong>A</strong>tteignable → réaliste selon tes ressources<br>🔗 <strong>R</strong>elevant → cohérent avec ta mission<br>📅 <strong>T</strong>emporel → avec une date limite"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Objectif vague :</strong> « je veux grandir sur Instagram. »<br><strong>Objectif SMART :</strong> « atteindre 1 000 abonnés Instagram qualifiés en 3 mois, en publiant 4 fois par semaine sur les thèmes du marketing digital et de l'entrepreneuriat. »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Choisir ses canaux selon sa stratégie",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une fois ta stratégie définie, tu dois choisir <strong>les bons canaux</strong> pour atteindre ton persona. Ce choix dépend de trois facteurs :<br><br>👤 <strong>Où se trouve ton client ?</strong> (Instagram, Facebook, LinkedIn, WhatsApp, email)<br>🗣️ <strong>Quel type de contenu tu peux produire ?</strong> (texte, vidéo, image, audio)<br>⏱️ <strong>De combien de temps tu disposes ?</strong> (1 canal bien tenu > 3 canaux négligés)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Il n'y a pas de bon ou mauvais canal en soi. Il y a le canal qui correspond à ta cible et à tes ressources. Instagram pour une marque visuelle, LinkedIn pour du B2B, WhatsApp pour une relation client directe au Maghreb."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le calendrier éditorial — l'outil qui change tout",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>calendrier éditorial</strong>, c'est le planning de tout ce que tu vas publier sur tes canaux — semaine par semaine, mois par mois.<br><br>Il t'évite :<br>→ Le syndrome de la page blanche (« je sais pas quoi poster aujourd'hui »)<br>→ Les publications improvisées et incohérentes<br>→ Le silence prolongé qui fait perdre de la visibilité<br><br>Un calendrier simple peut tenir dans un tableur Google avec 5 colonnes :<br>📅 Date | 📱 Canal | 🗂️ Type de contenu | 📝 Sujet | ✅ Statut"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une consultante RH à Abidjan a planifié 1 mois de contenu LinkedIn en 2 heures un dimanche soir. Elle a multiplié par 3 sa régularité de publication — et reçu ses 2 premiers clients via LinkedIn le mois suivant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Amira, créatrice de cosmétiques à Casablanca",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Amira fabrique des soins à base d'huile d'argan et de beurre de karité dans sa cuisine. Elle vend uniquement à son entourage et sur des groupes WhatsApp. Ses ventes sont irrégulières. Elle n'a pas de nom de marque clair, pas de prix fixes, pas de stratégie."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ce qu'elle a défini avant de lancer sa communication :</strong><br><br>🏗️ <strong>Mission :</strong> « proposer des soins 100 % naturels, fabriqués au Maroc, pour les femmes qui refusent les produits chimiques. »<br>🔭 <strong>Vision :</strong> « devenir la marque de référence du soin naturel féminin au Maroc et en diaspora d'ici 3 ans. »<br>👤 <strong>Persona :</strong> Sanaa, 30 ans, active, consciente de sa santé, sensible à l'authenticité et au made in Morocco<br>💎 <strong>UVP :</strong> « des soins 100 % naturels, formulés à Casablanca, efficaces et abordables. »<br>🎯 <strong>Canal principal :</strong> Instagram (contenu visuel, résultats avant/après, storytelling artisanal)<br><br><strong>Résultat 6 mois plus tard :</strong><br>→ Marque nommée « Arganelle » avec une identité visuelle cohérente<br>→ 4 200 abonnés Instagram<br>→ 60 commandes / mois dont 15 % depuis la France et la Belgique"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Amira n'a pas changé son produit. Elle a changé sa stratégie. Et c'est la stratégie qui a tout changé."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs stratégiques les plus fréquentes",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les erreurs qui font perdre du temps et de l'argent à la plupart des entrepreneurs débutants :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> copier la stratégie d'un concurrent sans l'adapter à sa propre situation<br>❌ <strong>Erreur 2 :</strong> ne pas définir de persona et essayer de parler à tout le monde<br>❌ <strong>Erreur 3 :</strong> changer de stratégie toutes les 3 semaines par impatience<br>❌ <strong>Erreur 4 :</strong> confondre stratégie et tactique — la stratégie, c'est le cap, pas le post Instagram<br>❌ <strong>Erreur 5 :</strong> ne pas mettre ses objectifs par écrit (un objectif non écrit est un vœu)"
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton plan d'action pour ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant de passer au module 3, prends 20 minutes pour rédiger ces 5 éléments pour ton propre business :<br><br>✏️ <strong>Ta mission</strong> en une phrase<br>✏️ <strong>Ta vision</strong> à 3 ans<br>✏️ <strong>3 valeurs</strong> qui te définissent<br>✏️ <strong>Ton persona</strong> en 5 à 7 lignes<br>✏️ <strong>Ta proposition de valeur unique</strong> en une phrase"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ces 5 éléments sont la boussole de tout ce que tu vas faire dans les modules suivants. Plus ils sont clairs, plus tes actions seront efficaces."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts et données de ce module s'appuient sur :<br><br>📖 <strong>Simon Sinek – Start With Why (2009)</strong> — le cadre mission / vision / valeurs<br>📖 <strong>Philip Kotler – Marketing Management (16e édition)</strong> — stratégie et positionnement<br>📖 <strong>HubSpot – Marketing Statistics Report 2024</strong> — données sur le persona et le calendrier éditorial<br>📖 <strong>Harvard Business Review – « What is Strategy ? » (Porter, 1996)</strong> — fondements du positionnement concurrentiel<br>📖 <strong>OECD – SME Digital Transformation in Africa 2023</strong> — contexte PME africain"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La stratégie marketing est une discipline qui évolue, mais ses fondamentaux restent stables. Ces sources sont des références incontournables que tu peux approfondir à ton rythme."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "À quoi sert une stratégie marketing avant de commencer à communiquer ?",
+      "options": [
+        "À choisir la couleur de son logo",
+        "À définir un cap, identifier sa cible et planifier ses actions pour éviter de gaspiller ses ressources",
+        "À calculer son budget publicitaire mensuel",
+        "À décider du nombre de posts à publier par semaine"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Quelle est la différence entre la mission et la vision d'un business ?",
+      "options": [
+        "La mission parle du passé, la vision du présent",
+        "Ce sont deux termes qui signifient la même chose",
+        "La mission explique ce que tu fais aujourd'hui et pour qui, la vision décrit où tu veux aller à long terme",
+        "La vision concerne le produit, la mission concerne le marketing"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Qu'est-ce que le benchmark concurrentiel permet de faire ?",
+      "options": [
+        "Copier la stratégie de tes concurrents à l'identique",
+        "Analyser tes concurrents pour identifier ce qui marche, leurs faiblesses et les opportunités que tu peux exploiter",
+        "Fixer ton prix en dessous du marché",
+        "Créer un logo différent de ceux de tes concurrents"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans l'étude de cas d'Amira, qu'est-ce qui a principalement expliqué son succès ?",
+      "options": [
+        "Elle a changé sa recette et amélioré ses produits",
+        "Elle a investi un grand budget en publicité Facebook",
+        "Elle a défini une stratégie claire — mission, persona, UVP, canal — avant de communiquer",
+        "Elle a recruté une équipe de communication professionnelle"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Parmi ces exemples, lequel est un objectif SMART ?",
+      "options": [
+        "« Je veux avoir plus de clients cette année. »",
+        "« Je veux être connu sur les réseaux sociaux. »",
+        "« Atteindre 500 abonnés LinkedIn en 60 jours en publiant 3 fois par semaine sur la gestion de projet. »",
+        "« Améliorer ma présence digitale le plus vite possible. »"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
