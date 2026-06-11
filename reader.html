@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#7C3AED">
+  <title>Module – L'Accélérateur Digital</title>
+  <style>
+    :root {
+      --v: #7C3AED;
+      --bg: #0F0A1E;
+      --card: #1A1030;
+      --txt: #F9FAFB;
+      --muted: #9CA3AF;
+      --green: #10B981;
+      --amber: #F59E0B;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      background: var(--bg);
+      color: var(--txt);
+      min-height: 100vh;
+      font-size: 16px;
+      line-height: 1.65;
+    }
+
+    /* ── HEADER ── */
+    .hdr {
+      display: flex;
+      align-items: center;
+      padding: 12px 20px;
+      gap: 14px;
+      background: rgba(124,58,237,.1);
+      border-bottom: 1px solid rgba(124,58,237,.25);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+    .hdr a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      white-space: nowrap;
+    }
+    .hdr a:hover { color: var(--txt); }
+    .pbar {
+      flex: 1;
+      height: 6px;
+      background: rgba(255,255,255,.08);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .pfill {
+      height: 100%;
+      background: var(--v);
+      border-radius: 4px;
+      transition: width .35s ease;
+    }
+    .pcnt {
+      font-size: 13px;
+      color: var(--muted);
+      white-space: nowrap;
+    }
+
+    /* ── LOADING / ERROR ── */
+    .center {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      min-height: 70vh;
+      gap: 16px;
+      padding: 24px;
+      text-align: center;
+      color: var(--muted);
+    }
+    .spin {
+      width: 38px; height: 38px;
+      border: 3px solid rgba(124,58,237,.2);
+      border-top-color: var(--v);
+      border-radius: 50%;
+      animation: spin .8s linear infinite;
+    }
+    @keyframes spin { to { transform: rotate(360deg); } }
+
+    /* ── SLIDE ── */
+    .slide {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 28px 20px 110px;
+      animation: up .28s ease;
+    }
+    @keyframes up {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    .mod-label {
+      font-size: 12px;
+      color: var(--v);
+      text-transform: uppercase;
+      letter-spacing: 1.2px;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .slide-title {
+      font-size: 22px;
+      font-weight: 700;
+      line-height: 1.3;
+      margin-bottom: 22px;
+    }
+
+    /* ── BLOCS DE CONTENU ── */
+    .blk { margin-bottom: 18px; font-size: 15.5px; color: #E5E7EB; }
+
+    .blk-texte { line-height: 1.8; }
+
+    .blk-point_cle {
+      background: rgba(124,58,237,.14);
+      border-left: 3px solid var(--v);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      color: #DDD6FE;
+    }
+    .blk-point_cle::before { content: "💡 "; }
+
+    .blk-exemple {
+      background: rgba(16,185,129,.08);
+      border-left: 3px solid var(--green);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      color: #D1FAE5;
+    }
+    .blk-exemple::before { content: "📌 Exemple : "; font-weight: 700; }
+
+    .blk-attention {
+      background: rgba(245,158,11,.09);
+      border-left: 3px solid var(--amber);
+      border-radius: 0 10px 10px 0;
+      padding: 14px 16px;
+      color: #FEF3C7;
+    }
+    .blk-attention::before { content: "⚠️ "; }
+
+    /* ── QUIZ ── */
+    .qz-question {
+      font-size: 17px;
+      font-weight: 700;
+      margin-bottom: 18px;
+    }
+    .qz-opts { display: flex; flex-direction: column; gap: 10px; }
+    .qz-btn {
+      background: rgba(255,255,255,.05);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 10px;
+      padding: 13px 16px;
+      font-size: 15px;
+      cursor: pointer;
+      text-align: left;
+      color: var(--txt);
+      transition: background .2s, border-color .2s;
+    }
+    .qz-btn:hover:not(:disabled) {
+      background: rgba(124,58,237,.15);
+      border-color: var(--v);
+    }
+    .qz-btn.ok  { background: rgba(16,185,129,.15); border-color: var(--green); color: #D1FAE5; }
+    .qz-btn.ko  { background: rgba(239,68,68,.1);   border-color: #EF4444;      color: #FEE2E2; }
+    .qz-fb {
+      margin-top: 14px;
+      padding: 11px 14px;
+      border-radius: 10px;
+      font-size: 14px;
+      display: none;
+    }
+    .qz-fb.show { display: block; }
+    .qz-fb.ok { background: rgba(16,185,129,.1); color: #D1FAE5; }
+    .qz-fb.ko { background: rgba(239,68,68,.08); color: #FEE2E2; }
+
+    /* ── NAV ── */
+    .nav {
+      position: fixed;
+      bottom: 0; left: 0; right: 0;
+      padding: 14px 20px 20px;
+      background: linear-gradient(to top, var(--bg) 75%, transparent);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .btn {
+      padding: 12px 26px;
+      border-radius: 10px;
+      border: none;
+      font-size: 15px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: opacity .2s, background .2s;
+    }
+    .btn:disabled { opacity: .35; cursor: not-allowed; }
+    .btn-p { background: rgba(255,255,255,.08); color: var(--txt); }
+    .btn-p:hover:not(:disabled) { background: rgba(255,255,255,.13); }
+    .btn-n { background: var(--v); color: #fff; }
+    .btn-n:hover:not(:disabled) { background: #6D28D9; }
+
+    /* ── INTRO / COMPLETION ── */
+    .intro-meta {
+      margin-top: 26px;
+      padding: 16px;
+      background: rgba(124,58,237,.1);
+      border-radius: 12px;
+      font-size: 14px;
+      color: #DDD6FE;
+      line-height: 1.7;
+    }
+    .done {
+      text-align: center;
+      padding: 60px 20px 120px;
+      animation: up .35s ease;
+    }
+    .done-ico { font-size: 62px; margin-bottom: 20px; }
+    .done h2 { font-size: 25px; margin-bottom: 10px; }
+    .done p { color: var(--muted); margin-bottom: 30px; }
+    .btn-big {
+      display: inline-block;
+      background: var(--v);
+      color: #fff;
+      text-decoration: none;
+      padding: 14px 30px;
+      border-radius: 12px;
+      font-size: 15px;
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+    .link-back {
+      display: block;
+      margin-top: 10px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+    }
+    .link-back:hover { color: var(--txt); }
+  </style>
+</head>
+<body>
+
+<!-- HEADER -->
+<div class="hdr">
+  <a href="/">← Retour</a>
+  <div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
+  <span class="pcnt" id="pcnt">— / —</span>
+</div>
+
+<!-- CONTENU -->
+<div id="app">
+  <div class="center">
+    <div class="spin"></div>
+    <span>Chargement…</span>
+  </div>
+</div>
+
+<!-- NAVIGATION BAS -->
+<div class="nav" id="nav" style="display:none">
+  <button class="btn btn-p" id="bPrev" onclick="prev()" disabled>← Précédent</button>
+  <button class="btn btn-n" id="bNext" onclick="next()">Suivant →</button>
+</div>
+
+<script>
+// ════════════════════════════════════════════
+//  CONFIG  ← mets ici tes vraies valeurs
+// ════════════════════════════════════════════
+const SB_URL = 'https://dxmigietmlpwactlmpjf.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
+
+// ════════════════════════════════════════════
+//  ÉTAT
+// ════════════════════════════════════════════
+let slides = [], cur = 0, uid = null, mid = null, quizDone = false;
+
+// ════════════════════════════════════════════
+//  INIT
+// ════════════════════════════════════════════
+document.addEventListener('DOMContentLoaded', async () => {
+  const p = new URLSearchParams(window.location.search);
+  mid = parseInt(p.get('module') || '1');
+
+  const sess = await getSession();
+  if (!sess) { location.href = '/?login=1'; return; }
+  uid = sess.id;
+
+  const ok = await checkSub(uid, sess.token);
+  if (!ok) { location.href = '/?subscribe=1'; return; }
+
+  await loadModule(mid);
+});
+
+// ════════════════════════════════════════════
+//  AUTH SUPABASE (sans dépendance externe)
+// ════════════════════════════════════════════
+async function getSession() {
+  try {
+    const k = Object.keys(localStorage).find(x => x.includes('supabase') && x.includes('auth-token'));
+    if (!k) return null;
+    const d = JSON.parse(localStorage.getItem(k));
+    const token = d?.access_token;
+    if (!token) return null;
+    const r = await fetch(`${SB_URL}/auth/v1/user`, {
+      headers: { Authorization: `Bearer ${token}`, apikey: SB_KEY }
+    });
+    if (!r.ok) return null;
+    const u = await r.json();
+    return { id: u.id, token };
+  } catch { return null; }
+}
+
+async function checkSub(id, token) {
+  try {
+    const r = await fetch(
+      `${SB_URL}/rest/v1/subscribers?user_id=eq.${id}&select=status`,
+      { headers: { Authorization: `Bearer ${token}`, apikey: SB_KEY } }
+    );
+    const rows = await r.json();
+    return rows.some(x => x.status === 'active' || x.status === 'trialing');
+  } catch { return false; }
+}
+
+// ════════════════════════════════════════════
+//  CHARGEMENT MODULE JSON
+// ════════════════════════════════════════════
+async function loadModule(id) {
+  try {
+    const n = String(id).padStart(2, '0');
+    const r = await fetch(`/modules/module-${n}.json`);
+    if (!r.ok) throw new Error();
+    const mod = await r.json();
+    slides = makeSlides(mod);
+    show(0);
+    document.getElementById('nav').style.display = 'flex';
+  } catch {
+    document.getElementById('app').innerHTML = `
+      <div class="center">
+        <p style="font-size:40px">🔒</p>
+        <p style="font-size:17px;color:var(--txt)">Module en cours de préparation</p>
+        <p>Ce module sera disponible très prochainement.</p>
+        <a href="/" style="color:var(--v);margin-top:16px">← Tableau de bord</a>
+      </div>`;
+  }
+}
+
+// ════════════════════════════════════════════
+//  CONSTRUCTION DES SLIDES
+// ════════════════════════════════════════════
+function makeSlides(mod) {
+  return [
+    { type: 'intro', mod },
+    ...mod.sections.map(s => ({ type: 'section', sec: s, mod })),
+    { type: 'done', mod }
+  ];
+}
+
+// ════════════════════════════════════════════
+//  AFFICHAGE
+// ════════════════════════════════════════════
+function show(i) {
+  cur = i; quizDone = false;
+  const s = slides[i];
+  const total = slides.length;
+  const pct = Math.round((i / (total - 1)) * 100);
+
+  document.getElementById('pfill').style.width = pct + '%';
+  document.getElementById('pcnt').textContent = `${i + 1} / ${total}`;
+  document.getElementById('bPrev').disabled = i === 0;
+
+  const bNext = document.getElementById('bNext');
+  bNext.disabled = false;
+  bNext.style.display = (i === total - 1) ? 'none' : 'inline-block';
+
+  const app = document.getElementById('app');
+
+  if (s.type === 'intro')    app.innerHTML = tplIntro(s.mod);
+  else if (s.type === 'done') {
+    app.innerHTML = tplDone(s.mod);
+    document.getElementById('nav').style.display = 'none';
+    save();
+  } else {
+    app.innerHTML = tplSection(s.sec, s.mod);
+    if (s.sec.type === 'quiz') bNext.disabled = true;
+  }
+
+  window.scrollTo({ top: 0, behavior: 'instant' });
+}
+
+// ════════════════════════════════════════════
+//  TEMPLATES
+// ════════════════════════════════════════════
+function tplIntro(m) {
+  return `
+    <div class="slide">
+      <div class="mod-label">Module ${m.id} · ${m.duree}</div>
+      <h1 class="slide-title">${m.titre}</h1>
+      ${m.description ? `<div class="blk blk-texte">${m.description}</div>` : ''}
+      <div class="intro-meta">
+        📋 <strong>${m.sections.length} étapes</strong> &nbsp;·&nbsp;
+        ⏱ <strong>${m.duree}</strong> &nbsp;·&nbsp;
+        ${m.phase ? `📁 Phase ${m.phase}` : ''}
+      </div>
+    </div>`;
+}
+
+function tplSection(sec, m) {
+  const lbl = `<div class="mod-label">Module ${m.id}</div>`;
+  const ttl = sec.titre ? `<h2 class="slide-title">${sec.titre}</h2>` : '';
+
+  if (sec.type === 'quiz') {
+    const opts = sec.options.map((o, i) =>
+      `<button class="qz-btn" onclick="answer(this,${i},${sec.reponse})">${o}</button>`
+    ).join('');
+    return `
+      <div class="slide">
+        ${lbl}${ttl}
+        <div class="qz-question">${sec.question}</div>
+        <div class="qz-opts">${opts}</div>
+        <div class="qz-fb" id="qfb"></div>
+      </div>`;
+  }
+
+  // Blocs multiples ou bloc unique
+  const blocs = sec.blocs || [{ type: sec.type || 'texte', contenu: sec.contenu }];
+  const html  = blocs.map(b =>
+    `<div class="blk blk-${b.type}">${b.contenu}</div>`
+  ).join('');
+
+  return `<div class="slide">${lbl}${ttl}${html}</div>`;
+}
+
+function tplDone(m) {
+  const last = m.id === 30;
+  return `
+    <div class="done">
+      <div class="done-ico">${last ? '🏆' : '✅'}</div>
+      <h2>${last ? 'Formation terminée !' : 'Module terminé !'}</h2>
+      <p>${last
+        ? 'Tu as complété les 30 modules. Ton certificat est prêt !'
+        : `Excellent travail ! Module ${m.id + 1} t'attend.`}</p>
+      <a class="btn-big" href="/${last ? '?certificat=1' : `?next=${m.id + 1}`}">
+        ${last ? '🎓 Télécharger mon certificat' : '→ Module suivant'}
+      </a>
+      <a class="link-back" href="/">← Retour au tableau de bord</a>
+    </div>`;
+}
+
+// ════════════════════════════════════════════
+//  QUIZ
+// ════════════════════════════════════════════
+function answer(btn, chosen, correct) {
+  if (quizDone) return;
+  quizDone = true;
+  document.querySelectorAll('.qz-btn').forEach(b => b.disabled = true);
+  const right = chosen === correct;
+  btn.classList.add(right ? 'ok' : 'ko');
+  if (!right) document.querySelectorAll('.qz-btn')[correct].classList.add('ok');
+  const fb = document.getElementById('qfb');
+  fb.textContent  = right ? '✅ Bonne réponse !' : '❌ La bonne réponse est surlignée en vert.';
+  fb.className    = `qz-fb show ${right ? 'ok' : 'ko'}`;
+  document.getElementById('bNext').disabled = false;
+}
+
+// ════════════════════════════════════════════
+//  NAVIGATION
+// ════════════════════════════════════════════
+function next() { if (cur < slides.length - 1) show(cur + 1); }
+function prev() { if (cur > 0) show(cur - 1); }
+
+// ════════════════════════════════════════════
+//  SAUVEGARDE PROGRESSION → SUPABASE
+// ════════════════════════════════════════════
+async function save() {
+  try {
+    const k = Object.keys(localStorage).find(x => x.includes('supabase') && x.includes('auth-token'));
+    const token = JSON.parse(localStorage.getItem(k))?.access_token;
+    await fetch(`${SB_URL}/rest/v1/progress`, {
+      method: 'POST',
+      headers: {
+        Authorization: `Bearer ${token}`,
+        apikey: SB_KEY,
+        'Content-Type': 'application/json',
+        Prefer: 'resolution=merge-duplicates'
+      },
+      body: JSON.stringify({
+        user_id: uid,
+        module_id: mid,
+        completed: true,
+        completed_at: new Date().toISOString()
+      })
+    });
+  } catch(e) { console.warn('Progression non sauvegardée', e); }
+}
+</script>
+</body>
+</html>
