@@ -1,0 +1,244 @@
+{
+  "id": 17,
+  "titre": "Maîtriser l'art d'apprendre",
+  "duree": "15 min",
+  "phase": 2,
+  "description": "Dans un monde qui change à toute vitesse, la compétence la plus précieuse n'est plus ce que tu sais — c'est ta capacité à apprendre rapidement ce que tu ne sais pas encore. Dans ce module, tu vas découvrir comment apprendre plus vite, retenir plus longtemps et transformer chaque apprentissage en action concrète.",
+
+  "sections": [
+
+    {
+      "titre": "Apprendre — la compétence des compétences",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Il y a 20 ans, apprendre un métier une fois pour toutes suffisait pour toute une carrière. Aujourd'hui, les métiers évoluent, disparaissent et se créent à une vitesse sans précédent.<br><br>Le marketing digital tel qu'il existe aujourd'hui n'existait pas il y a 10 ans. Les outils IA que tout le monde utilise aujourd'hui n'existaient pas il y a 3 ans.<br><br>Dans ce contexte, <strong>savoir apprendre vite est devenu plus important que ce qu'on sait déjà</strong>. C'est la compétence qui multiplie toutes les autres."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Celui ou celle qui apprend vite s'adapte vite. Celui ou celle qui s'adapte vite surpasse ceux qui savent plus mais apprennent moins. Dans l'économie du 21e siècle, l'agilité d'apprentissage est le nouvel avantage compétitif."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi on apprend mal — et on l'ignore",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La plupart des gens apprennent de la même façon depuis l'école primaire :<br><br>📖 Lire plusieurs fois<br>🖊️ Surligner<br>🔁 Relire ses notes<br><br>Des dizaines d'études en sciences cognitives ont démontré que ces méthodes sont parmi les <strong>moins efficaces</strong> qui existent. Elles créent une illusion de maîtrise — tu as l'impression de savoir parce que tu reconnais le contenu. Mais reconnaissance n'est pas compréhension. Et compréhension n'est pas maîtrise."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Tu relis tes notes de cours 3 fois. Tout te semble familier. Tu penses maîtriser. Le lendemain, quelqu'un te demande d'expliquer le concept — et tu bloques. C'est l'illusion de maîtrise. Le cerveau confond « j'ai vu ça » avec « je sais faire ça »."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 3 niveaux d'apprentissage",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le philosophe et pédagogue Benjamin Bloom a classé l'apprentissage en 6 niveaux. En simplifiant, on peut distinguer 3 niveaux essentiels :<br><br>📥 <strong>Niveau 1 — Connaître :</strong> tu as entendu parler du concept. Tu peux le reconnaître si quelqu'un l'évoque.<br><br>🧠 <strong>Niveau 2 — Comprendre :</strong> tu peux expliquer le concept avec tes propres mots. Tu vois comment il fonctionne.<br><br>⚡ <strong>Niveau 3 — Appliquer :</strong> tu peux utiliser ce concept pour résoudre un problème réel dans ta vie ou ton business.<br><br>La grande majorité des formations s'arrêtent au niveau 1 ou 2. <strong>La vraie valeur est au niveau 3.</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Connaitre sans appliquer, c'est accumuler des outils sans jamais s'en servir. Chaque module que tu suis n'a de valeur réelle que s'il change quelque chose dans ce que tu fais concrètement."
+        }
+      ]
+    },
+
+    {
+      "titre": "La technique la plus puissante — l'enseignement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La méthode Feynman, du nom du physicien et Prix Nobel Richard Feynman, est considérée comme l'une des techniques d'apprentissage les plus efficaces :<br><br><strong>La méthode en 4 étapes :</strong><br><br>1️⃣ Choisis un concept que tu viens d'apprendre<br>2️⃣ Explique-le comme si tu l'enseignais à un enfant de 12 ans — sans jargon<br>3️⃣ Identifie les points où tu bloques ou tu te compliques<br>4️⃣ Retourne à la source, simplifie, recommence<br><br>Ce qui te force à simplifier te force à vraiment comprendre."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Après avoir regardé ce module, essaie d'expliquer la méthode Feynman à voix haute — comme si tu l'expliquais à un ami qui n'a jamais entendu parler d'apprentissage. Si tu bloques, c'est exactement là où ton apprentissage est encore superficiel. Si tu y arrives facilement, tu as compris."
+        }
+      ]
+    },
+
+    {
+      "titre": "La répétition espacée — battre l'oubli",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En 1885, le psychologue Hermann Ebbinghaus a découvert la <strong>courbe de l'oubli</strong> : sans révision, on oublie 50 % de ce qu'on a appris en 24 heures, et 90 % en une semaine.<br><br>La solution : la <strong>répétition espacée</strong>. Revoir l'information à intervalles croissants :<br><br>📅 Jour 1 → apprendre<br>📅 Jour 2 → première révision (5 min)<br>📅 Jour 7 → deuxième révision (5 min)<br>📅 Jour 21 → troisième révision (5 min)<br>📅 Jour 60 → ancré en mémoire long terme<br><br>✅ Applications gratuites qui gèrent ça automatiquement : <strong>Anki</strong> (flashcards) et <strong>Quizlet</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "5 minutes de révision le lendemain valent plus que 2 heures de relecture une semaine plus tard. La régularité de la révision bat l'intensité de l'apprentissage initial."
+        }
+      ]
+    },
+
+    {
+      "titre": "Apprendre en faisant — la voie africaine",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans beaucoup de traditions africaines, l'apprentissage se fait par l'observation et la pratique aux côtés d'un maître — pas par des cours théoriques.<br><br>La science moderne confirme cette sagesse : l'apprentissage par la pratique (<em>learning by doing</em>) est 75 % plus efficace que l'apprentissage passif.<br><br>La règle d'or : <strong>pour chaque heure d'apprentissage théorique, passe au moins une heure à pratiquer.</strong><br><br>Tu apprends Canva ? Crée un vrai visuel pour ton business.<br>Tu apprends le copywriting ? Rédige une vraie légende pour un vrai post.<br>Tu apprends la pub Facebook ? Lance une vraie campagne test à petit budget."
+        },
+        {
+          "type": "attention",
+          "contenu": "La formation sans pratique crée des experts en théorie qui ne savent pas agir. La pratique sans formation crée des praticiens qui répètent les mêmes erreurs. La combinaison des deux crée des professionnels qui progressent vite."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le secret de la reconversion réussie",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une reconversion réussie ne se fait pas en tout abandonnant d'un coup pour repartir de zéro. Elle se fait en <strong>construisant en parallèle</strong>.<br><br>La méthode des strates :<br><br>🏗️ <strong>Strate 1 — Apprendre (mois 1-3) :</strong> tu acquiers les bases du nouveau domaine, sans pression de performance<br>🔨 <strong>Strate 2 — Pratiquer (mois 2-6) :</strong> tu appliques sur de petits projets réels, même gratuitement au début<br>💰 <strong>Strate 3 — Monétiser (mois 4-9) :</strong> tes premières ventes, petites mais réelles<br>🚀 <strong>Strate 4 — Accélérer (mois 6-12) :</strong> tu t'investis à temps partiel, puis plein temps quand les revenus le permettent"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Rania travaillait comme assistante administrative à Tunis. Elle voulait devenir créatrice de contenu. Au lieu de tout plaquer, elle a passé 3 mois à se former le soir (1h/jour). Puis elle a créé des contenus gratuitement pour 2 associations locales (portfolio). À 6 mois, ses premiers clients payants. À 11 mois, elle quitte son poste. Sa reconversion n'a pas été un saut dans le vide — c'était une descente de palier en palier."
+        }
+      ]
+    },
+
+    {
+      "titre": "Apprendre dans le bruit — réalité africaine",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Se former quand on a une famille, un emploi, des contraintes financières et parfois une connexion instable — c'est la réalité de la plupart des apprenants africains.<br><br>Stratégies adaptées :<br><br>🚌 <strong>Les transports :</strong> podcasts et modules audio pendant les trajets — transforme 1h de transport en 1h d'apprentissage<br>📵 <strong>Hors ligne :</strong> télécharge les ressources en Wi-Fi, consomme-les hors ligne<br>⏰ <strong>Les micro-sessions :</strong> 15 minutes suffisent — ce module en est la preuve<br>🌙 <strong>Les soirs :</strong> 30 minutes avant de dormir — mais pas sur les réseaux sociaux<br>📅 <strong>Le week-end :</strong> 2h le samedi matin = 8h d'apprentissage par mois = 96h par an"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Tu n'as pas besoin de 4 heures libres et d'un bureau silencieux pour apprendre. Tu as besoin de 15 à 30 minutes et d'une intention claire. Les contraintes ne sont pas des excuses — elles sont des problèmes à résoudre créativement."
+        }
+      ]
+    },
+
+    {
+      "titre": "Filtrer ce qu'on apprend — éviter l'infobésité",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'accès illimité à l'information est une bénédiction — et un piège.<br><br>L'<strong>infobésité</strong>, c'est consommer du contenu en permanence sans jamais appliquer. Des podcasts, des formations, des vidéos YouTube, des articles — et pourtant aucun changement concret dans sa vie.<br><br>La règle du filtre :<br><br>✅ <strong>Apprends uniquement ce que tu peux appliquer dans les 7 prochains jours</strong><br>❌ <strong>Arrête d'apprendre des sujets intéressants mais non actionnables maintenant</strong><br><br>Si tu ne peux pas appliquer un apprentissage dans la semaine, note-le pour plus tard et passe à autre chose."
+        },
+        {
+          "type": "attention",
+          "contenu": "Consommer de la formation peut donner l'illusion de progresser. Mais sans application, c'est du divertissement éducatif — pas de la croissance. La vraie question après chaque module n'est pas « qu'est-ce que j'ai appris ? » mais « qu'est-ce que je vais changer cette semaine ? »"
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Diane, reconversion en 9 mois à Abidjan",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ :</strong><br><br>Diane, 31 ans, comptable dans une PME à Abidjan. Bon salaire, stabilité — mais aucune passion pour son travail. Elle veut se reconvertir dans le marketing digital. Elle a peur de perdre sa sécurité, ne sait pas par où commencer et se sent trop vieille pour repartir de zéro."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Sa méthode d'apprentissage :</strong><br><br>📱 <strong>Micro-sessions matinales :</strong> 20 min de formation dans les transports (6h30-7h)<br>🔨 <strong>Pratique immédiate :</strong> chaque semaine, elle applique 1 concept appris sur le compte Instagram d'une amie créatrice de bijoux<br>📓 <strong>Journal d'apprentissage :</strong> chaque soir, elle note 1 chose apprise + 1 chose appliquée + 1 question à clarifier<br>👥 <strong>Communauté :</strong> elle rejoint un groupe WhatsApp de marketeurs ivoiriens — ses questions sont répondues par des praticiens<br>🎯 <strong>Filtre :</strong> elle ne suit qu'une formation à la fois — jusqu'à application, pas de nouveau module<br><br><strong>Résultats à 9 mois :</strong><br>→ Gère les réseaux sociaux de 3 PME locales (missions freelance)<br>→ Revenus freelance = 70 % de son salaire comptable<br>→ Elle quitte son poste au mois 10 avec 2 mois de trésorerie d'avance<br>→ Aujourd'hui, elle forme à son tour des reconvertis ivoiriens"
+        }
+      ]
+    },
+
+    {
+      "titre": "Ton système d'apprentissage personnel",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Construis ton système d'apprentissage en 5 décisions :<br><br>1️⃣ <strong>Quoi apprendre :</strong> une seule compétence prioritaire à la fois — celle qui a le plus d'impact sur ton objectif actuel<br>2️⃣ <strong>Quand :</strong> un créneau fixe dans ta journée — même 15 minutes<br>3️⃣ <strong>Comment :</strong> 70 % pratique, 30 % théorie — pas l'inverse<br>4️⃣ <strong>Comment ancrer :</strong> enseigne ce que tu apprends — à un ami, dans un post, dans une note vocale<br>5️⃣ <strong>Comment mesurer :</strong> qu'est-ce qui change concrètement dans ce que tu fais cette semaine ?"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le meilleur système d'apprentissage est celui que tu tiens réellement. Pas le plus sophistiqué, pas le plus complet — le plus régulier. 15 minutes par jour pendant un an = plus de 90 heures de formation. C'est une reconversion entière."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts de ce module s'appuient sur :<br><br>📖 <strong>Hermann Ebbinghaus – Über das Gedächtnis (1885)</strong> — courbe de l'oubli et répétition espacée<br>📖 <strong>Benjamin Bloom – Taxonomy of Educational Objectives (1956)</strong> — niveaux d'apprentissage<br>📖 <strong>Richard Feynman – Surely You're Joking, Mr. Feynman (1985)</strong> — méthode d'apprentissage par simplification<br>📖 <strong>Peter Brown et al. – Make It Stick (2014)</strong> — sciences cognitives et apprentissage efficace<br>📖 <strong>World Economic Forum – Future of Jobs Report 2023</strong> — compétences d'apprentissage et reconversion<br>📖 <strong>African Union – Digital Skills for Africa 2030 Strategy</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Dans une économie africaine en pleine transformation digitale, la capacité à apprendre vite est l'avantage le plus démocratique qui soit. Il ne dépend ni de ton quartier, ni de ton diplôme, ni de ton capital. Il dépend uniquement de ta méthode et de ta régularité."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Qu'est-ce que la courbe de l'oubli d'Ebbinghaus nous apprend sur l'apprentissage ?",
+      "options": [
+        "Qu'on retient mieux ce qu'on apprend le soir que le matin",
+        "Sans révision, on oublie environ 50 % de ce qu'on a appris en 24h et 90 % en une semaine — d'où l'importance de la répétition espacée",
+        "Que l'oubli est inévitable et qu'il est inutile de réviser",
+        "Que seules les personnes avec une bonne mémoire naturelle peuvent apprendre efficacement"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "En quoi consiste la méthode Feynman ?",
+      "options": [
+        "Lire un concept 4 fois de suite pour le mémoriser en profondeur",
+        "Regarder des vidéos explicatives plutôt que lire des textes",
+        "Expliquer un concept appris comme si on l'enseignait à un enfant de 12 ans — pour identifier ce qu'on ne comprend pas vraiment",
+        "Associer chaque nouveau concept à un souvenir personnel pour mieux le retenir"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Selon ce module, quel est le bon ratio entre théorie et pratique pour un apprentissage efficace ?",
+      "options": [
+        "100 % théorie d'abord, pratique ensuite quand on se sent prêt",
+        "50 % théorie et 50 % pratique à parts égales",
+        "70 % pratique et 30 % théorie — l'application prime sur la consommation de contenu",
+        "80 % théorie et 20 % pratique pour avoir des bases solides"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Qu'est-ce que l'infobésité et pourquoi est-elle un piège pour les apprenants ?",
+      "options": [
+        "Le fait d'apprendre trop vite sans laisser le temps au cerveau d'intégrer",
+        "La consommation excessive de contenu éducatif sans jamais appliquer — créant une illusion de progression sans changement réel",
+        "L'accumulation de trop de formations payantes qui vident le budget",
+        "La fatigue mentale causée par les écrans pendant l'apprentissage"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Dans l'étude de cas de Diane, quelle habitude a eu le plus grand impact sur la vitesse de sa reconversion ?",
+      "options": [
+        "Elle a suivi un maximum de formations différentes pour avoir une vision large du domaine",
+        "Elle a quitté son emploi dès le départ pour se consacrer pleinement à sa reconversion",
+        "Elle appliquait immédiatement chaque concept appris sur un projet réel, ne suivait qu'une formation à la fois et tenait un journal d'apprentissage quotidien",
+        "Elle a investi massivement dans des formations certifiantes reconnues internationalement"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
