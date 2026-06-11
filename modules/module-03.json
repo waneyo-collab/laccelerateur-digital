@@ -1,0 +1,360 @@
+{
+  "id": 3,
+  "titre": "La stratégie multicanale",
+  "duree": "15 min",
+  "phase": 1,
+  "description": "Aujourd'hui, tes clients ne sont pas sur une seule plateforme. Ils passent d'Instagram à WhatsApp, de Google à leur boîte email, de YouTube à un site web — souvent dans la même journée. Dans ce module, tu vas apprendre à construire une présence cohérente sur plusieurs canaux pour les atteindre là où ils se trouvent vraiment.",
+
+  "sections": [
+
+    {
+      "titre": "C'est quoi une stratégie multicanale ?",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une stratégie multicanale, c'est le fait d'utiliser <strong>plusieurs canaux de communication et de vente</strong> de façon coordonnée pour atteindre ton client à différents moments de son parcours.<br><br>Exemples de canaux :<br>📱 Réseaux sociaux (Instagram, Facebook, TikTok)<br>📧 Email<br>💬 WhatsApp Business<br>🌐 Site web<br>🔍 Google (SEO + publicité)<br>🎥 YouTube<br><br>L'objectif : être présent aux bons endroits, au bon moment, avec le bon message."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une stratégie multicanale ne veut pas dire être partout à la fois. Ça veut dire choisir intelligemment 2 à 4 canaux complémentaires et les faire travailler ensemble."
+        }
+      ]
+    },
+
+    {
+      "titre": "Multicanal vs omnicanal — la nuance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>Multicanal :</strong> tu es présent sur plusieurs canaux. Chacun fonctionne de manière indépendante. Ton client peut te trouver sur Instagram ou par email, mais les expériences ne sont pas forcément connectées.<br><br><strong>Omnicanal :</strong> tous tes canaux sont intégrés et se parlent. Quand ton client passe de WhatsApp à ton site, puis à ton email — l'expérience est fluide et cohérente. Il ne repart jamais de zéro."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Exemple multicanal : tu as un Instagram et un email séparés, sans lien entre les deux.<br>Exemple omnicanal : une cliente voit ta pub Instagram → clique sur ton site → s'inscrit à ta newsletter → reçoit un email de bienvenue automatique → tu la relances sur WhatsApp. Tout est connecté."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pourquoi une seule plateforme ne suffit plus",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs débutent avec un seul canal — souvent Instagram ou WhatsApp — et s'y cantonnent. C'est un point de départ logique, mais c'est aussi un risque :<br><br>⚠️ Si la plateforme change ses règles ou son algorithme, tu perds ta visibilité du jour au lendemain<br>⚠️ Certains de tes clients ne sont pas sur ce canal<br>⚠️ Tu dépends entièrement d'une infrastructure que tu ne contrôles pas<br><br>Les marques qui durent sont celles qui construisent plusieurs points de contact avec leurs clients."
+        },
+        {
+          "type": "attention",
+          "contenu": "En 2012, des milliers de marques avaient tout misé sur Facebook. Quand Facebook a drastiquement réduit la portée organique des pages en 2014, elles ont perdu 70 à 90 % de leur visibilité du jour au lendemain — sans avoir de liste email pour compenser."
+        }
+      ]
+    },
+
+    {
+      "titre": "La carte des canaux digitaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici les principaux canaux digitaux et leur rôle dans une stratégie :<br><br>🌐 <strong>Site web</strong> → hub central, crédibilité, SEO<br>📱 <strong>Instagram</strong> → visibilité, inspiration, communauté<br>📘 <strong>Facebook</strong> → publicité ciblée, groupes, audiences larges<br>🎵 <strong>TikTok</strong> → reach organique rapide, audiences jeunes<br>💼 <strong>LinkedIn</strong> → B2B, expertise, réseau professionnel<br>🎥 <strong>YouTube</strong> → contenu long, référence SEO vidéo<br>💬 <strong>WhatsApp Business</strong> → relation client directe, ventes conversationnelles<br>📧 <strong>Email</strong> → fidélisation, vente, actif que tu possèdes<br>🔍 <strong>Google</strong> → intention d'achat, SEO et publicité"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chaque canal a un rôle différent dans le parcours client. Certains servent à attirer, d'autres à convaincre, d'autres à fidéliser. C'est leur combinaison qui crée la puissance."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le site web — le centre de ta stratégie",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans une stratégie multicanale, ton site web est le <strong>hub central</strong> — la maison. Tous tes autres canaux doivent ramener vers lui.<br><br>Pourquoi le site est indispensable :<br>✅ C'est le seul espace que tu contrôles à 100 %<br>✅ Il donne de la crédibilité à ton business<br>✅ Il est référençable sur Google (SEO)<br>✅ Il peut vendre 24h/24 sans toi<br>✅ Il collecte des emails et des données<br><br>Un site simple et rapide vaut mieux qu'un site parfait qui n'existe pas."
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une graphiste à Tunis a remplacé son simple lien Instagram par un site d'une seule page avec son portfolio, ses offres et un formulaire de contact. En 3 mois, 40 % de ses demandes venaient de Google — des personnes qui ne l'avaient jamais suivie sur Instagram."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les réseaux sociaux dans l'écosystème multicanal",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les réseaux sociaux jouent un rôle précis dans une stratégie multicanale : ils servent principalement à <strong>attirer et engager</strong> — pas à vendre directement.<br><br>Leur rôle dans l'écosystème :<br><br>👁️ Créer de la <strong>visibilité</strong> auprès de nouvelles audiences<br>🤝 Construire de la <strong>confiance</strong> avec du contenu régulier<br>🔗 Rediriger vers ton <strong>site web ou ta liste email</strong><br>💬 Créer une <strong>conversation</strong> avec ta communauté"
+        },
+        {
+          "type": "attention",
+          "contenu": "L'erreur classique : essayer de tout faire sur les réseaux sociaux — attirer, convaincre, vendre et fidéliser. Les réseaux sont la porte d'entrée, pas la maison entière."
+        }
+      ]
+    },
+
+    {
+      "titre": "WhatsApp Business — l'arme africaine",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "WhatsApp est la plateforme de messagerie la plus utilisée en Afrique et au Maghreb. WhatsApp Business transforme cet outil quotidien en véritable canal marketing.<br><br>Ce que tu peux faire avec WhatsApp Business :<br><br>✅ Créer un profil professionnel avec tes infos et ton catalogue<br>✅ Diffuser des messages à une liste de contacts (listes de diffusion)<br>✅ Automatiser des réponses rapides aux questions fréquentes<br>✅ Partager des catalogues de produits directement dans la conversation<br>✅ Créer des groupes thématiques pour ta communauté"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Au Maroc, en Côte d'Ivoire, au Sénégal et en Algérie, WhatsApp est souvent le premier canal de communication entre un client et un vendeur. Ignorer WhatsApp Business, c'est ignorer ton marché."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'email dans la stratégie multicanale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'email joue un rôle unique dans l'écosystème multicanal : c'est le canal de la <strong>relation en profondeur</strong> et de la <strong>conversion</strong>.<br><br>Alors que les réseaux sociaux attirent des inconnus, l'email parle à des personnes qui ont déjà dit « oui, je veux rester en contact avec toi. »<br><br>Dans une stratégie multicanale, l'email sert à :<br><br>📧 Nourrir la relation après un premier contact<br>🛍️ Proposer des offres à une audience déjà chaude<br>🔁 Réactiver des clients inactifs<br>🎁 Partager du contenu exclusif non disponible sur les réseaux"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Un formateur en ligne à Casablanca attire ses abonnés via Instagram, les redirige vers une page de téléchargement d'un guide gratuit, collecte leur email en échange — puis leur envoie une séquence de 5 emails automatiques sur 2 semaines. 30 % de ses ventes viennent de cette séquence."
+        }
+      ]
+    },
+
+    {
+      "titre": "YouTube et la vidéo longue durée",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "YouTube est le deuxième moteur de recherche au monde — juste après Google. C'est aussi une plateforme de référence pour apprendre, s'informer et se convaincre.<br><br>Dans une stratégie multicanale, YouTube sert à :<br><br>🎥 Créer du contenu de <strong>référence</strong> que les gens recherchent activement<br>🔍 Être trouvé sur <strong>Google</strong> via les résultats vidéo<br>⏱️ Construire une <strong>autorité</strong> sur ton sujet avec des vidéos longues<br>🔗 Renvoyer vers ton site et ta liste email via les descriptions<br><br>YouTube est particulièrement puissant pour les formateurs, coachs et experts."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une vidéo YouTube bien optimisée peut continuer à attirer des visiteurs pendant des années. Contrairement à un post Instagram qui disparaît en 24h, le contenu YouTube a une longue durée de vie."
+        }
+      ]
+    },
+
+    {
+      "titre": "La cohérence de marque sur tous les canaux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La cohérence de marque, c'est ce qui fait que ton client te reconnaît instantanément — qu'il te voit sur Instagram, ton site, ton email ou ta carte de visite.<br><br>Elle repose sur 4 piliers :<br><br>🎨 <strong>L'identité visuelle :</strong> mêmes couleurs, mêmes polices, même logo partout<br>🗣️ <strong>Le ton de communication :</strong> même façon de parler (tu, vous ? sérieux, décontracté ?)<br>📝 <strong>Les messages clés :</strong> les mêmes arguments et valeurs sur tous les canaux<br>⏱️ <strong>La régularité :</strong> une fréquence cohérente qui rassure ton audience"
+        },
+        {
+          "type": "attention",
+          "contenu": "Un profil Instagram soigné mais un site web vieilli, un ton jovial sur TikTok mais formel sur email — ces incohérences créent de la méfiance. Le client ne sait plus vraiment qui tu es."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment les canaux se nourrissent entre eux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Dans une bonne stratégie multicanale, chaque canal alimente les autres. Voici un exemple de circuit vertueux :<br><br>📱 Tu publies un Reel Instagram sur un sujet précis<br>→ 🔗 Tu renvoies vers un article complet sur ton site<br>→ 📧 L'article propose de télécharger un guide en échange d'un email<br>→ 💬 Tu envoies un email avec une offre ou un lien vers ta chaîne YouTube<br>→ 🎥 La vidéo YouTube renvoie vers ton site ou ton WhatsApp<br>→ 💬 WhatsApp permet de conclure la vente directement"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chaque canal est une porte d'entrée différente qui mène vers le même endroit : la relation avec ton client. Plus tu multiplies les portes, plus tu as de chances qu'il entre."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le parcours client multicanal en pratique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici comment un client type découvre et achète chez une entrepreneur au Maghreb en 2024 :<br><br>👁️ <strong>Jour 1 :</strong> il voit un Reel Instagram — il ne connaît pas encore la marque<br>🤔 <strong>Jour 3 :</strong> il cherche sur Google et tombe sur le site<br>📧 <strong>Jour 4 :</strong> il télécharge un guide gratuit, laisse son email<br>📬 <strong>Jour 7 :</strong> il reçoit un email avec une offre — il hésite<br>💬 <strong>Jour 9 :</strong> il envoie un message WhatsApp pour poser une question<br>✅ <strong>Jour 10 :</strong> il achète"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Ce parcours de 10 jours a touché 4 canaux différents : Instagram, Google, email et WhatsApp. Si tu n'avais été présent que sur Instagram, tu aurais perdu ce client dès le jour 3."
+        }
+      ]
+    },
+
+    {
+      "titre": "Exemple de marque — Sephora et le multicanal parfait",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Sephora est présente en Afrique du Nord depuis plusieurs années et est l'une des marques qui maîtrise le mieux la stratégie multicanale dans la région.<br><br><strong>Comment Sephora fait le multicanal :</strong><br><br>🏪 <strong>En boutique :</strong> expérience physique premium, conseillères expertes<br>📱 <strong>Application mobile :</strong> programme fidélité, essayage virtuel de maquillage via la caméra<br>📧 <strong>Email :</strong> offres personnalisées selon l'historique d'achat de chaque cliente<br>🎥 <strong>YouTube :</strong> tutoriels beauté qui redirigent vers les produits du site<br>📸 <strong>Instagram :</strong> inspiration, lancements de produits, collaborations avec des influenceuses locales<br>💬 <strong>WhatsApp :</strong> service client et suivi de commande dans les marchés arabophones"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Résultat : une cliente Sephora interagit en moyenne sur <strong>3,2 canaux différents</strong> avant d'acheter. Et les clientes multicanal dépensent <strong>3 à 4 fois plus</strong> que celles qui n'utilisent qu'un seul canal (source : Sephora Annual Report 2023). La leçon pour ton business : chaque canal supplémentaire bien utilisé augmente la valeur de tes clients."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Youssef, coach sportif à Tunis",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<strong>La situation de départ (2022) :</strong><br><br>Youssef est coach sportif certifié. Il travaille en salle et donne quelques cours particuliers. Il a un compte Instagram à 400 abonnés mais sans stratégie. Il ne gagne pas assez pour vivre uniquement de sa passion. Il veut développer des coachings en ligne pour toucher des clients hors de Tunis."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>La stratégie multicanale qu'il a mise en place :</strong><br><br>🎥 <strong>YouTube :</strong> 1 vidéo/semaine — exercices à faire chez soi sans matériel (optimisé pour la recherche)<br>📱 <strong>Instagram :</strong> Reels courts tirés de ses vidéos YouTube + stories quotidiennes de son quotidien de coach<br>💬 <strong>WhatsApp Business :</strong> groupe gratuit « Fitness Maghreb » avec 300 membres actifs + catalogue de ses programmes<br>📧 <strong>Email :</strong> newsletter bimensuelle avec 1 recette + 1 conseil entraînement + 1 offre du mois<br>🌐 <strong>Site :</strong> page simple avec ses programmes, tarifs et témoignages clients<br><br><strong>Résultats après 10 mois :</strong><br>→ 12 000 abonnés YouTube<br>→ 6 400 abonnés Instagram<br>→ 850 personnes sur sa liste email<br>→ 28 clients actifs en coaching en ligne — depuis 7 pays différents<br>→ Revenus multipliés par 3,5"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Youssef n'a pas changé de métier. Il a changé sa façon d'être visible. Chaque canal avait un rôle précis dans son système — et ensemble, ils ont créé une machine de croissance autonome."
+        }
+      ]
+    },
+
+    {
+      "titre": "Choisir ses canaux selon son stade de développement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Il est inutile de vouloir tout activer en même temps. La stratégie multicanale se construit progressivement :<br><br>🌱 <strong>Phase démarrage (0 à 6 mois) :</strong><br>→ 1 réseau social principal + WhatsApp Business + début de collecte d'emails<br><br>🌿 <strong>Phase développement (6 à 18 mois) :</strong><br>→ Ajouter un site web + 1 second réseau social + newsletter régulière<br><br>🌳 <strong>Phase maturité (18 mois et +) :</strong><br>→ Ajouter YouTube ou un podcast + automatisations email + publicité digitale"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ce qui compte, ce n'est pas le nombre de canaux — c'est leur qualité. Un canal bien maîtrisé rapporte plus que cinq canaux mal gérés."
+        }
+      ]
+    },
+
+    {
+      "titre": "La matrice des canaux — quel canal pour quel objectif",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Voici comment associer tes canaux à tes objectifs :<br><br>🎯 <strong>Objectif : attirer de nouvelles audiences</strong><br>→ TikTok, Reels Instagram, SEO Google, YouTube, publicité payante<br><br>🤝 <strong>Objectif : créer de la confiance</strong><br>→ Blog, LinkedIn, podcast, YouTube, email éducatif<br><br>💰 <strong>Objectif : vendre</strong><br>→ Email, WhatsApp Business, page de vente sur ton site, Stories Instagram avec lien<br><br>🔁 <strong>Objectif : fidéliser</strong><br>→ Email, WhatsApp, communauté privée (groupe Facebook ou Telegram)"
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne demande pas à un canal de faire un travail pour lequel il n'est pas fait. TikTok est excellent pour attirer, pas pour fidéliser. L'email est excellent pour fidéliser, pas pour attirer des inconnus."
+        }
+      ]
+    },
+
+    {
+      "titre": "Mesurer l'efficacité de ta stratégie multicanale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour savoir si ta stratégie multicanale fonctionne, tu dois suivre des indicateurs clés (KPIs) pour chaque canal :<br><br>📱 <strong>Réseaux sociaux :</strong> portée, taux d'engagement, clics vers le site<br>🌐 <strong>Site web :</strong> sessions, source de trafic (d'où viennent les visiteurs), taux de rebond<br>📧 <strong>Email :</strong> taux d'ouverture (objectif : 25 %+), taux de clic (objectif : 3 %+)<br>💬 <strong>WhatsApp :</strong> taux de réponse, conversations converties en ventes<br><br>La question centrale à se poser chaque mois :<br><strong>« Quel canal m'apporte le plus de clients, et est-ce que j'y investis assez d'énergie ? »</strong>"
+        },
+        {
+          "type": "exemple",
+          "contenu": "Une entrepreneuse découvre en analysant ses données que 70 % de ses clients viennent de son email — alors qu'elle passait 80 % de son temps sur Instagram. Elle a rééquilibré son temps : moins de posts, plus de newsletters. Ses ventes ont augmenté de 40 % sans changer de budget."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les erreurs multicanales classiques",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Mettre en place une stratégie multicanale mal pensée peut être plus nuisible qu'une stratégie monocanal bien exécutée. Voici les erreurs à éviter absolument :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Erreur 1 :</strong> copier-coller le même contenu sur tous les canaux sans l'adapter<br>❌ <strong>Erreur 2 :</strong> activer trop de canaux à la fois et mal les tenir<br>❌ <strong>Erreur 3 :</strong> ne pas créer de lien entre les canaux — chacun fonctionne en silo<br>❌ <strong>Erreur 4 :</strong> négliger le site web et miser uniquement sur les réseaux sociaux<br>❌ <strong>Erreur 5 :</strong> ne jamais mesurer et ne pas savoir quel canal fonctionne vraiment"
+        }
+      ]
+    },
+
+    {
+      "titre": "Par où commencer concrètement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Si tu pars de zéro, voici le plan de démarrage recommandé :<br><br><strong>Semaine 1 :</strong> crée ou optimise ton profil WhatsApp Business<br><strong>Semaine 2 :</strong> choisis ton réseau social principal selon ton persona (souvent Instagram ou Facebook)<br><strong>Semaine 3 :</strong> crée une page simple de collecte d'emails (via Brevo ou Mailchimp gratuit)<br><strong>Semaine 4 :</strong> publie ton premier contenu sur chaque canal — avec un lien qui relie les 3"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "3 canaux bien reliés et régulièrement animés suffisent pour construire un business solide. Tu pourras en ajouter d'autres quand ce système de base fonctionnera."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts et données de ce module s'appuient sur :<br><br>📖 <strong>Harvard Business Review – « Cashing In on the African Consumer » (2022)</strong><br>📖 <strong>Sephora Annual Report 2023</strong> — données comportement client multicanal<br>📖 <strong>HubSpot – State of Marketing Report 2024</strong> — canaux et KPIs<br>📖 <strong>We Are Social – Digital 2024 Africa</strong> — usage WhatsApp et réseaux en Afrique<br>📖 <strong>Mailchimp – Email Marketing Benchmarks 2024</strong> — taux d'ouverture et de clic<br>📖 <strong>Google – The Customer Journey in the Digital Age (2023)</strong>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les stratégies multicanales évoluent rapidement. Reste à l'affût des rapports annuels de HubSpot, We Are Social et DataReportal — ils sont gratuits et très bien documentés."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quelle est la principale différence entre une stratégie multicanale et une stratégie omnicanale ?",
+      "options": [
+        "La stratégie multicanale utilise plus de canaux que l'omnicanale",
+        "L'omnicanale est plus chère à mettre en place",
+        "Dans l'omnicanale, tous les canaux sont connectés et offrent une expérience fluide au client, tandis que le multicanal peut fonctionner en silos",
+        "La stratégie multicanale n'inclut pas les réseaux sociaux"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Pourquoi WhatsApp Business est-il particulièrement important dans une stratégie digitale africaine ?",
+      "options": [
+        "Parce qu'il est gratuit et disponible sur tous les téléphones",
+        "Parce que c'est la plateforme de messagerie la plus utilisée en Afrique et au Maghreb, permettant une relation client directe et des ventes conversationnelles",
+        "Parce qu'il remplace complètement l'email marketing en Afrique",
+        "Parce que c'est le seul canal qui permet de vendre des produits"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans l'étude de cas de Youssef, quel a été le rôle principal de YouTube dans sa stratégie multicanale ?",
+      "options": [
+        "Vendre directement ses programmes de coaching",
+        "Remplacer Instagram comme réseau social principal",
+        "Attirer de nouvelles audiences via la recherche et créer du contenu de référence sur la durée",
+        "Communiquer en direct avec ses clients"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Selon la matrice des canaux, quel est le canal le plus efficace pour l'objectif de fidélisation ?",
+      "options": [
+        "TikTok et les Reels Instagram",
+        "La publicité payante Google et Facebook",
+        "L'email et WhatsApp Business",
+        "Le SEO et le blog"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Pour un entrepreneur qui démarre, quelle est la bonne approche multicanale ?",
+      "options": [
+        "Activer tous les canaux disponibles dès le départ pour maximiser la visibilité",
+        "Démarrer avec 1 réseau social + WhatsApp Business + collecte d'emails, puis ajouter des canaux progressivement",
+        "Se concentrer uniquement sur la publicité payante pour aller vite",
+        "Attendre d'avoir un budget important avant de se lancer sur plusieurs canaux"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
