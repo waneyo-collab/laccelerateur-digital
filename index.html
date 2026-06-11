@@ -1625,7 +1625,8 @@ function applyFaqFilter(cat, search) {
 function openModule(title, parcours, duration, url, parcoursId, moduleId) {
   currentModal = { parcoursId, moduleId };
   document.getElementById('modal-title').textContent = title;
-  document.getElementById('modal-sub').textContent = parcours + ' · ' + duration + ' · 📑 Slides narratives';
+  const format = url.startsWith('reader.html') ? '📖 Lecture interactive' : '📑 Slides narratives';
+  document.getElementById('modal-sub').textContent = parcours + ' · ' + duration + ' · ' + format;
   document.getElementById('modal-iframe').src = url;
   document.getElementById('btn-mark').style.display = isDone(parcoursId, moduleId) ? 'none' : 'block';
   document.getElementById('module-modal').classList.add('open');
