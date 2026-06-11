@@ -14,7 +14,9 @@ self.addEventListener("activate", e => {
   );
 });
 
-self.addEventListener("fetch", e => {
+  const url = e.request.url;
+  // Laisser passer les requêtes externes (Supabase, Stripe, APIs)
+  if (!url.startsWith(self.location.origin)) return;
   e.respondWith(
     fetch(e.request).catch(() => caches.match(e.request))
   );
