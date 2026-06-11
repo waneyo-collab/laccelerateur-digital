@@ -1,0 +1,139 @@
+{
+  "id": 23,
+  "titre": "Créer sa première formation en ligne",
+  "duree": "15 min",
+  "phase": 3,
+  "description": "Une formation en ligne, tu la crées une fois et tu la vends à l'infini. C'est le business le plus scalable depuis l'Afrique — sans stock, sans local, sans équipe. Ce module t'explique comment passer de tes connaissances à un produit qui se vend.",
+  "sections": [
+    {
+      "type": "texte",
+      "titre": "Pourquoi la formation en ligne est le meilleur business depuis l'Afrique",
+      "contenu": "Tu n'as pas besoin d'un entrepôt. Pas de livraison. Pas de stock. Pas de local commercial. Pas de visa pour vendre à Paris, Montréal ou Bruxelles.\n\nUne formation en ligne, c'est un produit que tu crées une fois — et qui génère des revenus 24h/24, pendant que tu dors, que tu voyages ou que tu travailles sur autre chose.\n\nC'est le modèle économique le plus adapté aux réalités des entrepreneurs africains qui veulent atteindre un marché international sans les barrières physiques du commerce traditionnel."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Ce que tu sais vaut de l'argent",
+      "contenu": "La première erreur : croire qu'il faut être expert reconnu pour créer une formation.\n\nTu n'as pas besoin d'un doctorat. Tu n'as pas besoin d'avoir 10 ans d'expérience. Tu as besoin d'être **quelques étapes devant** ceux que tu veux aider.\n\nSi tu sais utiliser Canva efficacement, tu peux former ceux qui ne savent pas encore. Si tu as appris à trouver tes premiers clients en ligne, tu peux former ceux qui cherchent leurs premiers clients.\n\nLa question n'est pas « est-ce que je suis assez expert·e ? » — c'est « est-ce que quelqu'un a besoin de ce que je sais ? »"
+    },
+    {
+      "type": "texte",
+      "titre": "Trouver le bon sujet : le croisement de 3 cercles",
+      "contenu": "Le bon sujet de formation se trouve à l'intersection de 3 cercles :\n\n**Cercle 1 — Ce que tu sais faire** : tes compétences réelles, acquises par l'expérience ou la formation\n\n**Cercle 2 — Ce que les gens cherchent** : des problèmes concrets que ton audience veut résoudre, vérifiables via les groupes Facebook, les questions sur les forums, les recherches Google\n\n**Cercle 3 — Ce pour quoi les gens paient déjà** : si tu vois des formations similaires qui se vendent, c'est la preuve que le marché existe\n\nSi ton sujet est dans les 3 cercles, tu tiens un bon sujet. Si tu n'es que dans le cercle 1, tu risques de créer une formation que personne n'achète."
+    },
+    {
+      "type": "exemple",
+      "titre": "Étude de cas — Sophia, Libreville",
+      "contenu": "Sophia a 29 ans. Comptable de formation à Libreville, elle a appris à gérer les finances de sa petite boutique de mode africaine en ligne.\n\nElle a remarqué que dans ses groupes WhatsApp de femmes entrepreneures gabonaises, la même question revenait chaque semaine : « Comment je fais pour gérer mon argent quand j'ai un business en ligne ? »\n\nElle a créé une formation de 6 modules : « Gérer sa trésorerie quand on est entrepreneur·e digitale en Afrique ». Prix : 79€. Elle n'est pas experte-comptable certifiée. Elle partage juste ce qu'elle a appris et mis en pratique.\n\nPremier mois : 23 ventes. Soit 1 817€ de revenus — depuis Libreville, depuis son téléphone."
+    },
+    {
+      "type": "texte",
+      "titre": "Valider avant de créer — les 48h qui changent tout",
+      "contenu": "Ne crée rien avant d'avoir validé que quelqu'un veut payer pour ça.\n\n**La méthode de validation en 48h :**\n\n**Jour 1 :** publie un post dans 2 à 3 groupes ciblés. Décris le problème que ta formation résout, le résultat promis, et annonce que tu prépares quelque chose. Termine par : « Est-ce que ce sujet t'intéresse ? »\n\n**Jour 2 :** contacte en privé chaque personne qui a répondu positivement. Propose-leur de rejoindre la première session à un tarif fondateur réduit.\n\nSi tu obtiens au moins 5 personnes prêtes à payer avant que la formation existe — tu as la validation. Tu peux créer. Si personne ne répond, tu évites des semaines de travail inutile."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Structurer sa formation : la méthode des 3 niveaux",
+      "contenu": "Une bonne formation répond à 3 niveaux :\n\n**Niveau 1 — Pourquoi** : convaincre que le sujet est important et que le changement est possible (1 à 2 modules)\n\n**Niveau 2 — Comment** : les étapes concrètes, dans l'ordre, avec des exemples applicables (3 à 6 modules)\n\n**Niveau 3 — Quoi maintenant** : les exercices pratiques, les outils à utiliser, le plan d'action immédiat (1 à 2 modules)\n\nChaque module doit répondre à une question précise. Si tu ne peux pas formuler la question en une phrase, le module n'est pas encore assez clair."
+    },
+    {
+      "type": "texte",
+      "titre": "Les formats possibles — choisir celui qui te convient",
+      "contenu": "Tu n'as pas besoin d'une caméra professionnelle ni d'un studio. Voici les formats par ordre de facilité de production :\n\n**Le PDF / guide écrit** — le plus simple à créer, idéal pour démarrer (Canva suffit)\n**L'audio / podcast privé** — enregistre avec ton téléphone, format très apprécié pour les apprenants qui écoutent en transports\n**Les slides commentées** — enregistre ton écran avec ta voix dessus (OBS Studio, gratuit)\n**La vidéo face caméra** — ton téléphone sur un trépied, bonne lumière naturelle, fond sobre\n**Le live / webinaire** — Zoom ou Google Meet, interaction en direct, transformable en replay vendu ensuite\n\nCommence par le format que tu peux produire cette semaine — pas celui que tu rêves de faire dans 6 mois."
+    },
+    {
+      "type": "attention",
+      "titre": "Qualité audio : le seul critère non négociable",
+      "contenu": "Les apprenants pardonnent une image imparfaite. Ils n'excusent pas un son de mauvaise qualité.\n\nUn microphone-cravate à 15€ branché sur ton téléphone produit un son bien meilleur que le microphone intégré d'un ordinateur à 1 500€.\n\nTourne dans une pièce sans écho — une chambre avec des rideaux, des coussins, des vêtements autour absorbent les réverbérations.\n\nEnregistre 2 minutes de test, écoute avec des écouteurs. Si tu t'entends clairement, c'est suffisant pour commencer."
+    },
+    {
+      "type": "texte",
+      "titre": "Les plateformes pour héberger et vendre ta formation",
+      "contenu": "Selon ton niveau de départ et ton budget :\n\n**Pour démarrer sans budget :**\n- **Gumroad** — héberge vidéos, PDFs, audios. Vente directe. Commission de 10 % sur les ventes. Accessible depuis l'Afrique.\n- **Payhip** — similaire à Gumroad, 5 % de commission. Idéal pour les produits numériques.\n\n**Pour professionnaliser :**\n- **Hotmart** — plateforme leader en Afrique francophone. Gestion des paiements, affiliés, hébergement vidéo. Accessible depuis le Maroc, le Sénégal, la Côte d'Ivoire.\n- **System.io** — tunnel de vente + hébergement de formation + email marketing. Gratuit jusqu'à 2 000 contacts. Très utilisé par les formateurs francophones.\n\n**Pour un contrôle total :**\n- Héberge sur ton propre site WordPress + plugin Learndash ou TutorLMS. Plus technique, mais zéro commission."
+    },
+    {
+      "type": "exemple",
+      "titre": "La solution Hotmart expliquée",
+      "contenu": "Hotmart est la plateforme de référence pour les formateurs francophones d'Afrique et d'Amérique latine.\n\nCe qu'elle offre gratuitement : hébergement illimité de vidéos, page de vente intégrée, gestion des paiements par carte internationale, suivi des apprenants, programme d'affiliés.\n\nComment elle se rémunère : une commission sur chaque vente (entre 9,9 % et 14,9 % selon le prix). Aucun abonnement mensuel à payer avant de vendre.\n\nSophia utilise Hotmart pour vendre sa formation depuis Libreville. Ses clientes paient par carte Visa depuis la France, la Belgique ou le Maroc — sans aucune friction."
+    },
+    {
+      "type": "texte",
+      "titre": "Le tunnel de vente minimal pour ta première formation",
+      "contenu": "Tu n'as pas besoin d'un tunnel complexe pour démarrer. Le minimum qui fonctionne :\n\n**1. Une page de vente simple** — le problème, la solution, ce que contient la formation, le témoignage d'un bêta-testeur, le prix, un bouton d'achat. Créée sur System.io ou directement sur Hotmart.\n\n**2. Un lead magnet** — un PDF gratuit ou une vidéo courte offerte en échange de l'email de tes visiteurs (module 5 t'a expliqué l'e-mailing)\n\n**3. Une séquence de 3 emails** — email 1 : livraison du cadeau + présentation. Email 2 : une valeur supplémentaire. Email 3 : présentation de ta formation payante.\n\nCe tunnel à 3 étapes, bien exécuté, convertit mieux que des pages complexes non maîtrisées."
+    },
+    {
+      "type": "point_cle",
+      "titre": "Lancer sans être parfait : la règle du 80 %",
+      "contenu": "Ta première formation ne sera pas parfaite. Elle ne doit pas l'être.\n\nLa règle du 80 % : quand ta formation est à 80 % de ce que tu imagines, lance-la. Le 20 % restant sera amélioré grâce aux retours réels de tes premiers apprenants.\n\nUne formation lancée imparfaitement et améliorée vaut infiniment plus qu'une formation parfaite qui attend dans un tiroir.\n\nLes premiers apprenants qui achètent à un tarif fondateur savent qu'ils participent à quelque chose en construction — et ils apprécient souvent d'être associés à cette aventure."
+    },
+    {
+      "type": "texte",
+      "titre": "Obtenir ses premiers témoignages",
+      "contenu": "Les témoignages sont le carburant de tes ventes futures. Sans preuve sociale, ta page de vente ne convertit pas.\n\n**Comment obtenir tes 5 premiers témoignages :**\n\n**Étape 1 :** offre l'accès gratuit ou à prix réduit à 5 personnes de ton réseau qui correspondent à ta cible idéale.\n\n**Étape 2 :** accompagne-les activement pendant la formation. Réponds à leurs questions. Assure-toi qu'ils obtiennent des résultats.\n\n**Étape 3 :** à la fin, demande-leur un témoignage vidéo de 60 secondes ou un avis écrit détaillé. La plupart acceptent volontiers si tu as bien livré.\n\nCes 5 témoignages valent bien plus que n'importe quelle campagne publicitaire pour lancer ta formation."
+    },
+    {
+      "type": "exemple",
+      "titre": "Retour sur Sophia",
+      "contenu": "Sophia a offert l'accès à sa formation à 6 femmes entrepreneures de son réseau WhatsApp. Elle les a accompagnées pendant 3 semaines, répondant à chaque question en vocal.\n\nElle a récolté 5 témoignages écrits et 2 vidéos de 45 secondes. Elle les a intégrés dans sa page Hotmart avant d'ouvrir les ventes officiellement.\n\nSa page de vente ne fait que 3 sections : le problème, les témoignages, le bouton d'achat. Elle n'a pas fait de publicité payante.\n\nDeux mois après le lancement, elle a 67 apprenantes dans sa formation. Elle prépare sa deuxième formation : « Ouvrir sa boutique en ligne depuis l'Afrique en 30 jours. »"
+    },
+    {
+      "type": "point_cle",
+      "titre": "Sources",
+      "contenu": "- Kaufman, J. (2013). *The Personal MBA*. Portfolio/Penguin. (construction d'offres et systèmes de vente)\n- Hotmart (2024). *Rapport annuel : le marché de la formation en ligne en Afrique francophone*. hotmart.com\n- System.io — documentation et études de cas francophones (systeme.io)\n- Mordor Intelligence (2024). *Online education market in Africa — growth and forecast 2024-2029*.\n- Lemaire, S. (2022). *Formateur indépendant : créer et vendre ses formations en ligne*. Eyrolles."
+    },
+    {
+      "type": "quiz",
+      "questions": [
+        {
+          "question": "Selon ce module, de quoi as-tu besoin pour créer une formation en ligne légitime ?",
+          "options": [
+            "D'un diplôme reconnu dans le domaine de ta formation",
+            "D'au moins 10 ans d'expérience professionnelle",
+            "D'être quelques étapes devant ceux que tu veux aider et d'avoir quelque chose qu'ils cherchent",
+            "D'un studio d'enregistrement professionnel et d'une équipe de production"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Quel est le seul critère technique non négociable dans une formation en ligne selon ce module ?",
+          "options": [
+            "La qualité de l'image vidéo (HD minimum)",
+            "La qualité du son audio",
+            "Le design de la page de vente",
+            "La longueur des modules (minimum 30 minutes chacun)"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Quelle plateforme est recommandée comme référence pour les formateurs francophones d'Afrique ?",
+          "options": [
+            "Udemy",
+            "Teachable",
+            "Hotmart",
+            "Kajabi"
+          ],
+          "reponse": 2
+        },
+        {
+          "question": "Pourquoi faut-il valider son sujet de formation avant de la créer ?",
+          "options": [
+            "Pour respecter les conditions générales des plateformes d'hébergement",
+            "Pour éviter de passer des semaines à créer quelque chose que personne n'achètera",
+            "Pour obtenir une certification officielle de son contenu",
+            "Parce que les algorithmes favorisent les formations validées par des experts"
+          ],
+          "reponse": 1
+        },
+        {
+          "question": "Qu'est-ce que la 'règle du 80 %' recommande ?",
+          "options": [
+            "Ne consacrer que 80 % de son temps à la création et 20 % au marketing",
+            "Lancer sa formation quand elle est à 80 % de ce qu'on imaginait, sans attendre la perfection",
+            "Offrir 80 % du contenu gratuitement pour convertir les 20 % restants en payants",
+            "Viser un taux de satisfaction de 80 % minimum avant d'augmenter ses prix"
+          ],
+          "reponse": 1
+        }
+      ]
+    }
+  ]
+}
