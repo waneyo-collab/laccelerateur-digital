@@ -361,11 +361,20 @@ function slideText() {
   const blocs = sec.blocs || [{ contenu: sec.contenu }];
   return title + blocs.map(b => clean(b.contenu || '')).join(' ');
 }
-
+function cleanForSpeech(text) {
+  if (!text) return '';
+  return text
+    .replace(/[\u{1F300}-\u{1FFFF}]/gu, '')  // émojis
+    .replace(/[#*_~`>|\\]/g, '')              // markdown
+    .replace(/\s+/g, ' ')                     // espaces multiples
+    .replace(/([^\.\!\?])\n/g, '$1. ')        // fin de ligne sans ponctuation → point
+    .trim();
+}
+  
 function toggleNarr() {
   if (narrActive) { stopNarr(); return; }
-  const txt = slideText();
-  if (!txt) return;
+  const txt = cleanForSpeech(slideText());
+if (!txt) return;
   synth.cancel();
   const utt = new SpeechSynthesisUtterance(txt);
   utt.lang  = 'fr-FR';
