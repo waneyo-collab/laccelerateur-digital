@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waneyo — Portail Directeur</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:#0F0A1E;color:#fff;min-height:100vh}
+    #login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh}
+    .login-box{background:#1a1035;padding:2.5rem;border-radius:16px;box-shadow:0 4px 30px rgba(124,58,237,.25);width:340px;text-align:center}
+    .login-box h2{font-size:1.3rem;margin-bottom:.3rem}
+    .login-box .subtitle{color:rgba(255,255,255,.45);font-size:.85rem;margin-bottom:1.5rem}
+    .login-box input{width:100%;padding:.65rem 1rem;border:1px solid rgba(124,58,237,.4);border-radius:8px;background:rgba(255,255,255,.05);color:#fff;font-size:.9rem;margin-bottom:.85rem}
+    .login-box input::placeholder{color:rgba(255,255,255,.3)}
+    .btn-login{width:100%;background:#7C3AED;color:#fff;border:none;padding:.75rem;border-radius:8px;font-size:.95rem;cursor:pointer;font-weight:600;transition:background .2s}
+    .btn-login:hover{background:#9f5ff5}
+    .btn-login:disabled{background:#4a2d8a;cursor:not-allowed}
+    .err{color:#f87171;font-size:.82rem;margin-top:.75rem}
+    #dashboard{display:none}
+    header{background:#1a1035;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(124,58,237,.2)}
+    .header-left h1{font-size:1rem;font-weight:700}
+    .header-left .incub-tag{display:inline-block;margin-top:4px;background:rgba(124,58,237,.2);color:#a78bfa;font-size:.75rem;padding:2px 10px;border-radius:20px;font-weight:600}
+    main{padding:2rem;max-width:1000px;margin:auto}
+    .stats{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .stat-card{background:#1a1035;border-radius:12px;padding:1rem 1.5rem;flex:1;min-width:130px;border:1px solid rgba(124,58,237,.15)}
+    .stat-card .val{font-size:1.9rem;font-weight:800;color:#7C3AED}
+    .stat-card .lbl{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:4px}
+    .controls{display:flex;gap:.75rem;margin-bottom:1.25rem;align-items:center;flex-wrap:wrap}
+    .search-input{padding:.5rem 1rem;border-radius:8px;border:1px solid rgba(124,58,237,.3);background:rgba(255,255,255,.05);color:#fff;font-size:.88rem;width:240px}
+    .search-input::placeholder{color:rgba(255,255,255,.3)}
+    .btn-export{padding:.5rem 1.25rem;border-radius:8px;background:#7C3AED;color:#fff;border:none;font-size:.88rem;cursor:pointer;font-weight:600;transition:background .2s}
+    .btn-export:hover{background:#9f5ff5}
+    .table-wrap{background:#1a1035;border-radius:12px;overflow:hidden;border:1px solid rgba(124,58,237,.15)}
+    table{width:100%;border-collapse:collapse}
+    th{background:rgba(124,58,237,.2);color:rgba(255,255,255,.6);padding:.7rem 1rem;text-align:left;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+    td{padding:.75rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);font-size:.87rem;color:rgba(255,255,255,.85)}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:rgba(124,58,237,.05)}
+    .progress-bar{background:rgba(255,255,255,.08);border-radius:10px;height:8px;width:130px;overflow:hidden;display:inline-block;vertical-align:middle}
+    .progress-fill{height:100%;border-radius:10px;transition:width .4s}
+    .pct-low{background:#f87171}
+    .pct-mid{background:#fbbf24}
+    .pct-high{background:#34d399}
+    .pct-done{background:#7C3AED}
+    .badge-done{background:rgba(124,58,237,.2);color:#a78bfa;font-size:.74rem;padding:2px 8px;border-radius:20px;font-weight:600}
+    .empty{text-align:center;padding:3rem;color:rgba(255,255,255,.3);font-size:.9rem}
+    .footer{margin-top:1.5rem;text-align:center;color:rgba(255,255,255,.2);font-size:.78rem}
+    .footer a{color:#7C3AED;text-decoration:none}
+  </style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-box">
+    <h2>🏢 Portail Directeur</h2>
+    <p class="subtitle">Waneyo Formation — Suivi de vos apprenants</p>
+    <input type="email"    id="d-email" placeholder="Votre email"/>
+    <input type="password" id="d-pwd"   placeholder="Mot de passe"/>
+    <button class="btn-login" id="login-btn" onclick="login()">Se connecter</button>
+    <div class="err" id="login-err"></div>
+  </div>
+</div>
+
+<div id="dashboard">
+  <header>
+    <div class="header-left">
+      <h1>🎓 Suivi apprenants</h1>
+      <span class="incub-tag" id="incub-label">—</span>
+    </div>
+    <button class="btn-export" onclick="exportCSV()">⬇ Exporter CSV</button>
+  </header>
+  <main>
+    <div class="stats">
+      <div class="stat-card"><div class="val" id="s-total">—</div><div class="lbl">Apprenants</div></div>
+      <div class="stat-card"><div class="val" id="s-avg">—</div><div class="lbl">Progression moyenne</div></div>
+      <div class="stat-card"><div class="val" id="s-active">—</div><div class="lbl">Actifs (>5 modules)</div></div>
+      <div class="stat-card"><div class="val" id="s-done">—</div><div class="lbl">Formations terminées</div></div>
+    </div>
+    <div class="controls">
+      <input class="search-input" type="text" id="search" placeholder="🔍 Rechercher un apprenant…" oninput="renderTable()"/>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Prénom</th><th>Email</th><th>Progression</th><th>Modules</th><th>Inscription</th></tr></thead>
+        <tbody id="tbody"><tr><td colspan="5" class="empty">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="footer">Portail Waneyo Formation • <a href="https://app.waneyo-formation.com" target="_blank">app.waneyo-formation.com</a></div>
+  </main>
+</div>
+
+<script>
+const SUPABASE_URL  = 'https://dxmigietmlpwactlmpjf.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
+const TOTAL = 30;
+
+let myCode = '', myName = '', apprenants = [], progressMap = {};
+
+['d-email','d-pwd'].forEach(id => {
+  document.getElementById(id).addEventListener('keydown', e => { if(e.key==='Enter') login(); });
+});
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+async function sb(path) {
+  const res = await fetch(SUPABASE_URL+path, {
+    headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${SUPABASE_ANON}`}
+  });
+  return res.ok ? res.json() : null;
+}
+
+async function login() {
+  const email = document.getElementById('d-email').value.trim();
+  const pwd   = document.getElementById('d-pwd').value;
+  const errEl = document.getElementById('login-err');
+  const btn   = document.getElementById('login-btn');
+  if (!email||!pwd){errEl.textContent='Remplissez tous les champs.';return;}
+  btn.disabled=true; btn.textContent='Connexion…'; errEl.textContent='';
+
+  const hash = await sha256(pwd);
+  const dirs = await sb(`/rest/v1/directors?email=eq.${encodeURIComponent(email)}&password_hash=eq.${hash}&select=name,incubateur_code`);
+
+  if (!dirs||!dirs.length) {
+    errEl.textContent='Email ou mot de passe incorrect.';
+    btn.disabled=false; btn.textContent='Se connecter'; return;
+  }
+
+  myCode = dirs[0].incubateur_code;
+  myName = dirs[0].name || email;
+  document.getElementById('login-screen').style.display='none';
+  document.getElementById('dashboard').style.display='block';
+  document.getElementById('incub-label').textContent = myCode;
+  loadData();
+}
+
+async function loadData() {
+  const [subs, prog] = await Promise.all([
+    sb(`/rest/v1/subscribers?status=eq.active&incubateur_code=eq.${encodeURIComponent(myCode)}&select=first_name,email,created_at&order=created_at.desc`),
+    sb('/rest/v1/progress?done=eq.true&select=user_email')
+  ]);
+  apprenants = Array.isArray(subs) ? subs : [];
+  progressMap = {};
+  if (Array.isArray(prog)) prog.forEach(r=>{ progressMap[r.user_email]=(progressMap[r.user_email]||0)+1; });
+  renderStats(); renderTable();
+}
+
+function cnt(email){ return Math.min(progressMap[email]||0, TOTAL); }
+
+function renderStats() {
+  const counts = apprenants.map(r=>cnt(r.email));
+  const avg    = counts.length ? Math.round(counts.reduce((a,b)=>a+b,0)/counts.length) : 0;
+  document.getElementById('s-total').textContent  = apprenants.length;
+  document.getElementById('s-avg').textContent    = avg+'/'+TOTAL;
+  document.getElementById('s-active').textContent = counts.filter(c=>c>5).length;
+  document.getElementById('s-done').textContent   = counts.filter(c=>c>=TOTAL).length;
+}
+
+function renderTable() {
+  const q     = document.getElementById('search').value.toLowerCase();
+  const data  = q ? apprenants.filter(r=>(r.first_name||'').toLowerCase().includes(q)||r.email.toLowerCase().includes(q)) : apprenants;
+  const tbody = document.getElementById('tbody');
+  if (!data.length){tbody.innerHTML='<tr><td colspan="5" class="empty">Aucun apprenant trouvé.</td></tr>';return;}
+
+  tbody.innerHTML = data.map(r=>{
+    const c   = cnt(r.email);
+    const pct = Math.round((c/TOTAL)*100);
+    const cls = c>=TOTAL?'pct-done':pct>=60?'pct-high':pct>=30?'pct-mid':'pct-low';
+    const date= r.created_at?new Date(r.created_at).toLocaleDateString('fr-FR'):'—';
+    const badge=c>=TOTAL?'<span class="badge-done">✅ Terminé</span>':'';
+    return `<tr>
+      <td>${r.first_name||'—'}</td><td>${r.email}</td>
+      <td><span class="progress-bar"><span class="progress-fill ${cls}" style="width:${pct}%"></span></span>
+          <span style="margin-left:8px;font-size:.8rem;color:rgba(255,255,255,.4)">${pct}%</span>${badge}</td>
+      <td style="font-weight:700;color:#a78bfa">${c}/${TOTAL}</td>
+      <td style="color:rgba(255,255,255,.45)">${date}</td>
+    </tr>`;
+  }).join('');
+}
+
+function exportCSV() {
+  const rows=[['Prénom','Email','Modules complétés','Progression (%)','Inscription']];
+  apprenants.forEach(r=>{
+    const c=cnt(r.email);
+    rows.push([r.first_name||'',r.email,c,Math.round((c/TOTAL)*100)+'%',r.created_at?new Date(r.created_at).toLocaleDateString('fr-FR'):'']);
+  });
+  const csv=rows.map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
+  const url=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'}));
+  Object.assign(document.createElement('a'),{href:url,download:`${myCode}-apprenants-${new Date().toISOString().slice(0,10)}.csv`}).click();
+  URL.revokeObjectURL(url);
+}
+</script>
+</body>
+</html>
