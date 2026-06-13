@@ -763,6 +763,19 @@ async function handleLogin() {
     if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
     localStorage.setItem('waneyo_user', email);
     localStorage.setItem('waneyo_firstname', firstName);
+
+    // Associer incubateur si présent à l'arrivée
+    const _inc = sessionStorage.getItem('waneyo_incubateur');
+    if (_inc) {
+      await supabaseFetch(
+        `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&incubateur_code=is.null`,
+        { method: 'PATCH',
+          headers: { 'Authorization': `Bearer ${data.access_token}`, 'Prefer': 'return=minimal' },
+          body: JSON.stringify({ incubateur_code: _inc }) }
+      );
+      sessionStorage.removeItem('waneyo_incubateur');
+    }
+
     startDashboard('numerique');
 
   } catch {
