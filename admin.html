@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Waneyo — Admin</title>
+  <style>
+    *{box-sizing:border-box;margin:0;padding:0}
+    body{font-family:'Segoe UI',sans-serif;background:#0F0A1E;color:#fff;min-height:100vh}
+    #login-screen{display:flex;justify-content:center;align-items:center;min-height:100vh}
+    .login-box{background:#1a1035;padding:2.5rem;border-radius:16px;box-shadow:0 4px 30px rgba(124,58,237,.25);width:340px;text-align:center}
+    .login-box h2{color:#fff;font-size:1.3rem;margin-bottom:.4rem}
+    .login-box p{color:rgba(255,255,255,.5);font-size:.85rem;margin-bottom:1.5rem}
+    .login-box input{width:100%;padding:.65rem 1rem;border:1px solid rgba(124,58,237,.4);border-radius:8px;background:rgba(255,255,255,.05);color:#fff;font-size:.9rem;margin-bottom:1rem}
+    .login-box input::placeholder{color:rgba(255,255,255,.3)}
+    .btn{padding:.65rem 1.25rem;border-radius:8px;border:none;font-size:.9rem;cursor:pointer;transition:background .2s;font-weight:600}
+    .btn-primary{background:#7C3AED;color:#fff}.btn-primary:hover{background:#9f5ff5}
+    .btn-danger{background:rgba(239,68,68,.15);color:#f87171;border:1px solid rgba(239,68,68,.3)}.btn-danger:hover{background:rgba(239,68,68,.3)}
+    .btn-sm{padding:.35rem .85rem;font-size:.8rem}
+    .login-box .btn{width:100%}
+    .err{color:#f87171;font-size:.82rem;margin-top:.75rem}
+    #dashboard{display:none}
+    header{background:#1a1035;padding:1rem 2rem;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid rgba(124,58,237,.2)}
+    header h1{font-size:1rem;font-weight:700}
+    .badge{background:#7C3AED;font-size:.7rem;padding:2px 8px;border-radius:20px}
+    .tabs{display:flex;border-bottom:1px solid rgba(124,58,237,.2);padding:0 2rem;background:#1a1035}
+    .tab{padding:.75rem 1.5rem;cursor:pointer;font-size:.9rem;color:rgba(255,255,255,.45);border-bottom:2px solid transparent;transition:all .2s}
+    .tab.active{color:#a78bfa;border-bottom-color:#7C3AED}
+    .tab-content{display:none;padding:2rem;max-width:1100px;margin:auto}
+    .tab-content.active{display:block}
+    .stats{display:flex;gap:1rem;margin-bottom:1.5rem;flex-wrap:wrap}
+    .stat-card{background:#1a1035;border-radius:12px;padding:1rem 1.5rem;flex:1;min-width:140px;border:1px solid rgba(124,58,237,.15)}
+    .stat-card .val{font-size:2rem;font-weight:800;color:#7C3AED}
+    .stat-card .lbl{font-size:.75rem;color:rgba(255,255,255,.45);margin-top:4px}
+    .controls{display:flex;gap:.75rem;margin-bottom:1.25rem;flex-wrap:wrap;align-items:center}
+    select{padding:.5rem 1rem;border-radius:8px;border:1px solid rgba(124,58,237,.4);background:#1a1035;color:#fff;font-size:.88rem;cursor:pointer}
+    .table-wrap{background:#1a1035;border-radius:12px;overflow:hidden;border:1px solid rgba(124,58,237,.15)}
+    table{width:100%;border-collapse:collapse}
+    th{background:rgba(124,58,237,.2);color:rgba(255,255,255,.6);padding:.7rem 1rem;text-align:left;font-size:.78rem;font-weight:600;text-transform:uppercase;letter-spacing:.05em}
+    td{padding:.7rem 1rem;border-bottom:1px solid rgba(255,255,255,.04);font-size:.87rem;color:rgba(255,255,255,.85)}
+    tr:last-child td{border-bottom:none}
+    tr:hover td{background:rgba(124,58,237,.05)}
+    .progress-bar{background:rgba(255,255,255,.08);border-radius:10px;height:7px;width:110px;overflow:hidden;display:inline-block;vertical-align:middle}
+    .progress-fill{background:#7C3AED;height:100%;border-radius:10px}
+    .tag{font-size:.74rem;padding:2px 8px;border-radius:20px;font-weight:600}
+    .tag-incub{background:rgba(124,58,237,.2);color:#a78bfa}
+    .tag-direct{background:rgba(255,255,255,.07);color:rgba(255,255,255,.4)}
+    .card-form{background:#1a1035;border-radius:12px;padding:1.5rem;border:1px solid rgba(124,58,237,.2);margin-bottom:1.5rem}
+    .card-form h3{font-size:.95rem;margin-bottom:1rem;color:#a78bfa}
+    .form-row{display:flex;gap:.75rem;flex-wrap:wrap;margin-bottom:.75rem}
+    .form-row input{flex:1;min-width:160px;padding:.6rem 1rem;border:1px solid rgba(124,58,237,.3);border-radius:8px;background:rgba(255,255,255,.05);color:#fff;font-size:.88rem}
+    .form-row input::placeholder{color:rgba(255,255,255,.3)}
+    .msg{font-size:.82rem;margin-top:.75rem;padding:.5rem .75rem;border-radius:6px}
+    .msg-ok{background:rgba(52,211,153,.1);color:#6ee7b7}
+    .msg-err{background:rgba(239,68,68,.1);color:#f87171}
+    .dir-code{background:rgba(124,58,237,.15);color:#a78bfa;font-size:.78rem;padding:2px 8px;border-radius:20px;font-weight:600}
+    .empty{text-align:center;padding:2.5rem;color:rgba(255,255,255,.3);font-size:.9rem}
+    .hint{margin-top:1rem;padding:1rem;background:rgba(124,58,237,.08);border-radius:10px;font-size:.82rem;color:rgba(255,255,255,.45);line-height:1.8}
+    .hint span{color:#a78bfa}
+  </style>
+</head>
+<body>
+
+<div id="login-screen">
+  <div class="login-box">
+    <h2>🎓 Dashboard Admin</h2>
+    <p>Waneyo Formation — Accès réservé</p>
+    <input type="password" id="admin-pwd" placeholder="Mot de passe admin"/>
+    <button class="btn btn-primary" onclick="checkLogin()">Accéder</button>
+    <div class="err" id="login-err"></div>
+  </div>
+</div>
+
+<div id="dashboard">
+  <header>
+    <h1>🎓 Waneyo — Admin</h1>
+    <span class="badge">SUPER ADMIN</span>
+  </header>
+  <div class="tabs">
+    <div class="tab active" onclick="switchTab('apprenants')">👩‍🎓 Apprenants</div>
+    <div class="tab" onclick="switchTab('directors')">🏢 Directeurs incubateurs</div>
+  </div>
+
+  <!-- APPRENANTS -->
+  <div id="tab-apprenants" class="tab-content active">
+    <div class="stats">
+      <div class="stat-card"><div class="val" id="s-total">—</div><div class="lbl">Apprenants total</div></div>
+      <div class="stat-card"><div class="val" id="s-incub">—</div><div class="lbl">Via incubateurs</div></div>
+      <div class="stat-card"><div class="val" id="s-avg">—</div><div class="lbl">Progression moyenne</div></div>
+      <div class="stat-card"><div class="val" id="s-complete">—</div><div class="lbl">Formations terminées</div></div>
+    </div>
+    <div class="controls">
+      <select id="filter-inc" onchange="applyFilter()"><option value="">Tous les incubateurs</option></select>
+      <button class="btn btn-primary" onclick="exportCSV()">⬇ Exporter CSV</button>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Prénom</th><th>Email</th><th>Incubateur</th><th>Progression</th><th>Modules</th><th>Inscription</th></tr></thead>
+        <tbody id="tbody-apprenants"><tr><td colspan="6" class="empty">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- DIRECTEURS -->
+  <div id="tab-directors" class="tab-content">
+    <div class="card-form">
+      <h3>➕ Créer un accès directeur</h3>
+      <div class="form-row">
+        <input type="text"     id="d-name"  placeholder="Nom du directeur"/>
+        <input type="email"    id="d-email" placeholder="Email"/>
+        <input type="text"     id="d-code"  placeholder="Code incubateur (ex: OFPPT)"/>
+        <input type="password" id="d-pwd"   placeholder="Mot de passe temporaire"/>
+      </div>
+      <button class="btn btn-primary" onclick="createDirector()">Créer l'accès</button>
+      <div id="d-msg" style="display:none" class="msg"></div>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Nom</th><th>Email</th><th>Incubateur</th><th>Créé le</th><th>Action</th></tr></thead>
+        <tbody id="tbody-directors"><tr><td colspan="5" class="empty">Chargement…</td></tr></tbody>
+      </table>
+    </div>
+    <div class="hint">
+      🔗 Lien portail directeur : <span>app.waneyo-formation.com/director.html</span><br/>
+      🔗 Lien apprenant tracké : <span>app.waneyo-formation.com?incubateur=CODE</span>
+    </div>
+  </div>
+</div>
+
+<script>
+const SUPABASE_URL  = 'https://dxmigietmlpwactlmpjf.supabase.co';
+const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
+const ADMIN_PWD     = 'WaneyoAdmin2025!';
+const TOTAL         = 30;
+
+let allSubs = [], progressMap = {}, dirsLoaded = false;
+
+document.getElementById('admin-pwd').addEventListener('keydown', e => { if(e.key==='Enter') checkLogin(); });
+
+function checkLogin() {
+  if (document.getElementById('admin-pwd').value === ADMIN_PWD) {
+    document.getElementById('login-screen').style.display = 'none';
+    document.getElementById('dashboard').style.display = 'block';
+    loadApprenants();
+  } else { document.getElementById('login-err').textContent = 'Mot de passe incorrect.'; }
+}
+
+function switchTab(name) {
+  document.querySelectorAll('.tab').forEach((t,i) => t.classList.toggle('active', i===(name==='apprenants'?0:1)));
+  document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+  document.getElementById('tab-'+name).classList.add('active');
+  if (name==='directors' && !dirsLoaded) { loadDirectors(); dirsLoaded=true; }
+}
+
+async function sb(path, opts={}) {
+  const res = await fetch(SUPABASE_URL+path, {
+    ...opts,
+    headers:{'apikey':SUPABASE_ANON,'Authorization':`Bearer ${SUPABASE_ANON}`,'Content-Type':'application/json',...(opts.headers||{})}
+  });
+  if (!res.ok) return null;
+  if (opts.method && opts.method!=='GET') return true;
+  return res.json();
+}
+
+async function sha256(str) {
+  const buf = await crypto.subtle.digest('SHA-256', new TextEncoder().encode(str));
+  return Array.from(new Uint8Array(buf)).map(b=>b.toString(16).padStart(2,'0')).join('');
+}
+
+async function loadApprenants() {
+  const [subs, prog] = await Promise.all([
+    sb('/rest/v1/subscribers?status=eq.active&select=first_name,email,incubateur_code,created_at&order=created_at.desc'),
+    sb('/rest/v1/progress?done=eq.true&select=user_email')
+  ]);
+  allSubs = Array.isArray(subs) ? subs : [];
+  progressMap = {};
+  if (Array.isArray(prog)) prog.forEach(r => { progressMap[r.user_email]=(progressMap[r.user_email]||0)+1; });
+  populateFilter(); applyFilter();
+}
+
+function cnt(email) { return Math.min(progressMap[email]||0, TOTAL); }
+
+function populateFilter() {
+  const codes = [...new Set(allSubs.map(r=>r.incubateur_code).filter(Boolean))].sort();
+  const sel = document.getElementById('filter-inc');
+  sel.innerHTML = '<option value="">Tous les incubateurs</option>';
+  codes.forEach(c => { const o=document.createElement('option'); o.value=c; o.textContent=c; sel.appendChild(o); });
+}
+
+function applyFilter() {
+  const val = document.getElementById('filter-inc').value;
+  const data = val ? allSubs.filter(r=>r.incubateur_code===val) : allSubs;
+  renderStats(data); renderApprenants(data);
+}
+
+function renderStats(data) {
+  const counts = data.map(r=>cnt(r.email));
+  document.getElementById('s-total').textContent    = allSubs.length;
+  document.getElementById('s-incub').textContent    = data.filter(r=>r.incubateur_code).length;
+  document.getElementById('s-avg').textContent      = counts.length ? Math.round(counts.reduce((a,b)=>a+b,0)/counts.length)+'/'+TOTAL : '0/'+TOTAL;
+  document.getElementById('s-complete').textContent = counts.filter(c=>c>=TOTAL).length;
+}
+
+function renderApprenants(data) {
+  const tbody = document.getElementById('tbody-apprenants');
+  if (!data.length) { tbody.innerHTML='<tr><td colspan="6" class="empty">Aucun apprenant.</td></tr>'; return; }
+  tbody.innerHTML = data.map(r => {
+    const c=cnt(r.email), pct=Math.round((c/TOTAL)*100), date=r.created_at?new Date(r.created_at).toLocaleDateString('fr-FR'):'—';
+    const tag=r.incubateur_code?`<span class="tag tag-incub">${r.incubateur_code}</span>`:`<span class="tag tag-direct">direct</span>`;
+    return `<tr><td>${r.first_name||'—'}</td><td>${r.email}</td><td>${tag}</td>
+      <td><span class="progress-bar"><span class="progress-fill" style="width:${pct}%"></span></span>
+      <span style="margin-left:8px;font-size:.8rem;color:rgba(255,255,255,.4)">${pct}%</span></td>
+      <td style="font-weight:700;color:#a78bfa">${c}/${TOTAL}</td>
+      <td style="color:rgba(255,255,255,.45)">${date}</td></tr>`;
+  }).join('');
+}
+
+function exportCSV() {
+  const val=document.getElementById('filter-inc').value, data=val?allSubs.filter(r=>r.incubateur_code===val):allSubs;
+  const rows=[['Prénom','Email','Incubateur','Modules','Progression (%)','Inscription']];
+  data.forEach(r=>{const c=cnt(r.email);rows.push([r.first_name||'',r.email,r.incubateur_code||'direct',c,Math.round((c/TOTAL)*100)+'%',r.created_at?new Date(r.created_at).toLocaleDateString('fr-FR'):'']);});
+  const csv=rows.map(r=>r.map(v=>`"${v}"`).join(',')).join('\n');
+  const url=URL.createObjectURL(new Blob(['\uFEFF'+csv],{type:'text/csv;charset=utf-8;'}));
+  Object.assign(document.createElement('a'),{href:url,download:`waneyo-${val||'tous'}-${new Date().toISOString().slice(0,10)}.csv`}).click();
+  URL.revokeObjectURL(url);
+}
+
+async function loadDirectors() {
+  const dirs = await sb('/rest/v1/directors?select=id,name,email,incubateur_code,created_at&order=created_at.desc');
+  const tbody = document.getElementById('tbody-directors');
+  if (!dirs||!dirs.length){tbody.innerHTML='<tr><td colspan="5" class="empty">Aucun directeur créé.</td></tr>';return;}
+  tbody.innerHTML = dirs.map(d=>{
+    const date=d.created_at?new Date(d.created_at).toLocaleDateString('fr-FR'):'—';
+    return `<tr><td>${d.name||'—'}</td><td>${d.email}</td><td><span class="dir-code">${d.incubateur_code}</span></td>
+      <td style="color:rgba(255,255,255,.45)">${date}</td>
+      <td><button class="btn btn-danger btn-sm" onclick="deleteDirector('${d.id}',this)">Supprimer</button></td></tr>`;
+  }).join('');
+}
+
+async function createDirector() {
+  const name=document.getElementById('d-name').value.trim(),email=document.getElementById('d-email').value.trim();
+  const code=document.getElementById('d-code').value.trim().toUpperCase(),pwd=document.getElementById('d-pwd').value;
+  if (!email||!code||!pwd){showMsg('Remplissez email, code et mot de passe.',false);return;}
+  const hash=await sha256(pwd);
+  const res=await sb('/rest/v1/directors',{method:'POST',headers:{'Prefer':'return=minimal'},body:JSON.stringify({name,email,password_hash:hash,incubateur_code:code})});
+  if (res){showMsg(`✅ Accès créé pour ${email} (${code})`,true);['d-name','d-email','d-code','d-pwd'].forEach(id=>document.getElementById(id).value='');dirsLoaded=false;loadDirectors();}
+  else showMsg('❌ Erreur — cet email existe peut-être déjà.',false);
+}
+
+async function deleteDirector(id,btn) {
+  if (!confirm('Supprimer cet accès directeur ?')) return;
+  btn.disabled=true;
+  const res=await sb(`/rest/v1/directors?id=eq.${id}`,{method:'DELETE'});
+  if (res!==null){dirsLoaded=false;loadDirectors();}else{btn.disabled=false;alert('Erreur.');}
+}
+
+function showMsg(text,ok){
+  const el=document.getElementById('d-msg');
+  el.textContent=text;el.className='msg '+(ok?'msg-ok':'msg-err');el.style.display='block';
+  setTimeout(()=>{el.style.display='none';},4000);
+}
+</script>
+</body>
+</html>
