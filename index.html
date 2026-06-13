@@ -603,6 +603,10 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 const SUPABASE_URL  = 'https://dxmigietmlpwactlmpjf.supabase.co';
 const SUPABASE_ANON = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImR4bWlnaWV0bWxwd2FjdGxtcGpmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODA0MjgzOTksImV4cCI6MjA5NjAwNDM5OX0.MGAEzr-2QvkcNh73HyCWZsrtK-3RTLNgqJW93riEsRg';
 
+// Capture code incubateur depuis URL (?incubateur=CODE)
+const _incCode = new URLSearchParams(window.location.search).get('incubateur');
+if (_incCode) sessionStorage.setItem('waneyo_incubateur', _incCode);  
+  
 async function supabaseFetch(path, options = {}) {
   const res = await fetch(`${SUPABASE_URL}${path}`, {
     ...options,
