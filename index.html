@@ -240,6 +240,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     <div class="stats-grid" style="max-width:680px;margin:12px auto 0">
       <div class="stat-card"><div class="stat-num">15 ans</div><div class="stat-label">d'expérience</div></div>
       <div class="stat-card"><div class="stat-num">3</div><div class="stat-label">diplômes</div></div>
+      <div class="stat-card"><div class="stat-num">30</div><div class="stat-label">modules</div></div>
 
     </div>
   </div>
@@ -265,7 +266,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     <p>Rejoignez ceux qui ont choisi l'autonomie. Commencez gratuitement, sans CB.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="showPage('subscribe')">🎁 3 jours gratuits · puis 9,99€/mois</button>
-      <button class="btn-ghost" onclick="window.open('https://coassemble.com/learn/IO1ZNE','_blank')">Essayer le module offert</button>
+      <button class="btn-ghost" onclick="window.location.href='reader.html?module=1'">Essayer le module offert</button>
     </div>
     <p class="hero-sub" style="margin-top:14px">Sans engagement · Annulable à tout moment</p>
   </div>
@@ -305,7 +306,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       </div>
       <div style="border-top:1px solid var(--border);padding-top:14px;margin-top:8px">
         <p style="font-size:12px;color:var(--muted);margin-bottom:8px">Pas encore prêt(e) ? Essayez d'abord gratuitement</p>
-        <button style="background:transparent;color:var(--primary);border:1.5px solid var(--primary);border-radius:10px;padding:9px 20px;font-size:13px;font-weight:600;cursor:pointer;width:100%" onclick="window.open('https://coassemble.com/learn/IO1ZNE','_blank')">
+        <button style="background:transparent;color:var(--primary);border:1.5px solid var(--primary);border-radius:10px;padding:9px 20px;font-size:13px;font-weight:600;cursor:pointer;width:100%" onclick="window.location.href='reader.html?module=1'">
           👀 Accéder au module offert sans CB
         </button>
       </div>
@@ -1802,3 +1803,4 @@ if ('serviceWorker' in navigator) {
 </script>
 </body>
 </html>
+
