@@ -1,0 +1,300 @@
+{
+  "id": 32,
+  "titre": "Les freins à l'achat et comment les lever",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Ton offre est bonne, ton message est clair — mais les gens n'achètent pas. Le problème n'est pas ton produit : c'est un frein invisible qui bloque la décision. Dans ce module, tu apprends à identifier chaque type de frein et à le lever avec précision, sans pression et sans forcer.",
+
+  "sections": [
+
+    {
+      "titre": "Pourquoi un client intéressé n'achète pas",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu as déjà vécu cette situation : quelqu'un te dit <em>« c'est vraiment bien ce que tu fais »</em>, pose des questions, revient plusieurs fois sur ta page — et n'achète pas.<br><br>Ce n'est pas un manque d'intérêt. C'est un <strong>frein non levé</strong>.<br><br>Un frein, c'est tout ce qui, dans la tête de ton client, crée une résistance entre le désir et l'acte d'achat. Il peut être :<br><br>💬 <strong>Exprimé</strong> → il te dit ce qui le retient (<em>« c'est trop cher »</em>, <em>« j'ai pas le temps »</em>)<br>🔇 <strong>Silencieux</strong> → il disparaît sans te dire pourquoi<br><br>Les freins silencieux sont les plus dangereux, parce qu'on ne peut pas y répondre si on ne les connaît pas."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un client qui ne répond plus n'est pas forcément désintéressé. Il a rencontré un frein que tu n'as pas levé à temps. Ton travail : anticiper ces freins avant même qu'ils apparaissent."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 freins universels",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quelle que soit ton activité, tes clients potentiels butent toujours sur les mêmes obstacles. Il en existe 5 types fondamentaux :<br><br>💰 <strong>Frein 1 — Le Prix</strong> → <em>« C'est trop cher pour moi »</em><br>🤔 <strong>Frein 2 — Le Doute</strong> → <em>« Est-ce que ça va vraiment marcher pour moi ? »</em><br>⏰ <strong>Frein 3 — Le Timing</strong> → <em>« Ce n'est pas le bon moment »</em><br>🔒 <strong>Frein 4 — La Méfiance</strong> → <em>« Je ne te connais pas assez pour te faire confiance »</em><br>😴 <strong>Frein 5 — L'Inertie</strong> → <em>« Je le ferai plus tard »</em><br><br>La bonne nouvelle : chacun de ces freins a une réponse précise. Et contrairement à ce qu'on croit, le prix est rarement le vrai problème."
+        },
+        {
+          "type": "attention",
+          "contenu": "Quand un client dit « c'est trop cher », dans 70 % des cas, ce n'est pas la vraie objection. C'est le frein le plus facile à formuler — mais il cache souvent le doute ou la méfiance. Apprendre à creuser derrière la première objection est l'une des compétences commerciales les plus rentables qui soit."
+        }
+      ]
+    },
+
+    {
+      "titre": "Frein 1 — Le Prix : rarement la vraie cause",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quand quelqu'un dit <em>« c'est trop cher »</em>, il exprime en réalité l'une de ces trois choses :<br><br>1️⃣ <strong>La valeur perçue est inférieure au prix</strong> → il ne voit pas clairement ce qu'il gagne<br>2️⃣ <strong>Il n'a pas encore confiance</strong> → le risque lui semble trop élevé par rapport à ce qu'il sait de toi<br>3️⃣ <strong>Il n'a pas le budget disponible en ce moment</strong> → c'est le seul cas où c'est vraiment une question d'argent<br><br>Dans les cas 1 et 2, baisser ton prix ne résout rien — ça aggrave même le problème en signalant que ton offre valait moins que tu ne le disais."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Ibrahim, consultant RH à Douala :</strong><br><br>Une PME lui répond : <em>« 500 000 FCFA pour un audit RH, c'est trop cher pour nous. »</em><br><br>Au lieu de baisser son prix, Ibrahim répond : <em>« Je comprends. Dites-moi — qu'est-ce qui vous manque pour voir si c'est un investissement rentable pour vous ? »</em><br><br>La réponse : <em>« On ne sait pas si ça va vraiment changer quelque chose. »</em><br><br>Le vrai frein était le doute, pas le prix. Ibrahim a présenté deux études de cas similaires. Le contrat a été signé au prix initial."
+        }
+      ]
+    },
+
+    {
+      "titre": "Comment répondre au frein prix",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Trois techniques éprouvées pour lever le frein prix sans baisser ta valeur :<br><br>📊 <strong>Le calcul du retour sur investissement</strong> → montre le gain en termes de temps, d'argent ou d'énergie économisés. <em>« Si cette formation te permet d'obtenir un seul client supplémentaire par mois, elle est remboursée en une semaine. »</em><br><br>🔪 <strong>La décomposition du prix</strong> → ramène le coût à une unité quotidienne ou hebdomadaire. <em>« C'est 330 FCFA par jour — moins qu'un café. »</em><br><br>🏅 <strong>La comparaison du coût de ne rien faire</strong> → <em>« Combien tu perds chaque mois en continuant comme maintenant ? »</em> C'est le levier le plus puissant : l'aversion à la perte (vue en M31) s'applique ici directement."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ne te bats jamais sur le prix — bats-toi sur la valeur perçue. Un client qui comprend exactement ce qu'il gagne ne discute plus le prix. Il cherche à savoir comment payer."
+        }
+      ]
+    },
+
+    {
+      "titre": "Frein 2 — Le Doute : « Est-ce que ça marchera pour moi ? »",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le doute est le frein le plus fréquent et le plus sous-estimé. Ton client te croit peut-être — mais il doute de <strong>lui-même</strong>.<br><br>Il se dit :<br>→ <em>« Les autres ont réussi, mais ma situation est différente »</em><br>→ <em>« Je n'ai pas le temps de vraiment m'y mettre »</em><br>→ <em>« Et si je n'y arrivais pas après avoir payé ? »</em><br><br>Ce frein est particulièrement fort dans les marchés africains et maghrébins où les mauvaises expériences passées avec des formations ou produits décevants ont créé une prudence légitime."
+        },
+        {
+          "type": "texte",
+          "contenu": "Pour lever le doute, tu as 4 outils :<br><br>🪞 <strong>Les témoignages miroirs</strong> → choisis des témoignages de clients qui ressemblent à ton prospect (même pays, même situation, même niveau de départ)<br>📋 <strong>La garantie de résultat ou de remboursement</strong> → elle transfère le risque de l'acheteur vers toi<br>🔍 <strong>La démonstration avant l'achat</strong> → module gratuit, session découverte, extrait de qualité<br>🤝 <strong>L'accompagnement visible</strong> → montrer que tu es disponible après la vente réduit la peur de se retrouver seul"
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — lever le doute par le témoignage miroir",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Mariam, formatrice en couture créative à Marrakech :</strong><br><br>Son audience cible : des femmes au foyer de 35 à 50 ans, peu habituées aux formations en ligne, qui doutent de leur capacité à apprendre depuis un écran.<br><br>Elle a arrêté d'utiliser des témoignages génériques du type <em>« Excellente formation ! »</em><br><br>Elle a recueilli et mis en avant ce type de témoignage :<br><em>« J'avais peur de ne pas y arriver, je ne savais pas du tout me débrouiller avec un téléphone. Mariam m'a accompagnée étape par étape. Aujourd'hui j'ai vendu 3 commandes en ligne — depuis mon salon. »</em> — Khadija, 47 ans, Agadir.<br><br>Le résultat : son taux de conversion a doublé en 2 mois. Les femmes qui hésitaient se reconnaissaient dans Khadija — et le frein du doute disparaissait."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un témoignage efficace ne dit pas que ton offre est bonne. Il dit que quelqu'un dans la même situation que ton prospect a réussi. C'est cette identification qui lève le doute — pas les éloges."
+        }
+      ]
+    },
+
+    {
+      "titre": "Frein 3 — Le Timing : « Pas maintenant »",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "<em>« Je reviendrai après les fêtes »</em>, <em>« quand ma situation se sera stabilisée »</em>, <em>« dans 3 mois quand j'aurai plus de temps »</em>…<br><br>Le frein du timing est souvent une forme déguisée du doute ou de l'inertie. Mais il peut aussi être réel : la personne traverse effectivement une période difficile.<br><br>Comment les distinguer :<br><br>🔴 <strong>Faux timing</strong> → la situation ne changera pas vraiment dans 3 mois. C'est une façon polie de dire qu'il n'est pas convaincu de la valeur ou qu'il hésite.<br>🟢 <strong>Vrai timing</strong> → il y a un événement concret et daté qui justifie l'attente (naissance, déménagement, fin d'un contrat)."
+        },
+        {
+          "type": "texte",
+          "contenu": "Pour lever le frein timing, deux approches :<br><br>⏩ <strong>Si c'est un faux timing</strong> → aide ton client à voir le coût de l'attente. <em>« Chaque mois que tu attends, tes concurrents, eux, n'attendent pas. Dans 3 mois tu seras exactement au même point — sauf que l'opportunité sera passée. »</em><br><br>📅 <strong>Si c'est un vrai timing</strong> → propose une solution adaptée : liste d'attente avec prix bloqué, accès différé, contenu à consommer à son rythme. Respecter le timing réel d'un client crée de la confiance — il reviendra."
+        }
+      ]
+    },
+
+    {
+      "titre": "Frein 4 — La Méfiance : bâtir la crédibilité rapidement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La méfiance est le frein le plus honnête. Ton client ne te connaît pas assez pour te confier son argent. C'est légitime — surtout en ligne.<br><br>Ce frein est amplifié dans nos marchés par :<br>→ L'explosion des arnaques sur les réseaux sociaux<br>→ Les formations ou produits achetés en ligne qui n'ont pas tenu leurs promesses<br>→ L'absence de possibilité de voir le produit physiquement avant l'achat<br><br>Pour lever rapidement la méfiance, tu dois <strong>multiplier les points de contact avant la demande d'achat</strong>."
+        },
+        {
+          "type": "texte",
+          "contenu": "Le principe des <strong>7 points de contact</strong> : selon les études marketing, un prospect a besoin d'être exposé en moyenne 7 fois à une marque ou une personne avant de lui faire suffisamment confiance pour acheter.<br><br>Ces points de contact peuvent être :<br>📱 Un post qui lui a appris quelque chose<br>🎥 Une vidéo où il t'a vu parler<br>💬 Un commentaire pertinent que tu as laissé sur son post<br>📧 Un email utile qu'il a reçu de toi<br>👁️ Une story où il t'a vu dans ta réalité quotidienne<br>🤝 Une session découverte gratuite<br>⭐ Un témoignage d'un ami commun"
+        }
+      ]
+    },
+
+    {
+      "titre": "Frein 5 — L'Inertie : l'ennemi silencieux",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'inertie est peut-être le frein le plus difficile à combattre. Le client <em>voudrait</em> acheter. Il sait que c'est bien. Il a même failli cliquer. Et il ne l'a pas fait — non pas parce qu'il a décidé de ne pas le faire, mais parce qu'il a reporté et qu'avec le temps, l'impulsion est passée.<br><br>L'inertie est amplifiée par :<br>→ Un processus d'achat trop long ou trop complexe<br>→ Trop d'options à choisir (paralysie de l'analyse)<br>→ L'absence de rappel ou de relance bienveillante<br>→ Un moment d'hésitation non accompagné"
+        },
+        {
+          "type": "texte",
+          "contenu": "Pour lever l'inertie :<br><br>⚡ <strong>Simplifie l'acte d'achat</strong> → un seul bouton, un seul choix, une seule étape. Chaque clic supplémentaire fait perdre des clients.<br>📲 <strong>Relance avec valeur</strong> → pas un simple <em>« tu as pensé à ma formation ? »</em> mais un contenu utile qui rappelle l'urgence du problème : <em>« Cette semaine j'ai aidé Aïssatou à doubler ses demandes. Si tu veux qu'on fasse pareil pour toi... »</em><br>🎁 <strong>Crée un déclencheur externe</strong> → une session Q&A en live, un bonus limité dans le temps, un événement qui crée une raison d'agir maintenant"
+        }
+      ]
+    },
+
+    {
+      "titre": "La méthode CREUSER : identifier le vrai frein",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant de lever un frein, tu dois savoir lequel est actif. La méthode <strong>CREUSER</strong> te donne une structure pour le découvrir en conversation directe ou en DM :<br><br>❓ <strong>C</strong>larifier → <em>« Qu'est-ce qui vous retient exactement ? »</em><br>🔍 <strong>R</strong>eformule → <em>« Si je comprends bien, vous hésitez parce que… c'est ça ? »</em><br>🎯 <strong>E</strong>xplore → <em>« Qu'est-ce qu'il faudrait pour que ce soit le bon moment ? »</em><br>🤝 <strong>U</strong>nifie → montrer que d'autres ont eu ce frein et l'ont dépassé<br>💡 <strong>S</strong>olution → présenter la réponse spécifique à ce frein précis<br>✅ <strong>E</strong>ngager → <em>« Si ce point est réglé, vous vous sentez prêt(e) à avancer ? »</em><br>🔁 <strong>R</strong>elancer → si non, creuser à nouveau"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Cette méthode fonctionne par écrit comme à l'oral. Elle respecte ton client, ne le presse pas — et te donne les informations pour répondre avec précision plutôt que de réciter un argumentaire générique."
+        }
+      ]
+    },
+
+    {
+      "titre": "Anticiper les freins dans tes contenus",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La meilleure façon de lever un frein, c'est de le lever <strong>avant même qu'il soit exprimé</strong>. Comment ? En intégrant les réponses aux objections directement dans tes posts, pages de vente et emails.<br><br>Exemples concrets :<br><br>❓ <em>Frein prix anticipé :</em> <em>« Je sais que 150€ peut sembler beaucoup. Pour te donner un point de comparaison : une seule heure avec un consultant coûte en général 200€. Ici, c'est 8 semaines d'accompagnement structuré. »</em><br><br>❓ <em>Frein doute anticipé :</em> <em>« Même si tu n'as jamais fait ça avant, le programme est conçu pour les débutants complets — c'est pour ça que 78 % de mes clients n'avaient aucune base au départ. »</em><br><br>❓ <em>Frein méfiance anticipé :</em> <em>« Essaie le module 1 gratuitement avant de t'engager. S'il ne vaut pas ton temps, tu n'achètes pas. »</em>"
+        },
+        {
+          "type": "attention",
+          "contenu": "N'anticipe pas trop de freins à la fois dans un seul message — tu risques de créer des doutes que ton prospect n'avait pas. Identifie le frein le plus fréquent chez TON audience et concentre-toi sur lui."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas complète — de l'hésitation à la décision",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Soro, développeur web freelance à Abidjan :</strong><br><br>Il propose une formation « Créer son agence web en 90 jours » à 85 000 FCFA.<br><br>Un prospect lui écrit : <em>« C'est intéressant mais c'est cher et je n'ai pas trop le temps en ce moment. »</em><br><br>Soro identifie deux freins : <strong>prix</strong> (possible écran de fumée) + <strong>timing</strong>.<br><br>Sa réponse :<br>→ Il ne baisse pas le prix.<br>→ Il envoie le témoignage d'un client qui avait dit la même chose 4 mois avant — et qui a depuis lancé son agence et signé 2 contrats.<br>→ Il propose un accès étalé sur 5 mois à un rythme de 30 minutes par jour.<br>→ Il pose une question : <em>« La vraie question c'est : dans 90 jours, tu veux être au même point qu'aujourd'hui ou avoir lancé ton activité ? »</em><br><br>Le prospect a signé le lendemain, au prix initial."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Soro n'a pas convaincu — il a aidé son prospect à lever lui-même ses propres freins. C'est ça, la vente éthique : accompagner une décision, pas la forcer."
+        }
+      ]
+    },
+
+    {
+      "titre": "Freins culturels spécifiques à l'Afrique et au Maghreb",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Nos marchés ont des freins supplémentaires liés au contexte culturel et économique qu'il faut connaître et respecter :<br><br>🏦 <strong>Méfiance vis-à-vis du paiement en ligne</strong> → propose le paiement mobile money (Orange Money, Wave, M-Pesa), le virement bancaire ou le paiement en plusieurs fois sans frais<br>👨‍👩‍👧 <strong>Décision familiale ou communautaire</strong> → certains prospects doivent « en parler à la maison ». Offre-leur du contenu à partager avec leurs proches, explique pourquoi c'est un investissement<br>🕌 <strong>Contraintes religieuses</strong> → évite tout produit ou argumentaire qui implique un crédit avec intérêt. Propose des facilités de paiement sans frais ni riba<br>📵 <strong>Connectivité limitée</strong> → offre des formats légers (PDF, audio) en complément des formats vidéo gourmands en data"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Adapter ta communication aux freins culturels de ton marché n'est pas une concession — c'est une marque de respect et de professionnalisme. Et c'est ce qui fait la différence entre une offre internationale qui ne convertit pas et une offre locale qui résonne vraiment."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire ta FAQ comme outil de levée de freins",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une FAQ (Foire Aux Questions) bien construite est l'un des outils de conversion les plus sous-estimés. Elle répond aux freins de ton prospect <strong>au moment exact où il les ressent</strong> — sans qu'il ait à te contacter.<br><br>Pour la construire efficacement :<br><br>1️⃣ Liste les 10 questions les plus fréquentes reçues avant un achat<br>2️⃣ Classe-les par type de frein (prix, doute, timing, méfiance, inertie)<br>3️⃣ Pour chaque réponse, applique la structure : <strong>valider la question → répondre avec précision → clore avec un bénéfice</strong><br><br>Exemple :<br>❓ <em>« Est-ce que la formation est adaptée si je suis débutant complet ? »</em><br>✅ <em>« C'est exactement pour ça qu'elle a été conçue. 80 % de nos apprenants n'avaient aucune base au départ. Le programme commence par les fondamentaux et progresse à ton rythme — tu n'es jamais lâché dans le vide. »</em>"
+        },
+        {
+          "type": "attention",
+          "contenu": "Une FAQ qui dit juste « oui » ou « non » ne lève aucun frein. La réponse doit être suffisamment riche pour que le prospect se sente compris, rassuré ET motivé à passer à l'action."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le suivi après l'hésitation : la relance bienveillante",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un prospect qui n'a pas acheté n'est pas perdu. En moyenne, <strong>80 % des ventes nécessitent 5 points de contact ou plus</strong> avant de se conclure (source : National Sales Executive Association, 2023). Pourtant, la plupart des entrepreneurs abandonnent après 1 ou 2 tentatives.<br><br>La relance bienveillante n'est pas du harcèlement — c'est un service. Elle respecte ces règles :<br><br>⏱️ <strong>Le bon moment</strong> → attends 3 à 5 jours entre chaque relance<br>💎 <strong>La valeur ajoutée</strong> → chaque relance apporte quelque chose : un témoignage, un article, une réponse à une question fréquente<br>🚪 <strong>La porte ouverte</strong> → termine toujours par une question, jamais par une injonction<br>🛑 <strong>La limite</strong> → 3 relances maximum. Au-delà, respecte la décision silencieuse de ton prospect."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Exemple de relance efficace (J+4 après l'hésitation) :</strong><br><br><em>« Bonjour [Prénom], je me souviens que tu hésitais sur [le programme]. Je voulais juste te partager ce que vit Nour cette semaine — elle a lancé sa boutique en ligne hier, 3 semaines après avoir rejoint le programme. Elle était exactement dans ta situation au départ. Si tu veux, je t'envoie son témoignage complet. Pas de pression de mon côté — je veux juste m'assurer que tu as toutes les infos pour décider ce qui est juste pour toi. »</em>"
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les concepts et données de ce module s'appuient sur :<br><br>📖 <strong>Rackham, N. (1988).</strong> <em>SPIN Selling.</em> McGraw-Hill — méthode de vente consultative par questionnement et levée d'objections<br>📖 <strong>Dixon, M. & Adamson, B. (2011).</strong> <em>The Challenger Sale.</em> Portfolio/Penguin — reframing des objections et vente par la valeur<br>📖 <strong>National Sales Executive Association (2023).</strong> <em>Follow-up Statistics in Sales</em> — données sur les points de contact nécessaires avant une décision d'achat<br>📖 <strong>Kahneman, D. (2012).</strong> <em>Thinking, Fast and Slow.</em> Farrar, Straus and Giroux — aversion à la perte appliquée aux freins prix<br>📖 <strong>Cialdini, R. B. (2001).</strong> <em>Influence : The Psychology of Persuasion.</em> HarperCollins — principe de réciprocité et preuve sociale dans la levée de la méfiance<br>📖 <strong>GSMA Intelligence (2024).</strong> <em>The Mobile Economy Sub-Saharan Africa</em> — comportements d'achat mobile et freins numériques en Afrique"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les freins évoluent avec les marchés. Recueille régulièrement les objections de tes prospects — en DM, après un webinaire, dans tes formulaires. Ta meilleure base de données sur les freins, c'est ta propre audience."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quand un client dit 'c'est trop cher', quelle est la réalité dans 70 % des cas ?",
+      "options": [
+        "Il n'a vraiment pas le budget et il faut baisser le prix",
+        "C'est le frein le plus facile à formuler mais il cache souvent le doute ou la méfiance",
+        "Il compare avec un concurrent moins cher et il faut s'aligner",
+        "Il teste ta flexibilité pour obtenir une remise"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Qu'est-ce qu'un témoignage 'miroir' et pourquoi est-il efficace contre le frein du doute ?",
+      "options": [
+        "Un témoignage très court qui résume l'offre en une phrase",
+        "Un témoignage d'une célébrité qui donne de la crédibilité à l'offre",
+        "Un témoignage d'un client qui ressemble au prospect, montrant que quelqu'un dans sa situation a réussi",
+        "Un témoignage qui reflète toutes les fonctionnalités du produit"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Selon les études citées dans ce module, combien de points de contact sont nécessaires en moyenne avant qu'une vente se conclue ?",
+      "options": [
+        "1 à 2 points de contact suffisent si le message est bon",
+        "3 points de contact en moyenne",
+        "5 points de contact ou plus dans 80 % des cas",
+        "10 points de contact minimum selon les experts"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Dans la méthode CREUSER, quelle est la première étape face à une objection ?",
+      "options": [
+        "Proposer immédiatement une remise pour rassurer le client",
+        "Reformuler l'objection pour montrer qu'on a compris",
+        "Clarifier en demandant ce qui retient exactement le prospect",
+        "Présenter des témoignages pour contrer l'objection"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Parmi ces adaptations pour les marchés africains et maghrébins, laquelle est la plus importante pour lever le frein de méfiance vis-à-vis du paiement ?",
+      "options": [
+        "Proposer uniquement le paiement par carte bancaire internationale",
+        "Offrir du paiement mobile money, virement bancaire ou facilités sans frais ni riba",
+        "Demander un acompte de 50 % avant de commencer",
+        "Rendre le paiement obligatoirement comptant pour éviter les impayés"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
