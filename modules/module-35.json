@@ -1,0 +1,286 @@
+{
+  "id": 35,
+  "titre": "Créer une offre irrésistible sans manipuler",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Une offre irrésistible n'est pas une offre qui manipule — c'est une offre tellement bien construite que refuser serait une erreur évidente. Dans ce module, tu apprends à transformer ce que tu vends en une proposition de valeur claire, désirable et honnête — qui se vend sans forcer.",
+
+  "sections": [
+
+    {
+      "titre": "La différence entre un produit et une offre",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La plupart des entrepreneurs vendent un <strong>produit</strong>. Les meilleurs vendent une <strong>offre</strong>.<br><br>Quelle est la différence ?<br><br>📦 <strong>Un produit</strong> décrit ce que tu livres : une formation, un service, un objet, un logiciel.<br>🎁 <strong>Une offre</strong> décrit ce que ton client vit, gagne et ressent grâce à ce que tu livres — dans un cadre précis, avec des garanties claires et une valeur perçue qui dépasse largement le prix.<br><br>Exemple :<br>❌ <em>« Formation en gestion du temps — 6 modules vidéo — 89€ »</em><br>✅ <em>« En 21 jours, récupère 2 heures par jour pour développer ton activité — ou remboursé. Inclus : 6 modules + templates prêts à l'emploi + accès à vie + 1 session de suivi individuel. »</em><br><br>C'est le même contenu. Ce n'est pas la même offre."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ton client n'achète pas ce que tu crées. Il achète la transformation que tu lui promets, la certitude que ça marchera pour lui, et la réduction du risque perçu. Construire une offre, c'est travailler sur ces trois dimensions ensemble."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'équation de valeur : ce qui rend une offre irrésistible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Alex Hormozi, entrepreneur américain auteur de <em>$100M Offers</em> (2021), a formalisé une équation de valeur qui explique pourquoi certaines offres se vendent facilement et d'autres non :<br><br><strong>Valeur perçue = (Résultat désiré × Probabilité de succès) ÷ (Délai × Effort)</strong><br><br>Autrement dit, ton offre est irrésistible quand :<br>🔥 Le résultat promis est fortement désiré<br>🛡️ La probabilité de l'atteindre semble haute<br>⚡ Le délai pour y arriver est court<br>💆 L'effort demandé est faible<br><br>Tu peux augmenter la valeur perçue en travaillant sur n'importe lequel de ces 4 facteurs — sans changer ton prix."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Application pratique :</strong><br><br>Khalid propose des séances de coaching business à 300€. Peu de ventes.<br><br>Il applique l'équation :<br>→ 🔥 Résultat → il précise : <em>« Valide ta première idée de business en ligne »</em><br>→ 🛡️ Probabilité → il ajoute : <em>« Méthode testée avec 120 entrepreneurs — 91 % ont lancé dans les 30 jours »</em><br>→ ⚡ Délai → il reformule : <em>« En 2 séances de 90 minutes »</em><br>→ 💆 Effort → il précise : <em>« Je prépare tout — tu n'arrives qu'avec tes idées »</em><br><br>Même prix. Même compétence. La valeur perçue a explosé. Ses séances se remplissent maintenant en 48h."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 4 composantes d'une offre solide",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une offre bien construite répond toujours à ces 4 questions dans la tête de ton client :<br><br>🎯 <strong>1 — Quel résultat précis vais-je obtenir ?</strong><br>Ne dis pas <em>« tu vas progresser »</em>. Dis <em>« tu vas décrocher tes 3 premiers clients freelance »</em> ou <em>« tu vas réduire ton temps de travail de 30 % »</em>. Le résultat doit être concret, mesurable et désirable.<br><br>📅 <strong>2 — En combien de temps ?</strong><br>Le délai réduit l'anxiété. <em>« En 8 semaines »</em>, <em>« en 21 jours »</em>, <em>« dès le premier mois »</em> — les promesses sans horizon temporel sont perçues comme vagues.<br><br>🧩 <strong>3 — Avec quoi exactement ?</strong><br>Liste ce que le client reçoit. Pas juste <em>« une formation »</em> — mais chaque composante avec sa valeur perçue individuelle.<br><br>🛡️ <strong>4 — Que se passe-t-il si ça ne marche pas ?</strong><br>La garantie. Elle transforme le risque perçu en risque nul — ou quasi nul."
+        },
+        {
+          "type": "attention",
+          "contenu": "Le résultat promis doit être réaliste et honnête. Promettre ce que tu ne peux pas garantir détruit ta réputation à long terme et viole la confiance que tu as mis du temps à construire. Une offre irrésistible honnête est plus puissante qu'une offre spectaculaire mensongère."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le positionnement : occuper un territoire précis",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Al Ries et Jack Trout, dans leur ouvrage fondateur <em>Positioning</em> (1981 — toujours actuel), ont établi une règle simple mais implacable :<br><br><strong>Dans l'esprit du client, il ne peut y avoir qu'un seul n°1 par catégorie.</strong><br><br>Le premier cola ? Coca-Cola. Le premier moteur de recherche ? Google en Afrique. La première référence en formation digitale pour débutants en Afrique francophone ? C'est là que tu peux te positionner.<br><br>Le positionnement répond à 3 questions :<br>✦ Pour <strong>qui</strong> exactement ?<br>✦ Pour résoudre <strong>quel problème</strong> spécifique ?<br>✦ En quoi es-tu <strong>différent</strong> de toutes les autres solutions disponibles ?"
+        },
+        {
+          "type": "texte",
+          "contenu": "Voici les 5 axes de positionnement les plus efficaces pour nos marchés :<br><br>🌍 <strong>Géographique</strong> → <em>« La seule formation en marketing digital pensée pour le marché marocain »</em><br>👤 <strong>Démographique</strong> → <em>« Pour les femmes entrepreneures de 30-45 ans qui jonglent entre famille et business »</em><br>⏱️ <strong>Rapidité</strong> → <em>« Résultats mesurables en 30 jours ou remboursé »</em><br>🔑 <strong>Méthode exclusive</strong> → <em>« La méthode des 3P que 400 entrepreneurs ont déjà appliquée »</em><br>💰 <strong>Accessibilité</strong> → <em>« Formation pro à portée de tous, sans crédit »</em>"
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire ta proposition de valeur unique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La proposition de valeur unique (PVU) est la phrase la plus importante de toute ta communication. Elle résume en une ligne ce que tu offres, à qui, et pourquoi c'est différent.<br><br>La structure la plus efficace :<br><br><em>« J'aide [qui] à [résultat désiré] grâce à [méthode différenciante] — même si [obstacle perçu n°1]. »</em><br><br>Exemples :<br>✅ <em>« J'aide les artisanes du Maghreb à vendre leurs créations en ligne grâce à Instagram — même si elles n'ont jamais fait de marketing. »</em><br>✅ <em>« J'aide les freelances africains à doubler leurs tarifs sans perdre leurs clients — grâce à la méthode de repositionnement par la valeur. »</em><br>✅ <em>« J'aide les TPE d'Afrique de l'Ouest à trouver leurs 10 premiers clients en ligne — en 60 jours et sans budget publicitaire. »</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ta PVU doit pouvoir être lue et comprise en 8 secondes. Si tu as besoin d'expliquer ce que tu fais, c'est qu'elle n'est pas encore assez claire. Teste-la : montre-la à quelqu'un qui ne te connaît pas et demande-lui de la reformuler avec ses propres mots."
+        }
+      ]
+    },
+
+    {
+      "titre": "La psychologie du prix : tarifer avec confiance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le prix est un message. Avant même que ton client analyse ce qu'il reçoit, le prix lui envoie un signal sur la valeur et le sérieux de ton offre.<br><br>Quelques principes de psychologie du prix à retenir :<br><br>💎 <strong>Un prix trop bas nuit à la crédibilité</strong> → un coaching à 1 000 FCFA sera perçu comme peu sérieux, même si la qualité est excellente. Le prix est un indicateur de valeur perçue.<br>🔢 <strong>Les prix spécifiques sont plus crédibles</strong> → 97€ est perçu comme plus réfléchi que 100€. 47 500 FCFA inspire plus confiance que 50 000 FCFA.<br>📊 <strong>L'ancrage de prix</strong> → présente d'abord la valeur totale (ce que tout cela vaudrait séparément), puis ton prix — l'écart rend l'offre perçue comme une opportunité.<br>🎯 <strong>La comparaison de référence</strong> → comparer à quelque chose de moins performant et plus cher rend ton prix immédiatement attractif."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Technique d'ancrage appliquée :</strong><br><br><em>« Ce que tu reçois :<br>→ 6 modules vidéo (valeur : 150€)<br>→ Templates et outils prêts à l'emploi (valeur : 60€)<br>→ Accès à la communauté privée pendant 6 mois (valeur : 80€)<br>→ 1 session de suivi individuel 30 min (valeur : 75€)<br><br>Valeur totale : 365€<br>Prix de lancement : 97€ »</em><br><br>L'ancrage rend le prix de 97€ non seulement acceptable, mais attractif — sans avoir menti sur quoi que ce soit."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les bonus : amplifier la valeur perçue sans baisser le prix",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les bonus sont l'un des outils les plus puissants pour rendre une offre irrésistible — à condition de les choisir avec soin.<br><br>Un bon bonus :<br>✅ Répond à un frein spécifique que tu as identifié chez ton audience<br>✅ A une valeur perçue élevée (même si le coût de création est faible pour toi)<br>✅ Amplifie le résultat principal plutôt que de le diluer<br>✅ Est livré rapidement (un bonus immédiat a plus de valeur qu'un bonus futur)<br><br>Un mauvais bonus :<br>❌ N'a aucun lien avec le problème principal<br>❌ Donne l'impression de remplissage<br>❌ Est trop complexe à utiliser sans accompagnement<br>❌ Diminue la clarté de l'offre en ajoutant trop d'éléments"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Bintou, consultante en communication à Conakry :</strong><br><br>Elle propose une formation Instagram à 45 000 GNF. Pour la relancer, elle ajoute :<br><br>🎁 <strong>Bonus 1</strong> → Pack de 30 légendes Instagram prêtes à publier (répond au frein : <em>« je ne sais pas quoi écrire »</em>)<br>🎁 <strong>Bonus 2</strong> → Modèle de planning éditorial mensuel sous Excel (répond au frein : <em>« je manque de régularité »</em>)<br>🎁 <strong>Bonus 3</strong> → Accès à un groupe WhatsApp de suivi pendant 30 jours (répond au frein : <em>« j'aurai besoin d'aide après »</em>)<br><br>Ces 3 bonus coûtent 2 heures de travail. Ils répondent aux 3 freins les plus fréquents. Les inscriptions ont triplé."
+        }
+      ]
+    },
+
+    {
+      "titre": "La garantie : transformer le risque en confiance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La garantie est l'élément le plus sous-utilisé des offres en Afrique et au Maghreb — et pourtant l'un des plus puissants pour lever le dernier frein avant l'achat.<br><br>Il existe plusieurs types de garanties :<br><br>💰 <strong>La garantie de remboursement</strong> → <em>« Si tu n'es pas satisfait dans les 7 jours, on te rembourse intégralement. »</em> Simple, efficace, rassurante.<br>🏆 <strong>La garantie de résultat</strong> → <em>« Si tu appliques la méthode et que tu n'obtiens pas [résultat spécifique] en [délai], on continue ensemble gratuitement. »</em> Plus engageante mais plus puissante.<br>🔄 <strong>La garantie conditionnelle</strong> → le remboursement est accordé si certaines conditions sont remplies (avoir suivi les modules, fait les exercices). Elle protège contre les mauvaises foi tout en rassurant les clients sérieux."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Avoir une garantie t'oblige à croire en ton offre. Si tu hésites à en proposer une, c'est peut-être le signal que quelque chose dans ton offre n'est pas encore solide. Une garantie n'est pas un risque pour toi — c'est un engagement de qualité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Nommer et packager ton offre",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le nom de ton offre est son premier contact avec ton client. Un bon nom doit :<br><br>🎯 <strong>Dire ce que ça fait</strong> → pas <em>« Programme Excellence »</em> mais <em>« Programme 30 Jours Pour Vendre »</em><br>🌟 <strong>Évoquer la transformation</strong> → <em>« Du freelance à l'agence »</em> ou <em>« Méthode Visibilité Zéro Budget »</em><br>🔢 <strong>Intégrer un chiffre si possible</strong> → les chiffres créent de la précision et de la mémorabilité : <em>« Les 5 leviers »</em>, <em>« Méthode 3C »</em>, <em>« Programme 90 jours »</em><br>🌍 <strong>Parler à ton marché</strong> → un nom qui sonne africain ou qui ancre dans le contexte local crée immédiatement de l'appartenance<br><br>Évite les noms trop génériques (<em>« Formation Pro »</em>), trop abstraits (<em>« Mindset Elite »</em>) ou trop longs."
+        },
+        {
+          "type": "texte",
+          "contenu": "Le packaging visuel compte aussi. Même pour une offre digitale, l'apparence de ce que ton client reçoit influe sur la valeur perçue :<br><br>📁 Un PDF soigné vaut plus qu'un document Word<br>🎨 Un visuel professionnel pour ta formation vaut plus qu'une simple liste<br>📦 Une page de vente structurée vaut plus qu'un message Instagram<br>🏷️ Un nom d'offre clair vaut plus qu'une description générique<br><br>Ces éléments ne changent pas la qualité intrinsèque de ton travail. Ils changent la façon dont il est perçu — et la perception, en marketing, c'est la réalité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Tester ton offre avant de tout miser dessus",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant de créer tout le contenu, de designer toute la page de vente ou de lancer une campagne, valide que ton offre résonne avec ta cible. Cette approche s'appelle le <strong>Minimum Viable Offer</strong> (MVO).<br><br>La méthode en 4 étapes :<br><br>1️⃣ <strong>Décris ton offre en 5 lignes</strong> → résultat, délai, ce que tu livres, garantie, prix<br>2️⃣ <strong>Envoie-la à 10 personnes de ton audience cible</strong> → DM Instagram, WhatsApp, email personnel<br>3️⃣ <strong>Mesure les réactions</strong> → combien demandent plus d'info ? Combien disent « intéressant » ? Combien ignorent ?<br>4️⃣ <strong>Affine selon les retours</strong> → les questions posées révèlent les freins non levés. Les silences révèlent un manque de désir.<br><br>Si 3 personnes sur 10 demandent comment acheter → ton offre a un potentiel fort. Lance.<br>Si 0 sur 10 réagissent → quelque chose ne résonne pas. Reviens à l'étape du positionnement."
+        },
+        {
+          "type": "attention",
+          "contenu": "Ne confonds pas validation et intention d'achat. Beaucoup de gens diront <em>« c'est bien »</em> sans acheter. La vraie validation, c'est quand quelqu'un dit <em>« comment je peux m'inscrire ? »</em> ou — mieux encore — paie un acompte. Les mots coûtent rien. L'argent, lui, ne ment pas."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les limites éthiques de l'offre irrésistible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une offre irrésistible honnête respecte des limites claires :<br><br>✅ <strong>Les résultats promis sont atteignables</strong> par la majorité des clients qui appliquent la méthode — pas seulement par les plus doués ou les plus chanceux<br>✅ <strong>La garantie est réellement honorée</strong> — sans obstacles administratifs, sans conditions cachées, sans mauvaise foi<br>✅ <strong>Les témoignages sont authentiques</strong> — pas inventés, pas manipulés, pas pris hors contexte<br>✅ <strong>Les bonus ont une valeur réelle</strong> — pas des PDF de 3 pages présentés comme des « guides complets à 97€ »<br>✅ <strong>Le prix d'ancrage reflète une vraie valeur</strong> — pas un prix gonflé artificiellement pour faire paraître ta remise plus grande<br><br>Ces limites ne restreignent pas la puissance de ton offre. Elles la renforcent — parce qu'elles construisent une réputation durable."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Dans des marchés où la méfiance est forte et où le bouche-à-oreille est roi, une offre honnête qui tient ses promesses est le meilleur investissement marketing possible. Chaque client satisfait est un ambassadeur. Chaque client déçu est une crise."
+        }
+      ]
+    },
+
+    {
+      "titre": "Adapter son offre aux réalités économiques africaines",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Construire une offre irrésistible pour nos marchés, c'est aussi tenir compte des réalités économiques locales :<br><br>💳 <strong>Facilités de paiement sans frais ni riba</strong> → un paiement en 2 ou 3 fois sans intérêt peut multiplier par 2 ou 3 tes conversions, surtout sur des offres au-delà de 30 000 FCFA / 300 DH<br>📱 <strong>Modes de paiement adaptés</strong> → Orange Money, Wave, MTN Money, M-Pesa, CIH Pay — ne pas les proposer, c'est perdre une part significative de clients potentiels<br>🎁 <strong>Offre d'entrée accessible</strong> → une version allégée ou un premier module gratuit permet à des clients au pouvoir d'achat limité d'entrer dans ton écosystème et de monter en gamme progressivement<br>🤝 <strong>Offre groupe pour incubateurs</strong> → tarif collectif pour des structures qui forment plusieurs personnes en même temps"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Rokia, formatrice en gestion financière à Bamako :</strong><br><br>Son programme à 75 000 FCFA peinait à se vendre malgré des retours très positifs de ses clients existants.<br><br>Elle a restructuré son offre en 3 niveaux :<br>→ 🥉 Niveau Starter : accès aux 3 premiers modules + templates — 20 000 FCFA<br>→ 🥈 Niveau Complet : programme entier — 60 000 FCFA (paiement en 2 fois sans frais)<br>→ 🥇 Niveau Premium : programme + 2 sessions individuelles + suivi 3 mois — 95 000 FCFA<br><br>Résultat : 60 % de ses nouveaux clients entrent par le Niveau Starter, dont 40 % passent au Niveau Complet dans les 2 mois suivants. Son chiffre d'affaires mensuel a augmenté de 70 %."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas complète — construire une offre de zéro",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Situation de départ :</strong> Mehdi, graphiste freelance à Fès, facturai ses clients 200 DH par logo. Il travaillait beaucoup pour peu. Ses prospects négociaient systématiquement ses prix.<br><br><strong>Étape 1 — Repositionnement :</strong> Au lieu de vendre « des logos », Mehdi a défini son territoire : <em>« Je crée l'identité visuelle des TPE marocaines qui veulent être prises au sérieux en ligne. »</em><br><br><strong>Étape 2 — Construction de l'offre :</strong><br>→ 🎯 Résultat : une identité visuelle complète et professionnelle en 5 jours<br>→ 📦 Contenu : logo (3 variations) + charte graphique + kit réseaux sociaux + 10 templates Canva<br>→ 🛡️ Garantie : révisions illimitées jusqu'à satisfaction<br>→ 💰 Prix : 1 500 DH (ancrage : valeur totale si commandé séparément = 3 200 DH)<br><br><strong>Étape 3 — Test :</strong> il a envoyé l'offre à 8 anciens clients. 3 ont demandé à recommander avec ce format.<br><br><strong>Résultat :</strong> en 3 mois, Mehdi gagne autant en 2 clients qu'avant avec 10. Il a arrêté de négocier ses prix."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Mehdi n'a pas changé de compétence. Il a changé la façon d'emballer, de présenter et de tarifer son expertise. C'est exactement ça, créer une offre irrésistible : mettre en valeur ce qui existe déjà avec clarté, structure et confiance."
+        }
+      ]
+    },
+
+    {
+      "titre": "Bilan du Bloc 1 — Marketing psychologique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu viens de terminer le premier bloc de la Phase Intermédiaire. Voici ce que tu maîtrises maintenant :<br><br>✅ <strong>M31</strong> — Les 4 leviers d'achat et comment les activer éthiquement<br>✅ <strong>M32</strong> — Les 5 freins universels et la méthode CREUSER pour les lever<br>✅ <strong>M33</strong> — Le storytelling en 5 actes et le copywriting émotionnel<br>✅ <strong>M34</strong> — Lire son audience avec les personas, la carte d'empathie et les JTBD<br>✅ <strong>M35</strong> — Construire une offre irrésistible et honnête<br><br>Ces 5 modules forment un système complet : tu sais maintenant qui est ton client, ce qui l'anime, ce qui le freine, comment lui parler et comment lui proposer une offre qu'il aurait du mal à refuser.<br><br>La prochaine étape : le <strong>Bloc 2 — Mindset du dirigeant</strong>. Tu vas passer de la maîtrise du marketing à la maîtrise de toi-même en tant que chef d'entreprise."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "L'outil le plus puissant que tu aies à ta disposition, ce n'est pas ton budget, ton réseau ou ta plateforme. C'est ta capacité à comprendre profondément ce que vivent les gens que tu veux servir — et à créer, pour eux, quelque chose qui répond exactement à ça."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les références utilisées dans ce module :<br><br>📖 <strong>Hormozi, A. (2021).</strong> <em>$100M Offers : How to Make Offers So Good People Feel Stupid Saying No.</em> Acquisition.com — l'équation de valeur et la construction d'offres premium<br>📖 <strong>Ries, A. & Trout, J. (1981).</strong> <em>Positioning : The Battle for Your Mind.</em> McGraw-Hill — fondements du positionnement marketing<br>📖 <strong>Kotler, P. & Keller, K. (2022).</strong> <em>Marketing Management</em> (16e éd.). Pearson — proposition de valeur et segmentation<br>📖 <strong>Osterwalder, A. et al. (2014).</strong> <em>Value Proposition Design.</em> Wiley — le canevas de proposition de valeur<br>📖 <strong>GSMA Intelligence (2024).</strong> <em>Mobile Money in Sub-Saharan Africa</em> — données sur les paiements mobiles et l'accessibilité financière<br>📖 <strong>Cialdini, R. B. (2001).</strong> <em>Influence : The Psychology of Persuasion.</em> HarperCollins — ancrage de prix et réciprocité"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une offre n'est jamais définitive. Elle évolue avec ton marché, tes clients et ton niveau d'expertise. Revois et améliore ton offre tous les 3 à 6 mois — en intégrant les retours de tes clients et les données de tes conversions."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Selon l'équation de valeur d'Alex Hormozi, comment augmenter la valeur perçue de ton offre sans changer le prix ?",
+      "options": [
+        "En ajoutant plus de modules et de contenu pour augmenter le volume de l'offre",
+        "En augmentant le résultat désiré et la probabilité de succès, tout en réduisant le délai et l'effort demandé",
+        "En baissant le prix pour le rendre plus accessible à une audience plus large",
+        "En changeant le design visuel de l'offre et en améliorant la page de vente"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Quelle est la structure recommandée pour formuler une proposition de valeur unique efficace ?",
+      "options": [
+        "Notre entreprise propose des solutions innovantes pour tous les professionnels ambitieux",
+        "J'aide [qui] à [résultat désiré] grâce à [méthode différenciante] — même si [obstacle perçu]",
+        "Découvrez notre formation complète avec tous les outils nécessaires pour réussir",
+        "Le meilleur rapport qualité-prix du marché pour les entrepreneurs sérieux"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans la technique d'ancrage de prix, quel est l'objectif de présenter la 'valeur totale' avant le prix réel ?",
+      "options": [
+        "Tromper le client en lui faisant croire qu'il réalise une économie fictive",
+        "Rendre le prix réel attractif par comparaison avec la valeur combinée des éléments reçus",
+        "Justifier un prix élevé qui n'est pas adapté au marché local",
+        "Allonger la page de vente pour lui donner plus de crédibilité"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Qu'est-ce qui constitue la vraie validation d'une offre selon le Minimum Viable Offer ?",
+      "options": [
+        "Recevoir des commentaires positifs du type 'c'est bien' ou 'intéressant'",
+        "Atteindre 1 000 abonnés avant de lancer l'offre",
+        "Que quelqu'un demande comment acheter ou verse un acompte",
+        "Que l'offre soit approuvée par un mentor ou un expert du domaine"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Dans l'étude de cas de Rokia (Bamako), quelle stratégie a le plus contribué à l'augmentation de 70 % de son chiffre d'affaires ?",
+      "options": [
+        "Elle a doublé son budget publicitaire sur Facebook et Instagram",
+        "Elle a baissé le prix de son programme principal pour le rendre accessible à tous",
+        "Elle a structuré son offre en 3 niveaux permettant une entrée accessible et une montée en gamme progressive",
+        "Elle a créé une toute nouvelle formation sur un sujet différent plus demandé"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
