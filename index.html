@@ -1323,62 +1323,63 @@ async function generateIdeesPDF() {
     'Diaspora':          [[20,184,166],[240,253,250]],
   };
 
-  const colW = (W - 2*margin - 8) / 2;
-  const cardH = 30;
-  const perPage = 10; // 5 lignes × 2 colonnes
-  const pages = Math.ceil(IDEES.length / perPage);
+const colW = (W - 2*margin - 8) / 2;
+const cardH = 30;
+const perPage = 10; // 5 lignes × 2 colonnes
+const pages = Math.ceil(IDEES.length / perPage);
 
-  for (let p = 0; p < pages; p++) {
-    doc.addPage();
+for (let p = 0; p < pages; p++) {
+  doc.addPage();
+  // Header
+  doc.setFillColor(...dark);
+  doc.rect(0, 0, W, 18, 'F');
+  doc.setFillColor(...purple);
+  doc.rect(0, 0, 6, 18, 'F');
+  doc.addImage(LOGO_WNY, 'PNG', 8, 2, 12, 12);
+  doc.setFont('helvetica','bold');
+  doc.setFontSize(9);
+  doc.setTextColor(...white);
+  doc.text("L'Accelerateur Digital · 40 Idees Rentables", 23, 11);
+  doc.setTextColor(...accent);
+  doc.setFontSize(8);
+  doc.text('Page ' + (p+2), W-margin, 11, {align:'right'});
 
-    // Header
-    doc.setFillColor(...dark);
-    doc.rect(0, 0, W, 18, 'F');
-    doc.setFillColor(...purple);
-    doc.rect(0, 0, 6, 18, 'F');
-    doc.addImage(LOGO_WNY, 'PNG', 8, 2, 12, 12);
+  const slice = IDEES.slice(p * perPage, (p+1) * perPage);
+  slice.forEach((idee, idx) => {
+    const col = idx % 2;
+    const row = Math.floor(idx / 2);
+    const x = margin + col * (colW + 8);
+    const y = 24 + row * (cardH + 4);
+    const [borderCol, bgCol] = CAT_COLORS[idee.cat] || [[124,58,237],[245,243,255]];
+
+    // Card bg
+    doc.setFillColor(...bgCol);
+    doc.roundedRect(x, y, colW, cardH, 3, 3, 'F');
+    // Accent left
+    doc.setFillColor(...borderCol);
+    doc.roundedRect(x, y, 3.5, cardH, 1.5, 1.5, 'F');
+
+    // Numéro + catégorie
     doc.setFont('helvetica','bold');
-    doc.setFontSize(9);
-    doc.setTextColor(...white);
-    doc.text("L'Accélérateur Digital · 40 Idées Rentables", 23, 11);
-    doc.setTextColor(...accent);
     doc.setFontSize(8);
-    doc.text(`Page \${p+2}`, W-margin, 11, {align:'right'});
+    doc.setTextColor(...borderCol);
+    doc.text('N°' + idee.num, x+7, y+7);
+    doc.setFontSize(7);
+    doc.text(idee.cat, x + colW - 4, y+7, {align:'right'});
 
-    const slice = IDEES.slice(p * perPage, (p+1) * perPage);
-    slice.forEach((idee, idx) => {
-      const col = idx % 2;
-      const row = Math.floor(idx / 2);
-      const x = margin + col * (colW + 8);
-      const y = 24 + row * (cardH + 4);
-      const [borderCol, bgCol] = CAT_COLORS[idee.cat] || [[124,58,237],[245,243,255]];
+    // Titre (sans emoji)
+    doc.setFontSize(9.5);
+    doc.setTextColor(30, 27, 75);
+    const titleLines = doc.splitTextToSize(idee.title, colW-14);
+    doc.text(titleLines, x+7, y+14);
 
-      // Card bg
-      doc.setFillColor(...bgCol);
-      doc.roundedRect(x, y, colW, cardH, 3, 3, 'F');
-      // Accent left
-      doc.setFillColor(...borderCol);
-      doc.roundedRect(x, y, 3.5, cardH, 1.5, 1.5, 'F');
-
-      // Numéro
-      doc.setFont('helvetica','bold');
-      doc.setFontSize(8);
-      doc.setTextColor(...borderCol);
-      doc.text(`N°\${idee.num}`, x+7, y+7);
-
-      // Icône + titre
-      doc.setFontSize(9.5);
-      doc.setTextColor(30, 27, 75);
-      const titleLines = doc.splitTextToSize(`\${idee.icon} \${idee.title}`, colW-14);
-      doc.text(titleLines, x+7, y+14);
-
-      // Description
-      doc.setFont('helvetica','normal');
-      doc.setFontSize(7.5);
-      doc.setTextColor(...muted);
-      const descLines = doc.splitTextToSize(idee.desc, colW-14);
-      doc.text(descLines, x+7, y+14 + titleLines.length*5.5);
-    });
+    // Description
+    doc.setFont('helvetica','normal');
+    doc.setFontSize(7.5);
+    doc.setTextColor(...muted);
+    const descLines = doc.splitTextToSize(idee.desc, colW-14);
+    doc.text(descLines, x+7, y+14 + titleLines.length*5.5);
+  });
 
     // Footer
     doc.setFillColor(245, 243, 255);
