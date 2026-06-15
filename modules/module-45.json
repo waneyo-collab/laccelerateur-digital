@@ -1,0 +1,84 @@
+{
+  "id": 45,
+  "titre": "Lire ses chiffres : trésorerie, marges et seuil de rentabilité",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Beaucoup d'entrepreneurs ont du mal à répondre simplement à 'est-ce que ton activité est rentable ?' Ce n'est pas un manque d'intelligence — c'est un manque d'outils. Ce module t'apprend à lire les chiffres essentiels de ton activité, à comprendre d'où vient l'argent, où il va, et à quoi ressemble un business vraiment sain.",
+  "sections": [
+    {
+      "titre": "Pourquoi ne pas comprendre ses chiffres est dangereux",
+      "blocs": [
+        {"type": "texte", "contenu": "Des entreprises profitables ferment. Des entrepreneurs qui font de bonnes ventes ne peuvent pas se payer. Des TPE qui croissent rapidement se retrouvent en crise de trésorerie.<br><br>Ces situations ont toutes la même cause : le dirigeant ne comprend pas ses chiffres.<br><br>Sans lecture claire de ses indicateurs :<br>→ Tu ne sais pas si tu gagnes ou perds réellement de l'argent<br>→ Tu prends des décisions d'investissement basées sur l'impression, pas la réalité<br>→ Tu ne peux pas anticiper les tensions de trésorerie<br>→ Tu ne sais pas quand recruter, investir ou freiner<br>→ Tu es incapable de répondre aux questions d'un incubateur sur ta santé financière<br><br>Warren Buffett dit : <em>« La comptabilité est le langage des affaires. »</em> Tu n'as pas besoin de parler parfaitement cette langue — mais tu dois en comprendre les mots essentiels."},
+        {"type": "point_cle", "contenu": "Lire ses chiffres n'est pas une compétence réservée aux comptables. C'est une compétence de dirigeant. Comme un pilote qui ne lit pas ses instruments de bord, un entrepreneur qui ne lit pas ses chiffres navigue à l'aveugle."}
+      ]
+    },
+    {
+      "titre": "Les 3 confusions les plus courantes",
+      "blocs": [
+        {"type": "texte", "contenu": "Clarifions les 3 notions les plus souvent confondues :<br><br>💼 <strong>Le Chiffre d'Affaires (CA)</strong> → la somme totale de ce que tu as facturé. C'est la valeur vendue — pas ce que tu as gagné.<br><br>📊 <strong>Le Bénéfice (résultat net)</strong> → ce qui reste après avoir déduit TOUTES les charges du CA. Un CA élevé avec des charges élevées peut donner un bénéfice nul.<br><br>💧 <strong>La Trésorerie</strong> → l'argent disponible sur ton compte à un instant T. Différente du bénéfice car elle tient compte des délais de paiement.<br><br>🔴 <strong>L'erreur fatale :</strong> confondre CA et bénéfice. <em>« J'ai fait 5 millions ce mois »</em> ne dit rien sur la rentabilité."},
+        {"type": "exemple", "contenu": "<strong>Houda, traiteure à Meknès :</strong><br><br>CA de décembre : 28 000 DH. Elle se sent riche. En janvier, il lui reste 1 200 DH.<br><br>Le calcul oublié :<br>→ Ingrédients : 9 800 DH · Aide : 2 500 DH · Transport : 1 200 DH · Loyer : 3 500 DH · Divers : 1 800 DH<br>→ Total charges : 18 800 DH<br><br>Bénéfice réel : 9 200 DH — pas 28 000 DH. Et elle en avait déjà dépensé 8 000 DH personnellement."}
+      ]
+    },
+    {
+      "titre": "Comprendre sa marge : la boussole de la rentabilité",
+      "blocs": [
+        {"type": "texte", "contenu": "La <strong>marge</strong> est le pourcentage de chaque vente qui reste après soustraction des coûts directs.<br><br>📊 <strong>Marge brute</strong> = (CA − Coûts variables) ÷ CA × 100<br>Exemple : formation à 50 000 FCFA, coût de production 8 000 FCFA → marge brute = 84 %<br><br>📉 <strong>Marge nette</strong> = (CA − Toutes les charges) ÷ CA × 100<br>Mesure ce que tu gardes vraiment après tout.<br><br>La marge nette saine pour une TPE de services : entre 15 et 35 %."},
+        {"type": "point_cle", "contenu": "Connaître ta marge brute par offre révèle laquelle est la plus rentable — pas la plus vendue. Une offre très vendue avec une faible marge peut te coûter plus qu'elle ne te rapporte."}
+      ]
+    },
+    {
+      "titre": "Le seuil de rentabilité : à partir de quand tu gagnes de l'argent",
+      "blocs": [
+        {"type": "texte", "contenu": "Le <strong>seuil de rentabilité</strong> est le niveau de CA à partir duquel ton activité couvre toutes ses charges et génère un bénéfice réel.<br><br>Formule : Seuil de rentabilité = Charges fixes ÷ Taux de marge brute<br><br><strong>Exemple :</strong><br>→ Charges fixes : 350 000 FCFA/mois<br>→ Marge brute : 65 %<br>→ Seuil : 350 000 ÷ 0,65 = <strong>538 462 FCFA</strong>/mois<br><br>En dessous : tu perds de l'argent. Au-dessus : chaque franc supplémentaire génère 65 centimes de bénéfice."},
+        {"type": "exemple", "contenu": "<strong>Simplice, consultant à Yaoundé :</strong><br><br>Charges fixes : 450 000 FCFA. Prix moyen : 150 000 FCFA. Marge brute : 70 %.<br>Seuil : 450 000 ÷ 0,70 = 642 857 FCFA → <strong>5 prestations minimum/mois</strong>.<br><br>Avant ce calcul, il pensait que « 4 ou 5 clients, c'était bien ». Maintenant il sait : 4 clients = perte, 5 = équilibre, 6 = bénéfice. Il a ajusté son objectif commercial."}
+      ]
+    },
+    {
+      "titre": "La trésorerie : l'oxygène de l'entreprise",
+      "blocs": [
+        {"type": "texte", "contenu": "Tu peux avoir une activité rentable sur le papier et mourir d'un manque de trésorerie. C'est l'une des causes les plus fréquentes de faillite de TPE.<br><br>Comment ça arrive :<br>→ Tu as facturé 2 millions FCFA en octobre<br>→ Tes clients ont 60 jours de délai de paiement<br>→ Tes fournisseurs veulent être payés maintenant<br>→ En novembre, tu as zéro cash — même avec 2 millions en attente<br><br>Les 4 règles :<br>🏦 Toujours connaître son solde disponible (pas le CA facturé)<br>📅 Anticiper entrées et sorties sur 3 à 6 mois<br>⚡ Raccourcir les délais d'encaissement (acomptes, paiement à la livraison)<br>🛡️ Maintenir 2 à 3 mois de charges fixes disponibles en permanence"},
+        {"type": "attention", "contenu": "Un client qui paie en retard est un problème de trésorerie. Pour éviter ça : conditions de paiement claires dès le devis, acompte systématique, relance bienveillante mais ferme dès le premier jour de retard — jamais 3 semaines après."}
+      ]
+    },
+    {
+      "titre": "Construire son tableau de bord financier simple",
+      "blocs": [
+        {"type": "texte", "contenu": "Pour une TPE, 6 indicateurs suffisent — mis à jour mensuellement :<br><br>📊 CA mensuel facturé<br>💵 Encaissements réels du mois<br>💸 Charges totales du mois<br>📈 Marge nette (encaissements − charges)<br>🏦 Trésorerie disponible aujourd'hui<br>🎯 Taux d'atteinte de l'objectif mensuel<br><br>Format : Google Sheets avec une ligne par mois. Mis à jour le 1er de chaque mois en 20 minutes."},
+        {"type": "exemple", "contenu": "<strong>Tableau octobre — Simplice :</strong><br><br>CA facturé : 900 000 FCFA · Encaissements : 600 000 · Charges : 480 000<br>Marge nette : 120 000 · Trésorerie : 340 000 · Objectif : 750 000 → 120 % ✅<br><br>En un coup d'œil : bon mois, 2 factures en attente à relancer. Il sait quoi faire lundi matin."}
+      ]
+    },
+    {
+      "titre": "Les signaux d'alerte financiers à surveiller",
+      "blocs": [
+        {"type": "texte", "contenu": "Ces signaux doivent déclencher une réaction immédiate :"},
+        {"type": "attention", "contenu": "🚨 Trésorerie qui baisse 3 mois de suite → fuite quelque part<br>🚨 Charges fixes dépassant 70 % du CA → aucun coussin pour absorber un mois difficile<br>🚨 Un seul client représentant plus de 40 % du CA → dépendance dangereuse<br>🚨 Tu ne te paies pas depuis 2 mois → l'activité n'est pas viable telle quelle<br>🚨 Délais de paiement clients qui s'allongent → erosion silencieuse de la trésorerie"}
+      ]
+    },
+    {
+      "titre": "Prendre des décisions grâce aux chiffres",
+      "blocs": [
+        {"type": "texte", "contenu": "Les chiffres servent à prendre de meilleures décisions :<br><br>🤔 <strong>Embaucher ?</strong> → Mon CA couvre-t-il charges actuelles + coût total du recrutement sur 6 mois si les ventes stagnent ?<br><br>🤔 <strong>Investir dans un équipement ?</strong> → En combien de mois cet équipement se rentabilise-t-il ? Moins de 12 mois : oui. Plus de 24 mois : prudence.<br><br>🤔 <strong>Baisser mes prix ?</strong> → Si je baisse de 20 %, combien de ventes supplémentaires dois-je faire pour maintenir la même marge nette ?<br><br>🤔 <strong>Mon activité est-elle viable ?</strong> → Mon CA couvre-t-il mon seuil de rentabilité depuis 3 mois consécutifs ?"},
+        {"type": "exemple", "contenu": "<strong>Rania, école de langues à Sfax :</strong><br><br>Projet : ouvrir une 2e salle. Coût : 18 000 TND + 800 TND/mois.<br>Calcul : 60 élèves × 120 TND = 7 200 TND CA potentiel. Marge brute 65 % = 4 680 TND. Moins 800 TND charges = 3 880 TND/mois.<br>Retour sur investissement : 18 000 ÷ 3 880 = <strong>4,6 mois</strong>.<br><br>Décision : ouvrir. La salle a été rentabilisée en 5 mois."}
+      ]
+    },
+    {
+      "titre": "Bilan de la Phase Intermédiaire — 15 modules pour passer au niveau supérieur",
+      "blocs": [
+        {"type": "texte", "contenu": "Tu viens de terminer la Phase Intermédiaire. Voici ce que tu maîtrises maintenant :<br><br><strong>Bloc 1 — Marketing psychologique</strong><br>✅ M31 · Les leviers d'achat<br>✅ M32 · Les freins à l'achat<br>✅ M33 · Storytelling & copywriting<br>✅ M34 · Lire son audience<br>✅ M35 · Créer une offre irrésistible<br><br><strong>Bloc 2 — Mindset du dirigeant</strong><br>✅ M36 · Freelance → chef d'entreprise<br>✅ M37 · L'art de pitcher<br>✅ M38 · Leadership éthique<br>✅ M39 · Gérer la pression et les doutes<br>✅ M40 · Déléguer sans perdre le contrôle<br><br><strong>Bloc 3 — Structuration & finances</strong><br>✅ M41 · Du statut freelance à la TPE/PME<br>✅ M42 · Présence en ligne avancée<br>✅ M43 · Finance sans crédit<br>✅ M44 · Dossier partenaire / incubateur<br>✅ M45 · Lire ses chiffres"},
+        {"type": "point_cle", "contenu": "Tu as maintenant les outils pour penser comme un dirigeant, communiquer comme un professionnel, structurer ton activité et la piloter avec méthode. La prochaine étape : le Niveau Expert (M46-M48) — pour ceux qui veulent aller encore plus loin."}
+      ]
+    },
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {"type": "texte", "contenu": "📖 <strong>Vernimmen, P. et al. (2022).</strong> <em>Finance d'entreprise.</em> Dalloz — référence francophone sur l'analyse financière<br>📖 <strong>Harvard Business Review (2023).</strong> <em>HBR Guide to Finance Basics for Managers</em><br>📖 <strong>Kiyosaki, R. T. (1997).</strong> <em>Rich Dad Poor Dad.</em> Warner Books — culture financière entrepreneuriale<br>📖 <strong>Banque de France (2023).</strong> <em>Ratios financiers des TPE-PME par secteur</em><br>📖 <strong>OHADA (2017).</strong> <em>Acte uniforme portant organisation des comptabilités des entreprises</em><br>📖 <strong>Brealey, R. A. et al. (2023).</strong> <em>Principles of Corporate Finance.</em> McGraw-Hill"},
+        {"type": "point_cle", "contenu": "Un entrepreneur qui lit ses chiffres chaque mois prend de meilleures décisions que celui qui les regarde une fois par an. Commence aujourd'hui. Reviens chaque mois. Et observe ton activité se transformer."}
+      ]
+    },
+    {"type": "quiz", "titre": "Quiz — question 1 sur 5", "question": "Quelle est la différence fondamentale entre le chiffre d'affaires et la trésorerie ?", "options": ["Le chiffre d'affaires inclut les taxes, la trésorerie les exclut", "Le CA est ce qui a été facturé, la trésorerie est l'argent réellement disponible — différent à cause des délais de paiement", "La trésorerie représente les bénéfices cumulés depuis la création", "Le CA et la trésorerie sont identiques dans une entreprise sans dettes"], "reponse": 1},
+    {"type": "quiz", "titre": "Quiz — question 2 sur 5", "question": "Comment calcule-t-on le seuil de rentabilité mensuel ?", "options": ["Charges fixes × taux de marge brute", "Chiffre d'affaires − charges variables", "Charges fixes ÷ taux de marge brute", "Bénéfice net ÷ nombre de clients actifs"], "reponse": 2},
+    {"type": "quiz", "titre": "Quiz — question 3 sur 5", "question": "Que révèle le tableau de bord d'octobre de Simplice (Yaoundé) ?", "options": ["Que son activité est déficitaire car ses encaissements sont inférieurs à ses charges", "Qu'il a dépassé son objectif mensuel mais que 2 factures restent à encaisser — il sait quoi faire lundi", "Que sa trésorerie est insuffisante et qu'il doit réduire ses charges immédiatement", "Que son CA de 900 000 FCFA représente son bénéfice réel du mois"], "reponse": 1},
+    {"type": "quiz", "titre": "Quiz — question 4 sur 5", "question": "Lequel de ces signaux d'alerte est le plus immédiatement dangereux pour une TPE ?", "options": ["Un taux de marge brute inférieur à 80 % sur les formations", "Un seul client représentant plus de 40 % du chiffre d'affaires", "Des charges fixes représentant 50 % du CA mensuel", "Un délai moyen de paiement client de 30 jours"], "reponse": 1},
+    {"type": "quiz", "titre": "Quiz — question 5 sur 5", "question": "Dans l'analyse de Rania (Sfax), quel a été le critère décisif pour valider l'ouverture d'une seconde salle ?", "options": ["La demande de ses élèves actuels qui justifiait l'extension", "L'avis favorable de son comptable sur la solidité de son école", "Le retour sur investissement calculé à 4,6 mois — jugé suffisamment court", "La disponibilité d'une subvention tunisienne pour les organismes de formation"], "reponse": 2}
+  ]
+}
