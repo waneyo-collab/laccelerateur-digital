@@ -1625,8 +1625,6 @@ function renderParcours(expandId) {
   </div>
 </div>`;
 
-const c = document.getElementById('parcours-list');
-
 const niveauHeader = (phase) => {
   if (phase === 1) return `<div style="display:flex;align-items:center;gap:10px;margin:8px 0 10px"><div style="flex:1;height:1px;background:var(--border)"></div><span style="font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--muted);white-space:nowrap;padding:0 10px">🌱 NIVEAU DÉBUTANT — Phases 1 · 2 · 3</span><div style="flex:1;height:1px;background:var(--border)"></div></div>`;
   if (phase === 4) return `<div style="display:flex;align-items:center;gap:10px;margin:20px 0 10px"><div style="flex:1;height:1px;background:var(--border)"></div><span style="font-size:11px;font-weight:700;letter-spacing:.08em;color:var(--muted);white-space:nowrap;padding:0 10px">📈 NIVEAU INTERMÉDIAIRE — Phases 4 · 5 · 6</span><div style="flex:1;height:1px;background:var(--border)"></div></div>`;
