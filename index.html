@@ -1624,7 +1624,7 @@ function renderResources() {
   const c = document.getElementById('resources-list');
   if (c.innerHTML) return;
   c.innerHTML = `
-    <div class="card" style="padding:0;overflow:hidden">
+    <div class="card" style="padding:0;overflow:hidden;max-width:600px">
       ${RESOURCES.map((r, i) => `
         <div style="
           display:flex;
