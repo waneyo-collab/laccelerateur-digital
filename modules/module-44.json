@@ -1,0 +1,244 @@
+{
+  "id": 44,
+  "titre": "Préparer son dossier partenaire / incubateur",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Un bon projet sans bon dossier reste invisible. Les incubateurs, partenaires institutionnels et programmes de financement reçoivent des centaines de candidatures — et en sélectionnent 3 à 8 %. Ce module te donne la structure, les outils et les réflexes qui font passer un dossier du lot des refus à celui des sélectionnés.",
+
+  "sections": [
+
+    {
+      "titre": "Ce que les comités de sélection cherchent vraiment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant de construire ton dossier, il est essentiel de comprendre la logique de ceux qui vont le lire. Un comité de sélection d'incubateur ou de partenaire institutionnel évalue généralement en moins de 10 minutes par dossier.<br><br>Ce qu'ils cherchent dans cet ordre :<br><br>👤 <strong>1 — Le porteur</strong> → qui est cette personne ? A-t-elle l'ancrage, la légitimité et la capacité à exécuter ce projet ?<br>🎯 <strong>2 — La clarté du problème résolu</strong> → est-ce que le problème est réel, documenté et suffisamment douloureux pour que quelqu'un paie pour le résoudre ?<br>📊 <strong>3 — La preuve que ça fonctionne</strong> → y a-t-il des signes de traction — même modestes ? Des clients, des tests, des chiffres, des témoignages ?<br>💰 <strong>4 — Un modèle économique crédible</strong> → est-ce que cette activité peut devenir rentable sans être subventionnée indéfiniment ?<br>🌍 <strong>5 — L'impact</strong> → quel changement positif ce projet crée-t-il dans son écosystème local ?"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un dossier de candidature n'est pas un rapport scolaire. C'est un argument de vente. Chaque section doit répondre à une question que le comité se pose — et le convaincre de passer à la section suivante plutôt que de passer au dossier suivant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 7 composantes d'un dossier solide",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Quel que soit le programme visé, un dossier complet comprend ces 7 éléments. Leur présentation varie selon le format demandé — mais leur contenu reste constant.<br><br>📄 <strong>1 — Le résumé exécutif</strong> → 1 page. La synthèse complète du projet. Le seul document que certains membres du comité liront entièrement.<br>🎯 <strong>2 — Le problème et le marché</strong> → le problème que tu résous, qui en souffre, combien ils sont, combien ils sont prêts à payer.<br>💡 <strong>3 — Ta solution</strong> → ce que tu proposes, en quoi c'est différent, pourquoi maintenant.<br>💰 <strong>4 — Le modèle économique</strong> → comment tu gagnes de l'argent, tes canaux, tes coûts, ta marge.<br>📈 <strong>5 — La traction</strong> → ce qui prouve que ça fonctionne : chiffres, clients, tests, témoignages.<br>👥 <strong>6 — L'équipe</strong> → qui êtes-vous, pourquoi vous, qu'est-ce qui vous légitime sur ce sujet.<br>🗓️ <strong>7 — Le plan d'action et les besoins</strong> → ce que vous allez faire dans les 6 à 12 prochains mois et ce que vous demandez concrètement."
+        },
+        {
+          "type": "attention",
+          "contenu": "Respecte scrupuleusement le format demandé par chaque programme. Si le formulaire demande 300 mots par section, n'en écris pas 600 — même si tu as beaucoup à dire. Dépasser les limites indiquées est perçu comme un manque de discipline et de respect des règles. C'est éliminatoire dans de nombreux comités."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le résumé exécutif : l'élément le plus décisif",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le résumé exécutif (Executive Summary) est la première chose que lit un comité — et souvent la seule s'il ne donne pas envie de continuer. Il doit tenir sur une page et répondre en quelques paragraphes à toutes les questions essentielles.<br><br>La structure en 6 paragraphes courts :<br><br>🔥 <strong>Le problème (2-3 phrases)</strong> → nomme le problème précisément. Donne un chiffre ou une réalité concrète qui le rend tangible.<br>💡 <strong>Ta solution (2-3 phrases)</strong> → décris ce que tu proposes en termes de bénéfice client — pas de fonctionnalités.<br>🌍 <strong>Le marché (2 phrases)</strong> → qui sont tes clients, combien ils sont, et quelle part tu vises.<br>💰 <strong>Le modèle économique (2 phrases)</strong> → comment tu fais de l'argent, quel est ton prix moyen, ta marge.<br>📊 <strong>La traction (2-3 phrases)</strong> → tes chiffres clés, tes premiers clients, tes résultats de test.<br>🤝 <strong>Ce que tu demandes (1-2 phrases)</strong> → quel accompagnement, quels fonds, quels partenariats tu recherches — et pour en faire quoi précisément."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Exemple de résumé exécutif (version condensée) :</strong><br><br><em>« En Afrique francophone, 2,3 millions de petits commerçants n'ont aucune présence numérique et perdent 35 % de leur clientèle potentielle face aux grandes surfaces connectées (GSMA, 2024).<br><br>MarketLink les aide à créer leur vitrine en ligne en 20 minutes via WhatsApp, sans savoir coder ni disposer d'un ordinateur.<br><br>Notre marché cible : 400 000 commerçants au Sénégal, Côte d'Ivoire et Cameroun. Modèle : abonnement mensuel à 5 000 FCFA avec une marge de 70 %.<br><br>En 6 mois d'activité : 340 commerçants actifs, 78 % de taux de rétention, 4 200 000 FCFA de revenus cumulés.<br><br>Nous candidatons à l'accélérateur pour structurer notre expansion dans 3 nouveaux pays en 18 mois grâce à l'accompagnement commercial et réseau de votre programme. »</em>"
+        }
+      ]
+    },
+
+    {
+      "titre": "Analyser et présenter son marché sans être économiste",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'analyse de marché est l'élément que la plupart des candidats traitent de façon trop vague (<em>« le marché est immense »</em>) ou trop technique (tableaux complexes sans lien avec la réalité de leur activité).<br><br>Ce que les comités veulent voir :<br><br>📊 <strong>Le marché total adressable (TAM)</strong> → combien de personnes ont le problème que tu résous dans ta zone géographique ?<br>🎯 <strong>Le marché que tu cibles réellement (SAM)</strong> → sur ces personnes, lesquelles correspondent exactement à ton profil client ?<br>💰 <strong>Ta part réaliste à 3 ans (SOM)</strong> → sur le SAM, quel pourcentage tu penses atteindre — de façon crédible, pas optimiste ?<br><br>Exemple :<br>→ TAM : 1,2 million de PME en Afrique de l'Ouest cherchant à se digitaliser<br>→ SAM : 85 000 PME du secteur commerce/services, ayant un smartphone, au Sénégal et en Côte d'Ivoire<br>→ SOM : 2 500 clients actifs en 3 ans (3 % du SAM — crédible et défendable)"
+        },
+        {
+          "type": "texte",
+          "contenu": "Pour trouver les données de marché sans étude coûteuse, utilise ces sources gratuites :<br><br>📊 <strong>GSMA Intelligence</strong> → données mobile et digital en Afrique<br>🏛️ <strong>Instituts nationaux de statistiques</strong> → INS Sénégal, HCP Maroc, INS Côte d'Ivoire, INS Tunisie<br>🌍 <strong>Banque Mondiale / IFC</strong> → rapports sectoriels sur les économies africaines<br>📱 <strong>DataReportal</strong> → rapport annuel Digital Africa, gratuit<br>🔍 <strong>Google Trends</strong> → volume de recherche pour des termes liés à ton marché<br>💬 <strong>Enquêtes directes</strong> → 20 entretiens avec des clients potentiels valent plus que 10 pages de données secondaires"
+        }
+      ]
+    },
+
+    {
+      "titre": "Le Business Model Canvas simplifié",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>Business Model Canvas</strong> (BMC), créé par Alexander Osterwalder, est l'outil le plus utilisé dans les dossiers d'incubateur pour présenter son modèle économique en une page visuelle.<br><br>Il se compose de 9 blocs :<br><br>👥 <strong>Segments clients</strong> → pour qui crées-tu de la valeur ?<br>💎 <strong>Proposition de valeur</strong> → quel problème résous-tu, quel bénéfice apportes-tu ?<br>📢 <strong>Canaux</strong> → comment atteins-tu tes clients ?<br>🤝 <strong>Relations clients</strong> → comment maintiens-tu la relation ?<br>💰 <strong>Sources de revenus</strong> → comment gagnes-tu de l'argent ?<br>🔑 <strong>Ressources clés</strong> → quels actifs sont indispensables ?<br>⚙️ <strong>Activités clés</strong> → que dois-tu faire absolument bien ?<br>🤝 <strong>Partenaires clés</strong> → sur qui t'appuies-tu ?<br>📉 <strong>Structure de coûts</strong> → quels sont tes principaux coûts ?<br><br>Pour les dossiers, remplis le BMC avant de rédiger — il clarifie ta pensée et révèle les zones encore floues de ton modèle."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un BMC rempli en 30 minutes révèle souvent les contradictions ou les angles morts d'un modèle qu'un business plan de 30 pages n'aurait pas détectés. Si tu ne peux pas remplir un bloc, c'est que cette dimension de ton modèle n'est pas encore suffisamment pensée."
+        }
+      ]
+    },
+
+    {
+      "titre": "Présenter les projections financières sans être comptable",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les projections financières font peur à beaucoup de candidats. Pourtant, les comités ne cherchent pas une précision comptable — ils cherchent des hypothèses cohérentes et défendables.<br><br>Un tableau financier minimal sur 3 ans comprend :<br><br>📊 <strong>Le chiffre d'affaires prévisionnel</strong> → nombre de clients × prix moyen × fréquence d'achat. Détaille tes hypothèses.<br>📉 <strong>Les charges principales</strong> → salaires, loyer, marketing, outils. Ne les sous-estime pas pour faire paraître la rentabilité plus rapide.<br>📈 <strong>La marge brute</strong> → CA − coûts variables<br>💰 <strong>Le résultat net</strong> → marge brute − charges fixes<br>🏦 <strong>Le point d'équilibre</strong> → à quel niveau de CA tu couvres tous tes coûts (seuil de rentabilité)<br><br>Les 3 règles d'or des projections financières crédibles :<br>→ Explique chaque hypothèse (d'où vient le prix ? Pourquoi ce taux de croissance ?)<br>→ Présente un scénario central ET un scénario conservateur<br>→ Ne projette jamais une croissance qui nécessite tout se passer parfaitement"
+        },
+        {
+          "type": "attention",
+          "contenu": "Les projections trop optimistes sont le signe le plus fréquent d'un dossier immature aux yeux d'un comité expérimenté. Des prévisions de croissance de 300 % sur 12 mois sans justification détaillée ne convainquent personne — elles inquiètent. Sois ambitieux dans ta vision. Sois réaliste dans tes chiffres."
+        }
+      ]
+    },
+
+    {
+      "titre": "Présenter son équipe : l'argument le plus décisif",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La section équipe est souvent la plus courte des dossiers — et pourtant la plus lue par les comités expérimentés. Ils savent que le projet évoluera, que le marché changera — mais que l'équipe reste.<br><br>Ce qu'il faut montrer pour chaque membre :<br><br>🔑 <strong>La légitimité sur le problème</strong> → pourquoi cette personne est-elle la bonne pour résoudre ce problème ? A-t-elle vécu le problème ? A-t-elle une expertise sectorielle reconnue ?<br>💼 <strong>Les compétences complémentaires</strong> → une équipe où tout le monde a le même profil est une équipe à risque. Montre la complémentarité (technique + commercial + opérationnel).<br>⚡ <strong>Les réalisations passées</strong> → pas les diplômes — les actes. Ce que chaque personne a déjà construit, résolu, livré.<br>🤝 <strong>L'engagement</strong> → est-ce que les membres sont à plein temps ? Ont-ils renoncé à autre chose pour ce projet ? Le niveau d'engagement est un signal fort."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Imane, co-fondatrice d'une plateforme d'orientation scolaire à Casablanca :</strong><br><br>Son dossier initial présentait son équipe ainsi : <em>« Imane, MBA en marketing. Karim, ingénieur informatique. »</em><br><br>Reformulation après coaching :<br><em>« Imane a passé 8 ans conseillère d'orientation dans 3 lycées de Casablanca. Elle a vu 2 400 élèves faire des choix d'études inadaptés par manque d'information. Ce projet est né de cette frustration. Karim a développé la première version de la plateforme en 6 semaines et a géré 3 projets tech pour des clients B2B. Il rejoint le projet à plein temps depuis 4 mois, ayant quitté son poste. »</em><br><br>La seconde version montre la légitimité terrain d'Imane, la compétence prouvée de Karim et son niveau d'engagement. Elle a été sélectionnée. La première version ne donnait aucune de ces informations."
+        }
+      ]
+    },
+
+    {
+      "titre": "Documenter sa traction : les preuves qui convainquent",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La traction est la preuve que ton projet répond à un vrai besoin — et qu'il y a un marché. Elle peut prendre de nombreuses formes selon le stade de ton projet :<br><br>🌱 <strong>Très tôt (idée / prototype)</strong><br>→ Entretiens utilisateurs menés (nombre + citations marquantes)<br>→ Liste d'attente ou expressions d'intérêt collectées<br>→ Prototype ou MVP (produit minimum viable) testé<br><br>🌿 <strong>En développement (premiers tests)</strong><br>→ Premiers clients ou utilisateurs, même non payants<br>→ Taux d'utilisation, de retour, de satisfaction<br>→ Premiers revenus, même symboliques<br><br>🌳 <strong>En croissance</strong><br>→ Chiffre d'affaires et croissance mois sur mois<br>→ Taux de rétention clients<br>→ Partenariats signés ou lettres d'intention<br>→ Mentions presse ou prix reçus<br><br>La traction zéro n'est pas éliminatoire si le dossier est convaincant et l'équipe solide. Mais même 10 clients et 5 témoignages positifs transforment radicalement la crédibilité d'un projet."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Si tu n'as pas encore de traction, crée-en avant de candidater. Lance une prévente, fais 20 entretiens utilisateurs, livre gratuitement à 3 clients beta contre témoignage. Une semaine d'action avant la candidature peut faire toute la différence."
+        }
+      ]
+    },
+
+    {
+      "titre": "Adapter son dossier selon le partenaire visé",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un même projet nécessite des dossiers différents selon l'interlocuteur. Chacun a ses priorités et son langage :<br><br>🏛️ <strong>Incubateur généraliste</strong> → met l'accent sur l'équipe, la méthode d'apprentissage et la croissance potentielle. L'impact local compte.<br><br>🌍 <strong>Programme à impact social</strong> → met l'accent sur le problème de société résolu, le nombre de bénéficiaires, les indicateurs de changement. Le CA est secondaire.<br><br>💼 <strong>Accélérateur B2B</strong> → met l'accent sur le potentiel de revenus, les marges, la scalabilité et les premiers contrats signés.<br><br>🏦 <strong>Fonds islamique ou institution religieuse</strong> → met l'accent sur la conformité aux valeurs (pas de riba, impact communautaire, éthique des affaires), le modèle de partage équitable.<br><br>🤝 <strong>Partenaire commercial (client institutionnel)</strong> → met l'accent sur les références similaires, les délais, les garanties de qualité et le ROI pour le client."
+        },
+        {
+          "type": "texte",
+          "contenu": "Avant de soumettre :<br><br>🔍 <strong>Lis les projets déjà soutenus par ce programme</strong> → comprends leur logique de sélection et leur profil de prédilection<br>📞 <strong>Contacte un ancien bénéficiaire</strong> → la plupart acceptent un échange de 20 minutes. Leurs conseils valent mieux que n'importe quel guide de candidature<br>✅ <strong>Vérifie les critères d'éligibilité avant de commencer</strong> → certains programmes excluent d'emblée certains secteurs, stades ou tailles d'entreprise"
+        }
+      ]
+    },
+
+    {
+      "titre": "La liste de vérification avant soumission",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Avant d'envoyer ton dossier, valide chacun de ces points :<br><br>✅ Le résumé exécutif tient sur 1 page et peut se lire en 3 minutes<br>✅ Le problème est illustré par un fait concret ou un chiffre sourcé<br>✅ Ma proposition de valeur unique est formulée en 1 phrase claire<br>✅ Le BMC est rempli sans zones vides ni contradictions<br>✅ Les projections financières ont des hypothèses expliquées<br>✅ L'équipe est présentée avec légitimité et complémentarité<br>✅ La traction est documentée (même minime)<br>✅ Ce que je demande exactement est formulé clairement (ressources, montant, durée, type d'accompagnement)<br>✅ Le dossier respecte le format et les limites de longueur demandés<br>✅ Il a été relu par au moins une personne extérieure qui a détecté ce qui n'était pas clair"
+        },
+        {
+          "type": "attention",
+          "contenu": "La relecture par quelqu'un qui ne connaît pas ton projet est indispensable. Ce qui est évident pour toi ne l'est pas pour un lecteur extérieur. Demande à cette personne de reformuler ce qu'elle a compris — si sa reformulation ne correspond pas à ton intention, ton dossier n'est pas encore clair."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — de 3 refus à une sélection",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Gilles, fondateur d'une agence de formation en sécurité incendie à Douala :</strong><br><br><strong>Les 3 refus (2022-2023) :</strong> Gilles a candidaté 3 fois à des programmes d'accompagnement. À chaque fois : refus sans explication détaillée. Son dossier de 25 pages était dense, technique, et centré sur ses certifications et son expertise.<br><br><strong>Le diagnostic :</strong> lors d'un atelier de préparation de dossier, un consultant a identifié les problèmes :<br>→ Aucune donnée sur le marché (combien d'entreprises camerounaises non conformes aux normes incendie ?)<br>→ Résumé exécutif inexistant — le projet commençait par 3 pages de CV<br>→ Zéro traction documentée alors qu'il avait déjà 12 clients<br>→ Le besoin demandé au programme n'était pas formulé<br><br><strong>La reconstruction en 3 semaines :</strong><br>→ Résumé exécutif d'une page en tête du dossier<br>→ Données : 87 % des PME camerounaises non conformes aux normes incendie (source ONPC Cameroun)<br>→ Traction : 12 entreprises clientes, 3 lettres de satisfaction, 4 500 000 FCFA de CA cumulé<br>→ Demande précise : 6 mois d'accompagnement commercial pour développer une offre annuelle récurrente<br><br><strong>Résultat :</strong> Sélectionné au premier tour par ActivSpaces Douala. 8 mois plus tard, 34 clients actifs."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Gilles n'a pas amélioré son projet entre ses 3 refus et sa sélection. Il a amélioré la façon de le présenter. Un projet excellent mal présenté est refusé. Un projet solide bien présenté est sélectionné. Les deux dimensions comptent également."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "📖 <strong>Osterwalder, A. & Pigneur, Y. (2010).</strong> <em>Business Model Generation.</em> Wiley — le Business Model Canvas et sa méthodologie<br>📖 <strong>Blank, S. (2013).</strong> <em>The Startup Owner's Manual.</em> K&S Ranch — la validation du marché et la documentation de la traction<br>📖 <strong>Harvard Business Review (2023).</strong> <em>How to Write a Business Plan That Actually Gets Read</em> — structure et priorités d'un dossier d'incubation<br>📖 <strong>IFC — Groupe Banque Mondiale (2023).</strong> <em>SME Toolkit Africa — Business Plan Guide</em> — cadre adapté aux TPE africaines<br>📖 <strong>GSMA Intelligence (2024).</strong> <em>The Mobile Economy Sub-Saharan Africa</em> — données de marché utilisables dans les dossiers<br>📖 <strong>Endeavor Global (2023).</strong> <em>What Makes a Winning Pitch and Application — Insights from 20 Years of Entrepreneur Selection</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ton dossier est le reflet de ta façon de penser ton projet. Un dossier clair, structuré et honnête dit au comité : cette personne sait ce qu'elle fait, elle connaît son marché, et elle est capable d'exécuter. C'est ce signal que tu dois envoyer — pas une liste de qualités, mais une démonstration de clarté."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Dans quel ordre les comités de sélection d'incubateurs évaluent-ils généralement les dossiers ?",
+      "options": [
+        "Modèle économique → marché → équipe → traction → impact",
+        "Porteur → problème résolu → traction → modèle économique → impact",
+        "Projet → financement demandé → équipe → projections → présentation",
+        "Impact social → traction → équipe → marché → modèle économique"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Que représente le SOM dans l'analyse de marché TAM/SAM/SOM ?",
+      "options": [
+        "La taille totale du marché mondial pour le problème résolu",
+        "Le segment du marché correspondant exactement au profil client ciblé",
+        "La part réaliste du marché que l'entreprise pense atteindre en 3 ans",
+        "Les sources de revenus multiples de l'entreprise sur le long terme"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Selon ce module, pourquoi la section 'équipe' est-elle souvent la plus décisive pour les comités expérimentés ?",
+      "options": [
+        "Parce qu'elle permet de vérifier les diplômes et certifications des fondateurs",
+        "Parce que les comités savent que le projet évoluera mais que l'équipe reste — et c'est elle qui exécutera",
+        "Parce qu'une équipe nombreuse rassure les investisseurs sur la capacité à livrer",
+        "Parce qu'elle est la section la plus difficile à falsifier dans un dossier"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quelle erreur principale Gilles (Douala) commettait dans ses 3 premiers dossiers refusés ?",
+      "options": [
+        "Il demandait un montant de financement trop élevé par rapport à sa taille",
+        "Son secteur (sécurité incendie) n'était pas éligible aux programmes visés",
+        "Son dossier était dense et technique mais sans résumé, sans données de marché et sans traction documentée",
+        "Il ne disposait pas encore d'un statut juridique formalisé pour candidater"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quel conseil est recommandé avant de soumettre un dossier de candidature ?",
+      "options": [
+        "Faire relire le dossier par quelqu'un qui connaît bien ton secteur et peut valider les aspects techniques",
+        "Faire relire le dossier par une personne extérieure qui ne connaît pas ton projet et vérifier sa compréhension",
+        "Envoyer une version préliminaire au programme pour recevoir des retours avant la soumission officielle",
+        "Soumettre simultanément à 10 programmes différents pour maximiser les chances de sélection"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
