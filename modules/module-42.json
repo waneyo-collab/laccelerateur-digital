@@ -1,0 +1,258 @@
+{
+  "id": 42,
+  "titre": "Présence en ligne avancée : site pro, SEO, tunnel de vente simple",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Avoir une page Instagram ne suffit plus quand tu veux convaincre un client institutionnel, un incubateur ou un partenaire sérieux. Ce module t'explique comment construire une présence en ligne professionnelle et crédible : un site qui vend, un référencement qui t'amène des visiteurs qualifiés, et un tunnel de vente simple qui transforme les curieux en clients.",
+
+  "sections": [
+
+    {
+      "titre": "Pourquoi les réseaux ne suffisent plus",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les réseaux sociaux sont excellents pour créer de la visibilité et de la communauté. Ils ne remplacent pas une présence en ligne professionnelle structurée.<br><br>Voici ce que les réseaux sociaux ne peuvent pas faire :<br><br>🔍 <strong>Être trouvé sur Google</strong> → quand quelqu'un cherche <em>« formation marketing digital Casablanca »</em> ou <em>« consultant RH Dakar »</em>, ce sont les sites web qui apparaissent — pas les pages Instagram.<br><br>📋 <strong>Qualifier un prospect B2B</strong> → un directeur des achats qui évalue tes services voudra visiter ton site, lire tes références et télécharger une plaquette — pas faire défiler ton feed.<br><br>🏦 <strong>Satisfaire les exigences des incubateurs et partenaires</strong> → la majorité des formulaires de candidature demandent une URL de site web.<br><br>🛒 <strong>Vendre automatiquement pendant que tu dors</strong> → un tunnel de vente bien construit travaille pour toi 24h/24 — les réseaux exigent ta présence active."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les réseaux sociaux sont le haut de ton entonnoir — ils attirent l'attention. Ton site web est le bas — il convertit cette attention en action. Sans site, tu perds la moitié de l'efficacité de tout ce que tu fais sur les réseaux."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 éléments d'un site professionnel qui convertit",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un site professionnel n'est pas un site beau. C'est un site qui <strong>fait faire quelque chose</strong> à son visiteur — appeler, s'inscrire, télécharger, acheter.<br><br>Les 5 éléments incontournables :<br><br>🎯 <strong>1 — Un message clair dès la première seconde</strong> → en 5 secondes, ton visiteur doit comprendre ce que tu fais, pour qui, et ce qu'il peut faire maintenant. Si ce n'est pas clair, il repart.<br><br>🏆 <strong>2 — Des preuves</strong> → témoignages clients, logos de partenaires, chiffres clés, études de cas. La confiance se construit par les preuves, pas par les affirmations.<br><br>📞 <strong>3 — Un appel à l'action visible</strong> → un seul bouton principal, répété à chaque section. <em>« Prendre rendez-vous »</em>, <em>« Télécharger la brochure »</em>, <em>« S'inscrire »</em>. Pas cinq boutons différents.<br><br>📱 <strong>4 — Une version mobile parfaite</strong> → en Afrique et au Maghreb, plus de 80 % du trafic web vient du mobile. Un site non optimisé mobile est un site qui perd 4 visiteurs sur 5.<br><br>⚡ <strong>5 — Une vitesse de chargement acceptable</strong> → au-delà de 3 secondes de chargement, 40 % des visiteurs abandonnent (Google, 2023). Les connexions africaines sont souvent lentes — ton site doit être léger."
+        },
+        {
+          "type": "attention",
+          "contenu": "Évite les erreurs classiques : des animations lourdes, des vidéos qui se lancent automatiquement, des images non compressées, un menu avec 15 rubriques. La simplicité convertit mieux que la sophistication. Un site de 5 pages bien pensées vaut 10 fois plus qu'un site de 20 pages confuses."
+        }
+      ]
+    },
+
+    {
+      "titre": "Choisir la bonne plateforme selon ton budget et ta situation",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Tu n'as pas besoin d'un développeur pour créer un site professionnel efficace. Voici les options selon ton budget et tes besoins :<br><br>🆓 <strong>Budget zéro — Google Sites ou Carrd</strong> → pour valider une idée ou créer une présence minimale rapidement. Limité mais fonctionnel. Idéal pour commencer.<br><br>💰 <strong>Petit budget (5 à 15€/mois) — Wix, Webflow, Squarespace</strong> → éditeurs visuels intuitifs, templates professionnels, hébergement inclus. Aucune compétence technique requise. Recommandé pour la majorité des TPE.<br><br>💰💰 <strong>Budget moyen (10 à 30€/mois) — WordPress + hébergement</strong> → le plus flexible et le plus puissant pour le SEO. Demande un peu de courbe d'apprentissage ou l'aide d'un freelance pour le setup initial.<br><br>💰💰💰 <strong>Sur mesure (500 à 5 000€ selon la complexité)</strong> → uniquement si tu as des besoins très spécifiques (marketplace, plateforme e-learning, application). Pas nécessaire pour une présence B2B standard."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Hamid, consultant en efficacité énergétique à Marrakech :</strong><br><br>Hamid a créé son site en 3 jours sur Wix avec un template professionnel. Investissement : 12€/mois.<br><br>Le site comprend : 1 page d'accueil avec son positionnement clair, 1 page services avec les 3 offres, 1 page références avec 5 logos clients, 1 formulaire de contact.<br><br>En 4 mois, 40 % de ses nouveaux contacts mentionnent son site comme premier point de contact — contre 0 % avant. Deux contrats signés directement après une visite du site sans appel préalable."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le SEO : être trouvé sur Google sans payer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>SEO (Search Engine Optimization)</strong> est l'ensemble des techniques qui permettent à ton site d'apparaître dans les premiers résultats de Google — sans payer pour de la publicité.<br><br>Pourquoi c'est stratégique :<br>→ 93 % des expériences en ligne commencent par un moteur de recherche (BrightEdge, 2024)<br>→ Les 3 premiers résultats captent 75 % des clics<br>→ Un visiteur venu via SEO est 8 fois plus qualifié qu'un visiteur venu via une publicité<br><br>Le SEO se divise en 3 dimensions :<br><br>📝 <strong>SEO On-page</strong> → ce que tu fais sur ton site : mots-clés, titres, contenus, structure<br>🔗 <strong>SEO Off-page</strong> → ce que font les autres sites : liens entrants, mentions, citations<br>⚙️ <strong>SEO Technique</strong> → la santé de ton site : vitesse, mobile, sécurité HTTPS, indexation"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le SEO est un investissement à moyen terme — les résultats apparaissent en 3 à 6 mois. Mais contrairement à la publicité payante, ils durent. Un contenu bien référencé peut t'amener des visiteurs pendant des années sans coût supplémentaire."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les bases du SEO On-page : les 5 actions prioritaires",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Sans entrer dans la technique complexe, voici les 5 actions SEO qui ont le plus d'impact pour une TPE :<br><br>🔑 <strong>1 — Choisir les bons mots-clés</strong> → ce que tes clients tapent dans Google pour trouver ce que tu proposes. Outils gratuits : Google Suggest (les suggestions automatiques), Answer The Public, Ubersuggest version gratuite.<br><br>📄 <strong>2 — Optimiser le titre de chaque page</strong> → la balise H1 doit contenir ton mot-clé principal. <em>« Formation marketing digital Dakar — Waneyo Formation »</em> plutôt que <em>« Bienvenue sur notre site »</em>.<br><br>✍️ <strong>3 — Créer du contenu utile régulièrement</strong> → un blog ou une section ressources avec des articles qui répondent aux questions de ton audience. Google récompense la pertinence et la régularité.<br><br>🗺️ <strong>4 — Créer une fiche Google My Business</strong> → gratuite, prend 20 minutes, indispensable pour apparaître dans les recherches locales et sur Google Maps.<br><br>🔗 <strong>5 — Obtenir des liens entrants</strong> → demander à des partenaires, associations ou incubateurs de mentionner ton site. Chaque lien entrant de qualité améliore ton autorité aux yeux de Google."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>SEO local — Aminata, pédiatre à Conakry :</strong><br><br>Elle a créé une fiche Google My Business avec ses horaires, son adresse, ses photos et ses spécialités. Elle a demandé à 12 patients satisfaits de laisser un avis Google.<br><br>En 2 mois, son cabinet apparaissait en 1ère position pour « pédiatre Conakry » sur Google Maps. Elle a reçu 8 nouveaux patients qui l'ont trouvée uniquement via Google — sans aucun investissement publicitaire."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le SEO pour les marchés africains et maghrébins : spécificités",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le SEO en Afrique et au Maghreb a des particularités que les ressources occidentales ignorent souvent :<br><br>📱 <strong>Mobile-first absolu</strong> → Google classe les sites en priorité selon leur version mobile en Afrique. Un site non optimisé mobile sera pénalisé dans les classements locaux.<br><br>🌐 <strong>La concurrence est plus faible</strong> → dans de nombreux secteurs et villes africaines, il y a très peu de sites bien optimisés. Un contenu moyen mais existant peut rapidement se classer en tête.<br><br>🗣️ <strong>Optimiser en français ET en langue locale</strong> → selon ton marché, envisage d'avoir quelques contenus en wolof, en arabe dialectal ou en Moore — une opportunité SEO quasi inexploitée.<br><br>📊 <strong>Cibler les villes précisément</strong> → <em>« formation SEO Casablanca »</em> est plus efficace que <em>« formation SEO Maroc »</em>. La concurrence sur les requêtes hyper-locales est minime.<br><br>⏱️ <strong>La vitesse avant tout</strong> → avec des connexions parfois limitées, un site léger (moins de 1 Mo par page) est un avantage SEO ET une meilleure expérience utilisateur."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "L'opportunité SEO en Afrique francophone est exceptionnelle en 2024 : la demande de recherche est en forte croissance, mais l'offre de contenu de qualité en français adapté aux contextes locaux est encore très faible. Ceux qui créent du contenu utile maintenant seront bien positionnés pour les années à venir."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le tunnel de vente : transformer les visiteurs en clients",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un <strong>tunnel de vente</strong> (ou funnel) est le chemin que tu crées pour guider un inconnu de sa première découverte jusqu'à l'achat — en automatisant une partie du parcours.<br><br>La structure simple en 4 étapes :<br><br>👁️ <strong>HAUT DU TUNNEL — Attirer</strong> → post sur les réseaux, article de blog, vidéo YouTube, résultat Google. Le visiteur découvre que tu existes.<br><br>🎁 <strong>MILIEU HAUT — Capturer</strong> → un contenu gratuit et utile (lead magnet) en échange d'une adresse email ou d'un numéro WhatsApp. Guide, checklist, mini-formation, audit gratuit.<br><br>🤝 <strong>MILIEU BAS — Nourrir</strong> → une séquence d'emails ou de messages WhatsApp qui apportent de la valeur, construisent la confiance et préparent à l'achat.<br><br>💰 <strong>BAS DU TUNNEL — Convertir</strong> → une offre claire, au bon moment, au bon prix. L'achat se fait naturellement parce que la confiance a été construite."
+        },
+        {
+          "type": "texte",
+          "contenu": "L'avantage du tunnel automatisé :<br><br>→ Tu attires des prospects pendant que tu dors<br>→ Tu nourris la relation sans y consacrer de temps<br>→ Seuls les prospects qualifiés arrivent à l'étape achat — tu ne passes plus de temps avec des personnes pas prêtes<br>→ Tu peux mesurer chaque étape et savoir exactement où tu perds des prospects<br><br>Un tunnel simple mais bien construit vaut plus qu'un tunnel complexe mal exécuté. Commence avec 2 étapes (attirer + capturer) avant d'automatiser les suivantes."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire un lead magnet irrésistible",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>lead magnet</strong> est le contenu gratuit que tu offres en échange d'un contact (email ou WhatsApp). C'est l'élément le plus important du haut de ton tunnel.<br><br>Un bon lead magnet :<br>✅ Résout un problème précis et immédiat pour ton audience<br>✅ Peut être consommé en moins de 15 minutes<br>✅ Donne un avant-goût de la valeur de tes offres payantes<br>✅ Est suffisamment spécifique pour ne pas être générique<br><br>Les formats qui fonctionnent le mieux pour nos marchés :<br><br>📋 <strong>La checklist</strong> → simple, actionnable, rapide à créer. <em>« 10 étapes pour lancer ta boutique en ligne ce mois-ci »</em><br>📖 <strong>Le mini-guide PDF</strong> → 5 à 15 pages sur un sujet précis. Perçu comme plus complet que la checklist.<br>🎥 <strong>La vidéo formation courte</strong> → 10 à 20 minutes qui règlent un problème spécifique. Fort impact sur la confiance.<br>🔍 <strong>L'audit ou diagnostic gratuit</strong> → tu analyses la situation du prospect (réseaux, site, offre) et lui donnes des recommandations. Très qualifiant — seuls les vrais prospects passent du temps sur un audit."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Bertrand, expert en sécurité informatique à Abidjan :</strong><br><br>Son lead magnet : <em>« Les 7 failles de sécurité les plus courantes dans les PME ivoiriennes — et comment les corriger cette semaine »</em>. Un PDF de 12 pages, ciblé, urgent, actionnable.<br><br>Il a ajouté un formulaire de téléchargement sur son site et partagé le lien dans 3 groupes WhatsApp de dirigeants PME.<br><br>Résultat en 30 jours : 148 téléchargements, 32 contacts qualifiés collectés, 4 demandes de devis — dont 2 signés. Coût : 0€ (3 heures de rédaction)."
+        }
+      ]
+    },
+
+    {
+      "titre": "WhatsApp Business comme outil de conversion",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En Afrique et au Maghreb, WhatsApp est souvent plus efficace que l'email pour nourrir un prospect et déclencher une vente. WhatsApp Business (gratuit) transforme cette application du quotidien en outil professionnel.<br><br>Les fonctionnalités clés de WhatsApp Business :<br><br>👤 <strong>Profil professionnel</strong> → logo, description, horaires, lien site web, catalogue de produits<br>⚡ <strong>Réponses rapides</strong> → des modèles de messages prédéfinis pour les questions fréquentes (prix, délais, informations)<br>🏷️ <strong>Étiquettes</strong> → classer tes contacts par stade (prospect froid / chaud / client / ancien client)<br>📢 <strong>Listes de diffusion</strong> → envoyer un message personnalisé à plusieurs contacts simultanément (sans groupe — chacun reçoit un message individuel)<br>🤖 <strong>Messages automatiques</strong> → message de bienvenue, message d'absence avec délai de réponse<br><br>Un tunnel WhatsApp simple :<br>→ Prospect télécharge le lead magnet → reçoit un message de remerciement automatique → reçoit 3 messages de valeur en 7 jours → reçoit une proposition adaptée"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le taux d'ouverture des messages WhatsApp est de 95 % en Afrique francophone (DataReportal, 2024), contre 20 à 25 % pour l'email. Pour un tunnel de vente simple et efficace sur nos marchés, WhatsApp est souvent plus rentable que toute autre plateforme d'email marketing."
+        }
+      ]
+    },
+
+    {
+      "titre": "Créer une landing page qui convertit",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une <strong>landing page</strong> (page d'atterrissage) est une page unique dont le seul objectif est de déclencher une action — inscription, téléchargement, achat, prise de rendez-vous.<br><br>Contrairement à un site multi-pages, elle n'a pas de menu de navigation, pas de liens vers d'autres pages. Elle garde le visiteur focalisé sur une seule décision.<br><br>La structure d'une landing page efficace :<br><br>🎯 <strong>Titre accrocheur</strong> → la promesse en une phrase. Doit contenir le résultat désiré.<br>📝 <strong>Sous-titre</strong> → qui est cette page pour ? Qui va bénéficier de l'offre ?<br>✅ <strong>3 à 5 bénéfices clés</strong> → ce que le visiteur va gagner, en bullets points courts<br>🖼️ <strong>Preuve sociale</strong> → témoignage, logo, chiffre marquant<br>📋 <strong>Formulaire ou bouton d'action</strong> → le plus haut possible dans la page (visible sans scroller)<br>❓ <strong>FAQ</strong> → 3 à 5 questions qui lèvent les derniers freins<br>🔒 <strong>Mention de confidentialité</strong> → rassurer sur l'utilisation des données"
+        },
+        {
+          "type": "attention",
+          "contenu": "Une landing page avec un seul objectif et un seul bouton convertit en moyenne 3 à 5 fois mieux qu'une page de site standard avec plusieurs options. Si tu proposes 3 choses différentes sur la même page, tu perds les visiteurs qui auraient dit oui à l'une d'elles."
+        }
+      ]
+    },
+
+    {
+      "titre": "Mesurer pour améliorer : les métriques essentielles",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un site et un tunnel de vente sans mesure, c'est comme conduire les yeux fermés. Tu as besoin de données pour savoir ce qui fonctionne et ce qui doit être amélioré.<br><br>Les métriques à suivre en priorité :<br><br>👀 <strong>Visiteurs uniques</strong> → combien de personnes viennent sur ton site chaque mois. Tendance sur 3 mois.<br>⏱️ <strong>Temps passé sur le site</strong> → si les gens partent en moins de 30 secondes, ton message d'accueil n'est pas clair.<br>📧 <strong>Taux de conversion du lead magnet</strong> → combien de visiteurs téléchargent ton contenu gratuit. Objectif : 20 à 40 %.<br>📩 <strong>Taux d'ouverture des emails/messages</strong> → combien de tes contacts ouvrent tes messages. Objectif email : 25 %+. WhatsApp : 60 %+.<br>💰 <strong>Taux de conversion final</strong> → combien de prospects deviennent clients. Même 2 à 5 % est un bon chiffre en B2B.<br><br>Outils gratuits : Google Analytics (site web), Google Search Console (SEO), les statistiques natives de WhatsApp Business."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Ne te noie pas dans les données. Choisis 3 métriques clés, suis-les chaque mois, et améliore une chose à la fois. Un tunnel moyen amélioré progressivement bat toujours un tunnel parfait jamais lancé."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Construire une présence en ligne de A à Z",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Contexte :</strong> Fatou-Marie, architecte d'intérieur à Dakar, travaillait exclusivement par recommandation. Elle voulait attirer des clients hors de son réseau sans budget publicitaire.<br><br><strong>Étape 1 — Le site (semaine 1-2) :</strong> Création sur Wix en 3 jours. 4 pages : Accueil (avec son positionnement clair : <em>« Design d'intérieur contemporain inspiré des textiles africains »</em>), Portfolio (15 photos de réalisations), Services (3 offres), Contact.<br><br><strong>Étape 2 — Le SEO local (semaine 3) :</strong> Fiche Google My Business créée. Mots-clés ciblés : <em>« architecte d'intérieur Dakar »</em>, <em>« décoration intérieure Sénégal »</em>. Article de blog : <em>« Comment intégrer les tissus Bazin dans un intérieur moderne »</em>.<br><br><strong>Étape 3 — Le lead magnet (semaine 4) :</strong> Guide PDF : <em>« 5 erreurs à éviter dans la décoration de votre maison »</em>. Landing page simple sur Wix.<br><br><strong>Étape 4 — Le tunnel WhatsApp (mois 2) :</strong> Message de bienvenue automatique → 3 conseils déco en 2 semaines → proposition d'une consultation découverte gratuite de 30 minutes.<br><br><strong>Résultats à 3 mois :</strong> 12 demandes de devis via le site (contre 0 avant), 3 contrats signés, 1re position Google pour « architecte intérieur Dakar »."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Fatou-Marie n'a pas tout fait en même temps. Elle a avancé étape par étape, chaque semaine un nouvel élément. En 2 mois, elle avait une présence en ligne complète et fonctionnelle — pour moins de 30€/mois d'outils."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "📖 <strong>Google (2023).</strong> <em>Google Search Central — Guide du débutant pour l'optimisation des moteurs de recherche</em> — référence officielle pour le SEO<br>📖 <strong>BrightEdge (2024).</strong> <em>Organic Search Report</em> — données sur l'importance du SEO dans le parcours client<br>📖 <strong>DataReportal (2024).</strong> <em>Digital 2024 — Africa Report</em> — statistiques sur l'usage mobile, WhatsApp et les comportements digitaux en Afrique<br>📖 <strong>HubSpot (2024).</strong> <em>State of Marketing Report</em> — données sur les tunnels de conversion et l'email marketing<br>📖 <strong>Think with Google (2023).</strong> <em>Mobile Page Speed Industry Benchmarks Africa</em> — impact de la vitesse de chargement sur les conversions<br>📖 <strong>Cialdini, R. B. (2001).</strong> <em>Influence : The Psychology of Persuasion</em> — principes appliqués à la structure des landing pages"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Une présence en ligne professionnelle n'est pas un luxe réservé aux grandes entreprises. C'est aujourd'hui la carte de visite digitale que tout partenaire sérieux consultera avant de décider de travailler avec toi. Investis 1 à 2 jours pour la construire correctement — et elle travaillera pour toi pendant des années."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Pourquoi une présence uniquement sur les réseaux sociaux est-elle insuffisante pour une TPE qui veut travailler en B2B ?",
+      "options": [
+        "Parce que les réseaux sociaux sont trop coûteux pour les petites entreprises",
+        "Parce que les réseaux ne permettent pas d'être trouvé sur Google, de qualifier un client institutionnel, ni de vendre automatiquement sans présence active",
+        "Parce que les réseaux sociaux ont une durée de vie limitée et disparaissent régulièrement",
+        "Parce que les algorithmes des réseaux sociaux pénalisent les comptes d'entreprise"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Selon DataReportal 2024, quel est le taux d'ouverture des messages WhatsApp en Afrique francophone ?",
+      "options": [
+        "Entre 20 et 25 % — comparable à l'email marketing standard",
+        "Entre 40 et 50 % — supérieur à l'email mais inférieur aux SMS",
+        "95 % — rendant WhatsApp Business particulièrement stratégique pour les tunnels de vente locaux",
+        "Entre 60 et 70 % uniquement pour les listes de diffusion professionnelles"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Quelle est la différence principale entre une landing page et une page de site web classique ?",
+      "options": [
+        "Une landing page est plus longue et contient plus d'informations qu'une page classique",
+        "Une landing page est optimisée pour les mobiles, une page classique pour les ordinateurs",
+        "Une landing page n'a qu'un seul objectif et un seul appel à l'action — sans menu de navigation distrayant",
+        "Une landing page est toujours payante contrairement aux pages de site web gratuites"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Parmi ces formats de lead magnet, lequel est le plus qualifiant pour identifier les prospects vraiment intéressés ?",
+      "options": [
+        "Une checklist de 10 points téléchargeable en 1 clic sans inscription",
+        "Une vidéo de présentation de l'entreprise et de ses services",
+        "Un audit ou diagnostic gratuit qui demande du temps et un engagement de la part du prospect",
+        "Un coupon de réduction de 10 % sur la première commande"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Quelle opportunité SEO spécifique aux marchés africains est soulignée dans ce module ?",
+      "options": [
+        "Les moteurs de recherche africains favorisent les sites en anglais plutôt qu'en français",
+        "La concurrence SEO est plus faible qu'en Europe — un contenu moyen mais existant peut rapidement se classer en tête",
+        "Le SEO est inefficace en Afrique car la majorité des utilisateurs passent directement par les réseaux sociaux",
+        "Les algorithmes Google fonctionnent différemment en Afrique et favorisent les sites hébergés localement"
+      ],
+      "reponse": 1
+    }
+
+  ]
+}
