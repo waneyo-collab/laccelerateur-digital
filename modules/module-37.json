@@ -1,0 +1,286 @@
+{
+  "id": 37,
+  "titre": "L'art de pitcher : convaincre un partenaire, un incubateur, un client",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Un pitch, c'est l'art de convaincre en peu de temps et avec peu de mots. Que tu t'adresses à un incubateur, un investisseur, un client ou un partenaire, la capacité à présenter ton projet avec clarté et impact peut tout changer. Ce module te donne la structure, les techniques et la confiance pour pitcher avec efficacité.",
+
+  "sections": [
+
+    {
+      "titre": "Qu'est-ce qu'un pitch — et pourquoi c'est une compétence vitale",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un <strong>pitch</strong> est une présentation courte et structurée dont l'objectif est de déclencher une décision favorable chez quelqu'un qui ne te connaît pas encore assez.<br><br>Ce quelqu'un peut être :<br>→ Un <strong>incubateur ou accélérateur</strong> qui décide de t'accompagner<br>→ Un <strong>client institutionnel</strong> qui décide de signer un contrat<br>→ Un <strong>partenaire stratégique</strong> qui décide de collaborer<br>→ Un <strong>réseau ou programme de financement halal</strong> qui décide de te soutenir<br><br>Ce n'est pas un exposé. Ce n'est pas une démonstration de connaissances. C'est une <strong>invitation à l'action</strong> — construite autour de ce que l'autre gagne, pas de ce que toi tu veux obtenir."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La plupart des pitchs échouent non par manque de qualité du projet — mais parce que le porteur parle de son projet au lieu de parler du problème que son projet résout. La bascule est là : commence toujours par le problème, jamais par ta solution."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 3 types de pitch à maîtriser",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Il existe plusieurs formats de pitch selon le contexte. Voici les 3 essentiels :<br><br>⚡ <strong>L'Elevator Pitch (60 secondes)</strong> → pour une rencontre impromptue, un networking, une introduction. Doit pouvoir être dit dans un ascenseur. Objectif : susciter l'envie d'en savoir plus.<br><br>🎤 <strong>Le Pitch Court (3 à 5 minutes)</strong> → pour un premier rendez-vous, un événement de pitchs, une présentation devant jury. Objectif : obtenir un second rendez-vous ou un accord de principe.<br><br>📊 <strong>Le Pitch Long (15 à 20 minutes + Q&A)</strong> → pour un comité d'incubateur, un partenaire stratégique, un client important. Objectif : déclencher une décision concrète (signature, admission, contrat).<br><br>Chaque format a sa propre structure — mais tous partagent les mêmes fondamentaux que tu vas apprendre dans ce module."
+        },
+        {
+          "type": "attention",
+          "contenu": "L'erreur la plus fréquente : utiliser le pitch long dans un contexte qui demande un elevator pitch. Respecter le format attendu est un signal de professionnalisme. Un jury de 5 minutes qui écoute 15 minutes de présentation ne retient pas le projet — il retient le manque de préparation."
+        }
+      ]
+    },
+
+    {
+      "titre": "La structure universelle d'un pitch qui convainc",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Oren Klaff, auteur de <em>Pitch Anything</em> (2011), a étudié des centaines de pitchs réussis et échoués. Sa conclusion : les pitchs qui fonctionnent suivent tous une structure similaire, fondée sur la façon dont le cerveau humain traite l'information nouvelle.<br><br>La structure en 6 actes :<br><br>🔥 <strong>1 — Le problème</strong> → commence par une vérité que ton audience reconnaît immédiatement. La douleur, le manque, l'inefficacité que tu as observée.<br>💡 <strong>2 — Ta solution</strong> → présente ton approche en une phrase. Pas les détails — la direction.<br>🌍 <strong>3 — Le marché</strong> → montre que le problème concerne suffisamment de personnes pour que la solution ait un impact réel.<br>💰 <strong>4 — Le modèle</strong> → explique comment tu génères de la valeur (pas forcément de l'argent — de la valeur).<br>👤 <strong>5 — Toi et ton équipe</strong> → pourquoi toi ? Quel est ton ancrage dans ce problème ?<br>✅ <strong>6 — L'appel à l'action</strong> → que veux-tu exactement ? Un rendez-vous ? Une décision ? Un partenariat ? Sois précis."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "L'appel à l'action est l'étape la plus négligée. Des porteurs de projet passent 15 minutes à pitcher et terminent par : 'voilà, c'est tout'. Le jury attend que tu leur dises ce que tu veux. Ne les laisse pas deviner — dis-le clairement."
+        }
+      ]
+    },
+
+    {
+      "titre": "L'elevator pitch : 60 secondes pour déclencher la curiosité",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'elevator pitch n'a pas pour objectif de tout expliquer. Il a pour objectif de donner envie d'en savoir plus.<br><br>La formule en 4 phrases :<br><br>1️⃣ <em>« Tu sais que [problème que ton audience connaît bien]… »</em><br>2️⃣ <em>« Eh bien, [ton projet/solution] permet à [qui] de [résultat concret]. »</em><br>3️⃣ <em>« La différence avec ce qui existe déjà : [ta singularité en une phrase]. »</em><br>4️⃣ <em>« Je cherche [ce que tu veux : un avis, un contact, un rendez-vous]. »</em><br><br>Exemple :<br><em>« Tu sais que des milliers d'entrepreneures en Afrique ont des compétences mais ne savent pas les vendre en ligne ? Waneyo Formation leur donne accès à des formations courtes en marketing digital, pensées pour leur marché. La différence : tout est en français, ancré dans des exemples africains réels, et accessible depuis un smartphone. Je cherche à entrer en contact avec des incubateurs qui accompagnent ces profils. »</em>"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Samira, créatrice d'une plateforme de mise en relation artisans-acheteurs à Alger :</strong><br><br>❌ Version initiale : <em>« Je développe une application mobile qui connecte les artisans algériens aux acheteurs locaux et internationaux grâce à une interface intuitive et des fonctionnalités de géolocalisation et de paiement intégré. »</em><br><br>✅ Version pitch : <em>« En Algérie, 200 000 artisans n'ont aucune présence en ligne. Mes grands-parents en font partie. Ma plateforme leur donne un vitrine digitale en 10 minutes, sans savoir coder. 3 mois après le lancement : 340 artisans inscrits, 12 premières ventes internationales. Je cherche un accompagnement pour structurer ma croissance. »</em>"
+        }
+      ]
+    },
+
+    {
+      "titre": "Commencer par le Pourquoi : la méthode de Simon Sinek",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Simon Sinek, dans son TED Talk devenu l'un des plus regardés de l'histoire (<em>Start With Why</em>, 2009), a identifié ce qui distingue les présentations qui inspirent de celles qui informent simplement.<br><br>Son modèle : le <strong>Cercle d'Or</strong><br><br>🎯 La plupart des pitchs vont de l'extérieur vers l'intérieur :<br><em>Quoi (notre produit) → Comment (notre méthode) → Pourquoi (notre mission)</em><br><br>🔥 Les pitchs inoubliables vont de l'intérieur vers l'extérieur :<br><em>Pourquoi (notre raison d'être) → Comment (notre approche) → Quoi (notre offre)</em><br><br>Exemple :<br>❌ <em>« Nous faisons des formations en marketing digital. »</em> (Quoi)<br>✅ <em>« Nous croyons que chaque entrepreneur africain mérite les mêmes outils que ceux de Paris ou New York. C'est pourquoi on crée des formations pensées pour nos marchés, dans notre langue. »</em> (Pourquoi)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les gens n'achètent pas ce que tu fais. Ils achètent pourquoi tu le fais. Un jury d'incubateur ou un partenaire institutionnel investit autant dans une mission qu'ils croient qu'en un produit qu'ils comprennent."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pitcher devant un incubateur : ce qu'ils évaluent vraiment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un comité d'incubateur évalue ton projet sur 5 dimensions — dans cet ordre :<br><br>👤 <strong>1 — Le porteur</strong> → Es-tu la bonne personne pour porter ce projet ? As-tu l'ancrage, la résilience, la capacité d'apprentissage ? (C'est le critère n°1 — avant même le projet)<br>🎯 <strong>2 — Le problème</strong> → Est-il réel et suffisamment douloureux pour que des gens paient pour le résoudre ?<br>📈 <strong>3 — La traction</strong> → As-tu des preuves que ça fonctionne ? Des clients, des utilisateurs, des tests, des chiffres — même modestes.<br>💼 <strong>4 — Le modèle</strong> → Est-ce que ça peut devenir rentable sans être subventionné indéfiniment ?<br>🌍 <strong>5 — L'impact</strong> → Quel changement positif crée-t-il dans ton écosystème local ?"
+        },
+        {
+          "type": "texte",
+          "contenu": "Ce que les incubateurs NE veulent PAS entendre :<br><br>❌ <em>« Il n'y a pas de concurrent »</em> → ça signifie soit qu'il n'y a pas de marché, soit que tu n'as pas fait ta veille<br>❌ <em>« Si on capture juste 1 % du marché… »</em> → ce raisonnement top-down n'a aucune valeur sans preuve de traction réelle<br>❌ <em>« Nous allons faire de la publicité sur les réseaux »</em> → sans stratégie d'acquisition précise, c'est du vide<br>❌ <em>« Mon entourage trouve que c'est une super idée »</em> → l'entourage n'est pas un marché"
+        }
+      ]
+    },
+
+    {
+      "titre": "Pitcher à un client institutionnel : la logique différente",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un client institutionnel (entreprise, administration, ONG, université) ne pense pas comme un jury d'incubateur. Sa logique est différente :<br><br>📋 Il pense <strong>risque</strong> → va-t-il avoir des problèmes si ça ne marche pas ? Réduis son risque perçu.<br>💰 Il pense <strong>budget</strong> → est-ce que ça rentre dans sa ligne budgétaire ? Aide-le à catégoriser ton offre.<br>⏱️ Il pense <strong>délai</strong> → combien de temps avant de voir un résultat ? Sois précis.<br>📊 Il pense <strong>justification</strong> → comment va-t-il défendre cet achat auprès de sa hiérarchie ? Donne-lui les arguments.<br><br>La structure adaptée pour un client institutionnel :<br>1️⃣ Son problème (dans ses mots)<br>2️⃣ Ton approche (comment tu vas y répondre)<br>3️⃣ Les preuves (ce que tu as déjà fait de similaire)<br>4️⃣ Le livrable exact (ce qu'il reçoit, quand, sous quelle forme)<br>5️⃣ L'investissement (prix + conditions claires)<br>6️⃣ La prochaine étape (signature, essai, réunion de validation)"
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Oumar, formateur en compétences digitales à Bamako :</strong><br><br>Il a pitché la même formation à deux types d'interlocuteurs :<br><br>→ Devant un incubateur : il a commencé par <em>« Je crois que chaque jeune malien mérite d'accéder à l'économie numérique »</em> et montré ses 80 premiers apprenants.<br><br>→ Devant une entreprise de télécom : il a commencé par <em>« Votre taux de rétention chute parce que vos agents terrain ne maîtrisent pas les outils digitaux. Voici comment j'ai résolu ce problème pour Orange Sénégal en 3 mois. »</em><br><br>Même compétence. Deux pitchs radicalement différents. Les deux ont abouti à un accord."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le langage corporel et la voix dans le pitch",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Albert Mehrabian, chercheur en communication à l'UCLA, a établi que dans une communication en face-à-face :<br><br>→ <strong>7 %</strong> de l'impact vient des mots<br>→ <strong>38 %</strong> vient du ton de la voix<br>→ <strong>55 %</strong> vient du langage corporel<br><br>Autrement dit : comment tu dis les choses compte plus que ce que tu dis.<br><br>Les éléments à travailler pour un pitch :<br><br>👁️ <strong>Le regard</strong> → maintiens le contact visuel avec chaque membre du jury, pas seulement avec le plus haut gradé<br>🧍 <strong>La posture</strong> → debout, ancré, épaules ouvertes. Évite de te balancer ou de croiser les bras.<br>✋ <strong>Les gestes</strong> → ouverts et vers l'extérieur, jamais fermés. Ils renforcent les mots-clés.<br>🎙️ <strong>La voix</strong> → varie le rythme. Ralentis sur les points importants. Fais des pauses — elles créent de l'impact, pas du vide."
+        },
+        {
+          "type": "attention",
+          "contenu": "Lire ses notes ou fixer l'écran de présentation pendant un pitch est la faute la plus pénalisante. Le jury achète le porteur avant le projet. Si tu n'es pas capable de parler de ton projet en regardant les gens en face, tu envoies un signal de manque de conviction — quelle que soit la qualité du contenu."
+        }
+      ]
+    },
+
+    {
+      "titre": "Gérer les questions difficiles avec élégance",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les questions posées après un pitch ne sont pas des attaques — ce sont des signaux d'intérêt. Un jury qui ne pose pas de questions est un jury indifférent.<br><br>Les 4 types de questions et comment les traiter :<br><br>❓ <strong>La question de clarification</strong> → reformule et réponds directement. Si tu n'as pas été clair, remercie-les — c'est utile.<br>❓ <strong>La question piège</strong> (<em>« Et si un grand acteur copie votre idée ? »</em>) → reste calme, reconnais le risque, explique ton avantage défensif (rapidité, ancrage local, réseau, confiance déjà construite).<br>❓ <strong>La question à laquelle tu ne sais pas répondre</strong> → <em>« C'est une bonne question. Je n'ai pas les chiffres exacts maintenant — je vous transmets ça d'ici 48h. »</em> C'est plus fort que d'inventer.<br>❓ <strong>La question hostile</strong> → respire, ne défends pas, explore : <em>« Qu'est-ce qui vous fait penser ça ? »</em> Montre que tu peux gérer la contradiction sans perdre le fil."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Dire 'je ne sais pas, mais je vais trouver' pendant un pitch est perçu positivement par les jurys expérimentés. Ça démontre l'honnêteté et la maturité — deux qualités rares. Ce qu'ils ne pardonnent pas : les approximations présentées comme des certitudes."
+        }
+      ]
+    },
+
+    {
+      "titre": "Adapter son pitch au contexte culturel africain et maghrébin",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pitcher en Afrique et au Maghreb exige quelques adaptations que les formations occidentales ne mentionnent jamais :<br><br>🤝 <strong>La relation avant la transaction</strong> → dans nos cultures, la confiance interpersonnelle précède souvent la décision professionnelle. Si possible, crée un point de contact avant le pitch formel (introduction par un commun, message préalable, présence lors d'un événement).<br><br>🌍 <strong>Ancrer l'impact local</strong> → les jurys et partenaires africains sont particulièrement sensibles à l'impact sur la communauté, l'emploi local et la souveraineté économique. Ce n'est pas une posture — c'est un argument réel si ton projet le justifie.<br><br>🕌 <strong>Respect des valeurs</strong> → dans les contextes à majorité musulmane, des modèles sans intérêt, avec partage équitable des bénéfices ou à impact social fort résonnent davantage que des modèles purement financiers.<br><br>🗣️ <strong>Le ton</strong> → l'humilité dans la présentation est valorisée, mais ne doit pas être confondue avec le manque de conviction. Affirme sans arrogance."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Copier le style de pitch des startups de la Silicon Valley dans un incubateur de Dakar ou Casablanca peut créer une distance plutôt qu'une connexion. Reste toi-même, ancré dans ton contexte — c'est ta plus grande force différenciante."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le support visuel : quand l'utiliser et comment",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Guy Kawasaki, ancien évangéliste Apple et investisseur, a popularisé la règle <strong>10/20/30</strong> pour les présentations :<br><br>📊 <strong>10 slides maximum</strong> → au-delà, tu perds l'attention et tu noies l'essentiel<br>⏱️ <strong>20 minutes maximum</strong> → même si tu as 1 heure, prépare-toi à 20 minutes et laisse le reste pour les questions<br>🔤 <strong>30 points de police minimum</strong> → si tu as besoin de police plus petite pour faire rentrer tout le texte, c'est qu'il y a trop de texte<br><br>Les 10 slides idéales de Kawasaki :<br>Problème · Solution · Modèle économique · Magie sous-jacente · Marketing et ventes · Concurrence · Équipe · Projections · Statut actuel · Prochaines étapes + Appel à l'action"
+        },
+        {
+          "type": "attention",
+          "contenu": "Le support visuel est un outil d'appui — pas un script. Si tu lis tes slides pendant le pitch, tu peux aussi bien envoyer le PDF par email. Le jury vient pour voir et entendre le porteur, pas pour lire une présentation. Chaque slide doit avoir une seule idée, illustrée d'un visuel ou d'un chiffre."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Chidi, fondateur d'une fintech halal à Lagos",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Le contexte :</strong> Chidi a développé une application de tontine digitale (système d'épargne communautaire traditionnel, 100 % sans intérêt) pour les communautés nigérianes. Il est sélectionné pour pitcher devant un programme d'accélération panafricain.<br><br><strong>Son pitch de 5 minutes :</strong><br><br>🔥 <em>(Pourquoi)</em> <em>« 600 millions d'Africains n'ont pas de compte bancaire. Mais ils épargnent. Ils se font confiance. Depuis des générations, les tontines font circuler des milliards de façon informelle, sans institution, sans frais, sans riba. »</em><br><br>💡 <em>(Quoi)</em> <em>« EsusuPay digitalise la tontine. Un groupe crée son cercle en 2 minutes, fixe les règles ensemble, et le système gère les tours, les rappels et la transparence. Zéro frais cachés. »</em><br><br>📈 <em>(Traction)</em> <em>« En 4 mois : 1 200 groupes actifs, 8 700 utilisateurs, 47 millions de nairas échangés. Sans publicité payante. »</em><br><br>✅ <em>(Appel à l'action)</em> <em>« Je cherche un accompagnement de 6 mois pour structurer notre croissance dans 3 nouveaux pays. Êtes-vous ouverts à un second rendez-vous cette semaine ? »</em><br><br><strong>Résultat :</strong> Sélectionné parmi les 8 finalistes sur 340 dossiers."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Chidi n'a pas pitché une application. Il a pitché une mission culturelle et économique profondément ancrée dans son contexte. C'est ça qui a fait la différence face à des projets techniquement plus sophistiqués."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 6 erreurs qui tuent un pitch",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs sont évitables — à condition de les connaître avant de se retrouver face au jury :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Commencer par se présenter</strong> → personne ne veut entendre ton CV en ouverture. Commence par le problème — tu te présenteras quand le jury sera déjà accroché.<br>❌ <strong>Pitcher le produit, pas la vision</strong> → les fonctionnalités s'oublient. La mission reste.<br>❌ <strong>Avoir peur du silence</strong> → les pauses renforcent l'impact. Remplir chaque seconde de mots dilue le message.<br>❌ <strong>S'excuser</strong> → <em>« Ce n'est qu'un prototype »</em> ou <em>« Je ne suis pas un bon orateur »</em> avant même de commencer program le jury à l'indulgence, pas à l'enthousiasme.<br>❌ <strong>Dépasser le temps imparti</strong> → c'est un manque de respect et un signal d'incapacité à prioriser.<br>❌ <strong>Ne pas formuler d'appel à l'action</strong> → sans demande explicite, le jury part sans savoir quoi faire ensuite."
+        }
+      ]
+    },
+
+    {
+      "titre": "S'entraîner : la méthode des 5 pitchs",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un pitch se prépare — mais surtout il se pratique.<br><br>La méthode des <strong>5 pitchs progressifs</strong> avant un événement important :<br><br>1️⃣ <strong>Pitch solo enregistré</strong> → parle face à ta caméra. Regarde la vidéo. Ce que tu ne veux pas voir, le jury le verra.<br>2️⃣ <strong>Pitch à un proche non expert</strong> → si quelqu'un qui ne connaît pas ton domaine comprend et est enthousiaste, le message est clair.<br>3️⃣ <strong>Pitch à un pair</strong> → quelqu'un dans ton domaine qui peut challenger le fond.<br>4️⃣ <strong>Pitch à un mentor ou conseiller</strong> → quelqu'un qui connaît les jurys et les investisseurs.<br>5️⃣ <strong>Pitch à froid devant des inconnus</strong> → un événement de networking, une rencontre informelle. La meilleure répétition possible."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les meilleurs pitcheurs ne sont pas les plus doués — ce sont les plus entraînés. Chaque répétition affine la clarté, renforce la confiance et réduit le stress le jour J. Commence à t'entraîner bien avant d'en avoir besoin."
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "📖 <strong>Klaff, O. (2011).</strong> <em>Pitch Anything : An Innovative Method for Presenting, Persuading, and Winning the Deal.</em> McGraw-Hill — la structure neurologique du pitch<br>📖 <strong>Sinek, S. (2009).</strong> <em>Start With Why.</em> Portfolio/Penguin — le Cercle d'Or et la communication par le Pourquoi<br>📖 <strong>Kawasaki, G. (2004).</strong> <em>The Art of the Start.</em> Portfolio — la règle 10/20/30 et les slides de pitch<br>📖 <strong>Mehrabian, A. (1971).</strong> <em>Silent Messages.</em> Wadsworth — la règle des 7/38/55 % sur l'impact de la communication non verbale<br>📖 <strong>Harvard Business Review (2023).</strong> <em>What Makes a Great Pitch.</em> — analyse de 500 pitchs d'investissement, facteurs de succès<br>📖 <strong>African Development Finance Association (2024).</strong> <em>Rapport sur le financement des startups africaines : attentes des incubateurs et accélérateurs</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Le pitch parfait n'existe pas. Il y a ton pitch — honnête, ancré dans ta réalité, amélioré après chaque feedback. Ce qui convainc ce n'est pas la perfection du discours : c'est la clarté de la vision et la solidité de celui qui la porte."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Selon Oren Klaff, quel est le critère le plus important qu'un jury d'incubateur évalue lors d'un pitch ?",
+      "options": [
+        "La qualité technique du produit ou service présenté",
+        "Le montant du financement demandé et son utilisation prévue",
+        "Le porteur de projet — sa légitimité, sa résilience et sa capacité d'apprentissage",
+        "Le marché adressable et la taille de l'opportunité financière"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Dans le modèle du Cercle d'Or de Simon Sinek, dans quel ordre un pitch inspirant doit-il être structuré ?",
+      "options": [
+        "Quoi → Comment → Pourquoi (du plus concret au plus abstrait)",
+        "Pourquoi → Comment → Quoi (de la mission vers le produit)",
+        "Comment → Pourquoi → Quoi (de la méthode vers la raison d'être)",
+        "Quoi → Pourquoi → Comment (du produit vers la mission)"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Que révèle la recherche d'Albert Mehrabian sur l'impact d'une communication en face-à-face ?",
+      "options": [
+        "Les mots représentent 55 % de l'impact — c'est pourquoi la préparation du contenu est primordiale",
+        "Le ton de la voix et le langage corporel représentent ensemble 93 % de l'impact, contre seulement 7 % pour les mots",
+        "Le langage corporel seul représente 100 % de l'impact lors d'un premier contact",
+        "L'impact est équitablement réparti entre les mots, la voix et le langage corporel"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quelle est la règle 10/20/30 de Guy Kawasaki pour les présentations de pitch ?",
+      "options": [
+        "10 minutes de préparation, 20 slides maximum, 30 mots par slide",
+        "10 slides maximum, 20 minutes maximum, police de 30 points minimum",
+        "10 points clés, 20 secondes par slide, 30 % du temps réservé aux questions",
+        "10 répétitions avant le pitch, 20 personnes dans l'audience idéale, 30 jours de préparation"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Pourquoi Chidi (Lagos) a-t-il été sélectionné parmi 340 dossiers pour son pitch sur EsusuPay ?",
+      "options": [
+        "Il avait la technologie la plus avancée et le plus grand nombre d'utilisateurs",
+        "Il a demandé le montant de financement le plus élevé, signalant l'ambition de son projet",
+        "Il a pitché une mission culturelle et économique ancrée dans son contexte plutôt qu'une simple application",
+        "Il a suivi exactement le template de pitch recommandé par le programme d'accélération"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
