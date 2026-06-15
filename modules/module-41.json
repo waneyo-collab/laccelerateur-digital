@@ -1,0 +1,258 @@
+{
+  "id": 41,
+  "titre": "Du statut freelance à la TPE/PME : structure et premiers recrutements",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "À un moment dans ton parcours, travailler de façon informelle devient un plafond de verre. Les marchés institutionnels, les incubateurs, les partenaires sérieux et certains clients exigent une structure légale. Ce module t'explique comment formaliser ton activité dans ton pays, structurer ta TPE, et faire tes premiers recrutements — sans te noyer dans la complexité administrative.",
+
+  "sections": [
+
+    {
+      "titre": "Pourquoi formaliser — et quand",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Beaucoup d'entrepreneurs africains et maghrébins démarrent leur activité de façon informelle — par nécessité, par méfiance des administrations, ou simplement parce que ça suffit au départ. C'est une étape normale.<br><br>Mais l'informalité devient un frein quand :<br><br>🏦 <strong>Tu veux ouvrir un compte professionnel</strong> → les banques exigent un numéro d'immatriculation<br>📋 <strong>Tu veux répondre à des appels d'offres</strong> → les clients institutionnels, les ONG, les administrations exigent un statut légal<br>🤝 <strong>Tu veux intégrer un incubateur</strong> → la plupart des programmes d'accompagnement exigent ou encouragent la formalisation<br>👥 <strong>Tu veux embaucher</strong> → tu ne peux pas légalement avoir de salarié sans structure juridique<br>🌍 <strong>Tu veux exporter ou recevoir des paiements internationaux</strong> → les plateformes de paiement et les banques correspondantes exigent un justificatif d'entreprise<br>💰 <strong>Tu veux accéder à des financements ou subventions</strong> → toutes les aides publiques et la plupart des fonds privés exigent une entité légale"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La formalisation n'est pas une contrainte administrative — c'est une clé qui ouvre des portes. Elle signale à tes partenaires que tu es sérieux, structuré et durable. C'est un investissement en crédibilité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les statuts disponibles selon ton pays",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Chaque pays a ses propres structures juridiques. Voici les options principales dans nos 4 marchés cibles :<br><br>🇲🇦 <strong>Maroc</strong><br>→ <strong>Auto-entrepreneur</strong> : le plus simple. Plafond de CA : 500 000 DH (services). Cotisation forfaitaire. Idéal pour démarrer.<br>→ <strong>SARL (Société à Responsabilité Limitée)</strong> : capital minimum 1 DH symbolique depuis 2015. Structure sérieuse pour facturer en B2B.<br>→ <strong>SA (Société Anonyme)</strong> : pour les projets avec investisseurs. Capital minimum 300 000 DH.<br><br>🇸🇳 <strong>Sénégal</strong><br>→ <strong>Entreprise individuelle</strong> : immatriculation au RCCM. Simple et rapide.<br>→ <strong>SUARL (Société Unipersonnelle)</strong> : pour les solo avec capital défini.<br>→ <strong>SARL</strong> : dès qu'on est plusieurs associés.<br><br>🇨🇮 <strong>Côte d'Ivoire</strong><br>→ <strong>Entreprise individuelle</strong> : immatriculation au RCCM d'Abidjan.<br>→ <strong>SARL</strong> : très utilisée en B2B. Capital minimum réduit à 100 000 FCFA depuis la réforme OHADA 2014.<br><br>🇹🇳 <strong>Tunisie</strong><br>→ <strong>Entreprise individuelle / Artisan</strong> : inscription au registre de commerce.<br>→ <strong>SUARL (Société Unipersonnelle)</strong> : capital minimum symbolique depuis 2021.<br>→ <strong>SARL</strong> : pour les projets avec associés."
+        },
+        {
+          "type": "attention",
+          "contenu": "Ces informations sont indicatives et peuvent évoluer. Avant de choisir ton statut, consulte toujours un comptable ou un conseiller juridique local — une heure de consultation coûte bien moins qu'une erreur de structure. Les incubateurs de ta ville peuvent souvent t'orienter gratuitement."
+        }
+      ]
+    },
+
+    {
+      "titre": "Le cadre OHADA : une harmonisation pour l'Afrique de l'Ouest",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour 17 pays d'Afrique francophone (dont le Sénégal, la Côte d'Ivoire, le Cameroun, le Mali, le Burkina Faso…), le droit des affaires est harmonisé par l'<strong>OHADA (Organisation pour l'Harmonisation en Afrique du Droit des Affaires)</strong>.<br><br>Ce que ça signifie concrètement pour toi :<br><br>✅ Les mêmes formes juridiques (SARL, SA, GIE…) sont reconnues dans tous les pays membres<br>✅ Un contrat signé dans un pays OHADA est généralement reconnu dans les autres<br>✅ Les procédures de création d'entreprise ont été simplifiées dans la plupart des pays membres<br>✅ Des Centres de Formalités des Entreprises (CFE) permettent de créer une entreprise en quelques jours<br><br>Si tu envisages de travailler avec des clients dans plusieurs pays OHADA, la SARL reste la structure la plus adaptée et la plus reconnue."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Mourad, consultant en transformation digitale entre Casablanca et Abidjan :</strong><br><br>Il travaillait en auto-entrepreneur au Maroc et perdait régulièrement des contrats ivoiriens qui demandaient une structure B2B locale.<br><br>Il a créé une SARL au Maroc et ouvert une représentation en Côte d'Ivoire via un partenaire local (solution courante et moins coûteuse qu'une seconde entité).<br><br>En 6 mois, il a signé 3 contrats institutionnels ivoiriens qui lui avaient auparavant échappé — simplement parce qu'il pouvait maintenant présenter un dossier juridique complet."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 étapes de la formalisation progressive",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La formalisation ne se fait pas en un jour. Voici les étapes dans le bon ordre — sans brûler les étapes :<br><br>1️⃣ <strong>Stabiliser les revenus d'abord</strong> → ne te formalise pas pour rien. Attends d'avoir un flux régulier (même modeste) avant de t'imposer des charges fixes.<br><br>2️⃣ <strong>Ouvrir un compte professionnel</strong> → même sans statut juridique, certaines banques acceptent un compte dédié activité. C'est le premier signe de séparation saine entre le perso et le pro.<br><br>3️⃣ <strong>Immatriculer dans le statut le plus simple</strong> → auto-entrepreneur (Maroc), entreprise individuelle (OHADA), freelance déclaré (Tunisie). Obtenir ton numéro fiscal et ton registre de commerce.<br><br>4️⃣ <strong>Monter en structure quand les enjeux le justifient</strong> → SARL quand tu as des clients B2B réguliers, des associés, ou des besoins de protection du patrimoine personnel.<br><br>5️⃣ <strong>Structurer la gouvernance</strong> → statuts clairs, répartition des rôles, décisions documentées. Même pour une SARL de 2 associés — les conflits naissent toujours des zones floues."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La règle : la complexité de ta structure juridique doit être proportionnelle à la complexité de ton activité. Une SARL avec 5 associés pour une activité qui génère 200 000 FCFA/mois, c'est trop. Une auto-entreprise pour signer un contrat de 500 000 DH avec l'État, c'est insuffisant."
+        }
+      ]
+    },
+
+    {
+      "titre": "Structurer ses finances dès le premier jour",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La structuration juridique n'a de valeur que si elle s'accompagne d'une structuration financière. Les deux vont ensemble.<br><br>Les fondamentaux à mettre en place dès l'immatriculation :<br><br>🏦 <strong>Compte bancaire professionnel séparé</strong> → toutes les entrées et sorties liées à l'activité passent par ce compte uniquement. Zéro mélange avec le perso.<br><br>📊 <strong>Tableau de bord simple</strong> → un Google Sheet avec 3 colonnes suffit au départ : date, libellé, montant (entrée ou sortie). Tenu à jour chaque semaine.<br><br>🧾 <strong>Factures numérotées systématiquement</strong> → toute vente = une facture. C'est obligatoire légalement et indispensable pour un suivi propre.<br><br>📅 <strong>Calendrier fiscal</strong> → connaître tes dates de déclaration et de paiement des impôts et cotisations sociales dans ton pays. Les pénalités de retard sont évitables.<br><br>👩‍💼 <strong>Un comptable dès que possible</strong> → même à mi-temps ou pour une prestation trimestrielle. Pas parce que tu ne peux pas apprendre — mais parce que ton temps vaut mieux que d'apprendre la comptabilité par l'erreur."
+        },
+        {
+          "type": "attention",
+          "contenu": "La cause n°1 de fermeture de TPE en Afrique n'est pas le manque de clients — c'est le manque de gestion financière. Des entreprises profitables ferment parce que le dirigeant ne sait pas si son activité est réellement rentable, n'a pas de réserve de trésorerie, ou confond chiffre d'affaires et bénéfice."
+        }
+      ]
+    },
+
+    {
+      "titre": "Premiers recrutements : ce qu'il faut savoir avant de se lancer",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Embaucher est l'une des décisions les plus importantes d'un dirigeant — et l'une des plus sous-préparées.<br><br>Avant d'embaucher, réponds à ces 3 questions :<br><br>💰 <strong>Est-ce que mon activité peut soutenir ce coût durablement ?</strong> → un salarié coûte plus que son salaire brut. Ajoute les charges sociales patronales (35 à 50 % du salaire selon le pays), les équipements, la formation, la gestion du temps dédié.<br><br>📋 <strong>Ai-je documenté ce que je vais déléguer ?</strong> → embaucher sans processus clair, c'est recruter quelqu'un pour improviser à ta place. Avant le recrutement, la fiche de poste et les processus clés doivent exister.<br><br>🎯 <strong>Ai-je essayé le freelance ou le stage d'abord ?</strong> → pour un premier recrutement, commencer par un freelance sur une mission précise ou un stagiaire sur 3-6 mois est presque toujours plus sage qu'un CDI immédiat."
+        },
+        {
+          "type": "texte",
+          "contenu": "Les formes de recrutement du moins contraignant au plus engageant :<br><br>🔵 <strong>Freelance à la mission</strong> → le plus flexible. Pas de charges sociales. Idéal pour tester une compétence ou couvrir un pic d'activité.<br>🟢 <strong>Stage conventionné</strong> → coût faible (indemnité de stage). Opportunité de former quelqu'un à ta façon de travailler. Attention : doit vraiment être formateur, pas juste exploiteur.<br>🟡 <strong>CDD (Contrat à Durée Déterminée)</strong> → engagement limité dans le temps. Utile pour un projet ou une saison spécifique.<br>🔴 <strong>CDI (Contrat à Durée Indéterminée)</strong> → l'engagement le plus fort. À réserver quand tu as la certitude que le besoin est permanent et que ta trésorerie le permet sur 12 mois minimum."
+        }
+      ]
+    },
+
+    {
+      "titre": "Rédiger une fiche de poste qui attire les bons profils",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Une bonne fiche de poste n'est pas une liste d'exigences — c'est une invitation. Elle doit donner envie à la bonne personne de postuler, et décourager les profils inadaptés.<br><br>Structure d'une fiche de poste efficace :<br><br>🏢 <strong>Qui sommes-nous</strong> → 3 lignes sur ton entreprise, ta mission, ton ambiance de travail. Les bons candidats choisissent aussi leur employeur.<br>🎯 <strong>Ce que tu feras concrètement</strong> → 5 à 8 missions réelles, formulées en verbes d'action. Pas <em>« participation à »</em> mais <em>« tu gèreras, tu créeras, tu suivras »</em>.<br>🧩 <strong>Ce que tu apportes</strong> → compétences nécessaires (les vraies, pas une liste aspirationnelle impossible), expérience souhaitée, qualités importantes.<br>💰 <strong>Ce que tu offres</strong> → rémunération (ou fourchette), avantages, conditions de travail, perspectives. Ne pas indiquer le salaire est un signal négatif en 2024.<br>📨 <strong>Comment postuler</strong> → une action claire, un délai, un interlocuteur nommé."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Diallo, fondateur d'un cabinet de conseil RH à Conakry :</strong><br><br>Sa première offre d'emploi listait 15 compétences requises et aucun salaire. Il a reçu 3 candidatures peu qualifiées.<br><br>Il a retravaillé l'annonce : 5 missions concrètes, 4 compétences réellement nécessaires, une fourchette salariale honnête et 3 lignes sur la culture de son cabinet.<br><br>Sa seconde offre a généré 22 candidatures en 10 jours — dont 8 très qualifiées. Il a embauché sa première collaboratrice en 3 semaines.<br><br>La leçon : une annonce qui attire tout le monde n'attire personne. La précision est un filtre — et un signal de professionnalisme."
+        }
+      ]
+    },
+
+    {
+      "titre": "Intégrer un nouveau collaborateur : les 90 premiers jours",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'intégration (onboarding) est l'étape la plus négligée du recrutement — et la plus déterminante pour la rétention.<br><br>Selon Gallup (2023), <strong>les collaborateurs dont l'intégration est structurée ont 82 % plus de chance d'être encore présents après un an</strong>.<br><br>Le plan des 90 premiers jours :<br><br>📅 <strong>Semaine 1 — Contexte</strong> → histoire de l'entreprise, valeurs, vision, présentation des outils et des processus clés. Pas de pression sur les résultats.<br><br>📅 <strong>Mois 1 — Observations et premières contributions</strong> → la personne observe, pose des questions, fait ses premières tâches encadrées. Un point hebdomadaire de 30 minutes.<br><br>📅 <strong>Mois 2 — Montée en autonomie</strong> → elle prend en charge ses missions avec un suivi bi-hebdomadaire. Tu es disponible, pas omniprésent.<br><br>📅 <strong>Mois 3 — Autonomie et évaluation</strong> → bilan des 90 jours : ce qui fonctionne, ce qui doit s'améliorer, les objectifs du prochain trimestre."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Un collaborateur bien intégré devient opérationnel 2 fois plus vite qu'un collaborateur livré à lui-même. Le temps investi dans l'intégration se récupère en quelques semaines — et évite le coût d'un recrutement raté."
+        }
+      ]
+    },
+
+    {
+      "titre": "Structurer sans alourdir : la règle des processus essentiels",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "En structurant ta TPE, le risque est de créer une bureaucratie qui ralentit plus qu'elle n'aide. La règle : <strong>ne crée un processus que lorsque son absence a causé un problème au moins 2 fois</strong>.<br><br>Les processus vraiment essentiels pour une TPE de 1 à 10 personnes :<br><br>📋 <strong>Accueil client</strong> → comment un nouveau client entre dans ton système, signe, est briefé et reçoit son premier livrable<br>💰 <strong>Facturation et relance</strong> → comment et quand les factures sont émises, suivies et relancées<br>📊 <strong>Reporting mensuel</strong> → un tableau de bord simplifié : CA du mois, charges, marge, trésorerie disponible<br>🤝 <strong>Recrutement</strong> → fiche de poste → entretien → décision → onboarding — le même processus à chaque fois<br>📢 <strong>Communication client régulière</strong> → comment tu informes tes clients de l'avancement sans qu'ils aient à te relancer"
+        },
+        {
+          "type": "texte",
+          "contenu": "Ce que tu n'as PAS besoin de structurer tout de suite :<br>→ Des réunions d'équipe formelles si tu es encore seul ou à 2<br>→ Un logiciel RH complet pour 3 personnes<br>→ Des politiques écrites pour tout<br>→ Un organigramme si tout le monde sait qui fait quoi<br><br>La structuration doit servir l'efficacité — pas donner l'apparence de la grande entreprise."
+        }
+      ]
+    },
+
+    {
+      "titre": "Accéder aux marchés institutionnels avec ta structure",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'un des grands avantages de la formalisation est l'accès à des marchés qui t'étaient fermés. Les marchés institutionnels (État, collectivités, ONG, multinationales) représentent souvent les contrats les plus stables et les mieux rémunérés.<br><br>Pour y accéder, tu auras besoin d'un <strong>dossier de qualification</strong> qui comprend généralement :<br><br>📄 Extrait du registre de commerce (moins de 3 mois)<br>📋 Statuts de la société<br>💰 Attestation fiscale à jour<br>🏦 Relevé d'identité bancaire professionnel<br>📊 Bilans des 2 ou 3 dernières années (si disponibles)<br>📁 Références clients et lettres de recommandation<br>🛡️ Attestation d'assurance professionnelle (selon secteur)<br><br>Préparer ce dossier une fois et le tenir à jour te permettra de répondre rapidement à toute demande de qualification — souvent à une deadline serrée."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Les appels d'offres institutionnels sont souvent accessibles aux petites structures — mais peu de TPE y répondent parce qu'elles n'ont pas leur dossier prêt. Prépare ton dossier de qualification avant d'en avoir besoin. La prochaine opportunité peut arriver à tout moment."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — Sandra, de la prestation informelle au cabinet structuré",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Le départ (2021) :</strong> Sandra forme des PME camerounaises à la gestion des ressources humaines. Elle travaille en indépendante, sans contrat écrit, payée en cash ou par mobile money. Elle gagne bien sa vie mais refuse systématiquement les missions avec les grandes entreprises et les ONG qui demandent une facture.<br><br><strong>La structuration progressive :</strong><br>→ Immatriculation d'une SARL à Douala : 2 semaines, accompagnée par le Centre de Formalités des Entreprises<br>→ Ouverture d'un compte professionnel à la Société Générale Cameroun<br>→ Embauche d'une assistante administrative à temps partiel (20h/semaine)<br>→ Constitution du dossier de qualification pour les marchés institutionnels<br><br><strong>Le résultat :</strong> En 8 mois, Sandra a signé 2 contrats avec des ONG internationales et 1 avec une multinationale. Son CA a été multiplié par 2,8. Elle a embauché un deuxième formateur associé.<br><br><strong>Ce qu'elle dit rétrospectivement :</strong> <em>« J'ai perdu 2 ans de contrats par peur des démarches administratives. Ça m'a pris 3 semaines pour me formaliser. »</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La formalisation est souvent moins complexe qu'on l'imagine — et plus rentable qu'on ne le calcule. Les portes qu'elle ouvre compensent largement les charges qu'elle impose."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 erreurs à éviter dans la structuration",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs sont communes — et évitables :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Se formaliser trop tôt sans revenus stables</strong> → les charges fixes d'une structure juridique doivent être couvertes par l'activité. Une SARL sans clients est un coût inutile.<br>❌ <strong>Choisir le mauvais statut juridique</strong> → l'auto-entreprise n'est pas adaptée aux activités B2B à fort CA, la SA est surdimensionnée pour une TPE naissante. Consulte avant de choisir.<br>❌ <strong>Confondre recrutement et délégation</strong> → embaucher quelqu'un pour faire « tout ce que tu ne veux pas faire » sans définir clairement les missions ne fonctionne jamais.<br>❌ <strong>Ne pas prévoir le coût total d'un recrutement</strong> → salaire brut + charges patronales + équipements + formation + temps de management = 1,5 à 2x le salaire net<br>❌ <strong>Négliger l'intégration</strong> → un recrutement raté coûte en moyenne 6 à 9 mois de salaire en perte de productivité, selon le Cabinet Hay Group (2023)"
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "📖 <strong>OHADA (2014).</strong> <em>Acte uniforme relatif au droit des sociétés commerciales et du groupement d'intérêt économique.</em> Révision 2014 — cadre juridique des entreprises en Afrique de l'Ouest<br>📖 <strong>Banque Africaine de Développement (2023).</strong> <em>Rapport sur la formalisation des PME en Afrique : contraintes et opportunités</em><br>📖 <strong>IFC — Groupe Banque Mondiale (2023).</strong> <em>Doing Business in Africa : Business Regulations for Domestic Firms</em><br>📖 <strong>Gallup (2023).</strong> <em>State of the Global Workplace</em> — données sur l'onboarding et la rétention des talents<br>📖 <strong>Direction Générale des Impôts Maroc (2023).</strong> <em>Guide de l'auto-entrepreneur</em><br>📖 <strong>Hay Group (2023).</strong> <em>The True Cost of Employee Turnover</em> — coût d'un recrutement raté"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Structurer son activité n'est pas une fin en soi — c'est un levier. Chaque étape de formalisation doit te rapprocher de tes objectifs stratégiques : accéder à de nouveaux marchés, attirer de meilleurs partenaires, bâtir quelque chose qui peut vivre sans toi un jour. Commence simplement. Avance progressivement. Et ne tarde pas plus que nécessaire."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Quand est-il le bon moment pour formaliser son activité ?",
+      "options": [
+        "Dès le premier jour de l'activité, avant même d'avoir des clients",
+        "Uniquement quand l'activité atteint 1 million de chiffre d'affaires",
+        "Quand l'informalité devient un frein : marchés institutionnels fermés, impossibilité d'embaucher, accès au crédit bloqué",
+        "Seulement si on envisage de s'associer avec d'autres personnes"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Que signifie l'acronyme OHADA et quels pays couvre ce cadre juridique ?",
+      "options": [
+        "Organisation d'Harmonisation Administrative pour le Développement Africain — 5 pays fondateurs",
+        "Organisation pour l'Harmonisation en Afrique du Droit des Affaires — 17 pays d'Afrique francophone",
+        "Office d'Harmonisation des Activités et du Droit des Affaires — Maroc, Tunisie, Algérie uniquement",
+        "Organisation Halal et Africaine pour le Développement des Affaires — pays du Sahel uniquement"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans quel ordre logique doit-on progresser dans la structuration juridique ?",
+      "options": [
+        "SARL d'abord pour être crédible, puis développer l'activité pour couvrir les charges",
+        "Stabiliser les revenus → statut simple (auto-entrepreneur/EI) → SARL quand les enjeux le justifient",
+        "SA immédiatement pour maximiser la crédibilité face aux partenaires institutionnels",
+        "Créer une holding avant toute autre structure pour optimiser la fiscalité"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Selon Gallup (2023), quel est l'avantage principal d'un onboarding structuré pour un nouveau collaborateur ?",
+      "options": [
+        "Il réduit le coût de formation initiale de 50 % par rapport à un onboarding informel",
+        "Les collaborateurs bien intégrés ont 82 % plus de chance d'être encore présents après un an",
+        "Il permet de réduire la période d'essai de 3 mois à 1 mois",
+        "Il garantit une productivité immédiate dès la première semaine de travail"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Dans l'étude de cas de Sandra (Douala), quel a été le principal frein à sa formalisation pendant 2 ans ?",
+      "options": [
+        "Les coûts administratifs trop élevés pour une petite activité",
+        "L'impossibilité d'obtenir un compte bancaire professionnel au Cameroun",
+        "La peur des démarches administratives, alors que la formalisation n'a pris que 3 semaines",
+        "Le manque de clients stables pour justifier les charges d'une structure juridique"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
