@@ -1,0 +1,244 @@
+{
+  "id": 43,
+  "titre": "Finance sans crédit : autofinancement, subventions, crowdfunding et financement islamique",
+  "duree": "20 min",
+  "phase": 4,
+  "description": "Développer son activité sans recourir au crédit bancaire classique est non seulement possible — c'est souvent plus sain et plus durable. Ce module explore toutes les voies de financement qui ne passent pas par l'emprunt à intérêt : autofinancement, subventions, avances clients, tontines, crowdfunding et instruments islamiques. Des solutions concrètes, adaptées à nos marchés.",
+
+  "sections": [
+
+    {
+      "titre": "Financer sans crédit : un choix stratégique, pas une contrainte",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Pour une large part de notre audience, le crédit bancaire classique est exclu par conviction religieuse — le riba (intérêt) est interdit en islam. Mais même pour ceux qui n'ont pas cette contrainte, financer sans crédit présente des avantages concrets :<br><br>🔒 <strong>Zéro dépendance</strong> → pas de créancier, pas d'échéances à honorer quoi qu'il arrive, pas de patrimoine personnel engagé en garantie<br>📈 <strong>Discipline financière forcée</strong> → quand on ne peut pas emprunter, on apprend à optimiser, à tester avant d'investir, à croître en cohérence avec ses revenus réels<br>🧘 <strong>Moins de stress</strong> → une dette crée une pression permanente qui influence toutes les décisions. Un business autofinancé a plus de liberté de choix<br>🌱 <strong>Croissance plus saine</strong> → les entreprises qui croissent sur leurs propres ressources ont statistiquement un taux de survie plus élevé à 5 ans (Banque Mondiale, 2023)"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La contrainte de financer sans crédit t'oblige à valider ton modèle avant de l'étendre. C'est une discipline que beaucoup d'entrepreneurs sous-capitalisés auraient dû s'imposer. Ce que tu perds en vitesse, tu le gagnes en solidité."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 1 — L'autofinancement : faire croître ce qui existe",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'autofinancement (ou <em>bootstrapping</em>) consiste à financer la croissance de son activité uniquement à partir de ses propres revenus — sans apport externe.<br><br>Les 3 leviers de l'autofinancement :<br><br>💰 <strong>Maximiser sa marge</strong> → avant de chercher plus de clients, optimise ce que tu gagnes sur chaque client existant. Revoir ses prix, réduire ses coûts, proposer des upsells.<br><br>🔄 <strong>Réinvestir les bénéfices</strong> → définir dès le départ quel pourcentage de chaque vente est réinvesti dans le développement (outil, formation, marketing). Même 10 % systématiquement réinvesti crée une dynamique de croissance.<br><br>⏱️ <strong>Allonger le délai de paiement fournisseur, raccourcir le délai client</strong> → tu encaisses tes clients rapidement (acompte à la commande, paiement à la livraison) et tu pais tes fournisseurs dans les délais les plus longs possibles. Cet écart crée de la trésorerie sans emprunter."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Rachid, imprimeur à Tanger :</strong><br><br>Rachid voulait acheter une seconde machine à imprimer (coût : 85 000 DH). Il a refusé l'emprunt bancaire.<br><br>Sa stratégie autofinancement sur 14 mois :<br>→ Il a augmenté ses tarifs de 15 % en mettant en avant la qualité et la livraison garantie sous 24h<br>→ Il a exigé un acompte de 50 % à la commande (contre 0 % avant)<br>→ Il a réinvesti 25 % de chaque bénéfice mensuel dans un compte dédié<br><br>Au bout de 14 mois, il a acheté la machine comptant — sans intérêts, sans garantie bancaire, sans stress d'échéances."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 2 — Les avances et préventes clients",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "L'une des sources de financement les plus sous-utilisées est celle qui est sous tes yeux : tes clients eux-mêmes.<br><br>Plusieurs mécanismes permettent de faire financer ta croissance par ceux qui profitent de ce que tu crées :<br><br>📥 <strong>L'acompte à la commande</strong> → demander 30 à 50 % du montant dès la signature du contrat. Standard dans le B2B — souvent négligé par peur de brusquer le client. Pourtant, un client qui paie un acompte est un client sérieux.<br><br>🚀 <strong>La prévente (pré-lancement)</strong> → vendre une formation, un produit ou un service avant qu'il soit créé, à un tarif préférentiel. Les revenus de la prévente financent la création. Ton premier groupe de clients valide ta demande ET finance ta production.<br><br>📅 <strong>L'abonnement mensuel</strong> → transformer une offre ponctuelle en service récurrent. Un client qui paie 15 000 FCFA/mois pendant 12 mois vaut mieux pour ta trésorerie qu'un client qui paie 150 000 FCFA une seule fois."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Fatoumata, créatrice d'une gamme de cosmétiques naturels à Bamako :</strong><br><br>Elle voulait lancer une nouvelle ligne de 8 produits. Coût de production première série : 1 200 000 FCFA. Pas de trésorerie disponible.<br><br>Elle a lancé une prévente sur WhatsApp et Instagram :<br>→ Tarif prévente : -25 % sur le tarif normal<br>→ Livraison garantie dans 45 jours<br>→ 50 commandes nécessaires pour lancer la production<br><br>Elle a atteint 73 commandes en 3 semaines. Les acomptes collectés (60 % à la commande) ont financé 85 % du coût de production. La nouvelle gamme s'est lancée sans aucun emprunt."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 3 — Les subventions et programmes d'aide",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Des centaines de millions d'euros et de dollars sont disponibles chaque année pour les entrepreneurs africains et maghrébins — via des programmes publics, des fondations privées et des organisations internationales. La majorité de cet argent reste non sollicité, faute de candidats informés.<br><br>Les principales sources de subventions accessibles :<br><br>🏛️ <strong>Programmes publics nationaux</strong><br>→ Maroc : Fond INPACT (Maroc PME), Fond Hassan II, programmes de l'ANAPEC<br>→ Sénégal : DER/FJ (Délégation Générale à l'Entrepreneuriat Rapide), FONSIS<br>→ Côte d'Ivoire : FDFP, FIGA, programme PADMPME<br>→ Tunisie : BFPME, FONAPRA, programmes CONECT<br><br>🌍 <strong>Organisations internationales</strong><br>→ Banque Africaine de Développement (BAD) — fonds pour les PME<br>→ Banque Islamique de Développement (BID) — financement islamique<br>→ IFC (Groupe Banque Mondiale) — programmes d'accompagnement<br>→ AFD (Agence Française de Développement) — projets à impact social<br><br>🏆 <strong>Concours et prix entrepreneuriaux</strong><br>→ Chivas The Venture (entrepreneuriat social)<br>→ Africa CEO Forum Awards<br>→ Prix Orange des Entrepreneurs"
+        },
+        {
+          "type": "attention",
+          "contenu": "Les subventions demandent du travail de dossier et de la patience. Les délais entre candidature et décision peuvent aller de 3 à 12 mois. Ne les inclus jamais dans ton plan de trésorerie à court terme. Traite-les comme un bonus possible — jamais comme une ressource planifiée."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 4 — La tontine professionnelle",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La <strong>tontine</strong> est l'un des instruments financiers les plus anciens et les plus répandus en Afrique. C'est un système d'épargne et de crédit rotatif entre personnes de confiance, sans intérêt, sans banque.<br><br>Comment ça fonctionne :<br>→ Un groupe de 5 à 20 personnes cotise une somme fixe à intervalles réguliers (hebdomadaire, mensuel)<br>→ Chaque cycle, la totalité de la cagnotte est remise à un membre différent, selon un ordre prédéfini<br>→ En fin de cycle complet, tout le monde a reçu une fois la totalité — sans frais ni intérêts<br><br>Adapté au contexte entrepreneurial :<br>→ Tontines entre entrepreneurs d'un même secteur ou d'un même incubateur<br>→ Montants adaptés aux capacités de chacun (pas nécessairement uniformes)<br>→ Peut financer un investissement ciblé (matériel, formation, stock)<br><br>La BID (Banque Islamique de Développement) reconnaît la tontine comme un instrument islamique compatible — basé sur la confiance mutuelle et l'absence d'intérêt."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La tontine ne se limite pas aux marchés. Des entrepreneurs de TPE/PME dans toute l'Afrique créent des tontines entre pairs — avocats, médecins, formateurs, consultants — pour financer leurs investissements professionnels. Si tu n'en fais pas partie, rejoins-en une ou crée la tienne."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 5 — Le crowdfunding islamique et participatif",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Le <strong>crowdfunding</strong> (financement participatif) permet de lever des fonds auprès d'un grand nombre de contributeurs via une plateforme en ligne. Il en existe plusieurs formes — toutes ne sont pas halal.<br><br>🟢 <strong>Crowdfunding en don</strong> → les contributeurs donnent sans attendre de retour financier. Halal. Adapté aux projets à impact social ou culturel fort. Plateformes : Zakat House, LaunchGood, GoFundMe.<br><br>🟢 <strong>Crowdfunding en récompense</strong> → les contributeurs reçoivent un produit ou un service en échange. Halal. Adapté aux produits physiques ou formations. Plateformes : Kickstarter, KisskissBankbank, Ulule.<br><br>🟢 <strong>Crowdfunding en equity islamique</strong> → les investisseurs deviennent co-propriétaires et partagent les bénéfices ET les pertes (modèle Musharakah). Halal. Plateformes : Ethis, Wahed Invest, Shekra.<br><br>🔴 <strong>Crowdfunding en prêt (P2P lending)</strong> → les prêteurs reçoivent un intérêt sur leur prêt. Non halal — à éviter."
+        },
+        {
+          "type": "exemple",
+          "contenu": "<strong>Emeka, créateur d'une école de coding à Kano (Nigeria) :</strong><br><br>Il voulait équiper 30 postes informatiques pour son école (coût : 4 500 000 NGN).<br><br>Il a lancé une campagne sur LaunchGood (plateforme de crowdfunding islamique) en 3 semaines de préparation :<br>→ Vidéo de 2 minutes présentant l'impact sur sa communauté<br>→ Objectif : 3 000 000 NGN (il garderait 1 500 000 NGN de trésorerie pour compléter)<br>→ Contreparties : formation gratuite pour les enfants des donateurs, mentions publiques<br><br>Résultat en 30 jours : 3 780 000 NGN collectés auprès de 214 contributeurs — dépassant son objectif. L'école a ouvert 6 semaines après la campagne."
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 6 — Les instruments de finance islamique",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "La finance islamique offre des instruments sophistiqués qui permettent de financer l'acquisition d'actifs, le développement de projets ou le fonds de roulement — sans intérêt.<br><br>Les 4 instruments les plus accessibles aux TPE/PME :<br><br>🏪 <strong>La Murabaha</strong> → la banque achète un bien (équipement, véhicule, matières premières) et te le revend avec une marge bénéficiaire convenue. Tu paies en versements fixes. La marge est connue dès le départ — pas d'intérêt variable.<br><br>🏘️ <strong>L'Ijarah</strong> → équivalent islamique du crédit-bail (leasing). La banque achète l'actif et te le loue. À la fin du contrat, tu peux l'acquérir. Adapté aux équipements professionnels.<br><br>🤝 <strong>La Musharakah</strong> → partenariat de capital entre toi et la banque (ou un investisseur). Les deux parties apportent des fonds et partagent les bénéfices ET les pertes proportionnellement. Aucun intérêt — seulement un partage équitable.<br><br>🌾 <strong>La Mudarabah</strong> → un investisseur apporte le capital, toi tu apportes l'expertise et le travail. Les bénéfices sont partagés selon un ratio convenu. Les pertes sont supportées par l'investisseur seulement (sauf négligence)."
+        },
+        {
+          "type": "texte",
+          "contenu": "Où accéder à la finance islamique dans nos marchés :<br><br>🇲🇦 <strong>Maroc</strong> → Banques participatives : CIH Bank participatif, Umnia Bank, Al Akhdar Bank, BTI Bank<br>🇸🇳 <strong>Sénégal</strong> → Banque islamique du Sénégal (BIS), BIMAO<br>🇨🇮 <strong>Côte d'Ivoire</strong> → Banque Islamique de Côte d'Ivoire (BICI), Versus Bank islamique<br>🇹🇳 <strong>Tunisie</strong> → Zitouna Bank, Al Baraka Bank<br>🌍 <strong>Tous pays</strong> → Banque Islamique de Développement (BID) — programmes pour les PME à impact"
+        }
+      ]
+    },
+
+    {
+      "titre": "Pilier 7 — Les incubateurs comme sources de ressources non financières",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Les incubateurs et accélérateurs offrent bien plus que de l'argent. Leurs ressources non financières ont souvent plus de valeur que le financement lui-même :<br><br>🏢 <strong>Espace de travail</strong> → bureau ou coworking gratuit ou à tarif réduit. Économie réelle sur le loyer.<br>🎓 <strong>Formation et coaching</strong> → accès à des experts sectoriels, des mentors, des intervenants extérieurs. Valeur équivalente à plusieurs milliers d'euros de conseil.<br>🌐 <strong>Réseau</strong> → l'accès au réseau de l'incubateur (investisseurs, clients potentiels, partenaires) est souvent l'actif le plus précieux.<br>📣 <strong>Visibilité</strong> → être incubé dans une structure reconnue est un signal de qualité pour tes clients et partenaires.<br>💰 <strong>Accès à des financements dédiés</strong> → les incubateurs ont souvent des accords avec des fonds d'amorçage, des fondations ou des programmes gouvernementaux accessibles uniquement via eux.<br><br>Les incubateurs africains à connaître : ActivSpaces (Cameroun), CTIC Dakar, Dare Incubator (Maroc), BSTP Abidjan, Flat6Labs (MENA), Impact Hub (réseau mondial)."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Intégrer un incubateur ne coûte généralement rien ou très peu — mais demande du travail de dossier et de la préparation du pitch. Le retour sur investissement de cet effort peut être considérable : mentors, réseau, visibilité et parfois financements directs."
+        }
+      ]
+    },
+
+    {
+      "titre": "Construire son plan de financement sans crédit",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Un plan de financement sans crédit ne s'improvise pas. Il se construit méthodiquement en 5 étapes :<br><br>1️⃣ <strong>Quantifier le besoin précisément</strong> → combien as-tu besoin exactement, pour quoi, et en combien de temps ? Un besoin flou génère une recherche floue.<br><br>2️⃣ <strong>Identifier les sources mobilisables</strong> → pour chaque besoin, liste toutes les options disponibles (autofinancement, avances clients, tontine, subvention, instrument islamique, incubateur). Il y en a toujours plusieurs.<br><br>3️⃣ <strong>Prioriser les sources sans contrainte</strong> → commence par les sources qui ne créent aucune obligation (autofinancement, subventions, préventes). Puis celles avec des obligations légères (tontine, Musharakah). Les instruments avec remboursement en dernier.<br><br>4️⃣ <strong>Constituer un fonds de précaution</strong> → toujours conserver 2 à 3 mois de charges fixes en trésorerie disponible avant tout investissement. Ce coussin évite l'urgence qui pousse aux mauvaises décisions.<br><br>5️⃣ <strong>Documenter et suivre</strong> → chaque source de financement, ses conditions et son calendrier dans un tableau simple. La transparence avec toi-même est la première transparence comptable."
+        },
+        {
+          "type": "attention",
+          "contenu": "La tentation en cas de difficulté de trésorerie est de chercher du financement externe rapidement. Avant de le faire, pose-toi ces questions : est-ce que j'ai optimisé ma marge ? Est-ce que tous mes clients ont payé ? Est-ce que j'ai des avances sur commandes en attente ? La réponse à ta crise de trésorerie est souvent à l'intérieur avant d'être à l'extérieur."
+        }
+      ]
+    },
+
+    {
+      "titre": "Étude de cas — financer une TPE en croissance sans emprunt",
+      "blocs": [
+        {
+          "type": "exemple",
+          "contenu": "<strong>Contexte :</strong> Hafsa dirige un cabinet de formation professionnelle à Rabat. Elle a besoin de 180 000 DH pour aménager de nouveaux locaux plus grands, acquérir du matériel pédagogique et recruter un formateur associé. Refus du crédit bancaire par conviction.<br><br><strong>Son plan de financement en 4 sources :</strong><br><br>💰 <strong>Source 1 — Autofinancement (60 000 DH)</strong> → réinvestissement de 30 % des bénéfices sur 8 mois<br><br>📥 <strong>Source 2 — Avances clients (45 000 DH)</strong> → elle propose à 3 entreprises clientes un contrat annuel prépayé avec 10 % de remise. Les 3 signent.<br><br>🤝 <strong>Source 3 — Tontine professionnelle (40 000 DH)</strong> → elle crée une tontine avec 8 autres formatrices de son réseau. Cotisation mensuelle de 5 000 DH. Elle reçoit la mise du mois 8.<br><br>🏛️ <strong>Source 4 — Subvention OFPPT (35 000 DH)</strong> → elle candidate au programme de mise à niveau des organismes de formation. Obtenue au mois 6.<br><br><strong>Résultat :</strong> Les 180 000 DH sont réunis en 10 mois. Les nouveaux locaux ouvrent. Zéro dette, zéro intérêt, zéro stress d'échéances bancaires."
+        },
+        {
+          "type": "point_cle",
+          "contenu": "Hafsa n'a pas trouvé 180 000 DH en une seule source. Elle a combiné 4 sources complémentaires, planifié sur 10 mois et maintenu sa discipline financière. C'est ça, le financement sans crédit : de la patience, de la méthode, et la conviction que la croissance organique est possible."
+        }
+      ]
+    },
+
+    {
+      "titre": "Les 5 erreurs dans la recherche de financement",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "Ces erreurs retardent ou bloquent l'accès aux financements disponibles :"
+        },
+        {
+          "type": "attention",
+          "contenu": "❌ <strong>Chercher du financement avant d'avoir un modèle prouvé</strong> → les subventions et partenaires financent des projets qui ont déjà démontré leur viabilité, pas des idées<br>❌ <strong>Ne cibler qu'une seule source</strong> → le financement sans crédit est presque toujours une combinaison de plusieurs sources<br>❌ <strong>Ne pas préparer son dossier</strong> → les programmes d'aide ont des exigences précises. Un dossier incomplet est systématiquement rejeté<br>❌ <strong>Confondre subvention et revenu</strong> → une subvention est un financement conditionné à des engagements (résultats, rapports, utilisation des fonds). La mal gérer peut obliger au remboursement<br>❌ <strong>Intégrer les financements externes dans la trésorerie courante</strong> → les fonds levés doivent être destinés à des investissements précis, pas à couvrir les charges opérationnelles quotidiennes"
+        }
+      ]
+    },
+
+    {
+      "titre": "Sources de ce module",
+      "blocs": [
+        {
+          "type": "texte",
+          "contenu": "📖 <strong>Banque Mondiale (2023).</strong> <em>Financing Africa's SMEs : Constraints, Opportunities and Solutions</em> — données sur les sources de financement et taux de survie des PME<br>📖 <strong>Banque Islamique de Développement (2023).</strong> <em>Islamic Finance for SMEs in OIC Countries</em> — instruments islamiques accessibles aux petites entreprises<br>📖 <strong>AAOIFI (2023).</strong> <em>Shariah Standards for Islamic Financial Institutions</em> — standards de conformité des instruments financiers islamiques<br>📖 <strong>DataReportal (2024).</strong> <em>Digital 2024 Africa</em> — données sur le crowdfunding et les paiements mobiles<br>📖 <strong>FinAFRICA (2023).</strong> <em>État du financement participatif en Afrique francophone</em> — plateformes et volumes de crowdfunding<br>📖 <strong>BAD — Banque Africaine de Développement (2024).</strong> <em>African Economic Outlook — Financement des PME</em>"
+        },
+        {
+          "type": "point_cle",
+          "contenu": "La finance sans crédit n'est pas une limitation — c'est une philosophie entrepreneuriale qui t'oblige à construire ce que tu peux soutenir. Les entreprises les plus solides sont souvent celles qui n'ont jamais eu besoin d'emprunter pour grandir."
+        }
+      ]
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 1 sur 5",
+      "question": "Parmi les formes de crowdfunding citées dans ce module, laquelle est incompatible avec les principes islamiques ?",
+      "options": [
+        "Le crowdfunding en don — les contributeurs donnent sans retour financier attendu",
+        "Le crowdfunding en récompense — les contributeurs reçoivent un produit en échange",
+        "Le crowdfunding en prêt (P2P lending) — les prêteurs reçoivent un intérêt sur leur prêt",
+        "Le crowdfunding en equity islamique basé sur le modèle Musharakah"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 2 sur 5",
+      "question": "Dans l'instrument islamique de la Murabaha, comment fonctionne le financement d'un achat d'équipement ?",
+      "options": [
+        "La banque prête de l'argent avec un taux d'intérêt fixe convenu à l'avance",
+        "La banque achète le bien et te le revend avec une marge bénéficiaire fixe connue dès le départ, payable en versements",
+        "L'équipement est loué à la banque avec option d'achat à la fin du contrat",
+        "La banque et l'entreprise deviennent co-propriétaires et partagent les bénéfices"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 3 sur 5",
+      "question": "Dans la stratégie de Fatoumata (Bamako), comment a-t-elle financé sa nouvelle gamme de cosmétiques sans emprunt ?",
+      "options": [
+        "Elle a obtenu une subvention gouvernementale malienne pour les entrepreneures",
+        "Elle a rejoint une tontine professionnelle avec d'autres créatrices de cosmétiques",
+        "Elle a lancé une prévente avec acompte de 60 % à la commande qui a financé 85 % de la production",
+        "Elle a utilisé la Murabaha de la Banque Islamique du Mali pour financer son stock initial"
+      ],
+      "reponse": 2
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 4 sur 5",
+      "question": "Quelle est la règle de précaution financière recommandée avant tout investissement selon ce module ?",
+      "options": [
+        "Avoir levé au moins 50 % du montant nécessaire en fonds propres avant de chercher des financements externes",
+        "Toujours conserver 2 à 3 mois de charges fixes en trésorerie disponible avant tout investissement",
+        "Avoir obtenu au moins un accord de principe d'un incubateur ou d'un investisseur",
+        "Attendre que le chiffre d'affaires mensuel soit stable depuis au moins 12 mois consécutifs"
+      ],
+      "reponse": 1
+    },
+
+    {
+      "type": "quiz",
+      "titre": "Quiz — question 5 sur 5",
+      "question": "Dans la Mudarabah, comment sont réparties les pertes entre l'investisseur et l'entrepreneur ?",
+      "options": [
+        "Les pertes sont partagées équitablement entre l'investisseur et l'entrepreneur selon le ratio convenu",
+        "L'entrepreneur supporte seul les pertes car il est responsable de la gestion opérationnelle",
+        "Les pertes sont supportées par l'investisseur uniquement, sauf en cas de négligence ou faute de l'entrepreneur",
+        "Un mécanisme d'assurance islamique (Takaful) couvre automatiquement les pertes des deux parties"
+      ],
+      "reponse": 2
+    }
+
+  ]
+}
