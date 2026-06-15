@@ -419,16 +419,18 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 </div>
 <div id="parcours-list"></div>  </div>
 
-  <<div id="tab-ressources" class="dash-wrap" style="display:none">
+  <div id="tab-ressources" class="dash-wrap" style="display:none">
   <div style="font-size:15px;font-weight:700;margin-bottom:6px">📚 Ressources incluses</div>
   <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Téléchargez vos ebooks et guides offerts avec votre abonnement</div>
   <div id="resources-list"></div>
-</div>
    <!-- IDÉES RENTABLES -->
 <div style="margin-top:20px">
   <div style="font-size:15px;font-weight:700;margin-bottom:4px">💡 40 Idées d'activités rentables en Afrique</div>
   <div style="font-size:13px;color:var(--muted);margin-bottom:12px">Avec juste une connexion internet et une compétence ou un produit digital</div>
   <div id="idees-list"></div>
+  <button onclick="generateIdeesPDF()" style="margin-top:12px;padding:11px 20px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:13px;font-weight:600;cursor:pointer;width:100%">
+    📥 Télécharger le guide PDF
+  </button>
 </div>
     <!-- SESSION DÉCOUVERTE -->
     <div class="upsell-card">
@@ -522,6 +524,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;text-align:center">Réponse sous 24h · Accès réservé aux apprenants de L'Accélérateur Digital</p>
     </div>
   </div>
+</div><!-- /tab-ressources -->
 
   <div id="tab-aide" class="dash-wrap" style="display:none">
     <div style="font-size:15px;font-weight:700;margin-bottom:4px">❓ Aide & FAQ</div>
