@@ -959,7 +959,7 @@ async function generateChecklistPDF() {
   doc.text('même si vous partez de zéro.', W/2, 153, {align:'center'});
 
   // Badges sections
-  const sections = ['🎯 Clarifier','👤 Cible','🌐 Présence','📱 Réseaux','✍️ Contenu','📧 Emailing','🔍 SEO','📣 Ads','⭐ E-réputation','🔒 Sécurité','📊 Mesurer','🚀 Action'];
+  const sections = ['Clarifier','Cible','Presence','Reseaux','Contenu','Emailing','SEO','Ads','E-reputation','Securite','Mesurer','Action'];
   const bW = 44, bH = 8, cols = 4;
   const startX = (W - cols*bW - (cols-1)*3) / 2;
   sections.forEach((s, i) => {
@@ -1087,7 +1087,7 @@ async function generateChecklistPDF() {
       doc.setFont('helvetica','bold');
       doc.setFontSize(10);
       doc.setTextColor(...white);
-      doc.text(`${sec.emoji}  ${sec.num}. ${sec.title}`, M+4, y+6.8);
+      doc.text(`${sec.num}. ${sec.title}`, M+4, y+6.8);
       y += 13;
 
       doc.setFont('helvetica','italic');
@@ -1143,7 +1143,7 @@ async function generateChecklistPDF() {
           doc.setFont('helvetica','bold');
           doc.setFontSize(8);
           doc.setTextColor(...amber);
-          doc.text('💡 Astuce Waneyo : ', M+5, y+4);
+          doc.text('> Astuce Waneyo : ', M+5, y+4);
           doc.setFont('helvetica','normal');
           doc.setTextColor(92, 70, 20);
           const tipLines = doc.splitTextToSize(sec.tip, W-2*M-40);
@@ -1167,52 +1167,52 @@ async function generateChecklistPDF() {
 }
 const IDEES = [
   // Formation
-  { titre:"Créer des formations en ligne (Udemy/Teachable)", categorie:"Formation", outil:"Udemy / Teachable", revenu:"Passif" },
-  { titre:"Proposer des cours particuliers en ligne via Zoom", categorie:"Formation", outil:"Zoom", revenu:"Actif" },
-  { titre:"Créer un cours de langue pour débutants", categorie:"Formation", outil:"YouTube / Teachable", revenu:"Mixte" },
-  { titre:"Lancer un bootcamp digital pour entrepreneurs africains", categorie:"Formation", outil:"WhatsApp / Zoom", revenu:"Actif" },
-  { titre:"Vendre des tutoriels vidéo sur une niche précise", categorie:"Formation", outil:"Gumroad / Payhip", revenu:"Passif" },
-  { titre:"Coacher des apprenants en reconversion professionnelle", categorie:"Formation", outil:"Zoom / Calendly", revenu:"Actif" },
+  { num:1,  title:"Créer des formations en ligne (Udemy/Teachable)", cat:"Formation", desc:"Outil : Udemy / Teachable  ·  Revenu : Passif" },
+  { num:2,  title:"Proposer des cours particuliers en ligne via Zoom", cat:"Formation", desc:"Outil : Zoom  ·  Revenu : Actif" },
+  { num:3,  title:"Créer un cours de langue pour débutants", cat:"Formation", desc:"Outil : YouTube / Teachable  ·  Revenu : Mixte" },
+  { num:4,  title:"Lancer un bootcamp digital pour entrepreneurs africains", cat:"Formation", desc:"Outil : WhatsApp / Zoom  ·  Revenu : Actif" },
+  { num:5,  title:"Vendre des tutoriels vidéo sur une niche précise", cat:"Formation", desc:"Outil : Gumroad / Payhip  ·  Revenu : Passif" },
+  { num:6,  title:"Coacher des apprenants en reconversion professionnelle", cat:"Formation", desc:"Outil : Zoom / Calendly  ·  Revenu : Actif" },
   // Réseaux sociaux
-  { titre:"Gérer les réseaux sociaux de PME locales", categorie:"Réseaux sociaux", outil:"Meta Business Suite", revenu:"Actif" },
-  { titre:"Créer du contenu pour des marques sur TikTok", categorie:"Réseaux sociaux", outil:"TikTok / CapCut", revenu:"Actif" },
-  { titre:"Devenir community manager freelance", categorie:"Réseaux sociaux", outil:"Hootsuite / Buffer", revenu:"Actif" },
-  { titre:"Vendre des packs de visuels pour réseaux sociaux", categorie:"Réseaux sociaux", outil:"Canva / Gumroad", revenu:"Passif" },
-  { titre:"Monétiser une page Instagram thématique", categorie:"Réseaux sociaux", outil:"Instagram", revenu:"Mixte" },
-  { titre:"Gérer des campagnes Facebook Ads pour des clients", categorie:"Réseaux sociaux", outil:"Meta Ads Manager", revenu:"Actif" },
+  { num:7,  title:"Gérer les réseaux sociaux de PME locales", cat:"Réseaux sociaux", desc:"Outil : Meta Business Suite  ·  Revenu : Actif" },
+  { num:8,  title:"Créer du contenu pour des marques sur TikTok", cat:"Réseaux sociaux", desc:"Outil : TikTok / CapCut  ·  Revenu : Actif" },
+  { num:9,  title:"Devenir community manager freelance", cat:"Réseaux sociaux", desc:"Outil : Hootsuite / Buffer  ·  Revenu : Actif" },
+  { num:10, title:"Vendre des packs de visuels pour réseaux sociaux", cat:"Réseaux sociaux", desc:"Outil : Canva / Gumroad  ·  Revenu : Passif" },
+  { num:11, title:"Monétiser une page Instagram thématique", cat:"Réseaux sociaux", desc:"Outil : Instagram  ·  Revenu : Mixte" },
+  { num:12, title:"Gérer des campagnes Facebook Ads pour des clients", cat:"Réseaux sociaux", desc:"Outil : Meta Ads Manager  ·  Revenu : Actif" },
   // Services digitaux
-  { titre:"Créer des sites web pour PME avec WordPress ou Wix", categorie:"Services digitaux", outil:"WordPress / Wix", revenu:"Actif" },
-  { titre:"Proposer des services de rédaction web (SEO)", categorie:"Services digitaux", outil:"Google Docs / Jasper", revenu:"Actif" },
-  { titre:"Faire de la transcription ou traduction de documents", categorie:"Services digitaux", outil:"Rev / Otter.ai", revenu:"Actif" },
-  { titre:"Vendre des templates Canva ou Notion", categorie:"Services digitaux", outil:"Canva / Etsy", revenu:"Passif" },
-  { titre:"Proposer des services de montage vidéo", categorie:"Services digitaux", outil:"CapCut / DaVinci", revenu:"Actif" },
-  { titre:"Automatiser des tâches pour entrepreneurs avec Zapier", categorie:"Services digitaux", outil:"Zapier / Make", revenu:"Actif" },
+  { num:13, title:"Créer des sites web pour PME avec WordPress ou Wix", cat:"Services digitaux", desc:"Outil : WordPress / Wix  ·  Revenu : Actif" },
+  { num:14, title:"Proposer des services de rédaction web (SEO)", cat:"Services digitaux", desc:"Outil : Google Docs / Jasper  ·  Revenu : Actif" },
+  { num:15, title:"Faire de la transcription ou traduction de documents", cat:"Services digitaux", desc:"Outil : Rev / Otter.ai  ·  Revenu : Actif" },
+  { num:16, title:"Vendre des templates Canva ou Notion", cat:"Services digitaux", desc:"Outil : Canva / Etsy  ·  Revenu : Passif" },
+  { num:17, title:"Proposer des services de montage vidéo", cat:"Services digitaux", desc:"Outil : CapCut / DaVinci  ·  Revenu : Actif" },
+  { num:18, title:"Automatiser des tâches pour entrepreneurs avec Zapier", cat:"Services digitaux", desc:"Outil : Zapier / Make  ·  Revenu : Actif" },
   // E-commerce
-  { titre:"Vendre des produits digitaux sur Etsy (ebooks, templates)", categorie:"E-commerce", outil:"Etsy", revenu:"Passif" },
-  { titre:"Faire du dropshipping ciblé Afrique / diaspora", categorie:"E-commerce", outil:"Shopify / AliExpress", revenu:"Actif" },
-  { titre:"Publier des livres sur Amazon KDP (autoédition)", categorie:"E-commerce", outil:"Amazon KDP", revenu:"Passif" },
-  { titre:"Vendre des PLR (droits de revente) de contenu", categorie:"E-commerce", outil:"Gumroad / Payhip", revenu:"Passif" },
-  { titre:"Créer une boutique en ligne avec System.io", categorie:"E-commerce", outil:"System.io", revenu:"Mixte" },
-  { titre:"Vendre des produits artisanaux africains à l'international", categorie:"E-commerce", outil:"Etsy / Shopify", revenu:"Actif" },
+  { num:19, title:"Vendre des produits digitaux sur Etsy (ebooks, templates)", cat:"E-commerce", desc:"Outil : Etsy  ·  Revenu : Passif" },
+  { num:20, title:"Faire du dropshipping ciblé Afrique / diaspora", cat:"E-commerce", desc:"Outil : Shopify / AliExpress  ·  Revenu : Actif" },
+  { num:21, title:"Publier des livres sur Amazon KDP (autoédition)", cat:"E-commerce", desc:"Outil : Amazon KDP  ·  Revenu : Passif" },
+  { num:22, title:"Vendre des PLR (droits de revente) de contenu", cat:"E-commerce", desc:"Outil : Gumroad / Payhip  ·  Revenu : Passif" },
+  { num:23, title:"Créer une boutique en ligne avec System.io", cat:"E-commerce", desc:"Outil : System.io  ·  Revenu : Mixte" },
+  { num:24, title:"Vendre des produits artisanaux africains à l'international", cat:"E-commerce", desc:"Outil : Etsy / Shopify  ·  Revenu : Actif" },
   // IA & Tech
-  { titre:"Proposer des services de prompt engineering", categorie:"IA & Tech", outil:"ChatGPT / Claude", revenu:"Actif" },
-  { titre:"Créer du contenu IA (textes, images) pour des clients", categorie:"IA & Tech", outil:"Midjourney / ChatGPT", revenu:"Actif" },
-  { titre:"Former des TPE à l'utilisation des outils IA", categorie:"IA & Tech", outil:"Zoom / Notion", revenu:"Actif" },
-  { titre:"Créer des chatbots pour PME avec des outils no-code", categorie:"IA & Tech", outil:"ManyChat / Tidio", revenu:"Actif" },
-  { titre:"Vendre des ebooks créés et améliorés par IA", categorie:"IA & Tech", outil:"ChatGPT / Gumroad", revenu:"Passif" },
+  { num:25, title:"Proposer des services de prompt engineering", cat:"IA & Tech", desc:"Outil : ChatGPT / Claude  ·  Revenu : Actif" },
+  { num:26, title:"Créer du contenu IA (textes, images) pour des clients", cat:"IA & Tech", desc:"Outil : Midjourney / ChatGPT  ·  Revenu : Actif" },
+  { num:27, title:"Former des TPE à l'utilisation des outils IA", cat:"IA & Tech", desc:"Outil : Zoom / Notion  ·  Revenu : Actif" },
+  { num:28, title:"Créer des chatbots pour PME avec des outils no-code", cat:"IA & Tech", desc:"Outil : ManyChat / Tidio  ·  Revenu : Actif" },
+  { num:29, title:"Vendre des ebooks créés et améliorés par IA", cat:"IA & Tech", desc:"Outil : ChatGPT / Gumroad  ·  Revenu : Passif" },
   // Finance
-  { titre:"Proposer des conseils en gestion budgétaire personnelle", categorie:"Finance", outil:"Notion / Zoom", revenu:"Actif" },
-  { titre:"Créer du contenu éducatif sur l'épargne en Afrique", categorie:"Finance", outil:"YouTube / Instagram", revenu:"Mixte" },
-  { titre:"Devenir affilié de plateformes fintech (Wave, Orange Money)", categorie:"Finance", outil:"Programmes d'affiliation", revenu:"Passif" },
-  { titre:"Lancer un newsletter payant sur l'investissement digital", categorie:"Finance", outil:"Substack / System.io", revenu:"Mixte" },
-  { titre:"Former à la comptabilité simplifiée pour auto-entrepreneurs", categorie:"Finance", outil:"Zoom / Google Sheets", revenu:"Actif" },
+  { num:30, title:"Proposer des conseils en gestion budgétaire personnelle", cat:"Finance", desc:"Outil : Notion / Zoom  ·  Revenu : Actif" },
+  { num:31, title:"Créer du contenu éducatif sur l'épargne en Afrique", cat:"Finance", desc:"Outil : YouTube / Instagram  ·  Revenu : Mixte" },
+  { num:32, title:"Devenir affilié de plateformes fintech (Wave, Orange Money)", cat:"Finance", desc:"Outil : Programmes d'affiliation  ·  Revenu : Passif" },
+  { num:33, title:"Lancer un newsletter payant sur l'investissement digital", cat:"Finance", desc:"Outil : Substack / System.io  ·  Revenu : Mixte" },
+  { num:34, title:"Former à la comptabilité simplifiée pour auto-entrepreneurs", cat:"Finance", desc:"Outil : Zoom / Google Sheets  ·  Revenu : Actif" },
   // Diaspora
-  { titre:"Proposer des services de shopping proxy (Europe/USA)", categorie:"Diaspora", outil:"WhatsApp / PayPal", revenu:"Actif" },
-  { titre:"Vendre des produits africains authentiques en Europe", categorie:"Diaspora", outil:"Etsy / Instagram", revenu:"Actif" },
-  { titre:"Proposer des services de recherche immobilière en Afrique", categorie:"Diaspora", outil:"WhatsApp / Zoom", revenu:"Actif" },
-  { titre:"Créer un blog ou YouTube sur la vie entre deux pays", categorie:"Diaspora", outil:"YouTube / AdSense", revenu:"Mixte" },
-  { titre:"Être intermédiaire pour des recrutements Afrique-Europe", categorie:"Diaspora", outil:"LinkedIn / Zoom", revenu:"Actif" },
-  { titre:"Créer une agence de services pour la diaspora", categorie:"Diaspora", outil:"WhatsApp / Systeme.io", revenu:"Actif" },
+  { num:35, title:"Proposer des services de shopping proxy (Europe/USA)", cat:"Diaspora", desc:"Outil : WhatsApp / PayPal  ·  Revenu : Actif" },
+  { num:36, title:"Vendre des produits africains authentiques en Europe", cat:"Diaspora", desc:"Outil : Etsy / Instagram  ·  Revenu : Actif" },
+  { num:37, title:"Proposer des services de recherche immobilière en Afrique", cat:"Diaspora", desc:"Outil : WhatsApp / Zoom  ·  Revenu : Actif" },
+  { num:38, title:"Créer un blog ou YouTube sur la vie entre deux pays", cat:"Diaspora", desc:"Outil : YouTube / AdSense  ·  Revenu : Mixte" },
+  { num:39, title:"Être intermédiaire pour des recrutements Afrique-Europe", cat:"Diaspora", desc:"Outil : LinkedIn / Zoom  ·  Revenu : Actif" },
+  { num:40, title:"Créer une agence de services pour la diaspora", cat:"Diaspora", desc:"Outil : WhatsApp / Systeme.io  ·  Revenu : Actif" },
 ];
 async function generateIdeesPDF() {
   await loadJsPDF();
@@ -1256,7 +1256,7 @@ async function generateIdeesPDF() {
   doc.text('et une compétence ou un produit digital', W/2, 157, {align:'center'});
 
   // Badges catégories
-  const cats = ['🎓 Formation','📱 Réseaux sociaux','💻 Services digitaux','🛒 E-commerce','🤖 IA & Tech','💰 Finance','🌍 Diaspora'];
+  const cats = ['Formation','Reseaux sociaux','Services digitaux','E-commerce','IA & Tech','Finance','Diaspora'];
   const badgeW = 52, badgeH = 9, cols = 3;
   const startX = (W - cols * badgeW - (cols-1)*4) / 2;
   cats.forEach((cat, i) => {
@@ -1839,4 +1839,5 @@ if ('serviceWorker' in navigator) {
 </script>
 </body>
 </html>
+
 
