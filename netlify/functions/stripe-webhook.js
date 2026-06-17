@@ -121,6 +121,8 @@ exports.handler = async (event) => {
         const firstName = fullName.split(' ')[0] || '';
 
         // 1. Créer le compte Supabase — détecter si user nouveau ou existant
+        //    Robuste : peu importe le message exact renvoyé par Supabase,
+        //    un échec de création = on suppose que le compte existe déjà.
         let isNewUser = true;
         const { error: createError } = await supabase.auth.admin.createUser({
           email,
@@ -128,11 +130,8 @@ exports.handler = async (event) => {
           user_metadata: { stripe_customer_id: customerId, first_name: firstName }
         });
         if (createError) {
-          if (createError.message === 'User already registered') {
-            isNewUser = false;
-          } else {
-            console.error('❌ createUser error:', createError.message);
-          }
+          console.error('❌ createUser error (compte probablement déjà existant):', createError.message || createError);
+          isNewUser = false;
         }
 
         // 2. Générer le lien adapté
