@@ -54,6 +54,13 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:0 16px;display
 .card{background:#fff;border-radius:12px;border:1px solid var(--border);padding:18px}
 .for-who{background:var(--primary-light);padding:32px 24px;text-align:center}
 .testi-stars{color:var(--accent);font-size:15px;margin-bottom:8px}
+.rate-stars{display:flex;gap:6px;justify-content:center;margin:12px 0}
+.rate-stars span{font-size:30px;color:var(--border);cursor:pointer;transition:color .15s,transform .1s;line-height:1}
+.rate-stars span:hover{transform:scale(1.1)}
+.rate-stars span.filled{color:var(--accent)}
+.rate-summary{display:flex;align-items:center;justify-content:center;gap:8px;font-size:14px;font-weight:700;color:var(--text);margin-bottom:4px}
+.rate-summary .muted-small{font-size:12px;font-weight:500;color:var(--muted)}
+.rate-thanks{font-size:12.5px;color:var(--primary);font-weight:600;text-align:center;margin-top:8px;display:none}
 .testi-text{font-size:13px;color:var(--muted);line-height:1.7;margin-bottom:14px;font-style:italic}
 .testi-avatar{width:34px;height:34px;border-radius:50%;background:var(--primary);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:700;font-size:12px;flex-shrink:0}
 .bio-avatar{width:64px;height:64px;border-radius:50%;background:linear-gradient(135deg,var(--primary),var(--accent));display:flex;align-items:center;justify-content:center;font-weight:800;font-size:24px;color:#fff;flex-shrink:0}
@@ -527,6 +534,18 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Modifiez ou annulez votre abonnement, consultez vos factures.</div>
       <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="openCustomerPortal()">Accéder à mon espace abonnement</button>
     </div>
+    <div class="card" style="margin-bottom:16px;text-align:center;border:1px solid var(--border)">
+      <div style="font-size:22px;margin-bottom:8px">⭐</div>
+      <div style="font-weight:600;font-size:14px;margin-bottom:4px">Notez l'application</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:10px">Votre avis nous aide à améliorer L'Accélérateur Digital</div>
+      <div class="rate-summary" id="rate-summary" style="display:none">
+        <span id="rate-summary-score">—</span><span class="muted-small" id="rate-summary-count"></span>
+      </div>
+      <div class="rate-stars" id="rate-stars"></div>
+      <textarea id="rate-comment" class="form-input" placeholder="Un commentaire (facultatif)…" style="min-height:60px;margin-top:8px;display:none"></textarea>
+      <button class="btn-primary" id="rate-submit-btn" style="font-size:13px;padding:9px 20px;margin-top:10px;display:none" onclick="submitAppRating()">Envoyer mon avis</button>
+      <div class="rate-thanks" id="rate-thanks">🙏 Merci pour votre avis !</div>
+    </div>
     <input id="faq-search" class="form-input" placeholder="🔍 Rechercher une question…" oninput="filterFaqDash(this.value)" style="margin-bottom:14px"/>
     <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:16px">
       <button class="sug-btn active-cat faq-cat" onclick="filterCat('all',this)">Tout</button>
@@ -790,6 +809,7 @@ async function handleLogout() {
   localStorage.removeItem('waneyo_refresh');
   localStorage.removeItem('waneyo_user');
   localStorage.removeItem('waneyo_firstname');
+  ratingLoaded = false;
   showPage('landing');
 }
 
@@ -1445,6 +1465,108 @@ async function setDone(pId, mId) {
 
 function isDone(pId, mId) { return !!progressCache[pId + '-' + mId]; }
 
+// ─── NOTATION DE L'APP ───────────────────────────────────────────────────────
+let myRating = 0;
+let ratingLoaded = false;
+
+function renderRateStars(selected) {
+  myRating = selected;
+  const wrap = document.getElementById('rate-stars');
+  wrap.innerHTML = '';
+  for (let i = 1; i <= 5; i++) {
+    const s = document.createElement('span');
+    s.textContent = i <= selected ? '★' : '☆';
+    if (i <= selected) s.classList.add('filled');
+    s.onclick = () => {
+      renderRateStars(i);
+      document.getElementById('rate-comment').style.display = 'block';
+      document.getElementById('rate-submit-btn').style.display = 'inline-block';
+    };
+    wrap.appendChild(s);
+  }
+}
+
+async function loadAppRatingStats() {
+  try {
+    const res = await fetch(`${SUPABASE_URL}/rest/v1/rpc/get_app_rating_stats`, {
+      method: 'POST',
+      headers: { 'apikey': SUPABASE_ANON, 'Content-Type': 'application/json' },
+      body: '{}'
+    });
+    const data = await res.json();
+    const row = Array.isArray(data) ? data[0] : data;
+    const summary = document.getElementById('rate-summary');
+    if (row && row.total_ratings > 0) {
+      document.getElementById('rate-summary-score').textContent = `⭐ ${String(row.avg_rating).replace('.', ',')}/5`;
+      document.getElementById('rate-summary-count').textContent = ` · ${row.total_ratings} avis`;
+      summary.style.display = 'flex';
+    }
+  } catch {}
+}
+
+async function loadMyRating() {
+  const email = localStorage.getItem('waneyo_user');
+  const token = localStorage.getItem('waneyo_token');
+  if (!email || !token) return;
+  try {
+    const res = await fetch(
+      `${SUPABASE_URL}/rest/v1/app_ratings?user_email=eq.${encodeURIComponent(email)}&select=rating,comment`,
+      { headers: { 'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${token}` } }
+    );
+    const data = await res.json();
+    if (Array.isArray(data) && data[0]) {
+      renderRateStars(data[0].rating);
+      document.getElementById('rate-comment').value = data[0].comment || '';
+      document.getElementById('rate-comment').style.display = 'block';
+      document.getElementById('rate-submit-btn').style.display = 'inline-block';
+      document.getElementById('rate-submit-btn').textContent = 'Mettre à jour mon avis';
+    } else {
+      renderRateStars(0);
+    }
+  } catch { renderRateStars(0); }
+}
+
+async function initRatingWidget() {
+  if (ratingLoaded) return;
+  ratingLoaded = true;
+  await loadAppRatingStats();
+  await loadMyRating();
+}
+
+async function submitAppRating() {
+  const email = localStorage.getItem('waneyo_user');
+  const token = localStorage.getItem('waneyo_token');
+  if (!email || !token || myRating < 1) return;
+  const btn = document.getElementById('rate-submit-btn');
+  const original = btn.textContent;
+  btn.textContent = '⏳ Envoi…';
+  btn.disabled = true;
+  try {
+    await fetch(`${SUPABASE_URL}/rest/v1/app_ratings`, {
+      method: 'POST',
+      headers: {
+        'apikey': SUPABASE_ANON, 'Authorization': `Bearer ${token}`, 'Content-Type': 'application/json',
+        'Prefer': 'resolution=merge-duplicates'
+      },
+      body: JSON.stringify({
+        user_email: email,
+        rating: myRating,
+        comment: document.getElementById('rate-comment').value.trim() || null,
+        updated_at: new Date().toISOString()
+      })
+    });
+    document.getElementById('rate-thanks').style.display = 'block';
+    btn.textContent = 'Mettre à jour mon avis';
+    ratingLoaded = false;
+    await loadAppRatingStats();
+  } catch {
+    btn.textContent = original;
+  } finally {
+    btn.disabled = false;
+  }
+}
+
+
 // ─── NAVIGATION ──────────────────────────────────────────────────────────────
 function showPage(id) {
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
@@ -1473,6 +1595,7 @@ function switchTab(name, btn) {
   });
   document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
   btn.classList.add('active');
+  if (name === 'aide') initRatingWidget();
 }
 
 // ─── PWA ─────────────────────────────────────────────────────────────────────
