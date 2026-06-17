@@ -1,23 +1,39 @@
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
+const stripeLib = require('stripe');
 const { createClient } = require('@supabase/supabase-js');
 
-const supabase = createClient(
-  process.env.SUPABASE_URL,
-  process.env.SUPABASE_SERVICE_KEY
-);
+// ── Initialisation défensive : si une variable d'env manque, on ne crashe pas
+//    le module (ce qui ferait planter TOUTES les requêtes avec un 502), on le
+//    consigne et on répond proprement à la requête.
+let stripe = null;
+let supabase = null;
+let initError = null;
+
+try {
+  if (!process.env.STRIPE_SECRET_KEY) throw new Error('STRIPE_SECRET_KEY manquant');
+  stripe = stripeLib(process.env.STRIPE_SECRET_KEY);
+
+  if (!process.env.SUPABASE_URL || !process.env.SUPABASE_SERVICE_KEY) {
+    throw new Error('SUPABASE_URL ou SUPABASE_SERVICE_KEY manquant');
+  }
+  supabase = createClient(process.env.SUPABASE_URL, process.env.SUPABASE_SERVICE_KEY);
+} catch (err) {
+  initError = err;
+  console.error('❌ Erreur d\'initialisation du webhook Stripe:', err.message);
+}
 
 async function sendWelcomeEmail(email, firstName, setupLink) {
-  const res = await fetch('https://api.resend.com/emails', {
-    method: 'POST',
-    headers: {
-      'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify({
-      from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
-      to: email,
-      subject: '🎉 Bienvenue dans L\'Accélérateur Digital — Créez votre mot de passe',
-      html: `<!DOCTYPE html>
+  try {
+    const res = await fetch('https://api.resend.com/emails', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Bearer ${process.env.RESEND_API_KEY}`,
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        from: 'Nadia — Waneyo Formation <contact@waneyo-formation.com>',
+        to: email,
+        subject: '🎉 Bienvenue dans L\'Accélérateur Digital — Créez votre mot de passe',
+        html: `<!DOCTYPE html>
 <html>
 <body style="margin:0;padding:32px;background:#0F0A1E;font-family:sans-serif">
   <div style="max-width:560px;margin:0 auto;background:#1a1035;border-radius:16px;padding:32px">
@@ -42,76 +58,117 @@ async function sendWelcomeEmail(email, firstName, setupLink) {
   </div>
 </body>
 </html>`
-    })
-  });
-  if (!res.ok) console.error('Resend error:', await res.text());
+      })
+    });
+    if (!res.ok) console.error('❌ Erreur Resend:', res.status, await res.text());
+    return res.ok;
+  } catch (err) {
+    console.error('❌ Exception lors de l\'envoi de l\'email de bienvenue:', err.message);
+    return false;
+  }
 }
 
 async function generateSetupLink(email, isNewUser) {
-  // Nouveaux users → 'invite' : lien direct sans redirection serveur
-  // Users existants → 'recovery' : seule option disponible
-  const type = isNewUser ? 'invite' : 'recovery';
-  const { data, error } = await supabase.auth.admin.generateLink({
-    type,
-    email,
-    options: { redirectTo: 'https://app.waneyo-formation.com' }
-  });
-  if (error) { console.error('generateLink error:', error); return null; }
-  return data?.properties?.action_link || null;
+  try {
+    // Nouveaux users → 'invite' : lien direct sans redirection serveur
+    // Users existants → 'recovery' : seule option disponible
+    const type = isNewUser ? 'invite' : 'recovery';
+    const { data, error } = await supabase.auth.admin.generateLink({
+      type,
+      email,
+      options: { redirectTo: 'https://app.waneyo-formation.com' }
+    });
+    if (error) { console.error('❌ generateLink error:', error.message); return null; }
+    return data?.properties?.action_link || null;
+  } catch (err) {
+    console.error('❌ Exception generateSetupLink:', err.message);
+    return null;
+  }
 }
 
 exports.handler = async (event) => {
-  const sig = event.headers['stripe-signature'];
+  // Config invalide (variable d'env manquante) → on répond proprement au lieu de crasher
+  if (initError) {
+    console.error('❌ Webhook appelé avec une config invalide:', initError.message);
+    return { statusCode: 500, body: `Configuration serveur invalide: ${initError.message}` };
+  }
+
+  // Vérification de la signature Stripe
   let stripeEvent;
   try {
+    const rawBody = event.isBase64Encoded ? Buffer.from(event.body, 'base64') : event.body;
     stripeEvent = stripe.webhooks.constructEvent(
-      event.body,
-      sig,
+      rawBody,
+      event.headers['stripe-signature'],
       process.env.STRIPE_WEBHOOK_SECRET
     );
   } catch (err) {
+    console.error('❌ Signature invalide:', err.message);
     return { statusCode: 400, body: `Webhook Error: ${err.message}` };
   }
 
-  if (stripeEvent.type === 'checkout.session.completed') {
-    const session = stripeEvent.data.object;
-    const email = session.customer_details?.email;
-    const customerId = session.customer;
+  // Tout le traitement métier est protégé : une erreur ici ne doit JAMAIS
+  // faire planter la fonction (= 502 côté Stripe). On logue et on répond 200
+  // pour éviter que Stripe ne boucle indéfiniment sur un event bloqué.
+  try {
+    if (stripeEvent.type === 'checkout.session.completed') {
+      const session = stripeEvent.data.object;
+      const email = session.customer_details?.email;
+      const customerId = session.customer;
 
-    if (email) {
-      const fullName = session.customer_details?.name || '';
-      const firstName = fullName.split(' ')[0] || '';
+      if (email) {
+        const fullName = session.customer_details?.name || '';
+        const firstName = fullName.split(' ')[0] || '';
 
-      // 1. Créer le compte Supabase — détecter si user nouveau ou existant
-      const { error: createError } = await supabase.auth.admin.createUser({
-        email,
-        email_confirm: true,
-        user_metadata: { stripe_customer_id: customerId, first_name: firstName }
-      });
-      const isNewUser = !createError || createError.message === 'User already registered' ? !createError : false;
+        // 1. Créer le compte Supabase — détecter si user nouveau ou existant
+        let isNewUser = true;
+        const { error: createError } = await supabase.auth.admin.createUser({
+          email,
+          email_confirm: true,
+          user_metadata: { stripe_customer_id: customerId, first_name: firstName }
+        });
+        if (createError) {
+          if (createError.message === 'User already registered') {
+            isNewUser = false;
+          } else {
+            console.error('❌ createUser error:', createError.message);
+          }
+        }
 
-      // 2. Générer le lien adapté
-      const setupLink = await generateSetupLink(email, isNewUser);
-      if (!setupLink) return { statusCode: 500, body: 'Could not generate setup link' };
+        // 2. Générer le lien adapté
+        const setupLink = await generateSetupLink(email, isNewUser);
 
-      // 3. Enregistrer dans subscribers
-      await supabase.from('subscribers').upsert(
-        { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
-        { onConflict: 'email' }
-      );
+        // 3. Enregistrer dans subscribers (indépendant du succès du lien/email)
+        const { error: upsertError } = await supabase.from('subscribers').upsert(
+          { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
+          { onConflict: 'email' }
+        );
+        if (upsertError) console.error('❌ Erreur upsert subscribers:', upsertError.message);
 
-      // 4. Email unique bienvenue + création mot de passe
-      await sendWelcomeEmail(email, firstName, setupLink);
+        // 4. Email unique bienvenue + création mot de passe
+        if (setupLink) {
+          const sent = await sendWelcomeEmail(email, firstName, setupLink);
+          if (!sent) console.error(`❌ Email de bienvenue NON envoyé pour ${email}`);
+        } else {
+          console.error(`❌ Pas de lien généré, email de bienvenue NON envoyé pour ${email}`);
+        }
+      }
     }
-  }
 
-  if (stripeEvent.type === 'customer.subscription.deleted') {
-    const sub = stripeEvent.data.object;
-    await supabase
-      .from('subscribers')
-      .update({ status: 'cancelled' })
-      .eq('stripe_customer_id', sub.customer);
-  }
+    if (stripeEvent.type === 'customer.subscription.deleted') {
+      const sub = stripeEvent.data.object;
+      const { error } = await supabase
+        .from('subscribers')
+        .update({ status: 'cancelled' })
+        .eq('stripe_customer_id', sub.customer);
+      if (error) console.error('❌ Erreur update subscribers (cancel):', error.message);
+    }
 
-  return { statusCode: 200, body: 'ok' };
+    return { statusCode: 200, body: 'ok' };
+  } catch (err) {
+    console.error('❌ Erreur inattendue dans le traitement du webhook:', err.message, err.stack);
+    // On répond 200 quand même : Stripe arrête de boucler, l'erreur reste
+    // visible dans les logs Netlify pour diagnostic.
+    return { statusCode: 200, body: 'received (erreur interne, voir logs)' };
+  }
 };
