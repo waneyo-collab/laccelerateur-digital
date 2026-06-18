@@ -719,23 +719,6 @@ function openCustomerPortal() {
   window.open(psp === 'paddle' ? PADDLE_PORTAL : STRIPE_PORTAL, '_blank');
 }
 
-// ─── CACHE HELPERS ───────────────────────────────────────────────────────────
-function setCachedSubscriber(email, data) {
-  localStorage.setItem('waneyo_sub_' + btoa(email), JSON.stringify(data));
-}
-function getCachedSubscriber(email) {
-  try {
-    const raw = localStorage.getItem('waneyo_sub_' + btoa(email));
-    if (!raw) return null;
-    const parsed = JSON.parse(raw);
-    if (Date.now() - parsed.ts > 24 * 60 * 60 * 1000) {
-      localStorage.removeItem('waneyo_sub_' + btoa(email));
-      return null;
-    }
-    return parsed;
-  } catch { return null; }
-}
-
 // ─── AUTH ────────────────────────────────────────────────────────────────────
 async function handleLogin() {
   const email = document.getElementById('login-email').value.trim();
@@ -763,24 +746,16 @@ async function handleLogin() {
       return;
     }
 
-    const cachedSub = getCachedSubscriber(email);
-    let firstName = '';
-
-    if (!cachedSub) {
-      const subs = await supabaseFetch(
-        `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
-        { headers: { 'Authorization': `Bearer ${data.access_token}` } }
-      );
-      if (!Array.isArray(subs) || subs.length === 0) {
-        errorEl.style.color = 'red';
-        errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
-        return;
-      }
-      firstName = subs[0].first_name || '';
-      setCachedSubscriber(email, { firstName, ts: Date.now() });
-    } else {
-      firstName = cachedSub.firstName;
+    const subs = await supabaseFetch(
+      `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
+      { headers: { 'Authorization': `Bearer ${data.access_token}` } }
+    );
+    if (!Array.isArray(subs) || subs.length === 0) {
+      errorEl.style.color = 'red';
+      errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
+      return;
     }
+    const firstName = subs[0].first_name || '';
 
     localStorage.setItem('waneyo_token', data.access_token);
     if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
@@ -812,7 +787,6 @@ async function handleLogout() {
   if (_refreshInterval) { clearInterval(_refreshInterval); _refreshInterval = null; }
   const email = localStorage.getItem('waneyo_user');
   if (email) {
-    localStorage.removeItem('waneyo_sub_' + btoa(email));
     localStorage.removeItem('waneyo_progress_' + btoa(email));
   }
   localStorage.removeItem('waneyo_token');
@@ -821,6 +795,34 @@ async function handleLogout() {
   localStorage.removeItem('waneyo_firstname');
   ratingLoaded = false;
   showPage('landing');
+}
+
+// Revérifie que l'abonnement est toujours actif côté Supabase (et pas seulement
+// que le token JWT n'a pas expiré — un abonnement annulé ne fait pas expirer
+// le JWT, donc sans ce contrôle un compte désabonné garde l'accès indéfiniment
+// tant que sa session de navigateur reste ouverte).
+async function checkSubscriptionActive(email, token) {
+  try {
+    const subs = await supabaseFetch(
+      `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email`,
+      { headers: { 'Authorization': `Bearer ${token}` } }
+    );
+    return Array.isArray(subs) && subs.length > 0;
+  } catch {
+    // En cas d'erreur réseau ponctuelle, on ne coupe pas l'accès d'un abonné
+    // potentiellement actif — la vérification suivante (load ou refresh) retentera.
+    return true;
+  }
+}
+
+function showSubscriptionEnded() {
+  handleLogout();
+  showPage('login');
+  const err = document.getElementById('login-error');
+  if (err) {
+    err.style.color = 'var(--accent)';
+    err.textContent = '⏰ Ton abonnement a pris fin. Réabonne-toi pour continuer ta formation.';
+  }
 }
 
 async function refreshToken() {
@@ -834,6 +836,9 @@ async function refreshToken() {
     if (data.access_token) {
       localStorage.setItem('waneyo_token', data.access_token);
       if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
+      const email = localStorage.getItem('waneyo_user');
+      const active = await checkSubscriptionActive(email, data.access_token);
+      if (!active) { showSubscriptionEnded(); }
     } else { handleLogout(); }
   } catch { handleLogout(); }
 }
@@ -1945,7 +1950,7 @@ async function handleResetPassword() {
 // FIX 4 : setInterval scopé — déclaré ici, démarré dans startDashboard
 let _refreshInterval = null;
 
-window.addEventListener('load', () => {
+window.addEventListener('load', async () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
   const error = getHashParam('error') || getHashParam('error_code');
@@ -1970,6 +1975,8 @@ window.addEventListener('load', () => {
     const payload = JSON.parse(atob(authToken.split('.')[1]));
     if (payload.exp * 1000 <= Date.now()) { handleLogout(); return; }
   } catch { handleLogout(); return; }
+  const active = await checkSubscriptionActive(email, authToken);
+  if (!active) { showSubscriptionEnded(); return; }
   startDashboard('numerique');
 });
 
