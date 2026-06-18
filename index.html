@@ -584,6 +584,12 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
         <div style="font-weight:600;margin-bottom:8px">Mot de passe enregistré !</div>
         <button class="btn-primary" style="width:100%" onclick="showPage('login')">Se connecter</button>
       </div>
+      <div id="reset-link-error" style="display:none;text-align:center">
+        <div style="font-size:32px;margin-bottom:12px">⏰</div>
+        <div style="font-weight:600;margin-bottom:8px">Ce lien a expiré</div>
+        <p style="color:var(--muted);font-size:13px;margin-bottom:16px">Demandez un nouveau lien depuis la page de connexion, via "Mot de passe oublié".</p>
+        <button class="btn-primary" style="width:100%" onclick="showPage('login')">Retour à la connexion</button>
+      </div>
     </div>
   </div>
 </div>
@@ -1938,10 +1944,17 @@ let _refreshInterval = null;
 window.addEventListener('load', () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
+  const error = getHashParam('error') || getHashParam('error_code');
   if ((type === 'recovery' || type === 'invite') && token) {
     showPage('reset');
     const t = document.getElementById('reset-title');
     if (t) t.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
+    return;
+  }
+  if (error) {
+    showPage('reset');
+    document.getElementById('reset-form').style.display = 'none';
+    document.getElementById('reset-link-error').style.display = 'block';
     return;
   }
 
@@ -1962,5 +1975,3 @@ if ('serviceWorker' in navigator) {
 </script>
 </body>
 </html>
-
-
