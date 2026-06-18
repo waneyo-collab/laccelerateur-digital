@@ -79,7 +79,14 @@ async function generateSetupLink(email, isNewUser) {
       options: { redirectTo: 'https://app.waneyo-formation.com' }
     });
     if (error) { console.error('❌ generateLink error:', error.message); return null; }
-    return data?.properties?.action_link || null;
+    const actionLink = data?.properties?.action_link;
+    if (!actionLink) return null;
+    // On ne met jamais le lien Supabase brut dans l'email : les scanners de
+    // sécurité (Gmail, Outlook Safe Links, etc.) "pré-cliquent" les liens des
+    // emails pour les vérifier, ce qui consomme le token à usage unique avant
+    // que l'utilisateur réel ne clique (erreur "otp_expired"). En passant par
+    // confirm.html, seul un vrai clic humain déclenche la validation.
+    return `https://app.waneyo-formation.com/confirm.html?confirmation_url=${encodeURIComponent(actionLink)}`;
   } catch (err) {
     console.error('❌ Exception generateSetupLink:', err.message);
     return null;
