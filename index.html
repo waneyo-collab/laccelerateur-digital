@@ -649,16 +649,20 @@ const PADDLE_PORTAL   = 'https://customer-portal.paddle.com/cpl_01kswd7558gytzq8
 
 async function detectCountry() {
   try {
-    const res = await fetch('https://api.country.is/');
+    // Source principale : géolocalisation native Netlify (fiable, instantanée,
+    // sans appel à un service tiers ni risque de blocage CSP).
+    const res = await fetch('/api/geo');
     const data = await res.json();
-    return data.country || 'FR';
+    if (data.country) return data.country;
+    throw new Error('Pays absent de la réponse');
   } catch {
     try {
+      // Secours si l'edge function est indisponible.
       const res2 = await fetch('https://ipapi.co/json/');
       const data2 = await res2.json();
       return data2.country_code || 'FR';
     } catch { return 'FR'; }
-  } 
+  }
 }
 // ─── LAZY LOAD ────────────────────────────────────────────────────────────────
 function loadScript(src) {
