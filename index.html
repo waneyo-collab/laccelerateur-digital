@@ -1937,7 +1937,7 @@ async function handleResetPassword() {
   const errorEl = document.getElementById('reset-error');
   if (!pwd || pwd.length < 6) { errorEl.textContent='❌ Minimum 6 caractères.'; return; }
   if (pwd !== pwd2) { errorEl.textContent='❌ Les mots de passe ne correspondent pas.'; return; }
-  const token = getHashParam('access_token');
+  const token = _resetToken;
   const res = await supabaseFetch('/auth/v1/user', {
     method:'PUT', headers:{'Authorization':`Bearer ${token}`}, body:JSON.stringify({password:pwd})
   });
@@ -1949,21 +1949,25 @@ async function handleResetPassword() {
 // ─── INIT ─────────────────────────────────────────────────────────────────────
 // FIX 4 : setInterval scopé — déclaré ici, démarré dans startDashboard
 let _refreshInterval = null;
+let _resetToken = null; // capturé au chargement, car le hash de l'URL est nettoyé ensuite
 
 window.addEventListener('load', async () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
   const error = getHashParam('error') || getHashParam('error_code');
   if ((type === 'recovery' || type === 'invite') && token) {
+    _resetToken = token;
     showPage('reset');
     const t = document.getElementById('reset-title');
     if (t) t.textContent = type === 'invite' ? 'Créez votre mot de passe' : 'Nouveau mot de passe';
+    history.replaceState(null, '', window.location.pathname);
     return;
   }
   if (error) {
     showPage('reset');
     document.getElementById('reset-form').style.display = 'none';
     document.getElementById('reset-link-error').style.display = 'block';
+    history.replaceState(null, '', window.location.pathname);
     return;
   }
 
