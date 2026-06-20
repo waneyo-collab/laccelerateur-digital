@@ -701,7 +701,7 @@ async function handleCheckout(event) {
       await ensurePaddle();
       Paddle.Checkout.open({
         items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
-        settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
+        settings: { theme: 'light', locale: 'fr', allowLogout: false }
       });
     } catch(e) {
       console.error('Paddle load error', e);
@@ -746,7 +746,7 @@ async function handleGuidePurchase(event) {
       await ensurePaddle();
       Paddle.Checkout.open({
         items: [{ priceId: GUIDE_PADDLE_PRICE_ID, quantity: 1 }],
-        settings: { displayModeTheme: 'light', locale: 'fr', allowLogout: false }
+        settings: { theme: 'light', locale: 'fr', allowLogout: false }
       });
     } catch (e) {
       console.error('Paddle load error', e);
