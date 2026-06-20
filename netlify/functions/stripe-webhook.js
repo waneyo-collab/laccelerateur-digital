@@ -132,6 +132,8 @@ exports.handler = async (event) => {
           const firstName = fullName.split(' ')[0] || '';
           // Identification par l'ID du Payment Link, déjà présent dans
           // l'événement reçu (pas d'appel API Stripe supplémentaire requis).
+          console.log('🔍 DEBUG payment_link reçu:', JSON.stringify(session.payment_link));
+          console.log('🔍 DEBUG env GUIDE_STRIPE_PAYMENT_LINK_ID:', JSON.stringify(process.env.GUIDE_STRIPE_PAYMENT_LINK_ID));
           const isGuidePurchase = session.payment_link === process.env.GUIDE_STRIPE_PAYMENT_LINK_ID;
 
           if (isGuidePurchase) {
