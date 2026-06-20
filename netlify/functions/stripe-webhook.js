@@ -1,5 +1,6 @@
 const stripeLib = require('stripe');
 const { createClient } = require('@supabase/supabase-js');
+const { sendGuideEmail, logGuidePurchase } = require('./_guide-delivery');
 
 // ── Initialisation défensive : si une variable d'env manque, on ne crashe pas
 //    le module (ce qui ferait planter TOUTES les requêtes avec un 502), on le
@@ -123,6 +124,34 @@ exports.handler = async (event) => {
       const email = session.customer_details?.email;
       const customerId = session.customer;
 
+      // ── Achat unique (le Guide Marketing) : pas de compte créé, juste l'email
+      //    de livraison avec le lien de téléchargement sécurisé.
+      if (session.mode === 'payment') {
+        if (email) {
+          const fullName = session.customer_details?.name || '';
+          const firstName = fullName.split(' ')[0] || '';
+          let isGuidePurchase = false;
+          try {
+            const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 5 });
+            isGuidePurchase = lineItems.data.some(
+              li => li.price?.id === process.env.GUIDE_STRIPE_PRICE_ID
+            );
+          } catch (err) {
+            console.error('❌ Erreur listLineItems:', err.message);
+          }
+
+          if (isGuidePurchase) {
+            const sent = await sendGuideEmail(supabase, email, firstName);
+            if (!sent) console.error(`❌ Email guide NON envoyé pour ${email}`);
+            await logGuidePurchase(supabase, { email, psp: 'stripe', amount: (session.amount_total || 0) / 100 });
+          } else {
+            console.error(`⚠️ Paiement one-time non reconnu (ni guide) pour ${email}`);
+          }
+        }
+        return { statusCode: 200, body: 'ok' };
+      }
+
+      // ── Abonnement : flux existant inchangé (création de compte + email) ──
       if (email) {
         const fullName = session.customer_details?.name || '';
         const firstName = fullName.split(' ')[0] || '';
