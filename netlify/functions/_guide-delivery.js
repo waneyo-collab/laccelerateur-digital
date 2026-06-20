@@ -3,7 +3,7 @@
 // de téléchargement signé (privé, expirant) et l'envoie par email via Resend.
 // Le PDF n'est JAMAIS public : il vit dans un bucket Supabase Storage privé.
 
-const GUIDE_BUCKET   = 'guides';
+const GUIDE_BUCKET   = 'GUIDE MARKETING';
 const GUIDE_FILENAME = 'guide-marketing-entrepreneur.pdf';
 const LINK_EXPIRY_SECONDS = 60 * 60 * 48; // 48h
 
