@@ -130,15 +130,9 @@ exports.handler = async (event) => {
         if (email) {
           const fullName = session.customer_details?.name || '';
           const firstName = fullName.split(' ')[0] || '';
-          let isGuidePurchase = false;
-          try {
-            const lineItems = await stripe.checkout.sessions.listLineItems(session.id, { limit: 5 });
-            isGuidePurchase = lineItems.data.some(
-              li => li.price?.id === process.env.GUIDE_STRIPE_PRICE_ID
-            );
-          } catch (err) {
-            console.error('❌ Erreur listLineItems:', err.message);
-          }
+          // Identification par l'ID du Payment Link, déjà présent dans
+          // l'événement reçu (pas d'appel API Stripe supplémentaire requis).
+          const isGuidePurchase = session.payment_link === process.env.GUIDE_STRIPE_PAYMENT_LINK_ID;
 
           if (isGuidePurchase) {
             const sent = await sendGuideEmail(supabase, email, firstName);
