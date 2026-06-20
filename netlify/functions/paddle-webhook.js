@@ -102,17 +102,26 @@ exports.handler = async (event) => {
       const transaction = paddleEvent.data;
       const priceId = transaction.items?.[0]?.price?.id || transaction.items?.[0]?.price_id;
 
+      // DEBUG TEMPORAIRE : trace systématique pour diagnostiquer un email non envoyé.
+      // À retirer une fois le problème résolu.
+      await logGuidePurchase(supabase, { email: 'DEBUG:webhook-entered', psp: `debug-price-${priceId}`, amount: 0 });
+
       if (priceId === process.env.GUIDE_PADDLE_PRICE_ID) {
         const email = await getCustomerEmail(transaction);
         if (email) {
+          await logGuidePurchase(supabase, { email: `DEBUG:email-found:${email}`, psp: 'debug-step', amount: 0 });
           const sent = await sendGuideEmail(supabase, email, '');
-          if (!sent) console.error(`❌ Email guide NON envoyé pour ${email}`);
+          if (!sent) {
+            console.error(`❌ Email guide NON envoyé pour ${email}`);
+            await logGuidePurchase(supabase, { email: `DEBUG:send-failed:${email}`, psp: 'debug-step', amount: 0 });
+          }
           const amount = transaction.details?.totals?.total
             ? Number(transaction.details.totals.total) / 100
             : 0;
           await logGuidePurchase(supabase, { email, psp: 'paddle', amount });
         } else {
           console.error('❌ Impossible de récupérer l\'email du client Paddle pour la transaction', transaction.id);
+          await logGuidePurchase(supabase, { email: 'DEBUG:no-email-found', psp: 'debug-step', amount: 0 });
         }
       }
     }
@@ -120,6 +129,9 @@ exports.handler = async (event) => {
     return { statusCode: 200, body: 'ok' };
   } catch (err) {
     console.error('❌ Erreur inattendue webhook Paddle:', err.message, err.stack);
+    try {
+      await logGuidePurchase(supabase, { email: `DEBUG:exception:${err.message}`.slice(0, 250), psp: 'debug-error', amount: 0 });
+    } catch {}
     return { statusCode: 200, body: 'received (erreur interne, voir logs)' };
   }
 };
