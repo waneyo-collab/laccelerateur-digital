@@ -55,9 +55,12 @@ function verifySignature(rawBody, signatureHeader) {
 async function getCustomerEmail(transaction) {
   if (transaction.customer?.email) return transaction.customer.email;
   if (!transaction.customer_id) return null;
+  const controller = new AbortController();
+  const timeout = setTimeout(() => controller.abort(), 8000);
   try {
     const res = await fetch(`https://api.paddle.com/customers/${transaction.customer_id}`, {
-      headers: { 'Authorization': `Bearer ${process.env.PADDLE_API_KEY}` }
+      headers: { 'Authorization': `Bearer ${process.env.PADDLE_API_KEY}` },
+      signal: controller.signal
     });
     if (!res.ok) {
       console.error('❌ Erreur récupération customer Paddle:', res.status, await res.text());
@@ -66,8 +69,10 @@ async function getCustomerEmail(transaction) {
     const json = await res.json();
     return json.data?.email || null;
   } catch (err) {
-    console.error('❌ Exception getCustomerEmail:', err.message);
+    console.error('❌ Exception getCustomerEmail:', err.name, err.message);
     return null;
+  } finally {
+    clearTimeout(timeout);
   }
 }
 
@@ -107,7 +112,9 @@ exports.handler = async (event) => {
       await logGuidePurchase(supabase, { email: 'DEBUG:webhook-entered', psp: `debug-price-${priceId}`, amount: 0 });
 
       if (priceId === process.env.GUIDE_PADDLE_PRICE_ID) {
+        await logGuidePurchase(supabase, { email: 'DEBUG:before-getCustomerEmail', psp: 'debug-step', amount: 0 });
         const email = await getCustomerEmail(transaction);
+        await logGuidePurchase(supabase, { email: 'DEBUG:after-getCustomerEmail', psp: 'debug-step', amount: 0 });
         if (email) {
           await logGuidePurchase(supabase, { email: `DEBUG:email-found:${email}`, psp: 'debug-step', amount: 0 });
           const sent = await sendGuideEmail(supabase, email, '');
