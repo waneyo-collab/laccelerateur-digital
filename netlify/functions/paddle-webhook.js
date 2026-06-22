@@ -1,6 +1,7 @@
 const crypto = require('crypto');
 const { createClient } = require('@supabase/supabase-js');
 const { sendGuideEmail, logGuidePurchase } = require('./_guide-delivery');
+const { generateSetupLink, sendWelcomeEmail, ensureAccount } = require('./_account-setup');
 
 // ── Initialisation défensive (même pattern que stripe-webhook.js) ──────────
 let supabase = null;
@@ -50,15 +51,13 @@ function verifySignature(rawBody, signatureHeader) {
   return crypto.timingSafeEqual(a, b);
 }
 
-// L'email n'est pas toujours présent dans le payload transaction.* : on le
-// récupère via l'API Paddle à partir du customer_id si besoin.
-async function getCustomerEmail(transaction) {
-  if (transaction.customer?.email) return transaction.customer.email;
-  if (!transaction.customer_id) return null;
+// Récupère l'email d'un client Paddle à partir de son customer_id (appel API).
+async function fetchCustomerEmailById(customerId) {
+  if (!customerId) return null;
   const controller = new AbortController();
   const timeout = setTimeout(() => controller.abort(), 8000);
   try {
-    const res = await fetch(`https://api.paddle.com/customers/${transaction.customer_id}`, {
+    const res = await fetch(`https://api.paddle.com/customers/${customerId}`, {
       headers: { 'Authorization': `Bearer ${process.env.PADDLE_API_KEY}` },
       signal: controller.signal
     });
@@ -69,10 +68,51 @@ async function getCustomerEmail(transaction) {
     const json = await res.json();
     return json.data?.email || null;
   } catch (err) {
-    console.error('❌ Exception getCustomerEmail:', err.name, err.message);
+    console.error('❌ Exception fetchCustomerEmailById:', err.name, err.message);
     return null;
   } finally {
     clearTimeout(timeout);
+  }
+}
+
+// L'email n'est pas toujours présent dans le payload transaction.* : on le
+// récupère via l'API Paddle à partir du customer_id si besoin.
+async function getCustomerEmail(transaction) {
+  if (transaction.customer?.email) return transaction.customer.email;
+  return fetchCustomerEmailById(transaction.customer_id);
+}
+
+// Première transaction d'un abonnement (ou renouvellement) : crée le compte
+// si besoin et upsert la ligne subscribers — même logique que stripe-webhook.js.
+async function handleSubscriptionPayment(transaction) {
+  const email = await getCustomerEmail(transaction);
+  if (!email) {
+    console.error('❌ Impossible de récupérer l\'email du client Paddle pour l\'abonnement', transaction.id);
+    return;
+  }
+
+  // 1. Créer le compte Supabase — détecter si user nouveau ou existant
+  const isNewUser = await ensureAccount(supabase, email, { paddle_customer_id: transaction.customer_id });
+
+  // 2. Générer le lien adapté
+  const setupLink = await generateSetupLink(supabase, email, isNewUser);
+
+  // 3. Enregistrer/raffraîchir dans subscribers (indépendant du succès du lien/email)
+  const { error: upsertError } = await supabase.from('subscribers').upsert(
+    { email, paddle_customer_id: transaction.customer_id, status: 'active' },
+    { onConflict: 'email' }
+  );
+  if (upsertError) console.error('❌ Erreur upsert subscribers (Paddle):', upsertError.message);
+
+  // 4. Email de bienvenue uniquement à la création du compte (pas à chaque
+  //    renouvellement mensuel, sinon l'abonné le reçoit chaque mois).
+  if (isNewUser) {
+    if (setupLink) {
+      const sent = await sendWelcomeEmail(email, '', setupLink);
+      if (!sent) console.error(`❌ Email de bienvenue NON envoyé pour ${email}`);
+    } else {
+      console.error(`❌ Pas de lien généré, email de bienvenue NON envoyé pour ${email}`);
+    }
   }
 }
 
@@ -119,6 +159,26 @@ exports.handler = async (event) => {
         } else {
           console.error('❌ Impossible de récupérer l\'email du client Paddle pour la transaction', transaction.id);
         }
+      } else if (transaction.subscription_id) {
+        // Transaction liée à un abonnement récurrent (premier paiement ou
+        // renouvellement mensuel) — jusqu'ici totalement ignorée, ce qui
+        // empêchait toute création de compte pour les abonnés Paddle.
+        await handleSubscriptionPayment(transaction);
+      }
+    }
+
+    // Annulation d'abonnement — même comportement que customer.subscription.deleted côté Stripe.
+    if (paddleEvent.event_type === 'subscription.canceled') {
+      const subscription = paddleEvent.data;
+      const email = await fetchCustomerEmailById(subscription.customer_id);
+      if (email) {
+        const { error } = await supabase
+          .from('subscribers')
+          .update({ status: 'cancelled' })
+          .eq('email', email);
+        if (error) console.error('❌ Erreur update subscribers (cancel Paddle):', error.message);
+      } else {
+        console.error('❌ Impossible de récupérer l\'email pour annuler l\'abonnement Paddle', subscription.id);
       }
     }
 
