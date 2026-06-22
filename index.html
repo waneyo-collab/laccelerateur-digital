@@ -706,8 +706,21 @@ async function loadJsPDF() {
 async function ensurePaddle() {
   if (window.Paddle) return;
   await loadScript('https://cdn.paddle.com/paddle/v2/paddle.js');
-  Paddle.Initialize({ token: 'live_0df463108c51d2e7afd56790ee1' });
+  // La redirection post-paiement passe par eventCallback plutôt que par
+  // settings.successUrl : plus robuste, et évite tout souci de validation
+  // de cette valeur par Paddle au moment de l'ouverture du checkout.
+  Paddle.Initialize({
+    token: 'live_0df463108c51d2e7afd56790ee1',
+    eventCallback: function (data) {
+      if (data.name === 'checkout.completed' && _paddleRedirectOnSuccess) {
+        window.location.href = _paddleRedirectOnSuccess;
+      }
+    }
+  });
 }
+// Définie juste avant chaque Paddle.Checkout.open() : null pour le guide
+// (pas de compte créé, on reste sur la page), URL bienvenue pour l'abonnement.
+let _paddleRedirectOnSuccess = null;
 
 async function handleCheckout(event) {
   const btn = event.currentTarget;
@@ -725,9 +738,10 @@ async function handleCheckout(event) {
     localStorage.setItem('waneyo_psp', 'paddle');
     try {
       await ensurePaddle();
+      _paddleRedirectOnSuccess = 'https://app.waneyo-formation.com/?bienvenue=1';
       Paddle.Checkout.open({
         items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
-        settings: { theme: 'light', locale: 'fr', allowLogout: false, successUrl: 'https://app.waneyo-formation.com/?bienvenue=1' }
+        settings: { theme: 'light', locale: 'fr', allowLogout: false }
       });
     } catch(e) {
       console.error('Paddle load error', e);
@@ -770,6 +784,7 @@ async function handleGuidePurchase(event) {
   if (PADDLE_COUNTRIES.includes(country)) {
     try {
       await ensurePaddle();
+      _paddleRedirectOnSuccess = null;
       Paddle.Checkout.open({
         items: [{ priceId: GUIDE_PADDLE_PRICE_ID, quantity: 1 }],
         settings: { theme: 'light', locale: 'fr', allowLogout: false }
