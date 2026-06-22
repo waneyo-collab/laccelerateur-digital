@@ -323,6 +323,27 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   </div>
 </div>
 
+<!-- BIENVENUE (juste après un paiement réussi) -->
+<div id="page-bienvenue" class="page">
+  <nav>
+    <span class="logo" onclick="showPage('landing')">L'Accélérateur<span> Digital</span></span>
+  </nav>
+  <div class="login-card">
+    <div class="card" style="text-align:center">
+      <div style="font-size:40px;margin-bottom:8px">🎉</div>
+      <h2 style="font-size:18px;font-weight:700;margin-bottom:6px">Paiement confirmé !</h2>
+      <p style="font-size:13px;color:var(--muted);margin-bottom:22px">Plus qu'une étape pour accéder à votre formation.</p>
+      <button class="btn-outline" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px" onclick="handleGoogleLogin()">
+        <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.12-.85 2.07-1.81 2.71v2.26h2.92c1.71-1.57 2.69-3.89 2.69-6.61z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.81.54-1.84.87-3.04.87-2.34 0-4.32-1.58-5.03-3.71H.96v2.33C2.44 15.98 5.48 18 9 18z"/><path fill="#FBBC05" d="M3.97 10.72c-.18-.54-.28-1.12-.28-1.72s.1-1.18.28-1.72V4.95H.96A8.997 8.997 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.51.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>
+        Continuer avec Google
+      </button>
+      <p style="font-size:11px;color:var(--muted);margin-top:10px">Utilisez la même adresse e-mail qu'au paiement</p>
+      <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:20px">Pas de compte Google ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('login')">Se connecter avec mot de passe</span></p>
+      <p style="font-size:11px;color:var(--muted);margin-top:6px">(Vous avez aussi reçu un email pour créer votre mot de passe)</p>
+    </div>
+  </div>
+</div>
+
 <!-- LOGIN -->
 <div id="page-login" class="page">
   <nav>
@@ -706,7 +727,7 @@ async function handleCheckout(event) {
       await ensurePaddle();
       Paddle.Checkout.open({
         items: [{ priceId: PADDLE_PRICE_ID, quantity: 1 }],
-        settings: { theme: 'light', locale: 'fr', allowLogout: false }
+        settings: { theme: 'light', locale: 'fr', allowLogout: false, successUrl: 'https://app.waneyo-formation.com/?bienvenue=1' }
       });
     } catch(e) {
       console.error('Paddle load error', e);
@@ -2043,6 +2064,7 @@ window.addEventListener('load', async () => {
   const token = getHashParam('access_token');
   const refreshTok = getHashParam('refresh_token');
   const error = getHashParam('error') || getHashParam('error_code');
+  const showWelcome = new URLSearchParams(window.location.search).get('bienvenue');
   if ((type === 'recovery' || type === 'invite') && token) {
     _resetToken = token;
     showPage('reset');
@@ -2071,14 +2093,23 @@ window.addEventListener('load', async () => {
   // FIX 3 : vérifier que le token JWT n'est pas expiré avant d'accéder au dashboard
   const email     = localStorage.getItem('waneyo_user');
   const authToken = localStorage.getItem('waneyo_token');
-  if (!email || !authToken) return;
-  try {
-    const payload = JSON.parse(atob(authToken.split('.')[1]));
-    if (payload.exp * 1000 <= Date.now()) { handleLogout(); return; }
-  } catch { handleLogout(); return; }
-  const active = await checkSubscriptionActive(email, authToken);
-  if (!active) { showSubscriptionEnded(); return; }
-  startDashboard('numerique');
+  if (email && authToken) {
+    try {
+      const payload = JSON.parse(atob(authToken.split('.')[1]));
+      if (payload.exp * 1000 <= Date.now()) { handleLogout(); return; }
+    } catch { handleLogout(); return; }
+    const active = await checkSubscriptionActive(email, authToken);
+    if (!active) { showSubscriptionEnded(); return; }
+    startDashboard('numerique');
+    return;
+  }
+
+  // Pas de session active : arrivée juste après un paiement réussi (Stripe ou
+  // Paddle redirige ici avec ?bienvenue=1) → on propose Google en priorité.
+  if (showWelcome) {
+    history.replaceState(null, '', window.location.pathname);
+    showPage('bienvenue');
+  }
 });
 
 if ('serviceWorker' in navigator) {
