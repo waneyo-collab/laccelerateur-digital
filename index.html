@@ -339,6 +339,11 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
       <p style="font-size:11px;color:var(--primary);cursor:pointer;text-align:right;margin-top:6px" onclick="handleForgotPassword()">Mot de passe oublié ?</p>
       <p id="login-error" style="font-size:12px;margin-top:6px;text-align:center"></p>
       <button class="btn-primary" style="width:100%;margin-top:10px" onclick="handleLogin()">Se connecter</button>
+      <div style="display:flex;align-items:center;gap:10px;margin:16px 0"><div style="flex:1;height:1px;background:rgba(0,0,0,0.1)"></div><span style="font-size:11px;color:var(--muted)">ou</span><div style="flex:1;height:1px;background:rgba(0,0,0,0.1)"></div></div>
+      <button class="btn-outline" style="width:100%;display:flex;align-items:center;justify-content:center;gap:10px" onclick="handleGoogleLogin()">
+        <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.12-.85 2.07-1.81 2.71v2.26h2.92c1.71-1.57 2.69-3.89 2.69-6.61z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.81.54-1.84.87-3.04.87-2.34 0-4.32-1.58-5.03-3.71H.96v2.33C2.44 15.98 5.48 18 9 18z"/><path fill="#FBBC05" d="M3.97 10.72c-.18-.54-.28-1.12-.28-1.72s.1-1.18.28-1.72V4.95H.96A8.997 8.997 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.51.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>
+        Continuer avec Google
+      </button>
       <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px">Pas encore membre ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('subscribe')">Essai gratuit 3 jours</span></p>
     </div>
   </div>
@@ -760,6 +765,44 @@ async function handleGuidePurchase(event) {
 }
 
 // ─── AUTH ────────────────────────────────────────────────────────────────────
+// Logique commune post-authentification (mot de passe ET Google) : vérifie
+// l'abonnement actif, stocke la session, rattache un éventuel code incubateur,
+// puis lance le dashboard. Retourne true si la connexion a abouti.
+async function completeLogin(email, accessToken, refreshToken, errorEl) {
+  const subs = await supabaseFetch(
+    `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
+    { headers: { 'Authorization': `Bearer ${accessToken}` } }
+  );
+  if (!Array.isArray(subs) || subs.length === 0) {
+    if (errorEl) {
+      errorEl.style.color = 'red';
+      errorEl.textContent = `❌ Aucun abonnement actif trouvé pour ${email}.`;
+    }
+    return false;
+  }
+  const firstName = subs[0].first_name || '';
+
+  localStorage.setItem('waneyo_token', accessToken);
+  if (refreshToken) localStorage.setItem('waneyo_refresh', refreshToken);
+  localStorage.setItem('waneyo_user', email);
+  localStorage.setItem('waneyo_firstname', firstName);
+
+  // Associer incubateur si présent à l'arrivée
+  const _inc = sessionStorage.getItem('waneyo_incubateur');
+  if (_inc) {
+    await supabaseFetch(
+      `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&incubateur_code=is.null`,
+      { method: 'PATCH',
+        headers: { 'Authorization': `Bearer ${accessToken}`, 'Prefer': 'return=minimal' },
+        body: JSON.stringify({ incubateur_code: _inc }) }
+    );
+    sessionStorage.removeItem('waneyo_incubateur');
+  }
+
+  startDashboard('numerique');
+  return true;
+}
+
 async function handleLogin() {
   const email = document.getElementById('login-email').value.trim();
   const password = document.getElementById('login-password').value;
@@ -786,39 +829,40 @@ async function handleLogin() {
       return;
     }
 
-    const subs = await supabaseFetch(
-      `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&status=eq.active&select=email,first_name`,
-      { headers: { 'Authorization': `Bearer ${data.access_token}` } }
-    );
-    if (!Array.isArray(subs) || subs.length === 0) {
-      errorEl.style.color = 'red';
-      errorEl.textContent = '❌ Aucun abonnement actif trouvé.';
-      return;
-    }
-    const firstName = subs[0].first_name || '';
-
-    localStorage.setItem('waneyo_token', data.access_token);
-    if (data.refresh_token) localStorage.setItem('waneyo_refresh', data.refresh_token);
-    localStorage.setItem('waneyo_user', email);
-    localStorage.setItem('waneyo_firstname', firstName);
-
-    // Associer incubateur si présent à l'arrivée
-    const _inc = sessionStorage.getItem('waneyo_incubateur');
-    if (_inc) {
-      await supabaseFetch(
-        `/rest/v1/subscribers?email=eq.${encodeURIComponent(email)}&incubateur_code=is.null`,
-        { method: 'PATCH',
-          headers: { 'Authorization': `Bearer ${data.access_token}`, 'Prefer': 'return=minimal' },
-          body: JSON.stringify({ incubateur_code: _inc }) }
-      );
-      sessionStorage.removeItem('waneyo_incubateur');
-    }
-
-    startDashboard('numerique');
+    await completeLogin(email, data.access_token, data.refresh_token, errorEl);
 
   } catch {
     errorEl.style.color = 'red';
     errorEl.textContent = '❌ Erreur de connexion. Réessayez.';
+  }
+}
+
+// ─── CONNEXION GOOGLE ────────────────────────────────────────────────────────
+// Redirige vers l'endpoint OAuth de Supabase, qui gère lui-même l'échange
+// avec Google puis renvoie l'utilisateur ici avec un token dans le hash d'URL.
+function handleGoogleLogin() {
+  const redirectTo = window.location.origin + window.location.pathname;
+  window.location.href = `${SUPABASE_URL}/auth/v1/authorize?provider=google&redirect_to=${encodeURIComponent(redirectTo)}`;
+}
+
+// Appelée au retour de Google (voir listener 'load' plus bas) avec le token
+// déjà extrait du hash. Récupère l'email réel du compte Google puis applique
+// la même vérification d'abonnement que la connexion par mot de passe.
+async function handleGoogleCallback(accessToken, refreshToken) {
+  showPage('login');
+  const errorEl = document.getElementById('login-error');
+  if (errorEl) { errorEl.style.color = 'var(--muted)'; errorEl.textContent = 'Connexion…'; }
+  try {
+    const user = await supabaseFetch('/auth/v1/user', {
+      headers: { 'Authorization': `Bearer ${accessToken}` }
+    });
+    if (!user || !user.email) {
+      if (errorEl) { errorEl.style.color = 'red'; errorEl.textContent = '❌ Connexion Google impossible. Réessayez.'; }
+      return;
+    }
+    await completeLogin(user.email, accessToken, refreshToken, errorEl);
+  } catch {
+    if (errorEl) { errorEl.style.color = 'red'; errorEl.textContent = '❌ Erreur de connexion. Réessayez.'; }
   }
 }
 
@@ -1997,6 +2041,7 @@ let _resetToken = null; // capturé au chargement, car le hash de l'URL est nett
 window.addEventListener('load', async () => {
   const type  = getHashParam('type');
   const token = getHashParam('access_token');
+  const refreshTok = getHashParam('refresh_token');
   const error = getHashParam('error') || getHashParam('error_code');
   if ((type === 'recovery' || type === 'invite') && token) {
     _resetToken = token;
@@ -2011,6 +2056,15 @@ window.addEventListener('load', async () => {
     document.getElementById('reset-form').style.display = 'none';
     document.getElementById('reset-link-error').style.display = 'block';
     history.replaceState(null, '', window.location.pathname);
+    return;
+  }
+
+  // Retour de connexion Google : Supabase renvoie un access_token dans le
+  // hash, mais sans paramètre 'type' (réservé aux flux email : recovery,
+  // invite...). C'est ce qui distingue ce cas des deux ci-dessus.
+  if (!type && token) {
+    history.replaceState(null, '', window.location.pathname);
+    await handleGoogleCallback(token, refreshTok);
     return;
   }
 
