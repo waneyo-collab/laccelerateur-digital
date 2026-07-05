@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#7C3AED">
+<title>Découvre ton profil – L'Accélérateur Digital</title>
+<style>
+  :root {
+    --v: #7C3AED;
+    --bg: #0F0A1E;
+    --card: #1A1030;
+    --txt: #F9FAFB;
+    --muted: #9CA3AF;
+    --green: #10B981;
+    --amber: #F59E0B;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, -apple-system, sans-serif;
+    background: var(--bg);
+    color: var(--txt);
+    min-height: 100vh;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .hdr {
+    display: flex;
+    align-items: center;
+    padding: 12px 16px;
+    gap: 12px;
+    background: rgba(124,58,237,.1);
+    border-bottom: 1px solid rgba(124,58,237,.25);
+    position: sticky;
+    top: 0;
+    z-index: 20;
+  }
+  .hdr a { color: var(--muted); text-decoration: none; font-size: 14px; white-space: nowrap; }
+  .hdr a:hover { color: var(--txt); }
+  .pbar { flex: 1; height: 6px; background: rgba(255,255,255,.08); border-radius: 4px; overflow: hidden; }
+  .pfill { height: 100%; background: var(--v); border-radius: 4px; transition: width .35s ease; }
+  .pcnt { font-size: 13px; color: var(--muted); white-space: nowrap; }
+
+  .wrap { max-width: 640px; margin: 0 auto; padding: 24px 16px 80px; }
+
+  .intro { text-align: center; padding: 32px 0; }
+  .intro h1 { font-size: 24px; margin-bottom: 12px; }
+  .intro p { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+
+  .card {
+    background: var(--card);
+    border: 1px solid rgba(124,58,237,.2);
+    border-radius: 14px;
+    padding: 24px;
+    margin-bottom: 16px;
+  }
+
+  .q-text { font-size: 17px; font-weight: 600; margin-bottom: 18px; }
+  .opt {
+    display: block;
+    width: 100%;
+    text-align: left;
+    background: rgba(255,255,255,.04);
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 12px;
+    padding: 14px 16px;
+    color: var(--txt);
+    font-size: 15px;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+  }
+  .opt:hover { border-color: var(--v); background: rgba(124,58,237,.12); }
+  .opt.selected { border-color: var(--v); background: rgba(124,58,237,.25); }
+
+  .nav-btns { display: flex; justify-content: space-between; margin-top: 16px; }
+  .btn {
+    border: none;
+    border-radius: 10px;
+    padding: 12px 22px;
+    font-size: 14px;
+    font-weight: 700;
+    cursor: pointer;
+  }
+  .btn-primary { background: var(--v); color: #fff; }
+  .btn-primary:disabled { background: rgba(124,58,237,.3); cursor: not-allowed; }
+  .btn-ghost { background: transparent; color: var(--muted); }
+  .btn-start { background: var(--v); color: #fff; padding: 14px 28px; border-radius: 10px; font-size: 16px; font-weight: 700; border: none; cursor: pointer; }
+
+  .result-badge {
+    display: inline-block;
+    background: rgba(245,158,11,.15);
+    color: var(--amber);
+    border: 1px solid rgba(245,158,11,.4);
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 13px;
+    font-weight: 700;
+    margin-bottom: 16px;
+  }
+  .result-title { font-size: 26px; font-weight: 800; margin-bottom: 8px; }
+  .result-sub { color: var(--muted); font-size: 15px; margin-bottom: 24px; }
+  .dims { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 24px; }
+  .dim-pill {
+    background: rgba(124,58,237,.15);
+    border: 1px solid rgba(124,58,237,.35);
+    border-radius: 20px;
+    padding: 6px 14px;
+    font-size: 13px;
+  }
+
+  .center { display:flex; flex-direction:column; align-items:center; justify-content:center; min-height:50vh; gap:16px; padding:24px; text-align:center; color:var(--muted); }
+</style>
+</head>
+<body>
+
+<div class="hdr">
+  <a href="/index.html">← Retour</a>
+  <div class="pbar"><div class="pfill" id="pfill" style="width:0%"></div></div>
+  <div class="pcnt" id="pcnt"></div>
+</div>
+
+<div class="wrap" id="app">
+  <div class="center">Chargement…</div>
+</div>
+
+<script>
+const RIASEC_LABELS = {
+  R: "Réaliste (action concrète)",
+  I: "Investigateur (analyse)",
+  A: "Artistique (créativité)",
+  S: "Social (relation, aide)",
+  E: "Entreprenant (leadership)",
+  C: "Conventionnel (organisation)"
+};
+
+let quiz = null;
+let currentIndex = 0;
+const answers = {};
+
+async function init() {
+  try {
+    const res = await fetch("/orientation-quiz.json");
+    if (!res.ok) throw new Error("Impossible de charger le questionnaire");
+    quiz = await res.json();
+    renderIntro();
+  } catch (e) {
+    document.getElementById("app").innerHTML =
+      `<div class="center">Une erreur est survenue. Réessaie dans un instant.</div>`;
+  }
+}
+
+function renderIntro() {
+  document.getElementById("app").innerHTML = `
+    <div class="intro">
+      <h1>Découvre ton profil professionnel naturel</h1>
+      <p>${quiz.questions.length} mises en situation, 5 minutes, basé sur des référentiels reconnus en psychologie du travail (RIASEC + Big Five). Aucune bonne ou mauvaise réponse.</p>
+      <button class="btn-start" onclick="startQuiz()">Commencer</button>
+    </div>
+  `;
+  updateProgress(0);
+}
+
+function startQuiz() {
+  currentIndex = 0;
+  renderQuestion();
+}
+
+function renderQuestion() {
+  const q = quiz.questions[currentIndex];
+  const chosen = answers[q.id];
+  const optionsHtml = q.options.map(opt => `
+    <button class="opt ${chosen === opt.id ? 'selected' : ''}" onclick="selectOption('${q.id}','${opt.id}')">
+      ${opt.text}
+    </button>
+  `).join("");
+
+  document.getElementById("app").innerHTML = `
+    <div class="card">
+      <div class="q-text">${q.text}</div>
+      ${optionsHtml}
+    </div>
+    <div class="nav-btns">
+      <button class="btn btn-ghost" onclick="prevQuestion()" ${currentIndex === 0 ? "disabled" : ""}>Précédent</button>
+      <button class="btn btn-primary" id="nextBtn" onclick="nextQuestion()" ${!chosen ? "disabled" : ""}>
+        ${currentIndex === quiz.questions.length - 1 ? "Voir mon profil" : "Suivant"}
+      </button>
+    </div>
+  `;
+  updateProgress(currentIndex);
+}
+
+function selectOption(qId, optId) {
+  answers[qId] = optId;
+  renderQuestion();
+}
+
+function prevQuestion() {
+  if (currentIndex > 0) { currentIndex--; renderQuestion(); }
+}
+
+function nextQuestion() {
+  if (!answers[quiz.questions[currentIndex].id]) return;
+  if (currentIndex < quiz.questions.length - 1) {
+    currentIndex++;
+    renderQuestion();
+  } else {
+    renderResult();
+  }
+}
+
+function updateProgress(index) {
+  const pct = Math.round((index / quiz.questions.length) * 100);
+  document.getElementById("pfill").style.width = pct + "%";
+  document.getElementById("pcnt").textContent = index === 0 ? "" : `${index}/${quiz.questions.length}`;
+}
+
+// ── Scoring (même logique que orientation-scoring.js, adaptée navigateur) ──
+function computeProfile() {
+  const riasec = { R:0, I:0, A:0, S:0, E:0, C:0 };
+  const bigfive = { extraversion:0, conscience:0, ouverture:0, agreabilite:0, stabilite:0 };
+
+  for (const q of quiz.questions) {
+    const chosenId = answers[q.id];
+    if (!chosenId) continue;
+    const opt = q.options.find(o => o.id === chosenId);
+    if (!opt) continue;
+    for (const [dim, val] of Object.entries(opt.scores)) {
+      if (dim in riasec) riasec[dim] += val;
+      else if (dim in bigfive) bigfive[dim] += val;
+    }
+  }
+
+  const sorted = Object.entries(riasec).sort((a,b) => b[1] - a[1]);
+  const [dimA, dimB] = [sorted[0][0], sorted[1][0]];
+
+  const PROFILE_MAP = {
+    "E,S": "Commercial(e) / Vente",
+    "E,A": "Marketeur / Growth",
+    "S,A": "Community Manager",
+    "C,E": "Gestion de projet",
+    "I,A": "Créateur(trice) de contenu / Stratégie de marque",
+    "I,C": "Analyste / Data",
+    "R,E": "Entrepreneur(e) généraliste",
+    "S,C": "Formateur(trice) / Coordination pédagogique",
+    "R,I": "Expert(e) technique / Résolution de problèmes concrets",
+    "R,A": "Artisan(e)-créateur(rice) / Maker",
+    "R,S": "Formateur(trice) terrain / Accompagnement pratique",
+    "R,C": "Opérations / Logistique-Qualité",
+    "I,S": "Consultant(e) / Expert(e)-conseil",
+    "I,E": "Stratège / Analyste business",
+    "A,C": "Designer / Production créative structurée"
+  };
+  const profile = PROFILE_MAP[`${dimA},${dimB}`] || PROFILE_MAP[`${dimB},${dimA}`] || "Profil hybride — à affiner";
+
+  let subProfile = null;
+  const isIntrovert = bigfive.extraversion < 0;
+  const isHighlyRigorous = bigfive.conscience > 0;
+  if (profile === "Marketeur / Growth" && isIntrovert) subProfile = "Plutôt stratégique / analytique que terrain";
+  if (profile === "Commercial(e) / Vente" && isIntrovert) subProfile = "Plutôt approche consultative qu'agressive";
+  if (profile === "Gestion de projet" && isHighlyRigorous) subProfile = "Profil cadrage rigoureux / PMO";
+
+  return { riasec, bigfive, dimA, dimB, profile, subProfile };
+}
+
+function renderResult() {
+  const r = computeProfile();
+  document.getElementById("app").innerHTML = `
+    <div class="intro">
+      <div class="result-badge">Ton profil</div>
+      <div class="result-title">${r.profile}</div>
+      ${r.subProfile ? `<div class="result-sub">${r.subProfile}</div>` : ""}
+      <div class="dims">
+        <span class="dim-pill">${RIASEC_LABELS[r.dimA]}</span>
+        <span class="dim-pill">${RIASEC_LABELS[r.dimB]}</span>
+      </div>
+      <p style="color:var(--muted);font-size:14px;margin-bottom:24px;">
+        Basé sur le modèle RIASEC (Holland) et les 5 grands traits de personnalité.
+        Ce résultat t'oriente, il ne t'enferme pas — tu peux évoluer.
+      </p>
+      <button class="btn-start" onclick="restart()">Refaire le test</button>
+    </div>
+  `;
+  updateProgress(quiz.questions.length);
+}
+
+function restart() {
+  for (const k in answers) delete answers[k];
+  renderIntro();
+}
+
+init();
+</script>
+</body>
+</html>

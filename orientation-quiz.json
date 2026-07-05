@@ -1,0 +1,220 @@
+{
+  "id": "orientation-quiz",
+  "title": "Découvre ton profil professionnel naturel",
+  "version": 1,
+  "methodology": "RIASEC (Holland) + Big Five — mise en situation comportementale",
+  "questions": [
+    { "id": "q1", "text": "Un projet client tombe à l'eau la veille du lancement. Tu :", "options": [
+      { "id": "a", "text": "Improvises une solution technique immédiatement", "scores": { "R": 2 } },
+      { "id": "b", "text": "Réunis l'équipe pour en discuter", "scores": { "S": 1 } },
+      { "id": "c", "text": "Analyses ce qui a causé l'échec avant d'agir", "scores": { "I": 1 } },
+      { "id": "d", "text": "Notes tout pour en tirer un process", "scores": { "C": 1 } }
+    ]},
+    { "id": "q2", "text": "Ton outil de travail idéal serait :", "options": [
+      { "id": "a", "text": "Un atelier avec du matériel concret à manipuler", "scores": { "R": 2 } },
+      { "id": "b", "text": "Un tableau de données à explorer", "scores": { "I": 1 } },
+      { "id": "c", "text": "Un espace créatif libre", "scores": { "A": 1 } },
+      { "id": "d", "text": "Un CRM bien structuré", "scores": { "C": 1 } }
+    ]},
+    { "id": "q3", "text": "Face à un meuble à monter sans notice, tu :", "options": [
+      { "id": "a", "text": "Le fais à l'instinct, en testant", "scores": { "R": 2 } },
+      { "id": "b", "text": "Chercher la logique du système avant de commencer", "scores": { "I": 1 } },
+      { "id": "c", "text": "Abandonnes et appelles quelqu'un", "scores": { "S": 1 } }
+    ]},
+    { "id": "q4", "text": "Ce qui te frustre le plus au travail :", "options": [
+      { "id": "a", "text": "Rester bloqué sur du théorique sans jamais produire", "scores": { "R": 2 } },
+      { "id": "b", "text": "Ne pas avoir de méthode claire", "scores": { "C": 1 } },
+      { "id": "c", "text": "Travailler seul sans échanger", "scores": { "S": 1 } }
+    ]},
+    { "id": "q5", "text": "Ton meilleur souvenir professionnel implique :", "options": [
+      { "id": "a", "text": "Un résultat concret que tu as construit ou vu se matérialiser", "scores": { "R": 2 } },
+      { "id": "b", "text": "Une idée que tu as eue et qui a marché", "scores": { "A": 1 } },
+      { "id": "c", "text": "Une personne que tu as aidée à progresser", "scores": { "S": 1 } }
+    ]},
+    { "id": "q6", "text": "Un problème surgit sans cause évidente. Ta première réaction :", "options": [
+      { "id": "a", "text": "Creuser les données pour comprendre la cause racine", "scores": { "I": 2 } },
+      { "id": "b", "text": "Tester plusieurs solutions rapidement", "scores": { "R": 1 } },
+      { "id": "c", "text": "Demander l'avis du groupe", "scores": { "S": 1 } }
+    ]},
+    { "id": "q7", "text": "Tu apprends mieux en :", "options": [
+      { "id": "a", "text": "Décortiquant le pourquoi derrière chaque règle", "scores": { "I": 2 } },
+      { "id": "b", "text": "Pratiquant directement", "scores": { "R": 1 } },
+      { "id": "c", "text": "Écoutant une histoire ou un exemple concret", "scores": { "A": 1 } }
+    ]},
+    { "id": "q8", "text": "Un article complexe sur ton secteur : tu", "options": [
+      { "id": "a", "text": "Le lis en entier, curieux de comprendre les mécanismes", "scores": { "I": 2 } },
+      { "id": "b", "text": "Le survoles pour l'essentiel actionnable", "scores": { "E": 1 } },
+      { "id": "c", "text": "Le laisses de côté, trop abstrait", "scores": { "R": 1 } }
+    ]},
+    { "id": "q9", "text": "Ce qui te procure le plus de satisfaction intellectuelle :", "options": [
+      { "id": "a", "text": "Résoudre une énigme ou un problème complexe", "scores": { "I": 2 } },
+      { "id": "b", "text": "Convaincre quelqu'un d'une idée", "scores": { "E": 1 } },
+      { "id": "c", "text": "Créer quelque chose de nouveau", "scores": { "A": 1 } }
+    ]},
+    { "id": "q10", "text": "Dans une réunion, tu es souvent celui/celle qui :", "options": [
+      { "id": "a", "text": "Pose la question qui remet en cause l'évidence", "scores": { "I": 2 } },
+      { "id": "b", "text": "Propose une vision d'ensemble ambitieuse", "scores": { "E": 1 } },
+      { "id": "c", "text": "Recentre sur les tâches à faire", "scores": { "C": 1 } }
+    ]},
+    { "id": "q11", "text": "On te donne une contrainte de format rigide pour un projet créatif. Tu :", "options": [
+      { "id": "a", "text": "Cherches comment la détourner pour garder ta patte", "scores": { "A": 2 } },
+      { "id": "b", "text": "L'appliques à la lettre, c'est plus sûr", "scores": { "C": 1 } },
+      { "id": "c", "text": "Proposes une alternative plus efficace", "scores": { "E": 1 } }
+    ]},
+    { "id": "q12", "text": "Ton énergie créative est la plus forte quand :", "options": [
+      { "id": "a", "text": "Tu pars d'une page blanche, sans cadre", "scores": { "A": 2 } },
+      { "id": "b", "text": "Tu as un problème précis à résoudre", "scores": { "I": 1 } },
+      { "id": "c", "text": "Tu dois convaincre un public", "scores": { "E": 1 } }
+    ]},
+    { "id": "q13", "text": "Face à un brief flou, tu :", "options": [
+      { "id": "a", "text": "Y vois une opportunité d'interpréter, d'apporter ta vision", "scores": { "A": 2 } },
+      { "id": "b", "text": "Demandes des précisions avant d'agir", "scores": { "C": 1 } },
+      { "id": "c", "text": "Improvises une action concrète tout de suite", "scores": { "R": 1 } }
+    ]},
+    { "id": "q14", "text": "Ce qu'on te reproche parfois :", "options": [
+      { "id": "a", "text": "De trop vouloir que ce soit beau ou juste, au détriment du délai", "scores": { "A": 2 } },
+      { "id": "b", "text": "D'être trop direct(e)", "scores": { "E": 1 } },
+      { "id": "c", "text": "De trop analyser avant d'agir", "scores": { "I": 1 } }
+    ]},
+    { "id": "q15", "text": "Un collègue critique ton travail sur le fond. Ta réaction :", "options": [
+      { "id": "a", "text": "Tu le vis comme une remise en question de ta sensibilité, mais tu écoutes", "scores": { "A": 2 } },
+      { "id": "b", "text": "Tu demandes des données concrètes pour comprendre", "scores": { "I": 1 } },
+      { "id": "c", "text": "Tu passes à l'action pour corriger vite", "scores": { "R": 1 } }
+    ]},
+    { "id": "q16", "text": "Un membre de ton équipe est démotivé. Tu :", "options": [
+      { "id": "a", "text": "Prends du temps pour l'écouter et comprendre ce qui se passe", "scores": { "S": 2 } },
+      { "id": "b", "text": "Lui donnes un objectif clair pour le remobiliser", "scores": { "E": 1 } },
+      { "id": "c", "text": "Laisses faire, ce n'est pas ton rôle", "scores": { "C": 1 } }
+    ]},
+    { "id": "q17", "text": "Ce qui te donne le plus d'énergie au travail :", "options": [
+      { "id": "a", "text": "Voir quelqu'un progresser grâce à toi", "scores": { "S": 2 } },
+      { "id": "b", "text": "Voir un chiffre monter", "scores": { "E": 1 } },
+      { "id": "c", "text": "Voir un livrable terminé et propre", "scores": { "C": 1 } }
+    ]},
+    { "id": "q18", "text": "En groupe, tu es naturellement celui/celle qui :", "options": [
+      { "id": "a", "text": "Veille à ce que chacun se sente inclus", "scores": { "S": 2 } },
+      { "id": "b", "text": "Fixe le cap et bouscule si besoin", "scores": { "E": 1 } },
+      { "id": "c", "text": "Garde le fil logique de la discussion", "scores": { "I": 1 } }
+    ]},
+    { "id": "q19", "text": "Un client est frustré et agressif. Ta priorité :", "options": [
+      { "id": "a", "text": "Apaiser la relation avant de traiter le problème", "scores": { "S": 2 } },
+      { "id": "b", "text": "Résoudre le problème vite, l'émotion attendra", "scores": { "R": 1 } },
+      { "id": "c", "text": "Documenter l'incident pour éviter que ça se reproduise", "scores": { "C": 1 } }
+    ]},
+    { "id": "q20", "text": "Ton rôle préféré dans un projet collectif :", "options": [
+      { "id": "a", "text": "Celui qui accompagne et forme les autres", "scores": { "S": 2 } },
+      { "id": "b", "text": "Celui qui pilote et décide", "scores": { "E": 1 } },
+      { "id": "c", "text": "Celui qui structure le planning", "scores": { "C": 1 } }
+    ]},
+    { "id": "q21", "text": "Une opportunité risquée se présente, sans garantie de résultat. Tu :", "options": [
+      { "id": "a", "text": "Fonces, le risque fait partie du jeu", "scores": { "E": 2 } },
+      { "id": "b", "text": "Analyses les chiffres avant de trancher", "scores": { "I": 1 } },
+      { "id": "c", "text": "Demandes l'avis de ton entourage proche", "scores": { "S": 1 } }
+    ]},
+    { "id": "q22", "text": "Ce qui te motive le plus dans un projet :", "options": [
+      { "id": "a", "text": "L'idée de le voir grandir et avoir de l'impact", "scores": { "E": 2 } },
+      { "id": "b", "text": "La qualité du résultat final", "scores": { "A": 1 } },
+      { "id": "c", "text": "La stabilité et la prévisibilité du processus", "scores": { "C": 1 } }
+    ]},
+    { "id": "q23", "text": "Face à un non, tu :", "options": [
+      { "id": "a", "text": "Cherches immédiatement un autre angle pour convaincre", "scores": { "E": 2 } },
+      { "id": "b", "text": "Acceptes et passes à autre chose", "scores": { "C": 1 } },
+      { "id": "c", "text": "Analyses pourquoi ça n'a pas fonctionné", "scores": { "I": 1 } }
+    ]},
+    { "id": "q24", "text": "Dans 5 ans, tu te vois plutôt :", "options": [
+      { "id": "a", "text": "À la tête de ton propre projet ou équipe", "scores": { "E": 2 } },
+      { "id": "b", "text": "Expert(e) reconnu(e) dans un domaine précis", "scores": { "I": 1 } },
+      { "id": "c", "text": "Dans un rôle stable, avec un cadre clair", "scores": { "C": 1 } }
+    ]},
+    { "id": "q25", "text": "Ce qu'on dit souvent de toi :", "options": [
+      { "id": "a", "text": "Il/elle a toujours une idée pour faire avancer les choses", "scores": { "E": 2 } },
+      { "id": "b", "text": "Il/elle est fiable et organisé(e)", "scores": { "C": 1 } },
+      { "id": "c", "text": "Il/elle est à l'écoute des autres", "scores": { "S": 1 } }
+    ]},
+    { "id": "q26", "text": "Un projet sans process ni deadline claire. Ta réaction :", "options": [
+      { "id": "a", "text": "Tu structures toi-même un planning avant de commencer", "scores": { "C": 2 } },
+      { "id": "b", "text": "Tu avances à l'instinct, le cadre viendra plus tard", "scores": { "R": 1 } },
+      { "id": "c", "text": "Tu proposes une vision globale avant les détails", "scores": { "E": 1 } }
+    ]},
+    { "id": "q27", "text": "Ton espace de travail idéal :", "options": [
+      { "id": "a", "text": "Rangé, avec un système clair pour chaque chose", "scores": { "C": 2 } },
+      { "id": "b", "text": "Un joyeux chaos créatif", "scores": { "A": 1 } },
+      { "id": "c", "text": "Peu importe, tu es rarement au même endroit", "scores": { "E": 1 } }
+    ]},
+    { "id": "q28", "text": "Ce qui te rassure le plus dans un projet :", "options": [
+      { "id": "a", "text": "Une checklist claire et suivie", "scores": { "C": 2 } },
+      { "id": "b", "text": "La confiance dans ton instinct", "scores": { "R": 1 } },
+      { "id": "c", "text": "L'enthousiasme du groupe", "scores": { "S": 1 } }
+    ]},
+    { "id": "q29", "text": "Une erreur administrative répétée dans ton équipe. Tu :", "options": [
+      { "id": "a", "text": "Crées une procédure pour l'éviter définitivement", "scores": { "C": 2 } },
+      { "id": "b", "text": "En parles avec la personne concernée pour comprendre", "scores": { "S": 1 } },
+      { "id": "c", "text": "Laisses filer, ce n'est pas grave", "scores": { "A": 1 } }
+    ]},
+    { "id": "q30", "text": "Tu préfères un travail où :", "options": [
+      { "id": "a", "text": "Les règles et attentes sont claires dès le départ", "scores": { "C": 2 } },
+      { "id": "b", "text": "Tu inventes tes propres règles", "scores": { "A": 1 } },
+      { "id": "c", "text": "Tu es jugé(e) sur le résultat, peu importe la méthode", "scores": { "E": 1 } }
+    ]},
+    { "id": "q31", "text": "Après une journée intense en groupe, tu :", "options": [
+      { "id": "a", "text": "Es rechargé(e), tu en veux encore", "scores": { "extraversion": 1 } },
+      { "id": "b", "text": "Es vidé(e), tu as besoin de solitude", "scores": { "extraversion": -1 } }
+    ]},
+    { "id": "q32", "text": "En réunion, tu parles :", "options": [
+      { "id": "a", "text": "Spontanément, sans trop filtrer", "scores": { "extraversion": 1 } },
+      { "id": "b", "text": "Seulement quand tu as réfléchi à ce que tu vas dire", "scores": { "extraversion": -1 } }
+    ]},
+    { "id": "q33", "text": "Rencontrer de nouvelles personnes professionnellement :", "options": [
+      { "id": "a", "text": "Te stimule", "scores": { "extraversion": 1 } },
+      { "id": "b", "text": "Te coûte de l'énergie, même si tu le fais bien", "scores": { "extraversion": -1 } }
+    ]},
+    { "id": "q34", "text": "Tes deadlines :", "options": [
+      { "id": "a", "text": "Sont respectées, quasi toujours en avance", "scores": { "conscience": 1 } },
+      { "id": "b", "text": "Sont souvent limites, tu fonctionnes sous pression", "scores": { "conscience": -1 } }
+    ]},
+    { "id": "q35", "text": "Un plan détaillé avant d'agir :", "options": [
+      { "id": "a", "text": "Indispensable pour toi", "scores": { "conscience": 1 } },
+      { "id": "b", "text": "Superflu, tu préfères t'adapter en marchant", "scores": { "conscience": -1 } }
+    ]},
+    { "id": "q36", "text": "Ton espace de travail (physique ou numérique) :", "options": [
+      { "id": "a", "text": "Est structuré et prévisible", "scores": { "conscience": 1 } },
+      { "id": "b", "text": "Change souvent, organique", "scores": { "conscience": -1 } }
+    ]},
+    { "id": "q37", "text": "Une méthode radicalement différente de tes habitudes :", "options": [
+      { "id": "a", "text": "T'intrigue, tu veux l'essayer", "scores": { "ouverture": 1 } },
+      { "id": "b", "text": "Te met mal à l'aise, tu préfères le connu", "scores": { "ouverture": -1 } }
+    ]},
+    { "id": "q38", "text": "Face à l'abstrait ou au théorique :", "options": [
+      { "id": "a", "text": "Tu es à l'aise, ça t'intéresse", "scores": { "ouverture": 1 } },
+      { "id": "b", "text": "Tu préfères le concret et l'appliqué", "scores": { "ouverture": -1 } }
+    ]},
+    { "id": "q39", "text": "Changer de secteur ou de métier en cours de carrière :", "options": [
+      { "id": "a", "text": "T'enthousiasme comme une aventure", "scores": { "ouverture": 1 } },
+      { "id": "b", "text": "T'angoisse, tu préfères la continuité", "scores": { "ouverture": -1 } }
+    ]},
+    { "id": "q40", "text": "En désaccord avec un collègue, tu :", "options": [
+      { "id": "a", "text": "Cherches le compromis avant tout", "scores": { "agreabilite": 1 } },
+      { "id": "b", "text": "Défends ta position fermement, même si ça crée de la friction", "scores": { "agreabilite": -1 } }
+    ]},
+    { "id": "q41", "text": "Une personne en difficulté dans ton équipe :", "options": [
+      { "id": "a", "text": "T'inquiète naturellement, tu veux l'aider", "scores": { "agreabilite": 1 } },
+      { "id": "b", "text": "Ne te concerne que si ça impacte le projet", "scores": { "agreabilite": -1 } }
+    ]},
+    { "id": "q42", "text": "Sous forte pression (deadline, imprévu majeur), tu :", "options": [
+      { "id": "a", "text": "Restes globalement calme", "scores": { "stabilite": 1 } },
+      { "id": "b", "text": "Ressens un stress fort, difficile à gérer", "scores": { "stabilite": -1 } }
+    ]},
+    { "id": "q43", "text": "Une critique sur ton travail :", "options": [
+      { "id": "a", "text": "Tu la digères vite, sans y repenser des heures", "scores": { "stabilite": 1 } },
+      { "id": "b", "text": "Elle te reste en tête longtemps", "scores": { "stabilite": -1 } }
+    ]},
+    { "id": "q44", "text": "Un imprévu de dernière minute qui bouleverse tes plans :", "options": [
+      { "id": "a", "text": "T'agace mais ne te déstabilise pas", "scores": { "stabilite": 1 } },
+      { "id": "b", "text": "Te met en difficulté émotionnellement", "scores": { "stabilite": -1 } }
+    ]},
+    { "id": "q45", "text": "En période d'incertitude professionnelle prolongée, tu :", "options": [
+      { "id": "a", "text": "Gardes ton énergie et ta motivation", "scores": { "stabilite": 1 } },
+      { "id": "b", "text": "Ressens rapidement de l'anxiété", "scores": { "stabilite": -1 } }
+    ]}
+  ]
+}
