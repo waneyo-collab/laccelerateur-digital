@@ -173,23 +173,25 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     </div>
   </nav>
   <div class="hero">
-    <div class="badge badge-amber" style="margin-bottom:16px">🔥 Offre de lancement · Prix réduit</div>
-    <h1>Le marketing digital,<br/>enfin simple à apprendre</h1>
-    <p>15 minutes par jour suffisent pour maîtriser le digital. Des slides narratives interactives, sans jargon, pensées pour les débutants, les reconversions et ceux qui apprennent en autonomie.</p>
+    <div class="badge badge-amber" style="margin-bottom:16px">✅ Onboarding digital clé en main</div>
+    <h1>Vos recrues et vos porteurs de projet,<br/>opérationnels sur le digital en quelques semaines</h1>
+    <p>L'onboarding digital clé en main pour incubateurs, entreprises et organismes d'emploi. Un parcours de professionnalisation qui oriente chaque profil, le structure et le rend autonome — pendant que vos équipes se concentrent sur leur métier.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="showPage('subscribe')">🎁 3 jours gratuits · puis 9,99€/mois</button>
-      <button class="btn-ghost" onclick="window.location.href='reader.html?module=1'">Essayer sans CB →</button>
+      <button class="btn-primary" onclick="window.open('https://wa.me/212616329952?text=Bonjour%2C%20je%20repr%C3%A9sente%20une%20organisation%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20l%27onboarding%20digital%20Waneyo','_blank')">💬 Onboarder mon équipe →</button>
+      <button class="btn-ghost" onclick="showPage('subscribe')">Je démarre ma carrière</button>
     </div>
-    <p class="hero-sub">Sans engagement · Annulable à tout moment · Accès immédiat</p>
+    <p class="hero-sub">Orientation · Professionnalisation · Autonomie — sans mobiliser vos équipes</p>
   </div>
 
   <div class="for-who">
-    <p class="section-label">FAIT POUR VOUS SI…</p>
+    <p class="section-label">CONÇU POUR VOUS SI…</p>
     <div class="grid-4" style="margin-top:14px">
-      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🔄</div><div style="font-size:13px;font-weight:500">Vous êtes en reconversion professionnelle</div></div>
-      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">📱</div><div style="font-size:13px;font-weight:500">Vous avez un projet digital à lancer</div></div>
-      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">💡</div><div style="font-size:13px;font-weight:500">Vous souhaitez apprendre en autonomie, sans école</div></div>
-      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🌍</div><div style="font-size:13px;font-weight:500">Vous gérez un incubateur en Afrique</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🌱</div><div style="font-size:13px;font-weight:500">Vous accompagnez des porteurs de projet à se structurer</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">👥</div><div style="font-size:13px;font-weight:500">Vous devez former vos recrues rapidement</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🧭</div><div style="font-size:13px;font-weight:500">Vous cherchez vers quel métier orienter vos candidats</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🚀</div><div style="font-size:13px;font-weight:500">Vous cherchez à vous professionnaliser</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🏪</div><div style="font-size:13px;font-weight:500">Vous êtes une TPE et voulez gérer votre com' en interne</div></div>
+      <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">💰</div><div style="font-size:13px;font-weight:500">Vous voulez développer un revenu complémentaire</div></div>
     </div>
   </div>
 
@@ -262,6 +264,81 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     </div>
   </div>
 
+  <!-- BOOTCAMP (accueil - visible sans abonnement) -->
+  <div class="section">
+    <p class="section-label">ACCOMPAGNEMENT</p>
+    <h2 class="section-title">Besoin d'aller plus vite ? Passe à l'action avec un accompagnement individuel</h2>
+    <div style="max-width:520px;margin:20px auto 0;background:linear-gradient(135deg,#0F0A1E,#2D1B69);border-radius:14px;padding:24px;color:#fff">
+      <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">🔥 ACCOMPAGNEMENT INTENSIF</div>
+      <h3 style="font-size:18px;font-weight:800;margin-bottom:6px">Bootcamp Individuel<br/>avec Nadia</h3>
+      <p style="font-size:13px;color:rgba(255,255,255,0.7);line-height:1.6;margin-bottom:20px">Tu as les connaissances, tu as le projet — mais tu as besoin de quelqu'un à tes côtés pour passer à l'action. Ce bootcamp est fait pour toi. 2h de travail ensemble, 2 fois par semaine, sur ton projet réel.</p>
+
+      <div style="display:flex;gap:8px;margin-bottom:20px;flex-wrap:wrap">
+        <button onclick="switchBootcampLp('1mois',this)" id="tab-1mois-lp"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid var(--accent);background:var(--accent);color:#fff;font-weight:700;font-size:13px;cursor:pointer">
+          1 mois
+        </button>
+        <button onclick="switchBootcampLp('3mois',this)" id="tab-3mois-lp"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
+          3 mois ⭐
+        </button>
+        <button onclick="switchBootcampLp('seance',this)" id="tab-seance-lp"
+          style="flex:1;min-width:100px;padding:10px 8px;border-radius:10px;border:2px solid rgba(255,255,255,0.2);background:transparent;color:rgba(255,255,255,0.6);font-weight:600;font-size:13px;cursor:pointer">
+          À la séance
+        </button>
+      </div>
+
+      <div id="bootcamp-1mois-lp">
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">290€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 4 semaines</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">8 séances de 2h · soit ~36€/séance</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur ton projet</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 1 mois – 290€'">
+          🚀 Je veux rejoindre le Bootcamp — 290€
+        </button>
+      </div>
+
+      <div id="bootcamp-3mois-lp" style="display:none">
+        <div style="background:var(--accent);color:#fff;font-size:11px;font-weight:700;padding:4px 10px;border-radius:20px;display:inline-block;margin-bottom:10px">⭐ Le plus populaire</div>
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">790€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· 12 semaines</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">24 séances de 2h · soit ~33€/séance · économise 80€</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 2 séances/semaine de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Travail direct sur ton projet</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Suivi WhatsApp entre les séances</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Plan d'action hebdomadaire</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Bilan mensuel + réorientation si besoin</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">⚡ Places limitées à 4 personnes</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp Individuel 3 mois – 790€'">
+          🚀 Je veux rejoindre le Bootcamp — 790€
+        </button>
+      </div>
+
+      <div id="bootcamp-seance-lp" style="display:none">
+        <div style="font-size:32px;font-weight:800;color:var(--accent);margin-bottom:4px">60€ <span style="font-size:14px;font-weight:400;color:rgba(255,255,255,0.5)">· par séance</span></div>
+        <div style="font-size:12px;color:rgba(255,255,255,0.5);margin-bottom:16px">2h de travail · sans engagement · idéal pour tester</div>
+        <ul style="list-style:none;margin-bottom:20px">
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ 1 séance de 2h en visio</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Focus sur un blocage précis</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">✅ Compte rendu écrit après la séance</li>
+          <li style="font-size:13px;color:rgba(255,255,255,0.85);padding:5px 0;display:flex;gap:8px">💡 Recommandé après la session découverte 40€</li>
+        </ul>
+        <button style="width:100%;background:var(--accent);color:#fff;border:none;border-radius:10px;padding:13px;font-size:14px;font-weight:700;cursor:pointer"
+          onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Bootcamp – séance individuelle 60€'">
+          🚀 Réserver une séance — 60€
+        </button>
+      </div>
+    </div>
+  </div>
+
   <div class="section" style="background:var(--primary-light)">
     <p class="section-label">FAQ</p>
     <h2 class="section-title">Tout ce que vous voulez savoir</h2>
@@ -269,11 +346,11 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
   </div>
 
   <div class="cta-final">
-    <h2>Prêt(e) à prendre le contrôle de votre avenir digital ?</h2>
-    <p>Rejoignez ceux qui ont choisi l'autonomie. Commencez gratuitement, sans CB.</p>
+    <h2>Prêt à rendre vos équipes et vos porteurs de projet autonomes sur le digital ?</h2>
+    <p>Offrez-leur un parcours de professionnalisation clé en main. Ou, à titre individuel, démarrez gratuitement, sans CB.</p>
     <div class="hero-btns">
-      <button class="btn-primary" onclick="showPage('subscribe')">🎁 3 jours gratuits · puis 9,99€/mois</button>
-      <button class="btn-ghost" onclick="window.location.href='reader.html?module=1'">Essayer le module offert</button>
+      <button class="btn-primary" onclick="window.open('https://wa.me/212616329952?text=Bonjour%2C%20je%20repr%C3%A9sente%20une%20organisation%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20l%27onboarding%20digital%20Waneyo','_blank')">💬 Onboarder mon équipe →</button>
+      <button class="btn-ghost" onclick="showPage('subscribe')">Je démarre ma carrière</button>
     </div>
     <p class="hero-sub" style="margin-top:14px">Sans engagement · Annulable à tout moment</p>
   </div>
@@ -296,7 +373,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
         <li>✅ Phase 2 — Mindset (10 modules)</li>
         <li>✅ Phase 3 — Entreprenariat (10 modules)</li>
         <li>✅ Ebooks & guides téléchargeables</li>
-        <li>✅ Nouveaux modules chaque mois</li>
+        <li>✅ Accès à l'intégralité du parcours dès l'inscription</li>
         <li>✅ Certificat de suivi de formation</li>
         <li style="color:var(--muted)">⚠️ Accès interrompu immédiatement en cas d'annulation</li>
       </ul>
@@ -1556,7 +1633,7 @@ const FAQ_LANDING = [
   {q:"Faut-il des connaissances préalables ?",a:"Aucune. Cette formation est conçue pour les vrais débutants. Pas de jargon, pas de prérequis — juste la volonté d'apprendre."},
   {q:"C'est quoi exactement comme format ?",a:"Chaque module est une compilation de slides narratives interactives — pas des vidéos. 15 à 30 minutes par module, à votre rythme."},
   {q:"Pourquoi ce parcours en 3 phases ?",a:"Parce qu'on ne peut pas entreprendre sans maîtriser le digital, et on ne peut pas réussir sans le bon état d'esprit. Les 3 phases se complètent pour vous donner toutes les clés."},
-  {q:"Puis-je accéder à tous les modules dès l'abonnement ?",a:"Oui, tout le contenu disponible est accessible immédiatement. De nouveaux modules sont ajoutés chaque mois."},
+  {q:"Puis-je accéder à tous les modules dès l'abonnement ?",a:"Oui. L'intégralité du parcours de professionnalisation est accessible immédiatement dès ton inscription, sans attente : tu avances à ton rythme."},
   {q:"Que se passe-t-il si j'annule ?",a:"L'accès est interrompu immédiatement à l'annulation. Vous pouvez vous réabonner à tout moment."},
   {q:"La formation est-elle remboursable ?",a:"Non. Conformément à la législation sur les produits numériques, cette formation n'est pas remboursable dès l'accès au contenu. Consultez nos <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>Conditions Générales de Vente</a> pour plus de détails."},
   {q:"Conditions Générales de Vente",a:"Nos CGV sont disponibles ici : <a href='https://www.waneyo-formation.com/cgv' target='_blank' style='color:var(--primary)'>www.waneyo-formation.com/cgv</a>"},
@@ -2092,6 +2169,24 @@ function switchBootcamp(tab, btn) {
   ['1mois','3mois','seance'].forEach(t => {
     document.getElementById('bootcamp-' + t).style.display = t === tab ? 'block' : 'none';
     const b = document.getElementById('tab-' + t);
+    if (t === tab) {
+      b.style.background = 'var(--accent)';
+      b.style.borderColor = 'var(--accent)';
+      b.style.color = '#fff';
+      b.style.opacity = '1';
+    } else {
+      b.style.background = 'transparent';
+      b.style.borderColor = 'rgba(255,255,255,0.2)';
+      b.style.color = 'rgba(255,255,255,0.6)';
+    }
+  });
+}
+
+// Version accueil (IDs suffixés -lp, indépendante du dashboard)
+function switchBootcampLp(tab, btn) {
+  ['1mois','3mois','seance'].forEach(t => {
+    document.getElementById('bootcamp-' + t + '-lp').style.display = t === tab ? 'block' : 'none';
+    const b = document.getElementById('tab-' + t + '-lp');
     if (t === tab) {
       b.style.background = 'var(--accent)';
       b.style.borderColor = 'var(--accent)';
