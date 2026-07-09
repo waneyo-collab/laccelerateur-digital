@@ -271,7 +271,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     </div>
   </div>
 
-  <!-- BOOTCAMP (accueil - visible sans abonnement) -->
+  <!-- BOOTCAMP (accueil - visible sans achat) -->
   <div class="section">
     <p class="section-label">ACCOMPAGNEMENT</p>
     <h2 class="section-title">Besoin d'aller plus vite ? Passe à l'action avec un accompagnement individuel</h2>
@@ -788,8 +788,8 @@ const PADDLE_COUNTRIES = [
   'ZM','ZW','NA','BW','LS','SZ','SO','DJ','ER','SS','SD','MU','SC',
   'KM','RE','YT','TG'
 ];
-const PADDLE_PRICE_ID = 'pri_01ksweca7ky3nj5r3memdkc6ce';
-const STRIPE_URL      = 'https://buy.stripe.com/7sY7sMd3127xfuacCc43S00';
+const PADDLE_PRICE_ID = 'pri_01kx3x4pdrmxkzer98pq7aq1sb';
+const STRIPE_URL      = 'https://buy.stripe.com/8x228s9QPaE31DkeKk43S02';
 const STRIPE_PORTAL   = 'https://billing.stripe.com/p/login/7sY7sMd3127xfuacCc43S00';
 const PADDLE_PORTAL   = 'https://customer-portal.paddle.com/cpl_01kswd7558gytzq8nwbrf0fmvt';
 
@@ -839,7 +839,7 @@ async function ensurePaddle() {
   });
 }
 // Définie juste avant chaque Paddle.Checkout.open() : null pour le guide
-// (pas de compte créé, on reste sur la page), URL bienvenue pour l'abonnement.
+// (pas de compte créé, on reste sur la page), URL bienvenue pour l'accès.
 let _paddleRedirectOnSuccess = null;
 
 async function handleCheckout(event) {
@@ -922,7 +922,7 @@ async function handleGuidePurchase(event) {
 
 // ─── AUTH ────────────────────────────────────────────────────────────────────
 // Logique commune post-authentification (mot de passe ET Google) : vérifie
-// l'abonnement actif, stocke la session, rattache un éventuel code incubateur,
+// l'accès actif, stocke la session, rattache un éventuel code incubateur,
 // puis lance le dashboard. Retourne true si la connexion a abouti.
 async function completeLogin(email, accessToken, refreshToken, errorEl) {
   const subs = await supabaseFetch(
@@ -932,7 +932,7 @@ async function completeLogin(email, accessToken, refreshToken, errorEl) {
   if (!Array.isArray(subs) || subs.length === 0) {
     if (errorEl) {
       errorEl.style.color = 'red';
-      errorEl.textContent = `❌ Aucun abonnement actif trouvé pour ${email}.`;
+      errorEl.textContent = `❌ Aucun accès trouvé pour ${email}. As-tu bien finalisé ton achat ?`;
     }
     return false;
   }
@@ -1006,7 +1006,7 @@ function handleGoogleLogin() {
 
 // Appelée au retour de Google (voir listener 'load' plus bas) avec le token
 // déjà extrait du hash. Récupère l'email réel du compte Google puis applique
-// la même vérification d'abonnement que la connexion par mot de passe.
+// la même vérification d'accès que la connexion par mot de passe.
 async function handleGoogleCallback(accessToken, refreshToken) {
   showPage('login');
   const errorEl = document.getElementById('login-error');
@@ -1041,10 +1041,9 @@ async function handleLogout() {
   showPage('landing');
 }
 
-// Revérifie que l'abonnement est toujours actif côté Supabase (et pas seulement
-// que le token JWT n'a pas expiré — un abonnement annulé ne fait pas expirer
-// le JWT, donc sans ce contrôle un compte désabonné garde l'accès indéfiniment
-// tant que sa session de navigateur reste ouverte).
+// Revérifie que l'accès (status=active) existe toujours côté Supabase. En
+// paiement unique le statut n'est jamais révoqué ; ce contrôle sert de garde-fou
+// si une ligne est supprimée ou désactivée manuellement côté base.
 async function checkSubscriptionActive(email, token) {
   try {
     const subs = await supabaseFetch(
@@ -1053,7 +1052,7 @@ async function checkSubscriptionActive(email, token) {
     );
     return Array.isArray(subs) && subs.length > 0;
   } catch {
-    // En cas d'erreur réseau ponctuelle, on ne coupe pas l'accès d'un abonné
+    // En cas d'erreur réseau ponctuelle, on ne coupe pas l'accès d'un utilisateur
     // potentiellement actif — la vérification suivante (load ou refresh) retentera.
     return true;
   }
@@ -1065,7 +1064,7 @@ function showSubscriptionEnded() {
   const err = document.getElementById('login-error');
   if (err) {
     err.style.color = 'var(--accent)';
-    err.textContent = '⏰ Ton abonnement a pris fin. Réabonne-toi pour continuer ta formation.';
+    err.textContent = '⏰ Ton accès n\'est plus valide. Reconnecte-toi, ou contacte-nous si le problème persiste.';
   }
 }
 
