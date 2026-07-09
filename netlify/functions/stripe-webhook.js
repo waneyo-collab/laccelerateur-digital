@@ -118,15 +118,7 @@ exports.handler = async (event) => {
       }
     }
 
-    if (stripeEvent.type === 'customer.subscription.deleted') {
-      const sub = stripeEvent.data.object;
-      const { error } = await supabase
-        .from('subscribers')
-        .update({ status: 'cancelled' })
-        .eq('stripe_customer_id', sub.customer);
-      if (error) console.error('❌ Erreur update subscribers (cancel):', error.message);
-    }
-
+   
     return { statusCode: 200, body: 'ok' };
   } catch (err) {
     console.error('❌ Erreur inattendue dans le traitement du webhook:', err.message, err.stack);
