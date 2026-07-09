@@ -47,32 +47,48 @@ exports.handler = async (event) => {
   // Tout le traitement métier est protégé : une erreur ici ne doit JAMAIS
   // faire planter la fonction (= 502 côté Stripe). On logue et on répond 200
   // pour éviter que Stripe ne boucle indéfiniment sur un event bloqué.
-  try {
-    if (stripeEvent.type === 'checkout.session.completed') {
+  if (stripeEvent.type === 'checkout.session.completed') {
       const session = stripeEvent.data.object;
       const email = session.customer_details?.email;
       const customerId = session.customer;
+      const fullName = session.customer_details?.name || '';
+      const firstName = fullName.split(' ')[0] || '';
 
-      // ── Achat unique (le Guide Marketing) : pas de compte créé, juste l'email
-      //    de livraison avec le lien de téléchargement sécurisé.
-      if (session.mode === 'payment') {
-        if (email) {
-          const fullName = session.customer_details?.name || '';
-          const firstName = fullName.split(' ')[0] || '';
-          // Identification par l'ID du Payment Link, déjà présent dans
-          // l'événement reçu (pas d'appel API Stripe supplémentaire requis).
+      if (email) {
+        // ── Ici on gère TOUS les paiements uniques (Guide ET Application) ──
+        if (session.mode === 'payment') {
           const isGuidePurchase = session.payment_link === process.env.GUIDE_STRIPE_PAYMENT_LINK_ID;
 
           if (isGuidePurchase) {
+            // Flux du Guide Marketing (inchangé)
             const sent = await sendGuideEmail(supabase, email, firstName);
             if (!sent) console.error(`❌ Email guide NON envoyé pour ${email}`);
             await logGuidePurchase(supabase, { email, psp: 'stripe', amount: (session.amount_total || 0) / 100 });
           } else {
-            console.error(`⚠️ Paiement one-time non reconnu (ni guide) pour ${email}`);
+            // FLUX DE L'APPLICATION (Puisque ce n'est pas le guide, c'est l'app !)
+            // 1. Créer le compte Supabase
+            const isNewUser = await ensureAccount(supabase, email, { stripe_customer_id: customerId, first_name: firstName });
+            
+            // 2. Générer le lien de configuration du mot de passe
+            const setupLink = await generateSetupLink(supabase, email, isNewUser);
+            
+            // 3. Enregistrer l'accès dans la table subscribers
+            const { error: upsertError } = await supabase.from('subscribers').upsert(
+              { email, stripe_customer_id: customerId, status: 'active', first_name: firstName },
+              { onConflict: 'email' }
+            );
+            if (upsertError) console.error('❌ Erreur upsert subscribers:', upsertError.message);
+
+            // 4. Envoyer l'email de bienvenue avec le lien d'accès
+            if (setupLink) {
+              const sent = await sendWelcomeEmail(email, firstName, setupLink);
+              if (!sent) console.error(`❌ Email de bienvenue NON envoyé pour ${email}`);
+            }
           }
         }
-        return { statusCode: 200, body: 'ok' };
       }
+      return { statusCode: 200, body: 'ok' };
+    }
 
       // ── Abonnement : flux existant inchangé (création de compte + email) ──
       if (email) {
