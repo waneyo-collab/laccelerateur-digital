@@ -51,6 +51,8 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:0 16px;display
 .section-title{text-align:center;font-size:21px;font-weight:800;margin-bottom:22px}
 .grid-3{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;max-width:900px;margin:0 auto}
 .grid-4{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;max-width:760px;margin:0 auto}
+.for-who-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;max-width:900px;margin:0 auto}
+@media (max-width:640px){.for-who-grid{grid-template-columns:1fr}}
 .card{background:#fff;border-radius:12px;border:1px solid var(--border);padding:18px}
 .for-who{background:var(--primary-light);padding:32px 24px;text-align:center}
 .testi-stars{color:var(--accent);font-size:15px;margin-bottom:8px}
@@ -79,6 +81,9 @@ nav{background:#fff;border-bottom:1px solid var(--border);padding:0 16px;display
 .cta-final h2{font-size:22px;font-weight:800;color:#fff;margin-bottom:12px}
 .cta-final p{font-size:14px;color:rgba(255,255,255,0.6);margin-bottom:28px}
 footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px;color:rgba(255,255,255,0.3)}
+footer .footer-links{margin-top:8px;display:flex;justify-content:center;gap:16px;flex-wrap:wrap}
+footer .footer-links a{color:rgba(255,255,255,0.5);text-decoration:none;font-size:11px}
+footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underline}
 .subscribe-card{max-width:420px;margin:36px auto;padding:0 24px}
 .price-big{font-size:38px;font-weight:800;color:var(--primary)}
 .price-small{font-size:15px;font-weight:400;color:var(--muted)}
@@ -195,7 +200,7 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
 
   <div class="for-who">
     <p class="section-label">CONÇU POUR VOUS SI…</p>
-    <div class="grid-4" style="margin-top:14px">
+    <div class="for-who-grid" style="margin-top:14px">
       <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🌱</div><div style="font-size:13px;font-weight:500">Vous accompagnez des porteurs de projet à se structurer</div></div>
       <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">👥</div><div style="font-size:13px;font-weight:500">Vous devez former vos recrues rapidement</div></div>
       <div class="card" style="text-align:center;padding:14px"><div style="font-size:22px;margin-bottom:6px">🧭</div><div style="font-size:13px;font-weight:500">Vous cherchez vers quel métier orienter vos candidats</div></div>
@@ -361,7 +366,14 @@ footer{background:var(--dark);padding:18px 24px;text-align:center;font-size:11px
     </div>
     <p class="hero-sub" style="margin-top:14px">Paiement unique · Accès à vie</p>
   </div>
-  <footer>© 2025 Waneyo Formation · Tous droits réservés</footer>
+  <footer>
+    © 2025 Waneyo Formation · Tous droits réservés
+    <div class="footer-links">
+      <a href="mentions-legales.html">Mentions légales</a>
+      <a href="cgv.html">CGV</a>
+      <a href="confidentialite.html">Politique de confidentialité</a>
+    </div>
+  </footer>
 </div>
 
 <!-- SUBSCRIBE -->
