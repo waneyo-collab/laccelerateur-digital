@@ -104,11 +104,12 @@ exports.handler = async (event) => {
     const data = await geminiResponse.json();
 
     if (!geminiResponse.ok) {
-      console.error('❌ Erreur API Gemini:', geminiResponse.status, JSON.stringify(data).slice(0, 500));
+      const bodySnippet = JSON.stringify(data).slice(0, 300);
+      console.error('❌ Erreur API Gemini:', geminiResponse.status, bodySnippet);
       return {
         statusCode: 502,
         headers,
-        body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
+        body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Gemini a renvoyé ${geminiResponse.status} : ${bodySnippet}` }),
       };
     }
 
@@ -132,7 +133,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
+      body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Exception : ${err.message}` }),
     };
   }
 };
