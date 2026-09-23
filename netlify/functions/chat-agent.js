@@ -18,6 +18,70 @@ const PROD_ORIGIN = 'https://app.waneyo-formation.com';
 // nom exact du site, qui peut différer du nom du repo.
 const PREVIEW_ORIGIN_RE = /^https:\/\/[a-z0-9-]+\.netlify\.app$/;
 
+// ── Curriculum complet (48 modules / 7 phases) ──
+// Source unique de vérité pour que l'agent puisse recommander un module
+// précis par son numéro et son titre exact (dashboard ET reader.html).
+const PHASES = [
+  { name: 'Phase 1 — Le Monde Numérique', from: 1, to: 10 },
+  { name: 'Phase 2 — Mindset', from: 11, to: 20 },
+  { name: 'Phase 3 — Entreprenariat', from: 21, to: 30 },
+  { name: 'Phase 4 — Marketing Psychologique', from: 31, to: 35 },
+  { name: 'Phase 5 — Mindset du Dirigeant', from: 36, to: 40 },
+  { name: 'Phase 6 — Structuration & Finances', from: 41, to: 45 },
+  { name: 'Phase 7 — Niveau Expert', from: 46, to: 48 },
+];
+
+const MODULE_TITLES = {
+  1: "Introduction au marketing digital", 2: "La stratégie marketing",
+  3: "La stratégie multicanale", 4: "La stratégie sur les réseaux sociaux",
+  5: "La puissance de l'e-mailing", 6: "Mener des campagnes publicitaires",
+  7: "Gérer sa e-réputation", 8: "La cybersécurité",
+  9: "La création de contenu", 10: "Méthodologie complète",
+  11: "Forger un mental de champion", 12: "Sortir de sa zone de confort",
+  13: "Surmonter la peur de l'échec", 14: "Créer une routine de haute performance",
+  15: "Garder le cap même quand rien n'avance", 16: "Cultiver la discipline au quotidien",
+  17: "Apprendre à apprendre — la méta-compétence clé", 18: "Gérer le syndrome de l'imposteur",
+  19: "Développer sa résilience face aux obstacles", 20: "Passer de l'idée à l'action",
+  21: "Devenir entrepreneur digital", 22: "Construire son offre et fixer ses prix",
+  23: "Créer sa première formation en ligne", 24: "Construire son audience de zéro",
+  25: "Vendre sans vendre — le marketing de contenu", 26: "Automatiser son business avec l'IA",
+  27: "Gérer sa trésorerie et ses revenus digitaux", 28: "Trouver sa niche — les business accessibles depuis l'Afrique",
+  29: "Protéger son business digital", 30: "Ton plan de lancement — passe à l'action maintenant",
+  31: "Les leviers d'achat : désir, urgence, appartenance, confiance", 32: "Les freins à l'achat et comment les lever",
+  33: "Storytelling & copywriting émotionnel", 34: "Lire son audience : personas, comportements, points de douleur",
+  35: "Créer une offre irrésistible sans manipuler",
+  36: "Passer de freelance à chef d'entreprise — changer de posture",
+  37: "L'art de pitcher : convaincre un partenaire, un incubateur, un client",
+  38: "Influence éthique et leadership bienveillant", 39: "Gérer la pression, les doutes et les hauts et bas du business",
+  40: "Déléguer sans perdre le contrôle",
+  41: "Du statut freelance à la TPE/PME : structure et premiers recrutements",
+  42: "Présence en ligne avancée : site pro, SEO, tunnel de vente simple",
+  43: "Finance sans crédit : autofinancement, subventions, crowdfunding et financement islamique",
+  44: "Préparer son dossier partenaire / incubateur", 45: "Lire ses chiffres : trésorerie, marges et seuil de rentabilité",
+  46: "Scaler son business : systèmes, automatisation et délégation avancée",
+  47: "Construire sa marque personnelle et son autorité sectorielle",
+  48: "De l'entreprise locale à l'impact régional — vision, réseau et héritage",
+};
+
+function phaseFor(id) {
+  return PHASES.find((p) => id >= p.from && id <= p.to) || null;
+}
+
+function buildModuleListText() {
+  return PHASES.map((p) => {
+    const lines = [];
+    for (let id = p.from; id <= p.to; id++) lines.push(`${id}. ${MODULE_TITLES[id]}`);
+    return `${p.name} :\n${lines.join('\n')}`;
+  }).join('\n\n');
+}
+
+function currentModuleContext(moduleId) {
+  const id = parseInt(moduleId, 10);
+  if (!Number.isInteger(id) || !MODULE_TITLES[id]) return '';
+  const phase = phaseFor(id);
+  return `\n\nContexte immédiat : l'apprenant est en train de lire le module ${id}, « ${MODULE_TITLES[id]} » (${phase ? phase.name : ''}). Priorise ce contexte si sa question s'y rapporte.`;
+}
+
 function corsHeaders(origin) {
   const allowed = origin === PROD_ORIGIN || (origin && PREVIEW_ORIGIN_RE.test(origin))
     ? origin
@@ -50,7 +114,14 @@ Règles :
   (facturation, accès, remboursement), invite à contacter le support plutôt que d'inventer une
   réponse.
 - Réponses courtes et actionnables par défaut (quelques phrases) ; développe seulement si la
-  question l'exige vraiment.`;
+  question l'exige vraiment.
+- Quand c'est pertinent, recommande un module précis en citant son numéro et son titre exact
+  (voir la liste ci-dessous), plutôt que de rester généraliste.
+
+Voici l'intégralité du programme (48 modules, 7 phases), pour recommander le bon module par
+son numéro et son titre exact :
+
+${buildModuleListText()}`;
 
 exports.handler = async (event) => {
   const origin = event.headers.origin || event.headers.Origin || '';
@@ -89,6 +160,7 @@ exports.handler = async (event) => {
     }));
 
   const contents = [...history, { role: 'user', parts: [{ text: message }] }];
+  const systemText = SYSTEM_INSTRUCTION + currentModuleContext(payload.moduleId);
 
   try {
     const geminiResponse = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
@@ -96,7 +168,7 @@ exports.handler = async (event) => {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         contents,
-        systemInstruction: { role: 'system', parts: [{ text: SYSTEM_INSTRUCTION }] },
+        systemInstruction: { role: 'system', parts: [{ text: systemText }] },
         generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
       }),
     });
