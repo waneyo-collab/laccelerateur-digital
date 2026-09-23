@@ -163,25 +163,35 @@ exports.handler = async (event) => {
   const systemText = SYSTEM_INSTRUCTION + currentModuleContext(payload.moduleId);
 
   try {
-    const geminiResponse = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        contents,
-        systemInstruction: { role: 'system', parts: [{ text: systemText }] },
-        generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
-      }),
+    const requestBody = JSON.stringify({
+      contents,
+      systemInstruction: { role: 'system', parts: [{ text: systemText }] },
+      generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
     });
 
-    const data = await geminiResponse.json();
+    async function callGemini(attempt) {
+      const res = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: requestBody,
+      });
+      const body = await res.json();
+      // 503 = surcharge temporaire côté Gemini : une seule nouvelle tentative après un court délai
+      if (!res.ok && res.status === 503 && attempt < 2) {
+        await new Promise((r) => setTimeout(r, 1000));
+        return callGemini(attempt + 1);
+      }
+      return { res, body };
+    }
+
+    const { res: geminiResponse, body: data } = await callGemini(1);
 
     if (!geminiResponse.ok) {
-      const bodySnippet = JSON.stringify(data).slice(0, 300);
-      console.error('❌ Erreur API Gemini:', geminiResponse.status, bodySnippet);
+      console.error('❌ Erreur API Gemini:', geminiResponse.status, JSON.stringify(data).slice(0, 500));
       return {
         statusCode: 502,
         headers,
-        body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Gemini a renvoyé ${geminiResponse.status} : ${bodySnippet}` }),
+        body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
       };
     }
 
@@ -205,7 +215,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Exception : ${err.message}` }),
+      body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
     };
   }
 };
