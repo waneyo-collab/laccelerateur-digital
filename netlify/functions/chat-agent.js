@@ -163,28 +163,17 @@ exports.handler = async (event) => {
   const systemText = SYSTEM_INSTRUCTION + currentModuleContext(payload.moduleId);
 
   try {
-    const requestBody = JSON.stringify({
-      contents,
-      systemInstruction: { role: 'system', parts: [{ text: systemText }] },
-      generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
+    const geminiResponse = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        contents,
+        systemInstruction: { role: 'system', parts: [{ text: systemText }] },
+        generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
+      }),
     });
 
-    async function callGemini(attempt) {
-      const res = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: requestBody,
-      });
-      const body = await res.json();
-      // 503 = surcharge temporaire côté Gemini : une seule nouvelle tentative après un court délai
-      if (!res.ok && res.status === 503 && attempt < 2) {
-        await new Promise((r) => setTimeout(r, 1000));
-        return callGemini(attempt + 1);
-      }
-      return { res, body };
-    }
-
-    const { res: geminiResponse, body: data } = await callGemini(1);
+    const data = await geminiResponse.json();
 
     if (!geminiResponse.ok) {
       console.error('❌ Erreur API Gemini:', geminiResponse.status, JSON.stringify(data).slice(0, 500));
