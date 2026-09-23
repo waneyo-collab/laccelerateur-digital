@@ -9,7 +9,7 @@
 // de prod + aux déploiements de prévisualisation Netlify (deploy-preview
 // et branch deploys) pour permettre les tests avant mise en ligne.
 
-const GEMINI_MODEL = 'gemini-2.5-flash-lite';
+const GEMINI_MODEL = 'gemini-3.5-flash-lite';
 const GEMINI_URL = `https://generativelanguage.googleapis.com/v1beta/models/${GEMINI_MODEL}:generateContent`;
 
 const PROD_ORIGIN = 'https://app.waneyo-formation.com';
@@ -104,12 +104,11 @@ exports.handler = async (event) => {
     const data = await geminiResponse.json();
 
     if (!geminiResponse.ok) {
-      const bodySnippet = JSON.stringify(data).slice(0, 300);
-      console.error('❌ Erreur API Gemini:', geminiResponse.status, bodySnippet);
+      console.error('❌ Erreur API Gemini:', geminiResponse.status, JSON.stringify(data).slice(0, 500));
       return {
         statusCode: 502,
         headers,
-        body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Gemini a renvoyé ${geminiResponse.status} : ${bodySnippet}` }),
+        body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
       };
     }
 
@@ -133,7 +132,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: `[DEBUG TEMPORAIRE] Exception : ${err.message}` }),
+      body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
     };
   }
 };
