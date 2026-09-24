@@ -643,5 +643,118 @@ async function save() {
   } catch(e) { console.warn('Progression non sauvegardée', e); }
 }
 </script>
+
+<!-- Assistant IA (toujours visible ici : toute la page est un module) -->
+<button id="chat-float" aria-label="Ouvrir l'assistant" onclick="toggleChatPanel()">
+  <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
+  </svg>
+</button>
+
+<div id="chat-panel">
+  <div class="chat-panel-header">
+    <div>
+      <div class="chat-panel-title">Assistant L'Accélérateur</div>
+      <div class="chat-panel-sub">Questions sur ce module ou ton activité</div>
+    </div>
+    <button class="chat-close" onclick="toggleChatPanel()">✕</button>
+  </div>
+  <div id="chat-messages" class="chat-messages"></div>
+  <div class="chat-input-row">
+    <input id="chat-input" type="text" placeholder="Écris ta question…" maxlength="1000" onkeydown="if(event.key==='Enter'){event.preventDefault();sendChatMessage();}"/>
+    <button class="chat-send" onclick="sendChatMessage()">Envoyer</button>
+  </div>
+</div>
+
+<style>
+#chat-float{
+  display:flex;position:fixed;right:20px;bottom:20px;z-index:9998;
+  width:56px;height:56px;border-radius:50%;
+  background:var(--v);color:#fff;border:none;cursor:pointer;
+  align-items:center;justify-content:center;
+  box-shadow:0 4px 14px rgba(0,0,0,.4);
+  transition:transform .15s ease, box-shadow .15s ease;
+}
+#chat-float:hover{transform:scale(1.08);}
+#chat-panel{
+  display:none;flex-direction:column;position:fixed;right:20px;bottom:88px;z-index:9998;
+  width:340px;max-width:calc(100vw - 32px);height:480px;max-height:calc(100vh - 120px);
+  background:var(--bg);border:1px solid rgba(255,255,255,.1);border-radius:14px;overflow:hidden;
+  box-shadow:0 10px 34px rgba(0,0,0,.5);
+}
+#chat-panel.open{display:flex;}
+.chat-panel-header{background:var(--v);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;gap:8px}
+.chat-panel-title{color:#fff;font-weight:700;font-size:13px}
+.chat-panel-sub{color:rgba(255,255,255,0.75);font-size:11px;margin-top:2px}
+.chat-close{background:rgba(255,255,255,.15);color:#fff;border:none;border-radius:8px;padding:6px 10px;cursor:pointer;font-size:12px}
+.chat-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
+.chat-msg{max-width:82%;padding:9px 12px;border-radius:12px;font-size:13px;line-height:1.5;white-space:pre-wrap}
+.chat-msg.user{align-self:flex-end;background:var(--v);color:#fff;border-bottom-right-radius:3px}
+.chat-msg.bot{align-self:flex-start;background:var(--card);color:var(--txt);border:1px solid rgba(255,255,255,.08);border-bottom-left-radius:3px}
+.chat-msg.bot.typing{color:var(--muted);font-style:italic}
+.chat-input-row{display:flex;gap:8px;padding:10px;border-top:1px solid rgba(255,255,255,.1);flex-shrink:0;background:var(--card)}
+.chat-input-row input{flex:1;background:var(--bg);color:var(--txt);border:1px solid rgba(255,255,255,.15);border-radius:8px;padding:8px 10px;font-size:13px;outline:none}
+.chat-send{background:var(--v);color:#fff;border:none;border-radius:8px;padding:8px 14px;cursor:pointer;font-size:13px;font-weight:600}
+@media (max-width:480px){
+  #chat-panel{right:12px;left:12px;width:auto;bottom:82px;height:min(520px,calc(100vh - 110px))}
+}
+</style>
+<script>
+let chatHistory = [];
+let chatWelcomed = false;
+
+function toggleChatPanel(){
+  const panel = document.getElementById('chat-panel');
+  const opening = !panel.classList.contains('open');
+  panel.classList.toggle('open');
+  if (opening && !chatWelcomed){
+    chatWelcomed = true;
+    appendChatMessage('bot', "Bonjour 👋 Je suis l'assistant de L'Accélérateur Digital. Pose-moi tes questions sur ce module ou sur ton activité.");
+  }
+  if (opening) document.getElementById('chat-input').focus();
+}
+
+function appendChatMessage(role, text){
+  const box = document.getElementById('chat-messages');
+  const div = document.createElement('div');
+  div.className = 'chat-msg ' + (role === 'user' ? 'user' : 'bot');
+  div.textContent = text;
+  box.appendChild(div);
+  box.scrollTop = box.scrollHeight;
+  return div;
+}
+
+async function sendChatMessage(){
+  const input = document.getElementById('chat-input');
+  const message = input.value.trim();
+  if (!message) return;
+  input.value = '';
+  appendChatMessage('user', message);
+  const historyToSend = chatHistory.slice(-12); // avant d'ajouter le message courant, pour ne pas le dupliquer
+  chatHistory.push({ role: 'user', text: message });
+
+  const typingEl = appendChatMessage('bot', '…');
+  typingEl.classList.add('typing');
+
+  try {
+    const res = await fetch('/.netlify/functions/chat-agent', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ message, history: historyToSend, moduleId: mid })
+    });
+    const data = await res.json();
+    typingEl.remove();
+    if (!res.ok || data.error){
+      appendChatMessage('bot', data.error || "L'assistant est momentanément indisponible, réessaie dans un instant.");
+      return;
+    }
+    appendChatMessage('bot', data.reply);
+    chatHistory.push({ role: 'assistant', text: data.reply });
+  } catch (err){
+    typingEl.remove();
+    appendChatMessage('bot', "Connexion impossible pour le moment, réessaie dans un instant.");
+  }
+}
+</script>
 </body>
 </html>
