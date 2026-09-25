@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="robots" content="noindex"/>
+<meta name="theme-color" content="#7C3AED"/>
+<title>Hors ligne – L'Accélérateur Digital</title>
+<style>
+  :root { --bg:#14102A; --v:#7C3AED; --accent:#A78BFA; --txt:#F4F1FB; }
+  * { box-sizing:border-box; margin:0; padding:0; }
+  html, body { height:100%; }
+  body { background:var(--bg); color:var(--txt); font-family:Calibri, 'Segoe UI', system-ui, sans-serif;
+         display:flex; align-items:center; justify-content:center; padding:32px 24px; text-align:center; }
+  main { max-width:360px; }
+  .signal { width:72px; height:72px; margin:0 auto 24px; border-radius:50%;
+            border:2px solid var(--accent); display:flex; align-items:center; justify-content:center; }
+  h1 { font-family:Cambria, Georgia, serif; font-size:24px; font-weight:700; margin-bottom:12px; }
+  p { font-size:15px; line-height:1.6; color:rgba(244,241,251,.75); margin-bottom:28px; }
+  button { background:var(--v); color:#fff; border:none; border-radius:12px; padding:14px 28px;
+           font-size:15px; font-weight:700; cursor:pointer; font-family:inherit; }
+  button:focus-visible { outline:3px solid var(--accent); outline-offset:3px; }
+  .hint { font-size:12px; margin-top:20px; margin-bottom:0; }
+</style>
+</head>
+<body>
+<main>
+  <div class="signal" aria-hidden="true">
+    <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#A78BFA" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M2 8.8a15 15 0 0 1 20 0"/><path d="M5 12.5a10 10 0 0 1 14 0"/><path d="M8.5 16.1a5 5 0 0 1 7 0"/><line x1="12" y1="20" x2="12.01" y2="20"/><line x1="3" y1="3" x2="21" y2="21"/>
+    </svg>
+  </div>
+  <h1>Tu es hors ligne</h1>
+  <p>Ta connexion internet s'est interrompue. Ta progression est enregistrée : tu reprendras exactement où tu t'es arrêté(e).</p>
+  <button onclick="location.reload()">Réessayer</button>
+  <p class="hint">La page se recharge toute seule dès que le réseau revient.</p>
+</main>
+<script>window.addEventListener('online', function () { location.reload(); });</script>
+</body>
+</html>

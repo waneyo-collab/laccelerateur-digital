@@ -1,6 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<script>
+// ─── MODE GOOGLE PLAY (appli Android / TWA) ─────────────────────────────────
+// Dans l'appli installée depuis Google Play, les paiements sont masqués
+// (règles Google Play sur les contenus numériques). Sur le web, rien ne change.
+// Détection : lancement depuis l'appli Android (referrer android-app://) ou
+// start_url ?source=play. Mémorisé pour l'onglet uniquement (sessionStorage),
+// jamais en localStorage, car Chrome partage le stockage avec l'appli.
+(function () {
+  try {
+    var fromPlay = document.referrer.indexOf('android-app://') === 0 ||
+      new URLSearchParams(location.search).get('source') === 'play';
+    if (fromPlay) sessionStorage.setItem('waneyo_play', '1');
+    if (sessionStorage.getItem('waneyo_play') === '1') document.documentElement.classList.add('play-mode');
+  } catch (e) {}
+})();
+window.IS_PLAY = document.documentElement.classList.contains('play-mode');
+</script>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>L'Accélérateur Digital – Waneyo Formation</title>
@@ -244,6 +261,14 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
 .upsell-features{list-style:none;text-align:left;margin-bottom:16px}
 .upsell-features li{font-size:12px;color:var(--text);padding:4px 0;display:flex;gap:6px}
 .btn-accent{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
+/* Mode Google Play : éléments de paiement masqués */
+html.play-mode .pay-only{display:none!important}
+.play-only-inline{display:none}
+html.play-mode .play-only-inline{display:inline}
+/* Carte suppression de compte */
+.danger-zone{margin-bottom:16px;text-align:center;border:1px solid rgba(220,38,38,.25)}
+.btn-danger{background:transparent;color:#DC2626;border:1.5px solid #DC2626;border-radius:10px;font-size:13px;padding:10px 20px;font-weight:600;cursor:pointer}
+.btn-danger:hover,.btn-danger:focus-visible{background:#DC2626;color:#fff}
 </style>
 </head>
 <body>
@@ -261,7 +286,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
     </div>
   </nav>
   <div class="hero">
-    <div class="badge badge-amber" style="margin-bottom:16px">✅ Accès à vie — aucun abonnement, aucun prélèvement</div>
+    <div class="badge badge-amber pay-only" style="margin-bottom:16px">✅ Accès à vie — aucun abonnement, aucun prélèvement</div>
     <h1>Le digital n'attend pas.<br/>Pourquoi votre formation<br/>devrait-elle prendre des mois ?</h1>
     <p>Opérationnels en 4 semaines, pas en 4 mois. C'est notre promesse pour les futurs freelances et entrepreneurs.</p>
     <div style="max-width:520px;margin:0 auto 24px;text-align:left">
@@ -276,7 +301,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
     </div>
     <div class="hero-btns">
       <button class="btn-primary" onclick="window.open('https://wa.me/212616329952?text=Bonjour%2C%20je%20repr%C3%A9sente%20une%20organisation%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20l%27onboarding%20digital%20Waneyo','_blank')">💬 Déployer pour mes équipes →</button>
-      <button class="btn-ghost" onclick="showPage('subscribe')">Je démarre ma carrière</button>
+      <button class="btn-ghost pay-only" onclick="showPage('subscribe')">Je démarre ma carrière</button>
     </div>
     <p class="hero-sub">Orientation · Professionnalisation · Autonomie</p>
   </div>
@@ -360,7 +385,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
   </div>
 
   <!-- BOOTCAMP (accueil - visible sans achat) -->
-  <div class="section">
+  <div class="section pay-only">
     <p class="section-label">ACCOMPAGNEMENT</p>
     <h2 class="section-title">Besoin d'aller plus vite ? Passe à l'action avec un accompagnement individuel</h2>
     <div style="max-width:520px;margin:20px auto 0;background:linear-gradient(135deg,#0F0A1E,#2D1B69);border-radius:14px;padding:24px;color:#fff">
@@ -445,9 +470,9 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
     <p>Offrez-leur un parcours de professionnalisation clé en main. Ou, à titre individuel, démarrez gratuitement, sans CB.</p>
     <div class="hero-btns">
       <button class="btn-primary" onclick="window.open('https://wa.me/212616329952?text=Bonjour%2C%20je%20repr%C3%A9sente%20une%20organisation%20et%20je%20souhaite%20en%20savoir%20plus%20sur%20l%27onboarding%20digital%20Waneyo','_blank')">💬 Déployer pour mes équipes →</button>
-      <button class="btn-ghost" onclick="showPage('subscribe')">Je démarre ma carrière</button>
+      <button class="btn-ghost pay-only" onclick="showPage('subscribe')">Je démarre ma carrière</button>
     </div>
-    <p class="hero-sub" style="margin-top:14px">Paiement unique · Accès à vie</p>
+    <p class="hero-sub pay-only" style="margin-top:14px">Paiement unique · Accès à vie</p>
   </div>
   <footer>
     © 2025 Waneyo Formation · Tous droits réservés
@@ -575,7 +600,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
         <svg width="16" height="16" viewBox="0 0 18 18" xmlns="http://www.w3.org/2000/svg"><path fill="#4285F4" d="M17.64 9.2c0-.64-.06-1.25-.16-1.84H9v3.48h4.84c-.21 1.12-.85 2.07-1.81 2.71v2.26h2.92c1.71-1.57 2.69-3.89 2.69-6.61z"/><path fill="#34A853" d="M9 18c2.43 0 4.47-.8 5.96-2.18l-2.92-2.26c-.81.54-1.84.87-3.04.87-2.34 0-4.32-1.58-5.03-3.71H.96v2.33C2.44 15.98 5.48 18 9 18z"/><path fill="#FBBC05" d="M3.97 10.72c-.18-.54-.28-1.12-.28-1.72s.1-1.18.28-1.72V4.95H.96A8.997 8.997 0 0 0 0 9c0 1.45.35 2.83.96 4.05l3.01-2.33z"/><path fill="#EA4335" d="M9 3.58c1.32 0 2.51.45 3.44 1.35l2.58-2.58C13.46.89 11.43 0 9 0 5.48 0 2.44 2.02.96 4.95l3.01 2.33C4.68 5.16 6.66 3.58 9 3.58z"/></svg>
         Continuer avec Google
       </button>
-      <p style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px">Pas encore membre ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('subscribe')">Obtenir mon accès à vie</span></p>
+      <p class="pay-only" style="text-align:center;font-size:12px;color:var(--muted);margin-top:14px">Pas encore membre ? <span style="color:var(--primary);cursor:pointer;font-weight:600" onclick="showPage('subscribe')">Obtenir mon accès à vie</span></p>
     </div>
   </div>
 </div>
@@ -667,6 +692,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
   <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Téléchargez vos ebooks et guides inclus dans votre accès</div>
   <div id="resources-list"></div>
 
+  <div class="pay-only"><!-- offres payantes, masquées dans l'appli Google Play -->
     <!-- SESSION DÉCOUVERTE -->
     <div class="upsell-card">
       <div style="font-size:11px;font-weight:700;color:var(--accent);letter-spacing:1px;margin-bottom:8px">✨ ALLER PLUS LOIN</div>
@@ -759,12 +785,13 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
       <p style="font-size:11px;color:rgba(255,255,255,0.35);margin-top:14px;text-align:center">Réponse sous 24h · Accès réservé aux apprenants de L'Accélérateur Digital</p>
     </div>
   </div>
+  </div><!-- /pay-only -->
 </div><!-- /tab-ressources -->
 
   <div id="tab-aide" class="dash-wrap" style="display:none">
     <div style="font-size:15px;font-weight:700;margin-bottom:4px">❓ Aide & FAQ</div>
     <div style="font-size:13px;color:var(--muted);margin-bottom:16px">Trouvez rapidement une réponse à vos questions</div>
-    <div class="card" style="margin-bottom:16px;text-align:center;border:1px solid var(--border)">
+    <div class="card pay-only" style="margin-bottom:16px;text-align:center;border:1px solid var(--border)">
       <div style="font-size:22px;margin-bottom:8px">💳</div>
       <div style="font-weight:600;font-size:14px;margin-bottom:4px">Mon compte &amp; mes factures</div>
       <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Consultez votre reçu d'achat et vos factures.</div>
@@ -787,7 +814,7 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
       <button class="sug-btn active-cat faq-cat" onclick="filterCat('all',this)">Tout</button>
       <button class="sug-btn faq-cat" onclick="filterCat('marketing',this)">📱 Marketing</button>
       <button class="sug-btn faq-cat" onclick="filterCat('entrepreneuriat',this)">🚀 Entreprenariat</button>
-      <button class="sug-btn faq-cat" onclick="filterCat('paiement',this)">💳 Paiement</button>
+      <button class="sug-btn faq-cat" onclick="filterCat('paiement',this)">💳 <span class="pay-only">Paiement</span><span class="play-only-inline">Légal</span></button>
       <button class="sug-btn faq-cat" onclick="filterCat('technique',this)">⚙️ Technique</button>
     </div>
     <div id="faq-dash-list"></div>
@@ -797,6 +824,12 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
       <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Pour toute question technique ou de facturation — réponse sous 48h ouvrées.</div>
       <button class="btn-primary" style="font-size:13px;padding:10px 20px" onclick="window.location.href='mailto:contact@waneyo-formation.com?subject=Question – L\'Accélérateur Digital'">Contacter par email</button>
       <div style="font-size:11px;color:var(--muted);margin-top:8px">⚠️ Réservé aux questions techniques et de facturation uniquement.</div>
+    </div>
+    <div class="card danger-zone" style="margin-top:16px;margin-bottom:88px">
+      <div style="font-weight:600;font-size:14px;margin-bottom:4px">Supprimer mon compte</div>
+      <div style="font-size:12px;color:var(--muted);margin-bottom:14px">Efface ton compte, ta progression et tes avis. Cette action est définitive.</div>
+      <button class="btn-danger" id="delete-account-btn" onclick="handleDeleteAccount()">Supprimer mon compte</button>
+      <p id="delete-account-msg" style="font-size:12px;margin-top:10px"></p>
     </div>
   </div>
 </div>
@@ -1027,7 +1060,7 @@ async function completeLogin(email, accessToken, refreshToken, errorEl) {
   if (!Array.isArray(subs) || subs.length === 0) {
     if (errorEl) {
       errorEl.style.color = 'red';
-      errorEl.textContent = `❌ Aucun accès trouvé pour ${email}. As-tu bien finalisé ton achat ?`;
+      errorEl.textContent = window.IS_PLAY ? `❌ Aucun accès trouvé pour ${email}. Vérifie l'adresse email utilisée.` : `❌ Aucun accès trouvé pour ${email}. As-tu bien finalisé ton achat ?`;
     }
     return false;
   }
@@ -1117,6 +1150,32 @@ async function handleGoogleCallback(accessToken, refreshToken) {
     await completeLogin(user.email, accessToken, refreshToken, errorEl);
   } catch {
     if (errorEl) { errorEl.style.color = 'red'; errorEl.textContent = '❌ Erreur de connexion. Réessayez.'; }
+  }
+}
+
+// ─── SUPPRESSION DE COMPTE (exigée par Google Play et la loi 09-08) ──────────
+async function handleDeleteAccount() {
+  const msg = document.getElementById('delete-account-msg');
+  const btn = document.getElementById('delete-account-btn');
+  const token = localStorage.getItem('waneyo_token');
+  if (!token) { msg.style.color = '#DC2626'; msg.textContent = 'Reconnecte-toi puis réessaie.'; return; }
+  const typed = prompt('Ton compte, ta progression et tes avis seront effacés définitivement.\n\nPour confirmer, écris SUPPRIMER :');
+  if (typed === null) return;
+  if (typed.trim().toUpperCase() !== 'SUPPRIMER') { msg.style.color = '#DC2626'; msg.textContent = 'Suppression annulée : le mot de confirmation ne correspond pas.'; return; }
+  btn.disabled = true; msg.style.color = 'var(--muted)'; msg.textContent = 'Suppression en cours…';
+  try {
+    let res = await fetch('/.netlify/functions/delete-account', { method: 'POST', headers: { 'Authorization': 'Bearer ' + token } });
+    if (res.status === 401 && typeof refreshToken === 'function') {
+      await refreshToken();
+      res = await fetch('/.netlify/functions/delete-account', { method: 'POST', headers: { 'Authorization': 'Bearer ' + localStorage.getItem('waneyo_token') } });
+    }
+    const data = await res.json().catch(() => ({}));
+    if (!res.ok || !data.ok) throw new Error(data.error || 'Erreur serveur');
+    await handleLogout();
+    alert('Ton compte a été supprimé. Merci d\'avoir suivi L\'Accélérateur Digital.');
+  } catch (e) {
+    btn.disabled = false; msg.style.color = '#DC2626';
+    msg.textContent = 'La suppression n\'a pas abouti. Réessaie ou écris à contact@waneyo-formation.com.';
   }
 }
 
@@ -1925,6 +1984,7 @@ async function submitAppRating() {
 
 // ─── NAVIGATION ──────────────────────────────────────────────────────────────
 function showPage(id) {
+  if (window.IS_PLAY && id === 'subscribe') id = 'login';
   document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
   document.getElementById('page-' + id).classList.add('active');
   window.scrollTo(0, 0);
@@ -2025,6 +2085,16 @@ function goToNextModule() {
   if (next) openModule(next.module.title, next.parcours.label, next.module.duration, next.module.url, next.parcours.id, next.module.id);
 }
 
+// ─── FAQ : mode Google Play ─────────────────────────────────────────────────
+// Retire les questions qui parlent de prix ou d'achat (CGV et confidentialité restent).
+if (window.IS_PLAY) {
+  [FAQ_LANDING, FAQ_DASH].forEach(arr => {
+    for (let i = arr.length - 1; i >= 0; i--) {
+      if (/59\s?€|rembours|moyens de paiement|acheter|dès l'achat/i.test(arr[i].q + ' ' + arr[i].a)) arr.splice(i, 1);
+    }
+  });
+}
+
 // ─── FAQ LANDING ─────────────────────────────────────────────────────────────
 function renderFaqLanding() {
   const c = document.getElementById('faq-container');
@@ -2104,6 +2174,7 @@ c.innerHTML = PARCOURS.map(p => `
 }
 
 function showPartnerUpsell() {
+  if (window.IS_PLAY) { alert('Ce module fait partie des niveaux Intermédiaire et Expert.'); return; }
   alert('Ce module fait partie de l\'offre complète (Niveau Intermédiaire et Expert).\n\nPasse à l\'accès complet à vie pour ouvrir tous les modules !');
   showPage('landing');
 }
@@ -2119,15 +2190,16 @@ function toggleParcours(id) {
 function renderResources() {
   const c = document.getElementById('resources-list');
   if (c.innerHTML) return;
+  const RES = window.IS_PLAY ? RESOURCES.filter(r => !r.isPaidGuide) : RESOURCES;
   c.innerHTML = `
     <div class="card" style="padding:0;overflow:hidden;max-width:600px">
-      ${RESOURCES.map((r, i) => `
+      ${RES.map((r, i) => `
         <div style="
           display:flex;
           justify-content:space-between;
           align-items:center;
           padding:16px 20px;
-          ${i < RESOURCES.length - 1 ? 'border-bottom:1px solid var(--border);' : ''}
+          ${i < RES.length - 1 ? 'border-bottom:1px solid var(--border);' : ''}
         ">
           <div style="display:flex;gap:12px;align-items:center">
             <span style="font-size:26px">${r.icon}</span>
