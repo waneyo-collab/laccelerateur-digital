@@ -21,10 +21,10 @@ window.IS_PLAY = document.documentElement.classList.contains('play-mode');
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>L'Accélérateur Digital – Waneyo Formation</title>
-<meta name="description" content="Formation marketing digital en micro-learning pour entrepreneurs francophones : 48 modules, quiz, certificat et assistant IA. Paiement unique 59€, accès à vie."/>
+<meta name="description" content="Formation marketing digital en micro-learning pour entrepreneurs francophones : 48 modules, quiz, certificat et Nia, assistante IA. Paiement unique 59€, accès à vie."/>
 <link rel="canonical" href="https://app.waneyo-formation.com/"/>
 <meta property="og:title" content="L'Accélérateur Digital – Waneyo Formation"/>
-<meta property="og:description" content="Maîtrisez le marketing digital en 15 min/jour. 48 modules, assistant IA, accès à vie pour 59€."/>
+<meta property="og:description" content="Maîtrisez le marketing digital en 15 min/jour. 48 modules, Nia (assistante IA), accès à vie pour 59€."/>
 <meta property="og:image" content="https://app.waneyo-formation.com/og-image.jpg"/>
 <meta name="twitter:image" content="https://app.waneyo-formation.com/og-image.jpg"/>
 <meta property="og:url" content="https://app.waneyo-formation.com"/>
@@ -84,7 +84,7 @@ window.IS_PLAY = document.documentElement.classList.contains('play-mode');
    "@type": "Course",
    "@id": "https://app.waneyo-formation.com/#course",
    "name": "L'Accélérateur Digital",
-   "description": "Parcours complet de marketing digital et d'entrepreneuriat en micro-learning : 48 modules, quiz, certificat et assistant IA intégré, pour les entrepreneurs francophones.",
+   "description": "Parcours complet de marketing digital et d'entrepreneuriat en micro-learning : 48 modules, quiz, certificat et Nia, assistante IA intégrée, pour les entrepreneurs francophones.",
    "url": "https://app.waneyo-formation.com/",
    "inLanguage": "fr",
    "provider": {
@@ -261,6 +261,17 @@ footer .footer-links a:hover{color:rgba(255,255,255,0.8);text-decoration:underli
 .upsell-features{list-style:none;text-align:left;margin-bottom:16px}
 .upsell-features li{font-size:12px;color:var(--text);padding:4px 0;display:flex;gap:6px}
 .btn-accent{background:var(--accent);color:#fff;border:none;border-radius:10px;padding:12px 24px;font-size:14px;font-weight:700;cursor:pointer;width:100%}
+/* Section Nia (accueil) */
+.nia-card{max-width:780px;margin:0 auto;display:grid;grid-template-columns:1fr 1fr;gap:24px;align-items:center;background:linear-gradient(135deg,#0F0A1E,#2D1B69);border-radius:14px;padding:28px;color:#fff}
+.nia-name{display:flex;align-items:center;gap:10px;font-size:20px;font-weight:800;margin-bottom:12px}
+.nia-avatar{width:40px;height:40px;border-radius:50%;background:var(--primary);border:2px solid #A78BFA;display:inline-flex;align-items:center;justify-content:center;font-size:18px;font-weight:800}
+.nia-intro p{font-size:14px;line-height:1.6;color:rgba(255,255,255,.85);margin-bottom:10px}
+.nia-intro .nia-meaning{font-size:12.5px;font-style:italic;color:#C4B5FD;margin-bottom:0}
+.nia-demo{display:flex;flex-direction:column;gap:10px}
+.nia-bubble{font-size:13px;line-height:1.5;padding:10px 14px;border-radius:14px;max-width:92%}
+.nia-user{align-self:flex-end;background:#fff;color:#1C1533;border-bottom-right-radius:4px}
+.nia-bot{align-self:flex-start;background:rgba(167,139,250,.18);border:1px solid rgba(167,139,250,.35);color:#fff;border-bottom-left-radius:4px}
+@media (max-width:640px){.nia-card{grid-template-columns:1fr;padding:22px}}
 /* Mode Google Play : éléments de paiement masqués */
 html.play-mode .pay-only{display:none!important}
 .play-only-inline{display:none}
@@ -297,6 +308,10 @@ html.play-mode .play-only-inline{display:inline}
       <div style="display:flex;gap:10px;align-items:flex-start">
         <span style="font-size:18px;flex-shrink:0">🚀</span>
         <div style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,0.9)"><strong style="color:#fff">Pour les indépendants :</strong> lancez votre activité avec les meilleurs outils en main, validés par un certificat.</div>
+      </div>
+      <div style="display:flex;gap:10px;align-items:flex-start;margin-top:12px">
+        <span style="font-size:18px;flex-shrink:0">🤖</span>
+        <div style="font-size:13.5px;line-height:1.5;color:rgba(255,255,255,0.9)"><strong style="color:#fff">Avec Nia, votre assistante IA :</strong> posez vos questions à tout moment, directement dans chaque module.</div>
       </div>
     </div>
     <div class="hero-btns">
@@ -346,6 +361,23 @@ html.play-mode .play-only-inline{display:inline}
       </div>
       <div style="background:var(--primary-light);border-radius:10px;padding:14px;text-align:center;font-size:13px;color:var(--primary-dark)">
         💡 <strong>La méthode Waneyo :</strong> comprendre le digital → forger son mindset → lancer son business. <strong>48 modules</strong> pour ne rien laisser au hasard.
+      </div>
+    </div>
+  </div>
+
+  <!-- NIA, ASSISTANTE IA -->
+  <div class="section">
+    <p class="section-label">VOTRE ASSISTANTE IA</p>
+    <h2 class="section-title">Nia vous accompagne dans chaque module</h2>
+    <div class="nia-card">
+      <div class="nia-intro">
+        <div class="nia-name"><span class="nia-avatar" aria-hidden="true">N</span>Nia</div>
+        <p>Une question pendant un module ? Nia vous répond en quelques secondes, 24h/24, en tenant compte de la leçon que vous êtes en train de suivre. Elle vous oriente aussi vers le module qui correspond à votre besoin.</p>
+        <p class="nia-meaning">Nia signifie « intention » en swahili : celle qui pousse à passer à l'action.</p>
+      </div>
+      <div class="nia-demo" role="img" aria-label="Exemple de conversation avec Nia">
+        <div class="nia-bubble nia-user">Comment trouver mes premiers clients sur Instagram ?</div>
+        <div class="nia-bubble nia-bot">Commence par savoir précisément à qui tu parles : le module 34 « Lire son audience » t'y aide. Ensuite, le module 4 « La stratégie sur les réseaux sociaux » te donne ton plan de publication.</div>
       </div>
     </div>
   </div>
@@ -2523,7 +2555,7 @@ if ('serviceWorker' in navigator) {
 }
 </script>
 <!-- Assistant IA (dashboard uniquement) -->
-<button id="chat-float" class="wa-hidden" aria-label="Ouvrir l'assistant" onclick="toggleChatPanel()">
+<button id="chat-float" class="wa-hidden" aria-label="Ouvrir Nia, ton assistante IA" onclick="toggleChatPanel()">
   <svg viewBox="0 0 24 24" width="26" height="26" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
     <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/>
   </svg>
@@ -2532,8 +2564,8 @@ if ('serviceWorker' in navigator) {
 <div id="chat-panel">
   <div class="chat-panel-header">
     <div>
-      <div class="chat-panel-title">Assistant L'Accélérateur</div>
-      <div class="chat-panel-sub">Questions sur tes modules ou ton activité</div>
+      <div class="chat-panel-title">Nia</div>
+      <div class="chat-panel-sub">Ton assistante IA : questions sur tes modules ou ton activité</div>
     </div>
     <button class="btn-close-modal" onclick="toggleChatPanel()">✕</button>
   </div>
@@ -2563,7 +2595,7 @@ if ('serviceWorker' in navigator) {
 }
 #chat-panel.open{display:flex;}
 .chat-panel-header{background:var(--primary);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;gap:8px}
-.chat-panel-title{color:#fff;font-weight:700;font-size:13px}
+.chat-panel-title{color:#fff;font-weight:700;font-size:15px}
 .chat-panel-sub{color:rgba(255,255,255,0.7);font-size:11px;margin-top:2px}
 .chat-messages{flex:1;overflow-y:auto;padding:14px;display:flex;flex-direction:column;gap:10px;background:var(--bg)}
 .chat-msg{max-width:82%;padding:9px 12px;border-radius:12px;font-size:13px;line-height:1.5;white-space:pre-wrap}
@@ -2586,7 +2618,7 @@ function toggleChatPanel(){
   panel.classList.toggle('open');
   if (opening && !chatWelcomed){
     chatWelcomed = true;
-    appendChatMessage('bot', "Bonjour 👋 Je suis l'assistant de L'Accélérateur Digital. Pose-moi tes questions sur le contenu des modules, le marketing digital ou comment structurer ton activité.");
+    appendChatMessage('bot', "Bonjour 👋 Je suis Nia, ton assistante IA. Pose-moi tes questions sur le contenu des modules, le marketing digital ou comment structurer ton activité.");
   }
   if (opening) document.getElementById('chat-input').focus();
 }
@@ -2627,7 +2659,7 @@ async function sendChatMessage(){
     const data = await res.json();
     typingEl.remove();
     if (!res.ok || data.error){
-      appendChatMessage('bot', data.error || "L'assistant est momentanément indisponible, réessaie dans un instant.");
+      appendChatMessage('bot', data.error || "Nia est momentanément indisponible, réessaie dans un instant.");
       return;
     }
     appendChatMessage('bot', data.reply);

@@ -93,7 +93,7 @@ function corsHeaders(origin) {
   };
 }
 
-const SYSTEM_INSTRUCTION = `Tu es l'assistant intégré à L'Accélérateur Digital (Waneyo Formation), une plateforme
+const SYSTEM_INSTRUCTION = `Tu t'appelles Nia. Tu es l'assistante IA intégrée à L'Accélérateur Digital (Waneyo Formation), une plateforme
 francophone de micro-learning pour entrepreneurs indépendants et porteurs de projet au Maroc,
 en France, au Canada et en Afrique francophone.
 
@@ -102,6 +102,8 @@ parcours, et surtout donner envie de créer, faire émerger l'ambition de faire 
 encourager à se structurer — jamais décourager, jamais culpabiliser.
 
 Règles :
+- Tu es Nia : présente-toi sous ce nom si on te le demande, et parle de toi au féminin (« je suis ravie », « prête à t'aider »).
+  Si on te demande ce que signifie ton nom : Nia veut dire « intention, but » en swahili.
 - Tutoie toujours l'apprenant (comme le reste de l'appli : « tu », « tes modules », jamais « vous ») —
   ne bascule jamais sur le vouvoiement, même si l'apprenant te vouvoie.
 - Réponds toujours en français, sur un ton chaleureux, clair et concret, sans jargon inutile.
@@ -182,7 +184,7 @@ exports.handler = async (event) => {
       return {
         statusCode: 502,
         headers,
-        body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
+        body: JSON.stringify({ error: "Nia est momentanément indisponible, réessaie dans un instant." }),
       };
     }
 
@@ -206,7 +208,7 @@ exports.handler = async (event) => {
     return {
       statusCode: 500,
       headers,
-      body: JSON.stringify({ error: "L'assistant est momentanément indisponible, réessaie dans un instant." }),
+      body: JSON.stringify({ error: "Nia est momentanément indisponible, réessaie dans un instant." }),
     };
   }
 };
