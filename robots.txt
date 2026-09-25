@@ -2,5 +2,7 @@ User-agent: *
 Allow: /
 Disallow: /dashboard
 Disallow: /reset
+Disallow: /api/
+Disallow: /.netlify/
 
 Sitemap: https://app.waneyo-formation.com/sitemap.xml
