@@ -760,6 +760,10 @@ function appendChatMessage(role, text){
   const box = document.getElementById('chat-messages');
   const div = document.createElement('div');
   div.className = 'chat-msg ' + (role === 'user' ? 'user' : 'bot');
+  if (role !== 'user') text = String(text)
+    .replace(/\*\*(.+?)\*\*/g, '$1')      // gras Markdown
+    .replace(/^#{1,6}\s+/gm, '')             // titres Markdown
+    .replace(/^\s*[*]\s+/gm, '- ');         // puces « * » -> tirets
   div.textContent = text;
   box.appendChild(div);
   box.scrollTop = box.scrollHeight;
