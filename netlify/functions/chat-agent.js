@@ -82,6 +82,52 @@ function currentModuleContext(moduleId) {
   return `\n\nContexte immédiat : l'apprenant est en train de lire le module ${id}, « ${MODULE_TITLES[id]} » (${phase ? phase.name : ''}). Priorise ce contexte si sa question s'y rapporte.`;
 }
 
+// ── Langue de réponse (liste blanche) ──
+// Le français reste la langue par défaut. Les autres langues donnent une
+// explication simple, suivie d'un court résumé en français, pour que
+// l'apprenant ne perde jamais le sens (les modèles IA sont moins fiables
+// dans ces langues que dans les grandes langues : on garde le français en filet).
+const LANGS = {
+  fr: null,
+  darija: 'en darija marocaine, écrite en lettres latines comme sur WhatsApp (ex. « kifach », « bghit », « daba »), jamais en arabe standard',
+  wolof: 'en wolof (orthographe latine usuelle au Sénégal)',
+  bambara: 'en bambara / dioula (orthographe latine usuelle au Mali, au Burkina Faso et en Côte d\'Ivoire)',
+  moore: 'en mooré (orthographe latine usuelle au Burkina Faso)',
+  swahili: 'en swahili',
+  lingala: 'en lingala (orthographe latine usuelle en RDC et au Congo)',
+};
+
+function languageRule(lang) {
+  const desc = LANGS[lang];
+  if (!desc) return '';
+  return `\n\nLangue demandée par l'apprenant : réponds d'abord ${desc}, avec des phrases simples et courtes.
+Garde en français les termes techniques du marketing (ex. « tunnel de vente », « persona », « SEO »).
+Termine TOUJOURS par une ligne « En français : » suivie d'un résumé de 1 à 2 phrases, pour que le sens soit sûr.
+Si tu n'es pas certaine d'une tournure dans cette langue, préfère une formulation simple plutôt qu'une expression rare.`;
+}
+
+// ── Progression de l'apprenant (liste blanche : numéros 1 à 48 uniquement) ──
+function progressContext(progress) {
+  if (!progress || typeof progress !== 'object') return '';
+  const done = Array.isArray(progress.done)
+    ? [...new Set(progress.done.map((n) => parseInt(n, 10)).filter((n) => MODULE_TITLES[n]))].sort((a, b) => a - b)
+    : [];
+  const next = parseInt(progress.next, 10);
+  const lines = [];
+  lines.push(`Modules terminés : ${done.length} sur 48.`);
+  if (done.length) {
+    const last = done.slice(-3).map((n) => `${n}. ${MODULE_TITLES[n]}`).join(' ; ');
+    lines.push(`Derniers modules terminés : ${last}.`);
+  }
+  if (MODULE_TITLES[next]) {
+    const ph = phaseFor(next);
+    lines.push(`Prochain module prévu dans son parcours : ${next}. « ${MODULE_TITLES[next]} » (${ph ? ph.name : ''}).`);
+  } else if (done.length === 48) {
+    lines.push('Il a terminé tout le programme : félicite-le et aide-le à passer à l\'action sur son projet.');
+  }
+  return `\n\nProgression actuelle de l'apprenant (données de l'appli, fiables) :\n${lines.join('\n')}`;
+}
+
 function corsHeaders(origin) {
   const allowed = origin === PROD_ORIGIN || (origin && PREVIEW_ORIGIN_RE.test(origin))
     ? origin
@@ -107,7 +153,8 @@ Règles :
   le mot swahili vient d'ailleurs de l'arabe.
 - Tutoie toujours l'apprenant (comme le reste de l'appli : « tu », « tes modules », jamais « vous ») —
   ne bascule jamais sur le vouvoiement, même si l'apprenant te vouvoie.
-- Réponds toujours en français, sur un ton chaleureux, clair et concret, sans jargon inutile.
+- Réponds en français par défaut (sauf si une autre langue est demandée plus bas), sur un ton chaleureux,
+  clair et concret, sans jargon inutile.
 - Reste concentré sur : le contenu des modules, le marketing digital, l'entrepreneuriat, la
   structuration d'activité, l'orientation professionnelle proposée par la plateforme.
 - Si la question sort de ce cadre (ex. sujet médical, juridique personnel, actualité), dis-le
@@ -122,6 +169,16 @@ Règles :
   question l'exige vraiment.
 - Quand c'est pertinent, recommande un module précis en citant son numéro et son titre exact
   (voir la liste ci-dessous), plutôt que de rester généraliste.
+
+Ton rôle de coach :
+- Quand tu connais sa progression, appuie-toi dessus : félicite concrètement le chemin parcouru
+  (sans en faire trop) et indique la prochaine étape logique.
+- Si l'apprenant demande quoi faire ensuite : recommande le prochain module (numéro + titre exact),
+  explique en une phrase pourquoi il lui sera utile, et propose une micro-action à faire aujourd'hui.
+- Si l'apprenant demande un plan d'action sur un module : donne 3 actions concrètes, réalisables
+  cette semaine, avec peu de moyens, adaptées à un entrepreneur au Maroc, en Afrique ou en France,
+  numérotées 1, 2, 3, puis une question courte pour l'engager (« Laquelle tu fais en premier ? »).
+- N'invente jamais une progression que tu ne connais pas.
 
 Voici l'intégralité du programme (48 modules, 7 phases), pour recommander le bon module par
 son numéro et son titre exact :
@@ -165,7 +222,11 @@ exports.handler = async (event) => {
     }));
 
   const contents = [...history, { role: 'user', parts: [{ text: message }] }];
-  const systemText = SYSTEM_INSTRUCTION + currentModuleContext(payload.moduleId);
+  const lang = Object.prototype.hasOwnProperty.call(LANGS, payload.lang) ? payload.lang : 'fr';
+  const systemText = SYSTEM_INSTRUCTION
+    + progressContext(payload.progress)
+    + currentModuleContext(payload.moduleId)
+    + languageRule(lang);
 
   try {
     const geminiResponse = await fetch(`${GEMINI_URL}?key=${process.env.GEMINI_API_KEY}`, {
@@ -174,7 +235,7 @@ exports.handler = async (event) => {
       body: JSON.stringify({
         contents,
         systemInstruction: { role: 'system', parts: [{ text: systemText }] },
-        generationConfig: { temperature: 0.6, maxOutputTokens: 800 },
+        generationConfig: { temperature: 0.6, maxOutputTokens: lang === 'fr' ? 800 : 1100 },
       }),
     });
 

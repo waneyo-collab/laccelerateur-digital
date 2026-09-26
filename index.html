@@ -2565,11 +2565,22 @@ if ('serviceWorker' in navigator) {
   <div class="chat-panel-header">
     <div>
       <div class="chat-panel-title">Nia</div>
-      <div class="chat-panel-sub">Ton assistante IA : questions sur tes modules ou ton activité</div>
+      <div class="chat-panel-sub">Ta coach IA : tes modules, ta progression, ton activité</div>
+      <select id="nia-lang" class="nia-lang" aria-label="Langue des réponses de Nia" onchange="setNiaLang(this.value)">
+        <option value="fr">Français</option>
+        <option value="darija">Darija</option>
+        <option value="wolof">Wolof (bêta)</option>
+        <option value="bambara">Bambara / Dioula (bêta)</option>
+        <option value="moore">Mooré (bêta)</option>
+        <option value="swahili">Swahili (bêta)</option>
+        <option value="lingala">Lingala (bêta)</option>
+      </select>
     </div>
     <button class="btn-close-modal" onclick="toggleChatPanel()">✕</button>
   </div>
   <div id="chat-messages" class="chat-messages"></div>
+  <div id="nia-note" class="nia-note" style="display:none">Langue en bêta : un résumé en français est toujours ajouté.</div>
+  <div class="nia-chips"><button class="nia-chip" data-q="Que dois-je faire ensuite ?" onclick="sendNiaQuick(this.dataset.q)">🧭 Que faire ensuite ?</button></div>
   <div class="chat-input-row">
     <input id="chat-input" class="form-input" type="text" placeholder="Écris ta question…" maxlength="1000" onkeydown="if(event.key==='Enter'){event.preventDefault();sendChatMessage();}"/>
     <button class="btn-primary btn-sm" onclick="sendChatMessage()">Envoyer</button>
@@ -2594,6 +2605,13 @@ if ('serviceWorker' in navigator) {
   box-shadow:0 10px 34px rgba(0,0,0,.28);
 }
 #chat-panel.open{display:flex;}
+.nia-lang{display:block;margin-top:6px;background:rgba(255,255,255,.15);color:#fff;border:1px solid rgba(255,255,255,.3);border-radius:6px;font-size:11px;padding:3px 6px;max-width:100%;cursor:pointer}
+.nia-lang option{color:#1C1533;background:#fff}
+.nia-chips{display:flex;gap:6px;flex-wrap:wrap;padding:8px 10px 0;flex-shrink:0}
+.nia-chip{border:1px solid #7C3AED;color:#7C3AED;background:transparent;border-radius:999px;padding:5px 10px;font-size:12px;cursor:pointer;font-weight:600}
+.nia-chip:hover{background:rgba(124,58,237,.12)}
+.nia-note{font-size:10.5px;color:var(--muted);padding:4px 12px 0;flex-shrink:0}
+
 .chat-panel-header{background:var(--primary);padding:12px 14px;display:flex;justify-content:space-between;align-items:flex-start;flex-shrink:0;gap:8px}
 .chat-panel-title{color:#fff;font-weight:700;font-size:15px}
 .chat-panel-sub{color:rgba(255,255,255,0.7);font-size:11px;margin-top:2px}
@@ -2610,15 +2628,55 @@ if ('serviceWorker' in navigator) {
 </style>
 <script>
 let chatHistory = [];
+// ── Langue des réponses de Nia (mémorisée sur l'appareil) ──
+let niaLang = 'fr';
+try { niaLang = localStorage.getItem('nia_lang') || 'fr'; } catch(e) {}
+function setNiaLang(v){
+  niaLang = v || 'fr';
+  try { localStorage.setItem('nia_lang', niaLang); } catch(e) {}
+  const note = document.getElementById('nia-note');
+  if (note) note.style.display = (niaLang === 'fr' || niaLang === 'darija') ? 'none' : 'block';
+}
+function initNiaLang(){
+  const sel = document.getElementById('nia-lang');
+  if (!sel) return;
+  sel.value = niaLang;
+  if (sel.value !== niaLang) sel.value = 'fr';
+  setNiaLang(sel.value);
+}
+if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initNiaLang); else initNiaLang();
+function sendNiaQuick(text){
+  const input = document.getElementById('chat-input');
+  input.value = text;
+  sendChatMessage();
+}
+
 let chatWelcomed = false;
 
+
+// ── Progression envoyée à Nia : numéros globaux 1–48 (tirés de l'URL reader.html?module=N) ──
+function niaModuleNumber(m){
+  const r = /module=(\d+)/.exec(m && m.url || '');
+  return r ? parseInt(r[1], 10) : null;
+}
+function getNiaProgress(){
+  try {
+    if (typeof PARCOURS === 'undefined' || typeof isDone !== 'function') return null;
+    const done = [];
+    PARCOURS.forEach(p => p.modules.forEach(m => { if (!m.soon && isDone(p.id, m.id)) { const n = niaModuleNumber(m); if (n) done.push(n); } }));
+    const nx = (typeof getNextModule === 'function') ? getNextModule() : null;
+    return { done, next: nx ? niaModuleNumber(nx.module) : null };
+  } catch(e) { return null; }
+}
 function toggleChatPanel(){
   const panel = document.getElementById('chat-panel');
   const opening = !panel.classList.contains('open');
   panel.classList.toggle('open');
   if (opening && !chatWelcomed){
     chatWelcomed = true;
-    appendChatMessage('bot', "Bonjour 👋 Je suis Nia, ton assistante IA. Pose-moi tes questions sur le contenu des modules, le marketing digital ou comment structurer ton activité.");
+    const nx = (typeof getNextModule === 'function') ? (function(){ try { return getNextModule(); } catch(e){ return null; } })() : null;
+    const hello = "Bonjour 👋 Je suis Nia, ta coach IA. Pose-moi tes questions sur tes modules, le marketing digital ou comment structurer ton activité.";
+    appendChatMessage('bot', nx ? hello + "\n\nTa prochaine étape : « " + nx.module.title + " ». Clique sur « Que faire ensuite ? » si tu veux mon conseil." : hello);
   }
   if (opening) document.getElementById('chat-input').focus();
 }
@@ -2654,7 +2712,7 @@ async function sendChatMessage(){
     const res = await fetch('/.netlify/functions/chat-agent', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({ message, history: historyToSend })
+      body: JSON.stringify({ message, history: historyToSend, lang: niaLang, progress: getNiaProgress() })
     });
     const data = await res.json();
     typingEl.remove();
